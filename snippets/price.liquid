@@ -1,0 +1,277 @@
+{%- doc -%}
+  Renders a list of product's price (regular, sale)
+
+  @param {object} [product] - Product Liquid object
+  @param {boolean} [use_variant] - Renders selected or first variant price instead of overall product pricing
+  @param {boolean} [use_price_at_quantity_break_min] - Show variant price instead of quantity break price
+  @param {string} [price_class] - CSS class added to the price element
+  @param {string} [price_regular_class] - CSS class added to the price regular element
+  @param {string} [price_sale_class] - CSS class added to the price sale element
+  @param {string} [alignment] - Alignment content for price element
+
+  @example
+  {% render 'price', product: product %}
+{%- enddoc -%}
+{%- liquid
+  comment
+    Determine market based on country code
+  endcomment
+  assign country_code = localization.country.iso_code | downcase
+  assign market = 'us'
+
+  comment
+    Map country codes to markets
+  endcomment
+  case country_code
+    when 'nl'
+      assign market = 'nl'
+    when 'fr'
+      assign market = 'fr'
+    when 'de'
+      assign market = 'de'
+    when 'gb', 'uk'
+      assign market = 'uk'
+    when 'us'
+      assign market = 'us'
+    else
+      comment
+        Check if it's an EU country (excluding NL, FR, DE, UK)
+      endcomment
+      assign eu_countries = 'at,be,bg,hr,cy,cz,dk,ee,fi,gr,hu,ie,it,lv,lt,lu,mt,pl,pt,ro,sk,si,es,se' | split: ','
+      if eu_countries contains country_code
+        assign market = 'eu'
+      else
+        assign market = 'us'
+      endif
+  endcase
+
+  comment
+    Check if customer is B2B
+  endcomment
+  if customer and customer.tags contains 'b2b'
+    assign market = 'b2b'
+  endif
+
+  assign selected_variant = product.selected_or_first_available_variant
+  if use_variant
+    assign target = selected_variant
+  else
+    assign target = product
+  endif
+
+  comment
+    Get market-specific price metafield from target (variant or product)
+    Note: Market pricing metafields are typically on variants, not products
+  endcomment
+  assign market_price_metafield = blank
+  if target.metafields.markets != blank
+    case market
+      when 'b2b'
+        if target.metafields.markets.price_b2b != blank
+          assign market_price_metafield = target.metafields.markets.price_b2b
+        endif
+      when 'nl'
+        if target.metafields.markets.price_nl != blank
+          assign market_price_metafield = target.metafields.markets.price_nl
+        endif
+      when 'fr'
+        if target.metafields.markets.price_fr != blank
+          assign market_price_metafield = target.metafields.markets.price_fr
+        endif
+      when 'de'
+        if target.metafields.markets.price_de != blank
+          assign market_price_metafield = target.metafields.markets.price_de
+        endif
+      when 'uk'
+        if target.metafields.markets.price_uk != blank
+          assign market_price_metafield = target.metafields.markets.price_uk
+        endif
+      when 'eu'
+        if target.metafields.markets.price_eu != blank
+          assign market_price_metafield = target.metafields.markets.price_eu
+        endif
+      when 'us'
+        if target.metafields.markets.price_us != blank
+          assign market_price_metafield = target.metafields.markets.price_us
+        endif
+    endcase
+  endif
+
+  comment
+    Convert metafield price (stored as decimal) to cents if available
+  endcomment
+  if market_price_metafield != blank
+    assign market_price = market_price_metafield | times: 100
+  else
+    assign market_price = blank
+  endif
+
+  assign compare_at_price = target.compare_at_price
+  if market_price != blank
+    assign price = market_price
+  else
+    assign price = target.price | default: 1999
+  endif
+
+  comment
+    For products with multiple variants, calculate price_min and price_max
+    considering market-specific pricing
+  endcomment
+  if target == product
+    assign price_min = price
+    assign price_max = price
+    
+    comment
+      Check all variants for market pricing to determine min/max
+    endcomment
+    for variant in product.variants
+      assign variant_market_price = blank
+      case market
+        when 'b2b'
+          if variant.metafields.markets.price_b2b != blank
+            assign variant_market_price = variant.metafields.markets.price_b2b | times: 100
+          endif
+        when 'nl'
+          if variant.metafields.markets.price_nl != blank
+            assign variant_market_price = variant.metafields.markets.price_nl | times: 100
+          endif
+        when 'fr'
+          if variant.metafields.markets.price_fr != blank
+            assign variant_market_price = variant.metafields.markets.price_fr | times: 100
+          endif
+        when 'de'
+          if variant.metafields.markets.price_de != blank
+            assign variant_market_price = variant.metafields.markets.price_de | times: 100
+          endif
+        when 'uk'
+          if variant.metafields.markets.price_uk != blank
+            assign variant_market_price = variant.metafields.markets.price_uk | times: 100
+          endif
+        when 'eu'
+          if variant.metafields.markets.price_eu != blank
+            assign variant_market_price = variant.metafields.markets.price_eu | times: 100
+          endif
+        when 'us'
+          if variant.metafields.markets.price_us != blank
+            assign variant_market_price = variant.metafields.markets.price_us | times: 100
+          endif
+      endcase
+      
+      if variant_market_price == blank
+        assign variant_market_price = variant.price
+      endif
+      
+      if forloop.first
+        assign price_min = variant_market_price
+        assign price_max = variant_market_price
+      else
+        if variant_market_price < price_min
+          assign price_min = variant_market_price
+        endif
+        if variant_market_price > price_max
+          assign price_max = variant_market_price
+        endif
+      endif
+    endfor
+  else
+    assign price_min = product.price_min
+    assign price_max = product.price_max
+  endif
+
+  if product.quantity_price_breaks_configured? and use_variant and selected_variant.quantity_price_breaks.size > 0
+    if market_price != blank
+      assign price_min = market_price
+      assign price_max = market_price
+    else
+      assign price_min = selected_variant.price
+      assign price_max = selected_variant.price
+    endif
+
+    unless use_price_at_quantity_break_min
+      for price_break in selected_variant.quantity_price_breaks
+        assign price_min = price_min | at_most: price_break.price
+      endfor
+    endunless
+  endif
+
+  assign available = target.available | default: false
+  assign money_price = price | money
+  assign money_price_min = price_min | money
+  assign money_price_max = price_max | money
+  if settings.currency_code_enabled
+    assign money_price = price | money_with_currency
+    assign money_price_min = price_min | money_with_currency
+    assign money_price_max = price_max | money_with_currency
+  endif
+  if target == product and product.price_varies
+    assign money_price = 'products.product.price.from_price_html' | t: price: money_price
+  endif
+-%}
+<div
+  class="
+    f-price
+    {%- if alignment %} f-price--{{ alignment }}{% endif -%}
+    {%- if price_class %} {{ price_class }}{% endif -%}
+    {%- if available == false %} f-price--sold-out {% endif -%}
+    {%- if compare_at_price > price %} f-price--on-sale {% endif -%}
+    {%- if target.price_varies == false and target.compare_at_price_varies %} f-price--no-compare{% endif -%}
+  "
+>
+  {%- comment -%}
+    Explanation of description list:
+      - div.price__regular: Displayed when there are no variants on sale
+      - div.price__sale: Displayed when a variant is a sale
+  {%- endcomment -%}
+  <div class="f-price__regular{% if price_regular_class %} {{ price_regular_class }}{% endif %}">
+    {%- if product.quantity_price_breaks_configured? and price_min != price_max -%}
+      <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
+      <span class="f-price-item f-price-item--regular">
+        {{- 'products.product.volume_pricing.price_range' | t: minimum: money_price_min, maximum: money_price_max -}}
+      </span>
+    {%- else -%}
+      <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
+      <span class="f-price-item f-price-item--regular">
+        {{ money_price }}
+      </span>
+    {%- endif -%}
+  </div>
+  <div class="f-price__sale{% if price_sale_class %} {{ price_sale_class }}{% endif %}">
+    <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
+    <span class="f-price-item f-price-item--sale">
+      {{ money_price }}
+    </span>
+    {%- unless target.price_varies == false and target.compare_at_price_varies %}
+      <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
+      <span class="f-price-item f-price-item--regular">
+        <s>
+          {% if settings.currency_code_enabled %}
+            {{ compare_at_price | money_with_currency }}
+          {% else %}
+            {{ compare_at_price | money }}
+          {% endif %}
+        </s>
+      </span>
+    {%- endunless -%}
+  </div>
+  <div class="f-price__unit-wrapper{% if selected_variant.unit_price_measurement == nil %} hidden{% endif %}">
+    <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
+    <div class="f-price__unit">
+      {%- capture unit_price_separator -%}
+        <span aria-hidden="true">/</span><span class="visually-hidden">{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
+      {%- endcapture -%}
+      {%- capture unit_price_base_unit -%}
+        <span data-unit-price-base-unit>
+            {%- if selected_variant.unit_price_measurement -%}
+              {%- if selected_variant.unit_price_measurement.reference_value != 1 -%}
+                {{- selected_variant.unit_price_measurement.reference_value -}}
+              {%- endif -%}
+              {{ selected_variant.unit_price_measurement.reference_unit }}
+            {%- endif -%}
+          </span>
+      {%- endcapture -%}
+      <span data-unit-price>{{ selected_variant.unit_price | money }}</span>
+      {{- unit_price_separator -}}
+      {{- unit_price_base_unit -}}
+    </div>
+  </div>
+</div>

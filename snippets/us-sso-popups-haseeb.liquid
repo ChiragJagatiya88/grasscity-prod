@@ -1,0 +1,2297 @@
+{% assign logo_url ="https://grasscity-prod.myshopify.com/cdn/shop/files/gs_logo_86bc3029-4784-46a2-b5e5-862ce3afacdf.svg" %}
+{% assign client = 'iK3RgcrTBFA+lrzN0o0VYQ==:JIo/3aaA6Y5YG9P7RX+hIjqOghYNKrm2SmN7W+Z4C+9EyDxDs01BqgRhfK52cbta' %}
+{% assign elite_id = '44844199018677' %}
+
+
+<div id="new_popup-overlay2" class="new_popup-overlay" ></div>
+
+<div id="new_popup-modal2" class="new_custom_popup_main2" data-customer="{%- if customer -%} true {%- else -%} false {%- endif -%}">
+  <button class="close_popup" aria-label="Close Poup" tabindex="0">&times;</button>
+  
+
+  <div class="new_form_container">
+    <div class="main_login_form new_forms">
+        <div class="img_logo_popup">
+            <img
+            src="{{ logo_url }}"
+            alt="Smokecatel"
+            loading="lazy" width="188"
+            height="66"
+            />
+        </div>
+        <form id="loginForm">
+            <p>Welcome back!</p> 
+            <div class="form-group">
+                <label class="required">Email address</label>
+                <input type="email" id="email" aria-label="Enter Login Email">
+                <span class="error new_hidden">Email is required</span>
+            </div>
+            
+            <div class="form-group">
+                <label class="required">Password</label>
+                <div class="password-field">
+                    <input type="password" id="password" aria-label="Enter Login Password">
+                    <span class="show-pass" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></span>
+                    <span class="hide-pass new_hidden" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c8.4-19.3 10.6-41.4 4.8-63.3c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zM373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5L373 389.9z"/></svg></span>
+                </div>
+                <span class="error new_hidden">Password is required</span>
+            </div>
+            <span class="c_error"></span>
+            <button type="button" class="forgot-password" aria-label="Forget Password">Forgot password?</button> 
+            
+            <button type="submit" class="login-btn transparent_btn">Log In</button>
+            
+            <div class="footer">
+                Not a Member Yet? <button  type="button" class="signup-link" aria-label="Sign Up for Free">Sign Up for Free</button>
+            </div>
+        </form>
+
+        <div class="footer_logos">
+            <p>One Simple Login <br/> The only membership you'll need.</p>
+            <div class="new_logos_scroll">
+                <ul>
+                  {% for i in (1..4) %}
+                    <li>
+                      <img src="{{ 'cc-partner1.png' | file_url }}" class="img-responsive" alt="Smoke Cartel logo" loading="lazy" width="99" height="39">
+                    </li>
+                    <li>
+                      <img src="{{ 'cc-partner2.png' | file_url }}" class="img-responsive" alt="Daily High Club logo" loading="lazy" width="56" height="41"/>
+                    </li>
+                    <li>
+                      <img src="{{ 'cc-partner3.png' | file_url }}" class="img-responsive" alt="Grasscity logo" loading="lazy" width="95" height="39">
+                    </li>
+                    <li>
+                      <img src="{{ 'cc-partner4.png' | file_url }}" class="img-responsive" alt="Dankstop logo" loading="lazy" width="100" height="39">
+                    </li>
+                    <li>
+                      <img src="{{ 'cc-partner5.png' | file_url }}" class="img-responsive" alt="Nuleaf logo" loading="lazy" width="65" height="39">
+                    </li>
+                    <li>
+                      <img src="{{ 'cc-partner6.png' | file_url }}" class="img-responsive" alt="Fabcbd logo" loading="lazy" width="100" height="39">
+                    </li>
+                  {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="main_forget_password new_forms new_hidden">
+        <div class="img_logo_popup">
+            <img
+            src="{{ logo_url }}"
+            alt="Smokecartel"
+            loading="lazy" width="188"
+            height="66"
+            />
+        </div>
+        <form id="forgetForm">
+            <p>Check your email</p>
+            <p class="text_sub">Dont worry we will help you to recover your password</p>
+            <div class="form-group">
+                <label class="required">Email address</label>
+                <input type="email" id="email" aria-label="Enter Email for Password Reset">
+                <span class="error new_hidden">Email is required</span>
+            </div> 
+             
+            <span class="c_error"></span>
+            <button type="submit" class="fill_btn">Reset Password</button>
+            <button type="button" class="transparent_btn show_login_form">Back</button> 
+        </form>
+        <form id="verifyOTP" class="new_hidden">
+            <p>Verify OTP</p>
+            <p class="text_sub">Please enter the OTP you recevied in your email.</p>
+            <input type="hidden" id="email" aria-label="Enter email to recevie an OTP"/>
+            <div class="form-group">
+                <label class="required">OTP</label>
+                <input type="number" id="otp" aria-label="Enter OTP">
+                <span class="error new_hidden">OTP is required</span>
+            </div> 
+             
+            <span class="c_error"></span>
+            <button type="submit" class="fill_btn">Verify</button> 
+            <div class="footer">
+                Didn't recevie OTP? <button type="button" class="resend_otp">Resend OTP.</button>
+            </div>
+        </form>
+        <form id="newPasswordForm" class="new_hidden">
+            <p>Enter New Password</p>
+            <input type="hidden" id="jwt" />
+            <div class="form-group">
+                <label class="required">Password</label>
+                <div class="password-field">
+                    <input type="password" id="password" aria-label="Enter New Password">
+                    <span class="show-pass" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></span>
+                    <span class="hide-pass new_hidden" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c8.4-19.3 10.6-41.4 4.8-63.3c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zM373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5L373 389.9z"/></svg></span>
+                </div>
+                <span class="error new_hidden">Password is required</span>
+            </div>
+            <div class="form-group">
+                <label class="required">Confirm Password*</label>
+                <div class="password-field">
+                    <input type="password" id="c_password" aria-label="Confirm New Password">
+                    <span class="show-pass" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></span>
+                    <span class="hide-pass new_hidden" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c8.4-19.3 10.6-41.4 4.8-63.3c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zM373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5L373 389.9z"/></svg></span>
+                </div>
+                <span class="error new_hidden">Confirm Password is required</span>
+            </div>
+            <span class="c_error"></span>
+            <button type="submit" class="fill_btn">Reset</button>
+        </form>
+    </div>
+
+    {% if settings.enable_sale == false %}
+        <div class="main_signup_form new_forms 010101 new_hidden">
+            <div class="img_logo_popup">
+                <img
+                src="{{ logo_url }}"
+                alt="Logo"
+                />
+            </div>
+            <form id="signupForm">
+                <div class="sign_up_first_step">
+                    <p class="h2">Join for FREE & Unlock<br/>
+                    Instant Savings</p>
+                    <p class="text_sub">Access <strong>UNBEATABLE Member Prices</strong><br/>
+                        at the <strong>Lowest Price Guaranteed</strong></p>
+                    <div class="form-group">
+                        <label for="email" class="required">Email address</label>
+                        <input type="email" id="email" >
+                        <span class="error new_hidden">Email is required</span>
+                    </div> 
+                    
+                    <div class="i_agree_main">
+                        <label for="i_agree">
+                        <input style="margin-right: 5px;position: relative;top: 4px;display: inline;width: 15px;height: 15px;" type="checkbox" required id="i_agree"/>
+                            <span>I agree to <a href="https://cabanaclubusa.com/terms-and-conditions/">terms of use</a> / <a href="https://cabanaclubusa.com/terms-and-conditions/">privacy policy</a>.</span>
+                        </label>
+                    </div>
+                    <span class="c_error"></span>
+                    <button type="button" class="transparent_btn signup_first_btn">Join Grasscity for Free </button> 
+                </div>
+
+                <div class="signup_second_step new_hidden">
+                    <p class="h2">Almost There!</p>
+
+                    <div class="form_grid">
+                        <div class="form-group">
+                            <label for="f_name" class="required">First Name</label>
+                            <input type="text" id="f_name" >
+                            <span class="error new_hidden">First Name is required</span>
+                        </div> 
+                        <div class="form-group">
+                            <label for="l_name" class="required">Last Name</label>
+                            <input type="text" id="l_name" >
+                            <span class="error new_hidden">Last Name is required</span>
+                        </div> 
+                    </div>
+                    <div class="form-group">
+                        <label for="zip_code" class="required">Zip Code</label>
+                        <input type="text" id="zip_code" required>
+                        <span class="error new_hidden">Zip Code is required</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password" class="required">Password</label>
+                        <div class="password-field">
+                            <input type="password" id="password" >
+                            <span class="show-pass"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></span>
+                            <span class="hide-pass new_hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c8.4-19.3 10.6-41.4 4.8-63.3c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zM373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5L373 389.9z"/></svg></span>
+                        </div>
+                        <span class="error new_hidden">Password is required</span>
+                    </div>
+
+                    <span class="c_error"></span>
+                    <button type="submit" class="transparent_btn">
+                        Submit
+                    </button>
+                </div>
+                
+                <div class="footer">
+                    Already a Member? <button type="button" class="signup_login">Log In</button>
+                </div>
+            </form>
+        </div>
+    
+    {% else %}
+
+        {%liquid 
+        
+        assign logoPROMO = settings.sso_bfcm_logo
+        assign logoPROMOImg1 = settings.promo_img_1
+        assign logoPROMOImg2 = settings.promo_img_2
+        assign logoPROMOtxt1 = settings.promo_text_1
+        assign logoPROMOtxt2 = settings.promo_text_2
+        
+        %}
+        <div class="main_signup_form new_forms new_hidden new__sales__popups">
+            <div class="img_logo_popup">
+                <img
+                src="{{ logoPROMO |  image_url: width:220  }}"
+                alt="Logo"
+                />
+            </div>
+            <form id="signupForm">
+                <div class="sign_up_first_step">
+                    {% if logoPROMOImg1 != blank %}
+                        <img
+                        src="{{ logoPROMOImg1 |  image_url: width:200  }}"
+                        alt="bfcm banner"
+                        class="promo__banner"
+                        />
+                    {% endif %}
+                    {% if logoPROMOtxt1 != blank %}
+                    <div class="text_sub">
+                        {{ logoPROMOtxt1 }}
+                    </div>
+                    {% endif %}
+                    <div class="form-group">
+                        <label for="email" class="required">Email address</label>
+                        <input type="email" id="email" placeholder="Email">
+                        <span class="error new_hidden">Email is required</span>
+                    </div> 
+                    
+                    <div class="i_agree_main">
+                        <label for="i_agree">
+                        <input style="margin-right: 5px;position: relative;top: 4px;display: inline;width: 15px;height: 15px;" type="checkbox" required id="i_agree"/>
+                            <span>I agree to <a href="https://cabanaclubusa.com/terms-and-conditions/">terms of use</a> / <a href="https://cabanaclubusa.com/terms-and-conditions/">privacy policy</a>.</span>
+                        </label>
+                    </div>
+                    <span class="c_error"></span>
+                    <button type="button" class="transparent_btn signup_first_btn">Join Grasscity for Free </button> 
+                </div>
+
+                <div class="signup_second_step new_hidden">
+                    {% if logoPROMOImg2 != blank %}
+                        <img
+                        src="{{ logoPROMOImg2 |  image_url: width:200  }}"
+                        alt="bfcm banner"
+                        class="promo__banner"
+                        />
+                    {% endif %}
+                    {% if logoPROMOtxt2 != blank %}
+                    <div class="text_sub">
+                        {{ logoPROMOtxt2 }}
+                    </div>
+                    {% endif %}
+
+                    <div class="form_grid">
+                        <div class="form-group">
+                            <label for="f_name" class="required">First Name</label>
+                            <input type="text" id="f_name" placeholder="First Name">
+                            <span class="error new_hidden">First Name is required</span>
+                        </div> 
+                        <div class="form-group">
+                            <label for="l_name" class="required">Last Name</label>
+                            <input type="text" id="l_name" placeholder="Last Name">
+                            <span class="error new_hidden">Last Name is required</span>
+                        </div> 
+                    </div>
+                    <div class="form-group">
+                        <label for="zip_code" class="required">Zip Code</label>
+                        <input type="text" id="zip_code" required placeholder="Zip/Postal Code">
+                        <span class="error new_hidden">Zip Code is required</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password" class="required">Password</label>
+                        <div class="password-field">
+                            <input type="password" id="password" placeholder="Create your password">
+                            <span class="show-pass"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></span>
+                            <span class="hide-pass new_hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c8.4-19.3 10.6-41.4 4.8-63.3c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zM373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5L373 389.9z"/></svg></span>
+                        </div>
+                        <span class="error new_hidden">Password is required</span>
+                    </div>
+
+                    <span class="c_error"></span>
+                    <button type="submit" class="transparent_btn">
+                        Submit
+                    </button>
+                </div>
+                
+                <div class="footer">
+                    Already a Member? <button type="button" class="signup_login">Log In</button>
+                </div>
+            </form>
+        </div>
+
+    {% endif %}
+
+    <div class="main_elite_signup_form new_forms elite new_hidden">
+        <div class="img_logo_popup">
+            <img
+            src="https://cdn.shopify.com/s/files/1/0350/8253/files/elite-logo.webp?v=1750084211"
+            alt="SmokeCartel Elite"
+            loading="lazy" width="200" height="64"
+            />
+        </div>
+        <form id="signupEliteForm">
+            <div class="sign_up_first_step_elite">
+                <p>Unlock UNBELIEVABLE Savings</p>
+           <p class="text_sub">
+  Access ELITE Prices, Free Shipping & VIP perks at top<br/>
+  CBD & smoking accessory sites for only 
+  <span style=" ">$30</span> 
+</p>
+
+                <div class="form-group"> 
+                    <input type="email" id="email" placeholder="Email address*" aria-label="Enter Email for Elite Signup">
+                    <span class="error new_hidden">Email is required</span>
+                </div> 
+                
+                <div class="i_agree_main">
+                    <label for="i_agree_elite">
+                    <input type="checkbox" required id="i_agree_elite"/>
+                        <span>I agree to <a href="https://cabanaclubusa.com/terms-and-conditions/">terms of use</a> / <a href="https://cabanaclubusa.com/terms-and-conditions/">privacy policy</a>.</span>
+                    </label>
+                </div>
+                <span class="c_error"></span>
+                <button type="button" class="elite_btn signup_elite_first_btn">Upgrade to ELITE </button> 
+                <div class="footer">
+                    Already a Member? <button type="button" class="signup_login_elite">Log In</button>
+                </div>
+            </div>
+
+            <div class="signup_second_step_elite new_hidden">
+                <p>Almost There!</p>
+
+                <div class="form_grid">
+                    <div class="form-group"> 
+                        <input type="text" id="f_name" placeholder="First Name*" aria-label="Enter First Name">
+                        <span class="error new_hidden">First Name is required</span>
+                    </div> 
+                    <div class="form-group"> 
+                        <input type="text" id="l_name" placeholder="Last Name*" aria-label="Enter Last Name">
+                        <span class="error new_hidden">Last Name is required</span>
+                    </div> 
+                </div>
+                <div class="form-group"> 
+                    <input type="text" id="zip_code" placeholder="Zip Code*" aria-label="Enter Zip Code">
+                    <span class="error new_hidden">Zip Code is required</span>
+                </div>
+                
+                <div class="form-group"> 
+                    <div class="password-field">
+                        <input type="password" id="password" placeholder="Password*" aria-label="Enter Password">
+                        <span class="show-pass" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg></span>
+                        <span class="hide-pass new_hidden" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c8.4-19.3 10.6-41.4 4.8-63.3c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zM373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5L373 389.9z"/></svg></span>
+                    </div>
+                    <span class="error new_hidden">Password is required</span>
+                </div>
+
+                <button type="button" class="signup_elite_second_btn elite_btn">
+                    Next
+                </button>
+
+                <div class="footer">
+                    Already a Member? <button type="button" class="signup_login_elite">Log In</button>
+                </div>
+            </div>
+
+            <div class="signup_third_step_elite new_hidden">
+                <p>ELITE Members Get Birthday<br/>
+                    Rewards!</p>
+                <p class="text_sub">Share your birthday below</p>
+                <div class="form-group"> 
+                    <input type="date" id="dob" aria-label="Enter Date of Birth">
+                    <span class="error new_hidden">Invalid date format. Please enter a valid date.</span>
+                </div> 
+
+                <button type="button" class="signup_elite_third_btn elite_btn">
+                    Next
+                </button>
+                <button type="button" class="signup_elite_thirdskip_btn transparent_btn">
+                    Skip
+                </button>
+
+                <div class="footer">
+                    Already a Member? <button type="button" class="signup_login_elite">Log In</button>
+                </div>
+            </div>
+
+            <div class="signup_fourth_step_elite new_hidden">
+                <div>
+                    <p>Your ELITE Membership Has Been<br/>
+                        Added to Cart!</p>
+                    <p class="text_sub">You can now shop at ELITE price!<br/>
+                        Continue shopping & complete checkout to unlock<br/>
+                        UNBELIEVABLE savings, free shipping & VIP perks!</p> 
+
+                    <span class="c_error"></span>
+
+                    <button type="submit" class="signup_elite_submit_btn elite_btn">
+                        Continue Shopping
+                    </button> 
+                </div>
+                <div class="footer_logos">
+                    <p>One Simple Login <br/> The only membership you'll need.</p>
+                    <div class="new_logos_scroll">
+                        <ul>
+                            {% for i in (1..4) %} 
+                                <li>
+                                <li>
+                                    <img src="{{ 'cc-partner1.webp' | file_url }}" class="img-responsive" alt="Smoke Cartel logo" loading="lazy" width="99" height="39">
+                                </li>
+                                <li>
+                                    <img src="{{ 'cc-partner2.webp' | file_url }}" class="img-responsive" alt="Daily High Club logo" loading="lazy" width="56" height="41"/>
+                                </li>
+                                <li>
+                                    <img src="{{ 'cc-partner3.webp' | file_url }}" class="img-responsive" alt="Grasscity logo" loading="lazy" width="95" height="39">
+                                </li>
+                                <li>
+                                    <img src="{{ 'cc-partner4.webp' | file_url }}" class="img-responsive" alt="Dankstop logo" loading="lazy" width="100" height="39">
+                                </li>
+                                <li>
+                                    <img src="{{ 'cc-partner5.webp' | file_url }}" class="img-responsive" alt="Nuleaf logo" loading="lazy" width="65" height="39">
+                                </li>
+                                <li>
+                                    <img src="{{ 'cc-partner6.webp' | file_url }}" class="img-responsive" alt="Fabcbd logo" loading="lazy" width="100" height="39">
+                                </li>
+                            {% endfor %}
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div> 
+        </form>
+    </div>
+
+    {% comment %} new forms elite renewl {% endcomment %}
+
+
+   <div class="subscribe_elite_membershop new_forms elite new_hidden">
+        <div class="img_logo_popup">
+            <img
+            src="https://cdn.shopify.com/s/files/1/0350/8253/files/elite-logo.png?v=1740644974"
+            alt="Logo"
+            />
+        </div>
+            <div class="renew_membership">
+                  <p class="h2">
+          Your Membership is about to Expires in
+          <div class="expires_days">0</div>
+          Days
+        </p>
+        <p class="text_sub_renew">RENEW NOW FOR $30/yr</b></p>
+        <p class="text_sub_renew-small">Limited time offer. Enjoy FREE shipping, exclusive savings, and VIP perks.</p>
+                <span class="c_error"></span>
+                <button type="button" class="elite_btn renew_membership__btn">Renew Now </button> 
+            </div>
+            <p class="renew_membership_message"></p>
+
+    </div>
+    <div class="campaign_elite_membership new_forms elite new_hidden">
+        <div class="img_logo_popup">
+            <img
+            src="https://cdn.shopify.com/s/files/1/0350/8253/files/elite-logo.png?v=1740644974"
+            alt="Logo"
+            />
+        </div>
+            <div class="renew_membership">
+                <p class="h2">Your Elite Membership is expiring soon</p>
+        <p class="details">Renew now for $30/Year</b></p>
+        <p class="details">Limited Time Offer</p>
+
+                
+            </div>
+            <div class="renew_action">
+                <a href="javascript:" class="login_to_renew">Login to Renew</a>
+            </div>
+
+    </div>
+
+<div class="main_elite_upgrade_form new_forms elite new_hidden">
+<form id="eliteUpgradeForm">
+<div class="img_logo_popup">
+<img src="https://cdn.shopify.com/s/files/1/0350/8253/files/elite-logo.png?v=1740644974" alt="Logo" />
+</div>
+
+
+<div class="upgrade_first_step_elite">
+<div style="padding:0 20px 20px;">
+<p class="elite-main-heading">Unlock <span class="bigger-text">UNBELIEVABLE</span> Savings</p>
+{% comment %} <p class="elite-sub-heading">GET <span class="fifty-off">50% OFF</span> ELITE!</p> {% endcomment %}
+
+
+<p class="text_sub">Access ELITE Prices, Free Shipping & VIP perks at top<br/>
+CBD & smoking accessory sites for only $30/yr  </p>
+
+
+<div class="i_agree_main">
+<label for="i_agree_elite_upgrade">
+<input style="margin-right: 5px;position: relative;top: 4px;display: inline;width: 15px;height: 15px;" type="checkbox" required id="i_agree_elite_upgrade" />
+<span>I agree to <a href="https://cabanaclubusa.com/terms-and-conditions/">terms of use</a> / <a href="https://cabanaclubusa.com/terms-and-conditions/">privacy policy</a>.</span>
+</label>
+</div>
+
+
+
+<span class="c_error"></span>
+<button type="button" class="elite_upgrade_first_btn elite_btn">Upgrade to Elite</button>
+</div>
+</div>
+            <div class="upgrade_second_step_elite new_hidden">
+                <p>ELITE Members Get Birthday<br/>
+                    Rewards!</p>
+                <p class="text_sub">Share your birthday below</p>
+                <div class="form-group"> 
+                    <input type="date" id="dob" aria-label="Enter Date of Birth">
+                    <span class="error new_hidden">Invalid date format. Please enter a valid date.</span>
+                </div> 
+
+                <button type="button" class="upgrade_elite_second_btn elite_btn">
+                    Next
+                </button>
+                <button type="button" class="upgrade_elite_secondskip_btn  transparent_btn">
+                    Skip
+                </button>
+
+                {% unless customer %}
+                <div class="footer">
+                    Already a Member? <button type="button" class="signup_login_elite">Log In</button>
+                </div>
+                {% endunless %}
+            </div> 
+            <div class="upgrade_third_step_elite new_hidden">
+                <div>
+                    <p>Your ELITE Membership Has Been<br/>
+                        Added to Cart!</p>
+                    <p class="text_sub">You can now shop at ELITE price!<br/>
+                        Continue shopping & complete checkout to unlock<br/>
+                        UNBELIEVABLE savings, free shipping & VIP perks!</p> 
+
+                    <span class="c_error"></span>
+
+                    <button type="submit" class="upgrade_elite_submit_btn elite_btn">
+                        Continue Shopping
+                    </button> 
+                </div>
+                <div class="footer_logos">
+                    <p>One Simple Login <br/> The only membership you'll need.</p>
+                    <div class="new_logos_scroll">
+                        <ul>
+                            {% for i in (1..4) %} 
+                                <li>
+                                <li>
+                                    <img src="{{ 'cc-partner1.webp' | file_url }}" class="img-responsive" alt="Smoke Cartel logo" loading="lazy" width="99" height="39">
+                                </li>
+                                <li>
+                                    <img src="{{ 'cc-partner2.webp' | file_url }}" class="img-responsive" alt="Daily High Club logo" loading="lazy" width="56" height="41"/>
+                                </li>
+                                <li>
+                                    <img src="{{ 'cc-partner3.webp' | file_url }}" class="img-responsive" alt="Grasscity logo" loading="lazy" width="95" height="39">
+                                </li>
+                                <li>
+                                    <img src="{{ 'cc-partner4.webp' | file_url }}" class="img-responsive" alt="Dankstop logo" loading="lazy" width="100" height="39">
+                                </li>
+                                <li>
+                                    <img src="{{ 'cc-partner5.webp' | file_url }}" class="img-responsive" alt="Nuleaf logo" loading="lazy" width="65" height="39">
+                                </li>
+                                <li>
+                                    <img src="{{ 'cc-partner6.webp' | file_url }}" class="img-responsive" alt="Fabcbd logo" loading="lazy" width="100" height="39">
+                                </li>
+                            {% endfor %}
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div> 
+        </form>
+    </div>
+  </div>
+  
+</div>
+
+
+<script>
+    const loginBtn = document.querySelectorAll(".SSO_popup_login");  // simple login
+	const registerBtn = document.querySelectorAll(".SSO_popup_register");  // cc register
+	const eliteJoinBtn = document.querySelectorAll(".SSO_popup_elite_join"); // elite register
+	const eliteUpgradeBtn = document.querySelectorAll(".SSO_popup_elite_upgrade"); // cc to elite memeber
+
+
+	const popup = document.getElementById('new_popup-modal2');
+	const close_popup = document.querySelector('#new_popup-modal2 .close_popup');
+	const overlay = document.getElementById('new_popup-overlay2');
+
+
+	const mainLoginForm = document.querySelector('.main_login_form')
+	const mainSignupForm = document.querySelector('.main_signup_form') 
+	const mainSignupEliteForm = document.querySelector('.main_elite_signup_form') 
+	const mainEliteUpgradeForm = document.querySelector('.main_elite_upgrade_form') 
+
+
+	// keyboard accesscibility
+	let emailInputLogin = popup.querySelector('.main_login_form input[type="email"]');
+	let emailInputSignup = popup.querySelector('.main_signup_form input[type="email"]');
+	let emailInputEliteSignup = popup.querySelector('.main_elite_signup_form input[type="email"]');
+	let agreeInputEliteUpgrade = popup.querySelector('.main_elite_upgrade_form input[type="checkbox"]');
+
+	
+
+	if (!localStorage.getItem('popupClosed') ) { 
+		setTimeout(() => { 
+			if(localStorage.getItem('popupClosed') != 'true' && popup.getAttribute('data-customer') == 'false' ){
+				openPopup2('signup_form') 
+			} 
+		}, 15000); 
+	}
+
+	const closePopup2 = function (firstTime = false) {
+		popup.style.display = 'none';
+		overlay.style.display = 'none';  
+
+		if(firstTime) localStorage.setItem('popupClosed', 'true')
+	};
+
+
+	
+	openPopup2 = function (form) {
+		if(form == 'login_form'){
+			document.querySelectorAll('.new_forms').forEach(f=>f.classList.add('new_hidden'))
+			mainLoginForm.classList.remove('new_hidden')
+		}else if(form == 'signup_form'){
+			document.querySelectorAll('.new_forms').forEach(f=>f.classList.add('new_hidden'))
+			mainSignupForm.classList.remove('new_hidden')
+		}else if( form == 'signup_elite_form'){
+			document.querySelectorAll('.new_forms').forEach(f=>f.classList.add('new_hidden'))
+			mainSignupEliteForm.classList.remove('new_hidden')
+		}else if( form == 'signup_upgrade_form'){
+			document.querySelectorAll('.new_forms').forEach(f=>f.classList.add('new_hidden'))
+			mainEliteUpgradeForm.classList.remove('new_hidden')
+		}
+
+		popup.style.display = 'block';
+		overlay.style.display = 'block';  
+	}; 
+
+
+	overlay.addEventListener('click',function(){
+		if (!localStorage.getItem('popupClosed') || localStorage.getItem('popupClosed') != 'true'){
+			closePopup2(true)
+		}else{
+			closePopup2()
+		}
+	})
+	close_popup.addEventListener('click',function(){
+		if (!localStorage.getItem('popupClosed') || localStorage.getItem('popupClosed') != 'true'){ 
+			closePopup2(true)
+		}else{
+			closePopup2()
+		}
+	})
+
+
+
+	loginBtn.forEach((btn) => {
+		btn.addEventListener("click", () => {
+			openPopup2('login_form')
+			emailInputLogin.focus();
+		});
+	});
+
+	registerBtn.forEach((btn) => {
+		btn.addEventListener("click", () => {
+			openPopup2('signup_form')
+			emailInputSignup.focus();
+		});
+	});
+
+	eliteJoinBtn.forEach((btn) => {
+		btn.addEventListener("click", () => {
+			openPopup2('signup_elite_form')
+			emailInputEliteSignup.focus();
+		});
+	});
+
+	eliteUpgradeBtn.forEach((btn) => {
+		btn.addEventListener("click", () => { 
+            setTimeout(() => {
+                if(document.querySelector('#accept_policy_elite') && !document.querySelector('#accept_policy_elite').checked) return
+                openPopup2('signup_upgrade_form')
+                agreeInputEliteUpgrade.focus();
+            }, 100);
+            
+		});
+	});
+
+
+    setTimeout(() => {
+        if(window.location.href.indexOf('/account/login') > -1){
+            openPopup2('login_form')
+        }else if(window.location.href.indexOf('/account/register') > -1){
+            openPopup2('signup_form')
+        }
+    }, 1000); 
+
+
+    document.addEventListener('click',function(e){
+        if(e.target.classList.contains('SSO_popup_login') || e.target?.closest('button')?.classList?.contains('SSO_popup_login') ){
+            openPopup2('login_form')
+			emailInputLogin.focus();
+        }else if(e.target.classList.contains('SSO_popup_register') || e.target?.closest('button')?.classList?.contains('SSO_popup_register') ){
+            openPopup2('signup_form')
+			emailInputSignup.focus();
+        }else if(e.target.classList.contains('SSO_popup_elite_join') || e.target?.closest('button')?.classList?.contains('SSO_popup_elite_join') ){
+            openPopup2('signup_elite_form')
+			emailInputEliteSignup.focus();
+        }else if(e.target.classList.contains('SSO_popup_elite_upgrade') || e.target?.closest('button')?.classList?.contains('SSO_popup_elite_upgrade') ){
+            if(document.querySelector('#accept_policy_elite') && !document.querySelector('#accept_policy_elite').checked) return
+            openPopup2('signup_upgrade_form')
+            agreeInputEliteUpgrade.focus();
+        }
+    })
+
+//**************************************************************************
+
+    const internalSSO = "https://sso.cabanaclubusa.com/api"
+    const client = "{{ client }}"
+
+    async function checkEmailExists(email) {
+        const checkEmail = await fetch(`${internalSSO}/auth/emailexists/${email}`)
+        const result = await checkEmail.json()
+        return result
+    }
+
+    async function registerUser(email,password,first_name,last_name,address_postcode,errorDiv,elite=false){
+        const url = `${internalSSO}/auth/register`
+        try {
+        
+            if(elite){
+                addEliteProductToCart() 
+            }
+
+            const response = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                }, 
+                body: JSON.stringify({ 
+                    client: client,
+                    email: email,
+                    password: password,
+                    first_name: first_name,
+                    last_name: last_name,
+                    address_postcode: address_postcode,
+                    redirect_url:  window.location.href,
+                    {% if page.handle == 'dab-rig-hub' %}
+                    tag:'dab_rig_hub'
+                    {% endif %}
+                }), 
+            });
+            if (!response.ok) {
+                throw new Error(`Response status: ${response.status}`);
+            }
+
+            const json = await response.json();
+            console.log(json);
+            localStorage.setItem('popupClosed',true)
+            window.location.href = json.redirect_uri;
+            
+            
+        } catch (error) {
+            console.error(error.message);
+        }
+
+    }
+
+
+    const renewMembershipPopup = document.querySelector('.subscribe_elite_membershop');
+    const campaignRenewMembershipPopup = document.querySelector('.campaign_elite_membership');
+    async function loginUser(email,password,errorDiv,elite=false){
+        const url = `${internalSSO}/auth/authenticate`
+        let redirect_uri = window.location.href
+        {% if settings.elite_renewal %}
+            const urlParams = new URLSearchParams(window.location.search);
+            const isMembershipRenew = urlParams.get('membership_renew') === 'true';
+            
+            if (isMembershipRenew) {
+                redirect_uri = '/account?membership_renew=true'
+            }
+        {% endif %}
+        
+        try { 
+
+            const emailexists = await checkEmailExists(email) 
+            if(emailexists.exists){
+                errorDiv.textContent = '';
+                const response = await fetch(url, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    }, 
+                    body: JSON.stringify({
+                        userData: {
+                            client: client,
+                            email: email,
+                            password: password,
+                            login_type:"password",
+                            return_to:  btoa(redirect_uri)
+                        } 
+                    }), 
+                });
+                if (!response.ok) {
+                    throw new Error(`Response status: ${response.status}`);
+                }
+
+                const json = await response.json();
+                // openResubscribeMembership();
+                if(json.membershipExpiry) {
+                    const expiry_date = new Date(json.membershipExpiry).toISOString().substring(0, 10);
+                    {% comment %} let expiry_date = "2025-10-14"; {% endcomment %}
+                    checkIfMembershipExpiring(expiry_date);
+                }
+                localStorage.setItem('popupClosed',true)
+                setTimeout(() => {
+                    window.location.href = json.redirect_uri;
+                }, 1000); 
+            
+                    
+            }else{
+                errorDiv.textContent = 'Email does not exist';
+            }  
+        } catch (error) {
+            console.error(error.message);
+            errorDiv.textContent = 'Invalid email or password';
+        }
+    }
+
+    document.querySelectorAll('.renew_membership__btn').forEach((btn) => {
+        btn.addEventListener('click', async function (event) {
+            event.preventDefault();
+
+            try {
+            const elite_added = await addEliteProductToCart();
+
+            
+            const errorElement = document.querySelector('.renew_membership .c_error');
+            const messageElement = document.querySelector('.renew_membership_message');
+
+            if (elite_added) {
+                window.location.href = '/checkout';
+                {% comment %} if (errorElement) errorElement.textContent = '';
+                if (messageElement) {
+                messageElement.innerHTML = `Your Elite membership has been added to the cart. <a href='/checkout'>Complete your Purchase</a>`;
+                messageElement.classList.add('success');
+                }
+                document.querySelector('.renew_membership').style.display = 'none'; 
+                {% endcomment %}
+            } else {
+                if (errorElement) errorElement.textContent = 'Error adding Elite membership to cart.';
+            }
+            } catch (error) {
+            console.error('Error:', error);
+            }
+        });
+    });
+    document.querySelectorAll('.renew_membership__link').forEach((btn) => {
+        btn.addEventListener('click', async function (event) {
+            event.preventDefault();
+
+            try {
+                const elite_added = await addEliteProductToCart();
+
+                const errorElement = document.querySelector('.renew_membership_error');
+                //const messageElement = document.querySelector('.renew_membership__link_complete');
+
+                if (elite_added) {
+                    {% comment %} if (messageElement) {
+                        messageElement.style.display = "block";
+                    }
+                    btn.style.display = 'none';  {% endcomment %}
+                    window.location.href = "/checkout"
+            } else {
+                if (errorElement) errorElement.textContent = 'Error adding Elite membership to cart.';
+            }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
+    });
+{% if settings.elite_renewal %}
+     window.addEventListener("load", () => {
+            const expiringSoon = localStorage.getItem("membership_expiring_soon");
+            const expiringDays = parseInt(localStorage.getItem("membership_expiring_in_days"), 10);
+            // console.log(expiringSoon, expiringDays, "Membership");
+            const url = window.location.href;
+            const containsAccount = new URL(url).pathname.includes("account");
+            
+
+            if (expiringSoon && !containsAccount && expiringDays < 30) {
+                openResubscribeMembership();
+            }
+        });
+{% endif %}
+
+
+    async function handleMembershipRenewal() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const isMembershipRenew = urlParams.get('membership_renew') === 'true';
+
+        if (isMembershipRenew) {
+            document.querySelector('.campaign_elite_membership').classList.remove('new_hidden');
+            popup.style.display = 'block';
+            overlay.style.display = 'block';
+            mainLoginForm.classList.add('new_hidden');
+        }
+
+        const isMembershipRenewDirect = urlParams.get('membership_renew_direct') === 'true';
+
+        if (isMembershipRenewDirect) {
+            try {
+            await addEliteProductToCart();
+            window.location.href = "/checkout";
+            } catch (error) {
+            console.error('Error:', error);
+            }
+        }
+    } 
+    if(window.enableRenew) { 
+        handleMembershipRenewal();
+    }
+
+    openResubscribeMembership = function () {
+        const renew_popup_opened = localStorage.getItem("renew_popup_open_once");
+        console.log(renew_popup_opened);
+        if(!renew_popup_opened) {
+            const days_expires = localStorage.getItem("membership_expiring_in_days");
+            renewMembershipPopup.querySelector(".expires_days").textContent = days_expires;
+            mainLoginForm.classList.add('new_hidden');
+            renewMembershipPopup.classList.remove('new_hidden');
+            popup.style.display = 'block';
+            overlay.style.display = 'block';
+            localStorage.setItem("renew_popup_open_once", true)
+            lockPageScroll();
+        }
+    }
+    checkIfMembershipExpiring = function(date) {
+        const expiryDate = new Date(date);
+
+        localStorage.setItem("membership_expiry_date", expiryDate.toISOString());
+
+        const savedExpiry = localStorage.getItem("membership_expiry_date");
+
+        if (savedExpiry) {
+            const expiry = new Date(savedExpiry);
+            const today = new Date();
+            
+            const diffTime = expiry - today;
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+            const membershipExpiringSoon = diffDays <= 30;
+
+            localStorage.setItem("membership_expiring_soon", membershipExpiringSoon);
+            localStorage.setItem("membership_expiring_in_days", diffDays);
+
+            console.log(`Membership expires in ${diffDays} days`);
+            console.log("Expiring soon:", membershipExpiringSoon);
+        }
+    }
+
+
+
+
+    
+
+    async function forgetPassword(emailInput){
+        const url = `${internalSSO}/auth/forgot-password`
+        try { 
+            const response = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                }, 
+                body: JSON.stringify({
+                    email: emailInput,
+                    client : client,
+                }), 
+            });
+            if (!response.ok) {
+                throw new Error(`Response status: ${response.status}`);
+            } 
+            const json = await response.json(); 
+            return json
+        } catch (error) {
+            console.error(error.message);
+            return error.message
+        }
+    }
+
+    async function verifyOTP(email,otp){
+        const url = `${internalSSO}/otp/verify`
+        try { 
+            const response = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                }, 
+                body: JSON.stringify({
+                    email: email,
+                    otp : otp,
+                }), 
+            }); 
+            const json = await response.json();
+            console.log(json); 
+            return json
+        } catch (error) {
+            console.error(error.message);
+            return error
+        }
+    }
+    
+    async function passwordReset(jwt,password){ 
+        const url = `${internalSSO}/auth/password/reset`
+        try { 
+            const response = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                }, 
+                body: JSON.stringify({
+                    token: jwt,
+                    password : password,
+                }), 
+            }); 
+            const json = await response.json();
+            console.log(json); 
+            return json
+        } catch (error) {
+            console.error(error.message);
+            return error
+        }
+    }
+
+    async function resendOTP(email){
+        const url = `${internalSSO}/otp/generate`
+        try { 
+            const response = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                }, 
+                body: JSON.stringify({
+                    email: email,
+                }), 
+            }); 
+            const json = await response.json();
+            console.log(json); 
+            return json
+        } catch (error) {
+            console.error(error.message);
+            return error
+        }
+    }
+
+    async function addEliteProductToCart() {
+		const id = "{{ elite_id }}";
+	  
+		const get_cart = await getCart();
+		const matched_item = get_cart.items.find((item) => item.variant_id == id);
+
+        if (matched_item) {
+		  const updates = { [id]: 1 };
+	  
+		  try {
+			const response = await fetch(
+			  window.Shopify.routes.root + "cart/update.js",
+			  {
+				method: "POST",
+				headers: {
+				  "Content-Type": "application/json",
+				},
+				body: JSON.stringify({ updates }),
+			  }
+			);
+	  
+			if (!response.ok) throw new Error("Failed to remove item from cart");
+	  
+			const data = await response.json();
+			console.log("updating quantity to 1:", data); 
+            return true
+		  } catch (error) {
+			console.error("Error removing item from cart:", error);
+            return false
+		  }
+		} else {
+		  const formData = {
+			items: [
+			  {
+				id: +id, // Ensure `id` is a number
+				quantity: 1,
+				properties: { _type: "hide" },
+			  },
+			],
+		  };
+	  
+		  try {
+			const response = await fetch(`${window.Shopify.routes.root}cart/add.js`, {
+			  method: "POST",
+			  headers: {
+				"Content-Type": "application/json",
+			  },
+			  body: JSON.stringify(formData),
+			});
+	  
+			if (!response.ok) throw new Error("Failed to add item to cart");
+	  
+			const data = await response.json();
+			return true
+		  } catch (error) {
+			console.error("Error adding item to cart:", error);
+			return false
+		  }
+		}
+    }
+
+
+    // password show/hide
+    document.querySelectorAll('.show-pass').forEach( s => {
+        s.addEventListener('click',function(e){
+            s.parentElement.querySelector('input[type="password"]').setAttribute('type','text')
+            s.classList.add('new_hidden')
+            s.parentElement.querySelector('.hide-pass').classList.remove('new_hidden')
+        })
+    }) 
+    document.querySelectorAll('.hide-pass').forEach( h => {
+        h.addEventListener('click',function(e){
+            h.parentElement.querySelector('input[type="text"]').setAttribute('type','password')
+            h.classList.add('new_hidden')
+            h.parentElement.querySelector('.show-pass').classList.remove('new_hidden')
+        })
+    })
+    // ----------
+
+    //login form validations 
+    document.getElementById('loginForm').addEventListener('submit', async function(event) {
+        event.preventDefault();
+
+        const emailInput = document.querySelector('#loginForm #email');
+        const passwordInput = document.querySelector('#loginForm #password');
+        let isValid = true;
+         
+        const errorMessages = document.querySelectorAll('#loginForm .error');
+        errorMessages.forEach(msg => msg.classList.add('new_hidden'));
+         
+        if (emailInput.value.trim() === '') {
+            const emailError = emailInput.nextElementSibling;
+            emailError.textContent = 'Email is required';
+            emailError.classList.remove('new_hidden');
+            isValid = false;
+        } else if (!isValidEmail(emailInput.value)) {
+            const emailError = emailInput.nextElementSibling;
+            emailError.textContent = 'Please enter a valid email address';
+            emailError.classList.remove('new_hidden');
+            isValid = false;
+        }
+        
+        // Validate password
+        if (passwordInput.value.trim() === '') {
+            const passwordError = passwordInput.parentElement.nextElementSibling;
+            passwordError.textContent = 'Password is required';
+            passwordError.classList.remove('new_hidden');
+            isValid = false;
+        }
+         
+        if (isValid) {
+            console.log('Form submitted successfully'); 
+            loginUser(emailInput.value.trim(),passwordInput.value.trim(),document.querySelector('.main_login_form .c_error'))  
+        }
+    }); 
+    
+    // -------------
+
+    // onclick forget pass/ back button toggeling form
+    document.querySelector('.forgot-password').addEventListener('click',function(){
+        document.querySelector('.main_login_form').classList.add('new_hidden')
+        document.querySelector('.main_forget_password').classList.remove('new_hidden')
+        document.querySelector('.main_forget_password #forgetForm #email').focus()
+    })
+    document.querySelector('.show_login_form').addEventListener('click',function(){
+        document.querySelector('.main_login_form').classList.remove('new_hidden')
+        document.querySelector('.main_forget_password').classList.add('new_hidden')
+        document.querySelector('.main_login_form input[type="email"]').focus()
+    })
+    // -------------
+
+    // forget password form email validations
+    document.getElementById('forgetForm').addEventListener('submit', async function(event) {
+        event.preventDefault();
+
+        const emailInput = document.querySelector('#forgetForm #email'); 
+        let isValid = true;
+         
+        const errorMessages = document.querySelectorAll('#forgetForm .error');
+        errorMessages.forEach(msg => msg.classList.add('new_hidden'));
+         
+        if (emailInput.value.trim() === '') {
+            const emailError = emailInput.nextElementSibling;
+            emailError.textContent = 'Email is required';
+            emailError.classList.remove('new_hidden');
+            isValid = false;
+        } else if (!isValidEmail(emailInput.value)) {
+            const emailError = emailInput.nextElementSibling;
+            emailError.textContent = 'Please enter a valid email address';
+            emailError.classList.remove('new_hidden');
+            isValid = false;
+        } 
+         
+        if (isValid) {
+            document.querySelector('.main_forget_password #forgetForm .c_error').textContent = '';
+            document.querySelector('.main_forget_password #forgetForm .c_error').setAttribute('style','color:red')
+            const emailexists = await checkEmailExists(emailInput.value.trim()) 
+            if(emailexists.exists){
+                let data = await forgetPassword(emailInput.value.trim()) 
+                document.querySelector('#verifyOTP #email').value = emailInput.value.trim()
+                document.querySelector('#newPasswordForm #jwt').value = data.jwtToken
+                document.querySelector('#verifyOTP').classList.remove('new_hidden')
+                document.querySelector('#forgetForm').classList.add('new_hidden')
+                document.querySelector('#verifyOTP #otp').focus()
+            }else{
+                document.querySelector('.main_forget_password #forgetForm .c_error').textContent = 'Email does not exist';
+            }
+            
+            console.log('Form submitted successfully'); 
+             
+        }
+    }); 
+    // ---------------------
+
+    
+
+    // verify opt form
+
+    document.getElementById('verifyOTP').addEventListener('submit', async function(event) {
+        event.preventDefault();
+
+        const otpInput = document.querySelector('#verifyOTP #otp'); 
+        let isValid = true;
+         
+        const errorMessages = document.querySelectorAll('#verifyOTP .error');
+        errorMessages.forEach(msg => msg.classList.add('new_hidden'));
+         
+
+        
+        if (otpInput.value.trim() === '') {
+            const otpError = otpInput.nextElementSibling; 
+            otpError.textContent = 'OTP is required';
+            otpError.classList.remove('new_hidden');
+            isValid = false;
+        } 
+
+        if (otpInput.value.trim().length !== 6 ) {
+            const otpError = otpInput.nextElementSibling; 
+            otpError.textContent = 'Please enter a valid 6-digit OTP';
+            otpError.classList.remove('new_hidden');
+            isValid = false;
+        } 
+
+        const digitsOnlyRegex = /^\d+$/;
+        if (digitsOnlyRegex.test(otpInput.value) == false ) {
+            const otpError = otpInput.nextElementSibling; 
+            otpError.textContent = 'Only digits are acceptable';
+            otpError.classList.remove('new_hidden');
+            isValid = false;
+        } 
+
+
+        if (isValid) {
+            document.querySelector('.main_forget_password #verifyOTP .error').textContent = '';  
+            console.log('Form submitted successfully'); 
+
+            let email = document.querySelector('#verifyOTP #email').value 
+            let verifyotp = await verifyOTP(email,otpInput.value.trim())
+            if(verifyotp.statusCode == 400){
+                document.querySelector('.main_forget_password #verifyOTP .error').textContent = 'Incorrect OTP';
+                document.querySelector('.main_forget_password #verifyOTP .error').classList.remove('new_hidden');  
+            }else{
+                console.log('correct otp')
+                document.querySelector('#verifyOTP').classList.add('new_hidden')
+                document.querySelector('#newPasswordForm').classList.remove('new_hidden')
+            }
+        }
+    });  
+    // ------------------------
+
+    // new password form rest 
+    document.querySelector('#newPasswordForm').addEventListener('submit', async function(event) {
+        event.preventDefault();
+        document.querySelector('#newPasswordForm .c_error').textContent = ''
+        const passwordInput = document.querySelector('#newPasswordForm #password'); 
+        const c_passwordInput = document.querySelector('#newPasswordForm #c_password'); 
+        let isValid = true;
+         
+        const errorMessages = document.querySelectorAll('#newPasswordForm .error');
+        errorMessages.forEach(msg => msg.classList.add('new_hidden'));
+         
+        if (passwordInput.value.trim() === '') {
+            const passwordError = passwordInput.parentElement.nextElementSibling;
+            passwordError.textContent = 'Password is required';
+            passwordError.classList.remove('new_hidden');
+            isValid = false;
+        } 
+
+        if (c_passwordInput.value.trim() === '') {
+            const c_passwordError = c_passwordInput.parentElement.nextElementSibling;
+            c_passwordError.textContent = 'Confirm Password is required';
+            c_passwordError.classList.remove('new_hidden');
+            isValid = false;
+        } 
+
+        if( passwordInput.value.trim() !== c_passwordInput.value.trim()){
+            const c_error = document.querySelector('#newPasswordForm .c_error');
+            c_error.textContent = 'Password and Confirm Password do not match';
+            c_error.classList.remove('new_hidden');
+            isValid = false;
+        }
+         
+        if (isValid) {
+            console.log('Form submitted successfully'); 
+            let jwt = document.querySelector('#newPasswordForm #jwt').value; 
+            let passResponse = await passwordReset(jwt,passwordInput.value.trim())  
+            if(passResponse.success){
+                document.querySelector('.main_forget_password').classList.add('new_hidden')
+                document.querySelector('#forgetForm').classList.remove('new_hidden')
+                document.querySelector('#newPasswordForm').classList.add('new_hidden')
+                document.querySelector('.main_login_form').classList.remove('new_hidden')
+            }
+        }
+    });
+
+    // ------------
+
+    // resend otp
+    document.querySelector('.resend_otp').addEventListener('click',function(e){
+        e.preventDefault();
+        document.querySelector('#verifyOTP .c_error').textContent = 'OTP RESENT';
+        let email = document.querySelector('#verifyOTP #email').value.trim()
+        resendOTP(email)
+    })
+    // ------
+
+    // onclick signup / log in show hide forms
+    document.querySelector('.signup-link').addEventListener('click',function(){
+        document.querySelector('.main_login_form').classList.add('new_hidden')
+        document.querySelector('.main_signup_form').classList.remove('new_hidden')
+        document.querySelector('.main_signup_form input[type="email"]').focus()
+    })
+    document.querySelector('.signup_login').addEventListener('click',function(){
+        document.querySelector('.main_login_form').classList.remove('new_hidden')
+        document.querySelector('.main_signup_form').classList.add('new_hidden')
+        document.querySelector('.main_login_form input[type="email"]').focus()
+    }) 
+    document.querySelectorAll('.signup_login_elite').forEach( s => {
+        s.addEventListener('click',function(){
+            document.querySelector('.main_login_form').classList.remove('new_hidden')
+            document.querySelector('.main_elite_signup_form').classList.add('new_hidden')
+            document.querySelector('.main_elite_upgrade_form').classList.add('new_hidden')
+            document.querySelector('.main_elite_signup_form input[type="email"]').focus()
+            document.querySelector('.main_elite_upgrade_form input[type="email"]').focus()
+        })
+    })
+    // --------------
+
+    // sigup form code
+    document.querySelector('.signup_first_btn').addEventListener('click', async function(){
+        const emailInput = document.querySelector('#signupForm #email'); 
+        let isValid = true;
+         
+        const errorMessages = document.querySelectorAll('#signupForm .error');
+        errorMessages.forEach(msg => msg.classList.add('new_hidden'));
+
+        
+         
+        if (emailInput.value.trim() === '') {
+            const emailError = emailInput.nextElementSibling;
+            emailError.textContent = 'Email is required';
+            emailError.classList.remove('new_hidden');
+            isValid = false;
+        } else if (!isValidEmail(emailInput.value)) {
+            const emailError = emailInput.nextElementSibling;
+            emailError.textContent = 'Please enter a valid email address';
+            emailError.classList.remove('new_hidden');
+            isValid = false;
+        } 
+
+        if(document.querySelector('#signupForm #i_agree').checked){
+            document.querySelector('.sign_up_first_step .c_error').textContent = ''
+        }else{
+            document.querySelector('.sign_up_first_step .c_error').textContent = 'Please agree to terms and conditions'
+            isValid = false
+            return
+        }
+
+
+        const emailExists = await checkEmailExists(emailInput.value.trim())
+        if(emailExists.exists){
+            document.querySelector('.sign_up_first_step .c_error').textContent = 'Email already exists' 
+            isValid = false
+        }else{
+            document.querySelector('.sign_up_first_step .c_error').textContent = ''
+        }
+         
+        if (isValid && document.querySelector('#signupForm #i_agree').checked) {
+            document.querySelector('.signup_second_step').classList.remove('new_hidden')
+            document.querySelector('.sign_up_first_step').classList.add('new_hidden')
+        }
+    })
+
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const emailInput = document.querySelector('#signupForm #email');
+        const passwordInput = document.querySelector('#signupForm #password');
+        const fName = document.querySelector('#signupForm #f_name');
+        const lName = document.querySelector('#signupForm #l_name');
+        const zipCode = document.querySelector('#signupForm #zip_code');
+        let isValid = true;
+         
+        const errorMessages = document.querySelectorAll('#signupForm .error');
+        errorMessages.forEach(msg => msg.classList.add('new_hidden'));
+         
+        if (fName.value.trim() === '') {
+            const fNameError = fName.nextElementSibling;
+            fNameError.textContent = 'First Name is required';
+            fNameError.classList.remove('new_hidden');
+            isValid = false;
+        }
+
+        if (lName.value.trim() === '') {
+            const lNameError = lName.nextElementSibling;
+            lNameError.textContent = 'Last Name is required';
+            lNameError.classList.remove('new_hidden');
+            isValid = false;
+        }
+
+        if (zipCode.value.trim() === '') {
+            const zipCodeError = zipCode.nextElementSibling;
+            zipCodeError.textContent = 'Zip Code is required';
+            zipCodeError.classList.remove('new_hidden');
+            isValid = false;
+        }
+        
+         
+        if (passwordInput.value.trim() === '') {
+            const passwordError = passwordInput.parentElement.nextElementSibling;
+            passwordError.textContent = 'Password is required';
+            passwordError.classList.remove('new_hidden');
+            isValid = false;
+        }
+         
+        if (isValid) {
+            registerUser(emailInput.value.trim(),passwordInput.value.trim(),fName.value.trim(),lName.value.trim(),zipCode.value.trim(),document.querySelector('.signup_second_step .c_error'))
+            console.log('Form submitted successfully');  
+        }
+    }); 
+    // ----------
+
+
+    // elite signup code
+    document.querySelector('.signup_elite_first_btn').addEventListener('click',async function(){
+        const emailInput = document.querySelector('#signupEliteForm #email'); 
+        let isValid = true;
+         
+        const errorMessages = document.querySelectorAll('#signupEliteForm .error');
+        errorMessages.forEach(msg => msg.classList.add('new_hidden'));
+         
+        if (emailInput.value.trim() === '') {
+            const emailError = emailInput.nextElementSibling;
+            emailError.textContent = 'Email is required';
+            emailError.classList.remove('new_hidden');
+            isValid = false;
+        } else if (!isValidEmail(emailInput.value)) {
+            const emailError = emailInput.nextElementSibling;
+            emailError.textContent = 'Please enter a valid email address';
+            emailError.classList.remove('new_hidden');
+            isValid = false;
+        } 
+
+        if(document.querySelector('#signupEliteForm #i_agree_elite').checked){
+            document.querySelector('.sign_up_first_step_elite .c_error').textContent = ''
+        }else{
+            document.querySelector('.sign_up_first_step_elite .c_error').textContent = 'Please agree to terms and conditions'
+            isValid = false
+            return
+        }
+         
+
+        const emailExists = await checkEmailExists(emailInput.value.trim())
+        if(emailExists.exists){
+            document.querySelector('.sign_up_first_step_elite .c_error').textContent = 'Email already exists' 
+            isValid = false
+        }else{
+            document.querySelector('.sign_up_first_step_elite .c_error').textContent = ''
+        }
+
+        if (isValid && document.querySelector('#signupEliteForm #i_agree_elite').checked) {
+            document.querySelector('.signup_second_step_elite').classList.remove('new_hidden')
+            document.querySelector('.sign_up_first_step_elite').classList.add('new_hidden')
+        }
+    })
+
+    document.querySelector('.signup_elite_second_btn').addEventListener('click', function() { 
+  
+        const passwordInput = document.querySelector('#signupEliteForm #password');
+        const fName = document.querySelector('#signupEliteForm #f_name');
+        const lName = document.querySelector('#signupEliteForm #l_name');
+        const zipCode = document.querySelector('#signupEliteForm #zip_code');
+        let isValid = true;
+         
+        const errorMessages = document.querySelectorAll('#signupEliteForm .error');
+        errorMessages.forEach(msg => msg.classList.add('new_hidden'));
+         
+        if (fName.value.trim() === '') {
+            const fNameError = fName.nextElementSibling;
+            fNameError.textContent = 'First Name is required';
+            fNameError.classList.remove('new_hidden');
+            isValid = false;
+        }
+
+        if (lName.value.trim() === '') {
+            const lNameError = lName.nextElementSibling;
+            lNameError.textContent = 'Last Name is required';
+            lNameError.classList.remove('new_hidden');
+            isValid = false;
+        }
+
+        if (zipCode.value.trim() === '') {
+            const zipCodeError = zipCode.nextElementSibling;
+            zipCodeError.textContent = 'Zip Code is required';
+            zipCodeError.classList.remove('new_hidden');
+            isValid = false;
+        }
+        
+         
+        if (passwordInput.value.trim() === '') {
+            const passwordError = passwordInput.parentElement.nextElementSibling;
+            passwordError.textContent = 'Password is required';
+            passwordError.classList.remove('new_hidden');
+            isValid = false;
+        }
+         
+        if (isValid) {
+            document.querySelector('.signup_second_step_elite').classList.add('new_hidden')
+            document.querySelector('.signup_third_step_elite').classList.remove('new_hidden')
+        }
+    }); 
+
+    document.querySelector('.signup_elite_third_btn').addEventListener('click',function(){
+        const dob = document.querySelector('#signupEliteForm #dob'); 
+        let isValid = true;
+         
+        const errorMessages = document.querySelectorAll('#signupEliteForm .error');
+        errorMessages.forEach(msg => msg.classList.add('new_hidden'));
+
+
+        const dateEntered = new Date(dob.value);
+        if (isNaN(dateEntered.getTime())) {
+            const dobError = dob.nextElementSibling; 
+            dobError.classList.remove('new_hidden');
+            isValid = false;
+        } 
+
+        const currentDate = new Date();
+        let age = currentDate.getFullYear() - dateEntered.getFullYear();
+   
+        const currentMonth = currentDate.getMonth();
+        const birthMonth = dateEntered.getMonth();
+        
+        if (birthMonth > currentMonth || 
+            (birthMonth === currentMonth && dateEntered.getDate() > currentDate.getDate())) {
+            age--;
+        }
+
+        if(age <=17){
+            const dobError = dob.nextElementSibling; 
+            dobError.textContent = 'You must be at least 18 years old'
+            dobError.classList.remove('new_hidden');
+            isValid = false;
+        }
+         
+        if (isValid) {
+            document.querySelector('.signup_fourth_step_elite').classList.remove('new_hidden')
+            document.querySelector('.signup_third_step_elite').classList.add('new_hidden')
+        }
+    })
+
+    document.querySelector('.signup_elite_thirdskip_btn').addEventListener('click',function(){ 
+        document.querySelector('.signup_fourth_step_elite').classList.remove('new_hidden')
+        document.querySelector('.signup_third_step_elite').classList.add('new_hidden')
+    })
+
+    document.getElementById('signupEliteForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const emailInput = document.querySelector('#signupEliteForm #email').value.trim();
+        const passwordInput = document.querySelector('#signupEliteForm #password').value.trim();
+        const fName = document.querySelector('#signupEliteForm #f_name').value.trim();
+        const lName = document.querySelector('#signupEliteForm #l_name').value.trim();
+        const zipCode = document.querySelector('#signupEliteForm #zip_code').value.trim();
+        const dob = document.querySelector('#signupEliteForm #dob').value.trim(); 
+        
+        registerUser(emailInput,passwordInput,fName,lName,zipCode,document.querySelector('.signup_fourth_step_elite .c_error'),true)
+    })
+
+
+    // elite upgrade form code
+    document.querySelector('.elite_upgrade_first_btn').addEventListener('click',async function(){ 
+        let isValid = true; 
+        const errorMessages = document.querySelectorAll('.upgrade_first_step_elite .c_error');
+        errorMessages.forEach(msg => msg.classList.add('new_hidden'));
+
+        if (document.querySelector('#eliteUpgradeForm #i_agree_elite_upgrade').checked) {
+            document.querySelector('.upgrade_second_step_elite').classList.remove('new_hidden')
+            document.querySelector('.upgrade_first_step_elite').classList.add('new_hidden')
+            document.querySelector('.upgrade_second_step_elite #dob').focus();
+        }else{
+            document.querySelector('.upgrade_first_step_elite .c_error').textContent = 'Please agree to terms and conditions'
+            document.querySelector('.upgrade_first_step_elite .c_error').classList.remove('new_hidden');
+            isValid = false
+            return
+        }
+    })
+
+    document.querySelector('.upgrade_elite_second_btn').addEventListener('click',function(){
+        const dob = document.querySelector('#eliteUpgradeForm #dob'); 
+        let isValid = true;
+         
+        const errorMessages = document.querySelectorAll('#eliteUpgradeForm .error');
+        errorMessages.forEach(msg => msg.classList.add('new_hidden'));
+
+
+        const dateEntered = new Date(dob.value);
+        if (isNaN(dateEntered.getTime())) {
+            const dobError = dob.nextElementSibling; 
+            dobError.classList.remove('new_hidden');
+            isValid = false;
+        } 
+
+        const currentDate = new Date();
+        let age = currentDate.getFullYear() - dateEntered.getFullYear();
+   
+        const currentMonth = currentDate.getMonth();
+        const birthMonth = dateEntered.getMonth();
+        
+        if (birthMonth > currentMonth || 
+            (birthMonth === currentMonth && dateEntered.getDate() > currentDate.getDate())) {
+            age--;
+        }
+
+        if(age <=17){
+            const dobError = dob.nextElementSibling; 
+            dobError.textContent = 'You must be at least 18 years old'
+            dobError.classList.remove('new_hidden');
+            isValid = false;
+        }
+         
+        if (isValid) {
+            document.querySelector('.upgrade_third_step_elite').classList.remove('new_hidden')
+            document.querySelector('.upgrade_second_step_elite').classList.add('new_hidden')
+            document.querySelector('.upgrade_third_step_elite .upgrade_elite_submit_btn').focus();
+        }
+    })
+
+    document.querySelector('.upgrade_elite_secondskip_btn').addEventListener('click',function(){ 
+        document.querySelector('.upgrade_second_step_elite').classList.add('new_hidden')
+        document.querySelector('.upgrade_third_step_elite').classList.remove('new_hidden')
+        document.querySelector('.upgrade_third_step_elite .upgrade_elite_submit_btn').focus();
+    })
+
+    document.getElementById('eliteUpgradeForm').addEventListener('submit', async function(event) {
+        event.preventDefault();
+        const elite_added = await addEliteProductToCart()
+        if(elite_added){
+            document.querySelector('.upgrade_third_step_elite .c_error').textContent = ''
+            window.location.reload();
+        }else{
+            document.querySelector('.upgrade_third_step_elite .c_error').textContent = 'Error adding elite membership to cart'
+        }
+    })
+    //---------
+
+    // helper functions
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+
+
+
+
+    // keyboard accessibility  
+    const showPassBtns = document.querySelectorAll('.show-pass');
+    const hidePassBtns = document.querySelectorAll('.hide-pass'); 
+    function togglePassword(btn) {
+        const passwordField = btn.parentElement.querySelector('input[type="password"], input[type="text"]');
+        if (passwordField.type === 'password') { 
+            passwordField.type = 'text';
+            btn.classList.add('new_hidden');
+            btn.nextElementSibling.classList.remove('new_hidden');
+            btn.nextElementSibling.focus(); 
+        } else { 
+            passwordField.type = 'password';
+            btn.classList.add('new_hidden');
+            btn.previousElementSibling.classList.remove('new_hidden');
+            btn.previousElementSibling.focus();
+        }
+    } 
+    showPassBtns.forEach(btn => {
+        btn.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter' || event.keyCode === 13) {
+                event.preventDefault();
+                togglePassword(btn);
+            }
+        }); 
+    });
+    hidePassBtns.forEach(btn => {
+        btn.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter' || event.keyCode === 13) {
+                event.preventDefault();
+                togglePassword(btn);
+            }
+        }); 
+    });
+    
+
+
+    // popup checkbox accessibility
+    document.querySelector('input#i_agree').addEventListener('keydown', function(event) {
+        if (event.key === 'Enter' || event.keyCode === 13) {
+            event.preventDefault();
+            this.checked = !this.checked;
+        }
+    });
+    document.querySelector('input#i_agree_elite').addEventListener('keydown', function(event) {
+        if (event.key === 'Enter' || event.keyCode === 13) {
+            event.preventDefault();
+            this.checked = !this.checked;
+        }
+    });
+    document.querySelector('input#i_agree_elite_upgrade').addEventListener('keydown', function(event) {
+        if (event.key === 'Enter' || event.keyCode === 13) {
+            event.preventDefault();
+            this.checked = !this.checked;
+        }
+    });
+
+    // closing popups with escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' || event.keyCode === 27) {
+            document.querySelector('div#new_popup-overlay2').setAttribute('style','display:none')
+            document.querySelector('.new_custom_popup_main2').setAttribute('style','display:none')
+            document.querySelectorAll('.new_forms').forEach(form => {
+                form.classList.add('new_hidden');
+            });
+        }
+    });
+
+
+    // loop same form if element is last tab
+    document.querySelector('.main_login_form .signup-link').addEventListener('keydown',function(e){
+        if(e.key == 'Tab' || e.keyCode == 9){
+            e.preventDefault();
+            document.querySelector('.new_custom_popup_main2  .close_popup').focus();
+        }
+    })
+
+    document.querySelector('.main_signup_form .signup_login').addEventListener('keydown',function(e){
+        if(e.key == 'Tab' || e.keyCode == 9){
+            e.preventDefault();
+            document.querySelector('.new_custom_popup_main2  .close_popup').focus();
+        }
+    })
+
+    document.querySelector('#forgetForm .show_login_form').addEventListener('keydown',function(e){
+        if(e.key == 'Tab' || e.keyCode == 9){
+            e.preventDefault();
+            document.querySelector('.new_custom_popup_main2  .close_popup').focus();
+        }
+    })
+
+    document.querySelector('.upgrade_first_step_elite .elite_upgrade_first_btn ').addEventListener('keydown',function(e){
+        if(e.key == 'Tab' || e.keyCode == 9){
+            e.preventDefault();
+            document.querySelector('.new_custom_popup_main2  .close_popup').focus();
+        }
+    })
+
+    document.querySelector('.upgrade_second_step_elite .upgrade_elite_secondskip_btn ').addEventListener('keydown',function(e){
+        if(e.key == 'Tab' || e.keyCode == 9){
+            e.preventDefault();
+            document.querySelector('.new_custom_popup_main2  .close_popup').focus(); 
+        }
+    })
+
+    document.querySelector('.upgrade_third_step_elite .upgrade_elite_submit_btn  ').addEventListener('keydown',function(e){
+        if(e.key == 'Tab' || e.keyCode == 9){
+            e.preventDefault();
+            document.querySelector('.new_custom_popup_main2  .close_popup').focus();
+        }
+    })
+
+    document.querySelector('.sign_up_first_step_elite .signup_login_elite  ').addEventListener('keydown',function(e){
+        if(e.key == 'Tab' || e.keyCode == 9){
+            e.preventDefault();
+            document.querySelector('.new_custom_popup_main2  .close_popup').focus(); 
+        }
+    })
+
+    document.querySelector('.signup_second_step_elite .signup_login_elite  ').addEventListener('keydown',function(e){
+        if(e.key == 'Tab' || e.keyCode == 9){
+            e.preventDefault();
+            document.querySelector('.new_custom_popup_main2  .close_popup').focus();
+        }
+    })
+
+    document.querySelector('.signup_third_step_elite .signup_login_elite  ').addEventListener('keydown',function(e){
+        if(e.key == 'Tab' || e.keyCode == 9){
+            e.preventDefault();
+            document.querySelector('.new_custom_popup_main2  .close_popup').focus();
+        }
+    })
+
+    document.querySelector('.signup_fourth_step_elite .signup_elite_submit_btn  ').addEventListener('keydown',function(e){
+        if(e.key == 'Tab' || e.keyCode == 9){
+            e.preventDefault();
+            document.querySelector('.new_custom_popup_main2  .close_popup').focus(); 
+        }
+    })
+
+    document.querySelector('#verifyOTP .resend_otp').addEventListener('keydown',function(e){
+        if(e.key == 'Tab' || e.keyCode == 9){
+            e.preventDefault();
+            document.querySelector('.new_custom_popup_main2  .close_popup').focus(); 
+        }
+    })
+
+    document.addEventListener('DOMContentLoaded', function () {
+    const campaignRenewBtn = document.querySelector('.login_to_renew');
+    
+    if (campaignRenewBtn) {
+        campaignRenewBtn.addEventListener('click', function () {
+        campaignRenewMembershipPopup?.classList.add('new_hidden');
+        mainLoginForm?.classList.remove('new_hidden');
+        popup.style.display = 'block';
+        overlay.style.display = 'block';
+        });
+    }
+    });
+</script>
+
+<style>
+    
+    .elite-main-heading {
+font-size: 1.8em !important;
+font-weight: 700;
+color: white;
+text-align: center;
+}
+.elite-sub-heading {
+font-size: 1.8em !important;
+font-weight: 700;
+color: white;
+margin-top: 10px;
+text-align: center;
+}
+.fifty-off {
+font-size: 2.0em !important;
+font-weight: 900;
+}
+
+.new_popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Semi-transparent background */
+  z-index: 1000;
+  /* Ensure it is behind the popup */
+}
+.sign_up_first_step p {
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+button.forgot-password:focus, button.signup-link:focus, button.signup_login:focus, button.signup_login_elite:focus, .resend_otp:focus, button.close_popup:focus, span.show-pass:focus svg, span.hide-pass:focus svg {
+  outline: -webkit-focus-ring-color auto 1px !important;
+}
+.new_hidden {
+  display: none;
+}
+.i_agree_main input {
+  margin-right: 5px;
+  position: relative;
+  top: -2px;
+}
+.signup_fourth_step_elite > div, .upgrade_first_step_elite > div {
+  padding: 0 20px 20px;
+}
+.upgrade_second_step_elite {
+  padding: 0 20px 20px;
+}
+.upgrade_third_step_elite > div {
+  padding: 0 20px 20px;
+}
+@keyframes scroll-left {
+  0% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.text_sub {
+  text-align: center;
+  color: #000;
+  font-size: 14px;
+  margin-bottom: 40px !important;
+}
+.new_forms.elite .text_sub {
+  color: #fff;
+}
+.new_custom_popup_main2 {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+.new_custom_popup_main2 button {
+  cursor: pointer;
+}
+.new_custom_popup_main2 .footer_logos {
+  background-color: #B52E27;
+  padding: 20px;
+  border-radius: 0 0 8px 8px;
+}
+.new_custom_popup_main2 .footer_logos p {
+  font-weight: 600;
+  text-transform: capitalize;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 0;
+}
+.new_custom_popup_main2 .new_forms {
+  background: #fff;
+  border-radius: 10px;
+}
+.new_custom_popup_main2 .close_popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  background: #c1c7d0;
+  color: #fff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+.new_custom_popup_main2 .close_popup:focus-visible {
+  border: none;
+  outline: none;
+}
+.new_custom_popup_main2 .new_form_container #loginForm, .new_custom_popup_main2 form#forgetForm, .new_custom_popup_main2 #signupForm, .new_custom_popup_main2 #verifyOTP, .new_custom_popup_main2 #newPasswordForm {
+  padding: 0 20px 20px;
+}
+.new_custom_popup_main2 #loginForm > p:first-child, .new_custom_popup_main2 form#forgetForm > p:first-child, .new_custom_popup_main2 #signupForm > p:first-child, .new_custom_popup_main2 #verifyOTP > p:first-child, .new_custom_popup_main2 #newPasswordForm > p:first-child {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.new_custom_popup_main2 .i_agree_main {
+  text-align: center;
+}
+.new_custom_popup_main2 .i_agree_main label {
+  position: unset;
+  left: unset;
+  top: unset;
+  background-color: none;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 15px;
+}
+.new_custom_popup_main2 .form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+.new_custom_popup_main2 label {
+  color: #637381;
+  font-size: 11px;
+  position: absolute;
+  background: #fff;
+  top: -8px;
+  z-index: 2;
+  left: 7px;
+}
+.new_custom_popup_main2 .c_error {
+  font-size: 11px;
+  color: red;
+  background: transparent;
+  position: relative;
+  top: -10px;
+}
+.new_custom_popup_main2 .error {
+  font-size: 11px;
+  color: red;
+  background: transparent;
+}
+.new_custom_popup_main2 .required:after {
+  content: " *";
+  color: #777;
+}
+.new_custom_popup_main2 input[type="date"], .new_custom_popup_main2 input[type="text"], .new_custom_popup_main2 input[type="email"], .new_custom_popup_main2 input[type="password"], .new_custom_popup_main2 input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none !important;
+  margin: 0;
+}
+.new_custom_popup_main2 .password-field {
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+.new_custom_popup_main2 .password-field svg {
+  width: 15px;
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+  top: 16px;
+  cursor: pointer;
+}
+.new_custom_popup_main2 .password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #999;
+}
+.new_custom_popup_main2 .elite_btn {
+  width: 100%;
+  color: #1c355e;
+  background: linear-gradient(117.84deg, #ab7917 8.15%, #ffdf6e 50%, #ab7917 91.85%);
+  border-radius: 25px;
+  padding: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.new_custom_popup_main2 .fill_btn {
+  width: 100%;
+  color: #fff;
+  background: #e1251c;
+  border-radius: 25px;
+  padding: 15px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.new_custom_popup_main2 .transparent_btn {
+  width: 100%;
+  color: #e1251c;
+  border: 1px solid #e1251c;
+  border-radius: 25px;
+  padding: 15px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 15px;
+}
+.new_custom_popup_main2 .transparent_btn:hover {
+  background-color: #ffeeee;
+}
+.new_custom_popup_main2 .footer {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #000;
+}
+.new_custom_popup_main2 .forgot-password {
+  text-align: right;
+  margin-bottom: 15px;
+  font-size: 12px;
+  color: #000;
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  height: auto;
+  line-height: normal;
+  justify-content: end;
+  padding: 0;
+}
+.new_custom_popup_main2 .signup-link, .new_custom_popup_main2 .signup_login, .new_custom_popup_main2 .resend_otp {
+  color: #f54242;
+  text-decoration: none;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  height: auto;
+  line-height: 1;
+  padding: 0;
+}
+.new_custom_popup_main2 .img_logo_popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0 30px;
+}
+.new_custom_popup_main2 .new_logos_scroll {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  white-space: nowrap;
+}
+.new_custom_popup_main2 .new_logos_scroll ul {
+  list-style: none;
+  padding: 0;
+  display: inline-block;
+  width: auto;
+  height: 100%;
+  margin: 0;
+  text-align: center;
+  transform: translateX(10%);
+  animation: scroll-left 20s linear infinite;
+}
+.new_custom_popup_main2 .new_logos_scroll ul li {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 10px;
+}
+.new_custom_popup_main2 .new_forms.elite {
+  background: #031546;
+}
+.new_custom_popup_main2 .new_forms.elite .footer_logos {
+  background: #1C355E;
+}
+.new_custom_popup_main2 .new_forms.elite .img_logo_popup {
+  max-width: 200px;
+  margin: 0 auto;
+}
+.new_custom_popup_main2 .new_forms.elite form#signupEliteForm .sign_up_first_step_elite, .new_custom_popup_main2 .new_forms.elite form#signupEliteForm .signup_second_step_elite, .new_custom_popup_main2 .new_forms.elite form#signupEliteForm .signup_third_step_elite {
+  padding: 0 20px 20px;
+}
+.new_custom_popup_main2 .new_forms.elite #signupEliteForm p, .new_custom_popup_main2 .new_forms.elite #eliteUpgradeForm p {
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.new_custom_popup_main2 .new_forms.elite .i_agree_main label {
+  background-color: transparent;
+  color: #fff;
+}
+.new_custom_popup_main2 .new_forms.elite .i_agree_main label a {
+  text-decoration: underline;
+  color: #fff;
+}
+.new_custom_popup_main2 .new_forms.elite .transparent_btn {
+  color: #fff;
+  border-color: #fff;
+}
+.new_custom_popup_main2 .new_forms.elite .footer {
+  color: #fff;
+}
+.new_custom_popup_main2 .new_forms.elite .footer .signup_login_elite {
+  background: -webkit-linear-gradient(117.84deg, #ab7917 8.15%, #ffdf6e 50%, #ab7917 91.85%) text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+  font-size: 12px;
+}
+.renew_membership {
+          color: #FFFFFF;
+          padding: 2rem;
+          text-align: center;
+      }
+      .renew_membership h3 {
+          margin-bottom: 1rem;
+          color: #ffffff;
+      }
+      .renew_membership p {
+        color:rgb(191, 165, 165);
+        margin-bottom: 3rem;
+      }
+      .renew_membership p.details {
+          color: #FFF;
+          margin-bottom: 0;
+          font-size: 18px;
+          text-transform: uppercase;
+      }
+      .renew_membership p.text_sub_renew {
+          color: #FFF;
+          margin-bottom: 10px;
+          margin-top: 30px;
+          font-size: 18px;
+      }
+      .renew_membership p.text_sub_renew-small {
+          color: #FFF;
+          margin-bottom: 3rem;
+          font-size: 14px;
+      }
+      .expires_days {
+          display: inline-block;
+      }
+      .renew_membership_message {
+          font-size: 18px;
+          color: #FFF;
+          padding: 2rem;
+          text-align: center;
+      }
+      .renew_membership_message a {
+          display: block;
+          width: 100%;
+          color: rgb(28, 53, 94);
+          background: linear-gradient(117.84deg, rgb(171, 121, 23) 8.15%, rgb(255, 223, 110) 50%, rgb(171, 121, 23) 91.85%);
+          border-radius: 25px;
+          padding: 8px;
+          font-size: 14px;
+          cursor: pointer;
+          margin-bottom: 15px;
+          font-weight: 600;
+          margin-top: 15px;
+      }
+      .renew_action {
+          padding: 2rem;
+      }
+      .login_to_renew {
+          display: block;
+          width: 100%;
+          color: rgb(28, 53, 94);
+          background: linear-gradient(117.84deg, rgb(171, 121, 23) 8.15%, rgb(255, 223, 110) 50%, rgb(171, 121, 23) 91.85%);
+          border-radius: 25px;
+          padding: 8px;
+          font-size: 14px;
+          cursor: pointer;
+          margin-bottom: 15px;
+          font-weight: 600;
+          margin-top: 15px;
+          text-transform: uppercase;
+          text-align: center;
+      }
+      .renew_membership__btn {
+          text-transform: uppercase;
+      }
+    .sign_up_first_step h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+</style>

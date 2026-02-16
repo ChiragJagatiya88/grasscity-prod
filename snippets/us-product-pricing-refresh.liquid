@@ -1,0 +1,119 @@
+{% comment %} Determine market based on country code {% endcomment %}
+{% assign country_code = localization.country.iso_code | downcase %}
+{% assign market = 'us' %}
+
+{% comment %} Map country codes to markets {% endcomment %}
+{% case country_code %}
+  {% when 'nl' %}
+    {% assign market = 'nl' %}
+  {% when 'fr' %}
+    {% assign market = 'fr' %}
+  {% when 'de' %}
+    {% assign market = 'de' %}
+  {% when 'gb', 'uk' %}
+    {% assign market = 'uk' %}
+  {% when 'us' %}
+    {% assign market = 'us' %}
+  {% else %}
+    {% comment %} Check if it's an EU country (excluding NL, FR, DE, UK) {% endcomment %}
+    {% assign eu_countries = 'at,be,bg,hr,cy,cz,dk,ee,fi,gr,hu,ie,it,lv,lt,lu,mt,pl,pt,ro,sk,si,es,se' | split: ',' %}
+    {% if eu_countries contains country_code %}
+      {% assign market = 'eu' %}
+    {% else %}
+      {% assign market = 'us' %}
+    {% endif %}
+{% endcase %}
+
+{% comment %} Check if customer is B2B (you may need to adjust this condition based on your B2B logic) {% endcomment %}
+{% if customer and customer.tags contains 'b2b' %}
+  {% assign market = 'b2b' %}
+{% endif %}
+
+<div class="us-product-pricing-refresh">
+  {% if product.variants.size == 1 %}
+    {% assign single_product = product.variants.first %}
+    {% render 'us-pricing-refresh-single', item: single_product, market: market %}
+  {% else %}
+    {% assign selected_variant = product.selected_variant.id %}
+    {% if selected_variant != blank %}
+    {% endif %}
+    {% assign variant_found = false %}
+    {% for variant in product.variants %}
+      {% comment %} Check if variant has pricing for current market {% endcomment %}
+      {% assign has_market_pricing = false %}
+      {% case market %}
+        {% when 'b2b' %}
+          {% if variant.metafields.membership.member_price_b2b != blank or variant.metafields.membership.elite_price_b2b != blank or variant.metafields.markets.price_b2b != blank %}
+            {% assign has_market_pricing = true %}
+          {% endif %}
+        {% when 'nl' %}
+          {% if variant.metafields.membership.member_price_nl != blank or variant.metafields.membership.elite_price_nl != blank or variant.metafields.markets.price_nl != blank %}
+            {% assign has_market_pricing = true %}
+          {% endif %}
+        {% when 'fr' %}
+          {% if variant.metafields.membership.member_price_fr != blank or variant.metafields.membership.elite_price_fr != blank or variant.metafields.markets.price_fr != blank %}
+            {% assign has_market_pricing = true %}
+          {% endif %}
+        {% when 'de' %}
+          {% if variant.metafields.membership.member_price_de != blank or variant.metafields.membership.elite_price_de != blank or variant.metafields.markets.price_de != blank %}
+            {% assign has_market_pricing = true %}
+          {% endif %}
+        {% when 'uk' %}
+          {% if variant.metafields.membership.member_price_uk != blank or variant.metafields.membership.elite_price_uk != blank or variant.metafields.markets.price_uk != blank %}
+            {% assign has_market_pricing = true %}
+          {% endif %}
+        {% when 'eu' %}
+          {% if variant.metafields.membership.member_price_eu != blank or variant.metafields.membership.elite_price_eu != blank or variant.metafields.markets.price_eu != blank %}
+            {% assign has_market_pricing = true %}
+          {% endif %}
+        {% when 'us' %}
+          {% if variant.metafields.membership.member_price_us != blank or variant.metafields.membership.elite_price_us != blank or variant.metafields.markets.price_us != blank %}
+            {% assign has_market_pricing = true %}
+          {% endif %}
+      {% endcase %}
+      
+      {% if has_market_pricing %}
+        <div
+          class="us-pricing-refresh-single"
+          {% comment %}
+            {% if product.selected_variant.id == blank %}
+                {% if forloop.index == 1 %}
+                 {% else %}
+                    hidden
+                {% endif %}
+            {% elsif product.selected_variant.id != blank %}
+                {% if variant.id != product.selected_variant.id %}
+                    hidden
+                {% endif %}
+            {% endif %}
+          {% endcomment %}
+          data-variant="{{ variant.id }}"
+        >
+          {% render 'us-pricing-refresh-single', item: variant, market: market %}
+        </div>
+        {% assign variant_found = true %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    
+    {% comment %} Fallback: if no variant has market pricing, show first variant with fallback pricing {% endcomment %}
+    {% unless variant_found %}
+      {% if product.variants.first %}
+        <div
+          class="us-pricing-refresh-single"
+          data-variant="{{ product.variants.first.id }}"
+        >
+          {% render 'us-pricing-refresh-single', item: product.variants.first, market: market %}
+        </div>
+      {% endif %}
+    {% endunless %}
+  {% endif %}
+</div>
+
+{% comment %}
+<div>
+Current Country: {{ localization.country.name }}
+Country Code: {{ localization.country.iso_code }}
+Market: {{ market | upcase }}
+</div>
+{% endcomment %}

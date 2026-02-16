@@ -1,0 +1,166 @@
+{% comment %} Determine market based on country code if not provided {% endcomment %}
+{% unless market %}
+  {% assign country_code = localization.country.iso_code | downcase %}
+  {% assign market = 'us' %}
+
+  {% comment %} Map country codes to markets {% endcomment %}
+  {% case country_code %}
+    {% when 'nl' %}
+      {% assign market = 'nl' %}
+    {% when 'fr' %}
+      {% assign market = 'fr' %}
+    {% when 'de' %}
+      {% assign market = 'de' %}
+    {% when 'gb', 'uk' %}
+      {% assign market = 'uk' %}
+    {% when 'us' %}
+      {% assign market = 'us' %}
+    {% else %}
+      {% comment %} Check if it's an EU country (excluding NL, FR, DE, UK) {% endcomment %}
+      {% assign eu_countries = 'at,be,bg,hr,cy,cz,dk,ee,fi,gr,hu,ie,it,lv,lt,lu,mt,pl,pt,ro,sk,si,es,se' | split: ',' %}
+      {% if eu_countries contains country_code %}
+        {% assign market = 'eu' %}
+      {% else %}
+        {% assign market = 'us' %}
+      {% endif %}
+  {% endcase %}
+
+  {% comment %} Check if customer is B2B {% endcomment %}
+  {% if customer and customer.tags contains 'b2b' %}
+    {% assign market = 'b2b' %}
+  {% endif %}
+{% endunless %}
+
+{% comment %} Get market-specific metafields {% endcomment %}
+{% case market %}
+  {% when 'b2b' %}
+    {% assign elite_price_metafield = item.metafields.membership.elite_price_b2b %}
+    {% assign member_price_metafield = item.metafields.membership.member_price_b2b %}
+    {% assign market_price_metafield = item.metafields.markets.price_b2b %}
+  {% when 'nl' %}
+    {% assign elite_price_metafield = item.metafields.membership.elite_price_nl %}
+    {% assign member_price_metafield = item.metafields.membership.member_price_nl %}
+    {% assign market_price_metafield = item.metafields.markets.price_nl %}
+  {% when 'fr' %}
+    {% assign elite_price_metafield = item.metafields.membership.elite_price_fr %}
+    {% assign member_price_metafield = item.metafields.membership.member_price_fr %}
+    {% assign market_price_metafield = item.metafields.markets.price_fr %}
+  {% when 'de' %}
+    {% assign elite_price_metafield = item.metafields.membership.elite_price_de %}
+    {% assign member_price_metafield = item.metafields.membership.member_price_de %}
+    {% assign market_price_metafield = item.metafields.markets.price_de %}
+  {% when 'uk' %}
+    {% assign elite_price_metafield = item.metafields.membership.elite_price_uk %}
+    {% assign member_price_metafield = item.metafields.membership.member_price_uk %}
+    {% assign market_price_metafield = item.metafields.markets.price_uk %}
+  {% when 'eu' %}
+    {% assign elite_price_metafield = item.metafields.membership.elite_price_eu %}
+    {% assign member_price_metafield = item.metafields.membership.member_price_eu %}
+    {% assign market_price_metafield = item.metafields.markets.price_eu %}
+  {% when 'us' %}
+    {% assign elite_price_metafield = item.metafields.membership.elite_price_us %}
+    {% assign member_price_metafield = item.metafields.membership.member_price_us %}
+    {% assign market_price_metafield = item.metafields.markets.price_us %}
+  {% else %}
+    {% assign elite_price_metafield = item.metafields.membership.elite_price_us %}
+    {% assign member_price_metafield = item.metafields.membership.member_price_us %}
+    {% assign market_price_metafield = item.metafields.markets.price_us %}
+{% endcase %}
+
+{% comment %} Fallback to custom metafields if market-specific ones are blank {% endcomment %}
+{% if elite_price_metafield == blank %}
+  {% assign elite_price_metafield = item.metafields.custom.elite_price %}
+{% endif %}
+{% if member_price_metafield == blank %}
+  {% assign member_price_metafield = item.metafields.custom.member_price %}
+{% endif %}
+
+{% assign elite = false %}
+{% comment %}
+  {% assign elite_product = settings.elite_product.selected_or_first_available_variant %}
+  {% for item in cart.items %}
+    {% if item.id == settings.elite_product.selected_or_first_available_variant.id %}
+      {% assign elite = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endcomment %}
+
+{% assign elite_item = cart.items | where: 'id', settings.elite_product.selected_or_first_available_variant.id %}
+{% if elite_item[0].id != blank and elite_item.size > 0 %}
+  {% assign elite = true %}
+{% endif %}
+
+{% assign base_price_active = true %}
+{% assign club_price_active = false %}
+{% assign elite_price_active = false %}
+
+{% if customer and customer.tags contains 'elite_member' %}
+  {% assign elite_price_active = true %}
+  {% assign base_price_active = false %}
+{% elsif customer %}
+  {% if elite == true %}
+    {% assign elite_price_active = true %}
+    {% assign base_price_active = false %}
+  {% else %}
+    {% assign club_price_active = true %}
+    {% assign base_price_active = false %}
+  {% endif %}
+{% endif %}
+
+{% if elite == true and customer == blank %}
+  {% assign elite_price_active = true %}
+  {% assign base_price_active = false %}
+{% endif %}
+
+{% if base_price_active == true %}
+  <div class="us-refresh-pricing-base__price__main">
+    <div class="base__price_container">
+      {% if market_price_metafield != blank %}
+        <span class="base__price">{{ market_price_metafield | default: 0 | times: 100 | money_with_currency }}</span>
+      {% else %}
+        <span class="base__price">{{ item.price | money_with_currency }}</span>
+      {% endif %}
+      <span class="base__price_label">Non-member price</span>
+    </div>
+
+    <div class="club__price_container 222">
+      {% render 'cc-logo' %}
+      <span class="club__price"> {{ member_price_metafield | default: 0 | times: 100 | money }}</span>
+    </div>
+
+    <div class="elite__non_container">
+      {% render 'elite-lock' %}
+      <span class="elite__non_label">Free delivery with <span class="elite__gold">Elite</span></span>
+
+      {% comment %} {% render 'elite-txt' %} {% endcomment %}
+    </div>
+  </div>
+{% endif %}
+
+{% if club_price_active == true %}
+  <div class="us-refresh-pricing-club__price__main">
+    <div class="club__price_container 333">
+      <span class="cp">
+        {% render 'cc-logo' %}
+        <span class="club__price"> {{ member_price_metafield | default: 0 | times: 100 | money }}</span>
+      </span>
+      <span class="club__lable">Member price</span>
+    </div>
+
+    <div class="elite__non_container">
+      {% render 'elite-lock' %}
+      <span class="elite__non_label">{{ elite_price_metafield | default: 0 | times: 100 | money }}</span>
+      <span class="elite__gold">Elite price </span>
+    </div>
+  </div>
+{% endif %}
+
+{% if elite_price_active == true %}
+  <div class="us-refresh-pricing-elite__price__main">
+    <div class="elite__price_container">
+      <span class="elite__label">{{ elite_price_metafield | default: 0 | times: 100 | money }}</span>
+      <span class="elite__gold">Elite price </span>
+    </div>
+  </div>
+{% endif %}

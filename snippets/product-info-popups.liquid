@@ -1,0 +1,209 @@
+<x-modal id="pdpclubpopup"
+  class="01010101 us-popup us-popup-pdp pdpclubpopupicon x-modal drawer z-30 fixed bottom-0 left-0 h-full w-full pointer-events-none"
+  role="dialog" aria-modal="true" aria-label="Guest Checkout Popup" hidden>
+  <overlay-element
+    class="overlay fixed-modal invisible opacity-0 fixed bottom-0 left-0 w-full h-screen pointer-events-none"
+    aria-controls="pdpclubpopup" aria-expanded="false"></overlay-element>
+  <div class="drawer__inner z-10 absolute top-0 flex flex-col w-full h-full overflow-hidden">
+    <gesture-element class="drawer__header flex justify-between opacity-0 invisible relative">
+      <button class="button button--secondary button--close drawer__close hidden sm:flex items-center justify-center"
+        type="button" is="hover-button" aria-controls="pdpclubpopup" aria-expanded="false"
+        aria-label="{{ 'general.accessibility.close' | t | escape }}">
+        <span class="btn-fill" data-fill></span>
+        <span class="btn-text">
+          {%- render 'icon', icon: 'close', size: 'sm' -%}
+        </span>
+      </button>
+    </gesture-element>
+    <div class="drawer__content opacity-0 invisible flex flex-col grow shrink">
+      <div class="drawer__scrollable relative flex flex-col  grow shrink">
+
+        <div class="logo">
+          <img src="https://cdn.shopify.com/s/files/1/0350/8253/files/Brands_Logos.webp?v=1750084142" loading="lazy" />
+        </div>
+
+        <div class="popupcontent">
+          Join for <i>FREE</i> & Unlock <i>Instant Savings</i>
+        </div>
+
+        <ul>
+          <li>
+            {% render 'check-green' %}
+            Unlock <i>unbeatable prices</i>
+          </li>
+          <li>
+            {% render 'check-green' %}
+            <i>FREE shipping above $50</i> across top smoking accessory & CBD sites.
+          </li>
+        </ul>
+
+        <p class="grn-txt">You can sign up during checkout</p>
+      </div>
+    </div>
+  </div>
+</x-modal>
+
+<x-modal id="pdpelitepopup"
+  class="us-popup us-popup-pdp pdpelitepopupicon x-modal drawer z-30 fixed bottom-0 left-0 h-full w-full pointer-events-none"
+  role="dialog" aria-modal="true" aria-label="Guest Checkout Popup" hidden>
+  <overlay-element
+    class="overlay fixed-modal invisible opacity-0 fixed bottom-0 left-0 w-full h-screen pointer-events-none"
+    aria-controls="pdpelitepopup" aria-expanded="false"></overlay-element>
+  <div class="drawer__inner z-10 absolute top-0 flex flex-col w-full h-full overflow-hidden">
+    <gesture-element class="drawer__header flex justify-between opacity-0 invisible relative">
+      <button class="button button--secondary button--close drawer__close hidden sm:flex items-center justify-center"
+        type="button" is="hover-button" aria-controls="pdpelitepopup" aria-expanded="false"
+        aria-label="{{ 'general.accessibility.close' | t | escape }}">
+        <span class="btn-fill" data-fill></span>
+        <span class="btn-text">
+          {%- render 'icon', icon: 'close', size: 'sm' -%}
+        </span>
+      </button>
+    </gesture-element>
+    <div class="drawer__content opacity-0 invisible flex flex-col grow shrink">
+      <div class="drawer__scrollable relative flex flex-col  grow shrink">
+
+        <div class="logo">
+          <img src="https://cdn.shopify.com/s/files/1/0350/8253/files/elite-logo.webp?v=1750084211" loading="lazy" />
+        </div>
+
+        <div class="popupcontent">
+          For only
+          <span style=" ">$30/yr</span>
+          unlock UNBELIEVABLE SAVINGS and FREE Shipping!
+        </div>
+
+        <p class="grn-txt">You can sign up during checkout</p>
+      </div>
+    </div>
+  </div>
+</x-modal>
+
+<script>
+  (function() {
+    // Use event delegation to handle dynamically added buttons
+    document.addEventListener('click', function(e) {
+      const target = e.target.closest('.pdpclubpopupbtn, .pdpelitepopupbtn');
+      if (!target) return;
+
+      e.preventDefault();
+      e.stopPropagation();
+
+      // Get the modal ID from aria-controls attribute
+      const modalId = target.getAttribute('aria-controls');
+      if (!modalId) return;
+
+      const modal = document.getElementById(modalId);
+      if (!modal) return;
+
+      // Remove hidden attribute when opening modal
+      modal.removeAttribute('hidden');
+      
+      // Use the show() method if available, otherwise fallback to setAttribute
+      if (typeof modal.show === 'function') {
+        modal.show(target);
+      } else {
+        modal.setAttribute('open', '');
+        target.setAttribute('aria-expanded', 'true');
+      }
+    });
+
+    // Handle close buttons and overlays
+    function setupCloseHandlers() {
+      const clubModal = document.getElementById('pdpclubpopup');
+      const eliteModal = document.getElementById('pdpelitepopup');
+
+      // Close Club modal
+      if (clubModal) {
+        const clubCloseButton = clubModal.querySelector('.drawer__close');
+        if (clubCloseButton && !clubCloseButton.dataset.closeHandlerAdded) {
+          clubCloseButton.dataset.closeHandlerAdded = 'true';
+          clubCloseButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (typeof clubModal.hide === 'function') {
+              clubModal.hide();
+            } else {
+              clubModal.removeAttribute('open');
+            }
+            // Add hidden attribute back when closing
+            clubModal.setAttribute('hidden', '');
+            document.querySelectorAll('.pdpclubpopupbtn').forEach(function(btn) {
+              btn.setAttribute('aria-expanded', 'false');
+            });
+          });
+        }
+
+        const clubOverlay = clubModal.querySelector('overlay-element');
+        if (clubOverlay && !clubOverlay.dataset.closeHandlerAdded) {
+          clubOverlay.dataset.closeHandlerAdded = 'true';
+          clubOverlay.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (typeof clubModal.hide === 'function') {
+              clubModal.hide();
+            } else {
+              clubModal.removeAttribute('open');
+            }
+            // Add hidden attribute back when closing
+            clubModal.setAttribute('hidden', '');
+            document.querySelectorAll('.pdpclubpopupbtn').forEach(function(btn) {
+              btn.setAttribute('aria-expanded', 'false');
+            });
+          });
+        }
+      }
+
+      // Close Elite modal
+      if (eliteModal) {
+        const eliteCloseButton = eliteModal.querySelector('.drawer__close');
+        if (eliteCloseButton && !eliteCloseButton.dataset.closeHandlerAdded) {
+          eliteCloseButton.dataset.closeHandlerAdded = 'true';
+          eliteCloseButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (typeof eliteModal.hide === 'function') {
+              eliteModal.hide();
+            } else {
+              eliteModal.removeAttribute('open');
+            }
+            // Add hidden attribute back when closing
+            eliteModal.setAttribute('hidden', '');
+            document.querySelectorAll('.pdpelitepopupbtn').forEach(function(btn) {
+              btn.setAttribute('aria-expanded', 'false');
+            });
+          });
+        }
+
+        const eliteOverlay = eliteModal.querySelector('overlay-element');
+        if (eliteOverlay && !eliteOverlay.dataset.closeHandlerAdded) {
+          eliteOverlay.dataset.closeHandlerAdded = 'true';
+          eliteOverlay.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (typeof eliteModal.hide === 'function') {
+              eliteModal.hide();
+            } else {
+              eliteModal.removeAttribute('open');
+            }
+            // Add hidden attribute back when closing
+            eliteModal.setAttribute('hidden', '');
+            document.querySelectorAll('.pdpelitepopupbtn').forEach(function(btn) {
+              btn.setAttribute('aria-expanded', 'false');
+            });
+          });
+        }
+      }
+    }
+
+    // Initialize close handlers when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupCloseHandlers);
+    } else {
+      setupCloseHandlers();
+    }
+
+    // Also try to setup close handlers after a short delay in case modals load later
+    setTimeout(setupCloseHandlers, 500);
+  })();
+</script>
