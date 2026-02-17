@@ -1,0 +1,82 @@
+
+
+
+AT - Austria
+BE - Belgium
+CZ - Czechia
+DK - Denmark
+FI - Finland
+FR - France
+DE - Germany
+IE - Ireland
+IT - Italy
+NL - Netherlands
+NO - Norway
+PL - Poland
+ES - Spain
+SE - Sweden
+CH - Switzerland
+GB - United Kingdom
+US - United States
+
+
+
+
+Retailer Price B2B :    membership.retailer_price_b2b
+Retailer Price NL :     membership.retailer_price_nl
+Retailer Price FR :     membership.retailer_price_fr
+Retailer Price DE :     membership.retailer_price_de
+Retailer Price UK :     membership.retailer_price_uk
+Retailer Price EU :     membership.retailer_price_eu
+Retailer Price US :     membership.retailer_price_us
+
+Wholesale Price B2B :   membership.wholesale_price_b2b
+Wholesale Price NL :    membership.wholesale_price_nl
+Wholesale Price FR :    membership.wholesale_price_fr
+Wholesale Price DE :    membership.wholesale_price_de
+Wholesale Price UK :    membership.wholesale_price_uk
+Wholesale Price EU :    membership.wholesale_price_uk
+Wholesale Price US :    membership.wholesale_price_us
+
+Elite Price B2B :       membership.elite_price_b2b
+Elite Price NL :        membership.elite_price_nl
+Elite Price FR :        membership.elite_price_fr
+Elite Price DE :        membership.elite_price_de
+Elite Price UK :        membership.elite_price_uk
+Elite Price EU :        membership.elite_price_eu
+Elite Price US :        membership.elite_price_us
+
+Member Price B2B :      membership.member_price_b2b
+Member Price NL :       membership.member_price_nl
+Member Price FR :       membership.member_price_fr
+Member Price DE :       membership.member_price_de
+Member Price UK :       membership.member_price_uk
+Member Price EU :       membership.member_price_eu
+Member Price US :       membership.member_price_us
+
+B2B Price :             markets.price_b2b === Price for B2B market
+NL Price :              markets.price_nl
+FR Price :              markets.price_fr
+DE Price :              markets.price_de
+UK Price :              markets.price_uk
+EU Price :              markets.price_eu
+US Price :              markets.price_us
+
+B2B Price :             pricing.b2b_price  === B2B supplier price
+NL Special Price :      markets.special_price_nl
+FR Special Price :      markets.special_price_fr
+DE Special Price :      markets.special_price_de
+UK Special Price :      markets.special_price_uk
+EU Special Price :      markets.special_price_eu
+US Special Price :      markets.special_price_us
+B2B Special Price :     markets.special_price_b2b
+
+
+
+{% if localization.country.iso_code == 'FR' %}
+  <p>Bonjour 🇫🇷</p>
+{% endif %}
+
+{% if localization.country.iso_code == 'DE' %}
+  <p>Hallo 🇩🇪</p>
+{% endif %}

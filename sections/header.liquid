@@ -185,7 +185,8 @@
         {%- endif -%}
         {%- if shop.customer_accounts_enabled -%}
           <a
-            href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+            {% comment %} href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" {% endcomment %}
+            href="javascript:void(0)"
             class="account-button reversed-link flex items-center justify-center gap-2{% if section.settings.customer_account_style == 'icon-only' %} reversed-link--icon-only{% endif %}"
             aria-label="{{ 'customer.account.title' | t }}"
           >

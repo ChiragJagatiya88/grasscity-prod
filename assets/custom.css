@@ -158,6 +158,7 @@
       padding: 0;
       height: auto;
       line-height: 1;
+      border: 0;
     }
   }
   .us-popup-button {
@@ -197,6 +198,7 @@
       padding: 0;
       height: auto;
       line-height: 1;
+      border: 0;
     }
   }
   .elite__non_container {
@@ -285,6 +287,7 @@
       padding: 0;
       height: auto;
       line-height: 1;
+      border: 0;
     }
   }
   .elite__fd_container {
@@ -389,18 +392,69 @@ elite-icon-nm {
   }
 }
 
-
+.pdpelitepopupbtn.us-popup-button {
+  text-decoration: underline;
+  padding: 0;
+  height: auto;
+  line-height: 1;
+  border: 0;
+}
 
 
 /*! modal */
 .x-modal .overlay {
-  background: rgb(var(--color-overlay)/ 0.7);
+  background: rgba(23, 23, 23, .7);
+  transition: .8s cubic-bezier(.7, 0, .2, 1);
+  transition-property: opacity, visibility, background-color;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
 }
 .x-modal .drawer__scrollable>* {
   padding-block-end: var(--sp-9)
 }
 .x-modal .drawer__scrollable>:last-child {
   padding-block-end: 0
+}
+.x-modal .drawer__close {
+  height: 48px;
+  width: 48px;
+  flex: 0 0 auto;
+  margin-inline-start: auto;
+  padding: 0;
+  .icon.icon-close {
+    width: 20px;
+  }
+}
+.x-modal .drawer__header {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  right: 5px;
+  top: 5px;
+  transform: scale(.6);
+  z-index: 111111;
+}
+.x-modal[open] {
+  z-index: 1111111;
+  pointer-events: auto;
+  .overlay {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    display: block;
+    z-index: 0;
+  }
+  .drawer__inner {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 @media screen and (min-width: 640px) {
   .x-modal:not([hidden]) {
@@ -417,10 +471,10 @@ elite-icon-nm {
     height: auto;
     max-height: 90vh;
     max-width: 60rem;
-    margin-inline: var(--gap-padding);
+    margin-inline: 48px;
     transform: scale(0.8);
     opacity: 0;
-    border-radius: var(--rounded-block);
+    border-radius: 20px;
   }
   .x-modal[active]>.drawer__inner {
     opacity: 1;
@@ -428,6 +482,14 @@ elite-icon-nm {
   }
   .loaded .x-modal .drawer__inner {
     transition-property: transform, opacity;
+  }
+}
+.us-popup {
+  .drawer__inner {
+    max-width: 390px;
+  }
+  .drawer__scrollable {
+    padding: 40px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -438,4 +500,87 @@ elite-icon-nm {
 .x-modal table {
   width: 100%;
   table-layout: fixed;
+}
+
+/* Animation keyframes for popup */
+@keyframes slideUpFromBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideDownToBottom {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .us-popup {
+    height: 60vh;
+    top: auto;
+    bottom: 0;
+    overflow: hidden;
+    .drawer__inner {
+      max-width: 100%;
+      border-radius: 20px 20px 0 0;
+      max-height: calc(100% - 60px);
+      inset-block-start: auto;
+      inset-block-end: 0;
+      transform: translateY(100%);
+      opacity: 0;
+      will-change: transform, opacity;
+    }
+    /* When modal is open - slide up from bottom */
+    &[open] .drawer__inner,
+    &:not([hidden]) .drawer__inner {
+      animation: slideUpFromBottom 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+    /* When modal is closing - slide down to bottom */
+    &.closing .drawer__inner {
+      animation: slideDownToBottom 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+    /* Reset state when hidden */
+    &[hidden] .drawer__inner {
+      transform: translateY(100%);
+      opacity: 0;
+      animation: none;
+    }
+    .drawer__header {
+      padding: 25px 21px 3px;
+      border-block-end: 1px solid #1717170f;
+      top: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      transform: none;
+      position: unset;
+      display: block;
+      .drawer__close {
+        display: none;
+      }
+    }
+    .drawer__header:before {
+      content: "";
+      background-color: #1717171a;
+      border-radius: 20px;
+      height: 4px;
+      width: 48px;
+      position: absolute;
+      inset-block-start: 10px;
+      inset-inline-start: 50%;
+      transform: translate(calc(-50% * 1));
+    }
+  }
+  .pdpelitepopupicon .drawer__content {
+    height: 100%;
+  }
 }

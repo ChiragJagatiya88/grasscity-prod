@@ -1,83 +1,53 @@
 <x-modal id="pdpclubpopup"
-  class="01010101 us-popup us-popup-pdp pdpclubpopupicon x-modal drawer z-30 fixed bottom-0 left-0 h-full w-full pointer-events-none"
+  class="us-popup us-popup-pdp pdpclubpopupicon x-modal drawer"
   role="dialog" aria-modal="true" aria-label="Guest Checkout Popup" hidden>
-  <overlay-element
-    class="overlay fixed-modal invisible opacity-0 fixed bottom-0 left-0 w-full h-screen pointer-events-none"
-    aria-controls="pdpclubpopup" aria-expanded="false"></overlay-element>
-  <div class="drawer__inner z-10 absolute top-0 flex flex-col w-full h-full overflow-hidden">
-    <gesture-element class="drawer__header flex justify-between opacity-0 invisible relative">
-      <button class="button button--secondary button--close drawer__close hidden sm:flex items-center justify-center"
-        type="button" is="hover-button" aria-controls="pdpclubpopup" aria-expanded="false"
-        aria-label="{{ 'general.accessibility.close' | t | escape }}">
-        <span class="btn-fill" data-fill></span>
-        <span class="btn-text">
-          {%- render 'icon', icon: 'close', size: 'sm' -%}
-        </span>
+  <overlay-element class="overlay" aria-controls="pdpclubpopup" aria-expanded="false"></overlay-element>
+  <div class="drawer__inner">
+    <gesture-element class="drawer__header">
+      <button class="button--close drawer__close" type="button" is="hover-button" aria-controls="pdpclubpopup" aria-expanded="false" aria-label="Close">
+        <svg class="icon icon-close icon--sm icon--thick" viewBox="0 0 20 20" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15L15 5M5 5L15 15"></path>
+        </svg>
       </button>
     </gesture-element>
-    <div class="drawer__content opacity-0 invisible flex flex-col grow shrink">
-      <div class="drawer__scrollable relative flex flex-col  grow shrink">
-
+    <div class="drawer__content text-center">
+      <div class="drawer__scrollable">
         <div class="logo">
-          <img src="https://cdn.shopify.com/s/files/1/0350/8253/files/Brands_Logos.webp?v=1750084142" loading="lazy" />
+          <img src="{{ settings.logo | image_url }}" width="auto" height="auto" loading="lazy" />
         </div>
-
-        <div class="popupcontent">
-          Join for <i>FREE</i> & Unlock <i>Instant Savings</i>
-        </div>
-
+        <div class="popupcontent">Join for <i>FREE</i> & Unlock <i>Instant Savings</i></div>
         <ul>
-          <li>
-            {% render 'check-green' %}
-            Unlock <i>unbeatable prices</i>
-          </li>
-          <li>
-            {% render 'check-green' %}
-            <i>FREE shipping above $50</i> across top smoking accessory & CBD sites.
-          </li>
+          <li>{% render 'check-green' %}Unlock <i>unbeatable prices</i></li>
+          <li>{% render 'check-green' %}<i>FREE shipping above $50</i> across top smoking accessory & CBD sites.</li>
         </ul>
-
         <p class="grn-txt">You can sign up during checkout</p>
       </div>
     </div>
   </div>
 </x-modal>
 
-<x-modal id="pdpelitepopup"
-  class="us-popup us-popup-pdp pdpelitepopupicon x-modal drawer z-30 fixed bottom-0 left-0 h-full w-full pointer-events-none"
-  role="dialog" aria-modal="true" aria-label="Guest Checkout Popup" hidden>
-  <overlay-element
-    class="overlay fixed-modal invisible opacity-0 fixed bottom-0 left-0 w-full h-screen pointer-events-none"
-    aria-controls="pdpelitepopup" aria-expanded="false"></overlay-element>
-  <div class="drawer__inner z-10 absolute top-0 flex flex-col w-full h-full overflow-hidden">
-    <gesture-element class="drawer__header flex justify-between opacity-0 invisible relative">
-      <button class="button button--secondary button--close drawer__close hidden sm:flex items-center justify-center"
-        type="button" is="hover-button" aria-controls="pdpelitepopup" aria-expanded="false"
-        aria-label="{{ 'general.accessibility.close' | t | escape }}">
-        <span class="btn-fill" data-fill></span>
-        <span class="btn-text">
-          {%- render 'icon', icon: 'close', size: 'sm' -%}
-        </span>
+<x-modal id="pdpelitepopup" class="us-popup us-popup-pdp pdpelitepopupicon x-modal drawer" role="dialog" aria-modal="true" aria-label="Guest Checkout Popup" hidden>
+  <overlay-element class="overlay" aria-controls="pdpelitepopup" aria-expanded="false"></overlay-element>
+  <div class="drawer__inner">
+    <gesture-element class="drawer__header">
+      <button class="button--close drawer__close" type="button" is="hover-button" aria-controls="pdpelitepopup" aria-expanded="false" aria-label="Close">
+        <svg class="icon icon-close icon--sm icon--thick" viewBox="0 0 20 20" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15L15 5M5 5L15 15"></path>
+        </svg>
       </button>
     </gesture-element>
-    <div class="drawer__content opacity-0 invisible flex flex-col grow shrink">
-      <div class="drawer__scrollable relative flex flex-col  grow shrink">
-
+    <div class="drawer__content text-center">
+      <div class="drawer__scrollable">
         <div class="logo">
           <img src="https://cdn.shopify.com/s/files/1/0350/8253/files/elite-logo.webp?v=1750084211" loading="lazy" />
         </div>
-
-        <div class="popupcontent">
-          For only
-          <span style=" ">$30/yr</span>
-          unlock UNBELIEVABLE SAVINGS and FREE Shipping!
-        </div>
-
+        <div class="popupcontent">For only <span>$30/yr</span> unlock UNBELIEVABLE SAVINGS and FREE Shipping!</div>
         <p class="grn-txt">You can sign up during checkout</p>
       </div>
     </div>
   </div>
 </x-modal>
+
 
 <script>
   (function() {
@@ -91,22 +61,62 @@
 
       // Get the modal ID from aria-controls attribute
       const modalId = target.getAttribute('aria-controls');
-      if (!modalId) return;
+      if (!modalId) {
+        console.error('[Modal] ERROR: No modal ID found');
+        return;
+      }
 
       const modal = document.getElementById(modalId);
-      if (!modal) return;
+      if (!modal) {
+        console.error('[Modal] ERROR: Modal not found:', modalId);
+        return;
+      }
 
+      // Remove closing class if it exists (in case modal was closing)
+      modal.classList.remove('closing');
+      
       // Remove hidden attribute when opening modal
       modal.removeAttribute('hidden');
       
+      // Force reflow to ensure animation triggers
+      void modal.offsetHeight;
+      
       // Use the show() method if available, otherwise fallback to setAttribute
       if (typeof modal.show === 'function') {
-        modal.show(target);
+        try {
+          modal.show(target);
+        } catch (error) {
+          console.error('[Modal] ERROR calling modal.show():', error);
+        }
       } else {
         modal.setAttribute('open', '');
         target.setAttribute('aria-expanded', 'true');
       }
     });
+
+    // Helper function to close modal with animation
+    function closeModalWithAnimation(modal, buttonClass) {
+      // Add closing class to trigger slide down animation
+      modal.classList.add('closing');
+      
+      // Remove open attribute
+      if (typeof modal.hide === 'function') {
+        modal.hide();
+      } else {
+        modal.removeAttribute('open');
+      }
+      
+      // Wait for animation to complete (300ms) then set hidden
+      setTimeout(function() {
+        modal.setAttribute('hidden', '');
+        modal.classList.remove('closing');
+        
+        // Update button aria-expanded
+        document.querySelectorAll(buttonClass).forEach(function(btn) {
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      }, 300);
+    }
 
     // Handle close buttons and overlays
     function setupCloseHandlers() {
@@ -121,16 +131,7 @@
           clubCloseButton.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            if (typeof clubModal.hide === 'function') {
-              clubModal.hide();
-            } else {
-              clubModal.removeAttribute('open');
-            }
-            // Add hidden attribute back when closing
-            clubModal.setAttribute('hidden', '');
-            document.querySelectorAll('.pdpclubpopupbtn').forEach(function(btn) {
-              btn.setAttribute('aria-expanded', 'false');
-            });
+            closeModalWithAnimation(clubModal, '.pdpclubpopupbtn');
           });
         }
 
@@ -140,16 +141,7 @@
           clubOverlay.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            if (typeof clubModal.hide === 'function') {
-              clubModal.hide();
-            } else {
-              clubModal.removeAttribute('open');
-            }
-            // Add hidden attribute back when closing
-            clubModal.setAttribute('hidden', '');
-            document.querySelectorAll('.pdpclubpopupbtn').forEach(function(btn) {
-              btn.setAttribute('aria-expanded', 'false');
-            });
+            closeModalWithAnimation(clubModal, '.pdpclubpopupbtn');
           });
         }
       }
@@ -162,16 +154,7 @@
           eliteCloseButton.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            if (typeof eliteModal.hide === 'function') {
-              eliteModal.hide();
-            } else {
-              eliteModal.removeAttribute('open');
-            }
-            // Add hidden attribute back when closing
-            eliteModal.setAttribute('hidden', '');
-            document.querySelectorAll('.pdpelitepopupbtn').forEach(function(btn) {
-              btn.setAttribute('aria-expanded', 'false');
-            });
+            closeModalWithAnimation(eliteModal, '.pdpelitepopupbtn');
           });
         }
 
@@ -181,16 +164,7 @@
           eliteOverlay.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            if (typeof eliteModal.hide === 'function') {
-              eliteModal.hide();
-            } else {
-              eliteModal.removeAttribute('open');
-            }
-            // Add hidden attribute back when closing
-            eliteModal.setAttribute('hidden', '');
-            document.querySelectorAll('.pdpelitepopupbtn').forEach(function(btn) {
-              btn.setAttribute('aria-expanded', 'false');
-            });
+            closeModalWithAnimation(eliteModal, '.pdpelitepopupbtn');
           });
         }
       }
