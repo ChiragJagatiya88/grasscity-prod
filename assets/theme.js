@@ -3360,3 +3360,80 @@ customElements.define(
   },
   { extends: 'div' }
 );
+
+// new refresh prices js
+
+// custom cart membership selectors
+class USCartMembership extends HTMLElement {
+  constructor() {
+    super();
+    this.addEventListener('click', this.onClick);
+    this.allDetails = document.querySelectorAll('.membership_details')
+    this.membership = 'base'
+    const self = this;
+    document.addEventListener('cart:updated', function (evt) {
+      let active_membership = document.querySelector('#active_membership')
+      if (active_membership.getAttribute('base') == 'true') {
+        self.membership = 'base'
+        self.updateClasses('base')
+      } else if (active_membership.getAttribute('club') == 'true') {
+        self.membership = 'club'
+        self.updateClasses('club')
+      } else if (active_membership.getAttribute('elite') == 'elite') {
+        self.membership = 'elite'
+        self.updateClasses('elite')
+      }
+      console.log(active_membership.getAttribute('club'))
+    })
+  }
+
+  onClick() {
+    this.membership = this.getAttribute('data-for')
+    this.updateClasses(this.membership)
+  }
+
+  updateClasses(membership) {
+    if (this.membership != 'base') {
+      this.toggleDetails(this.membership)
+    } else {
+      this.allDetails.forEach(details => details.removeAttribute('open'))
+    }
+    if (this.membership == 'club') {
+      document.body.classList.remove('active-elite', 'active-base')
+      document.body.classList.add('active-club')
+    } else if (this.membership == 'elite') {
+      document.body.classList.remove('active-club', 'active-base')
+      document.body.classList.add('active-elite')
+    } else if (this.membership == 'base') {
+      document.body.classList.remove('active-elite', 'active-club')
+      document.body.classList.add('active-base')
+    }
+  }
+  toggleDetails(membership) {
+    this.allDetails.forEach(details => {
+      if (!details.classList.contains(membership)) {
+        details.removeAttribute('open')
+      } else {
+        details.setAttribute('open', true)
+      }
+    })
+  }
+}
+customElements.define('us-cart-membership', USCartMembership);
+
+// popup events attach after ajax 
+document.addEventListener('click', function (e) {
+  if (e.target.classList.contains('us-popup-button') || e.target?.closest('button')?.classList?.contains('us-popup-button')) {
+    let id;
+    if (e.target.classList.contains('us-popup-button')) {
+      id = e.target.getAttribute('aria-controls')
+    } else {
+      id = e.target.closest('button').getAttribute('aria-controls')
+    }
+    let popup = document.querySelector(`#${id}`)
+    popup.removeAttribute('hidden')
+    popup.removeAttribute('inert')
+    popup.setAttribute('open', true)
+    popup.setAttribute('active', true)
+  }
+})
