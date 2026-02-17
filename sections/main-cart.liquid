@@ -1,3 +1,131 @@
+{% comment %} Determine market based on country code {% endcomment %}
+{% assign country_code = localization.country.iso_code | downcase %}
+{% assign market = 'us' %}
+
+{% comment %} Map country codes to markets {% endcomment %}
+{% case country_code %}
+  {% when 'nl' %}
+    {% assign market = 'nl' %}
+  {% when 'fr' %}
+    {% assign market = 'fr' %}
+  {% when 'de' %}
+    {% assign market = 'de' %}
+  {% when 'gb', 'uk' %}
+    {% assign market = 'uk' %}
+  {% when 'us' %}
+    {% assign market = 'us' %}
+  {% else %}
+
+  {% comment %} Check if it's an EU country (excluding NL, FR, DE, UK) {% endcomment %}
+  {% assign eu_countries = 'at,be,bg,hr,cy,cz,dk,ee,fi,gr,hu,ie,it,lv,lt,lu,mt,pl,pt,ro,sk,si,es,se' | split: ',' %}
+  {% if eu_countries contains country_code %}
+    {% assign market = 'eu' %}
+  {% else %}
+    {% assign market = 'us' %}
+  {% endif %}
+{% endcase %}
+
+{% comment %} Check if customer is B2B {% endcomment %}
+{% if customer and customer.tags contains 'B2B Droppery' or customer.tags contains 'Roor B2B' %}
+  {% assign market = 'b2b' %}
+{% endif %}
+
+{% assign elite = false %}  
+{% assign elite_item = cart.items | where: 'id',settings.elite_product.selected_or_first_available_variant.id %}
+{% if elite_item[0].id != blank and elite_item.size > 0 %}
+  {% assign elite = true %}
+{% endif %}
+
+{% assign base_price_active = true %}
+{% assign club_price_active = false %}
+{% assign elite_price_active = false %}
+
+{% assign elite__customer = false %}
+{% if customer and customer.tags contains 'elite_member' or customer.tags contains 'elite' %}
+  {% assign elite_price_active = true %}
+  {% assign elite__customer = true %}
+  {% assign base_price_active = false %}
+{% elsif customer and customer.tags contains 'club_member' or customer.tags contains 'member' %}
+  {% assign club_price_active = true %}
+  {% assign base_price_active = false %}
+{% elsif customer %} 
+  {% if elite == true %}
+    {% assign elite_price_active = true %}
+    {% assign base_price_active = false %}
+  {% else %}
+    {% assign club_price_active = true %}
+    {% assign base_price_active = false %} 
+  {% endif %} 
+{% endif %}
+
+{% if elite == true and customer == blank %}
+  {% assign elite_price_active = true %}
+  {% assign base_price_active = false %} 
+{% endif %}
+
+{% comment %} Calculate cart prices using market-specific metafields {% endcomment %}
+{% assign base_cart_price = 0 %}
+{% assign club_cart_price = 0 %}
+{% assign elite_cart_price = 0 %}
+{% for item in cart.items %}
+  {% comment %} Get market-specific metafields for each item {% endcomment %}
+  {% case market %}
+    {% when 'b2b' %}
+      {% assign item_elite_price = item.variant.metafields.membership.elite_price_b2b %}
+      {% assign item_member_price = item.variant.metafields.membership.member_price_b2b %}
+      {% assign item_market_price = item.variant.metafields.markets.price_b2b %}
+    {% when 'nl' %}
+      {% assign item_elite_price = item.variant.metafields.membership.elite_price_nl %}
+      {% assign item_member_price = item.variant.metafields.membership.member_price_nl %}
+      {% assign item_market_price = item.variant.metafields.markets.price_nl %}
+    {% when 'fr' %}
+      {% assign item_elite_price = item.variant.metafields.membership.elite_price_fr %}
+      {% assign item_member_price = item.variant.metafields.membership.member_price_fr %}
+      {% assign item_market_price = item.variant.metafields.markets.price_fr %}
+    {% when 'de' %}
+      {% assign item_elite_price = item.variant.metafields.membership.elite_price_de %}
+      {% assign item_member_price = item.variant.metafields.membership.member_price_de %}
+      {% assign item_market_price = item.variant.metafields.markets.price_de %}
+    {% when 'uk' %}
+      {% assign item_elite_price = item.variant.metafields.membership.elite_price_uk %}
+      {% assign item_member_price = item.variant.metafields.membership.member_price_uk %}
+      {% assign item_market_price = item.variant.metafields.markets.price_uk %}
+    {% when 'eu' %}
+      {% assign item_elite_price = item.variant.metafields.membership.elite_price_eu %}
+      {% assign item_member_price = item.variant.metafields.membership.member_price_eu %}
+      {% assign item_market_price = item.variant.metafields.markets.price_eu %}
+    {% when 'us' %}
+      {% assign item_elite_price = item.variant.metafields.membership.elite_price_us %}
+      {% assign item_member_price = item.variant.metafields.membership.member_price_us %}
+      {% assign item_market_price = item.variant.metafields.markets.price_us %}
+    {% else %}
+      {% assign item_elite_price = item.variant.metafields.membership.elite_price_us %}
+      {% assign item_member_price = item.variant.metafields.membership.member_price_us %}
+      {% assign item_market_price = item.variant.metafields.markets.price_us %}
+  {% endcase %}
+  
+  {% comment %} Fallback to custom metafields if market-specific ones are blank {% endcomment %}
+  {% if item_elite_price == blank %}
+    {% assign item_elite_price = item.variant.metafields.custom.elite_price %}
+  {% endif %}
+  {% if item_member_price == blank %}
+    {% assign item_member_price = item.variant.metafields.custom.member_price %}
+  {% endif %}
+  
+  {% comment %} Calculate prices {% endcomment %}
+  {% if item_market_price != blank %}
+    {% assign item_base = item_market_price | times: 100 | times: item.quantity %}
+  {% else %}
+    {% assign item_base = item.variant.price | times: item.quantity %}
+  {% endif %}
+  {% assign item_club = item_member_price | default: 0 | times: 100 | times: item.quantity %}
+  {% assign item_elite = item_elite_price | default: 0 | times: 100 | times: item.quantity %}
+  
+  {% assign club_cart_price = club_cart_price | plus: item_club %}
+  {% assign elite_cart_price = elite_cart_price | plus: item_elite %} 
+  {% assign base_cart_price = base_cart_price | plus: item_base %}
+{% endfor %}
+
 {%- style -%}
   #shopify-section-{{ section.id }} {
     --section-padding-top: {{ section.settings.padding_top }}px;
@@ -285,7 +413,76 @@
                                   {%- endif -%}
                                   <div class="cart-item__prices">
                                     <div class="price text-right flex flex-wrap items-center gap-x-2 font-body-bolder{% if item.original_price != item.final_price %} price--on-sale{% endif %}">
-                                      {%- liquid
+                                      {% comment %} Get market-specific metafields for this item {% endcomment %}
+                                      {% case market %}
+                                        {% when 'b2b' %}
+                                          {% assign item_elite_price = item.variant.metafields.membership.elite_price_b2b %}
+                                          {% assign item_member_price = item.variant.metafields.membership.member_price_b2b %}
+                                          {% assign item_market_price = item.variant.metafields.markets.price_b2b %}
+                                        {% when 'nl' %}
+                                          {% assign item_elite_price = item.variant.metafields.membership.elite_price_nl %}
+                                          {% assign item_member_price = item.variant.metafields.membership.member_price_nl %}
+                                          {% assign item_market_price = item.variant.metafields.markets.price_nl %}
+                                        {% when 'fr' %}
+                                          {% assign item_elite_price = item.variant.metafields.membership.elite_price_fr %}
+                                          {% assign item_member_price = item.variant.metafields.membership.member_price_fr %}
+                                          {% assign item_market_price = item.variant.metafields.markets.price_fr %}
+                                        {% when 'de' %}
+                                          {% assign item_elite_price = item.variant.metafields.membership.elite_price_de %}
+                                          {% assign item_member_price = item.variant.metafields.membership.member_price_de %}
+                                          {% assign item_market_price = item.variant.metafields.markets.price_de %}
+                                        {% when 'uk' %}
+                                          {% assign item_elite_price = item.variant.metafields.membership.elite_price_uk %}
+                                          {% assign item_member_price = item.variant.metafields.membership.member_price_uk %}
+                                          {% assign item_market_price = item.variant.metafields.markets.price_uk %}
+                                        {% when 'eu' %}
+                                          {% assign item_elite_price = item.variant.metafields.membership.elite_price_eu %}
+                                          {% assign item_member_price = item.variant.metafields.membership.member_price_eu %}
+                                          {% assign item_market_price = item.variant.metafields.markets.price_eu %}
+                                        {% when 'us' %}
+                                          {% assign item_elite_price = item.variant.metafields.membership.elite_price_us %}
+                                          {% assign item_member_price = item.variant.metafields.membership.member_price_us %}
+                                          {% assign item_market_price = item.variant.metafields.markets.price_us %}
+                                        {% else %}
+                                          {% assign item_elite_price = item.variant.metafields.membership.elite_price_us %}
+                                          {% assign item_member_price = item.variant.metafields.membership.member_price_us %}
+                                          {% assign item_market_price = item.variant.metafields.markets.price_us %}
+                                      {% endcase %}
+                                      
+                                      {% comment %} Fallback to custom metafields if market-specific ones are blank {% endcomment %}
+                                      {% if item_elite_price == blank %}
+                                        {% assign item_elite_price = item.variant.metafields.custom.elite_price %}
+                                      {% endif %}
+                                      {% if item_member_price == blank %}
+                                        {% assign item_member_price = item.variant.metafields.custom.member_price %}
+                                      {% endif %}
+
+                                      <div class="new-cart-base__price" {% if base_price_active == false %} style="display: none;" {% endif %}>
+                                        {% if item_market_price != blank %}
+                                          <span class="base__price">{{ item_market_price | times: 100 | money }}</span>
+                                        {% else %}
+                                          <span class="base__price">{{ item.price | money }}</span>
+                                        {% endif %}
+                                        <span class="base__price_label">Non-member price</span>
+                                      </div>
+
+                                      <div class="new-cart-club__price" {% if club_price_active == false %} style="display: none;" {% endif %}>
+                                        <span class="club__price">{{ item_member_price | default: 0 | times: 100 | money }}</span>
+                                        <span class="club__price_label">Member price</span>
+                                      </div>
+
+                                      <div class="new-cart-elite__price" {% if elite_price_active == false %} style="display: none;" {% endif %}>
+                                        {% unless customer.tags contains 'elite_member' or customer.tags contains 'elite' or elite_item[0].id == item.id %}
+                                        <span class="club__price_elite">
+                                          <span>{{ item_member_price | default: 0 | times: 100 | money }} </span>
+                                          <i>Member price</i>
+                                        </span>
+                                        {% endunless %}
+                                        <span class="elite__price">{{ item_elite_price | default: 0 | times: 100 | money }}</span>
+                                        <span class="elite__price_label">Elite price</span>
+                                      </div>
+
+                                      {% comment %} {%- liquid
                                         assign money_price = item.original_price | money
                                         if settings.currency_code_enabled
                                           assign money_price = item.original_price | money_with_currency
@@ -306,8 +503,8 @@
                                         <s class="price__sale font-body text-subtext">{{ money_price }}</s>
                                       {%- else -%}
                                         {{- money_price -}}
-                                      {%- endif -%}
-            
+                                      {%- endif -%} {% endcomment %}
+
                                       {%- if item.variant.available and item.unit_price_measurement -%}
                                         <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
                                         <span class="unit-price flex items-center font-body text-sm text-subtext">
@@ -325,7 +522,7 @@
                                           <span aria-hidden="true">/</span>
                                           <span class="visually-hidden">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
                                           {{ unit_price_base_unit }})
-                                          </span>
+                                        </span>
                                       {%- endif -%}
                                     </div>
                                   </div>
@@ -465,6 +662,77 @@
                                     {%- endif -%}
                                     <div class="cart-item__prices">
                                       <div class="price text-right flex flex-wrap items-center gap-x-2 font-body-bolder{% if item.original_price != item.final_price %} price--on-sale{% endif %}">
+
+                                        {% comment %} Get market-specific metafields for this item {% endcomment %}
+                                        {% case market %}
+                                          {% when 'b2b' %}
+                                            {% assign item_elite_price = item.variant.metafields.membership.elite_price_b2b %}
+                                            {% assign item_member_price = item.variant.metafields.membership.member_price_b2b %}
+                                            {% assign item_market_price = item.variant.metafields.markets.price_b2b %}
+                                          {% when 'nl' %}
+                                            {% assign item_elite_price = item.variant.metafields.membership.elite_price_nl %}
+                                            {% assign item_member_price = item.variant.metafields.membership.member_price_nl %}
+                                            {% assign item_market_price = item.variant.metafields.markets.price_nl %}
+                                          {% when 'fr' %}
+                                            {% assign item_elite_price = item.variant.metafields.membership.elite_price_fr %}
+                                            {% assign item_member_price = item.variant.metafields.membership.member_price_fr %}
+                                            {% assign item_market_price = item.variant.metafields.markets.price_fr %}
+                                          {% when 'de' %}
+                                            {% assign item_elite_price = item.variant.metafields.membership.elite_price_de %}
+                                            {% assign item_member_price = item.variant.metafields.membership.member_price_de %}
+                                            {% assign item_market_price = item.variant.metafields.markets.price_de %}
+                                          {% when 'uk' %}
+                                            {% assign item_elite_price = item.variant.metafields.membership.elite_price_uk %}
+                                            {% assign item_member_price = item.variant.metafields.membership.member_price_uk %}
+                                            {% assign item_market_price = item.variant.metafields.markets.price_uk %}
+                                          {% when 'eu' %}
+                                            {% assign item_elite_price = item.variant.metafields.membership.elite_price_eu %}
+                                            {% assign item_member_price = item.variant.metafields.membership.member_price_eu %}
+                                            {% assign item_market_price = item.variant.metafields.markets.price_eu %}
+                                          {% when 'us' %}
+                                            {% assign item_elite_price = item.variant.metafields.membership.elite_price_us %}
+                                            {% assign item_member_price = item.variant.metafields.membership.member_price_us %}
+                                            {% assign item_market_price = item.variant.metafields.markets.price_us %}
+                                          {% else %}
+                                            {% assign item_elite_price = item.variant.metafields.membership.elite_price_us %}
+                                            {% assign item_member_price = item.variant.metafields.membership.member_price_us %}
+                                            {% assign item_market_price = item.variant.metafields.markets.price_us %}
+                                        {% endcase %}
+                                        
+                                        {% comment %} Fallback to custom metafields if market-specific ones are blank {% endcomment %}
+                                        {% if item_elite_price == blank %}
+                                          {% assign item_elite_price = item.variant.metafields.custom.elite_price %}
+                                        {% endif %}
+                                        {% if item_member_price == blank %}
+                                          {% assign item_member_price = item.variant.metafields.custom.member_price %}
+                                        {% endif %}
+
+                                        <div class="new-cart-base__price" {% if base_price_active == false %} style="display: none;" {% endif %}>
+                                          {% if item_market_price != blank %}
+                                            <span class="base__price">{{ item_market_price | times: 100 | money }}</span>
+                                          {% else %}
+                                            <span class="base__price">{{ item.price | money }}</span>
+                                          {% endif %}
+                                          <span class="base__price_label">Non-member price</span>
+                                        </div>
+
+                                        <div class="new-cart-club__price" {% if club_price_active == false %} style="display: none;" {% endif %}>
+                                          <span class="club__price">{{ item_member_price | default: 0 | times: 100 | money }}</span>
+                                          <span class="club__price_label">Member price</span>
+                                        </div>
+
+                                        <div class="new-cart-elite__price" {% if elite_price_active == false %} style="display: none;" {% endif %}>
+                                          {% unless customer.tags contains 'elite_member' or customer.tags contains 'elite' or elite_item[0].id == item.id %}
+                                          <span class="club__price_elite">
+                                            <span>{{ item_member_price | default: 0 | times: 100 | money }} </span>
+                                            <i>Member price</i>
+                                          </span>
+                                          {% endunless %}
+                                          <span class="elite__price">{{ item_elite_price | default: 0 | times: 100 | money }}</span>
+                                          <span class="elite__price_label">Elite price</span>
+                                        </div>
+
+                                        {% comment %}
                                         {%- liquid
                                           assign money_price = item.original_price | money
                                           if settings.currency_code_enabled
@@ -486,8 +754,9 @@
                                           <s class="price__sale font-body text-subtext">{{ money_price }}</s>
                                         {%- else -%}
                                           {{- money_price -}}
-                                        {%- endif -%}
-              
+                                        {%- endif -%} 
+                                        {% endcomment %}
+
                                         {%- if item.variant.available and item.unit_price_measurement -%}
                                           <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
                                           <span class="unit-price flex items-center font-body text-sm text-subtext">
@@ -637,15 +906,76 @@
                         </td>
     
                         <td class="cart-item__total hidden lg:table-cell">
-                          <span class="font-body-bolder">
-                            {%- liquid
-                              if settings.currency_code_enabled
-                                echo item.final_line_price | money_with_currency
-                              else
-                                echo item.final_line_price | money
-                              endif
-                            -%}
-                          </span>
+                          {% comment %} Get market-specific metafields for this item {% endcomment %}
+                          {% case market %}
+                            {% when 'b2b' %}
+                              {% assign item_elite_price = item.variant.metafields.membership.elite_price_b2b %}
+                              {% assign item_member_price = item.variant.metafields.membership.member_price_b2b %}
+                              {% assign item_market_price = item.variant.metafields.markets.price_b2b %}
+                            {% when 'nl' %}
+                              {% assign item_elite_price = item.variant.metafields.membership.elite_price_nl %}
+                              {% assign item_member_price = item.variant.metafields.membership.member_price_nl %}
+                              {% assign item_market_price = item.variant.metafields.markets.price_nl %}
+                            {% when 'fr' %}
+                              {% assign item_elite_price = item.variant.metafields.membership.elite_price_fr %}
+                              {% assign item_member_price = item.variant.metafields.membership.member_price_fr %}
+                              {% assign item_market_price = item.variant.metafields.markets.price_fr %}
+                            {% when 'de' %}
+                              {% assign item_elite_price = item.variant.metafields.membership.elite_price_de %}
+                              {% assign item_member_price = item.variant.metafields.membership.member_price_de %}
+                              {% assign item_market_price = item.variant.metafields.markets.price_de %}
+                            {% when 'uk' %}
+                              {% assign item_elite_price = item.variant.metafields.membership.elite_price_uk %}
+                              {% assign item_member_price = item.variant.metafields.membership.member_price_uk %}
+                              {% assign item_market_price = item.variant.metafields.markets.price_uk %}
+                            {% when 'eu' %}
+                              {% assign item_elite_price = item.variant.metafields.membership.elite_price_eu %}
+                              {% assign item_member_price = item.variant.metafields.membership.member_price_eu %}
+                              {% assign item_market_price = item.variant.metafields.markets.price_eu %}
+                            {% when 'us' %}
+                              {% assign item_elite_price = item.variant.metafields.membership.elite_price_us %}
+                              {% assign item_member_price = item.variant.metafields.membership.member_price_us %}
+                              {% assign item_market_price = item.variant.metafields.markets.price_us %}
+                            {% else %}
+                              {% assign item_elite_price = item.variant.metafields.membership.elite_price_us %}
+                              {% assign item_member_price = item.variant.metafields.membership.member_price_us %}
+                              {% assign item_market_price = item.variant.metafields.markets.price_us %}
+                          {% endcase %}
+                          
+                          {% comment %} Fallback to custom metafields if market-specific ones are blank {% endcomment %}
+                          {% if item_elite_price == blank %}
+                            {% assign item_elite_price = item.variant.metafields.custom.elite_price %}
+                          {% endif %}
+                          {% if item_member_price == blank %}
+                            {% assign item_member_price = item.variant.metafields.custom.member_price %}
+                          {% endif %}
+                          
+                          <div class="new-item-total-base" {% if base_price_active == false %} style="display: none;" {% endif %}>
+                            <span class="font-body-bolder">
+                              {% if item_market_price != blank %}
+                                {{ item_market_price | times: 100 | times: item.quantity | money }}
+                              {% else %}
+                                {{ item.price | times: item.quantity | money }}
+                              {% endif %}
+                            </span>
+                          </div>
+                          <div class="new-item-total-club font-body-bolder" {% if club_price_active == false %} style="display: none;" {% endif %}>
+                            {{ item_member_price | default: 0 | times: 100 | times: item.quantity | money }}
+                          </div>
+                          <div class="new-item-total-elite font-body-bolder" {% if elite_price_active == false %} style="display: none;" {% endif %}>
+                            {{ item_elite_price | default: 0 | times: 100 | times: item.quantity | money }}
+                          </div>
+                          {% comment %} 
+                            <span class="font-body-bolder">
+                              {%- liquid
+                                if settings.currency_code_enabled
+                                  echo item.final_line_price | money_with_currency
+                                else
+                                  echo item.final_line_price | money
+                                endif
+                              -%}
+                            </span> 
+                          {% endcomment %}
                         </td>
                       </tr>
                     {%- endcapture -%}
@@ -683,6 +1013,133 @@
             endfor
           -%}
           <div class="cart__footer-wrapper grid gap-6">
+
+            {% comment %} if elite is false and elite customer is false {% endcomment %}
+            {% if elite__customer == false and elite == false%}
+              <us-cart-membership data-for="club">
+                <details class="membership_details new-refresh_price_cart_radio club"  {% if customer == blank %} open {% endif %}>
+                  <summary>
+                    <label class="new-refresh_price_cart_radio__header" for="cart_club_radio">
+                      <input type="radio" name="membership" value="club" id="cart_club_radio" {% if club_price_active %} checked {% endif %}/>
+                      <div class="new_custom_radio"></div>
+                      <div class="radio__logo_text"> 
+                        {% render 'cc-logo-white' %}
+                        {% if customer %}
+                          <span>Club Member</span>
+                        {% else %}
+                          <span>Join Member Club</span>
+                        {% endif %}
+                      </div>
+                      <div class="radio__badge">{% render 'radio-bag' %} <span>Free</span></div>
+                    </label>
+                  </summary>
+                  <div class="new-refresh_price_cart_radio_content">
+                    <div class="club__elite_saving">  
+                      {% assign savings = base_cart_price |  minus: club_cart_price %} 
+                      {% comment %} {{ base_cart_price }} {{ club_cart_price }} {% endcomment %}
+                      {% if customer %}
+                        You are saving <i>{{ savings |  money }}</i> instantly on this order as a Club Member 
+                      {% else %} 
+                        Save <i>{{ savings |  money }}</i> instantly on this order as a Grasscity Member 
+                      {% endif %}
+                    </div>
+                    <ul>
+                      <li>{% render 'check-green' %} Unlock unbeatable prices</li>
+                      <li>{% render 'check-green' %} FREE shipping above $50 across top smoking accessory & CBD sites.</li>
+                    </ul>
+                    {% unless customer %}
+                      <div class="flex gap-2">
+                        <button class="SSO_popup_login">Already a member? <strong>Log in</strong></button>
+                        <p class="orrr">OR</p>
+                        <button class="SSO_popup_register"><strong>Join Now</strong></button>
+                      </div>
+                    {% endunless %}
+                  </div>
+                </details>
+              </us-cart-membership>
+            {% endif %}
+
+            {% comment %} only show if customer is not available or if customer is available than not an elite {% endcomment %}
+            {% if customer == blank or elite__customer == false %}
+              <us-cart-membership data-for="elite" hhh>
+                <details class="membership_details new-refresh_price_cart_radio elite" {% if elite_price_active or customer != blank %} open {% endif %}>
+                  <summary>
+                    <label for="cart_elite_radio" class="new-refresh_price_cart_radio__header">
+                      <input type="radio" name="membership" value="elite" id="cart_elite_radio" {% if elite_price_active %} checked {% endif %}/>
+                      <div class="new_custom_radio"></div>
+                      <div class="radio__logo_text">
+                        <span>Save even more with</span>
+                        {% render 'elite-txt' %}
+                      </div>
+                      <div class="radio__badge">{% render 'radio-bag' %}<span>$30</span></div>
+                    </label>
+                  </summary>
+                  <div class="new-refresh_price_cart_radio_content">
+                    <div class="elite_unlock_head">  
+                        Unlock the ELITE experience 
+                        <div class="radio__badge">{% render 'cart-elite-badge' %}<span>Premium</span></div>
+                    </div>
+                    <p class="single_line_perk">
+                      For only <strong><span>$30/year</span></strong>
+                      get <strong>all benefits from Grasscity</strong> plus VIP perks like:
+                    </p>
+                    <ul>
+                      <li>{% render 'check-green' %} Save an extra {{ club_cart_price |  minus: elite_cart_price |  money }} instantly at checkout</li>
+                      <li>{% render 'check-green' %} Access ELITE exclusive every day low prices</li>
+                      <li>{% render 'check-green' %} FREE shipping & returns</li>
+                      <li>{% render 'check-green' %} FREE gifts & more</li>
+                    </ul>
+                    {% unless customer %}
+                    <button class="SSO_popup_elite_join"><strong>Join Elite Now</strong></button>
+                    {% endunless %}
+                  </div>
+                </details>
+              </us-cart-membership>
+            {% endif %}
+            
+            {% comment %} if customer is an elite {% endcomment %}
+            {% if elite__customer %}
+              <us-cart-membership data-for="elite">
+                <details class="membership_details new-refresh_price_cart_radio elite" open> 
+                  <summary>
+                    <label for="cart_elite_radio" class="new-refresh_price_cart_radio__header">
+                      <input type="radio" name="membership" value="elite" id="cart_elite_radio" checked/>
+                      <div class="new_custom_radio"></div>
+                      <div class="radio__logo_text">  
+                        <span style="font-size: 11px;">You have the ultimate savings with</span>
+                        {% render 'elite-txt' %}
+                      </div>
+                      <div class="radio__badge">
+                        {% render 'cart-elite-badge' %}
+                        <span style="text-transform: uppercase;">Premium</span>
+                      </div>
+                    </label> 
+                  </summary>
+                  <div class="new-refresh_price_cart_radio_content">
+                    <div class="club__elite_saving">  
+                      {% assign savings = base_cart_price |  minus: elite_cart_price %}  
+                      You are saving <i>{{ savings |  money }}</i> instantly on this order as an Elite Member  
+                    </div>
+                  </div>
+                </details>
+              </us-cart-membership>
+            {% endif %}
+
+            {% comment %} only show if customer is not available or elite is not in cart {% endcomment %}
+            {% unless customer or elite == true %}
+              <us-cart-membership data-for="base">
+                <div class="membership_details new-refresh_price_cart_radio base">
+                  <label for="cart_base_radio" class="new-refresh_price_cart_radio__header">
+                  <input type="radio" name="membership" value="base" id="cart_base_radio" {% if base_price_active %} checked {% endif %}/>
+                    <div class="new_custom_radio"></div>
+                    <div class="radio__logo_text"> 
+                      <span>Continue as guest at full price</span>
+                    </div> 
+                  </label>
+                </div>
+              </us-cart-membership>
+            {% endunless %}
+
             {%- render 'gift-wrapping',
               section_id: section.id,
               gift_wrapping: gift_wrapping,
@@ -776,9 +1233,10 @@
                         <span class="totals__subtotal">
                           {{- 'sections.cart.estimated_total' | t -}}
                         </span>
-                        <span class="totals__subtotal-value">
-                          {{- cart.total_price | money_with_currency -}}
-                        </span>
+                        {% comment %} <span class="totals__subtotal-value">{{- cart.total_price | money_with_currency -}}</span> {% endcomment %}
+                        <span class="totals__subtotal-value base-cart-total" {% if base_price_active == false %} style="display: none;"{% endif %} >{{ base_cart_price |  money }}</span>
+                        <span class="totals__subtotal-value club-cart-total" {% if club_price_active == false %} style="display: none;"{% endif %} >{{ club_cart_price |  money }}</span>
+                        <span class="totals__subtotal-value elite-cart-total" {% if elite_price_active == false %} style="display: none;"{% endif %} > {{ elite_cart_price |  money }}</span>
                       </div>
                       <div class="tax-note text-sm-extra">
                         {%- liquid
@@ -981,6 +1439,349 @@
     {% comment %} {%- endif -%} {% endcomment %}
   </div>
 </div>
+
+<style>
+  .new-refresh_price_cart_radio {
+    cursor: pointer;
+    &[open] .new-refresh_price_cart_radio__header {
+      border-radius: 8px 8px 0 0;
+    }
+    input {
+      display: none;
+    }
+    input:checked + .new_custom_radio {
+      background: #22a358;
+      border-width: 3px;
+    }
+    .new-refresh_price_cart_radio__header {
+      display: grid;
+      grid-template-columns: 16px 1fr auto;
+      background: #e1251c;
+      align-items: center;
+      gap: 8px;
+      border-radius: 8px;
+      padding: 16px 12px;
+      cursor: pointer;
+    }
+    .new_custom_radio {
+      display: block !important;
+      background: #e1e6ed;
+      width: 18px;
+      height: 18px;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      position: relative;
+      box-sizing: border-box;
+    }
+    .radio__logo_text {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: #fff;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 700;
+    }
+    .radio__badge {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: #ffe5e4;
+      color: #e1251c;
+      padding: 4px 8px;
+      border-radius: 10000px;
+      font-size: 13px;
+      line-height: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    .new-refresh_price_cart_radio_content {
+      border: 1px solid #c1c7d0;
+      border-radius: 0 0 8px 8px;
+      padding: 12px;
+    }
+    .orrr {
+      color: #818898;
+      font-size: 10px;
+      line-height: 12px;
+    }
+    .club__elite_saving {
+      font-size: 10px;
+      line-height: 12px;
+      font-weight: 800;
+      color: #18703d;
+      border-radius: 4px;
+      padding: 4px 8px;
+      background: #d6f8e5;
+      i {
+        font-style: normal;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 800;
+      }
+    }
+    ul {
+      list-style-type: none;
+      margin: 10px 0 0;
+      padding: 0;
+      li {
+        color: #2d2e34;
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 10px;
+      }
+      svg {
+        display: inline-block;
+      }
+    }
+    button {
+      font-size: 12px;
+      color: #818898;
+      line-height: 100%;
+      text-decoration: underline;
+      padding: 0;
+      height: auto;
+      line-height: 1;
+      border: 0;
+    }
+  }
+  .new-refresh_price_cart_radio.elite {
+    cursor: pointer;
+    .new-refresh_price_cart_radio__header {
+      background: #1c355e;
+      .radio__badge {
+        background: #ffd600;
+        color: #031546;
+        text-transform: lowercase;
+        svg path {
+          fill: #031546;
+        }
+      }
+    }
+    .radio__logo_text svg {
+      top: -0;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 10px 0 0;
+      padding: 0;
+      li {
+        color: #2d2e34;
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 10px;
+      }
+      svg {
+        display: inline-block;
+      }
+    }
+    .elite_unlock_head {
+      font-size: 12px;
+      line-height: 15px;
+      color: #031546;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .radio__badge {
+        background: #031546;
+        color: #ffd600;
+      }
+    }
+    .single_line_perk {
+      color: #2d2e34;
+      font-size: 12px;
+      line-height: 16px;
+      margin: 8px 0;
+    }
+  }
+  .new-refresh_price_cart_radio.base {
+    cursor: pointer;
+    input:checked + .new_custom_radio {
+      border-width: 3px;
+    }
+    .new-refresh_price_cart_radio__header {
+      background: transparent;
+      border: 1px solid #c1c7d0;
+      border-radius: 8px;
+    }
+    .new_custom_radio {
+      background: transparent;
+      border: 1px solid #fff;
+      outline: 1px solid #c1c7d0;
+    }
+    .radio__logo_text {
+      color: #2d2e34;
+    }
+  }
+  .us-popup {
+    &.us-popup-pdp[open] {
+      z-index: 1111111;
+    }
+    text-align: center;
+    .drawer__inner {
+      max-width: 390px;
+    }
+    .drawer__scrollable > * {
+      padding-block-end: 0;
+    }
+    .popup_guset_save {
+      color: #e1251c;
+      font-size: 26px;
+      line-height: 32px;
+      font-weight: 700;
+    }
+    .save__text_popup {
+      color: #2d2e34;
+      font-size: 15px;
+      line-height: 22px;
+      margin: 10px 0 25px 0;
+    }
+    .login__member {
+      color: #818898;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 700;
+      margin: 16px 0 0 0;
+    }
+    .orrr {
+      color: #818898;
+      font-size: 14px;
+      line-height: 16px;
+      margin: 15px 0 1px;
+    }
+    .skip_to_checkout {
+      color: #818898;
+      font-size: 15px;
+      line-height: 21px;
+    }
+    .main__button {
+      padding: 15px 0;
+      color: #fff !important;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .us-popup {
+      .drawer__header {
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        right: 5px;
+        top: 5px;
+        transform: scale(0.6);
+        z-index: 111111;
+      }
+    }
+  }
+  /* ---------- classes active show to hide show prices on base of membership, dont touch */
+  .active-base {
+    .new-cart-club__price, .new-cart-elite__price,
+    .new-item-total-club, .new-item-total-elite,
+    .club-cart-total, .elite-cart-total,
+    .club-checkout-button, .elite-checkout-button {
+      display: none !important;
+    }
+    .new-cart-base__price,
+    .new-item-total-base,
+    .base-cart-total,
+    .base-checkout-button {
+      display: block !important;
+    }
+  }
+  .active-club {
+    .new-cart-base__price, .new-cart-elite__price,
+    .new-item-total-base, .new-item-total-elite,
+    .base-cart-total, .elite-cart-total,
+    .elite-checkout-button, .base-checkout-button {
+      display: none !important;
+    }
+    .new-cart-club__price,
+    .new-item-total-club,
+    .club-cart-total,
+    .club-checkout-button {
+      display: block !important;
+    }
+  }
+  .active-elite {
+    .new-cart-base__price, .new-cart-club__price,
+    .new-item-total-base, .new-item-total-club,
+    .base-cart-total, .club-cart-total,
+    .club-checkout-button, .base-checkout-button {
+      display: none !important;
+    }
+    .new-cart-elite__price,
+    .new-item-total-elite,
+    .elite-cart-total,
+    .elite-checkout-button {
+      display: block !important;
+    }
+  }
+  /* ------------------ cart page */
+  .new-cart-base__price {
+    color: #2d2e34;
+    text-align: left;
+    .base__price {
+      font-size: 24px;
+      line-height: 30px;
+      font-weight: 700;
+    }
+    .base__price_label {
+      display: block;
+      font-size: 10px;
+      line-height: 12px;
+      font-weight: 400;
+    }
+  }
+  .new-cart-club__price {
+    color: #2d2e34;
+    text-align: left;
+    .club__price {
+      font-size: 24px;
+      line-height: 30px;
+      font-weight: 700;
+    }
+    .club__price_label {
+      display: block;
+      font-size: 10px;
+      line-height: 12px;
+      font-weight: 400;
+    }
+  }
+  .new-cart-elite__price {
+    color: #2d2e34;
+    text-align: left;
+    .elite__price {
+      font-size: 24px;
+      line-height: 30px;
+      font-weight: 700;
+    }
+    .elite__price_label {
+      display: block;
+      font-size: 10px;
+      line-height: 12px;
+      font-weight: 700;
+    }
+    .club__price_elite {
+      color: #818898;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      span {
+        text-decoration: line-through;
+      }
+      i {
+        text-decoration: none;
+        font-size: 10px;
+        line-height: 12px;
+        font-style: normal;
+      }
+    }
+  }
+</style>
 
 {% schema %}
 {
