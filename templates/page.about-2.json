@@ -1,0 +1,719 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs_DgnWDV": {
+      "type": "breadcrumbs",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_with_text_overlay_3FrkpM": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_MEEHjQ": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Since 1998"
+          }
+        },
+        "heading_W8mPfG": {
+          "type": "heading",
+          "settings": {
+            "heading": "World's Most Trusted Online Headshop",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd1"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_MEEHjQ",
+        "heading_W8mPfG"
+      ],
+      "custom_css": [
+        ".rich-text {max-width: 52rem;}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "image": "shopify://shop_images/gs_aboutus-slider_desktop_ab_v01.webp",
+        "desktop_height": "medium",
+        "overlay_opacity": 30,
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "color_scheme": "",
+        "content_position": "top-left",
+        "content_alignment": "left",
+        "mobile_height": "adapt",
+        "content_position_mobile": "middle-center-mobile",
+        "content_alignment_mobile": "left",
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "enable_preload_image": true
+      }
+    },
+    "scrolling_promotion_6aUqmj": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "text_EWeYdP": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "25+ Years Experience",
+            "text_size": "h2",
+            "text_opacity": 100,
+            "use_custom_color": true,
+            "custom_color": "#1d349a"
+          }
+        },
+        "image_WzBbmD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gs_icon_satisfaction-18.png",
+            "image_height": 40,
+            "image_rounded": false,
+            "image_link": "",
+            "image_height_mobile": 40
+          }
+        },
+        "text_baGGeL": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "550K+ Customers",
+            "text_size": "h2",
+            "text_opacity": 100,
+            "use_custom_color": true,
+            "custom_color": "#1d349a"
+          }
+        },
+        "image_Ta48hW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gs_icon_certified-18_825532aa-5634-42ce-9a78-4e4aaabb6e98.png",
+            "image_height": 40,
+            "image_rounded": false,
+            "image_link": "",
+            "image_height_mobile": 40
+          }
+        },
+        "text_y3QPgp": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "PCI & SOC 2 Certified",
+            "text_size": "h2",
+            "text_opacity": 100,
+            "use_custom_color": true,
+            "custom_color": "#1d349a"
+          }
+        },
+        "image_TFNFGJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gs_icon_experience-18.png",
+            "image_height": 40,
+            "image_rounded": false,
+            "image_link": "",
+            "image_height_mobile": 38
+          }
+        }
+      },
+      "block_order": [
+        "text_EWeYdP",
+        "image_WzBbmD",
+        "text_baGGeL",
+        "image_Ta48hW",
+        "text_y3QPgp",
+        "image_TFNFGJ"
+      ],
+      "settings": {
+        "color_scheme": "scheme-inverse",
+        "direction": "left",
+        "pause_on_hover": true,
+        "speed": 0.3,
+        "h_spacing": 16,
+        "show_section_divider": false,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "rich_text_kyFd96": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Y9MMVQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "We are committed to breaking the authenticity barrier using refined sourced hardware",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2"
+          }
+        },
+        "text_7h6LaE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Since 1998, we've been pioneering the online headshop industry with expertly curated products and unmatched customer service.</p>",
+            "text_size": "text-base",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Y9MMVQ",
+        "text_7h6LaE"
+      ],
+      "custom_css": [
+        ".rich-text {max-width: 78rem; margin: 0 auto;}",
+        "@media (max-width: 1023px) {.rich-text__heading {max-width: 50rem; margin: 0 auto; }}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-2",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "center",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "multicolumn_36XTkC": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_pa39WP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/gs_timeline-1_ab_v01_f6112c8b-0d19-4ecf-a8a3-05e085dc9758.webp",
+            "title": "Founded in Amsterdam",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p>Started as a small shop in the heart of Amsterdam, bringing quality products to enthusiasts.</p>",
+            "text_size": "text-base",
+            "button_label": "1998",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_WRPAwc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/gs_timeline-1_ab_v01_84ee82fb-e703-47f3-b307-f1028e3c5928.webp",
+            "title": "Grasscity is Born",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p>Launched our online presence, becoming one of the first headshops on the internet.</p>",
+            "text_size": "text-base",
+            "button_label": "2000",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_ikYHeg": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/gs_timeline-3_ab_v01_e7b9858d-4861-4186-8738-fb3a636287e8.webp",
+            "title": "Pioneering Growth",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p>Expanded globally, building a community of over 500,000 forum members worldwide.</p>",
+            "text_size": "text-base",
+            "button_label": "Early 2000s",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_bTbVtm": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/gs_timeline-4_ab_v01_94501291-d9a5-4fac-8397-f86f872338e7.webp",
+            "title": "Joined High Tide Inc.",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p>Partnered with North America's leading cannabis retailer, expanding our reach.</p>",
+            "text_size": "text-base",
+            "button_label": "2018 - Present",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "column_pa39WP",
+        "column_WRPAwc",
+        "column_ikYHeg",
+        "column_bTbVtm"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Our Story",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "content_alignment": "left",
+        "show_col_count": false,
+        "show_image": true,
+        "columns_desktop": 4,
+        "column_gap": "medium",
+        "row_gap": "inherit",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "multicolumn_icon_gMDVjt": {
+      "type": "multicolumn-icon",
+      "blocks": {
+        "column_Wg3M3M": {
+          "type": "column",
+          "settings": {
+            "icon": "package",
+            "max_width": 28,
+            "max_width_mb": 28,
+            "title": "Expertly Curated Selection",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h6",
+            "heading_font": "heading",
+            "text": "<p>We offer hand-picked, quality-tested products from trusted brands, featuring exclusive collaborations and limited editions.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_UmtTiC": {
+          "type": "column",
+          "settings": {
+            "icon": "lightning",
+            "max_width": 28,
+            "max_width_mb": 28,
+            "title": "Fast & Secure",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h6",
+            "heading_font": "heading",
+            "text": "<p>Enjoy discreet packaging for privacy, free shipping on orders over $50, and secure PCI-compliant payment processing.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_TU4gke": {
+          "type": "column",
+          "settings": {
+            "icon": "phone",
+            "max_width": 28,
+            "max_width_mb": 28,
+            "title": "24/7 Expert Support",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h6",
+            "heading_font": "heading",
+            "text": "<p>Our knowledgeable team is ready to assist via live chat, email, or phone, with comprehensive product guides and resources available.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "column_Wg3M3M",
+        "column_UmtTiC",
+        "column_TU4gke"
+      ],
+      "name": "t:sections.multicolumn-with-icon.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-8",
+        "header_layout": "vertical",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Quality, Security and Trust",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "enable_sticky": false,
+        "card_color_scheme": "",
+        "content_alignment": "left",
+        "image_position": "left",
+        "icon_color": "#1D349A",
+        "columns_desktop": 3,
+        "column_gap": "large",
+        "row_gap": "inherit",
+        "show_divider_col": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "image_with_text_DCXDtE": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_UMGpf8": {
+          "type": "subheading",
+          "settings": {
+            "subheading": ""
+          }
+        },
+        "heading_BjfQbV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Vibrant Community",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2"
+          }
+        },
+        "text_6eMjft": {
+          "type": "text",
+          "settings": {
+            "text": "<p>It's a welcoming space where cannabis enthusiasts interact passionately, share tips, and learn.</p>",
+            "subtext_color": true
+          }
+        },
+        "icon_with_text_NVJCTc": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "smiley",
+            "icon_width": 24,
+            "color": "#000000",
+            "heading": "700K+ Registered Members",
+            "heading_size": "h5",
+            "text": "",
+            "vertical_alignment": "start"
+          }
+        },
+        "icon_with_text_D3KFdN": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "chat",
+            "icon_width": 24,
+            "color": "#000000",
+            "heading": "1M+ Discussions",
+            "heading_size": "h5",
+            "text": "",
+            "vertical_alignment": "start"
+          }
+        },
+        "icon_with_text_gqTJYi": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "bell-ringing",
+            "icon_width": 24,
+            "color": "#000000",
+            "heading": "22M+ Messages",
+            "heading_size": "h5",
+            "text": "",
+            "vertical_alignment": "start"
+          }
+        },
+        "button_Am3jaF": {
+          "type": "button",
+          "settings": {
+            "button_label": "Join our Forums",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_UMGpf8",
+        "heading_BjfQbV",
+        "text_6eMjft",
+        "icon_with_text_NVJCTc",
+        "icon_with_text_D3KFdN",
+        "icon_with_text_gqTJYi",
+        "button_Am3jaF"
+      ],
+      "custom_css": [
+        ".image-with-text__content {max-width: 52rem;}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "image": "shopify://shop_images/gs_community_ab_v01_8f7d8ed9-ebfb-4634-81f0-b15a00c61449.webp",
+        "image_position": "right",
+        "image_width": 50,
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "inherit",
+        "show_section_divider": true,
+        "divider_width": "full",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "testimonials_T939Dc": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_eMkw7R": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "none",
+            "heading": "Testimonials",
+            "text": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Author's name",
+            "bio": "",
+            "product": ""
+          }
+        },
+        "testimonial_6Mzpan": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "none",
+            "heading": "Testimonials",
+            "text": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Author's name",
+            "bio": "",
+            "product": ""
+          }
+        },
+        "testimonial_VMBf4p": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "none",
+            "heading": "Testimonials",
+            "text": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Author's name",
+            "bio": "",
+            "product": ""
+          }
+        },
+        "testimonial_BFwQ3p": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "none",
+            "heading": "Testimonials",
+            "text": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Author's name",
+            "bio": "",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_eMkw7R",
+        "testimonial_6Mzpan",
+        "testimonial_VMBf4p",
+        "testimonial_BFwQ3p"
+      ],
+      "name": "t:sections.testimonials.name",
+      "settings": {
+        "container": "full",
+        "color_scheme": "scheme-6",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Don't take our word for it, take theirs:",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h3",
+        "description": "",
+        "text_size": "text-base",
+        "layout": "focused",
+        "card_color_scheme": "scheme-6",
+        "card_content_color_scheme": "",
+        "card_image_ratio": "adapt",
+        "card_heading_size": "h4",
+        "card_text_size": "h1",
+        "author_info_layout": "vertical",
+        "card_trigger_behavior": "click",
+        "show_image": false,
+        "show_author_image": false,
+        "columns_desktop": 3,
+        "column_gap": "medium",
+        "row_gap": "medium",
+        "enable_slider": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "show_progress_bar": true,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "image_with_text_overlay_dDk78w": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_drcLTm": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Our Commitment"
+          }
+        },
+        "heading_NaCR43": {
+          "type": "heading",
+          "settings": {
+            "heading": "We are committed to promoting responsible use and providing accurate information about our products.",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_6UcCEJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Grasscity supports the legal cannabis industry and advocates for sensible regulations. Our products are intended for legal use only by adults in jurisdictions where permitted.<br/></p>",
+            "text_size": "text-base"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_drcLTm",
+        "heading_NaCR43",
+        "text_6UcCEJ"
+      ],
+      "name": "t:sections.image-with-text-overlay.name",
+      "settings": {
+        "container": "full",
+        "image": "shopify://shop_images/gs_commitment_ab_v01.webp",
+        "desktop_height": "extra-medium",
+        "overlay_opacity": 45,
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "color_scheme": "",
+        "content_position": "middle-left",
+        "content_alignment": "center",
+        "mobile_height": "auto",
+        "content_position_mobile": "middle-center-mobile",
+        "content_alignment_mobile": "left",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "enable_preload_image": false
+      }
+    },
+    "rich_text_xaR67U": {
+      "type": "rich-text",
+      "blocks": {
+        "text_eFNCrX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This website is intended for adults 21 years of age or older. By entering this site, you agree to our terms and conditions. We do not sell products to minors. Please consume responsibly.</p>",
+            "text_size": "text-base",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "text_eFNCrX"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-2",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "center",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_DgnWDV",
+    "main",
+    "image_with_text_overlay_3FrkpM",
+    "scrolling_promotion_6aUqmj",
+    "rich_text_kyFd96",
+    "multicolumn_36XTkC",
+    "multicolumn_icon_gMDVjt",
+    "image_with_text_DCXDtE",
+    "testimonials_T939Dc",
+    "image_with_text_overlay_dDk78w",
+    "rich_text_xaR67U"
+  ]
+}
