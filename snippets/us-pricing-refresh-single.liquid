@@ -26,7 +26,7 @@
   {% endcase %}
 
   {% comment %} Check if customer is B2B {% endcomment %}
-  {% if customer and customer.tags contains 'b2b' %}
+  {% if customer and customer.tags contains 'B2B Droppery' or customer.tags contains 'Roor B2B' %}
     {% assign market = 'b2b' %}
   {% endif %}
 {% endunless %}
@@ -95,16 +95,19 @@
 {% assign club_price_active = false %}
 {% assign elite_price_active = false %}
 
-{% if customer and customer.tags contains 'elite_member' %}
+{% if customer and customer.tags contains 'elite_member' or customer.tags contains 'elite' %}
   {% assign elite_price_active = true %}
+  {% assign base_price_active = false %}
+{% elsif customer and customer.tags contains 'club_member' or customer.tags contains 'member' %}
+  {% assign club_price_active = true %}
   {% assign base_price_active = false %}
 {% elsif customer %}
   {% if elite == true %}
     {% assign elite_price_active = true %}
     {% assign base_price_active = false %}
   {% else %}
-    {% assign club_price_active = true %}
-    {% assign base_price_active = false %}
+    {% assign club_price_active = false %}
+    {% assign base_price_active = true %}
   {% endif %}
 {% endif %}
 
@@ -132,7 +135,6 @@
     <div class="elite__non_container">
       {% render 'elite-lock' %}
       <span class="elite__non_label">Free delivery with <span class="elite__gold">Elite</span></span>
-
       {% comment %} {% render 'elite-txt' %} {% endcomment %}
     </div>
   </div>

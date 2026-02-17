@@ -26,7 +26,7 @@
   {% endcase %}
 
   {% comment %} Check if customer is B2B {% endcomment %}
-  {% if customer and customer.tags contains 'b2b' %}
+  {% if customer and customer.tags contains 'B2B Droppery' or customer.tags contains 'Roor B2B' %}
     {% assign market = 'b2b' %}
   {% endif %}
 {% endunless %}
@@ -95,16 +95,19 @@
 {% assign club_price_active = false %}
 {% assign elite_price_active = false %}
 
-{% if customer and customer.tags contains 'elite_member' %}
+{% if customer and customer.tags contains 'elite_member' or customer.tags contains 'elite' %}
   {% assign elite_price_active = true %}
+  {% assign base_price_active = false %}
+{% elsif customer and customer.tags contains 'club_member' or customer.tags contains 'member' %}
+  {% assign club_price_active = true %}
   {% assign base_price_active = false %}
 {% elsif customer %}
   {% if elite == true %}
     {% assign elite_price_active = true %}
     {% assign base_price_active = false %}
   {% else %}
-    {% assign club_price_active = true %}
-    {% assign base_price_active = false %}
+    {% assign club_price_active = false %}
+    {% assign base_price_active = true %}
   {% endif %}
 {% endif %}
 
@@ -139,12 +142,8 @@
       {% assign member_price = member_price_metafield | default: 0 | times: 100 %}
       {% assign savings = price | minus: member_price %}
 
-      You save {{ savings | money }} as a Member - <button class="SSO_popup_register">Join for free</button> or
-      <button
-        class="SSO_popup_login"
-      >
-        Log in
-      </button>
+      You save {{ savings | money }} as a Member - <button class="SSO_popup_register">Join for free</button> 
+      {% if customer == blank %} or <button class="SSO_popup_login">Log in</button>{% endif %}
       <button class="pdpclubpopupbtn us-popup-button" aria-controls="pdpclubpopup" aria-expanded="false">
         {% render 'refresh-info-icon' %}
       </button>
@@ -177,7 +176,7 @@
       {% assign member_price = member_price_metafield | default: 0 | times: 100 %}
       {% assign savings = price | minus: member_price %}
 
-      You are saving {{ savings | money }} as a Cabana Club Member
+      You are saving {{ savings | money }} as a Grasscity Member
     </div>
 
     <div class="elite__non_container">

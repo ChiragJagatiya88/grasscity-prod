@@ -127,7 +127,8 @@
               {%- endif -%}
               {%- if shop.customer_accounts_enabled -%}
                 <a
-                  href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+                  {% comment %} href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" {% endcomment %}
+                  href="javascript:void(0)"
                   class="account-button flex items-center gap-2"
                 >
                   {%- render 'icon-account', size: 'large' -%}

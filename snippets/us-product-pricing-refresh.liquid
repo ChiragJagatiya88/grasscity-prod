@@ -25,7 +25,7 @@
 {% endcase %}
 
 {% comment %} Check if customer is B2B (you may need to adjust this condition based on your B2B logic) {% endcomment %}
-{% if customer and customer.tags contains 'b2b' %}
+{% if customer and customer.tags contains 'B2B Droppery' or customer.tags contains 'Roor B2B' %}
   {% assign market = 'b2b' %}
 {% endif %}
 
