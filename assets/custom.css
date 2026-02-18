@@ -584,3 +584,7 @@ elite-icon-nm {
     height: 100%;
   }
 }
+
+.btn--primary:before {
+  z-index: -1;
+}
