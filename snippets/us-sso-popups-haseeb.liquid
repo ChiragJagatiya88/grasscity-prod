@@ -1,6 +1,8 @@
 {% assign logo_url = settings.logo | image_url %}
 {% assign client = 'iK3RgcrTBFA+lrzN0o0VYQ==:JIo/3aaA6Y5YG9P7RX+hIjqOghYNKrm2SmN7W+Z4C+9EyDxDs01BqgRhfK52cbta' %}
-{% assign elite_id = '44844199018677' %}
+{% assign elite_id = settings.elite_product.selected_or_first_available_variant.id %}
+
+{% comment %} <p>elite_id: {{ elite_id }}</p> {% endcomment %}
 
 <div id="new_popup-overlay2" class="new_popup-overlay"></div>
 
@@ -55,24 +57,12 @@
         <div class="new_logos_scroll">
           <ul>
             {% for i in (1..4) %}
-              <li>
-                <img src="{{ 'cc-partner1.png' | file_url }}" class="img-responsive" alt="Smoke Cartel logo" loading="lazy" width="99" height="39">
-              </li>
-              <li>
-                <img src="{{ 'cc-partner2.png' | file_url }}" class="img-responsive" alt="Daily High Club logo" loading="lazy" width="56" height="41">
-              </li>
-              <li>
-                <img src="{{ 'cc-partner3.png' | file_url }}" class="img-responsive" alt="Grasscity logo" loading="lazy" width="95" height="39">
-              </li>
-              <li>
-                <img src="{{ 'cc-partner4.png' | file_url }}" class="img-responsive" alt="Dankstop logo" loading="lazy" width="100" height="39">
-              </li>
-              <li>
-                <img src="{{ 'cc-partner5.png' | file_url }}" class="img-responsive" alt="Nuleaf logo" loading="lazy" width="65" height="39">
-              </li>
-              <li>
-                <img src="{{ 'cc-partner6.png' | file_url }}" class="img-responsive" alt="Fabcbd logo" loading="lazy" width="100" height="39">
-              </li>
+              <li><img src="{{ 'cc-partner1.png' | file_url }}" class="img-responsive" alt="Smoke Cartel logo" loading="lazy" width="99" height="39"></li>
+              <li><img src="{{ 'cc-partner2.png' | file_url }}" class="img-responsive" alt="Daily High Club logo" loading="lazy" width="56" height="41"></li>
+              <li><img src="{{ 'cc-partner3.png' | file_url }}" class="img-responsive" alt="Grasscity logo" loading="lazy" width="95" height="39"></li>
+              <li><img src="{{ 'cc-partner4.png' | file_url }}" class="img-responsive" alt="Dankstop logo" loading="lazy" width="100" height="39"></li>
+              <li><img src="{{ 'cc-partner5.png' | file_url }}" class="img-responsive" alt="Nuleaf logo" loading="lazy" width="65" height="39"></li>
+              <li><img src="{{ 'cc-partner6.png' | file_url }}" class="img-responsive" alt="Fabcbd logo" loading="lazy" width="100" height="39"></li>
             {% endfor %}
           </ul>
         </div>
@@ -415,24 +405,12 @@
             <div class="new_logos_scroll">
               <ul>
                 {% for i in (1..4) %}
-                  <li>
-                    <img src="{{ 'cc-partner1.webp' | file_url }}" class="img-responsive" alt="Smoke Cartel logo" loading="lazy" width="99" height="39">
-                  </li>
-                  <li>
-                    <img src="{{ 'cc-partner2.webp' | file_url }}" class="img-responsive" alt="Daily High Club logo" loading="lazy" width="56" height="41">
-                  </li>
-                  <li>
-                    <img src="{{ 'cc-partner3.webp' | file_url }}" class="img-responsive" alt="Grasscity logo" loading="lazy" width="95" height="39">
-                  </li>
-                  <li>
-                    <img src="{{ 'cc-partner4.webp' | file_url }}" class="img-responsive" alt="Dankstop logo" loading="lazy" width="100" height="39">
-                  </li>
-                  <li>
-                    <img src="{{ 'cc-partner5.webp' | file_url }}" class="img-responsive" alt="Nuleaf logo" loading="lazy" width="65" height="39">
-                  </li>
-                  <li>
-                    <img src="{{ 'cc-partner6.webp' | file_url }}" class="img-responsive" alt="Fabcbd logo" loading="lazy" width="100" height="39">
-                  </li>
+                  <li><img src="{{ 'cc-partner1.png' | file_url }}" class="img-responsive" alt="Smoke Cartel logo" loading="lazy" width="99" height="39"></li>
+                  <li><img src="{{ 'cc-partner2.png' | file_url }}" class="img-responsive" alt="Daily High Club logo" loading="lazy" width="56" height="41"></li>
+                  <li><img src="{{ 'cc-partner3.png' | file_url }}" class="img-responsive" alt="Grasscity logo" loading="lazy" width="95" height="39"></li>
+                  <li><img src="{{ 'cc-partner4.png' | file_url }}" class="img-responsive" alt="Dankstop logo" loading="lazy" width="100" height="39"></li>
+                  <li><img src="{{ 'cc-partner5.png' | file_url }}" class="img-responsive" alt="Nuleaf logo" loading="lazy" width="65" height="39"></li>
+                  <li><img src="{{ 'cc-partner6.png' | file_url }}" class="img-responsive" alt="Fabcbd logo" loading="lazy" width="100" height="39"></li>
                 {% endfor %}
               </ul>
             </div>
@@ -488,7 +466,7 @@
 
             <div class="i_agree_main">
               <label for="i_agree_elite_upgrade">
-                <input style="margin-right: 5px;position: relative;top: 4px;display: inline;width: 15px;height: 15px;" type="checkbox" required id="i_agree_elite_upgrade">
+                <input style="margin-right: 5px;position: relative;" type="checkbox" required id="i_agree_elite_upgrade">
                 <span>I agree to <a href="/terms-and-conditions/">terms of use</a> / <a href="/terms-and-conditions/">privacy policy</a>.</span>
               </label>
             </div>
@@ -538,24 +516,12 @@
             <div class="new_logos_scroll">
               <ul>
                 {% for i in (1..4) %}
-                  <li>
-                    <img src="{{ 'cc-partner1.webp' | file_url }}" class="img-responsive" alt="Smoke Cartel logo" loading="lazy" width="99" height="39">
-                  </li>
-                  <li>
-                    <img src="{{ 'cc-partner2.webp' | file_url }}" class="img-responsive" alt="Daily High Club logo" loading="lazy" width="56" height="41">
-                  </li>
-                  <li>
-                    <img src="{{ 'cc-partner3.webp' | file_url }}" class="img-responsive" alt="Grasscity logo" loading="lazy" width="95" height="39">
-                  </li>
-                  <li>
-                    <img src="{{ 'cc-partner4.webp' | file_url }}" class="img-responsive" alt="Dankstop logo" loading="lazy" width="100" height="39">
-                  </li>
-                  <li>
-                    <img src="{{ 'cc-partner5.webp' | file_url }}" class="img-responsive" alt="Nuleaf logo" loading="lazy" width="65" height="39">
-                  </li>
-                  <li>
-                    <img src="{{ 'cc-partner6.webp' | file_url }}" class="img-responsive" alt="Fabcbd logo" loading="lazy" width="100" height="39">
-                  </li>
+                  <li><img src="{{ 'cc-partner1.png' | file_url }}" class="img-responsive" alt="Smoke Cartel logo" loading="lazy" width="99" height="39"></li>
+                  <li><img src="{{ 'cc-partner2.png' | file_url }}" class="img-responsive" alt="Daily High Club logo" loading="lazy" width="56" height="41"></li>
+                  <li><img src="{{ 'cc-partner3.png' | file_url }}" class="img-responsive" alt="Grasscity logo" loading="lazy" width="95" height="39"></li>
+                  <li><img src="{{ 'cc-partner4.png' | file_url }}" class="img-responsive" alt="Dankstop logo" loading="lazy" width="100" height="39"></li>
+                  <li><img src="{{ 'cc-partner5.png' | file_url }}" class="img-responsive" alt="Nuleaf logo" loading="lazy" width="65" height="39"></li>
+                  <li><img src="{{ 'cc-partner6.png' | file_url }}" class="img-responsive" alt="Fabcbd logo" loading="lazy" width="100" height="39"></li>
                 {% endfor %}
               </ul>
             </div>
@@ -1919,6 +1885,8 @@
   .new_custom_popup_main2 .form-group {
     position: relative;
     margin-bottom: 20px;
+    flex-direction: column;
+    align-items: start;
   }
   .new_custom_popup_main2 label {
     color: #637381;
@@ -1940,6 +1908,7 @@
     font-size: 11px;
     color: red;
     background: transparent;
+    margin: 5px 0 0;
   }
   .new_custom_popup_main2 .required:after {
     content: " *";

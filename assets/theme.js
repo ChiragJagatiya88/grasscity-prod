@@ -3363,6 +3363,18 @@ customElements.define(
 
 // new refresh prices js
 
+// new js
+const getCart = async () => {
+  const resp = await fetch(window.Shopify.routes.root + "cart.js", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  const data = resp.json();
+  return data;
+};
+
 // custom cart membership selectors
 class USCartMembership extends HTMLElement {
   constructor() {
