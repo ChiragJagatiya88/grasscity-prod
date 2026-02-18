@@ -140,6 +140,8 @@
   <script src="{{ 'gift-wrapping.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
+{% comment %} <p>Customer: {{ customer.email }}</p> {% endcomment %}
+
 <div class="cart section--padding{% if cart == empty %} is-empty{% endif %}">
   <div class="section__container page-width page-width--{{ section.settings.container }}">
     <div class="cart__header">
@@ -1263,9 +1265,51 @@
                       </noscript>
                     {% endcomment %}
 
-                    <button class="btn btn--primary w-full" type="submit" form="cart" name="checkout">
+                    {% if customer == blank %}
+                      <button class="btn btn--primary w-full base-checkout-button us-popup-button" aria-controls="gusetcheckoutpopup" aria-expanded="false" type="button" is="hover-button" {% if base_price_active == false %}style="display: none;"{% endif %}>
+                        <span class="btn__text">{{ 'sections.cart.checkout' | t }}</span>
+                      </button>
+                    
+                      <button class="btn btn--primary w-full club-checkout-button SSO_popup_register" type="button" is="hover-button" {% if club_price_active == false %}style="display: none;"{% endif %}>
+                        <span class="btn__text">{{ 'sections.cart.checkout' | t }}</span>
+                      </button>
+                    
+                      {% if elite_item.size > 0 %}
+                        <button class="btn btn--primary w-full" type="submit" name="checkout" form="cart" is="hover-button">
+                          <span class="btn__text">{{ 'sections.cart.checkout' | t }}</span>
+                        </button>
+                      {% else %}
+                        <button class="btn btn--primary w-full elite-checkout-button SSO_popup_elite_join" type="button" is="hover-button" {% if elite_price_active == false %}style="display: none;"{% endif %}>
+                          <span class="btn__text">{{ 'sections.cart.checkout' | t }}</span>
+                        </button>
+                      {% endif %}
+                    {% endif %}
+                    
+                    {% if customer and elite__customer == false %}
+                      <button class="btn btn--primary w-full club-checkout-button us-popup-button" aria-controls="clubcheckoutpopup" aria-expanded="false" type="button" is="hover-button" {% if club_price_active == false %}style="display: none;"{% endif %}>
+                        <span class="btn__text">{{ 'sections.cart.checkout' | t }}</span>
+                      </button>
+                    
+                      {% if elite_item.size > 0 %}
+                        <button class="btn btn--primary w-full" type="submit" name="checkout" form="cart" is="hover-button">
+                          <span class="btn__text">{{ 'sections.cart.checkout' | t }}</span>
+                        </button>
+                      {% else %}
+                        <button class="btn btn--primary w-full elite-checkout-button SSO_popup_elite_upgrade" type="button" is="hover-button" {% if elite_price_active == false %} style="display: none;"{% endif %}>
+                          <span class="btn__text">{{ 'sections.cart.checkout' | t }}</span>
+                        </button>
+                      {% endif %}
+                    {% endif %}
+                    
+                    {% if elite__customer == true %}
+                      <button class="btn btn--primary w-full" type="submit" name="checkout" form="cart" is="hover-button">
+                        <span class="btn__text">{{ 'sections.cart.checkout' | t }}</span>
+                      </button>
+                    {% endif %}
+                  
+                    {% comment %} <button class="btn btn--primary w-full" type="submit" form="cart" name="checkout">
                       <span class="btn__text">{{ 'sections.cart.checkout' | t }}</span>
-                    </button>
+                    </button> {% endcomment %}
 
                     {% if additional_checkout_buttons %}
                       <div class="additional-checkout-buttons no-js-hidden">
@@ -1644,6 +1688,11 @@
       line-height: 16px;
       font-weight: 700;
       margin: 16px 0 0 0;
+      padding: 0;
+      border: 0;
+      line-height: 1;
+      height: auto;
+      font-weight: 100;
     }
     .orrr {
       color: #818898;
@@ -1654,11 +1703,15 @@
     .skip_to_checkout {
       color: #818898;
       font-size: 15px;
-      line-height: 21px;
+      padding: 0;
+      border: 0;
+      line-height: 1;
+      height: auto;
+      font-weight: 100;
     }
     .main__button {
-      padding: 15px 0;
-      color: #fff !important;
+      background: #171717;
+      color: #ffffff;
     }
   }
   @media only screen and (min-width: 768px) {
@@ -1782,6 +1835,51 @@
     }
   }
 </style>
+
+<x-modal id="gusetcheckoutpopup" class="us-popup x-modal drawer" role="dialog" aria-modal="true" aria-label="Guest Checkout Popup" hidden>
+  <overlay-element class="overlay" aria-controls="gusetcheckoutpopup" aria-expanded="false"></overlay-element>
+  <div class="drawer__inner">
+    <gesture-element class="drawer__header">
+      <button class="button--close drawer__close" type="button" is="hover-button" aria-controls="gusetcheckoutpopup" aria-expanded="false" aria-label="Close">
+        <svg class="icon icon-close icon--sm icon--thick" viewBox="0 0 20 20" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15L15 5M5 5L15 15"></path>
+        </svg>
+      </button>
+    </gesture-element>
+    <div class="drawer__content text-center">
+      <div class="drawer__scrollable">
+        <div class="popup_guset_save">Save {{ base_cart_price | minus: club_cart_price | money }} Today!</div>
+        <p class="save__text_popup">Join Grasscity for free and get instant access to exclusive prices and perks.</p>
+        <button class="button SSO_popup_register main__button">JOIN Grasscity FOR FREE</button>
+        <button class="login__member SSO_popup_login">Already a member? Log in</button>
+        <p class="text-xl text-center orrr">OR</p>
+        <button class="skip_to_checkout" type="submit" name="checkout" form="cart">Skip and proceed to checkout</button>
+      </div>
+    </div>
+  </div>
+</x-modal>
+
+<x-modal id="clubcheckoutpopup" class="us-popup x-modal drawer" role="dialog" aria-modal="true" aria-label="Guest Checkout Popup" hidden>
+  <overlay-element class="overlay" aria-controls="clubcheckoutpopup" aria-expanded="false"></overlay-element>
+  <div class="drawer__inner">
+    <gesture-element class="drawer__header">
+      <button class="button--close drawer__close" type="button" is="hover-button" aria-controls="clubcheckoutpopup" aria-expanded="false" aria-label="Close">
+        <svg class="icon icon-close icon--sm icon--thick" viewBox="0 0 20 20" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15L15 5M5 5L15 15"></path>
+        </svg>
+      </button>
+    </gesture-element>
+    <div class="drawer__content text-center">
+      <div class="drawer__scrollable">
+        <div class="popup_guset_save" style="color:#031546">Save an extra {{ club_cart_price | minus: elite_cart_price | money }} Today!</div>
+        <p class="save__text_popup">For only <strong><span>$30/yr</span></strong> unlock <strong>UNBELIEVABLE SAVINGS</strong> and <strong>FREE</strong> Shipping!</p>
+        <button class="button SSO_popup_elite_upgrade main__button">SIGN UP FOR ELITE MEMBERSHIP</button>
+        <p class="text-xl text-center orrr">OR</p>
+        <button class="skip_to_checkout" type="submit" name="checkout" form="cart" style="margin-top:15px">Skip and proceed to checkout</button>
+      </div>
+    </div>
+  </div>
+</x-modal>
 
 {% schema %}
 {
