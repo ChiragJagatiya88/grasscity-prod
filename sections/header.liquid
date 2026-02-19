@@ -167,11 +167,7 @@
           >
             {%- if custom_link.settings.custom_icon != blank -%}
               <span class="icon icon--{{ custom_link.settings.icon_size }}">
-                {{-
-                  custom_link.settings.custom_icon
-                  | image_url: width: 30
-                  | image_tag: loading: 'lazy', class: 'motion-reduce', is: 'image-lazy'
-                -}}
+                {{- custom_link.settings.custom_icon | image_url: width: 30 | image_tag: loading: 'lazy', class: 'motion-reduce', is: 'image-lazy' -}}
               </span>
             {%- else -%}
               {%- render 'icons', icon: custom_link.settings.icon, size: custom_link.settings.icon_size -%}
@@ -183,16 +179,14 @@
             {% endif %}
           </a>
         {%- endif -%}
-        {%- if shop.customer_accounts_enabled -%}
           <a
-            {% comment %} href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" {% endcomment %}
-            href="javascript:void(0)"
-            class="account-button reversed-link flex items-center justify-center gap-2{% if section.settings.customer_account_style == 'icon-only' %} reversed-link--icon-only{% endif %}"
+            href="{%- if customer -%}{{ routes.account_url }}{%- else -%}javascript:void(0){%- endif -%}"
+            class="reversed-link flex items-center justify-center gap-2{% if section.settings.customer_account_style == 'icon-only' %} reversed-link--icon-only{% endif %}{% unless customer %} account-button SSO_popup_login{% endunless %}"
             aria-label="{{ 'customer.account.title' | t }}"
           >
             {%- render 'icon-account', size: 'large' -%}
             {% if section.settings.customer_account_style == 'icon-with-text' %}
-              <span class="reversed-link__text hidden sm:block lg:hidden xl:block whitespace-nowrap">
+              <span class="reversed-link__text hidden whitespace-nowrap">
                 {%- liquid
                   if customer
                     echo 'customer.account_fallback' | t
@@ -203,7 +197,6 @@
               </span>
             {% endif %}
           </a>
-        {%- endif -%}
         {%- liquid
           assign cart_icon_inline_css = ''
           if settings.cart_icon_color != blank and settings.cart_icon_color != 'rgba(0,0,0,0)'
