@@ -42,20 +42,35 @@
         <span aria-hidden="true" class="breadcrumbs--sep breadcrumbs--sep-last"></span>
         <span class="breadcrumbs--last text-subtext">{{ product.title }}</span>
       {%- elsif template contains 'collection' and collection.handle -%}
-        {%- if collection.handle != 'all' -%}
+        {% assign custom_breadcrumbs = collection.metafields.custom.breadcrumbs.value %}
+        {%- if custom_breadcrumbs != blank -%}
+          {%- for bc_collection in custom_breadcrumbs -%}
+            <span aria-hidden="true" class="breadcrumbs--sep"></span>
+            <a href="{{ bc_collection.url }}" class="reversed-link">{{- bc_collection.title -}}</a>
+          {%- endfor -%}
           <span aria-hidden="true" class="breadcrumbs--sep"></span>
-          <a href="{{ routes.all_products_collection_url }}" class="reversed-link">
-            {{- 'general.breadcrumbs.collections' | t -}}
-          </a>
-        {% endif %}
-        <span aria-hidden="true" class="breadcrumbs--sep"></span>
-        {%- if current_tags -%}
-          {% capture url %}{{ routes.collections_url }}/{{ collection.handle }}{% endcapture %}
-          {{ collection.title | link_to: url, class: 'reversed-link' }}
-          <span aria-hidden="true" class="breadcrumbs--sep"></span>
-          <span class="breadcrumbs--last text-subtext">{{ current_tags | join: ' + ' }}</span>
+          {%- if current_tags -%}
+            {% capture url %}{{ routes.collections_url }}/{{ collection.handle }}{% endcapture %}
+            {{ collection.title | link_to: url, class: 'reversed-link' }}
+            <span aria-hidden="true" class="breadcrumbs--sep"></span>
+            <span class="breadcrumbs--last text-subtext">{{ current_tags | join: ' + ' }}</span>
+          {%- else -%}
+            <span class="breadcrumbs--last text-subtext">{{ collection.title }}</span>
+          {%- endif -%}
         {%- else -%}
-          <span class="breadcrumbs--last text-subtext">{{ collection.title }}</span>
+          {%- if collection.handle != 'all' -%}
+            <span aria-hidden="true" class="breadcrumbs--sep"></span>
+            <a href="{{ routes.all_products_collection_url }}" class="reversed-link">{{- 'general.breadcrumbs.collections' | t -}}</a>
+          {% endif %}
+          <span aria-hidden="true" class="breadcrumbs--sep"></span>
+          {%- if current_tags -%}
+            {% capture url %}{{ routes.collections_url }}/{{ collection.handle }}{% endcapture %}
+            {{ collection.title | link_to: url, class: 'reversed-link' }}
+            <span aria-hidden="true" class="breadcrumbs--sep"></span>
+            <span class="breadcrumbs--last text-subtext">{{ current_tags | join: ' + ' }}</span>
+          {%- else -%}
+            <span class="breadcrumbs--last text-subtext">{{ collection.title }}</span>
+          {%- endif -%}
         {%- endif -%}
       {%- elsif template == 'list-collections' -%}
         <span aria-hidden="true" class="breadcrumbs--sep"></span>

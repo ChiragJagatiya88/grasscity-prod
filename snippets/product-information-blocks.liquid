@@ -245,9 +245,11 @@
             {{ block.settings.custom_liquid }}
           </div>
         {%- when 'collapsible_tab' -%}
-          <div class="{{ block_classes }}" {{ block.shopify_attributes }}>
-            {%- render 'product-collapsible-tab', block: block, section_id: section.id -%}
-          </div>
+          {%- if block.settings.heading != blank and block.settings.content != blank -%}
+            <div class="{{ block_classes }}" {{ block.shopify_attributes }}>
+              {%- render 'product-collapsible-tab', block: block, section_id: section.id -%}
+            </div>
+          {%- endif -%}
         {%- when 'popup' -%}
           {%- liquid
             assign modal_id = 'PopupModal-' | append: block.id

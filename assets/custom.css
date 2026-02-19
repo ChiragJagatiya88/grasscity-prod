@@ -588,3 +588,37 @@ elite-icon-nm {
 .btn--primary:before {
   z-index: -1;
 }
+
+.collection_bottom_des {
+  border-bottom: 1px solid #1717171a;
+  padding-block: 30px;
+  border-top: 1px solid #1717171a;
+
+  h2 {
+    margin: 20px 0;
+    font-size: 24px;
+  }
+  h3 {
+    margin: 18px 0;
+    font-size: 18px;
+  }
+  h4 {
+    margin: 15px 0;
+    font-size: 18px;
+  }
+  h5 {
+    margin: 13px 0;
+    font-size: 18px;
+  }
+  h6 {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  p,ul,a,ol,span {
+    font-size: 16px;
+  }
+  a {
+    text-decoration: underline;
+    color: #7fc410;
+  }
+}
