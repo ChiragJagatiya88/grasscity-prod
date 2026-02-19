@@ -17,9 +17,11 @@
           {%- render 'product-payment-info', block: block -%}
         </div>
       {%- when 'collapsible_tab' -%}
-        <div class="{{ block_classes }}" {{ block.shopify_attributes }}>
-          {%- render 'product-collapsible-tab', block: block, section_id: section.id -%}
-        </div>
+        {%- if block.settings.heading != blank and block.settings.content != blank -%}
+          <div class="{{ block_classes }}" {{ block.shopify_attributes }}>
+            {%- render 'product-collapsible-tab', block: block, section_id: section.id -%}
+          </div>
+        {%- endif -%}
       {%- when 'complementary' -%}
         <div
           class="{{ block_classes }} product__block--{{ block.type }}-{% if block.settings.make_collapsible_row %}collapsible{% else %}inline{% endif %}{% if block.settings.block_heading != blank %} has-heading{% endif %}"

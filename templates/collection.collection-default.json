@@ -1,1 +1,393 @@
-{"sections":{"breadcrumbs_Gxg9wp":{"type":"breadcrumbs","settings":{"container":"fixed","text_alignment":"start","padding_top":16,"padding_bottom":20}},"banner":{"type":"main-collection-banner","blocks":{"collection_info_zUNyKV":{"type":"collection_info","settings":{"heading_size":"h1","heading_tag":"h1","show_description":true,"padding_top":40,"padding_bottom":40}}},"block_order":["collection_info_zUNyKV"],"custom_css":[],"settings":{"container":"fixed","color_scheme":"scheme-6","text_alignment":"left","show_collection_image":true,"image":"shopify:\/\/shop_images\/gs_collection-bongs_desktop_ab_v01.webp","image_overlay_opacity":0,"image_position":"right","image_height":"extra-small","enable_parallax":false,"parallax_direction":"vertical","image_height_mobile":"auto","padding_top":0,"padding_bottom":0}},"product-grid":{"type":"main-collection-product-grid","blocks":{"image_card_mwkyJy":{"type":"image_card","settings":{"color_scheme":"scheme-inverse","image_position":1,"image":"shopify:\/\/shop_images\/gs_collection-highlight_desktop_ab_v01.webp","image_ratio":"adapt","image_overlay_opacity":10,"content_position":"split-bottom-button","content_alignment":"center","content_spacing":"small","content_gap":"fitted","card_link":"","subheading":"Home & Decor","subheading_style":"","heading":"Saving $30 for Lighting","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h3","heading_size_mobile":"inherit","heading_size_custom":18,"description":"","text_size":"text-base","button_label":"Shop Now","button_style":"btn--primary","button_icon":"none","enable_preload_image":false}}},"block_order":["image_card_mwkyJy"],"custom_css":[],"settings":{"container":"fixed","color_scheme":"scheme-1","products_per_page":20,"columns_desktop":4,"column_gap":"medium","row_gap":"large","pagination":"number","enable_filtering":true,"enable_color_swatch":true,"filter_type":"vertical","expand_filter_groups":"Availability, Price, Color, Size, Category","enable_sorting":true,"enable_layout_switching":true,"columns_mobile":"2","padding_top":28,"padding_bottom":60,"show_section_divider":true,"divider_width":"fixed"}},"rich_text_dgPtDV":{"type":"rich-text","blocks":{"heading_kVf6qj":{"type":"heading","settings":{"heading":"About Garage","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h3"}},"text_xtLQE8":{"type":"text","settings":{"text":"{{ collection.description }}<p>From classic wood and metal to contemporary acrylic and glass, each material brings unique advantages to furniture design. Wood offers timeless strength and natural warmth, while metal adds resilience and industrial charm. Acrylic and glass, on the other hand, bring a modern touch, providing sleek, versatile options for contemporary spaces. The choice of material is not just about appearance; it defines durability and functionality, ensuring each piece serves its purpose beautifully.<\/p><p>When selecting furniture, it’s important to think beyond aesthetics. The right pieces create a cohesive atmosphere that balances beauty, practicality, and longevity. Minimalist designs, with their clean lines and simplicity, appeal to those who value modern elegance. However, traditional styles like Victorian, Art Deco, or Mid-Century Modern captivate with their intricate details and timeless craftsmanship, offering a sense of history and character that enriches any space.<\/p><p>This guide explores a variety of furniture styles and materials, helping you discover what aligns with your preferences and needs. Whether you lean toward contemporary sophistication or classic charm, choosing the right furniture ensures your space reflects your unique personality while meeting functional requirements. With the right selections, you can create a harmonious and inviting home.<\/p>","text_size":"text-base","text_line_limit":"5-lines","button_style":"btn--underline","button_icon":"none"}}},"block_order":["heading_kVf6qj","text_xtLQE8"],"custom_css":[],"settings":{"container":"fixed","color_scheme":"scheme-10","use_color_scheme_in_container":true,"content_spacing":"standard","content_alignment":"left","padding_top":0,"padding_bottom":60,"show_section_divider":false,"divider_width":"fixed"}},"scrolling_promotion_Fy9Yhn":{"type":"scrolling-promotion","blocks":{"text_gijz7Q":{"type":"text","settings":{"text_link":"","text":"Fast Delivery","text_size":"h4","text_opacity":100,"use_custom_color":false,"custom_color":"#000000"}},"text_3TVCPg":{"type":"text","settings":{"text_link":"","text":"30 Days Free Returns","text_size":"h4","text_opacity":100,"use_custom_color":false,"custom_color":"#000000"}},"text_iD6689":{"type":"text","settings":{"text_link":"","text":"Secure Payment","text_size":"h4","text_opacity":100,"use_custom_color":false,"custom_color":"#000000"}},"text_CtJBtL":{"type":"text","settings":{"text_link":"","text":"24\/7 Customer Support","text_size":"h4","text_opacity":100,"use_custom_color":false,"custom_color":"#000000"}},"text_dGmg9m":{"type":"text","settings":{"text_link":"","text":"Sustainable Materials","text_size":"h4","text_opacity":100,"use_custom_color":false,"custom_color":"#000000"}}},"block_order":["text_gijz7Q","text_3TVCPg","text_iD6689","text_CtJBtL","text_dGmg9m"],"custom_css":[],"settings":{"color_scheme":"scheme-3","direction":"left","pause_on_hover":true,"speed":0.2,"h_spacing":80,"show_section_divider":false,"padding_top":22,"padding_bottom":22}}},"order":["breadcrumbs_Gxg9wp","banner","product-grid","rich_text_dgPtDV","scrolling_promotion_Fy9Yhn"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
+  "sections": {
+    "breadcrumbs_Gxg9wp": {
+      "type": "breadcrumbs",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "blocks": {
+        "collection_info_zUNyKV": {
+          "type": "collection_info",
+          "settings": {
+            "heading_size": "h1",
+            "heading_tag": "h1",
+            "show_description": true,
+            "padding_top": 40,
+            "padding_bottom": 40
+          }
+        }
+      },
+      "block_order": [
+        "collection_info_zUNyKV"
+      ],
+      "custom_css": [],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-6",
+        "text_alignment": "left",
+        "show_collection_image": true,
+        "image": "shopify://shop_images/gs_collection-bongs_desktop_ab_v01.webp",
+        "image_overlay_opacity": 0,
+        "image_position": "right",
+        "image_height": "extra-small",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "image_height_mobile": "auto",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_pb3X9a": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.name",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "{% if collection.description != blank %}\n<div class=\"page-width page-width--fixed section__container\">\n<div class=\"collection_top_des\">{{ collection.description }}</div>\n</div>\n{% endif %}",
+        "color_scheme": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "image_card_mwkyJy": {
+          "type": "image_card",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "image_position": 1,
+            "image": "shopify://shop_images/gs_collection-highlight_desktop_ab_v01.webp",
+            "image_ratio": "adapt",
+            "image_overlay_opacity": 10,
+            "content_position": "split-bottom-button",
+            "content_alignment": "center",
+            "content_spacing": "small",
+            "content_gap": "fitted",
+            "card_link": "",
+            "subheading": "Home & Decor",
+            "subheading_style": "",
+            "heading": "Saving $30 for Lighting",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "description": "",
+            "text_size": "text-base",
+            "button_label": "Shop Now",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": false
+          }
+        }
+      },
+      "block_order": [
+        "image_card_mwkyJy"
+      ],
+      "custom_css": [],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "products_per_page": 20,
+        "columns_desktop": 4,
+        "column_gap": "medium",
+        "row_gap": "large",
+        "pagination": "number",
+        "enable_filtering": true,
+        "enable_color_swatch": true,
+        "filter_type": "vertical",
+        "expand_filter_groups": "Availability, Price, Color, Size, Category",
+        "enable_sorting": true,
+        "enable_layout_switching": true,
+        "columns_mobile": "2",
+        "padding_top": 28,
+        "padding_bottom": 60,
+        "show_section_divider": true,
+        "divider_width": "fixed"
+      }
+    },
+    "custom_liquid_YRMjVK": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": {
+        "custom_liquid": "{% if collection.metafields.custom.bottom_description != blank %}\n<div class=\"page-width page-width--fixed section__container\">\n<div class=\"collection_bottom_des\">{{ collection.metafields.custom.bottom_description |  metafield_tag }}</div>\n</div>\n{% endif %}",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "collection_faqs_G3aqML": {
+      "type": "collection-faqs",
+      "blocks": {
+        "collapsible_item_iqehrE": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "{{ collection.metafields.custom.faq_question_1.value }}",
+            "content": "{{ collection.metafields.custom.faq_answer_1 | metafield_tag }}",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_eJ7N3M": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "{{ collection.metafields.custom.faq_question_2.value }}",
+            "content": "{{ collection.metafields.custom.faq_answer_2 | metafield_tag }}",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_xmXCCt": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "{{ collection.metafields.custom.faq_question_3.value }}",
+            "content": "{{ collection.metafields.custom.faq_answer_3 | metafield_tag }}",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_CcdtPH": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "{{ collection.metafields.custom.faq_question_4.value }}",
+            "content": "{{ collection.metafields.custom.faq_answer_4 | metafield_tag }}",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_exUWec": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "{{ collection.metafields.custom.faq_question_5.value }}",
+            "content": "{{ collection.metafields.custom.faq_answer_5 | metafield_tag }}",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_Rf96w7": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "{{ collection.metafields.custom.faq_question_6.value }}",
+            "content": "{{ collection.metafields.custom.faq_answer_6 | metafield_tag }}",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_Rf96w8": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "{{ collection.metafields.custom.faq_question_7.value }}",
+            "content": "{{ collection.metafields.custom.faq_answer_7 | metafield_tag }}",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_Fc7W8J": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "{{ collection.metafields.custom.faq_question_8.value }}",
+            "content": "{{ collection.metafields.custom.faq_answer_8 | metafield_tag }}",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_kGntWj": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "{{ collection.metafields.custom.faq_question_9.value }}",
+            "content": "{{ collection.metafields.custom.faq_answer_9 | metafield_tag }}",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_TrMcKQ": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "{{ collection.metafields.custom.faq_question_10.value }}",
+            "content": "<p>{{ collection.metafields.custom.faq_answer_10 | metafield_tag }}</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_item_iqehrE",
+        "collapsible_item_eJ7N3M",
+        "collapsible_item_xmXCCt",
+        "collapsible_item_CcdtPH",
+        "collapsible_item_exUWec",
+        "collapsible_item_Rf96w7",
+        "collapsible_item_Rf96w8",
+        "collapsible_item_Fc7W8J",
+        "collapsible_item_kGntWj",
+        "collapsible_item_TrMcKQ"
+      ],
+      "name": "Collection Faqs",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "header_layout": "vertical",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Frequently Asked Questions",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--primary",
+        "button_icon": "none",
+        "column_gap": "large",
+        "row_gap": "inherit",
+        "item_style": "standard",
+        "item_color_scheme": "",
+        "item_heading_font": "heading",
+        "item_heading_size": "h4",
+        "item_icon_size": "extra-large",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "scrolling_promotion_Fy9Yhn": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "text_gijz7Q": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Fast Delivery",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "text_3TVCPg": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "30 Days Free Returns",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "text_iD6689": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Secure Payment",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "text_CtJBtL": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "24/7 Customer Support",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "text_dGmg9m": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Sustainable Materials",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "text_gijz7Q",
+        "text_3TVCPg",
+        "text_iD6689",
+        "text_CtJBtL",
+        "text_dGmg9m"
+      ],
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "scheme-3",
+        "direction": "left",
+        "pause_on_hover": true,
+        "speed": 0.2,
+        "h_spacing": 80,
+        "show_section_divider": false,
+        "padding_top": 22,
+        "padding_bottom": 22
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_Gxg9wp",
+    "banner",
+    "custom_liquid_pb3X9a",
+    "product-grid",
+    "custom_liquid_YRMjVK",
+    "collection_faqs_G3aqML",
+    "scrolling_promotion_Fy9Yhn"
+  ]
+}

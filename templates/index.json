@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "collection_list_slider_6qbNfj": {
       "type": "collection-list-slider",
@@ -220,11 +220,12 @@
         "collection_E83rKg": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "lighters",
             "title": "Hot Items",
             "show_banner": true,
             "color_scheme": "scheme-inverse",
             "card_link": "",
+            "banner_image": "shopify://shop_images/gs_collection-highlight_desktop_ab_v01.webp",
             "image_overlay_opacity": 20,
             "content_position": "split-bottom-button",
             "content_alignment": "left",
@@ -296,7 +297,7 @@
             "image": "shopify://shop_images/popular-banner-background-5.png",
             "image_ratio": "adapt",
             "subheading": "",
-            "heading": "Lorem ipsum dolor",
+            "heading": "Dab Rigs",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
@@ -319,7 +320,7 @@
             "image": "shopify://shop_images/gs_bongs-popular_ab_v01.webp",
             "image_ratio": "adapt",
             "subheading": "",
-            "heading": "Lorem ipsum dolor",
+            "heading": "Bongs",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
@@ -342,7 +343,7 @@
             "image": "shopify://shop_images/popular-banner-background-6.png",
             "image_ratio": "adapt",
             "subheading": "",
-            "heading": "Lorem ipsum dolor",
+            "heading": "Pipes",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
@@ -365,7 +366,7 @@
             "image": "shopify://shop_images/gs_vaporizers-popular_ab_v01.webp",
             "image_ratio": "adapt",
             "subheading": "",
-            "heading": "Lorem ipsum dolor",
+            "heading": "Grinders",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
