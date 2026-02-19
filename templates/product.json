@@ -1,4 +1,13 @@
-{
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
   "sections": {
     "breadcrumbs": {
       "type": "breadcrumbs",
@@ -23,18 +32,26 @@
             "sale_badge_type": "percentage"
           }
         },
-        "title": { "type": "title", "settings": { "heading_size": "h1" } },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
         "meta": {
           "type": "meta",
           "settings": {
             "link_color": "#1d349a",
             "show_vendor": true,
-            "show_product_type": true,
+            "show_product_type": false,
             "show_sku": false,
             "show_barcode": false
           }
         },
-        "price": { "type": "price", "settings": {} },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
         "icon_with_text": {
           "type": "icon-with-text",
           "settings": {
@@ -57,7 +74,11 @@
             "show_inventory_quantity": true
           }
         },
-        "description": { "type": "description", "settings": {} },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -102,7 +123,7 @@
             "text_color": "#049b6e",
             "icon": "lightning",
             "heading": "Limited time offer",
-            "description": "<p>Get $20 off when you spend $1,000 or more! <a href=\"\/collections\/all\" title=\"All products\">Learn more<\/a><\/p>"
+            "description": "<p>Get $20 off when you spend $1,000 or more! <a href=\"/collections/all\" title=\"All products\">Learn more</a></p>"
           }
         },
         "complementary": {
@@ -116,30 +137,30 @@
             "product_list_limit": 6,
             "layout": "grid",
             "columns": 3,
-            "image_ratio": "1\/1",
+            "image_ratio": "1/1",
             "enable_quick_add": true
-          }
-        },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Specifications",
-            "heading_size": "h4",
-            "icon": "none",
-            "content": "",
-            "page": "content",
-            "default_open": true,
-            "show_below_product_media": true
           }
         },
         "collapsible-row-2": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Product Details",
+            "heading": "Description",
             "heading_size": "h4",
             "icon": "none",
-            "content": "<p>Designed with care and crafted from premium materials, our products combine durability, comfort, and timeless style. Each piece is thoughtfully made to enhance your living space, offering a perfect balance of functionality and elegance that complements any home and suits your unique lifestyle.<\/p>",
+            "content": "{{ product.description }}",
             "page": "",
+            "default_open": false,
+            "show_below_product_media": true
+          }
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Key Features & Benefits",
+            "heading_size": "h4",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.description.excerpt | metafield_tag }}</p>",
+            "page": "content",
             "default_open": false,
             "show_below_product_media": true
           }
@@ -147,10 +168,10 @@
         "collapsible-row-3": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Materials & Care",
+            "heading": "Specifications",
             "heading_size": "h4",
             "icon": "none",
-            "content": "<p>Carefully crafted from durable, sustainable materials, each piece is designed for long-lasting use and timeless style. For proper care, wipe gently with a soft, damp cloth to remove dust and dirt. Avoid using harsh chemicals, abrasive cleaners, or excessive moisture to protect the finish and maintain its pristine look.<\/p>",
+            "content": "{{ product.metafields.custom.specifications | metafield_tag }}",
             "page": "",
             "default_open": false,
             "show_below_product_media": true
@@ -166,7 +187,7 @@
             "highlight_style_color": "",
             "highlight_text_color": "",
             "heading_size": "h5",
-            "description": "<p>Your payment information is processed securely. We do not store credit card details nor have access to your credit card information.<\/p>",
+            "description": "<p>Your payment information is processed securely. We do not store credit card details nor have access to your credit card information.</p>",
             "show_payment_icons": true,
             "show_below_product_media": true
           }
@@ -174,9 +195,14 @@
         "divider_pPz3Kw": {
           "type": "divider",
           "disabled": true,
-          "settings": { "show_below_product_media": false }
+          "settings": {
+            "show_below_product_media": false
+          }
         },
-        "social_sharing": { "type": "social_sharing", "settings": {} },
+        "social_sharing": {
+          "type": "social_sharing",
+          "settings": {}
+        },
         "sticky_atc_bar_7HgNgP": {
           "type": "sticky-atc-bar",
           "settings": {
@@ -203,8 +229,8 @@
         "pickup_availability",
         "promotion_alert_L7ipQp",
         "complementary",
-        "collapsible-row-1",
         "collapsible-row-2",
+        "collapsible-row-1",
         "collapsible-row-3",
         "payment_info",
         "divider_pPz3Kw",
@@ -235,9 +261,9 @@
           "type": "testimonial",
           "settings": {
             "icon": "none",
-            "image": "shopify:\/\/shop_images\/hot-deals-banner-background-4.png",
+            "image": "shopify://shop_images/hot-deals-banner-background-4.png",
             "heading": "Testimonials",
-            "text": "<p>“I am extremely happy about both design and comfort. I am a furniture designer myself, and your product makes me happy.”<\/p>",
+            "text": "<p>“I am extremely happy about both design and comfort. I am a furniture designer myself, and your product makes me happy.”</p>",
             "author": "Stephanie L.",
             "bio": "Verified Buyer",
             "product": ""
@@ -247,9 +273,9 @@
           "type": "testimonial",
           "settings": {
             "icon": "none",
-            "image": "shopify:\/\/shop_images\/gs_brand-qualities-1_ab_v01.webp",
+            "image": "shopify://shop_images/gs_brand-qualities-1_ab_v01.webp",
             "heading": "Testimonials",
-            "text": "<p>The story behind, sustainable production, and the risk-free feeling with the free return policy make this a great choice.<\/p>",
+            "text": "<p>The story behind, sustainable production, and the risk-free feeling with the free return policy make this a great choice.</p>",
             "author": "Rachel M.",
             "bio": "Verified Buyer",
             "product": ""
@@ -259,9 +285,9 @@
           "type": "testimonial",
           "settings": {
             "icon": "none",
-            "image": "shopify:\/\/shop_images\/hot-deals-banner-background-3.png",
+            "image": "shopify://shop_images/hot-deals-banner-background-3.png",
             "heading": "Testimonials",
-            "text": "<p>“High-quality furniture, crafted with passion and care, fantastic in appearance and use, reasonably priced, and excellent custome.”<\/p>",
+            "text": "<p>“High-quality furniture, crafted with passion and care, fantastic in appearance and use, reasonably priced, and excellent custome.”</p>",
             "author": "Emily J.",
             "bio": "Verified Buyer",
             "product": ""
@@ -271,9 +297,9 @@
           "type": "testimonial",
           "settings": {
             "icon": "none",
-            "image": "shopify:\/\/shop_images\/hot-deals-banner-background-2.png",
+            "image": "shopify://shop_images/hot-deals-banner-background-2.png",
             "heading": "Testimonials",
-            "text": "<p>The craftsmanship, eco-friendly materials, and excellent customer service truly make this product an outstanding standout.<\/p>",
+            "text": "<p>The craftsmanship, eco-friendly materials, and excellent customer service truly make this product an outstanding standout.</p>",
             "author": "Sarah T.",
             "bio": "Verified Buyer",
             "product": ""
@@ -330,7 +356,7 @@
           "type": "image_with_text",
           "settings": {
             "navigation_title": "Specifications",
-            "image": "shopify:\/\/shop_images\/gs_product_specifications_ab_v01.webp",
+            "image": "shopify://shop_images/gs_product_specifications_ab_v01.webp",
             "desktop_image_position": "left",
             "image_aspect_ratio": "adapt",
             "heading": "Inspired to create a chair where the back and arms are moulded from a single piece of plywood",
@@ -340,7 +366,7 @@
             "highlight_text_color": "",
             "heading_size": "h3",
             "subheading": "",
-            "description": "<p>Inspired to create a chair where the back and arms are moulded from a single piece of plywood, Hecht and Colin describe employing a process similar to that a tailor might use to cut a pattern in fabric. This approach resulted in the beautiful structure wherein the moulded back and arms component is supported by a simple A-frame wood dowel construction. One of the benefits of this design is an increase in comfort due to natural movement in the plywood back.<\/p>",
+            "description": "<p>Inspired to create a chair where the back and arms are moulded from a single piece of plywood, Hecht and Colin describe employing a process similar to that a tailor might use to cut a pattern in fabric. This approach resulted in the beautiful structure wherein the moulded back and arms component is supported by a simple A-frame wood dowel construction. One of the benefits of this design is an increase in comfort due to natural movement in the plywood back.</p>",
             "description_size": "text-base",
             "button_label": "",
             "button_link": "",
@@ -367,7 +393,7 @@
             "highlight_text_color": "",
             "heading_size": "h3",
             "subheading": "",
-            "description": "<p>The good design concepts at the heart of Danish design are functionality, beauty and the needs of the many. This is a strong tradition. And when a tradition is strong enough, it leaves room for innovation that allows us to always move forward.<\/p>",
+            "description": "<p>The good design concepts at the heart of Danish design are functionality, beauty and the needs of the many. This is a strong tradition. And when a tradition is strong enough, it leaves room for innovation that allows us to always move forward.</p>",
             "description_size": "text-base",
             "button_label": "Shop More Products",
             "button_link": "",
@@ -387,7 +413,7 @@
             "navigation_title": "Shipping & Return",
             "content": "",
             "custom_liquid": "",
-            "page": "shipping-return"
+            "page": "easy-returns"
           }
         }
       },
@@ -404,8 +430,8 @@
         "color_scheme": "",
         "navigation_style": "headings",
         "navigation_alignment": "start",
-        "padding_top": 60,
-        "padding_bottom": 0,
+        "padding_top": 30,
+        "padding_bottom": 30,
         "show_section_divider": false,
         "divider_width": "fixed"
       }
@@ -416,14 +442,14 @@
         "column_ppme79": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/hot-deals-banner-background-3.png",
+            "image": "shopify://shop_images/hot-deals-banner-background-3.png",
             "title": "Make it yours",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
             "heading_size": "h4",
-            "text": "<p>Personalize your furniture to match your unique style, with customizable options for colors, finishes, materials, and fabrics.<\/p>",
+            "text": "<p>Personalize your furniture to match your unique style, with customizable options for colors, finishes, materials, and fabrics.</p>",
             "text_size": "text-base",
             "button_label": "",
             "button_link": "",
@@ -434,14 +460,14 @@
         "column_6eYcFq": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/hot-deals-banner-background-5.png",
+            "image": "shopify://shop_images/hot-deals-banner-background-5.png",
             "title": "Climate footprint",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
             "heading_size": "h4",
-            "text": "<p>Discover the eco-impact with insights into our materials, production processes, and commitment to sustainable practices.<\/p>",
+            "text": "<p>Discover the eco-impact with insights into our materials, production processes, and commitment to sustainable practices.</p>",
             "text_size": "text-base",
             "button_label": "",
             "button_link": "",
@@ -452,14 +478,14 @@
         "column_6mMR7m": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/hot-deals-banner-background-2.png",
+            "image": "shopify://shop_images/hot-deals-banner-background-2.png",
             "title": "Sustainability",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
             "heading_size": "h4",
-            "text": "<p>Learn how our furniture supports a greener future through responsible sourcing and eco-friendly manufacturing practices.<\/p>",
+            "text": "<p>Learn how our furniture supports a greener future through responsible sourcing and eco-friendly manufacturing practices.</p>",
             "text_size": "text-base",
             "button_label": "",
             "button_link": "",
@@ -470,14 +496,14 @@
         "column_Lix6qc": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/hot-deals-banner-background-4.png",
+            "image": "shopify://shop_images/hot-deals-banner-background-4.png",
             "title": "All eco-certified",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
             "heading_size": "h4",
-            "text": "<p>Rest assured knowing every piece is crafted with care, meeting rigorous eco-certification standards for sustainability.<\/p>",
+            "text": "<p>Rest assured knowing every piece is crafted with care, meeting rigorous eco-certification standards for sustainability.</p>",
             "text_size": "text-base",
             "button_label": "",
             "button_link": "",
@@ -492,6 +518,7 @@
         "column_6mMR7m",
         "column_Lix6qc"
       ],
+      "disabled": true,
       "settings": {
         "container": "fixed",
         "color_scheme": "",
@@ -529,7 +556,9 @@
       "blocks": {
         "info_pEKVwb": {
           "type": "info",
-          "settings": { "show_view_details_button": true }
+          "settings": {
+            "show_view_details_button": true
+          }
         },
         "description_ym9hXF": {
           "type": "description",
@@ -538,10 +567,22 @@
             "show_view_more_button": false
           }
         },
-        "price_adCEcV": { "type": "price", "settings": {} },
-        "variants_Q6kD7j": { "type": "variants", "settings": {} },
-        "vendor_kN7AnX": { "type": "vendor", "settings": {} },
-        "type_ttCzqK": { "type": "type", "settings": {} }
+        "price_adCEcV": {
+          "type": "price",
+          "settings": {}
+        },
+        "variants_Q6kD7j": {
+          "type": "variants",
+          "settings": {}
+        },
+        "vendor_kN7AnX": {
+          "type": "vendor",
+          "settings": {}
+        },
+        "type_ttCzqK": {
+          "type": "type",
+          "settings": {}
+        }
       },
       "block_order": [
         "info_pEKVwb",
@@ -551,6 +592,7 @@
         "vendor_kN7AnX",
         "type_ttCzqK"
       ],
+      "disabled": true,
       "settings": {
         "container": "fixed",
         "color_scheme": "",
@@ -576,7 +618,9 @@
       "blocks": {
         "subheading_taVjEY": {
           "type": "subheading",
-          "settings": { "subheading": "All eco-certified" }
+          "settings": {
+            "subheading": "All eco-certified"
+          }
         },
         "heading_ngPQi3": {
           "type": "heading",
@@ -592,7 +636,7 @@
         "text_nF69XB": {
           "type": "text",
           "settings": {
-            "text": "<p>Made entirely of oak, the Bow Chair is comfortable, visually pleasing and brimming with character.  The moulded plywood seat is unusually wide in proportion to its depth and a waterfall edge at the front softens contact with the hamstrings. <\/p>",
+            "text": "<p>Made entirely of oak, the Bow Chair is comfortable, visually pleasing and brimming with character.  The moulded plywood seat is unusually wide in proportion to its depth and a waterfall edge at the front softens contact with the hamstrings. </p>",
             "subtext_color": true
           }
         },
@@ -612,6 +656,7 @@
         "text_nF69XB",
         "button_fQzFTq"
       ],
+      "disabled": true,
       "custom_css": [
         "@media (min-width: 1024px) {.image-with-text__wrapper {padding-inline: 5rem; } .image-with-text__content {--text-margin-top: 2rem; }}",
         ".image-with-text__content {max-width: 52rem;}"
@@ -619,7 +664,7 @@
       "settings": {
         "container": "fixed",
         "color_scheme": "",
-        "image": "shopify:\/\/shop_images\/gs_lifestyle-01_ab_v01.webp",
+        "image": "shopify://shop_images/gs_lifestyle-01_ab_v01.webp",
         "image_position": "right",
         "image_width": 50,
         "desktop_content_position": "center",
@@ -656,8 +701,8 @@
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "show_progress_bar": true,
-        "padding_top": 60,
-        "padding_bottom": 0,
+        "padding_top": 30,
+        "padding_bottom": 30,
         "show_section_divider": false,
         "divider_width": "fixed"
       }
@@ -668,19 +713,19 @@
         "column_9Xh69D": {
           "type": "column",
           "settings": {
-            "icon": "chat",
+            "icon": "truck",
             "max_width": 60,
             "max_width_mb": 60,
-            "title": "Free Shipping",
+            "title": "",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
             "heading_size": "h4",
             "heading_font": "heading",
-            "text": "<p>All orders over $500 are delivered to your doorstep at no extra charge.<\/p>",
+            "text": "<p>Free Shipping on US Orders Above $50 USD</p>",
             "text_size": "text-base",
-            "button_label": "Shipping Details",
+            "button_label": "",
             "button_link": "",
             "button_style": "btn--plain",
             "button_icon": "caret-right"
@@ -689,56 +734,84 @@
         "column_EapCmy": {
           "type": "column",
           "settings": {
-            "icon": "chat",
+            "icon": "arrow-up-left",
             "max_width": 60,
             "max_width_mb": 60,
-            "title": "30-Days Free Returns",
+            "title": "",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
             "heading_size": "h4",
             "heading_font": "heading",
-            "text": "<p>Enjoy the freedom of stress-free shopping with our hassle-free and return policy.<\/p>",
+            "text": "<p>Easy Returns</p>",
             "text_size": "text-base",
-            "button_label": "Return Policy",
+            "button_label": "",
             "button_link": "",
             "button_style": "btn--plain",
             "button_icon": "caret-right"
           }
         },
-        "column_y3rE9Y": {
+        "column_rDRKHz": {
           "type": "column",
           "settings": {
-            "icon": "chat",
+            "icon": "map-pin",
             "max_width": 60,
             "max_width_mb": 60,
-            "title": "Secure Payment",
+            "title": "",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
             "heading_size": "h4",
             "heading_font": "heading",
-            "text": "<p>Shop with confidence knowing your payments are secure and your information<\/p>",
+            "text": "<p>Over 22 years on the market</p>",
             "text_size": "text-base",
-            "button_label": "More About Payment",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--plain",
+            "button_icon": "caret-right"
+          }
+        },
+        "column_awXCNr": {
+          "type": "column",
+          "settings": {
+            "icon": "chat",
+            "max_width": 60,
+            "max_width_mb": 60,
+            "title": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "heading_font": "heading",
+            "text": "<p>Over 61K+ positive reviews</p>",
+            "text_size": "text-base",
+            "button_label": "",
             "button_link": "",
             "button_style": "btn--plain",
             "button_icon": "caret-right"
           }
         }
       },
-      "block_order": ["column_9Xh69D", "column_EapCmy", "column_y3rE9Y"],
-      "custom_css": [".multicolumn-card__text p {max-width: 33rem;}"],
+      "block_order": [
+        "column_9Xh69D",
+        "column_EapCmy",
+        "column_rDRKHz",
+        "column_awXCNr"
+      ],
+      "custom_css": [
+        ".multicolumn-card__text p {max-width: 33rem;}"
+      ],
       "settings": {
         "container": "fixed",
-        "color_scheme": "",
+        "color_scheme": "scheme-info",
         "header_layout": "vertical",
         "section_header_alignment": "center",
         "section_header_alignment_mobile": "inherit",
         "subheading": "",
-        "heading": "Free shipping on almost everything",
+        "heading": "",
         "highlight_style": "none",
         "highlight_font_style": "italic",
         "highlight_style_color": "",
@@ -755,7 +828,7 @@
         "content_alignment": "center",
         "image_position": "top",
         "icon_color": "#1d349a",
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "column_gap": "large",
         "row_gap": "inherit",
         "show_divider_col": false,
@@ -774,8 +847,8 @@
           "type": "gallery",
           "settings": {
             "color_scheme": "",
-            "image": "shopify:\/\/shop_images\/gs_brand-qualities-1_ab_v01_1d77e665-e862-444e-b9bb-ab4c35aa5cbd.webp",
-            "image_avatar": "shopify:\/\/shop_images\/gs_avatar_ig_2.png",
+            "image": "shopify://shop_images/gs_brand-qualities-1_ab_v01_1d77e665-e862-444e-b9bb-ab4c35aa5cbd.webp",
+            "image_avatar": "shopify://shop_images/gs_avatar_ig_2.png",
             "image_link": "",
             "social_media": "instagram",
             "heading": "grasscityheadshop"
@@ -785,8 +858,8 @@
           "type": "gallery",
           "settings": {
             "color_scheme": "",
-            "image": "shopify:\/\/shop_images\/gs_brand-qualities-1_ab_v01.webp",
-            "image_avatar": "shopify:\/\/shop_images\/gs_avatar_ig_2.png",
+            "image": "shopify://shop_images/gs_brand-qualities-1_ab_v01.webp",
+            "image_avatar": "shopify://shop_images/gs_avatar_ig_2.png",
             "image_link": "",
             "social_media": "instagram",
             "heading": "grasscityheadshop"
@@ -796,8 +869,8 @@
           "type": "gallery",
           "settings": {
             "color_scheme": "",
-            "image": "shopify:\/\/shop_images\/hot-deals-banner-background-4.png",
-            "image_avatar": "shopify:\/\/shop_images\/gs_avatar_ig_2.png",
+            "image": "shopify://shop_images/hot-deals-banner-background-4.png",
+            "image_avatar": "shopify://shop_images/gs_avatar_ig_2.png",
             "image_link": "",
             "social_media": "instagram",
             "heading": "grasscityheadshop"
@@ -807,8 +880,8 @@
           "type": "gallery",
           "settings": {
             "color_scheme": "",
-            "image": "shopify:\/\/shop_images\/hot-deals-banner-background-2.png",
-            "image_avatar": "shopify:\/\/shop_images\/gs_avatar_ig_2.png",
+            "image": "shopify://shop_images/hot-deals-banner-background-2.png",
+            "image_avatar": "shopify://shop_images/gs_avatar_ig_2.png",
             "image_link": "",
             "social_media": "instagram",
             "heading": "grasscityheadshop"
