@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "collection_list_slider_6qbNfj": {
       "type": "collection-list-slider",
@@ -710,7 +710,7 @@
           "type": "image_card",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_membership-cc_mobile_ab_v01.webp",
+            "image": "shopify://shop_images/gs_membership-cc_desktop_ab_v01.png",
             "image_ratio": "adapt",
             "image_overlay_opacity": 0,
             "content_position": "split-bottom-button",
@@ -728,7 +728,7 @@
             "heading_size": "h2",
             "heading_size_mobile": "inherit",
             "heading_size_custom": 18,
-            "description": "<p>Get instant access to our UNBEATABLE membership prices.</p>",
+            "description": "<p>Get instant access to our UNBEATABLE membership prices.<br/><br/><br/></p>",
             "button_label": "Learn more",
             "button_style": "btn--primary",
             "button_icon": "none",
@@ -751,7 +751,7 @@
           "type": "image_card",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_membership-elite_mobile_ab_v01.webp",
+            "image": "shopify://shop_images/gs_membership-elite_desktop_ab_v01.png",
             "image_ratio": "adapt",
             "image_overlay_opacity": 0,
             "content_position": "split-bottom-button",
