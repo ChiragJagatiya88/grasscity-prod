@@ -255,6 +255,9 @@
         <div class="footer__bottom-row flex justify-between items-end{% if section.settings.footer_layout == "reverse" %} flex-row-reverse{% endif %}{% if section.settings.show_sperator_line %} show-separator-line{% endif %}">
           <div class="{% if section.settings.footer_layout == "reverse" %}flex flex-wrap gap-6{% else %}grid gap-5{% endif %}">
             <div class="footer__localization relative z-2 flex items-center">
+              {%- if section.settings.enable_market_links -%}
+                {% render 'market-selector', position: 'up', wrapper_class: 'flex', form_id: section.id %}
+              {%- endif -%}
               {%- if enable_country_selector -%}
                 {% render 'country-selector', position: 'up', plain: true, form_id: section.id %}
               {%- endif -%}
@@ -1046,6 +1049,13 @@
       "label": "t:general.show_language_selector.label",
       "info": "t:general.show_language_selector.info",
       "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_market_links",
+      "label": "t:general.show_market_links.label",
+      "info": "t:general.show_market_links.info",
+      "default": false
     },
     {
       "type": "header",

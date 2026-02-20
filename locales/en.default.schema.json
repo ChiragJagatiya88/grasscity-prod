@@ -1507,6 +1507,10 @@
       "label": "Enable country/region selector",
       "info": "To add a country/region, go to your [market settings.](/admin/settings/markets)"
     },
+    "show_market_links": {
+      "label": "Show market links",
+      "info": "Display direct links (US, UK, DE, FR, NL, EU) to switch market."
+    },
     "custom_color": {
       "use_custom_color": {
         "label": "Use custom color"

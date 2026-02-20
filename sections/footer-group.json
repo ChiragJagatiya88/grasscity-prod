@@ -1,1 +1,254 @@
-{"name":"t:sections.footer.name","type":"footer","sections":{"multicolumn_icon_rTKNUF":{"type":"multicolumn-icon","blocks":{"column_PnJ3NJ":{"type":"column","settings":{"icon":"chat","max_width":28,"max_width_mb":28,"title":"Customer Service","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"text-base","heading_font":"heading","text":"<p>Mon-Sat, 9am-6pm EST.<\/p>","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--underline","button_icon":"none"}},"column_xNjRtG":{"type":"column","settings":{"icon":"phone","max_width":28,"max_width_mb":28,"title":"Call Us","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"text-base","heading_font":"heading","text":"<p><a href=\"tel:+1 (888) 334-6363\">+1 (888) 334-6363<\/a> (tool-free)<\/p>","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--underline","button_icon":"none"}},"column_69fN8n":{"type":"column","settings":{"icon":"paperplane","max_width":28,"max_width_mb":28,"title":"Get in Touch","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"text-base","heading_font":"heading","text":"<p><a href=\"mailto:touch@garacestore.com\" title=\"mailto:touch@garacestore.com\">touch@garacestore.com<\/a><\/p>","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--underline","button_icon":"none"}},"column_ngN6XL":{"type":"column","settings":{"icon":"map-pin","max_width":32,"max_width_mb":32,"title":"Address","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"text-base","heading_font":"heading","text":"<p>SJV B.V.6255 North Hollywood Boulevard Suite 145 North Las vegas United States<\/p>","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--underline","button_icon":"none"}}},"block_order":["column_PnJ3NJ","column_xNjRtG","column_69fN8n","column_ngN6XL"],"custom_css":[".rich-text__text {--text-margin-top: 0.4rem;}"],"settings":{"container":"fixed","color_scheme":"","header_layout":"vertical","section_header_alignment":"left","section_header_alignment_mobile":"inherit","subheading":"","heading":"","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h1","description":"","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--underline","button_icon":"none","enable_sticky":false,"card_color_scheme":"","content_alignment":"left","image_position":"left","icon_color":"#1d349a","columns_desktop":4,"column_gap":"large","row_gap":"inherit","show_divider_col":true,"columns_mobile":"1","swipe_on_mobile":false,"show_section_divider":false,"divider_width":"fixed","padding_top":32,"padding_bottom":32}},"footer":{"type":"footer","blocks":{"newsletter_3qCrWc":{"type":"newsletter","settings":{"block_width":50,"heading":"Join Our Newsletter","heading_size":"h3","newsletter_description":"<p>Sign up to our newsletter & receive 10% off your first order.<\/p>","newsletter_term":"<p>By subscribing you agree to the <a href=\"\/policies\/terms-of-service\" title=\"Terms of Service\">Terms of Services<\/a>  and  <a href=\"\/policies\/privacy-policy\" title=\"Privacy Policy\">Privacy Policy.<\/a><\/p>","newsletter_text_alignment":"left","form_width":465,"button_style":"btn--primary","button_icon":"none","order_first":true}},"menu_DEKGYP":{"type":"menu","settings":{"block_width":15,"heading":"Categories","heading_size":"h6","menu":"footer-menu-1","open_default":false,"show_divider":false}},"menu_4eCrBB":{"type":"menu","settings":{"block_width":15,"heading":"Support","heading_size":"h6","menu":"footer-menu-2","open_default":false,"show_divider":false}},"menu_6cjHfA":{"type":"menu","settings":{"block_width":15,"heading":"Get to Know Us","heading_size":"h6","menu":"footer-3","open_default":false,"show_divider":false}}},"block_order":["newsletter_3qCrWc","menu_DEKGYP","menu_4eCrBB","menu_6cjHfA"],"custom_css":[],"settings":{"container":"fixed","color_scheme":"scheme-1","enable_follow_on_shop":true,"show_social":true,"social_button_style":"btn--icon","enable_country_selector":true,"enable_language_selector":false,"payment_enable":true,"footer_layout":"standard","footer_bottom_menu":"footer","show_sperator_line":false,"show_section_divider":true,"divider_width":"fixed","padding_top":40,"padding_bottom":20}},"custom_liquid_fgVUKt":{"type":"custom-liquid","name":"t:sections.custom-liquid.name","settings":{"custom_liquid":"<div class=\"page-width page-width--fixed\">\n<p style=\"margin-bottom: 16px;font-size: 10px;line-height: 1.8;color: rgba(83, 83, 83, 1);\">All products are intended for legal dry herb or tobacco usage.&nbsp; The statements and vaporizers &amp; products shown on this website have not been evaluated by the US Food and Drug Administration (FDA). These devices are not designed to diagnose, cure, prevent, or treat any disease. Before using a vaporizer, please consult with a licensed health care provider. If you use a vaporizer, you do so at your own risk. Inhalation is inadvisable and may potentially be harmful. Any comments from user-submitted reviews found on this website are related to the users own personal experiences, and are not endorsed, reviewed, or necessarily shared by&nbsp;grasscity.com&nbsp;or its affiliates. Vaporizing does not necessarily eliminate any and all toxins found in vaporized substances, so much care should be taken prior to use. By using&nbsp;grasscity.com, you acknowledge and agree to abide by our Terms of Use page before making any purchase on this website<\/p>\n<\/div>","color_scheme":"","padding_top":0,"padding_bottom":0}},"mobile_sticky_bar_aYhgJK":{"type":"mobile-sticky-bar","blocks":{"home_AP8mmy":{"type":"home","settings":{"text":"Home"}},"cart_gnnwxQ":{"type":"cart","settings":{"text":"Cart"}},"products_eYYkE8":{"type":"products","settings":{"text":"Products","collection":""}},"link_mJ6QMc":{"type":"link","settings":{"text":"About","url":"","icon":"map-pin"}}},"block_order":["home_AP8mmy","cart_gnnwxQ","products_eYYkE8","link_mJ6QMc"],"disabled":true,"settings":{"enable_sticky_bar":true,"show_text":true}}},"order":["multicolumn_icon_rTKNUF","footer","custom_liquid_fgVUKt","mobile_sticky_bar_aYhgJK"]}
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "multicolumn_icon_rTKNUF": {
+      "type": "multicolumn-icon",
+      "blocks": {
+        "column_PnJ3NJ": {
+          "type": "column",
+          "settings": {
+            "icon": "chat",
+            "max_width": 28,
+            "max_width_mb": 28,
+            "title": "Customer Service",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "text-base",
+            "heading_font": "heading",
+            "text": "<p>Mon-Sat, 9am-6pm EST.<\/p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_xNjRtG": {
+          "type": "column",
+          "settings": {
+            "icon": "phone",
+            "max_width": 28,
+            "max_width_mb": 28,
+            "title": "Call Us",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "text-base",
+            "heading_font": "heading",
+            "text": "<p><a href=\"tel:+1 (888) 334-6363\">+1 (888) 334-6363<\/a> (tool-free)<\/p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_69fN8n": {
+          "type": "column",
+          "settings": {
+            "icon": "paperplane",
+            "max_width": 28,
+            "max_width_mb": 28,
+            "title": "Get in Touch",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "text-base",
+            "heading_font": "heading",
+            "text": "<p><a href=\"mailto:touch@garacestore.com\" title=\"mailto:touch@garacestore.com\">touch@garacestore.com<\/a><\/p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_ngN6XL": {
+          "type": "column",
+          "settings": {
+            "icon": "map-pin",
+            "max_width": 32,
+            "max_width_mb": 32,
+            "title": "Address",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "text-base",
+            "heading_font": "heading",
+            "text": "<p>SJV B.V.6255 North Hollywood Boulevard Suite 145 North Las vegas United States<\/p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "column_PnJ3NJ",
+        "column_xNjRtG",
+        "column_69fN8n",
+        "column_ngN6XL"
+      ],
+      "custom_css": [".rich-text__text {--text-margin-top: 0.4rem;}"],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "header_layout": "vertical",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "enable_sticky": false,
+        "card_color_scheme": "",
+        "content_alignment": "left",
+        "image_position": "left",
+        "icon_color": "#1d349a",
+        "columns_desktop": 4,
+        "column_gap": "large",
+        "row_gap": "inherit",
+        "show_divider_col": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "newsletter_3qCrWc": {
+          "type": "newsletter",
+          "settings": {
+            "block_width": 50,
+            "heading": "Join Our Newsletter",
+            "heading_size": "h3",
+            "newsletter_description": "<p>Sign up to our newsletter & receive 10% off your first order.<\/p>",
+            "newsletter_term": "<p>By subscribing you agree to the <a href=\"\/policies\/terms-of-service\" title=\"Terms of Service\">Terms of Services<\/a>  and  <a href=\"\/policies\/privacy-policy\" title=\"Privacy Policy\">Privacy Policy.<\/a><\/p>",
+            "newsletter_text_alignment": "left",
+            "form_width": 465,
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "order_first": true
+          }
+        },
+        "menu_DEKGYP": {
+          "type": "menu",
+          "settings": {
+            "block_width": 15,
+            "heading": "Categories",
+            "heading_size": "h6",
+            "menu": "footer-menu-1",
+            "open_default": false,
+            "show_divider": false
+          }
+        },
+        "menu_4eCrBB": {
+          "type": "menu",
+          "settings": {
+            "block_width": 15,
+            "heading": "Support",
+            "heading_size": "h6",
+            "menu": "footer-menu-2",
+            "open_default": false,
+            "show_divider": false
+          }
+        },
+        "menu_6cjHfA": {
+          "type": "menu",
+          "settings": {
+            "block_width": 15,
+            "heading": "Get to Know Us",
+            "heading_size": "h6",
+            "menu": "footer-3",
+            "open_default": false,
+            "show_divider": false
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_3qCrWc",
+        "menu_DEKGYP",
+        "menu_4eCrBB",
+        "menu_6cjHfA"
+      ],
+      "custom_css": [],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "social_button_style": "btn--icon",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "enable_market_links": true,
+        "payment_enable": true,
+        "footer_layout": "standard",
+        "footer_bottom_menu": "footer",
+        "show_sperator_line": false,
+        "show_section_divider": true,
+        "divider_width": "fixed",
+        "padding_top": 40,
+        "padding_bottom": 20
+      }
+    },
+    "custom_liquid_fgVUKt": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": {
+        "custom_liquid": "<div class=\"page-width page-width--fixed\">\n<p style=\"margin-bottom: 16px;font-size: 10px;line-height: 1.8;color: rgba(83, 83, 83, 1);\">All products are intended for legal dry herb or tobacco usage.&nbsp; The statements and vaporizers &amp; products shown on this website have not been evaluated by the US Food and Drug Administration (FDA). These devices are not designed to diagnose, cure, prevent, or treat any disease. Before using a vaporizer, please consult with a licensed health care provider. If you use a vaporizer, you do so at your own risk. Inhalation is inadvisable and may potentially be harmful. Any comments from user-submitted reviews found on this website are related to the users own personal experiences, and are not endorsed, reviewed, or necessarily shared by&nbsp;grasscity.com&nbsp;or its affiliates. Vaporizing does not necessarily eliminate any and all toxins found in vaporized substances, so much care should be taken prior to use. By using&nbsp;grasscity.com, you acknowledge and agree to abide by our Terms of Use page before making any purchase on this website<\/p>\n<\/div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mobile_sticky_bar_aYhgJK": {
+      "type": "mobile-sticky-bar",
+      "blocks": {
+        "home_AP8mmy": { "type": "home", "settings": { "text": "Home" } },
+        "cart_gnnwxQ": { "type": "cart", "settings": { "text": "Cart" } },
+        "products_eYYkE8": {
+          "type": "products",
+          "settings": { "text": "Products", "collection": "" }
+        },
+        "link_mJ6QMc": {
+          "type": "link",
+          "settings": { "text": "About", "url": "", "icon": "map-pin" }
+        }
+      },
+      "block_order": [
+        "home_AP8mmy",
+        "cart_gnnwxQ",
+        "products_eYYkE8",
+        "link_mJ6QMc"
+      ],
+      "disabled": true,
+      "settings": { "enable_sticky_bar": true, "show_text": true }
+    }
+  },
+  "order": [
+    "multicolumn_icon_rTKNUF",
+    "footer",
+    "custom_liquid_fgVUKt",
+    "mobile_sticky_bar_aYhgJK"
+  ]
+}
