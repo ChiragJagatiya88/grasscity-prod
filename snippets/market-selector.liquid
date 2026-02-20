@@ -1,0 +1,136 @@
+{%- liquid
+  assign selector_id = id | default: 'market-selector'
+  assign position = position | default: 'down'
+  assign wrapper_class = wrapper_class | default: ''
+-%}
+{% comment %} Current market from URL path + country code for flag (EU uses AT) {% endcomment %}
+{% assign path_lower = request.path | downcase %}
+{% assign current_market_path = '/en-us' %}
+{% assign current_market_label = 'United States' %}
+{% assign current_market_iso = 'US' %}
+{% if path_lower contains '/en-eu' %}
+  {% assign current_market_path = '/en-eu' %}
+  {% assign current_market_label = 'Europe' %}
+  {% assign current_market_iso = 'AT' %}
+{% elsif path_lower contains '/en-fr' %}
+  {% assign current_market_path = '/en-fr' %}
+  {% assign current_market_label = 'France' %}
+  {% assign current_market_iso = 'FR' %}
+{% elsif path_lower contains '/en-de' %}
+  {% assign current_market_path = '/en-de' %}
+  {% assign current_market_label = 'Germany' %}
+  {% assign current_market_iso = 'DE' %}
+{% elsif path_lower contains '/en-nl' %}
+  {% assign current_market_path = '/en-nl' %}
+  {% assign current_market_label = 'Netherlands' %}
+  {% assign current_market_iso = 'NL' %}
+{% elsif path_lower contains '/en-gb' %}
+  {% assign current_market_path = '/en-gb' %}
+  {% assign current_market_label = 'United Kingdom' %}
+  {% assign current_market_iso = 'GB' %}
+{% elsif path_lower contains '/en-us' %}
+  {% assign current_market_path = '/en-us' %}
+  {% assign current_market_label = 'United States' %}
+  {% assign current_market_iso = 'US' %}
+{% endif %}
+{% comment %} Resolve country object for current market flag {% endcomment %}
+{% assign current_market_country = false %}
+{% for c in localization.available_countries %}
+  {% if c.iso_code == current_market_iso %}
+    {% assign current_market_country = c %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+{% if current_market_country == false and current_market_iso == 'AT' %}
+  {% for c in localization.available_countries %}
+    {% assign eu_codes = 'AT,BE,BG,HR,CY,CZ,DK,EE,FI,GR,HU,IE,IT,LV,LT,LU,MT,PL,PT,RO,SK,SI,ES,SE' | split: ',' %}
+    {% if eu_codes contains c.iso_code %}{% assign current_market_country = c %}{% break %}{% endif %}
+  {% endfor %}
+{% endif %}
+<style>
+  .market-disclosure .f-country-flags {
+    --flag-size: 2rem;
+    background-image: var(--background-image);
+    width: var(--flag-size);
+    height: var(--flag-size);
+    flex-shrink: 0;
+    display: inline-block;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .market-disclosure .f-country-flags::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 0 0.2rem rgba(var(--color-foreground), 0.3);
+    border-radius: 50%;
+  }
+</style>
+<div id="market-disclosure-{{ selector_id }}" class="market-disclosure disclosure no-js-hidden disclosure--{{ position }} disclosure--plain country-switcher {{ wrapper_class }}" style="--f-max-width: 220px" data-market-disclosure-id="{{ selector_id }}">
+  <h2 class="visually-hidden" id="MarketLabel-{{ selector_id }}">{{ 'localization.country_label' | t }}</h2>
+  <button
+    type="button"
+    class="disclosure__toggle btn--plain text-normal font-body"
+    aria-expanded="false"
+    aria-controls="market-list-{{ selector_id }}"
+    aria-describedby="MarketLabel-{{ selector_id }}"
+    data-market-toggle
+  >
+    {% if current_market_country %}
+      <span class="f-country-flags f-country-flags--{{ current_market_country.iso_code }}" style="--background-image: url({{ current_market_country | image_url: width: 20 }})"></span>
+    {% endif %}
+    {{ current_market_label }}
+    {% render 'icon-caret-up' %}
+  </button>
+  <ul class="disclosure-list v-scrollable text-left" id="market-list-{{ selector_id }}" role="list">
+    {% assign market_items = 'Europe,/en-eu,AT|France,/en-fr,FR|Germany,/en-de,DE|Netherlands,/en-nl,NL|United Kingdom,/en-gb,GB|United States,/en-us,US' | split: '|' %}
+    {% for item in market_items %}
+      {% assign parts = item | split: ',' %}
+      {% assign label = parts[0] %}
+      {% assign path = parts[1] %}
+      {% assign iso = parts[2] %}
+      {% assign item_country = false %}
+      {% for c in localization.available_countries %}
+        {% if c.iso_code == iso %}{% assign item_country = c %}{% break %}{% endif %}
+      {% endfor %}
+      {% if item_country == false and iso == 'AT' %}
+        {% for c in localization.available_countries %}
+          {% assign eu_codes = 'AT,BE,BG,HR,CY,CZ,DK,EE,FI,GR,HU,IE,IT,LV,LT,LU,MT,PL,PT,RO,SK,SI,ES,SE' | split: ',' %}
+          {% if eu_codes contains c.iso_code %}{% assign item_country = c %}{% break %}{% endif %}
+        {% endfor %}
+      {% endif %}
+      <li class="disclosure-list__item{% if current_market_path == path %} disclosure-list__item--current{% endif %}">
+        <a href="{{ path }}" class="disclosure-list__option"{% if current_market_path == path %} aria-current="true"{% endif %}>
+          {% if item_country %}
+            <span class="f-country-flags f-country-flags--{{ item_country.iso_code }}" style="--background-image: url({{ item_country | image_url: width: 20 }})"></span>
+          {% endif %}
+          {{ label }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+<script>
+  (function() {
+    var disclosure = document.getElementById('market-disclosure-{{ selector_id | escape }}');
+    if (!disclosure) return;
+    var btn = disclosure.querySelector('[data-market-toggle]');
+    var list = disclosure.querySelector('.disclosure-list');
+    if (!btn || !list) return;
+    list.removeAttribute('hidden');
+    btn.addEventListener('click', function() {
+      var isOpen = disclosure.hasAttribute('open');
+      disclosure.toggleAttribute('open');
+      btn.setAttribute('aria-expanded', (!isOpen).toString());
+    });
+    btn.addEventListener('focusout', function(e) {
+      var next = e.relatedTarget;
+      if (!next || !disclosure.contains(next)) {
+        disclosure.removeAttribute('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>

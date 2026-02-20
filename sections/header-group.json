@@ -1,1 +1,214 @@
-{"name":"t:sections.header.name","type":"header","sections":{"topbar_3YD96h":{"type":"topbar","blocks":{"link_list_En8dpz":{"type":"link_list","settings":{"menu":"main-menu","position":"left"}},"text_Ahn3nP":{"type":"text","settings":{"text":"✌🏼 Free Express Shipping on orders $500!","position":"center","highlight_text":"","highlight_text_style":"button","highlight_text_color":"","highlight_text_background_color":""}},"language_country_MyFf6D":{"type":"language_country","settings":{"show_language_selector":true,"show_country_selector":true,"position":"right"}},"social_links_BcFqP9":{"type":"social_links","settings":{"show_facebook":true,"show_instagram":true,"show_twitter":true,"show_tiktok":true,"show_pinterest":false,"show_snapchat":false,"show_tumblr":false,"show_youtube":false,"show_vimeo":false,"position":"right"}}},"block_order":["link_list_En8dpz","text_Ahn3nP","language_country_MyFf6D","social_links_BcFqP9"],"custom_css":[],"settings":{"container":"fixed","color_scheme":"scheme-2","show_separator_line":false,"padding_top":12,"padding_bottom":12}},"header":{"type":"header","blocks":{"sidebar_aNyMLV":{"type":"sidebar","name":"Bongs","settings":{"menu_title":"Bongs","enable_hl_link":false,"hl_link_style":"text_color","hl_link_color":"","menu_columns":3,"show_collection_image":false,"show_image_of_first_product":false,"image_ratio":"adapt"}},"sidebar_tjfBAn":{"type":"sidebar","name":"Dab Rigs","settings":{"menu_title":"Dab Rigs","enable_hl_link":false,"hl_link_style":"text_color","hl_link_color":"","menu_columns":3,"show_collection_image":false,"show_image_of_first_product":false,"image_ratio":"adapt"}},"sidebar_U3yyww":{"type":"sidebar","name":"Vaporizers","settings":{"menu_title":"Vaporizers","enable_hl_link":false,"hl_link_style":"text_color","hl_link_color":"","menu_columns":3,"show_collection_image":false,"show_image_of_first_product":false,"image_ratio":"adapt"}},"sidebar_BKE9HW":{"type":"sidebar","name":"Herb Grinders","settings":{"menu_title":"Herb Grinders","enable_hl_link":false,"hl_link_style":"text_color","hl_link_color":"","menu_columns":2,"show_collection_image":false,"show_image_of_first_product":false,"image_ratio":"adapt"}},"sidebar_6miiGN":{"type":"sidebar","name":"Glass Bubblers","settings":{"menu_title":"Glass Bubblers","enable_hl_link":false,"hl_link_style":"text_color","hl_link_color":"","menu_columns":3,"show_collection_image":false,"show_image_of_first_product":false,"image_ratio":"adapt"}},"sidebar_zBNGHX":{"type":"sidebar","name":"Smoking Pipes","settings":{"menu_title":"Smoking Pipes","enable_hl_link":false,"hl_link_style":"text_color","hl_link_color":"","menu_columns":3,"show_collection_image":false,"show_image_of_first_product":false,"image_ratio":"adapt"}},"sidebar_7wn3PU":{"type":"sidebar","name":"Rolling Papers","settings":{"menu_title":"Rolling Papers","enable_hl_link":false,"hl_link_style":"text_color","hl_link_color":"","menu_columns":3,"show_collection_image":false,"show_image_of_first_product":false,"image_ratio":"adapt"}},"sidebar_3xAEYB":{"type":"sidebar","name":"420 Accessories","settings":{"menu_title":"420 Accessories","enable_hl_link":false,"hl_link_style":"text_color","hl_link_color":"","menu_columns":3,"show_collection_image":false,"show_image_of_first_product":false,"image_ratio":"adapt"}}},"block_order":["sidebar_aNyMLV","sidebar_tjfBAn","sidebar_U3yyww","sidebar_BKE9HW","sidebar_6miiGN","sidebar_zBNGHX","sidebar_7wn3PU","sidebar_3xAEYB"],"settings":{"container":"fixed","color_scheme":"scheme-1","menu":"main-menu-1","menu_mobile":"main-menu-1","header_layout":"logo-left","menu_trigger":"hover","sticky_header":"always","enable_collapse_on_scroll":true,"show_sperator_line":true,"customer_account_style":"icon-with-text","show_social_media_icons":true,"enable_language_selector":false,"enable_country_selector":true,"header_top_padding_top":20,"header_top_padding_bottom":20,"navigation_color_scheme":"","navigation_content_alignment":"start","navigation_padding_top":0,"navigation_padding_bottom":12}}},"order":["topbar_3YD96h","header"]}
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "topbar_3YD96h": {
+      "type": "topbar",
+      "blocks": {
+        "link_list_En8dpz": {
+          "type": "link_list",
+          "settings": { "menu": "main-menu", "position": "left" }
+        },
+        "text_Ahn3nP": {
+          "type": "text",
+          "settings": {
+            "text": "✌🏼 Free Express Shipping on orders $500!",
+            "position": "center",
+            "highlight_text": "",
+            "highlight_text_style": "button",
+            "highlight_text_color": "",
+            "highlight_text_background_color": ""
+          }
+        },
+        "language_country_MyFf6D": {
+          "type": "language_country",
+          "settings": {
+            "show_language_selector": false,
+            "show_country_selector": false,
+            "show_market_links": true,
+            "position": "right"
+          }
+        },
+        "social_links_BcFqP9": {
+          "type": "social_links",
+          "settings": {
+            "show_facebook": true,
+            "show_instagram": true,
+            "show_twitter": true,
+            "show_tiktok": true,
+            "show_pinterest": false,
+            "show_snapchat": false,
+            "show_tumblr": false,
+            "show_youtube": false,
+            "show_vimeo": false,
+            "position": "right"
+          }
+        }
+      },
+      "block_order": [
+        "link_list_En8dpz",
+        "text_Ahn3nP",
+        "language_country_MyFf6D",
+        "social_links_BcFqP9"
+      ],
+      "custom_css": [],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-2",
+        "show_separator_line": false,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "sidebar_aNyMLV": {
+          "type": "sidebar",
+          "name": "Bongs",
+          "settings": {
+            "menu_title": "Bongs",
+            "enable_hl_link": false,
+            "hl_link_style": "text_color",
+            "hl_link_color": "",
+            "menu_columns": 3,
+            "show_collection_image": false,
+            "show_image_of_first_product": false,
+            "image_ratio": "adapt"
+          }
+        },
+        "sidebar_tjfBAn": {
+          "type": "sidebar",
+          "name": "Dab Rigs",
+          "settings": {
+            "menu_title": "Dab Rigs",
+            "enable_hl_link": false,
+            "hl_link_style": "text_color",
+            "hl_link_color": "",
+            "menu_columns": 3,
+            "show_collection_image": false,
+            "show_image_of_first_product": false,
+            "image_ratio": "adapt"
+          }
+        },
+        "sidebar_U3yyww": {
+          "type": "sidebar",
+          "name": "Vaporizers",
+          "settings": {
+            "menu_title": "Vaporizers",
+            "enable_hl_link": false,
+            "hl_link_style": "text_color",
+            "hl_link_color": "",
+            "menu_columns": 3,
+            "show_collection_image": false,
+            "show_image_of_first_product": false,
+            "image_ratio": "adapt"
+          }
+        },
+        "sidebar_BKE9HW": {
+          "type": "sidebar",
+          "name": "Herb Grinders",
+          "settings": {
+            "menu_title": "Herb Grinders",
+            "enable_hl_link": false,
+            "hl_link_style": "text_color",
+            "hl_link_color": "",
+            "menu_columns": 2,
+            "show_collection_image": false,
+            "show_image_of_first_product": false,
+            "image_ratio": "adapt"
+          }
+        },
+        "sidebar_6miiGN": {
+          "type": "sidebar",
+          "name": "Glass Bubblers",
+          "settings": {
+            "menu_title": "Glass Bubblers",
+            "enable_hl_link": false,
+            "hl_link_style": "text_color",
+            "hl_link_color": "",
+            "menu_columns": 3,
+            "show_collection_image": false,
+            "show_image_of_first_product": false,
+            "image_ratio": "adapt"
+          }
+        },
+        "sidebar_zBNGHX": {
+          "type": "sidebar",
+          "name": "Smoking Pipes",
+          "settings": {
+            "menu_title": "Smoking Pipes",
+            "enable_hl_link": false,
+            "hl_link_style": "text_color",
+            "hl_link_color": "",
+            "menu_columns": 3,
+            "show_collection_image": false,
+            "show_image_of_first_product": false,
+            "image_ratio": "adapt"
+          }
+        },
+        "sidebar_7wn3PU": {
+          "type": "sidebar",
+          "name": "Rolling Papers",
+          "settings": {
+            "menu_title": "Rolling Papers",
+            "enable_hl_link": false,
+            "hl_link_style": "text_color",
+            "hl_link_color": "",
+            "menu_columns": 3,
+            "show_collection_image": false,
+            "show_image_of_first_product": false,
+            "image_ratio": "adapt"
+          }
+        },
+        "sidebar_3xAEYB": {
+          "type": "sidebar",
+          "name": "420 Accessories",
+          "settings": {
+            "menu_title": "420 Accessories",
+            "enable_hl_link": false,
+            "hl_link_style": "text_color",
+            "hl_link_color": "",
+            "menu_columns": 3,
+            "show_collection_image": false,
+            "show_image_of_first_product": false,
+            "image_ratio": "adapt"
+          }
+        }
+      },
+      "block_order": [
+        "sidebar_aNyMLV",
+        "sidebar_tjfBAn",
+        "sidebar_U3yyww",
+        "sidebar_BKE9HW",
+        "sidebar_6miiGN",
+        "sidebar_zBNGHX",
+        "sidebar_7wn3PU",
+        "sidebar_3xAEYB"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "menu": "main-menu-1",
+        "menu_mobile": "main-menu-1",
+        "header_layout": "logo-left",
+        "menu_trigger": "hover",
+        "sticky_header": "always",
+        "enable_collapse_on_scroll": true,
+        "show_sperator_line": true,
+        "customer_account_style": "icon-with-text",
+        "show_social_media_icons": true,
+        "enable_language_selector": false,
+        "enable_country_selector": false,
+        "enable_market_links": true,
+        "header_top_padding_top": 20,
+        "header_top_padding_bottom": 20,
+        "navigation_color_scheme": "",
+        "navigation_content_alignment": "start",
+        "navigation_padding_top": 0,
+        "navigation_padding_bottom": 12
+      }
+    }
+  },
+  "order": ["topbar_3YD96h", "header"]
+}

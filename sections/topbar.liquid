@@ -31,7 +31,7 @@
                 <p>{{- block.settings.text -}}</p>
               </div>
             {% when 'language_country' %}
-              <div class="topbar__country flex items-center gap-4">
+              <div class="topbar__country flex items-center gap-4 flex-wrap">
                 {% liquid
                   if block.settings.show_language_selector
                     render 'language-selector', plain: true, class: 'flex', form_id: block.id
@@ -40,6 +40,9 @@
                     render 'country-selector', plain: true, class: 'flex', form_id: block.id
                   endif
                 %}
+                {% if block.settings.show_market_links %}
+                  {% render 'market-selector', id: block.id, position: 'down', wrapper_class: 'flex' %}
+                {% endif %}
               </div>
             {% when 'social_links' %}
               {% liquid
@@ -339,6 +342,13 @@
           "label": "t:general.show_country_selector.label",
           "info": "t:general.show_country_selector.info",
           "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_market_links",
+          "label": "t:general.show_market_links.label",
+          "info": "t:general.show_market_links.info",
+          "default": false
         },
         {
           "type": "select",

@@ -5672,6 +5672,13 @@ show-more .read-more__content {
   transform: scale(-1);
 }
 
+.grow {
+  flex-grow: 1
+}
+.grow-0 {
+  flex-grow: 0
+}
+
 .text-base {
   font-size: var(--font-body-size);
   line-height: var(--font-body-line-height);
@@ -6830,19 +6837,23 @@ show-more .read-more__content {
   box-shadow: inset 0 -1px rgba(var(--color-border), var(--color-border-alpha, 1));
 }
 .topbar .country-switcher,
-.topbar .language-switcher {
+.topbar .language-switcher,
+.topbar .market-disclosure {
   line-height: 1;
 }
 .topbar .country-switcher .disclosure__toggle[aria-expanded=true] svg,
-.topbar .language-switcher .disclosure__toggle[aria-expanded=true] svg {
+.topbar .language-switcher .disclosure__toggle[aria-expanded=true] svg,
+.topbar .market-disclosure .disclosure__toggle[aria-expanded=true] svg {
   transform: rotate(0deg);
 }
 .topbar .country-switcher button,
-.topbar .language-switcher button {
+.topbar .language-switcher button,
+.topbar .market-disclosure button {
   line-height: 1;
 }
 .topbar .country-switcher button svg,
-.topbar .language-switcher button svg {
+.topbar .language-switcher button svg,
+.topbar .market-disclosure button svg {
   transform: rotate(180deg);
   transition: transform 0.2s;
 }

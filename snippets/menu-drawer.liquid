@@ -143,7 +143,7 @@
                   </span>
                 </a>
               {%- endif -%}
-              {%- if section.settings.enable_language_selector or section.settings.enable_country_selector -%}
+              {%- if section.settings.enable_language_selector or section.settings.enable_country_selector or section.settings.enable_market_links -%}
                 <div class="menu-drawer__localization-form flex flex-wrap gap-x-6 gap-y-4">
                   {%- liquid
                     if section.settings.enable_country_selector
@@ -151,6 +151,9 @@
                     endif
                     if section.settings.enable_language_selector
                       render 'language-selector', position: 'up', form_id: section.id, plain: true
+                    endif
+                    if section.settings.enable_market_links
+                      render 'market-selector', id: 'drawer-' | append: section.id, position: 'up', wrapper_class: 'flex'
                     endif
                   -%}
                 </div>
