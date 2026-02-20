@@ -1,0 +1,72 @@
+<style>
+  .elite-container-membership-level {
+    .elite-container {
+      background-color: #0e1d48;
+      color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      max-width: 400px;
+      box-shadow: 0 4px 10px #0000001a;
+    }
+    .elite-container > img {
+      margin: auto;
+      max-width: 180px;
+    }
+    .elite-upgrade {
+      margin: 15px 0;
+      font-size: 16px;
+    }
+    .elite-buttons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .elite-buttons .cc-primary-button {
+      border: 2px solid var(--Color-Neutral-Neutral-0, #d5a03a);
+      color: var(--Color-Neutral-Neutral-0, #d5a03a);
+      background-color: transparent;
+      border-radius: 30px;
+      box-shadow: 0 1px 2px #0d0d120f;
+      padding: 12px 16px;
+    }
+  }
+</style>
+
+{% assign elite_product = settings.elite_product.id | times: 1 %}
+{% assign cart_has_no_elite_item = true %}
+{% for item in cart.items %}
+  {% if item.product_id == elite_product %}
+    {% assign cart_has_no_elite_item = false %}
+  {% endif %}
+{% endfor %}
+
+<div class="elite-container-membership-level">
+  <div class="elite-container">
+    <img src="https://cdn.shopify.com/s/files/1/0350/8253/files/elite-logo.png" class="img-responsive" alt="Elite Membership Logo">
+    <p class="elite-upgrade" data-uw-rm-sr="">
+      Upgrade to an <span class="highlight">ELITE Membership</span> for only
+      <span style=" ">$30</span>
+      Unlock <strong>UNBELIEVABLE savings</strong> + Free shipping &amp; VIP perks on every order.
+    </p>
+    <div class="elite-buttons">
+      {% if cart_has_no_elite_item %}
+        <button
+          class="cc-elite-button SSO_popup_elite_upgrade"
+          data-id="{{ settings.elite_product.selected_or_first_available_variant.id }}"
+        >
+          Upgrade to ELITE
+        </button>
+      {% else %}
+        <a href="javascript:alreadyMember('Elite')" class="cc-elite-button">Upgrade to ELITEE</a>
+      {% endif %}
+      <a href="/pages/membership" class="cc-primary-button">Learn More</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  function alreadyMember(membership) {
+    alert(`You have already joined as ${membership} Member.`);
+  }
+</script>

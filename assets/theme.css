@@ -5672,6 +5672,13 @@ show-more .read-more__content {
   transform: scale(-1);
 }
 
+.grow {
+  flex-grow: 1
+}
+.grow-0 {
+  flex-grow: 0
+}
+
 .text-base {
   font-size: var(--font-body-size);
   line-height: var(--font-body-line-height);

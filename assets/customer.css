@@ -104,6 +104,9 @@
 
 .customer__header {
   margin-bottom: 4rem;
+  .btn--outline:before {
+    z-index: -1;
+  }
 }
 @media (max-width: 767.98px) {
   .customer__header {
@@ -128,6 +131,9 @@
 }
 .customer__content {
   flex: 1;
+  .default_address p {
+    margin: 0;
+  }
 }
 .customer .rich-text {
   margin-bottom: 2.4rem;
@@ -180,7 +186,10 @@
 }
 
 .address-info__default-badge {
-  margin-bottom: 0.4rem;
+  margin-bottom: 16px;
+  font-size: 30px;
+  display: inline-block;
+  line-height: 1;
 }
 .address-info p {
   margin: 0;
@@ -189,4 +198,169 @@
   padding: 0;
   height: auto;
   line-height: normal;
+}
+
+/* ----------------------- New Customer Account CSS ----------------------- */
+
+.customer.account {
+  position: relative;
+}
+.cc-mm-account-header {
+  &#cc-mm-account-header-elite {
+    background: #031546;
+    .cc-mm-account-header-inner {
+      background: #1c355e;
+    }
+    h2 {
+      text-transform: capitalize;
+    }
+    h2,
+    h2 + p {
+      color: #d5a03a;
+    }
+  }
+  margin-bottom: 40px;
+  background: #7ec243;
+  width: 100%;
+  text-align: center;
+  padding: 50px 0 30px;
+  color: #fff;
+  p {
+    color: #fff;
+    margin: 20px 0;
+  }
+  h2 {
+    color: #fff;
+  }
+  .cc-mm-account-header-inner {
+    background-color: #b52e27;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    p {
+      margin: 0;
+    }
+  }
+}
+.cc-elite-button {
+  border-radius: var(--corner-radius-extra-large, 32px);
+  background: var(--Golden-Surface, linear-gradient(118deg, #ab7917 8.15%, #ffdf6e 50%, #ab7917 91.85%));
+  box-shadow: 0 1px 2px #0d0d120f;
+  padding: 12px 16px;
+  color: var(--Color-Elite-Blue-500, #1c355e);
+  text-align: center;
+  font-size: var(--Type-text-s, 14px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+  display: inline-block;
+}
+.account.section::before {
+  display: none;
+}
+.logout-btn {
+  position: absolute;
+  top: 0px;
+  right: -10px;
+  transform: scale(0.7);
+  &:before {
+    z-index: -1;
+  }
+  .btn-text {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+sticky-element {
+  .btn-text {
+    justify-content: start;
+    gap: 10px;
+  }
+}
+.side_bar_icons a {
+  display: block;
+  margin-bottom: 15px;
+  .btn-text {
+    display: flex;
+    align-items: center;
+  }
+}
+.customer__sidebar {
+  background-color: #17171706;
+  padding: 30px 48px;
+  border-radius: 20px;
+}
+@media screen and (min-width: 768px) {
+  .customer__sidebar {
+    padding: 40px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .customer__sidebar {
+    width: 100%;
+    padding-inline: 30px;
+    max-width: 340px;
+  }
+}
+
+table.order-history {
+  overflow: hidden;
+  box-shadow: 0 0 0 1px #1717170f;
+  border-radius: 20px;
+  thead th {
+    font-weight: 500;
+    background-color: #17171706;
+  }
+  th,
+  td {
+    width: auto;
+    text-align: start;
+    line-height: 1.6;
+    font-size: 18px;
+    padding: 18px 30px;
+  }
+  tbody tr,
+  tfoot tr:first-child {
+    border-block-start: 1px solid #1717170f;
+  }
+  [data-label="Order"] a {
+    text-decoration: underline;
+  }
+}
+
+.addresses {
+  .customer__title {
+    font-size: 32px;
+  }
+  .customer__header_top {
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+  .address-grid {
+    grid: auto-flow dense / repeat(1, minmax(0, 1fr));    
+    gap: 24px;
+  }
+  @media screen and (min-width: 768px) {
+    .address-grid {
+      grid: auto-flow dense / repeat(2, minmax(0, 1fr));
+    }
+    .customer__title {
+      font-size: 60px;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .address-grid {
+      grid: auto-flow dense / repeat(3, minmax(0, 1fr));
+    }
+    .customer__title {
+      font-size: 100px;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .address-grid {
+      grid: auto-flow dense / repeat(4, minmax(0, 1fr));
+    }
+  }
 }

@@ -1,7 +1,238 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
 
+{% comment %} <h1>Account : {{ customer.email }}</h1> {% endcomment %}
+
 <div
   class="customer account section section--padding"
+  style="--section-padding-top: {{ section.settings.padding_top }}px;--section-padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
+
+  {% assign customer_name = customer.first_name | append: ' ' | append: customer.last_name %}
+
+  {% assign total_base_price = 0 %}
+  {% assign total_price = 0 %}
+
+  {%- for order in customer.orders -%}
+    {% for prop in order.line_items[0].properties %}
+      {% if prop.first contains 'product_price' %}
+        {% assign base_price = prop.last | replace: '.00', '' | replace: '$', '' %}
+        {% assign base_price_x_quantity = base_price | times: order.line_items[0].quantity %}
+        {% assign total_base_price = total_base_price | plus: order.total_net_amount %}
+        {% assign total_price = total_price | plus: base_price_x_quantity %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+
+  {% if customer and customer.tags contains 'club_member' %}
+    <div class="cc-mm-account-header">
+      <a class="btn btn--outline icon-with-text color-scheme-2 logout-btn" href="{{ routes.account_logout_url }}" is="hover-link" data-no-instant>
+        <span class="btn-text">
+          <svg class="icon icon-power icon-sm" viewBox="0 0 18 20" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 0.833374V10M12.6667 3.52429C15.3832 4.87427 17.25 7.67749 17.25 10.9167C17.25 15.4731 13.5563 19.1667 9 19.1667C4.44365 19.1667 0.75 15.4731 0.75 10.9167C0.75 7.67749 2.61685 4.87427 5.33333 3.52429"></path>
+          </svg>
+          <span>{{ 'customer.log_out' | t }}</span>
+        </span>
+      </a>
+      <div class="page-width">
+        <h2 class="heading title-lg tracking-heading">Hello, {{ customer_name }}</h2>
+        <p>Grasscity Member</p>
+        {% if customer.orders_count > 1 %}
+        <div class="cc-mm-account-header-inner">
+          <p>
+            Congratulations! You have already saved
+            <b>${{ total_price | minus: total_base_price | divided_by: 100 }}</b>
+            with your membership.
+          </p>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if customer and customer.tags contains 'elite_member' %}
+    <div class="cc-mm-account-header" id="cc-mm-account-header-elite">
+      <a class="btn btn--outline icon-with-text color-scheme-2 logout-btn" href="{{ routes.account_logout_url }}" is="hover-link" data-no-instant>
+        <span class="btn-text">
+          <svg class="icon icon-power icon-sm" viewBox="0 0 18 20" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 0.833374V10M12.6667 3.52429C15.3832 4.87427 17.25 7.67749 17.25 10.9167C17.25 15.4731 13.5563 19.1667 9 19.1667C4.44365 19.1667 0.75 15.4731 0.75 10.9167C0.75 7.67749 2.61685 4.87427 5.33333 3.52429"></path>
+          </svg>
+          <span>{{ 'customer.log_out' | t }}</span>
+        </span>
+      </a>
+      <div class="page-width">
+        <h2 class="heading title-lg tracking-heading">Hello, {{ customer_name }}</h2>
+        <p>ELITE Member</p>
+        <div class="cc-mm-account-header-inner">
+          <p>Congratulations! You have already saved <b>$00.00</b> with your membership.</p>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="page-width{% if section.settings.full_width %} page-width--full{% endif %} relative">
+    <div class="customer__content gap-9 flex flex-col lg:flex-row-reverse">
+
+      <div class="account_details grow flex flex-col gap-5 md:gap-8" data-id="order_histroy">
+        <h2 class="text-xl-3xl font-medium">{{ 'customer.orders.title' | t }}</h2>
+        {%- paginate customer.orders by 20 -%}
+          {%- if customer.orders.size > 0 -%}
+            <table role="table" class="order-history">
+              {% comment %} <caption class="sr-only">{{ 'customer.orders.title' | t }}</caption> {% endcomment %}
+              <thead role="rowgroup">
+                <tr role="row">
+                  <th id="ColumnOrder" scope="col" role="columnheader">{{ 'customer.orders.order_number' | t }}</th>
+                  <th id="ColumnDate" scope="col" role="columnheader">{{ 'customer.orders.date' | t }}</th>
+                  <th id="ColumnPayment" scope="col" role="columnheader">{{ 'customer.orders.payment_status' | t }}</th>
+                  <th id="ColumnFulfillment" scope="col" role="columnheader">{{ 'customer.orders.fulfillment_status' | t }}</th>
+                  <th id="ColumnTotal" scope="col" role="columnheader">{{ 'customer.orders.total' | t }}</th>
+                </tr>
+              </thead>
+              <tbody role="rowgroup">
+                {%- for order in customer.orders -%}
+                  <tr role="row">
+                    <td
+                      id="RowOrder"
+                      role="cell"
+                      headers="ColumnOrder"
+                      data-label="{{ 'customer.orders.order_number' | t | escape }}"
+                    >
+                      <a class="link font-medium leading-none" href="{{ order.customer_url }}" aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name | escape }}">
+                        {{- order.name -}}
+                      </a>
+                    </td>
+                    <td headers="RowOrder ColumnDate" role="cell" data-label="{{ 'customer.orders.date' | t | escape }}">
+                      {{- order.created_at | time_tag: format: 'date' -}}
+                    </td>
+                    <td headers="RowOrder ColumnPayment" role="cell" data-label="{{ 'customer.orders.payment_status' | t | escape }}">
+                      {{- order.financial_status_label -}}
+                    </td>
+                    <td headers="RowOrder ColumnFulfillment" role="cell" data-label="{{ 'customer.orders.fulfillment_status' | t | escape }}">
+                      {{- order.fulfillment_status_label -}}
+                    </td>
+                    <td headers="RowOrder ColumnTotal" role="cell" data-label="{{ 'customer.orders.total' | t | escape }}">
+                      {{- order.total_net_amount | money_with_currency -}}
+                    </td>
+                  </tr>
+                {%- endfor -%}
+              </tbody>
+            </table>
+          {%- else -%}
+            <p class="text-base md:text-lg">{{ 'customer.orders.none' | t }}</p>
+          {%- endif -%}
+
+          {%- liquid
+            if paginate.pages > 1
+              render 'pagination', paginate: paginate
+            endif
+          -%}
+        {%- endpaginate -%}
+      </div>
+
+      <div class="account_details hidden  grow flex flex-col gap-5 md:gap-8" data-id="account_details">
+        <h2 class="text-xl-3xl font-medium">Account Details</h2>
+        <div class="flex gap-5">
+          <strong class="w-1/5">First Name:</strong>
+          <span class="w-2/3 capitilize">{{ customer.first_name }}</span>
+        </div>
+        
+        <div class="flex gap-5">
+          <strong class="w-1/5">Last Name:</strong>
+          <span class="w-2/3 capitilize">{{ customer.last_name }}</span>
+        </div>
+
+        <div class="flex gap-5">
+          <strong class="w-1/5">Email:</strong>
+          <span class="w-2/3 capitilize">{{ customer.email }}</span>
+        </div>
+
+        {% if customer.phone %}
+          <div class="flex gap-5">
+            <strong class="w-1/5">Phone:</strong>
+            <span class="w-2/3 capitilize">{{ customer.phone }}</span>
+          </div>
+        {% endif %}
+
+        <div class="flex gap-5">
+            <strong class="w-1/5">Default Address:</strong>
+            <span class="w-2/3 capitilize default_address">{{ customer.default_address |  format_address  }}</span>
+          </div>
+      </div>
+
+      <div class="account_details hidden grow flex flex-col gap-5" data-id="membership_details">
+        <h2 class="text-xl-3xl font-medium">Membership Details</h2>
+        {% if customer and customer.tags contains 'club_member' %}
+          <p>You do not have an active membership. <b>Update to ELITE!</b></p>
+          {% render 'account-club-banner' %}
+        {% endif %}
+
+        {% if customer and customer.tags contains 'elite_member' %}
+          <p>Details about your membership.</p>
+          {% comment %} {% render 'account-elite-details' %} {% endcomment %}
+        {% endif %}
+      </div>
+
+      <div class="account_details_sidebar grow-0">
+        <sticky-element class="customer__sidebar flex flex-col gap-5 md:gap-7d5 lg:sticky top-0"> 
+          <div class="side_bar_icons">
+            <a href="javascript:void(0)" class="icon-with-text" onclick="sideBarToggle('order_histroy')">
+              <span class="btn-text">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                  <path d="M5.60579 3.78152C5.83514 3.32283 6.36945 3.11742 6.84011 3.28817L6.94743 3.33431L18.9474 9.33431C19.4414 9.5813 19.6416 10.182 19.3946 10.6759C19.1653 11.1346 18.631 11.34 18.1603 11.1693L18.053 11.1232L6.05301 5.12316C5.55903 4.87617 5.3588 4.2755 5.60579 3.78152Z" fill="#2D2E34"></path>
+                  <path d="M0.105792 6.53152C0.335139 6.07283 0.869448 5.86742 1.34011 6.03817L1.44743 6.08431L13.0002 11.8597L22.553 7.08431C23.0117 6.85496 23.5624 7.01122 23.8365 7.43022L23.8946 7.53152C24.124 7.99022 23.9677 8.54091 23.5487 8.81499L23.4474 8.87316L13.4474 13.8732C13.2061 13.9938 12.9282 14.0111 12.6764 13.9249L12.553 13.8732L0.553005 7.87316C0.059027 7.62617 -0.141197 7.0255 0.105792 6.53152Z" fill="#2D2E34"></path>
+                  <path d="M13.0002 11.9785C13.5131 11.9785 13.9358 12.3646 13.9935 12.8619L14.0002 12.9785V23.9785C14.0002 24.5308 13.5525 24.9785 13.0002 24.9785C12.4874 24.9785 12.0647 24.5925 12.007 24.0951L12.0002 23.9785V12.9785C12.0002 12.4262 12.448 11.9785 13.0002 11.9785Z" fill="#2D2E34"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.553031 6.08409L10.553 1.08409C10.8346 0.943325 11.1659 0.943325 11.4475 1.08409L23.4475 7.08409C23.7862 7.25348 24.0002 7.59974 24.0002 7.97852V17.9785C24.0002 18.3298 23.8159 18.6553 23.5147 18.836L13.5147 24.836C13.2216 25.0119 12.8588 25.0258 12.553 24.8729L0.553031 18.8729C0.214247 18.7036 0.000244141 18.3573 0.000244141 17.9785V6.97852C0.000244141 6.59974 0.214247 6.25348 0.553031 6.08409ZM22.0002 8.59652L11.0002 3.09652L2.00024 7.59652V17.3605L12.9562 22.8375L22.0002 17.4115V8.59652Z" fill="#2D2E34"></path>
+                </svg>
+                Orders
+              </span>
+            </a>
+            <a href="javascript:void(0)" class="icon-with-text" onclick="sideBarToggle('account_details')">
+              <span class="btn-text">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                  <path d="M17 21.6407V20.4785C17 18.2694 15.2091 16.4785 13 16.4785H11C8.79086 16.4785 7 18.2694 7 20.4785V21.6407M17 21.6407C19.989 19.9116 22 16.6799 22 12.9785C22 7.45567 17.5228 2.97852 12 2.97852C6.47715 2.97852 2 7.45567 2 12.9785C2 16.6799 4.01099 19.9116 7 21.6407M17 21.6407C15.5291 22.4915 13.8214 22.9785 12 22.9785C10.1786 22.9785 8.47087 22.4915 7 21.6407M15 9.97852C15 11.6354 13.6569 12.9785 12 12.9785C10.3431 12.9785 9 11.6354 9 9.97852C9 8.32166 10.3431 6.97852 12 6.97852C13.6569 6.97852 15 8.32166 15 9.97852Z" stroke="#2D2E34" stroke-width="2"></path>
+                </svg>
+                Account Details
+              </span>
+            </a>
+            <a href="javascript:void(0)" class="icon-with-text" onclick="sideBarToggle('membership_details')">
+              <span class="btn-text">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="32" viewBox="0 0 21 32" fill="none">
+                  <path d="M11.1976 0.978516C11.1976 0.978516 10.9773 26.2342 11.014 26.2536C11.0691 26.2536 14.1897 6.976 14.1897 6.976L15.4746 7.22914L11.8217 27.753L17.8977 13.4408L19.0726 14.0055C19.0726 14.0055 12.9047 27.5193 12.4091 28.7072C12.4091 28.7461 20.0638 19.4188 20.0638 19.4188L21 20.373L10.5 31.9785L0 20.373L0.93619 19.4188C0.93619 19.4188 8.60926 28.7656 8.59091 28.7072C8.09528 27.5388 1.92745 14.0055 1.92745 14.0055L3.10227 13.4408L9.17832 27.753L5.52535 7.22914L6.81032 6.976C6.81032 6.976 9.93094 26.2536 9.98601 26.2536C10.0411 26.2536 9.80245 0.978516 9.80245 0.978516H11.1608H11.1976Z" fill="#2D2E34"></path>
+                </svg>
+                Membership
+              </span> 
+            </a>
+            <a class="icon-with-text" href="{{ routes.account_addresses_url }}" is="hover-link">
+              <span class="btn-fill" data-fill></span>
+              <span class="btn-text">
+                <svg class="icon icon-pin icon-sm" viewBox="0 0 16 16" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.3333 9.33337C13.5285 9.79365 14.6667 10.7494 14.6667 11.8538C14.6667 13.4073 11.6819 14.6667 8.00001 14.6667C4.31811 14.6667 1.33334 13.4073 1.33334 11.8538C1.33334 10.7494 2.47154 9.79365 4.66668 9.33337M8.00001 8.00004C9.84096 8.00004 11.3333 6.50766 11.3333 4.66671C11.3333 2.82576 9.84096 1.33337 8.00001 1.33337C6.15906 1.33337 4.66668 2.82576 4.66668 4.66671C4.66668 6.50766 6.15906 8.00004 8.00001 8.00004ZM8.00001 8.00004V12"></path>
+                </svg>
+                {{- 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
+              </span>
+            </a>
+          </div>
+        </sticky-element>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  function sideBarToggle(id){
+    const sections = document.querySelectorAll('.account_details');
+    sections.forEach((section) => {
+      if(section.getAttribute('data-id') === id){
+        section.classList.remove('hidden');
+      } else {
+        section.classList.add('hidden');
+      }
+    });
+  }
+</script>
+
+<div
+  class="customer account section section--padding hidden"
   style="--section-padding-top: {{ section.settings.padding_top }}px;--section-padding-bottom: {{ section.settings.padding_bottom }}px;"
 >
   <div class="page-width">
@@ -167,7 +398,7 @@
       "step": 2,
       "unit": "px",
       "label": "t:general.padding.top.label",
-      "default": 100
+      "default": 0
     },
     {
       "type": "range",

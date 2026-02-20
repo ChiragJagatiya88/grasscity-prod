@@ -8,12 +8,16 @@
     data-customer-addresses
     style="--section-padding-top: {{ section.settings.padding_top }}px;--section-padding-bottom: {{ section.settings.padding_bottom }}px;"
   >
-    <div class="section__wrapper">
-      <header class="customer__header flex flex-col md:flex-row items-center gap-6">
-        <div class="flex flex-col items-center md:items-start gap-y-3 flex-1">
+    <div class="page-width relative">
+      <header class="customer__header gap-6">
+        <div class="flex gap-y-3 items-end justify-between customer__header_top">
           <h1 class="customer__title h2">{{ 'customer.addresses.title' | t }}</h1>
-          <a href="{{ routes.account_url }}" class="text-subtext reversed-link inline-flex items-center gap-x-2">
-            {% render 'icon-caret-left', size: 'small' %}
+          <a href="{{ routes.account_url }}" class="btn btn--outline gap-x-2">
+            {% comment %} {% render 'icon-caret-left', size: 'small' %} {% endcomment %}
+            <svg class="icon icon-account-2 icon-xs" style="--icon-size: 20px;" viewBox="0 0 16 17" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="6.5" height="6.5" x="4.75" y="1.917" rx="3.25"></rect>
+              <path stroke-linecap="round" d="M8 10.834c1 0 2.667.222 3 .333.333.11 2.467.533 3 1.333.667 1 .667 1.334.667 2.667M8 10.834c-1 0-2.667.222-3 .333-.333.11-2.467.533-3 1.333-.667 1-.667 1.334-.667 2.667"></path>
+            </svg>
             {{ 'customer.account.return' | t }}
           </a>
         </div>
@@ -24,7 +28,7 @@
 
       <div
         id="AddAddress"
-        class="address-form blocks-radius color-{{ section.settings.color_scheme }} hidden"
+        class="address-form blocks-radius color-scheme-10 hidden"
         data-address
       >
         <div class="rich-text">
@@ -173,18 +177,16 @@
         {%- endform -%}
       </div>
 
-      <ul class="address-list flex flex-col" role="list">
+      <ul class="address-list address-grid grid" role="list">
         {%- for address in customer.addresses -%}
           <li
-            class="blocks-radius color-{{ section.settings.color_scheme }}"
+            class="blocks-radius color-scheme-10"
             data-address
           >
-            <div class="address-info flex flex-col md:flex-row items-start gap-y-4 gap-x-6">
+            <div class="address-info flex flex-col items-start gap-y-4 gap-x-6">
               <div class="address-info__main flex-1">
                 {%- if address == customer.default_address -%}
-                  <span class="address-info__default-badge f-badge f-badge--soldout rounded">
-                    {{- 'customer.addresses.default' | t -}}
-                  </span>
+                  <span class="address-info__default-badge">{{- 'customer.addresses.default' | t -}}</span>
                 {%- endif -%}
                 {{ address | format_address }}
               </div>
