@@ -183,7 +183,7 @@
       ],
       "settings": {
         "container": "fixed",
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-6",
         "use_color_scheme_in_container": false,
         "content_spacing": "standard",
         "content_alignment": "center",
@@ -275,6 +275,7 @@
         "column_ikYHeg",
         "column_bTbVtm"
       ],
+      "disabled": true,
       "settings": {
         "container": "fixed",
         "color_scheme": "",
@@ -379,6 +380,7 @@
         "column_UmtTiC",
         "column_TU4gke"
       ],
+      "disabled": true,
       "name": "t:sections.multicolumn-with-icon.name",
       "settings": {
         "container": "fixed",
@@ -498,6 +500,7 @@
         "icon_with_text_gqTJYi",
         "button_Am3jaF"
       ],
+      "disabled": true,
       "custom_css": [
         ".image-with-text__content {max-width: 52rem;}"
       ],
@@ -506,6 +509,139 @@
         "color_scheme": "scheme-1",
         "image": "shopify://shop_images/gs_community_ab_v01_8f7d8ed9-ebfb-4634-81f0-b15a00c61449.webp",
         "image_position": "right",
+        "image_width": 50,
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "inherit",
+        "show_section_divider": true,
+        "divider_width": "full",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "image_with_text_APMJiD": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_riVhPA": {
+          "type": "heading",
+          "settings": {
+            "heading": "A Brief History",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2"
+          }
+        },
+        "text_3XFia7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A long, long time ago (in internet time, at least), before Grasscity’s launch in 2000, was a little website called Coffeshop-Amsterdam. Its purpose was simple: to sell smoking accessories and provide tourist information about its beloved hometown of Amsterdam. But the site’s limited reach just wasn’t enough for us. To take its place, we founded Grasscity, a site that would become so much more than just an online headshop.</p>",
+            "subtext_color": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_riVhPA",
+        "text_3XFia7"
+      ],
+      "custom_css": [
+        ".image-with-text__content {max-width: 52rem;}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "image": "shopify://shop_images/gs_community_ab_v01_8f7d8ed9-ebfb-4634-81f0-b15a00c61449.webp",
+        "image_position": "right",
+        "image_width": 50,
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "inherit",
+        "show_section_divider": true,
+        "divider_width": "full",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "rich_text_VQdpin": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_tCjPWg": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Rising Tide",
+            "highlight_style": "none",
+            "highlight_font_style": "normal",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3"
+          }
+        },
+        "text_WwnDXa": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In 2018, Grasscity joined High Tide, a cannabis corporation from all the way in the great white north of Alberta, Canada. Our new family meant we could grow faster than ever before: with our foothold overseas, Grasscity can now operate from numerous warehouses in North America and Europe, giving us improved shipping times and a wider reach. What does that mean? More bongs, more pipes, more everything—and faster than ever before. With over 1 million parcels shipped in our lifetime, Grasscity is proud to call itself a major part of the culture’s swiftly rising tide.</p>",
+            "text_size": "text-lg",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_tCjPWg",
+        "text_WwnDXa"
+      ],
+      "custom_css": [
+        ".rich-text {max-width: 78rem; margin: 0 auto;}",
+        "@media (max-width: 1023px) {.rich-text__heading {max-width: 50rem; margin: 0 auto; }}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-4",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "center",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "image_with_text_GFmkfA": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_8hcLM7": {
+          "type": "heading",
+          "settings": {
+            "heading": "Grasscity Today",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2"
+          }
+        },
+        "text_WnDtpj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We love smoking, plain and simple. At Grasscity, it’s what we know best: we work together to search the globe for the best new smoking gear to get excited about. From <a href=\"https://www.grasscity.com/herb-grinders\">herb grinders </a>and <a href=\"https://www.grasscity.com/smoking-pipes\">smoking pipes </a>to roller papers to one of a kind <a href=\"https://www.grasscity.com/bongs/glass-bongs\">glass bongs</a>, you name it—we have it. We stay on top of what’s new on the scene, and we’re always expanding our selection. The brands we carry are tried and tested by not only us, but by the over 39,000 customers who have left us reviews. Take a look for yourself: browse <a href=\"https://www.grasscity.com/rolling-papers\">rolling papers </a>from brands like RAW and Bulldog, <a href=\"https://www.grasscity.com/vaporizers\">vaporizers </a>from Storz & Brickel and <a href=\"https://www.grasscity.com/brands/pax\">PAX</a>, and glass pieces from Vodka Glass, Snoop Dogg Pounds, <a href=\"https://www.grasscity.com/brands/cheech-and-chong\">Cheech and Chong Glass</a>, <a href=\"https://www.grasscity.com/brands/glasscity\">Glasscity</a>, Dopezilla, Famous Brandz, <a href=\"https://www.grasscity.com/brands/empire-glassworks\">Empire Glass</a>, Mountain Jam Glass, and many more. As smokers ourselves, we know what makes an online headshop great. We’ve watched, we’ve listened, and we’ve stepped up our game: we’ve worked hard to bring you bulk discounts, special coupons for members, discreet packaging, and free shipping! Any questions about what you’re buying, or having any issues? Contact our knowledgeable support team who know our product inside and out.</p>",
+            "subtext_color": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_8hcLM7",
+        "text_WnDtpj"
+      ],
+      "custom_css": [
+        ".image-with-text__content {max-width: 52rem;}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "image": "shopify://shop_images/gs_community_ab_v01_8f7d8ed9-ebfb-4634-81f0-b15a00c61449.webp",
+        "image_position": "left",
         "image_width": 50,
         "desktop_content_position": "center",
         "desktop_content_alignment": "left",
@@ -700,6 +836,9 @@
     "multicolumn_36XTkC",
     "multicolumn_icon_gMDVjt",
     "image_with_text_DCXDtE",
+    "image_with_text_APMJiD",
+    "rich_text_VQdpin",
+    "image_with_text_GFmkfA",
     "testimonials_T939Dc",
     "image_with_text_overlay_dDk78w",
     "rich_text_xaR67U"
