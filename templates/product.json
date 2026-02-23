@@ -219,6 +219,12 @@
             "show_dynamic_checkout_buttons": false,
             "show_quantity": true
           }
+        },
+        "f5d48049-8bc0-4495-b387-ccd2dfaca68b": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
         }
       },
       "block_order": [
@@ -227,6 +233,7 @@
         "title",
         "meta",
         "price",
+        "f5d48049-8bc0-4495-b387-ccd2dfaca68b",
         "icon_with_text",
         "inventory",
         "description",
