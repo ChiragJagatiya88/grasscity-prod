@@ -163,22 +163,11 @@
     "rich_text_kyFd96": {
       "type": "rich-text",
       "blocks": {
-        "heading_Y9MMVQ": {
-          "type": "heading",
-          "settings": {
-            "heading": "We are committed to breaking the authenticity barrier using refined sourced hardware",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h2"
-          }
-        },
         "text_7h6LaE": {
           "type": "text",
           "settings": {
-            "text": "<p>Since 1998, we've been pioneering the online headshop industry with expertly curated products and unmatched customer service.</p>",
-            "text_size": "text-base",
+            "text": "<p>Here at Grasscity, we’re proud to be part of a massive, diverse counterculture that’s taking the world by storm. Offering great smoking accessories is what we love, and what we do—our team works together to find the coolest, the best, and the newest smoking gear out there. Over the past twenty years, you’ve helped us grow Grasscity into the best online headshop in the world, with a thriving community forum of over half a million members. Want some recommendations on new gear? Want some tips on growing your own? Want to show off your greatest (or, worst, we don’t judge) tattoo? Head on over and introduce yourself.<br/><br/></p>",
+            "text_size": "text-lg",
             "text_line_limit": "none",
             "button_style": "btn--underline",
             "button_icon": "none"
@@ -186,7 +175,6 @@
         }
       },
       "block_order": [
-        "heading_Y9MMVQ",
         "text_7h6LaE"
       ],
       "custom_css": [
