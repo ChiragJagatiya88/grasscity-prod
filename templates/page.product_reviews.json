@@ -12,12 +12,25 @@
     "main": {
       "type": "main-page",
       "settings": {
+        "container": "fixed",
+        "text_alignment": "center",
         "padding_top": 28,
         "padding_bottom": 28
+      }
+    },
+    "custom_liquid_7YpbTr": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": {
+        "custom_liquid": "<script src=\"https://cdn-widgetsrepository.yotpo.com/v1/loader/U82xY4pLpmoVHozaVvBcwstxfshyPPmsCp5sKdai\" async></script>\n<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"1288807\"/>",
+        "color_scheme": "",
+        "padding_top": 50,
+        "padding_bottom": 50
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "custom_liquid_7YpbTr"
   ]
 }
