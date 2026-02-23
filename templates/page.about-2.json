@@ -530,7 +530,7 @@
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
-            "heading_size": "hd2"
+            "heading_size": "h3"
           }
         },
         "text_3XFia7": {
@@ -619,7 +619,7 @@
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
-            "heading_size": "hd2"
+            "heading_size": "h3"
           }
         },
         "text_WnDtpj": {
@@ -650,6 +650,51 @@
         "divider_width": "full",
         "padding_top": 24,
         "padding_bottom": 24
+      }
+    },
+    "rich_text_jgViLm": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_b8WmfK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Grasscity Forums",
+            "highlight_style": "none",
+            "highlight_font_style": "normal",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3"
+          }
+        },
+        "text_nPWTeg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>With over 650,000 members, over 20 million posts, and more than 2 million impressions per month, the Grasscity forum is a place like no other. It’s a space where like-minded people come together not only to talk about smoking herbs, but about everything under the sun: movies, games, recipes, growing tips, funny smoking stories, and even their own art. We’re proud of our welcoming and vibrant community, and we moderate our forums to keep it a place of positivity and tolerance. Our community is always growing, and there’s always something new to share—what will your first post be?</p><h2>CBDcity.com</h2><p>We’re always looking to expand to new horizons. Enter <a href=\"https://cbdcity.com/\">CBDcity</a>, the newest member of the High Tide family. Launched in May 2020, CBDcity carries on the Grasscity spirit in the form of CBD exclusive products. It’s the newest (and definitely our favorite) online store for everything CBD, including <a href=\"https://cbdcity.com/collections/cbd-oil\" target=\"_blank\">CBD oils</a>, edibles, skincare products, vape oils, relief creams, and even pet products.</p><h2>Let’s get Social</h2><p>Like what we do? So do we—and so do our over 300,000 combined followers on Instagram, Facebook, Twitter, and YouTube. Looking for giveaways, contests, and notices on sweet deals? Head on over to our socials, give us a follow, and leave a few nice comments. Smoking isn’t the only way to make us feel all warm and fuzzy inside.</p>",
+            "text_size": "text-lg",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_b8WmfK",
+        "text_nPWTeg"
+      ],
+      "custom_css": [
+        ".rich-text {max-width: 78rem; margin: 0 auto;}",
+        "@media (max-width: 1023px) {.rich-text__heading {max-width: 50rem; margin: 0 auto; }}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-7",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "center",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_section_divider": false,
+        "divider_width": "fixed"
       }
     },
     "testimonials_T939Dc": {
@@ -706,10 +751,11 @@
         "testimonial_VMBf4p",
         "testimonial_BFwQ3p"
       ],
+      "disabled": true,
       "name": "t:sections.testimonials.name",
       "settings": {
         "container": "full",
-        "color_scheme": "scheme-6",
+        "color_scheme": "scheme-1",
         "section_header_alignment": "center",
         "section_header_alignment_mobile": "inherit",
         "subheading": "",
@@ -749,6 +795,7 @@
       "blocks": {
         "subheading_drcLTm": {
           "type": "subheading",
+          "disabled": true,
           "settings": {
             "subheading": "Our Commitment"
           }
@@ -756,7 +803,7 @@
         "heading_NaCR43": {
           "type": "heading",
           "settings": {
-            "heading": "We are committed to promoting responsible use and providing accurate information about our products.",
+            "heading": "The Grasscity Team",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
@@ -766,6 +813,7 @@
         },
         "text_6UcCEJ": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>Grasscity supports the legal cannabis industry and advocates for sensible regulations. Our products are intended for legal use only by adults in jurisdictions where permitted.<br/></p>",
             "text_size": "text-base"
@@ -780,7 +828,7 @@
       "name": "t:sections.image-with-text-overlay.name",
       "settings": {
         "container": "full",
-        "image": "shopify://shop_images/gs_commitment_ab_v01.webp",
+        "image": "shopify://shop_images/about_us_ready-15-1200px_new.webp",
         "desktop_height": "extra-medium",
         "overlay_opacity": 45,
         "enable_parallax": false,
@@ -839,6 +887,7 @@
     "image_with_text_APMJiD",
     "rich_text_VQdpin",
     "image_with_text_GFmkfA",
+    "rich_text_jgViLm",
     "testimonials_T939Dc",
     "image_with_text_overlay_dDk78w",
     "rich_text_xaR67U"
