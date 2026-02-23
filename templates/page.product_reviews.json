@@ -21,6 +21,9 @@
     },
     "custom_liquid_7YpbTr": {
       "type": "custom-liquid",
+      "custom_css": [
+        ".yotpo-head {display: none !important;}"
+      ],
       "name": "t:sections.custom-liquid.name",
       "settings": {
         "custom_liquid": "<div class=\"section__container page-width page-width--fixed\">\n<script src=\"https://cdn-widgetsrepository.yotpo.com/v1/loader/U82xY4pLpmoVHozaVvBcwstxfshyPPmsCp5sKdai\" async></script>\n<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"1288807\"/>\n</div>",
