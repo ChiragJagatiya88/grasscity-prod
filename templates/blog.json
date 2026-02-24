@@ -96,6 +96,9 @@
         "button_item_PB7p4g",
         "button_item_Qbxm94"
       ],
+      "custom_css": [
+        ".button-item__inner.link_active {background: #7bc710;}"
+      ],
       "name": "t:sections.buttons-with-icon.name",
       "settings": {
         "container": "fixed",
