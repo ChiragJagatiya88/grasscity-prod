@@ -1,1 +1,363 @@
-{"sections":{"breadcrumbs_F4iNAA":{"type":"breadcrumbs","settings":{"container":"fixed","text_alignment":"start","padding_top":16,"padding_bottom":20}},"main":{"type":"main-blog","blocks":{"featured_post_fgVGy7":{"type":"featured_post","settings":{"featured_image_ratio":"adapt","heading_size":"h1","show_section_divider":true}},"heading_U7FQUU":{"type":"heading","settings":{"heading_size":"h1","content_alignment":"left"}},"tags_cTH8Uh":{"type":"tags","settings":{"limit":6,"alignment":"left"}}},"block_order":["featured_post_fgVGy7","heading_U7FQUU","tags_cTH8Uh"],"settings":{"container":"fixed","post_limit":12,"columns_desktop":3,"column_gap":"medium","row_gap":"large","card_title_size":"h4","show_tags":true,"show_excerpt":true,"show_date":true,"show_author":true,"show_button":false,"padding_top":0,"padding_bottom":80}},"multicolumn_icon_ycUW8j":{"type":"multicolumn-icon","blocks":{"column_tzfiEU":{"type":"column","settings":{"icon":"truck","max_width":28,"max_width_mb":28,"title":"Free Shipping on US Orders Above $50 USD","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h6","heading_font":"heading","text":"","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--underline","button_icon":"none"}},"column_ztCHpe":{"type":"column","settings":{"icon":"arrow-up-left","max_width":28,"max_width_mb":28,"title":"Easy Returns","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h6","heading_font":"heading","text":"","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--underline","button_icon":"none"}},"column_dykh4d":{"type":"column","settings":{"icon":"chat","max_width":28,"max_width_mb":28,"title":"Oldest Online Smoke Shop","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h6","heading_font":"heading","text":"","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--underline","button_icon":"none"}},"column_x7UFVH":{"type":"column","settings":{"icon":"clock","max_width":28,"max_width_mb":28,"title":"Over 22 years on the market","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h6","heading_font":"heading","text":"","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--underline","button_icon":"none"}},"column_DdrPm3":{"type":"column","settings":{"icon":"smiley","max_width":28,"max_width_mb":28,"title":"Over 61K+ positive reviews","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h6","heading_font":"heading","text":"","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--underline","button_icon":"none"}}},"block_order":["column_tzfiEU","column_ztCHpe","column_dykh4d","column_x7UFVH","column_DdrPm3"],"name":"t:sections.multicolumn-with-icon.name","settings":{"container":"fixed","color_scheme":"","header_layout":"vertical","section_header_alignment":"center","section_header_alignment_mobile":"inherit","subheading":"","heading":"","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h1","description":"","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--underline","button_icon":"none","enable_sticky":false,"card_color_scheme":"scheme-info","content_alignment":"center","image_position":"top","icon_color":"#1d349a","columns_desktop":5,"column_gap":"extra-small","row_gap":"inherit","show_divider_col":false,"columns_mobile":"1","swipe_on_mobile":false,"show_section_divider":false,"divider_width":"fixed","padding_top":0,"padding_bottom":50}},"scrolling_promotion_CAFdy7":{"type":"scrolling-promotion","blocks":{"text_DC8BrN":{"type":"text","settings":{"text_link":"","text":"Welcome to our store","text_size":"h2","text_opacity":100,"use_custom_color":false,"custom_color":"#000000"}}},"block_order":["text_DC8BrN"],"name":"t:sections.scrolling-promotion.name","settings":{"color_scheme":"scheme-inverse","direction":"left","pause_on_hover":false,"speed":0.3,"h_spacing":50,"show_section_divider":false,"padding_top":20,"padding_bottom":20}}},"order":["breadcrumbs_F4iNAA","main","multicolumn_icon_ycUW8j","scrolling_promotion_CAFdy7"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs_F4iNAA": {
+      "type": "breadcrumbs",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "buttons_with_icon_Aayywi": {
+      "type": "buttons-with-icon",
+      "blocks": {
+        "button_item_i9XVJg": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Product Reviews",
+            "button_link": "shopify://blogs/product-reviews",
+            "icon": "none"
+          }
+        },
+        "button_item_RTed8M": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Lifestyle",
+            "button_link": "shopify://blogs/lifestyle",
+            "icon": "none"
+          }
+        },
+        "button_item_9hAjka": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Vape",
+            "button_link": "shopify://blogs/vape",
+            "icon": "none"
+          }
+        },
+        "button_item_Unt3XW": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Dab Rigs",
+            "button_link": "shopify://blogs/dab-rigs",
+            "icon": "none"
+          }
+        },
+        "button_item_8PWCy6": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Cleaning",
+            "button_link": "shopify://blogs/cleaning",
+            "icon": "none"
+          }
+        },
+        "button_item_ypcYxL": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Smoking",
+            "button_link": "shopify://blogs/smoking",
+            "icon": "none"
+          }
+        },
+        "button_item_PB7p4g": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Guides",
+            "button_link": "shopify://blogs/guides",
+            "icon": "none"
+          }
+        },
+        "button_item_Qbxm94": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Bongs",
+            "button_link": "shopify://blogs/bongs",
+            "icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "button_item_i9XVJg",
+        "button_item_RTed8M",
+        "button_item_9hAjka",
+        "button_item_Unt3XW",
+        "button_item_8PWCy6",
+        "button_item_ypcYxL",
+        "button_item_PB7p4g",
+        "button_item_Qbxm94"
+      ],
+      "name": "t:sections.buttons-with-icon.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "item_alignment": "left",
+        "item_button_style": "btn--icon",
+        "item_button_font": "button",
+        "enable_slider": true,
+        "swipe_on_mobile": true,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "blocks": {
+        "featured_post_fgVGy7": {
+          "type": "featured_post",
+          "disabled": true,
+          "settings": {
+            "featured_image_ratio": "adapt",
+            "heading_size": "h3",
+            "show_section_divider": true
+          }
+        },
+        "heading_U7FQUU": {
+          "type": "heading",
+          "settings": {
+            "heading_size": "h1",
+            "content_alignment": "left"
+          }
+        },
+        "tags_cTH8Uh": {
+          "type": "tags",
+          "disabled": true,
+          "settings": {
+            "limit": 6,
+            "alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "featured_post_fgVGy7",
+        "heading_U7FQUU",
+        "tags_cTH8Uh"
+      ],
+      "settings": {
+        "container": "fixed",
+        "post_limit": 12,
+        "columns_desktop": 3,
+        "column_gap": "medium",
+        "row_gap": "large",
+        "card_title_size": "h4",
+        "show_tags": true,
+        "show_excerpt": true,
+        "show_date": true,
+        "show_author": true,
+        "show_button": false,
+        "padding_top": 0,
+        "padding_bottom": 80
+      }
+    },
+    "multicolumn_icon_ycUW8j": {
+      "type": "multicolumn-icon",
+      "blocks": {
+        "column_tzfiEU": {
+          "type": "column",
+          "settings": {
+            "icon": "truck",
+            "max_width": 28,
+            "max_width_mb": 28,
+            "title": "Free Shipping on US Orders Above $50 USD",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h6",
+            "heading_font": "heading",
+            "text": "",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_ztCHpe": {
+          "type": "column",
+          "settings": {
+            "icon": "arrow-up-left",
+            "max_width": 28,
+            "max_width_mb": 28,
+            "title": "Easy Returns",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h6",
+            "heading_font": "heading",
+            "text": "",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_dykh4d": {
+          "type": "column",
+          "settings": {
+            "icon": "chat",
+            "max_width": 28,
+            "max_width_mb": 28,
+            "title": "Oldest Online Smoke Shop",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h6",
+            "heading_font": "heading",
+            "text": "",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_x7UFVH": {
+          "type": "column",
+          "settings": {
+            "icon": "clock",
+            "max_width": 28,
+            "max_width_mb": 28,
+            "title": "Over 22 years on the market",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h6",
+            "heading_font": "heading",
+            "text": "",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_DdrPm3": {
+          "type": "column",
+          "settings": {
+            "icon": "smiley",
+            "max_width": 28,
+            "max_width_mb": 28,
+            "title": "Over 61K+ positive reviews",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h6",
+            "heading_font": "heading",
+            "text": "",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "column_tzfiEU",
+        "column_ztCHpe",
+        "column_dykh4d",
+        "column_x7UFVH",
+        "column_DdrPm3"
+      ],
+      "name": "t:sections.multicolumn-with-icon.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "header_layout": "vertical",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "enable_sticky": false,
+        "card_color_scheme": "scheme-info",
+        "content_alignment": "center",
+        "image_position": "top",
+        "icon_color": "#1d349a",
+        "columns_desktop": 5,
+        "column_gap": "extra-small",
+        "row_gap": "inherit",
+        "show_divider_col": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 0,
+        "padding_bottom": 50
+      }
+    },
+    "scrolling_promotion_CAFdy7": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "text_DC8BrN": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Welcome to our store",
+            "text_size": "h2",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "text_DC8BrN"
+      ],
+      "name": "t:sections.scrolling-promotion.name",
+      "settings": {
+        "color_scheme": "scheme-inverse",
+        "direction": "left",
+        "pause_on_hover": false,
+        "speed": 0.3,
+        "h_spacing": 50,
+        "show_section_divider": false,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_F4iNAA",
+    "buttons_with_icon_Aayywi",
+    "main",
+    "multicolumn_icon_ycUW8j",
+    "scrolling_promotion_CAFdy7"
+  ]
+}
