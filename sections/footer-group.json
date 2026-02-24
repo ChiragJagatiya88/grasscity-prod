@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.footer.name",
   "type": "footer",
@@ -18,7 +27,7 @@
             "highlight_text_color": "",
             "heading_size": "text-base",
             "heading_font": "heading",
-            "text": "<p>Mon-Sat, 9am-6pm EST.<\/p>",
+            "text": "<p>Mon-Sat, 9am-6pm EST.</p>",
             "text_size": "text-base",
             "button_label": "",
             "button_link": "",
@@ -39,7 +48,7 @@
             "highlight_text_color": "",
             "heading_size": "text-base",
             "heading_font": "heading",
-            "text": "<p><a href=\"tel:+1 (888) 334-6363\">+1 (888) 334-6363<\/a> (tool-free)<\/p>",
+            "text": "<p><a href=\"tel:+1 (888) 334-6363\">+1 (888) 334-6363</a> (tool-free)</p>",
             "text_size": "text-base",
             "button_label": "",
             "button_link": "",
@@ -60,7 +69,7 @@
             "highlight_text_color": "",
             "heading_size": "text-base",
             "heading_font": "heading",
-            "text": "<p><a href=\"mailto:touch@garacestore.com\" title=\"mailto:touch@garacestore.com\">touch@garacestore.com<\/a><\/p>",
+            "text": "<p><a href=\"mailto:touch@garacestore.com\" title=\"mailto:touch@garacestore.com\">touch@garacestore.com</a></p>",
             "text_size": "text-base",
             "button_label": "",
             "button_link": "",
@@ -81,7 +90,7 @@
             "highlight_text_color": "",
             "heading_size": "text-base",
             "heading_font": "heading",
-            "text": "<p>SJV B.V.6255 North Hollywood Boulevard Suite 145 North Las vegas United States<\/p>",
+            "text": "<p>SJV B.V.6255 North Hollywood Boulevard Suite 145 North Las vegas United States</p>",
             "text_size": "text-base",
             "button_label": "",
             "button_link": "",
@@ -96,7 +105,9 @@
         "column_69fN8n",
         "column_ngN6XL"
       ],
-      "custom_css": [".rich-text__text {--text-margin-top: 0.4rem;}"],
+      "custom_css": [
+        ".rich-text__text {--text-margin-top: 0.4rem;}"
+      ],
       "settings": {
         "container": "fixed",
         "color_scheme": "",
@@ -142,8 +153,8 @@
             "block_width": 50,
             "heading": "Join Our Newsletter",
             "heading_size": "h3",
-            "newsletter_description": "<p>Sign up to our newsletter & receive 10% off your first order.<\/p>",
-            "newsletter_term": "<p>By subscribing you agree to the <a href=\"\/policies\/terms-of-service\" title=\"Terms of Service\">Terms of Services<\/a>  and  <a href=\"\/policies\/privacy-policy\" title=\"Privacy Policy\">Privacy Policy.<\/a><\/p>",
+            "newsletter_description": "<p>Sign up to our newsletter & receive 10% off your first order.</p>",
+            "newsletter_term": "<p>By subscribing you agree to the <a href=\"/policies/terms-of-service\" title=\"Terms of Service\">Terms of Services</a>  and  <a href=\"/policies/privacy-policy\" title=\"Privacy Policy\">Privacy Policy.</a></p>",
             "newsletter_text_alignment": "left",
             "form_width": 465,
             "button_style": "btn--primary",
@@ -215,7 +226,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.name",
       "settings": {
-        "custom_liquid": "<div class=\"page-width page-width--fixed\">\n<p style=\"margin-bottom: 16px;font-size: 10px;line-height: 1.8;color: rgba(83, 83, 83, 1);\">All products are intended for legal dry herb or tobacco usage.&nbsp; The statements and vaporizers &amp; products shown on this website have not been evaluated by the US Food and Drug Administration (FDA). These devices are not designed to diagnose, cure, prevent, or treat any disease. Before using a vaporizer, please consult with a licensed health care provider. If you use a vaporizer, you do so at your own risk. Inhalation is inadvisable and may potentially be harmful. Any comments from user-submitted reviews found on this website are related to the users own personal experiences, and are not endorsed, reviewed, or necessarily shared by&nbsp;grasscity.com&nbsp;or its affiliates. Vaporizing does not necessarily eliminate any and all toxins found in vaporized substances, so much care should be taken prior to use. By using&nbsp;grasscity.com, you acknowledge and agree to abide by our Terms of Use page before making any purchase on this website<\/p>\n<\/div>",
+        "custom_liquid": "<div class=\"page-width page-width--fixed\">\n<p style=\"margin-bottom: 16px;font-size: 10px;line-height: 1.8;color: rgba(83, 83, 83, 1);\">All products are intended for legal dry herb or tobacco usage.&nbsp; The statements and vaporizers &amp; products shown on this website have not been evaluated by the US Food and Drug Administration (FDA). These devices are not designed to diagnose, cure, prevent, or treat any disease. Before using a vaporizer, please consult with a licensed health care provider. If you use a vaporizer, you do so at your own risk. Inhalation is inadvisable and may potentially be harmful. Any comments from user-submitted reviews found on this website are related to the users own personal experiences, and are not endorsed, reviewed, or necessarily shared by&nbsp;grasscity.com&nbsp;or its affiliates. Vaporizing does not necessarily eliminate any and all toxins found in vaporized substances, so much care should be taken prior to use. By using&nbsp;grasscity.com, you acknowledge and agree to abide by our Terms of Use page before making any purchase on this website</p>\n</div>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -224,15 +235,32 @@
     "mobile_sticky_bar_aYhgJK": {
       "type": "mobile-sticky-bar",
       "blocks": {
-        "home_AP8mmy": { "type": "home", "settings": { "text": "Home" } },
-        "cart_gnnwxQ": { "type": "cart", "settings": { "text": "Cart" } },
+        "home_AP8mmy": {
+          "type": "home",
+          "settings": {
+            "text": "Home"
+          }
+        },
+        "cart_gnnwxQ": {
+          "type": "cart",
+          "settings": {
+            "text": "Cart"
+          }
+        },
         "products_eYYkE8": {
           "type": "products",
-          "settings": { "text": "Products", "collection": "" }
+          "settings": {
+            "text": "Products",
+            "collection": ""
+          }
         },
         "link_mJ6QMc": {
           "type": "link",
-          "settings": { "text": "About", "url": "", "icon": "map-pin" }
+          "settings": {
+            "text": "About",
+            "url": "",
+            "icon": "map-pin"
+          }
         }
       },
       "block_order": [
@@ -242,7 +270,10 @@
         "link_mJ6QMc"
       ],
       "disabled": true,
-      "settings": { "enable_sticky_bar": true, "show_text": true }
+      "settings": {
+        "enable_sticky_bar": true,
+        "show_text": true
+      }
     }
   },
   "order": [
