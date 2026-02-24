@@ -12,35 +12,101 @@
       aria-label="breadcrumbs"
     >
       <a href="{{ routes.root_url }}" title="Home" class="reversed-link">{{ 'general.breadcrumbs.home' | t }}</a>
+
       {%- if template contains 'page' -%}
         <span aria-hidden="true" class="breadcrumbs--sep"></span>
         <span class="breadcrumbs--last text-subtext">{{ page.title }}</span>
       {%- elsif template contains 'product' -%}
-        {%- liquid
-          assign primary_collection = product.metafields.breadcrumb.primary_collection
-        -%}
-        {%- if collection.url != blank -%}
+
+        {% assign main_collection = nil %}
+        {% assign sub_collection = nil %}
+        {% assign collection_metaobjects = shop.metaobjects.collections.values %}
+
+        {%- comment -%} 1️⃣ Try to find a matching Sub Collection first (Child) {%- endcomment -%}
+        {% for entry in collection_metaobjects %}
+          {% assign sub_list = entry.sub_collections.value %}
+          {% for scol in sub_list %}
+
+            {% if product.collections contains scol %}
+              {% assign sub_collection = scol %}
+              {% assign main_list = entry.main_collections.value %}
+
+              {%- comment -%} Prefer a main collection the product is actually in {%- endcomment -%}
+              {% for mcol in main_list %}
+                {% if product.collections contains mcol %}
+                  {% assign main_collection = mcol %}
+                  {% break %}
+                {% endif %}
+              {% endfor %}
+
+              {%- comment -%} Fallback to first main collection {%- endcomment -%}
+              {% if main_collection == nil %}
+                {% assign main_collection = main_list | first %}
+              {% endif %}
+
+              {% break %}
+            {% endif %}
+          {% endfor %}
+
+          {% if sub_collection %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {%- comment -%} 2️⃣ If no sub collection found, try to find just Main Collection {%- endcomment -%}
+        {% unless sub_collection %}
+          {% for entry in collection_metaobjects %}
+            {% assign main_list = entry.main_collections.value %}
+
+            {% for mcol in main_list %}
+              {% if product.collections contains mcol %}
+                {% assign main_collection = mcol %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+
+            {% if main_collection %}
+              {% break %}
+            {% endif %}
+
+          {% endfor %}
+        {% endunless %}
+
+        {%- if main_collection -%}
           <span aria-hidden="true" class="breadcrumbs--sep"></span>
-          {%- if primary_collection != blank -%}
-            {{ primary_collection.value.title | link_to: primary_collection.value.url, class: 'reversed-link' }}
-          {%- else -%}
-            {{ collection.title | link_to: collection.url, class: 'reversed-link' }}
-          {%- endif -%}
-        {%- else -%}
-          {% assign current_collection = product.collections | first %}
-          <span aria-hidden="true" class="breadcrumbs--sep"></span>
-          {%- if primary_collection != blank -%}
-            <a href="{{ primary_collection.value.url }}" class="reversed-link">{{ primary_collection.value.title }}</a>
-          {%- elsif current_collection != blank -%}
-            <a href="{{ current_collection.url }}" class="reversed-link">{{ current_collection.title }}</a>
-          {%- else -%}
-            <a href="{{ routes.all_products_collection_url }}" class="reversed-link">
-              {{- 'general.breadcrumbs.collections' | t -}}
-            </a>
-          {%- endif -%}
+          <a href="{{ main_collection.url }}" class="reversed-link">{{ main_collection.title }}</a>
         {%- endif -%}
+    
+        {%- if sub_collection -%}
+          <span aria-hidden="true" class="breadcrumbs--sep"></span>
+          <a href="{{ sub_collection.url }}" class="reversed-link">{{ sub_collection.title }}</a>
+        {%- endif -%}
+
+        {%- if main_collection == blank and sub_collection == blank -%}
+          {%- liquid assign primary_collection = product.metafields.breadcrumb.primary_collection -%}
+          {%- if collection.url != blank -%}
+            <span aria-hidden="true" class="breadcrumbs--sep"></span>
+            {%- if primary_collection != blank -%}
+              {{ primary_collection.value.title | link_to: primary_collection.value.url, class: 'reversed-link' }}
+            {%- else -%}
+              {{ collection.title | link_to: collection.url, class: 'reversed-link' }}
+            {%- endif -%}
+          {%- else -%}
+            {% assign current_collection = product.collections | first %}
+            <span aria-hidden="true" class="breadcrumbs--sep"></span>
+            {%- if primary_collection != blank -%}
+              <a href="{{ primary_collection.value.url }}" class="reversed-link">{{ primary_collection.value.title }}</a>
+            {%- elsif current_collection != blank -%}
+              <a href="{{ current_collection.url }}" class="reversed-link">{{ current_collection.title }}</a>
+            {%- else -%}
+              <a href="{{ routes.all_products_collection_url }}" class="reversed-link">{{- 'general.breadcrumbs.collections' | t -}}</a>
+            {%- endif -%}
+          {%- endif -%} 
+        {%- endif -%}
+
         <span aria-hidden="true" class="breadcrumbs--sep breadcrumbs--sep-last"></span>
         <span class="breadcrumbs--last text-subtext">{{ product.title }}</span>
+
       {%- elsif template contains 'collection' and collection.handle -%}
         {% assign custom_breadcrumbs = collection.metafields.custom.breadcrumbs.value %}
         {%- if custom_breadcrumbs != blank -%}
