@@ -39,6 +39,18 @@
                 if block.settings.button_link != blank
                   assign tag = 'a'
                 endif
+                assign link_active = false
+                if block.settings.button_link != blank
+                  assign btn_link = block.settings.button_link | split: '?' | first
+                  if btn_link contains shop.url
+                    assign link_path = btn_link | replace: shop.url, '' | split: '?' | first
+                  else
+                    assign link_path = btn_link
+                  endif
+                  if link_path == request.path
+                    assign link_active = true
+                  endif
+                endif
               -%}
               <div
                 class="block button-item{% if block.settings.icon_img != blank %} button-item--image{% elsif block.settings.icon != 'none' %} button-item--icon{% endif %}"
@@ -46,7 +58,7 @@
                 {{ block.shopify_attributes }}
               >
                 <{{ tag }}
-                  class="button-item__inner hover-wrapper btn {{ section.settings.item_button_style }}"
+                  class="button-item__inner hover-wrapper btn {{ section.settings.item_button_style }}{% if link_active %} link_active{% endif %}"
                   {% if block.settings.button_link != blank %}
                     href="{{ block.settings.button_link }}"
                   {% endif %}
