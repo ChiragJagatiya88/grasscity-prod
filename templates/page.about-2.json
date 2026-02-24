@@ -34,13 +34,13 @@
         "subheading_MEEHjQ": {
           "type": "subheading",
           "settings": {
-            "subheading": "Since 1998"
+            "subheading": "About Grasscity.com"
           }
         },
         "heading_W8mPfG": {
           "type": "heading",
           "settings": {
-            "heading": "World's Most Trusted Online Headshop",
+            "heading": "The World's Best Online Smoke shop",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
@@ -163,22 +163,11 @@
     "rich_text_kyFd96": {
       "type": "rich-text",
       "blocks": {
-        "heading_Y9MMVQ": {
-          "type": "heading",
-          "settings": {
-            "heading": "We are committed to breaking the authenticity barrier using refined sourced hardware",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h2"
-          }
-        },
         "text_7h6LaE": {
           "type": "text",
           "settings": {
-            "text": "<p>Since 1998, we've been pioneering the online headshop industry with expertly curated products and unmatched customer service.</p>",
-            "text_size": "text-base",
+            "text": "<p>Here at Grasscity, we’re proud to be part of a massive, diverse counterculture that’s taking the world by storm. Offering great smoking accessories is what we love, and what we do—our team works together to find the coolest, the best, and the newest smoking gear out there. Over the past twenty years, you’ve helped us grow Grasscity into the best online headshop in the world, with a thriving community forum of over half a million members. Want some recommendations on new gear? Want some tips on growing your own? Want to show off your greatest (or, worst, we don’t judge) tattoo? Head on over and introduce yourself.<br/><br/></p>",
+            "text_size": "text-lg",
             "text_line_limit": "none",
             "button_style": "btn--underline",
             "button_icon": "none"
@@ -186,7 +175,6 @@
         }
       },
       "block_order": [
-        "heading_Y9MMVQ",
         "text_7h6LaE"
       ],
       "custom_css": [
@@ -195,7 +183,7 @@
       ],
       "settings": {
         "container": "fixed",
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-6",
         "use_color_scheme_in_container": false,
         "content_spacing": "standard",
         "content_alignment": "center",
@@ -287,6 +275,7 @@
         "column_ikYHeg",
         "column_bTbVtm"
       ],
+      "disabled": true,
       "settings": {
         "container": "fixed",
         "color_scheme": "",
@@ -391,6 +380,7 @@
         "column_UmtTiC",
         "column_TU4gke"
       ],
+      "disabled": true,
       "name": "t:sections.multicolumn-with-icon.name",
       "settings": {
         "container": "fixed",
@@ -510,6 +500,7 @@
         "icon_with_text_gqTJYi",
         "button_Am3jaF"
       ],
+      "disabled": true,
       "custom_css": [
         ".image-with-text__content {max-width: 52rem;}"
       ],
@@ -526,6 +517,184 @@
         "divider_width": "full",
         "padding_top": 24,
         "padding_bottom": 24
+      }
+    },
+    "image_with_text_APMJiD": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_riVhPA": {
+          "type": "heading",
+          "settings": {
+            "heading": "A Brief History",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3"
+          }
+        },
+        "text_3XFia7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A long, long time ago (in internet time, at least), before Grasscity’s launch in 2000, was a little website called Coffeshop-Amsterdam. Its purpose was simple: to sell smoking accessories and provide tourist information about its beloved hometown of Amsterdam. But the site’s limited reach just wasn’t enough for us. To take its place, we founded Grasscity, a site that would become so much more than just an online headshop.</p>",
+            "subtext_color": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_riVhPA",
+        "text_3XFia7"
+      ],
+      "custom_css": [
+        ".image-with-text__content {max-width: 52rem;}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "image": "shopify://shop_images/gs_community_ab_v01_8f7d8ed9-ebfb-4634-81f0-b15a00c61449.webp",
+        "image_position": "right",
+        "image_width": 50,
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "inherit",
+        "show_section_divider": true,
+        "divider_width": "full",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "rich_text_VQdpin": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_tCjPWg": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Rising Tide",
+            "highlight_style": "none",
+            "highlight_font_style": "normal",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3"
+          }
+        },
+        "text_WwnDXa": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In 2018, Grasscity joined High Tide, a cannabis corporation from all the way in the great white north of Alberta, Canada. Our new family meant we could grow faster than ever before: with our foothold overseas, Grasscity can now operate from numerous warehouses in North America and Europe, giving us improved shipping times and a wider reach. What does that mean? More bongs, more pipes, more everything—and faster than ever before. With over 1 million parcels shipped in our lifetime, Grasscity is proud to call itself a major part of the culture’s swiftly rising tide.</p>",
+            "text_size": "text-lg",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_tCjPWg",
+        "text_WwnDXa"
+      ],
+      "custom_css": [
+        ".rich-text {max-width: 78rem; margin: 0 auto;}",
+        "@media (max-width: 1023px) {.rich-text__heading {max-width: 50rem; margin: 0 auto; }}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-4",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "center",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "image_with_text_GFmkfA": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_8hcLM7": {
+          "type": "heading",
+          "settings": {
+            "heading": "Grasscity Today",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3"
+          }
+        },
+        "text_WnDtpj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We love smoking, plain and simple. At Grasscity, it’s what we know best: we work together to search the globe for the best new smoking gear to get excited about. From <a href=\"https://www.grasscity.com/herb-grinders\">herb grinders </a>and <a href=\"https://www.grasscity.com/smoking-pipes\">smoking pipes </a>to roller papers to one of a kind <a href=\"https://www.grasscity.com/bongs/glass-bongs\">glass bongs</a>, you name it—we have it. We stay on top of what’s new on the scene, and we’re always expanding our selection. The brands we carry are tried and tested by not only us, but by the over 39,000 customers who have left us reviews. Take a look for yourself: browse <a href=\"https://www.grasscity.com/rolling-papers\">rolling papers </a>from brands like RAW and Bulldog, <a href=\"https://www.grasscity.com/vaporizers\">vaporizers </a>from Storz & Brickel and <a href=\"https://www.grasscity.com/brands/pax\">PAX</a>, and glass pieces from Vodka Glass, Snoop Dogg Pounds, <a href=\"https://www.grasscity.com/brands/cheech-and-chong\">Cheech and Chong Glass</a>, <a href=\"https://www.grasscity.com/brands/glasscity\">Glasscity</a>, Dopezilla, Famous Brandz, <a href=\"https://www.grasscity.com/brands/empire-glassworks\">Empire Glass</a>, Mountain Jam Glass, and many more. As smokers ourselves, we know what makes an online headshop great. We’ve watched, we’ve listened, and we’ve stepped up our game: we’ve worked hard to bring you bulk discounts, special coupons for members, discreet packaging, and free shipping! Any questions about what you’re buying, or having any issues? Contact our knowledgeable support team who know our product inside and out.</p>",
+            "subtext_color": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_8hcLM7",
+        "text_WnDtpj"
+      ],
+      "custom_css": [
+        ".image-with-text__content {max-width: 52rem;}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "image": "shopify://shop_images/gs_community_ab_v01_8f7d8ed9-ebfb-4634-81f0-b15a00c61449.webp",
+        "image_position": "left",
+        "image_width": 50,
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "inherit",
+        "show_section_divider": true,
+        "divider_width": "full",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "rich_text_jgViLm": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_b8WmfK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Grasscity Forums",
+            "highlight_style": "none",
+            "highlight_font_style": "normal",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3"
+          }
+        },
+        "text_nPWTeg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>With over 650,000 members, over 20 million posts, and more than 2 million impressions per month, the Grasscity forum is a place like no other. It’s a space where like-minded people come together not only to talk about smoking herbs, but about everything under the sun: movies, games, recipes, growing tips, funny smoking stories, and even their own art. We’re proud of our welcoming and vibrant community, and we moderate our forums to keep it a place of positivity and tolerance. Our community is always growing, and there’s always something new to share—what will your first post be?</p><h2>CBDcity.com</h2><p>We’re always looking to expand to new horizons. Enter <a href=\"https://cbdcity.com/\">CBDcity</a>, the newest member of the High Tide family. Launched in May 2020, CBDcity carries on the Grasscity spirit in the form of CBD exclusive products. It’s the newest (and definitely our favorite) online store for everything CBD, including <a href=\"https://cbdcity.com/collections/cbd-oil\" target=\"_blank\">CBD oils</a>, edibles, skincare products, vape oils, relief creams, and even pet products.</p><h2>Let’s get Social</h2><p>Like what we do? So do we—and so do our over 300,000 combined followers on Instagram, Facebook, Twitter, and YouTube. Looking for giveaways, contests, and notices on sweet deals? Head on over to our socials, give us a follow, and leave a few nice comments. Smoking isn’t the only way to make us feel all warm and fuzzy inside.</p>",
+            "text_size": "text-lg",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_b8WmfK",
+        "text_nPWTeg"
+      ],
+      "custom_css": [
+        ".rich-text {max-width: 78rem; margin: 0 auto;}",
+        "@media (max-width: 1023px) {.rich-text__heading {max-width: 50rem; margin: 0 auto; }}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-7",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "center",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_section_divider": false,
+        "divider_width": "fixed"
       }
     },
     "testimonials_T939Dc": {
@@ -582,10 +751,11 @@
         "testimonial_VMBf4p",
         "testimonial_BFwQ3p"
       ],
+      "disabled": true,
       "name": "t:sections.testimonials.name",
       "settings": {
         "container": "full",
-        "color_scheme": "scheme-6",
+        "color_scheme": "scheme-1",
         "section_header_alignment": "center",
         "section_header_alignment_mobile": "inherit",
         "subheading": "",
@@ -625,6 +795,7 @@
       "blocks": {
         "subheading_drcLTm": {
           "type": "subheading",
+          "disabled": true,
           "settings": {
             "subheading": "Our Commitment"
           }
@@ -632,7 +803,7 @@
         "heading_NaCR43": {
           "type": "heading",
           "settings": {
-            "heading": "We are committed to promoting responsible use and providing accurate information about our products.",
+            "heading": "The Grasscity Team",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
@@ -642,6 +813,7 @@
         },
         "text_6UcCEJ": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>Grasscity supports the legal cannabis industry and advocates for sensible regulations. Our products are intended for legal use only by adults in jurisdictions where permitted.<br/></p>",
             "text_size": "text-base"
@@ -656,7 +828,7 @@
       "name": "t:sections.image-with-text-overlay.name",
       "settings": {
         "container": "full",
-        "image": "shopify://shop_images/gs_commitment_ab_v01.webp",
+        "image": "shopify://shop_images/about_us_ready-15-1200px_new.webp",
         "desktop_height": "extra-medium",
         "overlay_opacity": 45,
         "enable_parallax": false,
@@ -712,6 +884,10 @@
     "multicolumn_36XTkC",
     "multicolumn_icon_gMDVjt",
     "image_with_text_DCXDtE",
+    "image_with_text_APMJiD",
+    "rich_text_VQdpin",
+    "image_with_text_GFmkfA",
+    "rich_text_jgViLm",
     "testimonials_T939Dc",
     "image_with_text_overlay_dDk78w",
     "rich_text_xaR67U"
