@@ -1253,8 +1253,14 @@
       color: #000000 !important;
       text-decoration: none;
     }
-    .open-register-popup:hover {
-      color: #fff !important;
+    .open-register-popup span {
+      color: #e1251c;
+    }
+    .open-login-popup span {
+      color: #ffffff;
+      &:hover {
+        color: #e1251c !important;
+      }
     }
     .section-btn .btn:before {
       z-index: -1;
@@ -1319,24 +1325,24 @@
       margin-bottom: 20px;
     }
   }
-  .c_d_gray {
-    background: #f8fafb;
-    color: #2d2e34;
-  }
-  .c_l_gray {
-    background: #ffffff;
-    color: #2d2e34;
-  }
-  .c_d_blue {
-    background: #031546;
-    color: #ffffff;
-  }
-  .c_l_blue {
-    background: #0f2153;
-    color: #ffffff;
-  }
   .choose-member-section {
     padding-block: 2rem;
+    .c_d_gray {
+      background: #f8fafb;
+      color: #2d2e34;
+    }
+    .c_l_gray {
+      background: #ffffff;
+      color: #2d2e34;
+    }
+    .c_d_blue {
+      background: #031546;
+      color: #ffffff;
+    }
+    .c_l_blue {
+      background: #0f2153;
+      color: #ffffff;
+    }
     .section-title {
       font-size: clamp(1.5rem, 4vw, 2rem);
       font-weight: 700;
