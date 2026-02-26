@@ -107,6 +107,7 @@
         "smoke_accessories_9NwhXn": {
           "type": "smoke_accessories",
           "settings": {
+            "image_here": "shopify://shop_images/buy-membership_IMG_2.png",
             "list_item_1": "FREE gifts",
             "list_item_2": "Sign-up accessory bonus coupon",
             "button_text": "Details",
@@ -117,6 +118,7 @@
         "smoke_accessories_JPtti3": {
           "type": "smoke_accessories",
           "settings": {
+            "image_here": "shopify://shop_images/buy-membership_IMG_3.png",
             "list_item_1": "FREE gifts",
             "list_item_2": "Sign-up accessory bonus coupon",
             "button_text": "Details",
@@ -127,6 +129,7 @@
         "smoke_accessories_NE8Fwc": {
           "type": "smoke_accessories",
           "settings": {
+            "image_here": "shopify://shop_images/buy-membership_IMG_4.png",
             "list_item_1": "FREE gift in your next subscription box",
             "list_item_2": "VIP early access to our bestseller",
             "button_text": "Details",
@@ -137,6 +140,7 @@
         "smoke_accessories_eHJbi8": {
           "type": "smoke_accessories",
           "settings": {
+            "image_here": "shopify://shop_images/buy-membership_IMG_5.png",
             "list_item_1": "FREE gifts",
             "list_item_2": "Sign- up accessory bonus coupon",
             "button_text": "Details",
@@ -147,6 +151,7 @@
         "cbd_wellness_ch3UzK": {
           "type": "cbd_wellness",
           "settings": {
+            "image_here": "shopify://shop_images/buy-membership_IMG_6.png",
             "list_item_1": "FREE Samples with every order",
             "list_item_2": "Free Gift with Coupon",
             "button_text": "Details",
@@ -156,6 +161,7 @@
         "cbd_wellness_PN4kKq": {
           "type": "cbd_wellness",
           "settings": {
+            "image_here": "shopify://shop_images/buy-membership_IMG_7.png",
             "list_item_1": "FREE Samples with every order",
             "list_item_2": "Free Gift with Coupon",
             "button_text": "Details",
@@ -165,6 +171,7 @@
         "cbd_wellness_KkLEH8": {
           "type": "cbd_wellness",
           "settings": {
+            "image_here": "shopify://shop_images/buy-membership_IMG_8.png",
             "list_item_1": "FREE Samples with every order",
             "list_item_2": "FREE Samples with every order",
             "button_text": "Details",
