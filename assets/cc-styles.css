@@ -1652,7 +1652,14 @@ input#product-add-to-cart {
 .desktop-only{
   display: block !important;
 }
-
+@media only screen and (max-width:768px){
+  .mobile-only{
+    display: block !important;
+  }
+  .desktop-only{
+    display: none !important;
+  }
+}
 @media (width < 768px) {
   .box-title {
     position: relative;
