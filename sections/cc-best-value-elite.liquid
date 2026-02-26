@@ -1,0 +1,122 @@
+<style>
+  .cc-mm-best-value-text h5 {
+    color: var(--Color-Neutral-Neutral-0, #fff);
+    font-size: var(--Type-h6, 18px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+</style>
+<section class="cc-mm-best-value-elite-section" id="cc-mm-best-value-elite-section">
+  <div class="cc-mm-best-value-elite-row">
+    <div class="saving-label">Best Value</div>
+    <div class="wrapper">
+      <div class="cc-mm-best-value-elite-wrap">
+        <div class="cc-mm-best-value-text">
+          <img src="{{ 'cc-elite-logo.png' | file_url }}" class="img-responsive">
+          <h5>Unlock <b>UNBELIEVABLE Savings,</b><br>
+            </br>Free Shipping & VIP Perks
+          </h5>
+          <img src="{{ section.settings.image | img_url:'master' }}" class="img-responsive desktop-hide">
+          <h3>Only <span style=" ">$30</span>
+            {% comment %} <span style="font-size: 2em; font-weight:bold; margin-left:4px;">$15/yr!</span> {% endcomment %}
+          </h3>
+          <div class="cc-mm-best-value-elite-buttons">
+            {% if customer.tags contains "elite_member" %}
+            {% comment %} <a href="javascript:alreadyMember('ELITE')"
+              class="cc-elite-button cc-mm-best-value-elite-btn1">{{ section.settings.btn_text_1 }}</a>
+            <a href="javascript:alreadyMember('ELITE')" class="cc-elite-button cc-mm-best-value-elite-btn2">{{
+              section.settings.btn_text_2 }}</a> {% endcomment %}
+            {% else %}
+            <a href="javascript:void(0);" data-id="{{ settings.elite_product.selected_or_first_available_variant.id }}"
+              class="{% if customer.tags contains 'elite_member' %} cc-already-elite-member {% elsif customer %} SSO_popup_elite_upgrade {% else %} SSO_popup_elite_join {% endif %} cc-elite-button cc-mm-best-value-elite-btn1">
+              {{ section.settings.btn_text_1 }}
+            </a>
+            <a href="javascript:void(0);" data-id="{{ settings.elite_product.selected_or_first_available_variant.id }}"
+              class="{% if customer.tags contains 'elite_member' %} cc-already-elite-member {% elsif customer %} SSO_popup_elite_upgrade {% else %} SSO_popup_elite_join {% endif %} cc-elite-button cc-mm-best-value-elite-btn2">
+              {{ section.settings.btn_text_2 }}
+            </a>
+            {% endif %}
+          </div>
+        </div>
+        <div class="cc-mm-best-value-image">
+          <img src="{{ section.settings.image | img_url:'master' }}" class="img-responsive mobile-hide">
+        </div>
+      </div>
+      <div class="cc-mm-best-value-props">
+        <ul>
+          <li>
+            <img src="{{ 'cc-tag1.png' | file_url }}" class="img-responsive">
+            <span>
+              <b>Exclusive ELITE Prices</b>
+              Unlock UNBELIEVABLE savings
+            </span>
+          </li>
+          <li>
+            <img src="{{ 'cc-tag2.png' | file_url }}" class="img-responsive">
+            <span>
+              <b>FREE Shipping &amp; Returns*</b>
+              Shop with confidence
+            </span>
+          </li>
+          <li>
+            <img src="{{ 'cc-tag3.png' | file_url }}" class="img-responsive">
+            <span>
+              <b>FREE Gifts</b>
+              With select purchases*
+            </span>
+          </li>
+          <li>
+            <img src="{{ 'cc-tag4.png' | file_url }}" class="img-responsive">
+            <span>
+              <b>ELITE Exclusive Accessories</b>
+              The latest &amp; greatest gear
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "<> Best Value",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image Here"
+    },
+    {
+      "type": "text",
+      "label": "Button Text 1",
+      "id": "btn_text_1",
+      "default": "IT’S A NO BRAINER - that’s $1.25/mo*"
+    },
+    {
+      "type": "url",
+      "label": "Button Link 1",
+      "id": "btn_url_1"
+    },
+    {
+      "type": "text",
+      "label": "Button Text 2",
+      "id": "btn_text_2",
+      "default": "Join ELITE"
+    },
+    {
+      "type": "url",
+      "label": "Button Link 2",
+      "id": "btn_url_2"
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> Best Value",
+    }
+  ]
+}
+{% endschema %}
