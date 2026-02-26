@@ -277,23 +277,74 @@
         "padding_bottom": 60
       }
     },
-    "611c152c19abd2120ae5": {
-      "type": "apps",
+    "tabs_content_8rnbnj": {
+      "type": "tabs-content",
       "blocks": {
-        "75fc4503-d65a-4a0c-a089-80f44f7b61c2": {
-          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+        "tab_cHq7bL": {
+          "type": "tab",
+          "name": "Description",
           "settings": {
-            "product": "{{product}}"
+            "navigation_title": "Description",
+            "content": "<p>{{ product.description }}</p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "image_with_text_LQUEir": {
+          "type": "image_with_text",
+          "settings": {
+            "navigation_title": "About Brand",
+            "image": "shopify://shop_images/gs_timeline-3_ab_v01_e7b9858d-4861-4186-8738-fb3a636287e8.webp",
+            "desktop_image_position": "left",
+            "image_aspect_ratio": "adapt",
+            "heading": "<strong>The World's Best Online Smoke shop</strong>",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3",
+            "subheading": "<strong>About Grasscity.com</strong>",
+            "description": "<p>Here at Grasscity, we’re proud to be part of a massive, diverse counterculture that’s taking the world by storm. Offering great smoking accessories is what we love, and what we do—our team works together to find the coolest, the best, and the newest smoking gear out there. Over the past twenty years, you’ve helped us grow Grasscity into the best online headshop in the world, with a thriving community forum of over half a million members. Want some recommendations on new gear? Want some tips on growing your own? Want to show off your greatest (or, worst, we don’t judge) tattoo? Head on over and introduce yourself.<br/><br/></p>",
+            "description_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "icon_1": "check",
+            "heading_1": "",
+            "icon_2": "check",
+            "heading_2": "",
+            "icon_3": "check",
+            "heading_3": ""
+          }
+        },
+        "tab_xGBJeM": {
+          "type": "tab",
+          "settings": {
+            "navigation_title": "Shipping & Return",
+            "content": "",
+            "custom_liquid": "",
+            "page": "easy-returns"
           }
         }
       },
       "block_order": [
-        "75fc4503-d65a-4a0c-a089-80f44f7b61c2"
+        "tab_cHq7bL",
+        "image_with_text_LQUEir",
+        "tab_xGBJeM"
+      ],
+      "custom_css": [
+        "@media (min-width: 1024px) {.tabs__panel {padding-inline: 5rem; }}"
       ],
       "settings": {
-        "include_margins": true,
-        "padding_top": 0,
-        "padding_bottom": 0
+        "container": "fixed",
+        "color_scheme": "",
+        "navigation_style": "headings",
+        "navigation_alignment": "start",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "show_section_divider": false,
+        "divider_width": "fixed"
       }
     },
     "testimonials_8JHr3L": {
@@ -387,76 +438,6 @@
         "show_progress_bar": true,
         "padding_top": 60,
         "padding_bottom": 60,
-        "show_section_divider": false,
-        "divider_width": "fixed"
-      }
-    },
-    "tabs_content_8rnbnj": {
-      "type": "tabs-content",
-      "blocks": {
-        "tab_cHq7bL": {
-          "type": "tab",
-          "name": "Description",
-          "settings": {
-            "navigation_title": "Description",
-            "content": "<p>{{ product.description }}</p>",
-            "custom_liquid": "",
-            "page": ""
-          }
-        },
-        "image_with_text_LQUEir": {
-          "type": "image_with_text",
-          "settings": {
-            "navigation_title": "About Brand",
-            "image": "shopify://shop_images/gs_timeline-3_ab_v01_e7b9858d-4861-4186-8738-fb3a636287e8.webp",
-            "desktop_image_position": "left",
-            "image_aspect_ratio": "adapt",
-            "heading": "<strong>The World's Best Online Smoke shop</strong>",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h3",
-            "subheading": "<strong>About Grasscity.com</strong>",
-            "description": "<p>Here at Grasscity, we’re proud to be part of a massive, diverse counterculture that’s taking the world by storm. Offering great smoking accessories is what we love, and what we do—our team works together to find the coolest, the best, and the newest smoking gear out there. Over the past twenty years, you’ve helped us grow Grasscity into the best online headshop in the world, with a thriving community forum of over half a million members. Want some recommendations on new gear? Want some tips on growing your own? Want to show off your greatest (or, worst, we don’t judge) tattoo? Head on over and introduce yourself.<br/><br/></p>",
-            "description_size": "text-base",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "btn--primary",
-            "button_icon": "none",
-            "icon_1": "check",
-            "heading_1": "",
-            "icon_2": "check",
-            "heading_2": "",
-            "icon_3": "check",
-            "heading_3": ""
-          }
-        },
-        "tab_xGBJeM": {
-          "type": "tab",
-          "settings": {
-            "navigation_title": "Shipping & Return",
-            "content": "",
-            "custom_liquid": "",
-            "page": "easy-returns"
-          }
-        }
-      },
-      "block_order": [
-        "tab_cHq7bL",
-        "image_with_text_LQUEir",
-        "tab_xGBJeM"
-      ],
-      "custom_css": [
-        "@media (min-width: 1024px) {.tabs__panel {padding-inline: 5rem; }}"
-      ],
-      "settings": {
-        "container": "fixed",
-        "color_scheme": "",
-        "navigation_style": "headings",
-        "navigation_alignment": "start",
-        "padding_top": 30,
-        "padding_bottom": 30,
         "show_section_divider": false,
         "divider_width": "fixed"
       }
@@ -970,9 +951,8 @@
   "order": [
     "breadcrumbs",
     "main",
-    "611c152c19abd2120ae5",
-    "testimonials_8JHr3L",
     "tabs_content_8rnbnj",
+    "testimonials_8JHr3L",
     "1771840058d6f946be",
     "multicolumn_Mxt4d3",
     "quick_comparison_table_p9rdxW",
