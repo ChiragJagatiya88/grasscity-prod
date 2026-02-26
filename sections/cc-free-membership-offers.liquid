@@ -1,0 +1,125 @@
+<section class="cc-mm-instant-saving-free-section" id="cc-mm-instant-saving-free-section">
+  <div class="cc-mm-instant-saving-free-row">
+    <div class="saving-label">Free</div>
+    <div class="wrapper">
+      <div class="cc-mm-instant-saving-free-wrap">
+        <div class="cc-mm-instant-saving-text">
+          <img src="{{ 'cc-logo.png' | file_url }}" class="img-responsive" width="100px" height="105px">
+          <p>Access <b>UNBEATABLE Member Prices</b> Storewide</p>
+          {% unless customer %}
+            <a href="javascript:void(0)" class="cc-secondary-button SSO_popup_register">
+              {{- section.settings.btn_text -}}
+            </a>
+          {% endunless %}
+        </div>
+        <div class="cc-mm-instant-saving-free-products">
+          <div class="splide cc-products-slider">
+            <div class="splide__track">
+              <div class="splide__list">
+                {% for product in section.settings.collection_id.products %}
+                  <div class="splide__slide">
+                    <a href="{{ product.url }}" class="cc-mm-instant-saving-free-product-card">
+                      <img
+                        src="{{ product.featured_image | img_url:'master' }}"
+                        class="img-responsive cc-mm-instant-saving-free-product-card-img"
+                      >
+                      <h3>{{ product.title }}</h3>
+                      <table class="price-table">
+                        <tr>
+                          <td class="market-cell">
+                            <strong>Market</strong>
+                            <span class="price">{{ product.price | money }}</span>
+                          </td>
+                          <td class="member-cell active">
+                            <strong>Member</strong>
+                            <span class="price">{{ product.metafields.custom.member_price | times: 100 | money }}</span>
+                          </td>
+                        </tr>
+                      </table>
+                      <div class="cc-mm-instant-saving-free-product-card-emoji">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="65"
+                          height="65"
+                          viewBox="0 0 65 65"
+                          fill="none"
+                        >
+                          <g id="Layer 2">
+                              <g id="Filled">
+                                  <g id="39.Surprise">
+                                      <path id="Background"
+                                          d="M25.6167 58.0184C39.7643 61.7657 54.2711 53.3346 58.0184 39.1869C61.7658 25.0392 53.3346 10.5325 39.1869 6.78514C25.0393 3.03781 10.5325 11.469 6.78517 25.6166C3.03785 39.7643 11.469 54.2711 25.6167 58.0184Z"
+                                          fill="url(#paint0_radial_15_4834)" />
+                                      <g id="Face">
+                                          <path id="Mouth"
+                                              d="M27.6651 50.285C32.2031 51.487 37.0281 48.1335 38.4422 42.7947C39.8563 37.456 37.3239 32.1537 32.786 30.9517C28.2481 29.7497 23.423 33.1032 22.0089 38.442C20.5948 43.7807 23.1272 49.083 27.6651 50.285Z"
+                                              fill="url(#paint1_linear_15_4834)" />
+                                          <path id="Vector"
+                                              d="M42.6863 29.9393C44.9805 30.547 47.4151 28.8698 48.124 26.1932C48.833 23.5166 47.5479 20.8542 45.2537 20.2465C42.9594 19.6389 40.5249 21.316 39.8159 23.9926C39.107 26.6692 40.3921 29.3316 42.6863 29.9393Z"
+                                              fill="#1C355E" />
+                                          <path id="Vector_2"
+                                              d="M24.6853 25.1714C26.9795 25.779 29.4141 24.1019 30.1231 21.4253C30.832 18.7487 29.5469 16.0863 27.2527 15.4786C24.9585 14.8709 22.5239 16.5481 21.815 19.2247C21.106 21.9013 22.3911 24.5637 24.6853 25.1714Z"
+                                              fill="#1C355E" />
+                                      </g>
+                                  </g>
+                              </g>
+                          </g>
+                          <defs>
+                              <radialGradient id="paint0_radial_15_4834" cx="0" cy="0" r="1"
+                                  gradientUnits="userSpaceOnUse"
+                                  gradientTransform="translate(35.5193 20.632) rotate(104.835) scale(38.6757)">
+                                  <stop offset="0.52" stop-color="#FFDC63" />
+                                  <stop offset="1" stop-color="#FF9220" />
+                              </radialGradient>
+                              <linearGradient id="paint1_linear_15_4834" x1="27.6651"
+                                  y1="50.285" x2="32.786" y2="30.9517"
+                                  gradientUnits="userSpaceOnUse">
+                                  <stop stop-color="#9C5929" />
+                                  <stop offset="1" stop-color="#361F0E" />
+                              </linearGradient>
+                          </defs>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="pricing-section-scoll-behavior" class="cc-mm-offer-note">
+        Prices shown are for illustrative purposes only, actual prices may vary. While supplies last.
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "<> Free Membership Offer",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection_id",
+      "label": "Collection Here"
+    },
+    {
+      "type": "text",
+      "label": "Button Text",
+      "id": "btn_text",
+      "default": "Join Cabana Club"
+    },
+    {
+      "type": "url",
+      "label": "Button Link",
+      "id": "btn_url"
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> Free Membership Offer"
+    }
+  ]
+}
+{% endschema %}
