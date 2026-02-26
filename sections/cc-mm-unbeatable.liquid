@@ -1,0 +1,43 @@
+<section class="cc-mm-unbeatable-section" id="cc-mm-unbeatable-section">
+  <div class="cc-mm-unbeatable-row">
+    <div class="wrapper">
+      <div class="cc-mm-unbeatable-wrap">
+        {% if section.settings.image != blank %}
+        <img src="{{ section.settings.image | img_url:'master' }}" alt="Unbeatable Image" class="img-responsive">
+        {% endif %}
+        <h3>{{ section.settings.heading }}</h3>
+        <p>{{ section.settings.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "<> MM Unbeatable",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Membership Terms & Conditions"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "To be Defined By Compliance"
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> MM Unbeatable"
+    }
+  ]
+}
+{% endschema %}
