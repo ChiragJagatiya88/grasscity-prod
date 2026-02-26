@@ -1,0 +1,172 @@
+{% comment %} Club Banner {% endcomment %}
+<style>
+  .cc-join-membership-info {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    padding: 30px 0 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    background: #1f1f1f;
+    /* Background color */
+  }
+
+  /* Lines on both sides */
+  .cc-join-membership-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: white;
+    max-width: 100px;
+  }
+
+  /* Mobile Version: Lines above & below */
+  @media (max-width: 768px) {
+    .cc-join-membership-info {
+      flex-direction: column;
+      gap: 5px;
+      padding: 25px 0 10px;
+    }
+
+    .cc-join-membership-line {
+      width: 80%;
+      max-width: 200px;
+      display: block !important;
+    }
+
+    .cc-join-banner-row2 .center-mbl {
+      text-align: center;
+    }
+  }
+
+  /* Desktop Version: Lines on both sides */
+  @media (min-width: 769px) {
+    .cc-join-membership-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cc-join-membership-line {
+      display: block !important;
+      flex-grow: 1;
+      /* Makes sure both left & right sides are balanced */
+      height: 2px;
+      background-color: white;
+      max-width: 150px;
+    }
+  }
+
+  .members__count {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+</style>
+{% unless customer %}
+  <section class="cc-join-banner-section" id="cc-join-banner-section">
+    <div class="container mx-auto items-center py-2 lg:py-0 px-2 md:px-3">
+      <div class="cc-join-banner-wrap">
+        <div class="cc-join-banner">
+          <div class="cc-join-banner-row1 page-width">
+            <div class="cc-join-banner-row1_inner">
+              <div class="cc-join-banner-logo">
+                <img
+                  src="{{ 'cc-logo.webp' | file_url }}"
+                  class="img-responsive"
+                  width="100px"
+                  height="105px"
+                  alt="Cabana Club Logo"
+                  loading="lazy"
+                >
+              </div>
+              <div class="cc-join-banner-description">
+                <p class="h3"><strong>Lowest Price Guaranteed*</strong></p>
+                <p>We Don't Just Price Match, We <b>Price BEAT</b> by 5%</p>
+              </div>
+              <div class="cc-join-banner-buttons flex flex-col md:flex-row gap-2">
+                <a
+                  href="javascript:void(0)"
+                  class="cc-secondary-button SSO_popup_register"
+                  role="button"
+                  >Join Now</a
+                >
+                <a href="/pages/membership" class="cc-primary-button">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cc-join-membership-info">
+            <div class="cc-join-membership-line"></div>
+            <p class="members__count h3">6.15M MEMBERS WORLDWIDE!</p>
+            <div class="cc-join-membership-line mobile-line"></div>
+          </div>
+
+          <div class="cc-join-banner-row2 page-width">
+            <div class="cc-join-banner-row2_inner">
+              <p class="center-mbl white h5">
+                One Simple Login<br>
+                The Only Membership You'll Need!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endunless %}
+{% comment %} Elite Banner {% endcomment %}
+{% if customer and customer.tags contains 'club_member' %}
+  <section class="cc-elite-join-banner-section" id="cc-elite-join-banner-section">
+    <div class="lg:container mx-auto items-center py-2 lg:py-0 px-2 md:px-3">
+      <div class="cc-join-banner-wrap">
+        <div class="cc-join-banner">
+          <div class="cc-join-banner-row1 page-width">
+            <div class="cc-join-banner-row1_inner">
+              <div class="cc-join-banner-logo">
+                <img
+                  src="{{ 'cc-elite-logo.webp' | file_url }}"
+                  class="img-responsive"
+                  alt="Elite Logo"
+                >
+              </div>
+              <div class="cc-join-banner-description">
+                <h3>Upgrade &amp; Unlock UNBELIEVABLE Savings, FREE Shipping &amp; VIP Perks!</h3>
+              </div>
+              <div class="cc-join-banner-buttons flex flex-col md:flex-row gap-2">
+                <a
+                  href="javascript:void(0)"
+                  role="button"
+                  data-id="{{ settings.elite_product.selected_or_first_available_variant.id }}"
+                  class="{% if customer.tags contains 'elite_member' %}cc-already-elite-member {% else %}SSO_popup_elite_upgrade {% endif %}cc-elite-button cc-elite-button"
+                  >Upgrade</a
+                >
+                <a
+                  href="/pages/membership"
+                  class="cc-primary-button"
+                  style="background-color: transparent"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="cc-join-banner-row2 page-width" style="padding-top: 20px">
+            <div class="cc-join-banner-row2_inner">
+              <p class="center-mbl white h5">
+                One Simple Login<br>
+                The Only Membership You'll Need!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endif %}
+{% schema %}
+{ "name": "Join Banner", "settings": [], "presets": [{ "name": "Join Banner", "category": "US Custom" }] }
+{% endschema %}
