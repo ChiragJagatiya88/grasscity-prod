@@ -58,6 +58,12 @@
           "type": "price",
           "settings": {}
         },
+        "f5d48049-8bc0-4495-b387-ccd2dfaca68b": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
         "icon_with_text": {
           "type": "icon-with-text",
           "settings": {
@@ -219,12 +225,6 @@
             "show_dynamic_checkout_buttons": false,
             "show_quantity": true
           }
-        },
-        "f5d48049-8bc0-4495-b387-ccd2dfaca68b": {
-          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "{{product}}"
-          }
         }
       },
       "block_order": [
@@ -266,6 +266,25 @@
         "enable_video_looping": true,
         "padding_top": 0,
         "padding_bottom": 60
+      }
+    },
+    "611c152c19abd2120ae5": {
+      "type": "apps",
+      "blocks": {
+        "75fc4503-d65a-4a0c-a089-80f44f7b61c2": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "75fc4503-d65a-4a0c-a089-80f44f7b61c2"
+      ],
+      "settings": {
+        "include_margins": true,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "testimonials_8JHr3L": {
@@ -398,27 +417,28 @@
           "type": "image_with_text",
           "settings": {
             "navigation_title": "About Brand",
+            "image": "shopify://shop_images/gs_timeline-3_ab_v01_e7b9858d-4861-4186-8738-fb3a636287e8.webp",
             "desktop_image_position": "left",
             "image_aspect_ratio": "adapt",
-            "heading": "Danish Design With Global Outlook",
+            "heading": "<strong>The World's Best Online Smoke shop</strong>",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
             "heading_size": "h3",
-            "subheading": "",
-            "description": "<p>The good design concepts at the heart of Danish design are functionality, beauty and the needs of the many. This is a strong tradition. And when a tradition is strong enough, it leaves room for innovation that allows us to always move forward.</p>",
+            "subheading": "<strong>About Grasscity.com</strong>",
+            "description": "<p>Here at Grasscity, we’re proud to be part of a massive, diverse counterculture that’s taking the world by storm. Offering great smoking accessories is what we love, and what we do—our team works together to find the coolest, the best, and the newest smoking gear out there. Over the past twenty years, you’ve helped us grow Grasscity into the best online headshop in the world, with a thriving community forum of over half a million members. Want some recommendations on new gear? Want some tips on growing your own? Want to show off your greatest (or, worst, we don’t judge) tattoo? Head on over and introduce yourself.<br/><br/></p>",
             "description_size": "text-base",
-            "button_label": "Shop More Products",
+            "button_label": "",
             "button_link": "",
             "button_style": "btn--primary",
             "button_icon": "none",
             "icon_1": "check",
-            "heading_1": "Heading",
+            "heading_1": "",
             "icon_2": "check",
-            "heading_2": "Heading",
+            "heading_2": "",
             "icon_3": "check",
-            "heading_3": "Heading"
+            "heading_3": ""
           }
         },
         "tab_xGBJeM": {
@@ -953,23 +973,6 @@
         "divider_width": "fixed",
         "padding_top": 60,
         "padding_bottom": 60
-      }
-    },
-    "611c152c19abd2120ae5": {
-      "type": "apps",
-      "blocks": {
-        "75fc4503-d65a-4a0c-a089-80f44f7b61c2": {
-          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "{{product}}"
-          }
-        }
-      },
-      "block_order": [
-        "75fc4503-d65a-4a0c-a089-80f44f7b61c2"
-      ],
-      "settings": {
-        "include_margins": true
       }
     }
   },
