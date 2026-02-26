@@ -68,6 +68,15 @@
         "btn_text_2": "Join ELITE",
         "btn_url_2": ""
       }
+    },
+    "cc_elite_membership_offers_QtBxRi": {
+      "type": "cc-elite-membership-offers",
+      "name": "<> Elite Membership Offer",
+      "settings": {
+        "collection_id": "elite-membership",
+        "btn_text": "Join Elite",
+        "btn_url": ""
+      }
     }
   },
   "order": [
@@ -75,6 +84,7 @@
     "cc_mm_hero_banner_pef9YT",
     "cc_mm_instant_savings_bCNfNU",
     "cc_free_membership_offers_nbW6Yy",
-    "cc_best_value_elite_N4AP3N"
+    "cc_best_value_elite_N4AP3N",
+    "cc_elite_membership_offers_QtBxRi"
   ]
 }
