@@ -31,10 +31,28 @@
         "button_secondary_text": "Join Now",
         "button_secondary_link": ""
       }
+    },
+    "cc_mm_instant_savings_bCNfNU": {
+      "type": "cc-mm-instant-savings",
+      "name": "<> Instant Savings",
+      "settings": {
+        "heading": "No Points, No Hassle - Get Instant Savings at Grasscity",
+        "heading_font_size": 24,
+        "description": "<p>\n  Join <strong class=\"\" style=\"color: #e1251c\">Cabana Club</strong> for FREE or\n  upgrade your\n  <strong class=\"\" style=\"color: #e1251c\">UNBEATABLE prices</strong> to\n  <strong>UNBELIEVABLE savings</strong> with an\n  <strong>ELITE</strong> Membership!\n</p>",
+        "description_font_size": 16,
+        "button_primary_text": "Join Now",
+        "button_primary_link": "",
+        "button_secondary_text": "Sign In",
+        "button_secondary_link": "",
+        "button_font_size": 14,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
     "main",
-    "cc_mm_hero_banner_pef9YT"
+    "cc_mm_hero_banner_pef9YT",
+    "cc_mm_instant_savings_bCNfNU"
   ]
 }
