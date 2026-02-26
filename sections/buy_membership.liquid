@@ -544,7 +544,7 @@
 <div class="member-offer-section page-width page-width--fixed">
   <div class="page-main">
     <div class="section_top">
-      <div style="color: #e1251c" class="highlight">One Simple Login</div>
+      <div class="highlight">One Simple Login</div>
       <div class="section-title">The Only Membership You Need!</div>
       <div class="section-subtitle">
         Shop top smoking accessory &amp; CBD sites with the
@@ -1481,10 +1481,29 @@
     }
   }
   .member-offer-section {
+    padding-block: 30px;
     .section_top {
       text-align: center;
+      .highlight {
+        padding: 4px 32px;
+        font-size: 18px;
+        line-height: 1.2;
+        background: #e1251c;
+        color: #ffffff;
+        display: inline-flex;
+        border-radius: 50px;
+      }
+      .section-title {
+        font-size: 28px;
+        margin-block: 10px;
+        font-weight: 600;
+      }
+      .section-subtitle {
+        color: #2d2e34;
+      }
     }
   }
+
   @media screen and (max-width: 767px) {
     .desk_view {
       display: none;
