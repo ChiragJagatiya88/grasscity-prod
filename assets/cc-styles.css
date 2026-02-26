@@ -1646,6 +1646,10 @@ input#product-add-to-cart {
   position: relative;
 }
 
+.mobile-only {
+  display: none !important;
+}
+
 @media (width < 768px) {
   .box-title {
     position: relative;
