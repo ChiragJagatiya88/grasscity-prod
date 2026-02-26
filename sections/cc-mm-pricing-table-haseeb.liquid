@@ -123,11 +123,10 @@
               </li>
               <li class="cc-mm-pricing-footer">
                 <span>
-                  Only
+                  {% comment %} Only {% endcomment %}
                   {% comment %} <span style=" ">$30</span><span style="margin-left:4px;"></span> {% endcomment %}
                   <span style="font-size: 2em; font-weight: bold;">$30</span><span style="font-weight:bold;">/yr!</span>
-                </span>
-                {% comment %} <span class="cc-mm-multi-gradient">Limited Time Only</span> {% endcomment %}
+                  {% comment %} <span class="cc-mm-multi-gradient">Limited Time Only</span> {% endcomment %}
                 </span>
                 {% if customer.tags contains "elite_member" %}
                 {% comment %} <a href="javascript:alreadyMember('ELITE')"
