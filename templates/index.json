@@ -175,7 +175,7 @@
         "slide_JhU8hg"
       ],
       "settings": {
-        "container": "fixed",
+        "container": "full",
         "slide_height": "adapt",
         "show_controls": true,
         "autoplay": true,
