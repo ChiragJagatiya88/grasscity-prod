@@ -1,0 +1,157 @@
+<section class="cc-mm-pricing-section" id="cc-mm-pricing-section">
+  <div class="cc-mm-pricing-row">
+    <div class="wrapper">
+      <div class="cc-mm-pricing-wrap">
+        <h3 class="cc-section-main-title">Choose Your Membership & Start Saving!</h3>
+        <div class="cc-mm-pricing-table-columns">
+          <div class="cc-mm-pricing-table cc-mm-pricing-table-free">
+            <ul>
+              <li class="cc-mm-pricing-head">
+                <img src="{{ 'cc-colorful-logo.png' | file_url }}" class="img-responsive">
+                FREE
+                {% unless customer %}
+                  <a href="#" class="SSO_popup_register cc-primary-button">Join Cabana Club</a>
+                {% endunless %}
+              </li>
+              <li>Access to <b>Member Prices</b> on 7 Sites</li>
+              <li><b>Free Shipping</b> on Orders <b>Over $50 </b></li>
+              <li>-</li>
+              <li>-</li>
+              <li>-</li>
+              <li>-</li>
+              <li>-</li>
+              <li>-</li>
+              <li>Exclusive Discounts at Brands You Love</li>
+              <li>Eligible to Enter <a href="https://cabanaclubusa.com/quarterly-giveaway/">Quarterly Giveaway</a></li>
+              <li>-</li>
+              <li>-</li>
+              <li>-</li>
+              <li>-</li>
+              <li>-</li>
+              <li>-</li>
+              <li>-</li>
+              <li>-</li>
+              <li>-</li>
+              <li>-</li>
+              <li>-</li>
+              <li>-</li>
+              <li>-</li>
+              <li>-</li>
+              <li>-</li>
+              <li>-</li>
+              <li class="cc-mm-pricing-footer">
+                FREE
+                {% unless customer %}
+                  <a href="#" class="SSO_popup_register cc-primary-button">Join Cabana Club</a>
+                {% endunless %}
+              </li>
+            </ul>
+          </div>
+          <div class="cc-mm-pricing-table cc-mm-pricing-table-elite">
+            <div class="cc-mm-pricing-table-elite-tape">Best Value</div>
+            <ul>
+              <li class="cc-mm-pricing-head">
+                <img src="{{ 'cc-elite-logo.png' | file_url }}" class="img-responsive">
+<span>
+  Only 
+  <span style=" ">$30</span><span style="margin-left:4px;"></span>
+  {% comment %} <span style="font-size: 2em; font-weight: bold;">$15</span><span style="font-weight:bold;">/yr!</span> {% endcomment %}
+</span>
+
+
+                {% if customer.tags contains "elite_member" %}
+                  {% comment %} <a href="javascript:alreadyMember('ELITE')" class="cc-elite-button cc-mm-best-value-elite-btn1">Join ELITE</a> {% endcomment %}
+                {% else %}
+                    <a href="#" data-id="{{ settings.elite_product.selected_or_first_available_variant.id }}"
+                        class="{% if customer.tags contains "club_member" %}SSO_popup_elite_upgrade {% else %}SSO_popup_elite_join {% endif %} cc-elite-button mobile-hide">
+                    Join ELITE
+                  </a>
+                {% endif %}
+              </li>
+              <li>Access to <b>ELITE Prices</b> on 7 Sites! (Maximum Savings)</li>
+              <li><b>FREE Shipping</b> on <b>All Orders</b></li>
+              <li><b>FREE</b> Returns</li>
+              <li><b>FREE</b> Gifts</li>
+              <li>Sign Up Bonus Coupons</li>
+              <li>Early Access to Sales & Launches</li>
+              <li>ELITE Exclusive Accessories & CBD Products</li>
+              <li>Birthday Rewards Coupon</li>
+              <li>Exclusive Discounts at Brands You Love</li>
+              <li>Automatic Entry in <a href="https://cabanaclubusa.com/quarterly-giveaway/">Quarterly Giveaway</a></li>
+              <li>
+                <b>FREE Accessory Gifts</b> with Every Purchase of Select Brands on Grasscity.com, Smokecartel.com,
+                Dankstop.com
+              </li>
+              <li><b>Exclusive Early Access</b> to Daily High Club's 420 Deluxe Box</li>
+              <li>
+                <b>FREE CBD Samples with Every Order</b> Available at NuleafNaturals.com, FabCBD.com, BlessedCBD.co.uk
+              </li>
+              <li>
+                <b class="cc-mm-multi-gradient">ELITE EXCLUSIVE SIGN UP BONUS COUPONS</b>
+              </li>
+              <li>
+                <b>Dankstop.com Coupon</b><br>
+                Nucleus 14in. Beaker Bong for Only $9.99 <s>$69.99</s>
+Save $60.00!
+              </li>
+              <li>
+                <b>SmokeCartel.com Coupon</b><br>
+                20% OFF Pax Mini & Pax Plus Vaporizers + FREE Puck Press
+              </li>
+              <li>
+                <b>Grasscity.com Coupon</b><br>
+                Glasscity Beaker Ice bong with Double Tree Perc for
+                Only $39.99 <s>$149.99</s> - Save $110!
+              </li>
+              <li>
+                <b>FREE Gift on DailyHighClub.com</b><br>
+                FREE Water Pipe Included on your Next El Primo Box Subscription Order ($50 Value)
+              </li>
+              <li>
+                <b>FREE Gift on NuleafNaturals.com</b><br>
+               300 mg CBD Oil (5 mL) FREE with Coupon ($24 Value!)
+              </li>
+              <li>
+                <b>FREE Gift on FABCBD.com</b>   <br>
+                600 mg CBD Tincture FREE with Coupon ($45 Value!)
+              </li>
+              <li>
+                <b>FREE Gift on BlessedCBD.co.uk </b><br>
+                500 mg CBD Oil FREE with Coupon (£34.95 Value!)
+              </li>
+              <li class="cc-mm-pricing-footer">
+                <span>
+  Only 
+  <span style=" ">$30</span><span style="margin-left:4px;"></span>
+  {% comment %} <span style="font-size: 2em; font-weight: bold;">$15</span><span style="font-weight:bold;">/yr!</span> {% endcomment %}
+</span>
+                  {% comment %} <span class="cc-mm-multi-gradient">Limited Time Only</span> {% endcomment %}
+                </span>
+                {% if customer.tags contains "elite_member" %}
+                  {% comment %} <a href="javascript:alreadyMember('ELITE')" class="cc-elite-button cc-mm-best-value-elite-btn1">Join ELITE</a> {% endcomment %}
+                {% else %}
+                    <a href="#" data-id="{{ settings.elite_product.selected_or_first_available_variant.id }}"
+                        class="{% if customer.tags contains "club_member" %}SSO_popup_elite_upgrade {% else %}SSO_popup_elite_join {% endif %} cc-elite-button">
+                    Join ELITE
+                  </a>
+                {% endif %}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "<> MM Pricing Table",
+  "settings": [],
+  "presets": [
+    {
+      "name": "<> MM Pricing Table"
+    }
+  ]
+}
+{% endschema %}
