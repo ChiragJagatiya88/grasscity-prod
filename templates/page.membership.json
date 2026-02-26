@@ -9,16 +9,6 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "container": "fixed",
-        "text_alignment": "center",
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
     "cc_mm_hero_banner_pef9YT": {
       "type": "cc-mm-hero-banner",
       "name": "<> Hero Banner",
@@ -80,7 +70,6 @@
     }
   },
   "order": [
-    "main",
     "cc_mm_hero_banner_pef9YT",
     "cc_mm_instant_savings_bCNfNU",
     "cc_free_membership_offers_nbW6Yy",
