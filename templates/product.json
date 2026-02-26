@@ -385,32 +385,14 @@
     "tabs_content_8rnbnj": {
       "type": "tabs-content",
       "blocks": {
-        "image_with_text_iLTdLe": {
-          "type": "image_with_text",
+        "tab_cHq7bL": {
+          "type": "tab",
+          "name": "Specifications",
           "settings": {
             "navigation_title": "Specifications",
-            "image": "shopify://shop_images/gs_product_specifications_ab_v01.webp",
-            "desktop_image_position": "left",
-            "image_aspect_ratio": "adapt",
-            "heading": "Inspired to create a chair where the back and arms are moulded from a single piece of plywood",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h3",
-            "subheading": "",
-            "description": "<p>Inspired to create a chair where the back and arms are moulded from a single piece of plywood, Hecht and Colin describe employing a process similar to that a tailor might use to cut a pattern in fabric. This approach resulted in the beautiful structure wherein the moulded back and arms component is supported by a simple A-frame wood dowel construction. One of the benefits of this design is an increase in comfort due to natural movement in the plywood back.</p>",
-            "description_size": "text-base",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "btn--primary",
-            "button_icon": "none",
-            "icon_1": "check",
-            "heading_1": "Heading",
-            "icon_2": "check",
-            "heading_2": "Heading",
-            "icon_3": "check",
-            "heading_3": "Heading"
+            "content": "{{ product.metafields.custom.specifications | metafield_tag }}",
+            "custom_liquid": "",
+            "page": ""
           }
         },
         "image_with_text_LQUEir": {
@@ -452,7 +434,7 @@
         }
       },
       "block_order": [
-        "image_with_text_iLTdLe",
+        "tab_cHq7bL",
         "image_with_text_LQUEir",
         "tab_xGBJeM"
       ],
