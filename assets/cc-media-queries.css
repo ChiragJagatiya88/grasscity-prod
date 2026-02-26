@@ -1,0 +1,464 @@
+@media (max-width: 1600px) {
+  #cc-mm-best-value-elite-section .saving-label {
+    font-size: 18.34px;
+    top: 11%;
+    left: -7%;
+  }
+}
+@media (max-width: 1200px) {
+  img.mbl {
+    max-width: 150px;
+  }
+  .cc-pricing-table-member-cell-inner-row1 h3 {
+    flex-shrink: inherit !important;
+  }
+  .cc-mm-best-value-elite-wrap {
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 0px 30px;
+  }
+  .cc-mm-best-value-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .cc-mm-best-value-elite-buttons {
+    align-items: center;
+  }
+  #cc-mm-best-value-elite-section .saving-label {
+    top: 70px;
+    left: -107px;
+    padding: 0;
+  }
+  .cc-mm-best-value-props li {
+    flex-basis: 49%;
+  }
+  .cc-mm-best-value-props ul {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .cc-mm-instant-saving-free-wrap {
+    display: block;
+  }
+  .cc-newletter-join-club-form form input[type="email"] {
+    min-width: 250px;
+  }
+  .cc-newletter-join-club-title h3 {
+    font-size: 22px;
+  }
+  .cc-mm-hero-wrap {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+  .cc-mm-hero-image img {
+    height: 400px;
+    object-fit: cover;
+  }
+  .cc-mm-instant-saving-free-wrap {
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+  }
+  .saving-label {
+    top: 25px;
+    left: -110px;
+  }
+  .cc-mm-instant-saving-text {
+    gap: 24px;
+    align-items: center;
+    padding: 2rem;
+  }
+}
+@media (max-width: 980px) {
+  .cc-mm-hero-image img {
+    height: auto !important;
+  }
+  .cc-section-main-title {
+    font-size: var(--Type-h3, 26px);
+  }
+  .cc-mm-hero-text h3,
+  .cc-mm-hero-text p {
+    text-align: center;
+  }
+  .cc-mm-hero-text p {
+    margin-bottom: 0px;
+  }
+  .cc-mm-hero-row .page-width {
+    padding: 0px;
+  }
+  .cc-mm-hero-wrap {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0px;
+  }
+  .cc-mm-hero-text {
+    padding: 2rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cc-mm-hero-image {
+    grid-row: 1;
+  }
+  .cc-mm-hero-row {
+    padding: 30px 0px 0px;
+  }
+  .cc-join-banner-description h3 {
+    font-size: 23px;
+  }
+  .cc-join-banner-row2 > ul {
+    margin: 0 !important;
+  }
+  .cc-join-banner-row1 {
+    padding: 32px 22px;
+    gap: 31px;
+    justify-content: center;
+    text-align: center;
+    grid-template-columns: 1fr;
+  }
+  .cc-join-banner-logo img {
+    margin: auto;
+  }
+  .cc-join-banner-description h3 {
+    margin: 0px;
+    text-align: center;
+  }
+  .cc-join-banner-description p {
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  .cc-join-banner-description p b {
+    display: block;
+  }
+  .cc-join-banner-buttons {
+    flex-direction: row;
+  }
+  .cc-join-banner-row2 {
+    padding: 20px 22px;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .cc-join-partner-scroll {
+    white-space: pre;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 58px;
+  }
+  .cc-join-partner-scroll li {
+    width: 100px;
+  }
+  .cc-join-partner-scroll ul {
+    position: relative;
+    top: -94px;
+  }
+  .cc-newletter-wrap {
+    flex-direction: column;
+  }
+  .cc-newletter-join-club-description p {
+    text-align: center;
+    font-size: 14px;
+  }
+  .cc-newletter-wrap {
+    gap: 8px;
+  }
+  .cc-newletter-join-club-form form {
+    gap: 8px;
+    flex-direction: column;
+  }
+  #cc-mm-elite-revert-hero-section .cc-mm-hero-text {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  #cc-mm-elite-revert-hero-section .cc-mm-hero-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 800px) {
+  .cc-mm-account-tab-content {
+    padding: 20px 0px;
+  }
+  .cc-mm-account-content {
+    display: none;
+  }
+  .cc-mm-instant-saving-free-row .page-width {
+    padding: 0;
+  }
+  .cc-mm-instant-saving-free-products .splide__list {
+    padding-right: 0 !important;
+  }
+  #cc-mm-instant-saving-elite-section .cc-mm-instant-saving-text > h3 {
+    font-size: var(--Type-h3, 26px);
+    text-align: center;
+    margin: 0;
+  }
+  #cc-mm-instant-saving-elite-section .cc-mm-instant-saving-free-row {
+    padding: 0 0 40px;
+  }
+  .cc-mm-instant-saving-free-products > .cc-elite-button-wrap {
+    text-align: center;
+  }
+  .cc-mm-sites-access-portfolio-cbd .splide__list {
+    justify-content: inherit;
+  }
+  .cc-mm-account-sidebar {
+    width: 100% !important;
+    margin-right: 0 !important;
+  }
+}
+@media (max-width: 600px) {
+  .cc-mm-instant-saving-row {
+    padding: 0px 0;
+  }
+  .cc-mm-cart-block- button#checkout {
+    width: 100% !important;
+  }
+  .cc-mm-cart-block- .cc-pricing-table-market-cell-inner {
+    margin-bottom: 30px;
+  }
+  .product-form-wrapper.d-flex {
+    width: 100% !important;
+    margin-top: 20px !important;
+  }
+  .cc-mm-offer-note {
+    margin-top: 40px;
+  }
+  .cc-mm-pricing-table-free ul li:not(.cc-mm-pricing-footer):nth-of-type(odd) {
+    padding: 14px 12px !important;
+    gap: 34px !important;
+  }
+  .cc-mm-pricing-table-elite {
+    border-radius: 0px 16px 16px 0px !important;
+  }
+  .cc-mm-pricing-table-free {
+    border-radius: 16px 0px 0px 16px !important;
+  }
+  .cc-mm-pricing-table-elite-tape {
+    font-size: 10px !important;
+    line-height: normal !important;
+    right: -22.7% !important;
+    top: 3.1% !important;
+    width: 200px !important;
+    padding: 5px !important;
+    transform: rotate(40deg) !important;
+  }
+  .cc-mm-pricing-table-elite ul li {
+    word-break: break-word;
+    padding: 12px !important;
+  }
+  .cc-mm-sites-access-text-block ul {
+    min-height: 140px;
+  }
+  .cc-mm-pricing-table-elite .cc-elite-button,
+  .cc-mm-pricing-table-free .cc-mm-pricing-head a,
+  .cc-mm-pricing-table-free .cc-mm-pricing-footer a {
+    width: 90% !important;
+    height: 40px !important;
+    font-size: 10px !important;
+    line-height: normal !important;
+    padding: 0 !important;
+  }
+  .cc-mm-pricing-table-columns {
+    gap: 0 !important;
+  }
+  .cc-mm-best-value-props li span {
+    font-size: var(--Type-text-s, 14px);
+  }
+  .cc-mm-instant-saving-free-product-card-emoji {
+    bottom: -40px;
+  }
+  .cc-mm-best-value-props ul {
+    padding-top: 0;
+  }
+  .cc-mm-best-value-elite-buttons .cc-mm-best-value-elite-btn1 {
+    font-size: 14px;
+  }
+  .cc-mm-best-value-text h5 {
+    text-align: center !important;
+    br {
+      display: none;
+    }
+  }
+  .cc-mm-instant-saving-free-row {
+    padding: 30px 0;
+  }
+  .cc-site-popup-block {
+    width: 90% !important;
+    padding: 40px 20px 20px !important;
+  }
+  .cc-site-popup-list ul li span {
+    font-size: 12px;
+  }
+  .cc-site-popup-close-button-text {
+    font-size: var(--Type-text-s, 12px);
+    width: 160px;
+    height: 35px;
+    margin-top: 20px;
+  }
+  .cc-site-popup-list h3 {
+    font-size: 14px;
+  }
+  .cc-join-banner-row2 li {
+    text-align: center;
+  }
+  .cc-market-price span {
+    padding: 5px 2px !important;
+    font-size: 10px !important;
+  }
+  .cc-mm-account-sidebar .elite-container-membership-level .elite-container {
+    min-width: 100% !important;
+  }
+  .cc-mm-pricing-table-free .cc-mm-pricing-head {
+    gap: 40px;
+  }
+  .cc-mm-pricing-table-free ul {
+    gap: 20px;
+  }
+  .cc-mm-sites-access-row {
+    padding: 30px 0;
+  }
+  #cc-mm-instant-saving-elite-section .eyes-emoji {
+    top: -38px;
+    left: auto;
+    right: 70px;
+    transform: scaleX(-1);
+  }
+  .cc-mm-best-value-props li {
+    flex-basis: 100%;
+  }
+  .cc-mm-best-value-elite-buttons {
+    margin-top: 10px;
+  }
+  .cc-mm-best-value-text h3 {
+    margin-top: 30px;
+  }
+  .cc-mm-instant-saving-text > p {
+    text-align: center;
+  }
+  .saving-label {
+    font-size: 19.34px;
+    line-height: 16.427px;
+  }
+  .cc-mm-instant-saving-wrap h3 {
+    font-size: var(--Type-h3, 26px);
+  }
+  .cc-mm-instant-saving-wrap p {
+    padding: 24px 0;
+    font-size: var(--Type-text-m, 16px);
+  }
+  .cc-mm-instant-saving-buttons a,
+  .cc-mm-hero-buttons a {
+    min-width: auto;
+    flex-basis: 50%;
+  }
+  .cc-mm-hero-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cc-mm-pricing-table ul li:not(.cc-mm-pricing-footer) {
+    font-size: var(--Type-text-s, 14px);
+  }
+  #cc-mm-best-value-elite-section .saving-label {
+    top: 59px;
+    left: -116px;
+    padding: 10px;
+    font-size: 14px;
+  }
+  .cc-topbar-wrap > p {
+    font-size: var(--Type-text-xs, 14px);
+  }
+  .cc-mm-hero-text {
+    padding: 2rem;
+  }
+  .cc-topbar-row {
+    padding: 12px 0;
+  }
+  .cc-newletter-join-club-form form input[type="email"] {
+    min-width: 320px !important;
+  }
+  .cc-mm-instant-saving-free-product-card .price-table td strong {
+    font-size: var(--Type-text-xs, 12px);
+    padding: 10px;
+    line-height: 13.762px;
+  }
+  .cc-mm-instant-saving-free-product-card .price {
+    font-size: var(--Type-h6, 14px);
+    line-height: 13.762px;
+    padding: 10px;
+  }
+  .cc-mm-sites-access-wrap > .cc-primary-button {
+    margin-bottom: 20px;
+  }
+  .cc-mm-sites-access-wrap > p {
+    font-size: var(--Type-text-m, 16px);
+  }
+  .cc-mm-sites-access-row .page-width {
+    padding: 0;
+  }
+  .cc-mm-sites-access-text-block {
+    padding: 22px 30px;
+  }
+  .cc-mm-sites-access-portfolio > h3,
+  .cc-mm-sites-access-wrap > p,
+  .cc-mm-sites-access-wrap .cc-section-main-title {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .cc-pricing-table-market-cell-inner img {
+    padding: 30px 16px;
+  }
+  .cc-pricing-table-market-cell-inner {
+    grid-template-columns: 125px 1fr !important;
+  }
+  .cc-pricing-table-market-cell-inner-text a svg {
+    width: 6px;
+  }
+  .cc-pricing-table-market-cell-inner-text a,
+  .cc-pricing-table-market-cell-inner-text p,
+  .cc-pricing-table-market-cell-inner-text h6 {
+    font-size: var(--Type-text-s, 14px) !important;
+  }
+  .cc-pricing-table-member-cell-inner-row1 > img {
+    max-width: 60px !important;
+  }
+  .cc-pricing-table-member-cell-inner-row1 h3,
+  .cc-pricing-table-member-cell-inner-row2 label,
+  .cc-pricing-table-member-cell-inner-row3 ul li {
+    font-size: 12px !important;
+  }
+  .cc-mm-account-tab-content > h2 {
+    font-size: 22px !important;
+  }
+  .address-actions a,
+  .address-box p {
+    font-size: var(--Type-text-s, 12px) !important;
+  }
+  .cc-mm-tab-inner-membership-inner {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+  }
+  .payment-method {
+    border-left: none !important;
+    padding-left: 0px !important;
+  }
+  .membership-logo img {
+    padding: 10px !important;
+    width: 160px !important;
+  }
+  .membership-details p {
+    font-size: var(--Type-text-s, 12px) !important;
+  }
+  .membership-details h2 {
+    font-size: var(--Type-text-m, 14px) !important;
+  }
+  .auto-renewal p {
+    font-size: var(--Type-text-s, 12px) !important;
+  }
+  .payment-method p {
+    font-size: var(--Type-text-s, 12px) !important;
+  }
+  .payment-details a {
+    font-size: 12px !important;
+  }
+}

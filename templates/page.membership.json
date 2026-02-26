@@ -12,12 +12,28 @@
     "main": {
       "type": "main-page",
       "settings": {
+        "container": "fixed",
+        "text_alignment": "center",
         "padding_top": 28,
         "padding_bottom": 28
+      }
+    },
+    "cc_mm_hero_banner_pef9YT": {
+      "type": "cc-mm-hero-banner",
+      "name": "<> Hero Banner",
+      "settings": {
+        "heading": "Lowest Price Guaranteed*",
+        "description": "<p><strong>Online or Anywhere on the Planet!</strong> when you sign up to Cabana Club</p>",
+        "image_banner": "shopify://shop_images/buy-membership_Hero_1.png",
+        "button_primary_text": "Sign In",
+        "button_primary_link": "",
+        "button_secondary_text": "Join Now",
+        "button_secondary_link": ""
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "cc_mm_hero_banner_pef9YT"
   ]
 }

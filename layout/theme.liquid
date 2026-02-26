@@ -70,6 +70,11 @@
       endif
     -%}
 
+    {% if template.suffix == 'membership' %}
+      {{ 'cc-styles.css' | asset_url | stylesheet_tag }}
+      {{ 'cc-media-queries.css' | asset_url | stylesheet_tag }}
+    {% endif %}
+
     {{ content_for_header }}
     <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
