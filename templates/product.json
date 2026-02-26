@@ -78,6 +78,12 @@
             "heading_3": "Warranty"
           }
         },
+        "rich_text_UCB4ce": {
+          "type": "rich-text",
+          "settings": {
+            "text": "<p>{{ product.metafields.description.excerpt | metafield_tag }}</p>"
+          }
+        },
         "inventory": {
           "type": "inventory",
           "settings": {
@@ -167,6 +173,7 @@
         },
         "collapsible-row-1": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Key Features & Benefits",
             "heading_size": "h4",
@@ -235,6 +242,7 @@
         "price",
         "f5d48049-8bc0-4495-b387-ccd2dfaca68b",
         "icon_with_text",
+        "rich_text_UCB4ce",
         "inventory",
         "description",
         "variant_picker",
@@ -387,11 +395,10 @@
       "blocks": {
         "tab_cHq7bL": {
           "type": "tab",
-          "name": "Specifications",
-          "disabled": true,
+          "name": "Description",
           "settings": {
-            "navigation_title": "Specifications",
-            "content": "{{ product.metafields.custom.specifications | metafield_tag }}",
+            "navigation_title": "Description",
+            "content": "<p>{{ product.description }}</p>",
             "custom_liquid": "",
             "page": ""
           }
