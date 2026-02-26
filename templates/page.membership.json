@@ -48,11 +48,21 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "cc_free_membership_offers_nbW6Yy": {
+      "type": "cc-free-membership-offers",
+      "name": "<> Free Membership Offer",
+      "settings": {
+        "collection_id": "club-membership",
+        "btn_text": "Join Cabana Club",
+        "btn_url": ""
+      }
     }
   },
   "order": [
     "main",
     "cc_mm_hero_banner_pef9YT",
-    "cc_mm_instant_savings_bCNfNU"
+    "cc_mm_instant_savings_bCNfNU",
+    "cc_free_membership_offers_nbW6Yy"
   ]
 }
