@@ -71,13 +71,13 @@
     "cc_mm_hero_banner1_BKmnJh": {
       "type": "cc-mm-hero-banner1",
       "settings": {
-        "image": "shopify://shop_images/IMG_13.png"
+        "image": "shopify://shop_images/IMG.webp"
       }
     },
     "cc_mm_hero_banner2_9F9ACq": {
       "type": "cc-mm-hero-banner2",
       "settings": {
-        "image": "shopify://shop_images/IMG_14.png"
+        "image": "shopify://shop_images/IMG_1.webp"
       }
     },
     "elite_winter_giveaway_cXKQtx": {
@@ -91,7 +91,7 @@
         "subheading": "Join now for big perks and prizes like this!",
         "heading": "TCL 55\" 4K SmartTV",
         "badge_price": "",
-        "product_image": "shopify://shop_images/Seasonal_Giveaway_Asset.png",
+        "product_image": "shopify://shop_images/Seasonal_Giveaway_Asset.webp",
         "btn_text": "Join Elite",
         "btn_link": "",
         "footer_text": "<p>See full contest details at <a href=\"/quarterly-giveaway/\" title=\"/quarterly-giveaway/\">https://bit.ly/ELITE-GIVEAWAY</a></p>"
@@ -107,7 +107,6 @@
         "smoke_accessories_9NwhXn": {
           "type": "smoke_accessories",
           "settings": {
-            "image_here": "shopify://shop_images/IMG_1.png",
             "list_item_1": "FREE gifts",
             "list_item_2": "Sign-up accessory bonus coupon",
             "button_text": "Details",
@@ -118,7 +117,6 @@
         "smoke_accessories_JPtti3": {
           "type": "smoke_accessories",
           "settings": {
-            "image_here": "shopify://shop_images/IMG_2.png",
             "list_item_1": "FREE gifts",
             "list_item_2": "Sign-up accessory bonus coupon",
             "button_text": "Details",
@@ -129,7 +127,6 @@
         "smoke_accessories_NE8Fwc": {
           "type": "smoke_accessories",
           "settings": {
-            "image_here": "shopify://shop_images/IMG_3.png",
             "list_item_1": "FREE gift in your next subscription box",
             "list_item_2": "VIP early access to our bestseller",
             "button_text": "Details",
@@ -140,7 +137,6 @@
         "smoke_accessories_eHJbi8": {
           "type": "smoke_accessories",
           "settings": {
-            "image_here": "shopify://shop_images/IMG_4.png",
             "list_item_1": "FREE gifts",
             "list_item_2": "Sign- up accessory bonus coupon",
             "button_text": "Details",
@@ -151,7 +147,6 @@
         "cbd_wellness_ch3UzK": {
           "type": "cbd_wellness",
           "settings": {
-            "image_here": "shopify://shop_images/IMG_5.png",
             "list_item_1": "FREE Samples with every order",
             "list_item_2": "Free Gift with Coupon",
             "button_text": "Details",
@@ -161,7 +156,6 @@
         "cbd_wellness_PN4kKq": {
           "type": "cbd_wellness",
           "settings": {
-            "image_here": "shopify://shop_images/IMG_6.png",
             "list_item_1": "FREE Samples with every order",
             "list_item_2": "Free Gift with Coupon",
             "button_text": "Details",
@@ -171,7 +165,6 @@
         "cbd_wellness_KkLEH8": {
           "type": "cbd_wellness",
           "settings": {
-            "image_here": "shopify://shop_images/IMG_7.png",
             "list_item_1": "FREE Samples with every order",
             "list_item_2": "FREE Samples with every order",
             "button_text": "Details",
@@ -196,7 +189,6 @@
     "cc_mm_unbeatable_EL4LML": {
       "type": "cc-mm-unbeatable",
       "settings": {
-        "image": "shopify://shop_images/Isolation_Mode.png",
         "heading": "Membership Terms & Conditions",
         "description": "*For complete Cabana Club USA and ELITE program details see <a href=\"https://www.smokecartel.com/pages/membership-terms-and-conditions\">terms and conditions.</a>"
       }
