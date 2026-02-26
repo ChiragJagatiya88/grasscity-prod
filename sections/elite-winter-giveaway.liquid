@@ -1,0 +1,355 @@
+
+
+<style>
+  /* Scoped CSS Variables */
+  #shopify-section-{{ section.id }} .elite-giveaway {
+    --bg-color: {{ section.settings.bg_color }};
+    --text-color: {{ section.settings.text_color }};
+    --accent-gold: {{ section.settings.accent_color }};
+    --gradient-gold: linear-gradient(180deg, #FBE085 0%, #C49232 100%);
+    --font-heading: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Replace with theme font if needed */
+  }
+  
+  /* BEM STYLING */
+  .elite-giveaway {
+    background-color: var(--bg-color); 
+    color: var(--text-color);
+    padding: 60px 20px;
+    font-family: var(--font-heading);
+    overflow: hidden;
+  }
+
+  .elite-giveaway__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  /* Content Column (Text) */
+  .elite-giveaway__content {
+    text-align: center;
+    flex: 1;
+    z-index: 2;
+  }
+
+  .elite-giveaway__logo {
+    max-width: 200px;
+    margin: 0 auto 20px auto;
+    display: block;
+    border-bottom: 2px solid var(--accent-gold);
+    padding-bottom: 20px;
+  }
+
+  .elite-giveaway__subheading {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+  
+  .elite-giveaway__subheading strong {
+    font-weight: 700;
+  }
+
+  .elite-giveaway__heading {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 30px 0;
+    color: var(--text-color); 
+  }
+
+  .elite-giveaway .cc-elite-button {
+    max-width: 200px;
+    margin: 0 auto;
+  } 
+
+  .elite-giveaway__footer {
+    font-size: 0.8rem;
+    margin-top: 40px;
+    opacity: 0.9;
+    text-align: center;
+  }
+  
+  .elite-giveaway__footer a {
+    color: var(--text-color);
+    text-decoration: underline;
+  }
+
+  /* Visual Column (Image + Badge) */
+  .elite-giveaway__visual {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .elite-giveaway__image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  /* Decorative glow ring behind image */
+  /* .elite-giveaway__image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 110%;
+    height: 110%;
+    border: 1px solid rgba(251, 224, 133, 0.3);
+    border-radius: 50%;
+    z-index: 0;
+    box-shadow: 0 0 50px rgba(251, 224, 133, 0.1);
+  } */
+
+  .elite-giveaway__product-image {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    display: block;
+    /* Slight tilt effect like the reference */
+    transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
+  }
+
+  /* The Price Badge */
+  .elite-giveaway__badge {
+    position: absolute;
+    top: -20px;
+    right: 0px;
+    background-color: #00004d;
+    border: 3px solid #FBE085;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    box-shadow: 0 0 15px rgba(251, 224, 133, 0.6);
+    transform: rotate(10deg);
+  }
+
+  /* Dotted inner ring for badge */
+  .elite-giveaway__badge::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    border: 2px dotted #FBE085;
+    border-radius: 50%;
+  }
+
+  .elite-giveaway__badge-price {
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+
+  .elite-giveaway__badge-text {
+    color: #fff;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+  .elite-giveaway__goldheading {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+
+  /* DESKTOP LAYOUT (Media Query) */
+  @media screen and (min-width: 990px) {
+    .elite-giveaway__container {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+
+    .elite-giveaway__content { 
+      padding-right: 40px;
+    }
+ 
+
+    .elite-giveaway__heading {
+      font-size: 3.5rem;
+    }
+
+    .elite-giveaway__badge {
+      width: 120px;
+      height: 120px;
+      right: -20px;
+      top: -30px;
+    }
+    
+    .elite-giveaway__badge-price {
+      font-size: 1.4rem;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .elite-giveaway__container{
+        gap: 20px;
+    }
+    .elite-giveaway__visual{
+        flex-direction: column;
+        gap: 30px;
+    }
+  }
+</style>
+
+<div class="elite-giveaway">
+  <div class="elite-giveaway__container">
+    
+    <div class="elite-giveaway__content">
+      {% if section.settings.logo_image %}
+        {{ section.settings.logo_image | image_url: width: 400 | image_tag: class: 'elite-giveaway__logo', loading: 'lazy', alt: section.settings.heading }}
+      {% else %}
+        <h3 style="color: var(--accent-gold); font-weight:800; font-size: 2rem; margin-bottom: 20px;">ELITE</h3>
+      {% endif %}
+
+      <p class="elite-giveaway__goldheading" style="color: var(--accent-gold); font-weight: 700;">
+        WINTER GIVEAWAY*
+      </p>
+
+      <p class="elite-giveaway__subheading">
+        {{ section.settings.subheading | replace: 'big perks and prizes', '<strong>big perks and prizes</strong>' }}
+      </p>
+
+      <h2 class="elite-giveaway__heading">
+        {{ section.settings.heading }}
+      </h2>
+
+      <a href="{% if section.settings.btn_link != blank %}{{ section.settings.btn_link }}{% else %} javascript:void(0);{% endif %}" class="{% if section.settings.btn_link == blank %}SSO_popup_elite_join cc-elite-button desktop-only{% else %}cc-elite-button desktop-only{% endif %}">
+        {{ section.settings.btn_text }}
+      </a> 
+      
+    </div>
+
+    <div class="elite-giveaway__visual">
+      <div class="elite-giveaway__image-wrapper">
+        
+        {% if section.settings.product_image %}
+          {{ section.settings.product_image | image_url: width: 800 | image_tag: class: 'elite-giveaway__product-image', loading: 'lazy', alt: section.settings.heading }}
+        {% else %}
+          {{ 'product-1' | placeholder_svg_tag: 'elite-giveaway__product-image' }}
+        {% endif %}
+
+        {% if section.settings.badge_price != blank %}
+          <div class="elite-giveaway__badge">
+            <span class="elite-giveaway__badge-price">{{ section.settings.badge_price }}</span>
+            <span class="elite-giveaway__badge-text">VALUE</span>
+          </div>
+        {% endif %}
+        
+      </div>
+      <a href="{% if section.settings.btn_link != blank %}{{ section.settings.btn_link }}{% else %} javascript:void(0);{% endif %}" class="{% if section.settings.btn_link == blank %}SSO_popup_elite_join cc-elite-button mobile-only{% else %}cc-elite-button mobile-only{% endif %}">
+        {{ section.settings.btn_text }}
+      </a> 
+    </div>
+
+  </div>
+  <div class="elite-giveaway__footer">
+    {{ section.settings.footer_text }}
+  </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Elite Winter Giveaway",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Colors & Background"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#000033"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Gold Accent Color",
+      "default": "#eacda3"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_image",
+      "label": "Logo Image"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Join now for big perks and prizes like this!"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Main Heading",
+      "default": "TCL 55\" 4K SmartTV"
+    },
+    {
+      "type": "text",
+      "id": "badge_price",
+      "label": "Badge Price",
+      "default": "$ 319.99"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image",
+      "label": "Product Image (TV)"
+    },
+    {
+      "type": "header",
+      "content": "Call to Action"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text",
+      "default": "Join Elite"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "richtext",
+      "id": "footer_text",
+      "label": "Footer Text",
+      "default": "<p>See full contest details at <a href='#'>https://bit.ly/ELITE-GIVEAWAY</a></p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Elite Winter Giveaway"
+    }
+  ]
+}
+{% endschema %}
