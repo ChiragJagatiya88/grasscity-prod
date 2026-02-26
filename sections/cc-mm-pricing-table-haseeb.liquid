@@ -10,7 +10,7 @@
                 <img src="{{ 'buy-membership_CC_logo_1.png' | file_url }}" class="img-responsive">
                 FREE
                 {% unless customer %}
-                  <a href="#" class="SSO_popup_register cc-primary-button">Join Cabana Club</a>
+                <a href="#" class="SSO_popup_register cc-primary-button">Join Cabana Club</a>
                 {% endunless %}
               </li>
               <li>Access to <b>Member Prices</b> on 7 Sites</li>
@@ -42,7 +42,7 @@
               <li class="cc-mm-pricing-footer">
                 FREE
                 {% unless customer %}
-                  <a href="#" class="SSO_popup_register cc-primary-button">Join Cabana Club</a>
+                <a href="#" class="SSO_popup_register cc-primary-button">Join Cabana Club</a>
                 {% endunless %}
               </li>
             </ul>
@@ -52,20 +52,22 @@
             <ul>
               <li class="cc-mm-pricing-head">
                 <img src="{{ 'cc-elite-logo.png' | file_url }}" class="img-responsive">
-<span>
-  Only 
-  {% comment %} <span style=" ">$30</span><span style="margin-left:4px;"></span> {% endcomment %}
-  <span style="font-size: 2em; font-weight: bold;">$30</span><span style="font-weight:bold;">/yr!</span>
-</span>
+                <span>
+                  {% comment %} Only {% endcomment %}
+                  {% comment %} <span style=" ">$30</span><span style="margin-left:4px;"></span> {% endcomment %}
+                  <span style="font-size: 2em; font-weight: bold;">$30</span><span style="font-weight:bold;">/yr!</span>
+                </span>
 
 
                 {% if customer.tags contains "elite_member" %}
-                  {% comment %} <a href="javascript:alreadyMember('ELITE')" class="cc-elite-button cc-mm-best-value-elite-btn1">Join ELITE</a> {% endcomment %}
+                {% comment %} <a href="javascript:alreadyMember('ELITE')"
+                  class="cc-elite-button cc-mm-best-value-elite-btn1">Join ELITE</a> {% endcomment %}
                 {% else %}
-                    <a href="#" data-id="{{ settings.elite_product.selected_or_first_available_variant.id }}"
-                        class="{% if customer.tags contains "club_member" %}SSO_popup_elite_upgrade {% else %}SSO_popup_elite_join {% endif %} cc-elite-button mobile-hide">
-                    Join ELITE
-                  </a>
+                <a href="#" data-id="{{ settings.elite_product.selected_or_first_available_variant.id }}"
+                  class="{% if customer.tags contains " club_member" %}SSO_popup_elite_upgrade {% else
+                  %}SSO_popup_elite_join {% endif %} cc-elite-button mobile-hide">
+                  Join ELITE
+                </a>
                 {% endif %}
               </li>
               <li>Access to <b>ELITE Prices</b> on 7 Sites! (Maximum Savings)</li>
@@ -92,7 +94,7 @@
               <li>
                 <b>Dankstop.com Coupon</b><br>
                 Nucleus 14in. Beaker Bong for Only $9.99 <s>$69.99</s>
-Save $60.00!
+                Save $60.00!
               </li>
               <li>
                 <b>SmokeCartel.com Coupon</b><br>
@@ -109,10 +111,10 @@ Save $60.00!
               </li>
               <li>
                 <b>FREE Gift on NuleafNaturals.com</b><br>
-               300 mg CBD Oil (5 mL) FREE with Coupon ($24 Value!)
+                300 mg CBD Oil (5 mL) FREE with Coupon ($24 Value!)
               </li>
               <li>
-                <b>FREE Gift on FABCBD.com</b>   <br>
+                <b>FREE Gift on FABCBD.com</b> <br>
                 600 mg CBD Tincture FREE with Coupon ($45 Value!)
               </li>
               <li>
@@ -121,19 +123,22 @@ Save $60.00!
               </li>
               <li class="cc-mm-pricing-footer">
                 <span>
-  Only 
-  <span style=" ">$30</span><span style="margin-left:4px;"></span>
-  {% comment %} <span style="font-size: 2em; font-weight: bold;">$15</span><span style="font-weight:bold;">/yr!</span> {% endcomment %}
-</span>
-                  {% comment %} <span class="cc-mm-multi-gradient">Limited Time Only</span> {% endcomment %}
+                  Only
+                  <span style=" ">$30</span><span style="margin-left:4px;"></span>
+                  {% comment %} <span style="font-size: 2em; font-weight: bold;">$15</span><span
+                    style="font-weight:bold;">/yr!</span> {% endcomment %}
+                </span>
+                {% comment %} <span class="cc-mm-multi-gradient">Limited Time Only</span> {% endcomment %}
                 </span>
                 {% if customer.tags contains "elite_member" %}
-                  {% comment %} <a href="javascript:alreadyMember('ELITE')" class="cc-elite-button cc-mm-best-value-elite-btn1">Join ELITE</a> {% endcomment %}
+                {% comment %} <a href="javascript:alreadyMember('ELITE')"
+                  class="cc-elite-button cc-mm-best-value-elite-btn1">Join ELITE</a> {% endcomment %}
                 {% else %}
-                    <a href="#" data-id="{{ settings.elite_product.selected_or_first_available_variant.id }}"
-                        class="{% if customer.tags contains "club_member" %}SSO_popup_elite_upgrade {% else %}SSO_popup_elite_join {% endif %} cc-elite-button">
-                    Join ELITE
-                  </a>
+                <a href="#" data-id="{{ settings.elite_product.selected_or_first_available_variant.id }}"
+                  class="{% if customer.tags contains " club_member" %}SSO_popup_elite_upgrade {% else
+                  %}SSO_popup_elite_join {% endif %} cc-elite-button">
+                  Join ELITE
+                </a>
                 {% endif %}
               </li>
             </ul>
