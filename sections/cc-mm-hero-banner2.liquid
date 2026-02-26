@@ -1,0 +1,52 @@
+<section class="cc-mm-elite-revert-hero-section" id="cc-mm-elite-revert-hero-section">
+  <div class="cc-mm-hero-row">
+    <div class="wrapper">
+      <div class="cc-mm-hero-wrap">
+        <div class="cc-mm-hero-text">
+          <h3>Smokinnn' Deals!</h3>
+          <p>
+            Get <b>20% OFF</b> Pax Mini & Pax Plus vaporizers + <b>FREE Puck Press ($20 Value)</b> with your exclusive
+            coupon!
+          </p>
+          {% if section.settings.image != blank %}
+            <img src="{{ section.settings.image | img_url:'master' }}" alt="" class="img-responsive desktop-hide">
+          {% endif %}
+          {% unless customer %}
+            <div class="cc-mm-hero-buttons">
+              {% if customer.tags contains "elite_member" %}
+                  {% comment %} <a href="javascript:alreadyMember('ELITE')" class="cc-elite-button cc-mm-best-value-elite-btn1">Join Elite</a> {% endcomment %}
+              {% else %}
+                <a
+                  href="javascript:void(0);"
+                  data-id="{{ settings.elite_product.selected_or_first_available_variant.id }}"
+                  class="{% if customer.tags contains 'club_member' %}SSO_popup_elite_upgrade {% else %}SSO_popup_elite_join {% endif %} cc-elite-button"
+                  >Join Elite</a>
+              {% endif %}
+            </div>
+          {% endunless %}
+        </div>
+        <div class="cc-mm-hero-image">
+          <img src="{{ section.settings.image | img_url:'master' }}" alt="" class="img-responsive mobile-hide">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "<> Elite Banner2",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image Here"
+    }
+  ],
+  "presets": [
+    {
+      "name": "<> Elite Banner2"
+    }
+  ]
+}
+{% endschema %}
