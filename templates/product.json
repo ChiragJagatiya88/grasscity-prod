@@ -334,6 +334,9 @@
         "tab_xGBJeM"
       ],
       "custom_css": [
+        ".tabs__content .page__content p {margin-block: 10px;}",
+        ".tabs__content .page__content br {display: none;}",
+        ".tabs__content .page__content h2 {font-size: 22px; margin-block: 20px 10px; font-weight: 600;}",
         "@media (min-width: 1024px) {.tabs__panel {padding-inline: 5rem; }}"
       ],
       "settings": {
