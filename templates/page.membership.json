@@ -67,6 +67,139 @@
         "btn_text": "Join Elite",
         "btn_url": ""
       }
+    },
+    "cc_mm_hero_banner1_BKmnJh": {
+      "type": "cc-mm-hero-banner1",
+      "settings": {
+        "image": "shopify://shop_images/IMG_13.png"
+      }
+    },
+    "cc_mm_hero_banner2_9F9ACq": {
+      "type": "cc-mm-hero-banner2",
+      "settings": {
+        "image": "shopify://shop_images/IMG_14.png"
+      }
+    },
+    "elite_winter_giveaway_cXKQtx": {
+      "type": "elite-winter-giveaway",
+      "name": "Elite Winter Giveaway",
+      "settings": {
+        "bg_color": "#000646",
+        "text_color": "#ffffff",
+        "accent_color": "#e1b634",
+        "logo_image": "shopify://shop_images/cc-elite-logo.png",
+        "subheading": "Join now for big perks and prizes like this!",
+        "heading": "TCL 55\" 4K SmartTV",
+        "badge_price": "",
+        "product_image": "shopify://shop_images/Seasonal_Giveaway_Asset.png",
+        "btn_text": "Join Elite",
+        "btn_link": "",
+        "footer_text": "<p>See full contest details at <a href=\"https://cabanaclubusa.com/quarterly-giveaway/\" title=\"https://cabanaclubusa.com/quarterly-giveaway/\">https://bit.ly/ELITE-GIVEAWAY</a></p>"
+      }
+    },
+    "cc_mm_pricing_table_Memzmw": {
+      "type": "cc-mm-pricing-table-haseeb",
+      "settings": {}
+    },
+    "cc_mm_sites_access_rhUzJb": {
+      "type": "cc-mm-sites-access",
+      "blocks": {
+        "smoke_accessories_9NwhXn": {
+          "type": "smoke_accessories",
+          "settings": {
+            "image_here": "shopify://shop_images/IMG_1.png",
+            "list_item_1": "FREE gifts",
+            "list_item_2": "Sign-up accessory bonus coupon",
+            "button_text": "Details",
+            "button_url": "shopify://pages/membership",
+            "content": "{\n    \"logo\": \"https://cdn.shopify.com/s/files/1/0925/7290/files/gc-store-logo.png\",\n    \"club\": {\n        \"heading\": \"With Cabana Club:\",\n        \"list\": [\n            \"UNBEATABLE Prices on All Products\"\n        ]\n    },\n    \"elite\": {\n        \"heading\": \"With ELITE:\",\n        \"list\": [\n            \"UNBELIEVABLE SAVINGS on All Products\",\n            \"FREE Shipping & Returns on All Orders\",\n            \"FREE Gifts with purchase of select brands\",\n            \"Sign-up Bonus Coupon\",\n            \"Early Access to Sales & Launches\",\n            \"Birthday Rewards Coupon\",\n            \"VIP Customer Support\"\n        ]\n    }\n}"
+          }
+        },
+        "smoke_accessories_JPtti3": {
+          "type": "smoke_accessories",
+          "settings": {
+            "image_here": "shopify://shop_images/IMG_2.png",
+            "list_item_1": "FREE gifts",
+            "list_item_2": "Sign-up accessory bonus coupon",
+            "button_text": "Details",
+            "button_url": "shopify://pages/membership",
+            "content": "{\n    \"logo\": \"https://cdn.shopify.com/s/files/1/0925/7290/files/sc-store-logo.png\",\n    \"club\": {\n        \"heading\": \"With Cabana Club:\",\n        \"list\": [\n            \"UNBEATABLE Prices on All Products\"\n        ]\n    },\n    \"elite\": {\n        \"heading\": \"With ELITE:\",\n        \"list\": [\n            \"UNBELIEVABLE SAVINGS on All Products\",\n            \"FREE Shipping & Returns on All Orders\",\n            \"FREE Gifts with purchase of select brands\",\n            \"Sign-up Bonus Coupon\",\n            \"Early Access to Sales & Launches\",\n            \"Birthday Rewards Coupon\",\n            \"VIP Customer Support\"\n        ]\n    }\n}"
+          }
+        },
+        "smoke_accessories_NE8Fwc": {
+          "type": "smoke_accessories",
+          "settings": {
+            "image_here": "shopify://shop_images/IMG_3.png",
+            "list_item_1": "FREE gift in your next subscription box",
+            "list_item_2": "VIP early access to our bestseller",
+            "button_text": "Details",
+            "button_url": "shopify://pages/membership",
+            "content": "{\n    \"logo\": \"https://cdn.shopify.com/s/files/1/0925/7290/files/dhc-store-logo.png\",\n    \"club\": {\n        \"heading\": \"With Cabana Club:\",\n        \"list\": [\n            \"UNBEATABLE Prices on All Products\"\n        ]\n    },\n    \"elite\": {\n        \"heading\": \"With ELITE:\",\n        \"list\": [\n            \"UNBELIEVABLE SAVINGS on All Products\",\n            \"FREE Shipping & Returns on All Orders\",\n            \"FREE Gift included on Next El Primo Subscription Box Order ($50 Value)\",\n            \"Sign-up Bonus Coupon\",\n            \"Early Access to Sales & Launches\",\n            \"Birthday Rewards Coupon\",\n            \"VIP Customer Support\"\n        ]\n    }\n}"
+          }
+        },
+        "smoke_accessories_eHJbi8": {
+          "type": "smoke_accessories",
+          "settings": {
+            "image_here": "shopify://shop_images/IMG_4.png",
+            "list_item_1": "FREE gifts",
+            "list_item_2": "Sign- up accessory bonus coupon",
+            "button_text": "Details",
+            "button_url": "shopify://pages/membership",
+            "content": "{\n    \"logo\": \"https://cdn.shopify.com/s/files/1/0925/7290/files/ds-store-logo.png\",\n    \"club\": {\n        \"heading\": \"With Cabana Club:\",\n        \"list\": [\n            \"UNBEATABLE Prices on All Products\"\n        ]\n    },\n    \"elite\": {\n        \"heading\": \"With ELITE:\",\n        \"list\": [\n            \"UNBELIEVABLE SAVINGS on All Products\",\n            \"FREE Shipping & Returns on All Orders\",\n            \"FREE Gifts with purchase of select brands\",\n            \"Sign-up Bonus Coupon\",\n            \"Early Access to Sales & Launches\",\n            \"Birthday Rewards Coupon\",\n            \"VIP Customer Support\"\n        ]\n    }\n}"
+          }
+        },
+        "cbd_wellness_ch3UzK": {
+          "type": "cbd_wellness",
+          "settings": {
+            "image_here": "shopify://shop_images/IMG_5.png",
+            "list_item_1": "FREE Samples with every order",
+            "list_item_2": "Free Gift with Coupon",
+            "button_text": "Details",
+            "content": "{\n    \"logo\": \"https://cdn.shopify.com/s/files/1/0925/7290/files/fabcbd-store-logo.png\",\n    \"club\": {\n        \"heading\": \"With Cabana Club:\",\n        \"list\": [\n            \"UNBEATABLE Prices on All Products\"\n        ]\n    },\n    \"elite\": {\n        \"heading\": \"With ELITE:\",\n        \"list\": [\n            \"UNBELIEVABLE SAVINGS on All Products\",\n            \"FREE Shipping & Returns on All Orders\",\n            \"FREE Samples with Every Order\",\n            \"FREE Gift with Coupon!\",\n            \"VIP Customer Support\"\n        ]\n    }\n}"
+          }
+        },
+        "cbd_wellness_PN4kKq": {
+          "type": "cbd_wellness",
+          "settings": {
+            "image_here": "shopify://shop_images/IMG_6.png",
+            "list_item_1": "FREE Samples with every order",
+            "list_item_2": "Free Gift with Coupon",
+            "button_text": "Details",
+            "content": "{\n    \"logo\": \"https://cdn.shopify.com/s/files/1/0925/7290/files/nl-store-logo.png\",\n    \"club\": {\n        \"heading\": \"With Cabana Club:\",\n        \"list\": [\n            \"UNBEATABLE Prices on All Products\"\n        ]\n    },\n    \"elite\": {\n        \"heading\": \"With ELITE:\",\n        \"list\": [\n            \"UNBELIEVABLE SAVINGS on All Products\",\n            \"FREE Shipping & Returns on All Orders\",\n            \"FREE Samples with Every Order\",\n            \"FREE Gift with Coupon!\",\n            \"VIP Customer Support\"\n        ]\n    }\n}"
+          }
+        },
+        "cbd_wellness_KkLEH8": {
+          "type": "cbd_wellness",
+          "settings": {
+            "image_here": "shopify://shop_images/IMG_7.png",
+            "list_item_1": "FREE Samples with every order",
+            "list_item_2": "FREE Samples with every order",
+            "button_text": "Details",
+            "content": "{\n    \"logo\": \"https://cdn.shopify.com/s/files/1/0925/7290/files/bcbd-store-logo.png\",\n    \"club\": {\n        \"heading\": \"With Cabana Club:\",\n        \"list\": [\n            \"UNBEATABLE Prices on All Products\"\n        ]\n    },\n    \"elite\": {\n        \"heading\": \"With ELITE:\",\n        \"list\": [\n            \"UNBELIEVABLE SAVINGS on All Products\",\n            \"FREE Shipping & Returns on All Orders\",\n            \"FREE Samples with Every Order\",\n            \"FREE Gift with Coupon!\",\n            \"VIP Customer Support\"\n        ]\n    }\n}"
+          }
+        }
+      },
+      "block_order": [
+        "smoke_accessories_9NwhXn",
+        "smoke_accessories_JPtti3",
+        "smoke_accessories_NE8Fwc",
+        "smoke_accessories_eHJbi8",
+        "cbd_wellness_ch3UzK",
+        "cbd_wellness_PN4kKq",
+        "cbd_wellness_KkLEH8"
+      ],
+      "custom_css": [
+        ".cc-sites-access-button {display: none;}"
+      ],
+      "settings": {}
+    },
+    "cc_mm_unbeatable_EL4LML": {
+      "type": "cc-mm-unbeatable",
+      "settings": {
+        "image": "shopify://shop_images/Isolation_Mode.png",
+        "heading": "Membership Terms & Conditions",
+        "description": "*For complete Cabana Club USA and ELITE program details see <a href=\"https://www.smokecartel.com/pages/membership-terms-and-conditions\">terms and conditions.</a>"
+      }
     }
   },
   "order": [
@@ -74,6 +207,12 @@
     "cc_mm_instant_savings_bCNfNU",
     "cc_free_membership_offers_nbW6Yy",
     "cc_best_value_elite_N4AP3N",
-    "cc_elite_membership_offers_QtBxRi"
+    "cc_elite_membership_offers_QtBxRi",
+    "cc_mm_hero_banner1_BKmnJh",
+    "cc_mm_hero_banner2_9F9ACq",
+    "elite_winter_giveaway_cXKQtx",
+    "cc_mm_pricing_table_Memzmw",
+    "cc_mm_sites_access_rhUzJb",
+    "cc_mm_unbeatable_EL4LML"
   ]
 }
