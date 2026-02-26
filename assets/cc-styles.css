@@ -1646,8 +1646,11 @@ input#product-add-to-cart {
   position: relative;
 }
 
-.mobile-only {
+.mobile-only{
   display: none !important;
+}
+.desktop-only{
+  display: block !important;
 }
 
 @media (width < 768px) {
