@@ -57,12 +57,24 @@
         "btn_text": "Join Cabana Club",
         "btn_url": ""
       }
+    },
+    "cc_best_value_elite_N4AP3N": {
+      "type": "cc-best-value-elite",
+      "name": "<> Best Value",
+      "settings": {
+        "image": "shopify://shop_images/Group_788_1.webp",
+        "btn_text_1": "IT’S A NO BRAINER - that’s $1.25/mo*",
+        "btn_url_1": "",
+        "btn_text_2": "Join ELITE",
+        "btn_url_2": ""
+      }
     }
   },
   "order": [
     "main",
     "cc_mm_hero_banner_pef9YT",
     "cc_mm_instant_savings_bCNfNU",
-    "cc_free_membership_offers_nbW6Yy"
+    "cc_free_membership_offers_nbW6Yy",
+    "cc_best_value_elite_N4AP3N"
   ]
 }
