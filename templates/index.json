@@ -1369,6 +1369,11 @@
         "padding_bottom": 60
       }
     },
+    "home_join_banner_TmF4WQ": {
+      "type": "home-join-banner",
+      "name": "Join Banner",
+      "settings": {}
+    },
     "scrolling_gallery_image_wJyLJr": {
       "type": "scrolling-gallery-image",
       "blocks": {
@@ -1469,6 +1474,7 @@
     "slider_with_multicolumn_aJwbrc",
     "buttons_with_icon_c8CzHV",
     "multicolumn_Ff4Wbj",
+    "home_join_banner_TmF4WQ",
     "scrolling_gallery_image_wJyLJr"
   ]
 }
