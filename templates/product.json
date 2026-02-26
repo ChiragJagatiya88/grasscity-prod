@@ -388,6 +388,7 @@
         "tab_cHq7bL": {
           "type": "tab",
           "name": "Specifications",
+          "disabled": true,
           "settings": {
             "navigation_title": "Specifications",
             "content": "{{ product.metafields.custom.specifications | metafield_tag }}",
