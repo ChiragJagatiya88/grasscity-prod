@@ -380,7 +380,7 @@
         "collection_qxfNFe": {
           "type": "collection",
           "settings": {
-            "collection": "beaker-base-bongs",
+            "collection": "bongs",
             "image": "shopify://shop_images/gs_lifestyle_best_selling_ab_v01.webp",
             "title": "Best Sellers",
             "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
