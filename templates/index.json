@@ -1157,9 +1157,9 @@
           "type": "image-card",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_hot-deals-puffco_ab_v04.webp",
+            "image": "shopify://shop_images/gs_categories-dabrigs_ab_v01.webp",
             "content_alignment": "center",
-            "heading": "Select Lounge Chairs",
+            "heading": "Dab Rigs",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
@@ -1167,7 +1167,7 @@
             "heading_size": "h5",
             "heading_size_mobile": "inherit",
             "heading_size_custom": 18,
-            "text": "<p>From $200</p>",
+            "text": "",
             "card_link": ""
           }
         },
@@ -1175,9 +1175,9 @@
           "type": "image-card",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_hot-deals-puffco_ab_v03.webp",
+            "image": "shopify://shop_images/gs_categories-vaporizers_ab_v01.webp",
             "content_alignment": "center",
-            "heading": "Select Side tables",
+            "heading": "Vapes",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
@@ -1185,17 +1185,17 @@
             "heading_size": "h5",
             "heading_size_mobile": "inherit",
             "heading_size_custom": 18,
-            "text": "<p>Get up to $1.000</p>",
-            "card_link": ""
+            "text": "",
+            "card_link": "shopify://collections/vaporizer"
           }
         },
         "image_card_ag7Eb3": {
           "type": "image-card",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_hot-deals-puffco_ab_v05.webp",
+            "image": "shopify://shop_images/gs_categories-papers_ab_v01.webp",
             "content_alignment": "center",
-            "heading": "Select Home Decors",
+            "heading": "Rolling Papers",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
@@ -1203,8 +1203,8 @@
             "heading_size": "h5",
             "heading_size_mobile": "inherit",
             "heading_size_custom": 18,
-            "text": "<p>Buy One Get One</p>",
-            "card_link": ""
+            "text": "",
+            "card_link": "shopify://collections/rolling-papers"
           }
         }
       },
