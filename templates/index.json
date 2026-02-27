@@ -216,6 +216,7 @@
       "blocks": {
         "collection_ydJPzX": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "new-items",
             "title": "Best Sellers",
@@ -308,133 +309,6 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "show_progress_bar": true,
-        "padding_top": 40,
-        "padding_bottom": 0,
-        "show_section_divider": false,
-        "divider_width": "fixed"
-      }
-    },
-    "custom_content_HPgFTK": {
-      "type": "custom-content",
-      "blocks": {
-        "image_card_with_product_qBJGcT": {
-          "type": "image_card_with_product",
-          "settings": {
-            "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/popular-banner-background-5.png",
-            "image_ratio": "adapt",
-            "subheading": "",
-            "heading": "Dab Rigs",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h3",
-            "description": "",
-            "button_label": "Shop",
-            "button_style": "btn--primary",
-            "button_icon": "none",
-            "product": "water-pipe-telescope-style-2-w-quarta-teal-7in",
-            "width": "25%",
-            "alignment": "center",
-            "block_custom_class": ""
-          }
-        },
-        "image_card_with_product_G77z3R": {
-          "type": "image_card_with_product",
-          "settings": {
-            "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_bongs-popular_ab_v01.webp",
-            "image_ratio": "adapt",
-            "subheading": "",
-            "heading": "Bongs",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h3",
-            "description": "",
-            "button_label": "Shop",
-            "button_style": "btn--primary",
-            "button_icon": "none",
-            "product": "dankstop-zig-zag-beaker-bong",
-            "width": "25%",
-            "alignment": "center",
-            "block_custom_class": ""
-          }
-        },
-        "image_card_with_product_3khACH": {
-          "type": "image_card_with_product",
-          "settings": {
-            "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/popular-banner-background-6.png",
-            "image_ratio": "adapt",
-            "subheading": "",
-            "heading": "Pipes",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h3",
-            "description": "",
-            "button_label": "Shop",
-            "button_style": "btn--primary",
-            "button_icon": "none",
-            "product": "famous-x-fumed-large-sherlock-pipe",
-            "width": "25%",
-            "alignment": "center",
-            "block_custom_class": ""
-          }
-        },
-        "image_card_with_product_dMnGc4": {
-          "type": "image_card_with_product",
-          "settings": {
-            "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_vaporizers-popular_ab_v01.webp",
-            "image_ratio": "adapt",
-            "subheading": "",
-            "heading": "Grinders",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h3",
-            "description": "",
-            "button_label": "Shop",
-            "button_style": "btn--primary",
-            "button_icon": "none",
-            "product": "grateful-dead-x-g-pen-dash-dry-herb-vaporizer",
-            "width": "25%",
-            "alignment": "center",
-            "block_custom_class": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_card_with_product_qBJGcT",
-        "image_card_with_product_G77z3R",
-        "image_card_with_product_3khACH",
-        "image_card_with_product_dMnGc4"
-      ],
-      "settings": {
-        "container": "fixed",
-        "color_scheme": "",
-        "enable_sticky_column": false,
-        "section_header_alignment": "left",
-        "section_header_alignment_mobile": "inherit",
-        "subheading": "",
-        "heading": "Popular Categories",
-        "highlight_style": "none",
-        "highlight_font_style": "italic",
-        "highlight_style_color": "",
-        "highlight_text_color": "",
-        "heading_size": "h1",
-        "description": "",
-        "text_size": "text-base",
-        "column_gap": "2xs",
-        "row_gap": "large",
-        "swipe_on_mobile": true,
-        "columns_mobile": "1",
         "padding_top": 40,
         "padding_bottom": 0,
         "show_section_divider": false,
@@ -581,52 +455,129 @@
         "divider_width": "fixed"
       }
     },
-    "favorite_products_6Tg9Pn": {
-      "type": "favorite-products",
+    "custom_content_HPgFTK": {
+      "type": "custom-content",
       "blocks": {
-        "product_XrLWzM": {
-          "type": "product",
+        "image_card_with_product_qBJGcT": {
+          "type": "image_card_with_product",
           "settings": {
-            "color_scheme": "scheme-2",
-            "product": "fat-bottom-mini-bong",
-            "image": "shopify://shop_images/gs_best-sellers-bg-pandora_desktop_ab_v01.webp",
-            "text": "<p>\"It came in a week. It took three days to be shipped and four days to come in the mail. I love it. It's the perfect size and everything. Thanks again for sending me a great piece.\"</p>",
-            "text_size": "h2",
-            "author": "John Doe",
-            "bio": ""
+            "color_scheme": "scheme-inverse",
+            "image": "shopify://shop_images/gs_puffco_peak_ab_v01.webp",
+            "image_ratio": "adapt",
+            "subheading": "",
+            "heading": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3",
+            "description": "",
+            "button_label": "Shop",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "product": "new-puffco-peak",
+            "width": "25%",
+            "alignment": "center",
+            "block_custom_class": ""
           }
         },
-        "product_wByADN": {
-          "type": "product",
+        "image_card_with_product_G77z3R": {
+          "type": "image_card_with_product",
           "settings": {
-            "color_scheme": "scheme-8",
-            "product": "twisted-frit-4-inch-glass-pipe",
-            "image": "shopify://shop_images/gs_best-sellers-bg-pulsar_desktop_ab_v01.webp",
-            "text": "<p>“Was a great pipe for all of 3 days. It came packaged well but had fractures all around the bowl . I put lil pressure on it and it caved right in . Gave myself a good cut. Will try again”</p>",
-            "text_size": "h2",
-            "author": "Julie Mathers",
-            "bio": ""
+            "color_scheme": "scheme-inverse",
+            "image": "shopify://shop_images/gs_big_chamber_3perc_ab_v01.webp",
+            "image_ratio": "adapt",
+            "subheading": "",
+            "heading": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3",
+            "description": "",
+            "button_label": "Shop",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "product": "gc-big-chamber-with-tree-perc-water-pipe-18-in",
+            "width": "25%",
+            "alignment": "center",
+            "block_custom_class": ""
+          }
+        },
+        "image_card_with_product_3khACH": {
+          "type": "image_card_with_product",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "image": "shopify://shop_images/gs_pax_vaporizer_ab_v01.webp",
+            "image_ratio": "adapt",
+            "subheading": "",
+            "heading": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3",
+            "description": "",
+            "button_label": "Shop",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "product": "pax-flow-vaporizer1",
+            "width": "25%",
+            "alignment": "center",
+            "block_custom_class": ""
+          }
+        },
+        "image_card_with_product_dMnGc4": {
+          "type": "image_card_with_product",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "image": "shopify://shop_images/gs_recycler-vapor-bubbler_ab_v01.webp",
+            "image_ratio": "adapt",
+            "subheading": "",
+            "heading": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3",
+            "description": "",
+            "button_label": "Shop",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "product": "glasscity-recycler-vapor-bubbler-with-showerhead-honeycomb-disc-perc",
+            "width": "25%",
+            "alignment": "center",
+            "block_custom_class": ""
           }
         }
       },
       "block_order": [
-        "product_XrLWzM",
-        "product_wByADN"
-      ],
-      "custom_css": [
-        ".testimonial__content {max-width: 46rem;}"
+        "image_card_with_product_qBJGcT",
+        "image_card_with_product_G77z3R",
+        "image_card_with_product_3khACH",
+        "image_card_with_product_dMnGc4"
       ],
       "settings": {
-        "color_scheme": "scheme-info",
-        "layout": "content-right",
-        "heading": "Our Favorite Products",
+        "container": "fixed",
+        "color_scheme": "",
+        "enable_sticky_column": false,
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Popular Categories",
         "highlight_style": "none",
         "highlight_font_style": "italic",
         "highlight_style_color": "",
         "highlight_text_color": "",
-        "slide_height": "small",
-        "pcard_style": "boxed",
-        "pcard_image_ratio": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "column_gap": "2xs",
+        "row_gap": "large",
+        "swipe_on_mobile": true,
+        "columns_mobile": "1",
+        "padding_top": 40,
+        "padding_bottom": 0,
         "show_section_divider": false,
         "divider_width": "fixed"
       }
@@ -738,7 +689,7 @@
           "type": "image_card",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_membership-cc_desktop_ab_v01.png",
+            "image": "shopify://shop_images/gs_membership-cc_desktop_ab_v01.webp",
             "image_ratio": "adapt",
             "image_overlay_opacity": 0,
             "content_position": "split-bottom-button",
@@ -779,7 +730,7 @@
           "type": "image_card",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_membership-elite_desktop_ab_v01.png",
+            "image": "shopify://shop_images/gs_membership-elite_desktop_ab_v01.webp",
             "image_ratio": "adapt",
             "image_overlay_opacity": 0,
             "content_position": "split-bottom-button",
@@ -912,6 +863,56 @@
         "show_progress_bar": true,
         "padding_top": 60,
         "padding_bottom": 0,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "favorite_products_6Tg9Pn": {
+      "type": "favorite-products",
+      "blocks": {
+        "product_XrLWzM": {
+          "type": "product",
+          "settings": {
+            "color_scheme": "scheme-2",
+            "product": "fat-bottom-mini-bong",
+            "image": "shopify://shop_images/gs_best-sellers-bg-pandora_desktop_ab_v01.webp",
+            "text": "<p>\"It came in a week. It took three days to be shipped and four days to come in the mail. I love it. It's the perfect size and everything. Thanks again for sending me a great piece.\"</p>",
+            "text_size": "h2",
+            "author": "John Doe",
+            "bio": ""
+          }
+        },
+        "product_wByADN": {
+          "type": "product",
+          "settings": {
+            "color_scheme": "scheme-8",
+            "product": "twisted-frit-4-inch-glass-pipe",
+            "image": "shopify://shop_images/gs_best-sellers-bg-pulsar_desktop_ab_v01.webp",
+            "text": "<p>“Was a great pipe for all of 3 days. It came packaged well but had fractures all around the bowl . I put lil pressure on it and it caved right in . Gave myself a good cut. Will try again”</p>",
+            "text_size": "h2",
+            "author": "Julie Mathers",
+            "bio": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_XrLWzM",
+        "product_wByADN"
+      ],
+      "custom_css": [
+        ".testimonial__content {max-width: 46rem;}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-info",
+        "layout": "content-right",
+        "heading": "Our Favorite Products",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "slide_height": "small",
+        "pcard_style": "boxed",
+        "pcard_image_ratio": "",
         "show_section_divider": false,
         "divider_width": "fixed"
       }
@@ -1116,12 +1117,12 @@
           "type": "slide",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_hot-deals-puffco_ab_v01.webp",
+            "image": "shopify://shop_images/gs_categories-bongs_ab_v01.webp",
             "image_overlay_opacity": 20,
             "content_position": "top-left",
             "content_alignment": "left",
-            "subheading": "Hot Deals",
-            "heading": "The Bow Chairs Under $200",
+            "subheading": "Lorem Ipsum Here",
+            "heading": "Bongs",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
@@ -1129,7 +1130,7 @@
             "heading_size": "h1",
             "text": "<p>Introducing the latest styles in women's shoes tailored for every occasion taste.</p>",
             "button_label": "Shop Now",
-            "button_link": "shopify://collections/vaporizer",
+            "button_link": "shopify://collections/bongs",
             "button_style": "btn--primary",
             "button_icon": "none"
           }
