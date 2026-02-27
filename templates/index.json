@@ -218,7 +218,7 @@
           "type": "collection",
           "settings": {
             "collection": "new-items",
-            "title": "New Arrivals",
+            "title": "Best Sellers",
             "show_banner": true,
             "color_scheme": "scheme-inverse",
             "card_link": "",
@@ -245,6 +245,7 @@
         },
         "collection_E83rKg": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "lighters",
             "title": "Hot Items",
@@ -284,7 +285,7 @@
         "section_header_alignment": "left",
         "section_header_alignment_mobile": "inherit",
         "subheading": "",
-        "heading": "New Arrivals",
+        "heading": "Best Sellers",
         "highlight_style": "none",
         "highlight_font_style": "italic",
         "highlight_style_color": "",
