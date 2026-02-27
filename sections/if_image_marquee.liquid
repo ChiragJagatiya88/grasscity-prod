@@ -231,13 +231,13 @@
       white-space: nowrap;
       animation: scroll {{ section.settings.speed }}s linear infinite;
       width: 100%;
-      gap: 16px;
+      gap: 50px;
     }
     .infinite_scroll_items {
       display: flex;
       flex-direction: row;
       flex-shrink: 0;
-      gap: 16px;
+      gap: 50px;
     }
     .item_wrap {
       width: {{ section.settings.width }}px;
@@ -269,7 +269,7 @@
       padding-bottom: {{ section.settings.section_bottom_spacing_mob }}px;
       .section_header_block {
         flex-direction: column;
-        gap: 10px;
+        gap: 30px;
         .section_title * {
           text-align: center;
         }
@@ -281,7 +281,7 @@
       }
       .infinite_scroll_content {
         animation: scroll {{ section.settings.speed_mob }}s linear infinite;
-        gap: 10px;
+        gap: 30px;
       }
       .item_wrap {
         width: {{ section.settings.width_mob }}px;
