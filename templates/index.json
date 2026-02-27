@@ -154,17 +154,42 @@
             "image_overlay_opacity": 30,
             "content_position": "middle-center",
             "text_alignment": "center",
-            "subheading": "Lorem Ipsum",
-            "title": "Heading here up to 40 characters max.",
+            "subheading": "",
+            "title": "BRING HOME THE LA CHILL",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
-            "heading_size": "hd1",
+            "heading_size": "h2",
             "description": "",
             "description_size": "text-base",
-            "button_label": "2 words cta",
-            "button_link": "",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/bongs",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": true
+          }
+        },
+        "slide_Ci8G46": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "background": "shopify://shop_images/sc_hp_hero_desktop_usa_05_fa849af6-e27e-4a13-8937-f560f99f487b.jpg",
+            "background_mobile": "shopify://shop_images/sc_hp_hero_mobile_usa_05_761d7849-ce1c-41da-a904-442597e6f38c.jpg",
+            "image_overlay_opacity": 30,
+            "content_position": "top-center",
+            "text_alignment": "left",
+            "subheading": "",
+            "title": "WIN A TCL 55\" SMARTV",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2",
+            "description": "",
+            "description_size": "text-base",
+            "button_label": "SIGN UP & ENTER",
+            "button_link": "shopify://pages/membership",
             "button_style": "btn--primary",
             "button_icon": "none",
             "enable_preload_image": true
@@ -172,7 +197,8 @@
         }
       },
       "block_order": [
-        "slide_JhU8hg"
+        "slide_JhU8hg",
+        "slide_Ci8G46"
       ],
       "settings": {
         "container": "full",
