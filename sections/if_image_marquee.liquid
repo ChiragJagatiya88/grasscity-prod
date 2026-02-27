@@ -1,0 +1,354 @@
+<div class="marquee_section section_{{ section.id }}">
+  {% if section.settings.sec_title != blank or section.settings.sec_sub_title != blank %}
+    <div class="section section_header_block">
+      {% if section.settings.sec_title != blank %}<h2 class="section_title">{{ section.settings.sec_title }}</h2>{% endif %}
+      {% if section.settings.sec_sub_title != blank %}<div class="section_subtitle">{{ section.settings.sec_sub_title }}</div>{% endif %}
+    </div>
+  {% endif %}
+  <div class="scroll_container">
+    <div id="InfiniteScrollWrapper" class="infinite_scroll_wrapper">
+      <div id="InfiniteScroll" class="infinite_scroll_content">
+        <div class="infinite_scroll_items">
+          {%- for block in section.blocks -%}
+            {%- assign marquee_image = block.settings.marquee_image -%}
+            {% if marquee_image != blank %}
+              <div class="item_wrap">{{ marquee_image | image_url: width: marquee_image.width | image_tag: class: 'marquee_image', loading: 'lazy'}}</div>
+            {% endif %}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "IF - Image Marquee",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "sec_title",
+      "label": "Section Title"
+    },
+    {
+      "type": "richtext",
+      "id": "sec_sub_title",
+      "label": "Section Sub Title",
+    },
+    
+    {
+      "type": "color",
+      "id": "color",
+      "label": "Background Carousel",
+      "default": "#cecece"
+    },
+
+    {
+      "type": "header",
+      "content": "Desktop Option"
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "min": 5,
+      "max": 50,
+      "step": 5,
+      "unit": "s",
+      "label": "Marquee Speed",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "width",
+      "label": "Image Width",
+      "min": 100,
+      "max": 1000,
+      "step": 10,
+      "default": 500,
+      "unit": "PX"
+    },
+    {
+      "type": "range",
+      "id": "height",
+      "label": "Image Height",
+      "min": 100,
+      "max": 1000,
+      "step": 10,
+      "default": 500,
+      "unit": "PX"
+    },
+
+    {
+      "type": "header",
+      "content": "Mobile Option"
+    },
+    {
+      "type": "range",
+      "id": "speed_mob",
+      "min": 5,
+      "max": 50,
+      "step": 5,
+      "unit": "s",
+      "label": "Marquee Speed",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "width_mob",
+      "label": "Width",
+      "min": 100,
+      "max": 1000,
+      "step": 10,
+      "default": 500,
+      "unit": "PX"
+    },
+    {
+      "type": "range",
+      "id": "height_mob",
+      "label": "Height",
+      "min": 100,
+      "max": 1000,
+      "step": 10,
+      "default": 500,
+      "unit": "PX"
+    },
+
+    {
+      "type": "header",
+      "content": "Spacing Desktop"
+    },
+    {
+      "type": "range",
+      "id": "section_top_spacing",
+      "label": "Section Top Spacing",
+      "min": 10,
+      "max": 200,
+      "step": 5,
+      "default": 55,
+      "unit": "PX"
+    },
+    {
+      "type": "range",
+      "id": "section_bottom_spacing",
+      "label": "Section Bottom Spacing",
+      "min": 10,
+      "max": 200,
+      "step": 5,
+      "default": 55,
+      "unit": "PX"
+    },
+
+    {
+      "type": "header",
+      "content": "Spacing Mobile"
+    },
+    {
+      "type": "range",
+      "id": "section_top_spacing_mob",
+      "label": "Section Top Spacing Mobile",
+      "min": 10,
+      "max": 200,
+      "step": 5,
+      "default": 45,
+      "unit": "PX"
+    },
+    {
+      "type": "range",
+      "id": "section_bottom_spacing_mob",
+      "label": "Section Bottom Spacing Mobile",
+      "min": 10,
+      "max": 200,
+      "step": 5,
+      "default": 45,
+      "unit": "PX"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Image",
+      "type": "image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "marquee_image",
+          "label": "Marquee Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "IF - Image Marquee",
+      "category": "IF Section"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .section_{{ section.id }} {
+    background-color: {{ section.settings.color}};
+    overflow: hidden;
+    padding-top: {{ section.settings.section_top_spacing }}px;
+    padding-bottom: {{ section.settings.section_bottom_spacing }}px;
+    .section_header_block {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      padding-top: 0;
+      padding-bottom: 30px;
+      .section_title * {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 100%;
+        letter-spacing: 0;
+        {% comment %} font-family: "Font-1700746605519" !important; {% endcomment %}
+        background: linear-gradient(to right, #9AB0C7 0%, #4678AC 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .section_subtitle * {
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: 0;
+        text-align: right;
+      }
+    }
+    .scroll_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .infinite_scroll_wrapper {
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+    }
+    .infinite_scroll_content {
+      display: flex;
+      flex-direction: row;
+      white-space: nowrap;
+      animation: scroll {{ section.settings.speed }}s linear infinite;
+      width: 100%;
+      gap: 16px;
+    }
+    .infinite_scroll_items {
+      display: flex;
+      flex-direction: row;
+      flex-shrink: 0;
+      gap: 16px;
+    }
+    .item_wrap {
+      width: {{ section.settings.width }}px;
+      height: {{ section.settings.height }}px;
+      flex-shrink: 0;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+      &:hover img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .infinite_scroll_wrapper:hover .infinite_scroll_content {
+      animation-play-state: paused;
+    }
+  }
+
+  @media screen and (max-width: 999px){
+    .section_{{ section.id }} {
+      padding-top: {{ section.settings.section_top_spacing_mob }}px;
+      padding-bottom: {{ section.settings.section_bottom_spacing_mob }}px;
+      .section_header_block {
+        flex-direction: column;
+        gap: 10px;
+        .section_title * {
+          text-align: center;
+        }
+        .section_subtitle * {
+          font-size: 18px;
+          line-height: 28px;
+          text-align: center;
+        }
+      }
+      .infinite_scroll_content {
+        animation: scroll {{ section.settings.speed_mob }}s linear infinite;
+        gap: 10px;
+      }
+      .item_wrap {
+        width: {{ section.settings.width_mob }}px;
+        height: {{ section.settings.height_mob }}px;
+      }
+    }
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+</style>
+
+<script>
+  (function() {
+    const defaultItemCount = 4;
+    const itemWidth = {{ section.settings.width }};
+    
+    const wrapper = document.querySelector('.section_{{ section.id }} #InfiniteScrollWrapper');
+    const content = document.querySelector('.section_{{ section.id }} #InfiniteScroll');
+    
+    const manageChildren = (childCount) => {
+      while (content.children.length > defaultItemCount) {
+        content.removeChild(content.lastChild);
+      }
+    
+      for (let i = 0; i < childCount; i++) {
+        for (let j = 0; j < defaultItemCount; j++) {
+          const clone = content.children[j].cloneNode(true);
+          content.appendChild(clone);
+        }
+      }
+    
+      content.style.width = `${itemWidth * defaultItemCount * (childCount + 1)}px`;
+    };
+    
+    const core = (width) => {
+      if (width <= 1920) {
+        manageChildren(2);
+      } else if (width <= 2560) {
+        manageChildren(3);
+      } else if (width <= 3840) {
+        manageChildren(4);
+      } else {
+        manageChildren(8);
+      }
+    };
+    
+    const debounce = (func, delay) => {
+      let timeout;
+      return () => {
+        clearTimeout(timeout);
+        timeout = setTimeout(func, delay);
+      };
+    };
+    
+    const handleResize = debounce(() => core(window.innerWidth), 300);
+    
+    window.addEventListener('load', () => {
+      core(window.innerWidth);
+    });
+    
+    window.addEventListener('resize', handleResize);
+  })();
+</script>
