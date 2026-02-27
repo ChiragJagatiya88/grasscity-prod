@@ -1398,9 +1398,205 @@
     },
     "home_join_banner_TmF4WQ": {
       "type": "home-join-banner",
-      "disabled": true,
       "name": "Join Banner",
       "settings": {}
+    },
+    "logo_list_yLHxNy": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_etJJYY": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/grasscity.png",
+            "height": 80,
+            "link": ""
+          }
+        },
+        "logo_AYcXmV": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/blessedcbd.png",
+            "height": 80,
+            "link": ""
+          }
+        },
+        "logo_k6xW4w": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/nuleaf.png",
+            "height": 80,
+            "link": ""
+          }
+        },
+        "logo_iYhe9D": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/dailyhighclub.png",
+            "height": 80,
+            "link": ""
+          }
+        },
+        "logo_aQCXNc": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/dankstop.png",
+            "height": 80,
+            "link": ""
+          }
+        },
+        "logo_dDBhBE": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/fabcbd.png",
+            "height": 80,
+            "link": ""
+          }
+        },
+        "logo_V7HfPM": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/cannacabana.png",
+            "height": 80,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_etJJYY",
+        "logo_AYcXmV",
+        "logo_k6xW4w",
+        "logo_iYhe9D",
+        "logo_aQCXNc",
+        "logo_dDBhBE",
+        "logo_V7HfPM"
+      ],
+      "name": "Logo list",
+      "settings": {
+        "layout": "default",
+        "grid_horizontal": 70,
+        "direction": "left",
+        "speed": 5,
+        "heading": "Logo list",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "brand_logos_wTJaFd": {
+      "type": "brand-logos",
+      "blocks": {
+        "logo_GpkKDY": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/fabcbd.png",
+            "image_link": ""
+          }
+        },
+        "logo_8DhTXz": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/dailyhighclub.png",
+            "image_link": ""
+          }
+        },
+        "logo_QU4JLE": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/cannacabana.png",
+            "image_link": ""
+          }
+        },
+        "logo_3FDqxT": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/grasscity.png",
+            "image_link": ""
+          }
+        },
+        "logo_JNDBCA": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/dankstop.png",
+            "image_link": ""
+          }
+        },
+        "logo_VREAVU": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/nuleaf.png",
+            "image_link": ""
+          }
+        },
+        "logo_QiUtiR": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/blessedcbd.png",
+            "image_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_GpkKDY",
+        "logo_8DhTXz",
+        "logo_QU4JLE",
+        "logo_3FDqxT",
+        "logo_JNDBCA",
+        "logo_VREAVU",
+        "logo_QiUtiR"
+      ],
+      "name": "t:sections.brand-logos.presets",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-inverse",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "description": "",
+        "text_size": "text-sm",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "image_padding": "none",
+        "image_width": "full",
+        "columns_desktop": 6,
+        "column_gap": "medium",
+        "row_gap": "inherit",
+        "grid_bordered": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 30,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
     },
     "scrolling_gallery_image_wJyLJr": {
       "type": "scrolling-gallery-image",
@@ -1409,22 +1605,20 @@
           "type": "gallery",
           "settings": {
             "color_scheme": "",
-            "image": "shopify://shop_images/gs_brand-qualities-1_ab_v01.webp",
-            "image_avatar": "shopify://shop_images/gs_avatar_ig_2.png",
+            "image": "shopify://shop_images/fabcbd.png",
             "image_link": "",
-            "social_media": "instagram",
-            "heading": "grasscityheadshop"
+            "social_media": "none",
+            "heading": ""
           }
         },
         "gallery_HjXBVX": {
           "type": "gallery",
           "settings": {
-            "color_scheme": "",
-            "image": "shopify://shop_images/hot-deals-banner-background-5.png",
-            "image_avatar": "shopify://shop_images/gs_avatar_ig_2.png",
+            "color_scheme": "scheme-2",
+            "image": "shopify://shop_images/dailyhighclub.png",
             "image_link": "",
-            "social_media": "instagram",
-            "heading": "grasscityheadshop"
+            "social_media": "none",
+            "heading": ""
           }
         },
         "gallery_Hdq7y7": {
@@ -1456,6 +1650,90 @@
         "gallery_Hdq7y7",
         "gallery_xaTeHP"
       ],
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "We’re on Instagram",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "show_button_on_top": false,
+        "button_label": "@grasscityheadshop",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "direction": "left",
+        "speed": 0.1,
+        "pause_on_hover": true,
+        "column_gap": "medium",
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 30,
+        "padding_bottom": 30
+      }
+    },
+    "scrolling_gallery_image_Q7eTgL": {
+      "type": "scrolling-gallery-image",
+      "blocks": {
+        "gallery_CBNmmd": {
+          "type": "gallery",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/gs_brand-qualities-1_ab_v01.webp",
+            "image_avatar": "shopify://shop_images/gs_avatar_ig_2.png",
+            "image_link": "",
+            "social_media": "instagram",
+            "heading": "grasscityheadshop"
+          }
+        },
+        "gallery_awPfbF": {
+          "type": "gallery",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/hot-deals-banner-background-5.png",
+            "image_avatar": "shopify://shop_images/gs_avatar_ig_2.png",
+            "image_link": "",
+            "social_media": "instagram",
+            "heading": "grasscityheadshop"
+          }
+        },
+        "gallery_8bzNrt": {
+          "type": "gallery",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "image": "shopify://shop_images/gs_about-brand_ab_v01.webp",
+            "image_avatar": "shopify://shop_images/gs_avatar_ig_2.png",
+            "image_link": "",
+            "social_media": "instagram",
+            "heading": "grasscityheadshop"
+          }
+        },
+        "gallery_3pbkJq": {
+          "type": "gallery",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "image": "shopify://shop_images/hot-deals-banner-background-2.png",
+            "image_avatar": "shopify://shop_images/gs_avatar_ig_2.png",
+            "image_link": "",
+            "social_media": "instagram",
+            "heading": "grasscityheadshop"
+          }
+        }
+      },
+      "block_order": [
+        "gallery_CBNmmd",
+        "gallery_awPfbF",
+        "gallery_8bzNrt",
+        "gallery_3pbkJq"
+      ],
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "color_scheme": "scheme-2",
@@ -1503,6 +1781,9 @@
     "buttons_with_icon_c8CzHV",
     "multicolumn_Ff4Wbj",
     "home_join_banner_TmF4WQ",
-    "scrolling_gallery_image_wJyLJr"
+    "logo_list_yLHxNy",
+    "brand_logos_wTJaFd",
+    "scrolling_gallery_image_wJyLJr",
+    "scrolling_gallery_image_Q7eTgL"
   ]
 }
