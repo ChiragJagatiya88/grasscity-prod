@@ -421,7 +421,7 @@
           "type": "image_card_with_product",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_big_chamber_3perc_ab_v01.webp",
+            "image": "shopify://shop_images/gs_big_chamber_3perc_ab_v01_24caeb9d-e7b5-4ae5-86e4-05814e6a1ba3.webp",
             "image_ratio": "adapt",
             "subheading": "",
             "heading": "",
@@ -444,7 +444,7 @@
           "type": "image_card_with_product",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_pax_vaporizer_ab_v01.webp",
+            "image": "shopify://shop_images/gs_pax_vaporizer_ab_v01_7cf6b0d0-7334-4002-8811-a209f2838439.webp",
             "image_ratio": "adapt",
             "subheading": "",
             "heading": "",
@@ -467,7 +467,7 @@
           "type": "image_card_with_product",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_recycler-vapor-bubbler_ab_v01.webp",
+            "image": "shopify://shop_images/gs_recycler-vapor-bubbler_ab_v01_79e3953d-cc97-480d-9f87-f61424983418.webp",
             "image_ratio": "adapt",
             "subheading": "",
             "heading": "",
@@ -525,7 +525,7 @@
           "type": "collection",
           "settings": {
             "collection": "january-featured-picks",
-            "image": "shopify://shop_images/gs_lifestyle_featured_picks_ab_v01.webp",
+            "image": "shopify://shop_images/gs_lifestyle_featured_picks_ab_v01_81db7e72-f06a-4580-9db8-9c7440f0af92.webp",
             "title": "Featured Picks",
             "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
             "button_label": "Shop Collection",
@@ -537,7 +537,7 @@
           "type": "collection",
           "settings": {
             "collection": "bongs",
-            "image": "shopify://shop_images/gs_lifestyle_best_selling_ab_v01.webp",
+            "image": "shopify://shop_images/gs_lifestyle_best_selling_ab_v01_ea5ad814-a880-4ef4-9a0b-1a3dac350c6e.webp",
             "title": "Best Sellers",
             "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
             "button_label": "Shop Collection",
@@ -549,7 +549,7 @@
           "type": "collection",
           "settings": {
             "collection": "new-items",
-            "image": "shopify://shop_images/gs_lifestyle_new_releases_ab_v01.webp",
+            "image": "shopify://shop_images/gs_lifestyle_new_releases_ab_v01_b27f78c8-84b6-4252-92fc-bbc753a6be77.webp",
             "title": "New Releases",
             "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
             "button_label": "Shop Collection",
@@ -561,7 +561,7 @@
           "type": "collection",
           "settings": {
             "collection": "munchies",
-            "image": "shopify://shop_images/gs_lifestyle_sunny_staff_picks_ab_v01.webp",
+            "image": "shopify://shop_images/gs_lifestyle_sunny_staff_picks_ab_v01_9bd8c7ea-55d3-4eb8-ac9c-355bc452a453.webp",
             "title": "Sunny Staff Picks",
             "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
             "button_label": "Button label",
