@@ -622,3 +622,37 @@ elite-icon-nm {
     color: #7fc410;
   }
 }
+
+
+
+
+
+.cc-secondary-button {
+  border-radius: var(--corner-radius-extra-large, 32px);
+  border: 2px solid var(--Color-Neutral-Neutral-0, #e1251c);
+  background: #fff;
+  box-shadow: 0 1px 2px #0d0d120f;
+  padding: 12px 16px;
+  color: var(--Color-Canna-Cabana-Red-500, #e1251c);
+  text-align: center;
+  font-size: var(--Type-text-s, 16px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  display: inline-block;
+  text-decoration: none;
+}
+.cc-elite-button {
+  border-radius: var(--corner-radius-extra-large, 32px);
+  background: var(--Golden-Surface, linear-gradient(118deg, #ab7917 8.15%, #ffdf6e 50%, #ab7917 91.85%));
+  box-shadow: 0 1px 2px #0d0d120f;
+  padding: 12px 16px;
+  color: var(--Color-Elite-Blue-500, #1c355e);
+  text-align: center;
+  font-size: var(--Type-text-s, 14px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+  display: inline-block;
+}
