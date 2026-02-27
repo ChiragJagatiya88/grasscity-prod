@@ -1460,17 +1460,17 @@
       "settings": {
         "sec_title": "",
         "sec_sub_title": "",
-        "color": "#cecece",
+        "color": "#1f1f1f",
         "speed": 30,
-        "width": 500,
-        "height": 500,
+        "width": 100,
+        "height": 100,
         "speed_mob": 10,
-        "width_mob": 500,
-        "height_mob": 500,
-        "section_top_spacing": 55,
-        "section_bottom_spacing": 55,
-        "section_top_spacing_mob": 45,
-        "section_bottom_spacing_mob": 45
+        "width_mob": 100,
+        "height_mob": 100,
+        "section_top_spacing": 10,
+        "section_bottom_spacing": 30,
+        "section_top_spacing_mob": 10,
+        "section_bottom_spacing_mob": 30
       }
     },
     "logo_list_yLHxNy": {
