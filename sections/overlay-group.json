@@ -70,6 +70,7 @@
         "type_AzgBQT",
         "variants_RYYmjz"
       ],
+      "disabled": true,
       "settings": {}
     },
     "quick-view": {
@@ -310,6 +311,7 @@
         "item_dQn9tr",
         "item_xfLhK8"
       ],
+      "disabled": true,
       "custom_css": [
         ".spotlight__item-content {max-width: 22rem;}"
       ],
