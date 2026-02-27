@@ -18,7 +18,7 @@
 @media (min-width: 1023.98px) {
   .article--width {
     position: relative;
-    max-width: 88rem;
+    max-width: 1100px;
     margin-inline: auto;
   }
 }
