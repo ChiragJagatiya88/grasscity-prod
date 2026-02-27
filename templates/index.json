@@ -1139,9 +1139,9 @@
           "type": "image-card",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_hot-deals-puffco_ab_v02.webp",
+            "image": "shopify://shop_images/gs_categories-grinders_ab_v01.webp",
             "content_alignment": "center",
-            "heading": "Select Table Lamps",
+            "heading": "Herb Grinders",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
@@ -1149,8 +1149,8 @@
             "heading_size": "h5",
             "heading_size_mobile": "inherit",
             "heading_size_custom": 18,
-            "text": "<p>Get up to $100 Off</p>",
-            "card_link": "shopify://collections/acrylic-bongs"
+            "text": "",
+            "card_link": "shopify://collections/herb-grinders"
           }
         },
         "image_card_yb3htw": {
