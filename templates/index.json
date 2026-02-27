@@ -418,7 +418,7 @@
         "collection_j3wCpz": {
           "type": "collection",
           "settings": {
-            "collection": "420-accessories-420-lifestyle-apparel-420-apparel-fox-productions-420-lifestyle",
+            "collection": "new-items",
             "image": "shopify://shop_images/gs_lifestyle_new_releases_ab_v01.webp",
             "title": "New Releases",
             "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
@@ -430,7 +430,7 @@
         "collection_W8AwMF": {
           "type": "collection",
           "settings": {
-            "collection": "420-accessories-420-lifestyle-420-lifestyle-apparel-420-apparel",
+            "collection": "munchies",
             "image": "shopify://shop_images/gs_lifestyle_sunny_staff_picks_ab_v01.webp",
             "title": "Sunny Staff Picks",
             "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
