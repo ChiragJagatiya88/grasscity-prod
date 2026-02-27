@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "breadcrumbs_Gxg9wp": {
       "type": "breadcrumbs",
@@ -54,8 +54,8 @@
     },
     "custom_liquid_pb3X9a": {
       "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.name",
       "disabled": true,
+      "name": "t:sections.custom-liquid.name",
       "settings": {
         "custom_liquid": "{% if collection.description != blank %}\n<div class=\"page-width page-width--fixed section__container\">\n<div class=\"collection_top_des\">{{ collection.description }}</div>\n</div>\n{% endif %}",
         "color_scheme": "",
@@ -79,7 +79,7 @@
             "content_spacing": "small",
             "content_gap": "fitted",
             "card_link": "",
-            "subheading": "Home & Decor",
+            "subheading": "",
             "subheading_style": "",
             "heading": "Saving $30 for Lighting",
             "highlight_style": "none",
