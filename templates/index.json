@@ -418,11 +418,23 @@
         "collection_j3wCpz": {
           "type": "collection",
           "settings": {
-            "collection": "herb-grinders",
-            "image": "shopify://shop_images/gs_archetype-minimalist_ab_v01_0c9f1536-d1c5-4ebd-9c82-10cc200bb696.webp",
-            "title": "The creative night owl",
+            "collection": "420-accessories-420-lifestyle-apparel-420-apparel-fox-productions-420-lifestyle",
+            "image": "shopify://shop_images/gs_lifestyle_new_releases_ab_v01.webp",
+            "title": "New Releases",
             "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
             "button_label": "Shop Collection",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        },
+        "collection_W8AwMF": {
+          "type": "collection",
+          "settings": {
+            "collection": "420-accessories-420-lifestyle-420-lifestyle-apparel-420-apparel",
+            "image": "shopify://shop_images/gs_lifestyle_sunny_staff_picks_ab_v01.webp",
+            "title": "Sunny Staff Picks",
+            "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
+            "button_label": "Button label",
             "button_style": "btn--primary",
             "button_icon": "none"
           }
@@ -431,7 +443,8 @@
       "block_order": [
         "collection_kXyTe3",
         "collection_qxfNFe",
-        "collection_j3wCpz"
+        "collection_j3wCpz",
+        "collection_W8AwMF"
       ],
       "custom_css": [
         "@media (min-width: 1280px) {collection-tabs {padding-inline: 5rem; }}"
