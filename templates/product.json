@@ -34,6 +34,7 @@
         },
         "yotpo_product_reviews_star_rating_i93beV": {
           "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "disabled": true,
           "settings": {
             "product": "{{product}}"
           }
