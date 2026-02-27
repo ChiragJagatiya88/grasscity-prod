@@ -54,8 +54,8 @@
         "use_color_scheme_in_container": false,
         "content_spacing": "standard",
         "content_alignment": "center",
-        "padding_top": 100,
-        "padding_bottom": 100,
+        "padding_top": 50,
+        "padding_bottom": 50,
         "show_section_divider": false,
         "divider_width": "fixed"
       }
