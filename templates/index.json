@@ -391,85 +391,6 @@
         "divider_width": "fixed"
       }
     },
-    "collection_tabs_VexkkR": {
-      "type": "collection-tabs",
-      "blocks": {
-        "collection_kXyTe3": {
-          "type": "collection",
-          "settings": {
-            "collection": "january-featured-picks",
-            "image": "shopify://shop_images/gs_lifestyle_featured_picks_ab_v01.webp",
-            "title": "Featured Picks",
-            "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
-            "button_label": "Shop Collection",
-            "button_style": "btn--primary",
-            "button_icon": "none"
-          }
-        },
-        "collection_qxfNFe": {
-          "type": "collection",
-          "settings": {
-            "collection": "bongs",
-            "image": "shopify://shop_images/gs_lifestyle_best_selling_ab_v01.webp",
-            "title": "Best Sellers",
-            "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
-            "button_label": "Shop Collection",
-            "button_style": "btn--primary",
-            "button_icon": "none"
-          }
-        },
-        "collection_j3wCpz": {
-          "type": "collection",
-          "settings": {
-            "collection": "new-items",
-            "image": "shopify://shop_images/gs_lifestyle_new_releases_ab_v01.webp",
-            "title": "New Releases",
-            "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
-            "button_label": "Shop Collection",
-            "button_style": "btn--primary",
-            "button_icon": "none"
-          }
-        },
-        "collection_W8AwMF": {
-          "type": "collection",
-          "settings": {
-            "collection": "munchies",
-            "image": "shopify://shop_images/gs_lifestyle_sunny_staff_picks_ab_v01.webp",
-            "title": "Sunny Staff Picks",
-            "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
-            "button_label": "Button label",
-            "button_style": "btn--primary",
-            "button_icon": "none"
-          }
-        }
-      },
-      "block_order": [
-        "collection_kXyTe3",
-        "collection_qxfNFe",
-        "collection_j3wCpz",
-        "collection_W8AwMF"
-      ],
-      "custom_css": [
-        "@media (min-width: 1280px) {collection-tabs {padding-inline: 5rem; }}"
-      ],
-      "settings": {
-        "container": "fixed",
-        "color_scheme": "",
-        "heading": "Made just for you",
-        "highlight_style": "none",
-        "highlight_font_style": "italic",
-        "highlight_style_color": "",
-        "highlight_text_color": "",
-        "heading_size": "h6",
-        "image_position": "right",
-        "image_ratio": "1/1",
-        "collection_heading_size": "h1",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "show_section_divider": false,
-        "divider_width": "fixed"
-      }
-    },
     "custom_content_HPgFTK": {
       "type": "custom-content",
       "blocks": {
@@ -477,7 +398,7 @@
           "type": "image_card_with_product",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_puffco_peak_ab_v01.webp",
+            "image": "shopify://shop_images/gs_puffco_peak_ab_v01_cee51243-0f67-490b-9d7b-7b9562bf2f26.webp",
             "image_ratio": "adapt",
             "subheading": "",
             "heading": "",
@@ -595,6 +516,246 @@
         "padding_bottom": 0,
         "show_section_divider": false,
         "divider_width": "fixed"
+      }
+    },
+    "collection_tabs_VexkkR": {
+      "type": "collection-tabs",
+      "blocks": {
+        "collection_kXyTe3": {
+          "type": "collection",
+          "settings": {
+            "collection": "january-featured-picks",
+            "image": "shopify://shop_images/gs_lifestyle_featured_picks_ab_v01.webp",
+            "title": "Featured Picks",
+            "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
+            "button_label": "Shop Collection",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        },
+        "collection_qxfNFe": {
+          "type": "collection",
+          "settings": {
+            "collection": "bongs",
+            "image": "shopify://shop_images/gs_lifestyle_best_selling_ab_v01.webp",
+            "title": "Best Sellers",
+            "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
+            "button_label": "Shop Collection",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        },
+        "collection_j3wCpz": {
+          "type": "collection",
+          "settings": {
+            "collection": "new-items",
+            "image": "shopify://shop_images/gs_lifestyle_new_releases_ab_v01.webp",
+            "title": "New Releases",
+            "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
+            "button_label": "Shop Collection",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        },
+        "collection_W8AwMF": {
+          "type": "collection",
+          "settings": {
+            "collection": "munchies",
+            "image": "shopify://shop_images/gs_lifestyle_sunny_staff_picks_ab_v01.webp",
+            "title": "Sunny Staff Picks",
+            "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
+            "button_label": "Button label",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "collection_kXyTe3",
+        "collection_qxfNFe",
+        "collection_j3wCpz",
+        "collection_W8AwMF"
+      ],
+      "custom_css": [
+        "@media (min-width: 1280px) {collection-tabs {padding-inline: 5rem; }}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "heading": "Made just for you",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h6",
+        "image_position": "right",
+        "image_ratio": "1/1",
+        "collection_heading_size": "h1",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "favorite_products_6Tg9Pn": {
+      "type": "favorite-products",
+      "blocks": {
+        "product_XrLWzM": {
+          "type": "product",
+          "settings": {
+            "color_scheme": "scheme-2",
+            "product": "fat-bottom-mini-bong",
+            "image": "shopify://shop_images/gs_best-sellers-bg-pandora_desktop_ab_v01.webp",
+            "text": "<p>\"It came in a week. It took three days to be shipped and four days to come in the mail. I love it. It's the perfect size and everything. Thanks again for sending me a great piece.\"</p>",
+            "text_size": "h2",
+            "author": "John Doe",
+            "bio": ""
+          }
+        },
+        "product_wByADN": {
+          "type": "product",
+          "settings": {
+            "color_scheme": "scheme-8",
+            "product": "twisted-frit-4-inch-glass-pipe",
+            "image": "shopify://shop_images/gs_best-sellers-bg-pulsar_desktop_ab_v01.webp",
+            "text": "<p>“Was a great pipe for all of 3 days. It came packaged well but had fractures all around the bowl . I put lil pressure on it and it caved right in . Gave myself a good cut. Will try again”</p>",
+            "text_size": "h2",
+            "author": "Julie Mathers",
+            "bio": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_XrLWzM",
+        "product_wByADN"
+      ],
+      "custom_css": [
+        ".testimonial__content {max-width: 46rem;}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-info",
+        "layout": "content-right",
+        "heading": "Our Favorite Products",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "slide_height": "small",
+        "pcard_style": "boxed",
+        "pcard_image_ratio": "",
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "image_with_text_aXhRxw": {
+      "type": "image-with-text",
+      "blocks": {
+        "badge_fQjMHW": {
+          "type": "badge",
+          "settings": {
+            "color_scheme": "scheme-8",
+            "text": "Lorem ipsum - consectetur - Lorem ipsum",
+            "image": "shopify://shop_images/gs_icon_bong-18_111fabb8-2200-413d-8e35-5afe2b85017d.svg",
+            "position_mobile": "right"
+          }
+        },
+        "subheading_8kBXjM": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Meet Our Team"
+          }
+        },
+        "heading_jnb9cP": {
+          "type": "heading",
+          "settings": {
+            "heading": "The creative minds behind our studio",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_4pYVYF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As designers we are constantly thinking about how people live and what problems we could solve for them. </p>",
+            "subtext_color": true
+          }
+        },
+        "icon_with_text_8qCJiV": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "map-pin",
+            "icon_width": 24,
+            "color": "#000000",
+            "heading": "Product locally in New York",
+            "heading_size": "h5",
+            "text": "",
+            "vertical_alignment": "start"
+          }
+        },
+        "icon_with_text_w4D3R6": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "smiley",
+            "icon_width": 24,
+            "color": "#000000",
+            "heading": "4,8 Review Score",
+            "heading_size": "h5",
+            "text": "",
+            "vertical_alignment": "start"
+          }
+        },
+        "icon_with_text_pcaqTj": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "stool",
+            "icon_width": 24,
+            "color": "#000000",
+            "heading": "Over 50 Products",
+            "heading_size": "h5",
+            "text": "",
+            "vertical_alignment": "start"
+          }
+        },
+        "button_aegkDr": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn more",
+            "button_link": "shopify://pages/about-grasscity",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "badge_fQjMHW",
+        "subheading_8kBXjM",
+        "heading_jnb9cP",
+        "text_4pYVYF",
+        "icon_with_text_8qCJiV",
+        "icon_with_text_w4D3R6",
+        "icon_with_text_pcaqTj",
+        "button_aegkDr"
+      ],
+      "custom_css": [
+        ".image-with-text__content {max-width: 45rem; --text-margin-top: 2rem;}",
+        "@media (min-width: 1280px) {.image-with-text__media {padding-inline-start: 5rem; }}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "image": "shopify://shop_images/gs_lifestyle-05_ab_v01.webp",
+        "image_position": "left",
+        "image_width": 50,
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "inherit",
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "lookbook_slider_9zCdQJ": {
@@ -880,167 +1041,6 @@
         "padding_bottom": 0,
         "show_section_divider": false,
         "divider_width": "fixed"
-      }
-    },
-    "favorite_products_6Tg9Pn": {
-      "type": "favorite-products",
-      "blocks": {
-        "product_XrLWzM": {
-          "type": "product",
-          "settings": {
-            "color_scheme": "scheme-2",
-            "product": "fat-bottom-mini-bong",
-            "image": "shopify://shop_images/gs_best-sellers-bg-pandora_desktop_ab_v01.webp",
-            "text": "<p>\"It came in a week. It took three days to be shipped and four days to come in the mail. I love it. It's the perfect size and everything. Thanks again for sending me a great piece.\"</p>",
-            "text_size": "h2",
-            "author": "John Doe",
-            "bio": ""
-          }
-        },
-        "product_wByADN": {
-          "type": "product",
-          "settings": {
-            "color_scheme": "scheme-8",
-            "product": "twisted-frit-4-inch-glass-pipe",
-            "image": "shopify://shop_images/gs_best-sellers-bg-pulsar_desktop_ab_v01.webp",
-            "text": "<p>“Was a great pipe for all of 3 days. It came packaged well but had fractures all around the bowl . I put lil pressure on it and it caved right in . Gave myself a good cut. Will try again”</p>",
-            "text_size": "h2",
-            "author": "Julie Mathers",
-            "bio": ""
-          }
-        }
-      },
-      "block_order": [
-        "product_XrLWzM",
-        "product_wByADN"
-      ],
-      "custom_css": [
-        ".testimonial__content {max-width: 46rem;}"
-      ],
-      "settings": {
-        "color_scheme": "scheme-info",
-        "layout": "content-right",
-        "heading": "Our Favorite Products",
-        "highlight_style": "none",
-        "highlight_font_style": "italic",
-        "highlight_style_color": "",
-        "highlight_text_color": "",
-        "slide_height": "small",
-        "pcard_style": "boxed",
-        "pcard_image_ratio": "",
-        "show_section_divider": false,
-        "divider_width": "fixed"
-      }
-    },
-    "image_with_text_aXhRxw": {
-      "type": "image-with-text",
-      "blocks": {
-        "badge_fQjMHW": {
-          "type": "badge",
-          "settings": {
-            "color_scheme": "scheme-8",
-            "text": "Lorem ipsum - consectetur - Lorem ipsum",
-            "image": "shopify://shop_images/gs_icon_bong-18_111fabb8-2200-413d-8e35-5afe2b85017d.svg",
-            "position_mobile": "right"
-          }
-        },
-        "subheading_8kBXjM": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "Meet Our Team"
-          }
-        },
-        "heading_jnb9cP": {
-          "type": "heading",
-          "settings": {
-            "heading": "The creative minds behind our studio",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h1"
-          }
-        },
-        "text_4pYVYF": {
-          "type": "text",
-          "settings": {
-            "text": "<p>As designers we are constantly thinking about how people live and what problems we could solve for them. </p>",
-            "subtext_color": true
-          }
-        },
-        "icon_with_text_8qCJiV": {
-          "type": "icon_with_text",
-          "settings": {
-            "icon": "map-pin",
-            "icon_width": 24,
-            "color": "#000000",
-            "heading": "Product locally in New York",
-            "heading_size": "h5",
-            "text": "",
-            "vertical_alignment": "start"
-          }
-        },
-        "icon_with_text_w4D3R6": {
-          "type": "icon_with_text",
-          "settings": {
-            "icon": "smiley",
-            "icon_width": 24,
-            "color": "#000000",
-            "heading": "4,8 Review Score",
-            "heading_size": "h5",
-            "text": "",
-            "vertical_alignment": "start"
-          }
-        },
-        "icon_with_text_pcaqTj": {
-          "type": "icon_with_text",
-          "settings": {
-            "icon": "stool",
-            "icon_width": 24,
-            "color": "#000000",
-            "heading": "Over 50 Products",
-            "heading_size": "h5",
-            "text": "",
-            "vertical_alignment": "start"
-          }
-        },
-        "button_aegkDr": {
-          "type": "button",
-          "settings": {
-            "button_label": "Learn more",
-            "button_link": "shopify://pages/about-grasscity",
-            "button_style": "btn--primary",
-            "button_icon": "none"
-          }
-        }
-      },
-      "block_order": [
-        "badge_fQjMHW",
-        "subheading_8kBXjM",
-        "heading_jnb9cP",
-        "text_4pYVYF",
-        "icon_with_text_8qCJiV",
-        "icon_with_text_w4D3R6",
-        "icon_with_text_pcaqTj",
-        "button_aegkDr"
-      ],
-      "custom_css": [
-        ".image-with-text__content {max-width: 45rem; --text-margin-top: 2rem;}",
-        "@media (min-width: 1280px) {.image-with-text__media {padding-inline-start: 5rem; }}"
-      ],
-      "settings": {
-        "container": "fixed",
-        "color_scheme": "",
-        "image": "shopify://shop_images/gs_lifestyle-05_ab_v01.webp",
-        "image_position": "left",
-        "image_width": 50,
-        "desktop_content_position": "center",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "inherit",
-        "show_section_divider": false,
-        "divider_width": "fixed",
-        "padding_top": 60,
-        "padding_bottom": 60
       }
     },
     "testimonials_mLThk7": {
