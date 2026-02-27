@@ -1401,6 +1401,78 @@
       "name": "Join Banner",
       "settings": {}
     },
+    "if_image_marquee_yqDwUL": {
+      "type": "if_image_marquee",
+      "blocks": {
+        "image_NWtFyN": {
+          "type": "image",
+          "settings": {
+            "marquee_image": "shopify://shop_images/grasscity.png"
+          }
+        },
+        "image_G7bfAe": {
+          "type": "image",
+          "settings": {
+            "marquee_image": "shopify://shop_images/blessedcbd.png"
+          }
+        },
+        "image_3PDTcj": {
+          "type": "image",
+          "settings": {
+            "marquee_image": "shopify://shop_images/nuleaf.png"
+          }
+        },
+        "image_TwkqPi": {
+          "type": "image",
+          "settings": {
+            "marquee_image": "shopify://shop_images/dailyhighclub.png"
+          }
+        },
+        "image_taxFkN": {
+          "type": "image",
+          "settings": {
+            "marquee_image": "shopify://shop_images/dankstop.png"
+          }
+        },
+        "image_aMDwHQ": {
+          "type": "image",
+          "settings": {
+            "marquee_image": "shopify://shop_images/fabcbd.png"
+          }
+        },
+        "image_PWFmtj": {
+          "type": "image",
+          "settings": {
+            "marquee_image": "shopify://shop_images/cannacabana.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_NWtFyN",
+        "image_G7bfAe",
+        "image_3PDTcj",
+        "image_TwkqPi",
+        "image_taxFkN",
+        "image_aMDwHQ",
+        "image_PWFmtj"
+      ],
+      "name": "IF - Image Marquee",
+      "settings": {
+        "sec_title": "",
+        "sec_sub_title": "",
+        "color": "#cecece",
+        "speed": 30,
+        "width": 500,
+        "height": 500,
+        "speed_mob": 10,
+        "width_mob": 500,
+        "height_mob": 500,
+        "section_top_spacing": 55,
+        "section_bottom_spacing": 55,
+        "section_top_spacing_mob": 45,
+        "section_bottom_spacing_mob": 45
+      }
+    },
     "logo_list_yLHxNy": {
       "type": "logo-list",
       "blocks": {
@@ -1470,6 +1542,7 @@
         "logo_dDBhBE",
         "logo_V7HfPM"
       ],
+      "disabled": true,
       "name": "Logo list",
       "settings": {
         "layout": "default",
@@ -1565,6 +1638,7 @@
         "logo_VREAVU",
         "logo_QiUtiR"
       ],
+      "disabled": true,
       "name": "t:sections.brand-logos.presets",
       "settings": {
         "container": "fixed",
@@ -1650,6 +1724,7 @@
         "gallery_Hdq7y7",
         "gallery_xaTeHP"
       ],
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "color_scheme": "scheme-1",
@@ -1733,7 +1808,6 @@
         "gallery_8bzNrt",
         "gallery_3pbkJq"
       ],
-      "disabled": true,
       "custom_css": [],
       "settings": {
         "color_scheme": "scheme-2",
@@ -1781,6 +1855,7 @@
     "buttons_with_icon_c8CzHV",
     "multicolumn_Ff4Wbj",
     "home_join_banner_TmF4WQ",
+    "if_image_marquee_yqDwUL",
     "logo_list_yLHxNy",
     "brand_logos_wTJaFd",
     "scrolling_gallery_image_wJyLJr",
