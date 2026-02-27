@@ -188,6 +188,34 @@
     "featured_collection_bdaamt": {
       "type": "featured-collection",
       "blocks": {
+        "collection_NFJ3Rg": {
+          "type": "collection",
+          "settings": {
+            "collection": "dab-rigs",
+            "title": "",
+            "show_banner": false,
+            "color_scheme": "scheme-1",
+            "card_link": "",
+            "image_overlay_opacity": 0,
+            "content_position": "top-left",
+            "content_alignment": "left",
+            "subheading": "",
+            "subheading_style": "",
+            "heading": "Collections",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "description": "",
+            "text_size": "text-base",
+            "button_label": "Button label",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        },
         "collection_ydJPzX": {
           "type": "collection",
           "disabled": true,
@@ -250,6 +278,7 @@
         }
       },
       "block_order": [
+        "collection_NFJ3Rg",
         "collection_ydJPzX",
         "collection_E83rKg"
       ],
@@ -426,7 +455,7 @@
       "settings": {
         "container": "fixed",
         "color_scheme": "",
-        "heading": "Lorem ipsum",
+        "heading": "Made just for you",
         "highlight_style": "none",
         "highlight_font_style": "italic",
         "highlight_style_color": "",
@@ -550,7 +579,7 @@
         "section_header_alignment": "left",
         "section_header_alignment_mobile": "inherit",
         "subheading": "",
-        "heading": "Popular Categories",
+        "heading": "Product Highlights",
         "highlight_style": "none",
         "highlight_font_style": "italic",
         "highlight_style_color": "",
@@ -1831,13 +1860,13 @@
     "slideshow_q3U4Jn",
     "featured_collection_bdaamt",
     "collection_cards_KV7p8g",
-    "collection_tabs_VexkkR",
     "custom_content_HPgFTK",
+    "collection_tabs_VexkkR",
+    "favorite_products_6Tg9Pn",
+    "image_with_text_aXhRxw",
     "lookbook_slider_9zCdQJ",
     "custom_content_JxRy7x",
     "featured_collection_RWUfH9",
-    "favorite_products_6Tg9Pn",
-    "image_with_text_aXhRxw",
     "testimonials_mLThk7",
     "slider_with_multicolumn_aJwbrc",
     "buttons_with_icon_c8CzHV",
