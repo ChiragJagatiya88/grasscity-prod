@@ -1371,6 +1371,7 @@
     },
     "home_join_banner_TmF4WQ": {
       "type": "home-join-banner",
+      "disabled": true,
       "name": "Join Banner",
       "settings": {}
     },
