@@ -394,9 +394,9 @@
         "collection_kXyTe3": {
           "type": "collection",
           "settings": {
-            "collection": "vape-pen",
-            "image": "shopify://shop_images/gs_archetype-minimalist_ab_v01_0c9f1536-d1c5-4ebd-9c82-10cc200bb696.webp",
-            "title": "The minimalist",
+            "collection": "january-featured-picks",
+            "image": "shopify://shop_images/gs_lifestyle_featured_picks_ab_v01.webp",
+            "title": "Featured Picks",
             "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
             "button_label": "Shop Collection",
             "button_style": "btn--primary",
@@ -406,9 +406,9 @@
         "collection_qxfNFe": {
           "type": "collection",
           "settings": {
-            "collection": "rolling-papers",
-            "image": "shopify://shop_images/gs_archetype-minimalist_ab_v01_0c9f1536-d1c5-4ebd-9c82-10cc200bb696.webp",
-            "title": "The gatherer",
+            "collection": "420-accessories-420-lifestyle-apparel-420-apparel-420-lifestyle",
+            "image": "shopify://shop_images/gs_lifestyle_best_selling_ab_v01.webp",
+            "title": "Best Sellers",
             "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
             "button_label": "Shop Collection",
             "button_style": "btn--primary",
@@ -433,7 +433,6 @@
         "collection_qxfNFe",
         "collection_j3wCpz"
       ],
-      "disabled": true,
       "custom_css": [
         "@media (min-width: 1280px) {collection-tabs {padding-inline: 5rem; }}"
       ],
