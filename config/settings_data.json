@@ -49,8 +49,8 @@
     "badges_corner_radius": "round",
     "pcard_style": "standard",
     "pcard_color_scheme": "scheme-1",
-    "pcard_show_vendor": false,
-    "pcard_show_type": true,
+    "pcard_show_vendor": true,
+    "pcard_show_type": false,
     "pcard_show_quickview_button": false,
     "pcard_show_sale_badge": true,
     "pcard_sale_badge_type": "show_text",
@@ -97,6 +97,13 @@
       }
     },
     "content_for_index": [],
+    "blocks": {
+      "7570552984445421165": {
+        "type": "shopify://apps/yotpo-product-photo-reviews/blocks/settings/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+        "disabled": false,
+        "settings": {}
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
@@ -382,13 +389,6 @@
           "product_price_sale": "#c4301c",
           "progress_bar_color": "#0d8756"
         }
-      }
-    },
-    "blocks": {
-      "7570552984445421165": {
-        "type": "shopify://apps/yotpo-product-photo-reviews/blocks/settings/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-        "disabled": false,
-        "settings": {}
       }
     }
   },
