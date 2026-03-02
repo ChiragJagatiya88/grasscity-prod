@@ -82,7 +82,6 @@
         "rich_text_UCB4ce": {
           "type": "rich-text",
           "settings": {
-            "text": "<p>{{ product.metafields.description.excerpt | metafield_tag }}</p>"
           }
         },
         "inventory": {
@@ -160,32 +159,6 @@
             "enable_quick_add": true
           }
         },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "heading": "Description",
-            "heading_size": "h4",
-            "icon": "none",
-            "content": "{{ product.description }}",
-            "page": "",
-            "default_open": false,
-            "show_below_product_media": true
-          }
-        },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "heading": "Key Features & Benefits",
-            "heading_size": "h4",
-            "icon": "none",
-            "content": "<p>{{ product.metafields.description.excerpt | metafield_tag }}</p>",
-            "page": "content",
-            "default_open": false,
-            "show_below_product_media": true
-          }
-        },
         "collapsible-row-3": {
           "type": "collapsible_tab",
           "settings": {
@@ -253,8 +226,6 @@
         "pickup_availability",
         "promotion_alert_L7ipQp",
         "complementary",
-        "collapsible-row-2",
-        "collapsible-row-1",
         "collapsible-row-3",
         "payment_info",
         "divider_pPz3Kw",
