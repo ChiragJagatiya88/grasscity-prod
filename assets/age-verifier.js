@@ -33,7 +33,7 @@ if (!customElements.get('age-verifier')) {
       }
 
       get cookieName() {
-        return 'concept:age-verifier';
+        return 'age_verified';
       }
 
       init() {
@@ -41,6 +41,19 @@ if (!customElements.get('age-verifier')) {
         if (this.testMode || !this.getCookie(this.cookieName)) {
           this.load(this.delay);
         }
+      }
+
+      connectedCallback() {
+        if (super.connectedCallback) super.connectedCallback();
+        const yesBtn = this.querySelector('.age-verifier__btn--yes');
+        if (yesBtn) {
+          yesBtn.addEventListener('click', () => this.onConfirm());
+        }
+      }
+
+      onConfirm() {
+        if (this.testMode) return;
+        this.setCookie(this.cookieName, this.expiry);
       }
 
       load(delay) {
@@ -57,13 +70,9 @@ if (!customElements.get('age-verifier')) {
       afterHide() {
         if (super.afterHide) super.afterHide();
         this.classList.remove('show-image');
-
         if (this.testMode) {
           this.removeCookie(this.cookieName);
-          return;
         }
-
-        this.setCookie(this.cookieName, this.expiry);
       }
 
       getCookie(name) {
@@ -76,7 +85,7 @@ if (!customElements.get('age-verifier')) {
       }
 
       removeCookie(name) {
-        document.cookie = `${name}=; max-age=0`;
+        document.cookie = `${name}=; max-age=0; path=/`;
       }
     }
   );
