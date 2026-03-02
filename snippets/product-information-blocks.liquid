@@ -245,9 +245,9 @@
             {{ block.settings.custom_liquid }}
           </div>
         {%- when 'collapsible_tab' -%}
-          {%- if block.settings.heading != blank and block.settings.content != blank -%}
+          {%- if block.settings.heading != blank and block.settings.content != blank or block.settings.page.content != blank or block.settings.liquid != blank -%}
             <div class="{{ block_classes }}" {{ block.shopify_attributes }}>
-              {%- render 'product-collapsible-tab', block: block, section_id: section.id -%}
+              {%- render 'product-collapsible-tab', product: product, block: block, section_id: section.id -%}
             </div>
           {%- endif -%}
         {%- when 'popup' -%}

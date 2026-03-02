@@ -154,17 +154,17 @@
             "image_overlay_opacity": 30,
             "content_position": "middle-center",
             "text_alignment": "center",
-            "subheading": "Lorem Ipsum",
-            "title": "Heading here up to 40 characters max.",
+            "subheading": "Lorem ipsum dolor sit amet consectetur.",
+            "title": "BRING HOME THE LA CHILL",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
-            "heading_size": "hd1",
+            "heading_size": "h2",
             "description": "",
             "description_size": "text-base",
-            "button_label": "2 words cta",
-            "button_link": "",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/bongs",
             "button_style": "btn--primary",
             "button_icon": "none",
             "enable_preload_image": true
@@ -176,7 +176,7 @@
       ],
       "settings": {
         "container": "full",
-        "slide_height": "adapt",
+        "slide_height": "medium",
         "show_controls": true,
         "autoplay": true,
         "autoplay_delay": 6,
@@ -188,11 +188,40 @@
     "featured_collection_bdaamt": {
       "type": "featured-collection",
       "blocks": {
-        "collection_ydJPzX": {
+        "collection_NFJ3Rg": {
           "type": "collection",
           "settings": {
+            "collection": "dab-rigs",
+            "title": "",
+            "show_banner": false,
+            "color_scheme": "scheme-1",
+            "card_link": "",
+            "image_overlay_opacity": 0,
+            "content_position": "top-left",
+            "content_alignment": "left",
+            "subheading": "",
+            "subheading_style": "",
+            "heading": "Collections",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "description": "",
+            "text_size": "text-base",
+            "button_label": "Button label",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        },
+        "collection_ydJPzX": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
             "collection": "new-items",
-            "title": "New Arrivals",
+            "title": "Best Sellers",
             "show_banner": true,
             "color_scheme": "scheme-inverse",
             "card_link": "",
@@ -200,9 +229,9 @@
             "image_overlay_opacity": 20,
             "content_position": "split-bottom-button",
             "content_alignment": "left",
-            "subheading": "Lorem ipsum dolor",
+            "subheading": "",
             "subheading_style": "",
-            "heading": "Lorem ipsum  consectetur.",
+            "heading": "Bongs",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
@@ -219,6 +248,7 @@
         },
         "collection_E83rKg": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "lighters",
             "title": "Hot Items",
@@ -229,7 +259,7 @@
             "image_overlay_opacity": 20,
             "content_position": "split-bottom-button",
             "content_alignment": "left",
-            "subheading": "Promotion",
+            "subheading": "",
             "subheading_style": "",
             "heading": "Soft Stools Design",
             "highlight_style": "none",
@@ -248,6 +278,7 @@
         }
       },
       "block_order": [
+        "collection_NFJ3Rg",
         "collection_ydJPzX",
         "collection_E83rKg"
       ],
@@ -258,13 +289,13 @@
         "section_header_alignment": "left",
         "section_header_alignment_mobile": "inherit",
         "subheading": "",
-        "heading": "New Arrivals",
+        "heading": "Best Sellers",
         "highlight_style": "none",
         "highlight_font_style": "italic",
         "highlight_style_color": "",
         "highlight_text_color": "",
         "heading_size": "h2",
-        "description": "<p>Description text up to 60 characters.</p>",
+        "description": "",
         "text_size": "text-base",
         "button_label": "",
         "button_link": "",
@@ -281,133 +312,6 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "show_progress_bar": true,
-        "padding_top": 40,
-        "padding_bottom": 0,
-        "show_section_divider": false,
-        "divider_width": "fixed"
-      }
-    },
-    "custom_content_HPgFTK": {
-      "type": "custom-content",
-      "blocks": {
-        "image_card_with_product_qBJGcT": {
-          "type": "image_card_with_product",
-          "settings": {
-            "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/popular-banner-background-5.png",
-            "image_ratio": "adapt",
-            "subheading": "",
-            "heading": "Dab Rigs",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h3",
-            "description": "",
-            "button_label": "Shop",
-            "button_style": "btn--primary",
-            "button_icon": "none",
-            "product": "water-pipe-telescope-style-2-w-quarta-teal-7in",
-            "width": "25%",
-            "alignment": "center",
-            "block_custom_class": ""
-          }
-        },
-        "image_card_with_product_G77z3R": {
-          "type": "image_card_with_product",
-          "settings": {
-            "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_bongs-popular_ab_v01.webp",
-            "image_ratio": "adapt",
-            "subheading": "",
-            "heading": "Bongs",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h3",
-            "description": "",
-            "button_label": "Shop",
-            "button_style": "btn--primary",
-            "button_icon": "none",
-            "product": "dankstop-zig-zag-beaker-bong",
-            "width": "25%",
-            "alignment": "center",
-            "block_custom_class": ""
-          }
-        },
-        "image_card_with_product_3khACH": {
-          "type": "image_card_with_product",
-          "settings": {
-            "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/popular-banner-background-6.png",
-            "image_ratio": "adapt",
-            "subheading": "",
-            "heading": "Pipes",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h3",
-            "description": "",
-            "button_label": "Shop",
-            "button_style": "btn--primary",
-            "button_icon": "none",
-            "product": "famous-x-fumed-large-sherlock-pipe",
-            "width": "25%",
-            "alignment": "center",
-            "block_custom_class": ""
-          }
-        },
-        "image_card_with_product_dMnGc4": {
-          "type": "image_card_with_product",
-          "settings": {
-            "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_vaporizers-popular_ab_v01.webp",
-            "image_ratio": "adapt",
-            "subheading": "",
-            "heading": "Grinders",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h3",
-            "description": "",
-            "button_label": "Shop",
-            "button_style": "btn--primary",
-            "button_icon": "none",
-            "product": "grateful-dead-x-g-pen-dash-dry-herb-vaporizer",
-            "width": "25%",
-            "alignment": "center",
-            "block_custom_class": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_card_with_product_qBJGcT",
-        "image_card_with_product_G77z3R",
-        "image_card_with_product_3khACH",
-        "image_card_with_product_dMnGc4"
-      ],
-      "settings": {
-        "container": "fixed",
-        "color_scheme": "",
-        "enable_sticky_column": false,
-        "section_header_alignment": "left",
-        "section_header_alignment_mobile": "inherit",
-        "subheading": "",
-        "heading": "Hot Products",
-        "highlight_style": "none",
-        "highlight_font_style": "italic",
-        "highlight_style_color": "",
-        "highlight_text_color": "",
-        "heading_size": "h1",
-        "description": "",
-        "text_size": "text-base",
-        "column_gap": "2xs",
-        "row_gap": "large",
-        "swipe_on_mobile": true,
-        "columns_mobile": "1",
         "padding_top": 40,
         "padding_bottom": 0,
         "show_section_divider": false,
@@ -487,15 +391,142 @@
         "divider_width": "fixed"
       }
     },
+    "custom_content_HPgFTK": {
+      "type": "custom-content",
+      "blocks": {
+        "image_card_with_product_qBJGcT": {
+          "type": "image_card_with_product",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "image": "shopify://shop_images/gs_puffco_peak_ab_v01_cee51243-0f67-490b-9d7b-7b9562bf2f26.webp",
+            "image_ratio": "adapt",
+            "subheading": "",
+            "heading": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3",
+            "description": "",
+            "button_label": "Shop",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "product": "new-puffco-peak",
+            "width": "25%",
+            "alignment": "center",
+            "block_custom_class": ""
+          }
+        },
+        "image_card_with_product_G77z3R": {
+          "type": "image_card_with_product",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "image": "shopify://shop_images/gs_big_chamber_3perc_ab_v01_24caeb9d-e7b5-4ae5-86e4-05814e6a1ba3.webp",
+            "image_ratio": "adapt",
+            "subheading": "",
+            "heading": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3",
+            "description": "",
+            "button_label": "Shop",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "product": "gc-big-chamber-with-tree-perc-water-pipe-18-in",
+            "width": "25%",
+            "alignment": "center",
+            "block_custom_class": ""
+          }
+        },
+        "image_card_with_product_3khACH": {
+          "type": "image_card_with_product",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "image": "shopify://shop_images/gs_pax_vaporizer_ab_v01_7cf6b0d0-7334-4002-8811-a209f2838439.webp",
+            "image_ratio": "adapt",
+            "subheading": "",
+            "heading": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3",
+            "description": "",
+            "button_label": "Shop",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "product": "pax-flow-vaporizer1",
+            "width": "25%",
+            "alignment": "center",
+            "block_custom_class": ""
+          }
+        },
+        "image_card_with_product_dMnGc4": {
+          "type": "image_card_with_product",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "image": "shopify://shop_images/gs_recycler-vapor-bubbler_ab_v01_79e3953d-cc97-480d-9f87-f61424983418.webp",
+            "image_ratio": "adapt",
+            "subheading": "",
+            "heading": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3",
+            "description": "",
+            "button_label": "Shop",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "product": "glasscity-recycler-vapor-bubbler-with-showerhead-honeycomb-disc-perc",
+            "width": "25%",
+            "alignment": "center",
+            "block_custom_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_card_with_product_qBJGcT",
+        "image_card_with_product_G77z3R",
+        "image_card_with_product_3khACH",
+        "image_card_with_product_dMnGc4"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "enable_sticky_column": false,
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Product Highlights",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "column_gap": "2xs",
+        "row_gap": "large",
+        "swipe_on_mobile": true,
+        "columns_mobile": "1",
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
     "collection_tabs_VexkkR": {
       "type": "collection-tabs",
       "blocks": {
         "collection_kXyTe3": {
           "type": "collection",
           "settings": {
-            "collection": "vape-pen",
-            "image": "shopify://shop_images/gs_archetype-minimalist_ab_v01_0c9f1536-d1c5-4ebd-9c82-10cc200bb696.webp",
-            "title": "The minimalist",
+            "collection": "january-featured-picks",
+            "image": "shopify://shop_images/gs_lifestyle_featured_picks_ab_v01_81db7e72-f06a-4580-9db8-9c7440f0af92.webp",
+            "title": "Featured Picks",
             "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
             "button_label": "Shop Collection",
             "button_style": "btn--primary",
@@ -505,9 +536,9 @@
         "collection_qxfNFe": {
           "type": "collection",
           "settings": {
-            "collection": "rolling-papers",
-            "image": "shopify://shop_images/gs_archetype-minimalist_ab_v01_0c9f1536-d1c5-4ebd-9c82-10cc200bb696.webp",
-            "title": "The gatherer",
+            "collection": "bongs",
+            "image": "shopify://shop_images/gs_lifestyle_best_selling_ab_v01_ea5ad814-a880-4ef4-9a0b-1a3dac350c6e.webp",
+            "title": "Best Sellers",
             "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
             "button_label": "Shop Collection",
             "button_style": "btn--primary",
@@ -517,11 +548,23 @@
         "collection_j3wCpz": {
           "type": "collection",
           "settings": {
-            "collection": "herb-grinders",
-            "image": "shopify://shop_images/gs_archetype-minimalist_ab_v01_0c9f1536-d1c5-4ebd-9c82-10cc200bb696.webp",
-            "title": "The creative night owl",
+            "collection": "new-items",
+            "image": "shopify://shop_images/gs_lifestyle_new_releases_ab_v01_b27f78c8-84b6-4252-92fc-bbc753a6be77.webp",
+            "title": "New Releases",
             "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
             "button_label": "Shop Collection",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        },
+        "collection_W8AwMF": {
+          "type": "collection",
+          "settings": {
+            "collection": "munchies",
+            "image": "shopify://shop_images/gs_lifestyle_sunny_staff_picks_ab_v01_9bd8c7ea-55d3-4eb8-ac9c-355bc452a453.webp",
+            "title": "Sunny Staff Picks",
+            "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
+            "button_label": "Button label",
             "button_style": "btn--primary",
             "button_icon": "none"
           }
@@ -530,7 +573,8 @@
       "block_order": [
         "collection_kXyTe3",
         "collection_qxfNFe",
-        "collection_j3wCpz"
+        "collection_j3wCpz",
+        "collection_W8AwMF"
       ],
       "custom_css": [
         "@media (min-width: 1280px) {collection-tabs {padding-inline: 5rem; }}"
@@ -538,14 +582,14 @@
       "settings": {
         "container": "fixed",
         "color_scheme": "",
-        "heading": "Lorem ipsum",
+        "heading": "Made just for you",
         "highlight_style": "none",
         "highlight_font_style": "italic",
         "highlight_style_color": "",
         "highlight_text_color": "",
         "heading_size": "h6",
         "image_position": "right",
-        "image_ratio": "adapt",
+        "image_ratio": "1/1",
         "collection_heading_size": "h1",
         "padding_top": 60,
         "padding_bottom": 60,
@@ -560,24 +604,24 @@
           "type": "product",
           "settings": {
             "color_scheme": "scheme-2",
-            "product": "oil-slick-lightweight-glass-spoon-pipe",
+            "product": "fat-bottom-mini-bong",
             "image": "shopify://shop_images/gs_best-sellers-bg-pandora_desktop_ab_v01.webp",
-            "text": "<p>\"Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.\"</p>",
+            "text": "<p>\"It came in a week. It took three days to be shipped and four days to come in the mail. I love it. It's the perfect size and everything. Thanks again for sending me a great piece.\"</p>",
             "text_size": "h2",
             "author": "John Doe",
-            "bio": "New Mexico"
+            "bio": ""
           }
         },
         "product_wByADN": {
           "type": "product",
           "settings": {
             "color_scheme": "scheme-8",
-            "product": "13-inch-clay-monster-beaker-water-pipe",
+            "product": "twisted-frit-4-inch-glass-pipe",
             "image": "shopify://shop_images/gs_best-sellers-bg-pulsar_desktop_ab_v01.webp",
-            "text": "<p>“Each piece is authentic and carefully sourced from its place of origin.”</p>",
+            "text": "<p>“Was a great pipe for all of 3 days. It came packaged well but had fractures all around the bowl . I put lil pressure on it and it caved right in . Gave myself a good cut. Will try again”</p>",
             "text_size": "h2",
             "author": "Julie Mathers",
-            "bio": "Australia"
+            "bio": ""
           }
         }
       },
@@ -601,6 +645,117 @@
         "pcard_image_ratio": "",
         "show_section_divider": false,
         "divider_width": "fixed"
+      }
+    },
+    "image_with_text_aXhRxw": {
+      "type": "image-with-text",
+      "blocks": {
+        "badge_fQjMHW": {
+          "type": "badge",
+          "settings": {
+            "color_scheme": "scheme-8",
+            "text": "Lorem ipsum - consectetur - Lorem ipsum",
+            "image": "shopify://shop_images/gs_icon_bong-18_111fabb8-2200-413d-8e35-5afe2b85017d.svg",
+            "position_mobile": "right"
+          }
+        },
+        "subheading_8kBXjM": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Meet Our Team"
+          }
+        },
+        "heading_jnb9cP": {
+          "type": "heading",
+          "settings": {
+            "heading": "The creative minds behind our studio",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_4pYVYF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As designers we are constantly thinking about how people live and what problems we could solve for them. </p>",
+            "subtext_color": true
+          }
+        },
+        "icon_with_text_8qCJiV": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "map-pin",
+            "icon_width": 24,
+            "color": "#000000",
+            "heading": "Product locally in New York",
+            "heading_size": "h5",
+            "text": "",
+            "vertical_alignment": "start"
+          }
+        },
+        "icon_with_text_w4D3R6": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "smiley",
+            "icon_width": 24,
+            "color": "#000000",
+            "heading": "4,8 Review Score",
+            "heading_size": "h5",
+            "text": "",
+            "vertical_alignment": "start"
+          }
+        },
+        "icon_with_text_pcaqTj": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "stool",
+            "icon_width": 24,
+            "color": "#000000",
+            "heading": "Over 50 Products",
+            "heading_size": "h5",
+            "text": "",
+            "vertical_alignment": "start"
+          }
+        },
+        "button_aegkDr": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn more",
+            "button_link": "shopify://pages/about-grasscity",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "badge_fQjMHW",
+        "subheading_8kBXjM",
+        "heading_jnb9cP",
+        "text_4pYVYF",
+        "icon_with_text_8qCJiV",
+        "icon_with_text_w4D3R6",
+        "icon_with_text_pcaqTj",
+        "button_aegkDr"
+      ],
+      "custom_css": [
+        ".image-with-text__content {max-width: 45rem; --text-margin-top: 2rem;}",
+        "@media (min-width: 1280px) {.image-with-text__media {padding-inline-start: 5rem; }}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "image": "shopify://shop_images/gs_lifestyle-05_ab_v01.webp",
+        "image_position": "left",
+        "image_width": 50,
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "inherit",
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "lookbook_slider_9zCdQJ": {
@@ -710,7 +865,7 @@
           "type": "image_card",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_membership-cc_desktop_ab_v01.png",
+            "image": "shopify://shop_images/gs_membership-cc_desktop_ab_v01.webp",
             "image_ratio": "adapt",
             "image_overlay_opacity": 0,
             "content_position": "split-bottom-button",
@@ -751,7 +906,7 @@
           "type": "image_card",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_membership-elite_desktop_ab_v01.png",
+            "image": "shopify://shop_images/gs_membership-elite_desktop_ab_v01.webp",
             "image_ratio": "adapt",
             "image_overlay_opacity": 0,
             "content_position": "split-bottom-button",
@@ -888,117 +1043,6 @@
         "divider_width": "fixed"
       }
     },
-    "image_with_text_aXhRxw": {
-      "type": "image-with-text",
-      "blocks": {
-        "badge_fQjMHW": {
-          "type": "badge",
-          "settings": {
-            "color_scheme": "scheme-8",
-            "text": "Lorem ipsum - consectetur - Lorem ipsum",
-            "image": "shopify://shop_images/gs_icon_bong-18_111fabb8-2200-413d-8e35-5afe2b85017d.svg",
-            "position_mobile": "right"
-          }
-        },
-        "subheading_8kBXjM": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "Meet Our Team"
-          }
-        },
-        "heading_jnb9cP": {
-          "type": "heading",
-          "settings": {
-            "heading": "The creative minds behind our studio",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h1"
-          }
-        },
-        "text_4pYVYF": {
-          "type": "text",
-          "settings": {
-            "text": "<p>As designers we are constantly thinking about how people live and what problems we could solve for them. </p>",
-            "subtext_color": true
-          }
-        },
-        "icon_with_text_8qCJiV": {
-          "type": "icon_with_text",
-          "settings": {
-            "icon": "map-pin",
-            "icon_width": 24,
-            "color": "#000000",
-            "heading": "Product locally in New York",
-            "heading_size": "h5",
-            "text": "",
-            "vertical_alignment": "start"
-          }
-        },
-        "icon_with_text_w4D3R6": {
-          "type": "icon_with_text",
-          "settings": {
-            "icon": "smiley",
-            "icon_width": 24,
-            "color": "#000000",
-            "heading": "4,8 Review Score",
-            "heading_size": "h5",
-            "text": "",
-            "vertical_alignment": "start"
-          }
-        },
-        "icon_with_text_pcaqTj": {
-          "type": "icon_with_text",
-          "settings": {
-            "icon": "stool",
-            "icon_width": 24,
-            "color": "#000000",
-            "heading": "Over 50 Products",
-            "heading_size": "h5",
-            "text": "",
-            "vertical_alignment": "start"
-          }
-        },
-        "button_aegkDr": {
-          "type": "button",
-          "settings": {
-            "button_label": "Learn more",
-            "button_link": "shopify://pages/about-grasscity",
-            "button_style": "btn--primary",
-            "button_icon": "none"
-          }
-        }
-      },
-      "block_order": [
-        "badge_fQjMHW",
-        "subheading_8kBXjM",
-        "heading_jnb9cP",
-        "text_4pYVYF",
-        "icon_with_text_8qCJiV",
-        "icon_with_text_w4D3R6",
-        "icon_with_text_pcaqTj",
-        "button_aegkDr"
-      ],
-      "custom_css": [
-        ".image-with-text__content {max-width: 45rem; --text-margin-top: 2rem;}",
-        "@media (min-width: 1280px) {.image-with-text__media {padding-inline-start: 5rem; }}"
-      ],
-      "settings": {
-        "container": "fixed",
-        "color_scheme": "",
-        "image": "shopify://shop_images/gs_lifestyle-05_ab_v01.webp",
-        "image_position": "left",
-        "image_width": 50,
-        "desktop_content_position": "center",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "inherit",
-        "show_section_divider": false,
-        "divider_width": "fixed",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
     "testimonials_mLThk7": {
       "type": "testimonials",
       "blocks": {
@@ -1007,10 +1051,10 @@
           "settings": {
             "icon": "none",
             "heading": "Testimonials",
-            "text": "<p>“The products are artful, fun, have a story just as unique as the designers who made it.”</p>",
+            "text": "<p>“It came in a week. It took three days to be shipped and four days to come in the mail. I love it. It's the perfect size and everything. Thanks again for sending me a great piece.”</p>",
             "author": "Jenny Wilson",
-            "bio": "New Mexico",
-            "product": ""
+            "bio": "",
+            "product": "fat-bottom-mini-bong"
           }
         },
         "testimonial_QPUyLy": {
@@ -1018,10 +1062,10 @@
           "settings": {
             "icon": "none",
             "heading": "Testimonials",
-            "text": "<p>“The best coat I have found.Great colors and materials for life style.”</p>",
+            "text": "<p>“Was a great pipe for all of 3 days. It came packaged well but had fractures all around the bowl . I put lil pressure on it and it caved right in . Gave myself a good cut. Will try again”</p>",
             "author": "Samantha Taylor",
-            "bio": "Portland, Oregon",
-            "product": ""
+            "bio": "",
+            "product": "twisted-frit-4-inch-glass-pipe"
           }
         },
         "testimonial_iTzQDb": {
@@ -1029,10 +1073,10 @@
           "settings": {
             "icon": "none",
             "heading": "Testimonials",
-            "text": "<p>“Every item feels like a masterpiece, blending creativity and authenticity beautifully.”</p>",
+            "text": "<p>“Great pipe. Looks good and cools the smoke nicely. I’d have given it 5 stars if I could fit a filter to it.”</p>",
             "author": "David Martinez",
-            "bio": "Austin, Texas",
-            "product": ""
+            "bio": "",
+            "product": "la-pipes-gandalf-pipe-with-marble-feet"
           }
         }
       },
@@ -1088,12 +1132,12 @@
           "type": "slide",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_hot-deals-puffco_ab_v01.webp",
+            "image": "shopify://shop_images/gs_categories-bongs_ab_v01.webp",
             "image_overlay_opacity": 20,
             "content_position": "top-left",
             "content_alignment": "left",
-            "subheading": "Hot Deals",
-            "heading": "The Bow Chairs Under $200",
+            "subheading": "Lorem Ipsum Here",
+            "heading": "Bongs",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
@@ -1101,7 +1145,7 @@
             "heading_size": "h1",
             "text": "<p>Introducing the latest styles in women's shoes tailored for every occasion taste.</p>",
             "button_label": "Shop Now",
-            "button_link": "shopify://collections/vaporizer",
+            "button_link": "shopify://collections/bongs",
             "button_style": "btn--primary",
             "button_icon": "none"
           }
@@ -1110,9 +1154,9 @@
           "type": "image-card",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_hot-deals-puffco_ab_v02.webp",
+            "image": "shopify://shop_images/gs_categories-grinders_ab_v01.webp",
             "content_alignment": "center",
-            "heading": "Select Table Lamps",
+            "heading": "Herb Grinders",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
@@ -1120,17 +1164,17 @@
             "heading_size": "h5",
             "heading_size_mobile": "inherit",
             "heading_size_custom": 18,
-            "text": "<p>Get up to $100 Off</p>",
-            "card_link": "shopify://collections/acrylic-bongs"
+            "text": "",
+            "card_link": "shopify://collections/herb-grinders"
           }
         },
         "image_card_yb3htw": {
           "type": "image-card",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_hot-deals-puffco_ab_v04.webp",
+            "image": "shopify://shop_images/gs_categories-dabrigs_ab_v01.webp",
             "content_alignment": "center",
-            "heading": "Select Lounge Chairs",
+            "heading": "Dab Rigs",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
@@ -1138,7 +1182,7 @@
             "heading_size": "h5",
             "heading_size_mobile": "inherit",
             "heading_size_custom": 18,
-            "text": "<p>From $200</p>",
+            "text": "",
             "card_link": ""
           }
         },
@@ -1146,9 +1190,9 @@
           "type": "image-card",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_hot-deals-puffco_ab_v03.webp",
+            "image": "shopify://shop_images/gs_categories-vaporizers_ab_v01.webp",
             "content_alignment": "center",
-            "heading": "Select Side tables",
+            "heading": "Vapes",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
@@ -1156,17 +1200,17 @@
             "heading_size": "h5",
             "heading_size_mobile": "inherit",
             "heading_size_custom": 18,
-            "text": "<p>Get up to $1.000</p>",
-            "card_link": ""
+            "text": "",
+            "card_link": "shopify://collections/vaporizer"
           }
         },
         "image_card_ag7Eb3": {
           "type": "image-card",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_hot-deals-puffco_ab_v05.webp",
+            "image": "shopify://shop_images/gs_categories-papers_ab_v01.webp",
             "content_alignment": "center",
-            "heading": "Select Home Decors",
+            "heading": "Rolling Papers",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
@@ -1174,8 +1218,8 @@
             "heading_size": "h5",
             "heading_size_mobile": "inherit",
             "heading_size_custom": 18,
-            "text": "<p>Buy One Get One</p>",
-            "card_link": ""
+            "text": "",
+            "card_link": "shopify://collections/rolling-papers"
           }
         }
       },
@@ -1371,9 +1415,279 @@
     },
     "home_join_banner_TmF4WQ": {
       "type": "home-join-banner",
-      "disabled": true,
       "name": "Join Banner",
       "settings": {}
+    },
+    "if_image_marquee_yqDwUL": {
+      "type": "if_image_marquee",
+      "blocks": {
+        "image_NWtFyN": {
+          "type": "image",
+          "settings": {
+            "marquee_image": "shopify://shop_images/grasscity.png"
+          }
+        },
+        "image_G7bfAe": {
+          "type": "image",
+          "settings": {
+            "marquee_image": "shopify://shop_images/blessedcbd.png"
+          }
+        },
+        "image_3PDTcj": {
+          "type": "image",
+          "settings": {
+            "marquee_image": "shopify://shop_images/nuleaf.png"
+          }
+        },
+        "image_TwkqPi": {
+          "type": "image",
+          "settings": {
+            "marquee_image": "shopify://shop_images/dailyhighclub.png"
+          }
+        },
+        "image_taxFkN": {
+          "type": "image",
+          "settings": {
+            "marquee_image": "shopify://shop_images/dankstop.png"
+          }
+        },
+        "image_aMDwHQ": {
+          "type": "image",
+          "settings": {
+            "marquee_image": "shopify://shop_images/fabcbd.png"
+          }
+        },
+        "image_PWFmtj": {
+          "type": "image",
+          "settings": {
+            "marquee_image": "shopify://shop_images/cannacabana.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_NWtFyN",
+        "image_G7bfAe",
+        "image_3PDTcj",
+        "image_TwkqPi",
+        "image_taxFkN",
+        "image_aMDwHQ",
+        "image_PWFmtj"
+      ],
+      "name": "IF - Image Marquee",
+      "settings": {
+        "sec_title": "",
+        "sec_sub_title": "",
+        "color": "#1f1f1f",
+        "speed": 30,
+        "width": 100,
+        "height": 100,
+        "speed_mob": 10,
+        "width_mob": 100,
+        "height_mob": 100,
+        "section_top_spacing": 10,
+        "section_bottom_spacing": 30,
+        "section_top_spacing_mob": 10,
+        "section_bottom_spacing_mob": 30
+      }
+    },
+    "logo_list_yLHxNy": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_etJJYY": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/grasscity.png",
+            "height": 80,
+            "link": ""
+          }
+        },
+        "logo_AYcXmV": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/blessedcbd.png",
+            "height": 80,
+            "link": ""
+          }
+        },
+        "logo_k6xW4w": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/nuleaf.png",
+            "height": 80,
+            "link": ""
+          }
+        },
+        "logo_iYhe9D": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/dailyhighclub.png",
+            "height": 80,
+            "link": ""
+          }
+        },
+        "logo_aQCXNc": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/dankstop.png",
+            "height": 80,
+            "link": ""
+          }
+        },
+        "logo_dDBhBE": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/fabcbd.png",
+            "height": 80,
+            "link": ""
+          }
+        },
+        "logo_V7HfPM": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/cannacabana.png",
+            "height": 80,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_etJJYY",
+        "logo_AYcXmV",
+        "logo_k6xW4w",
+        "logo_iYhe9D",
+        "logo_aQCXNc",
+        "logo_dDBhBE",
+        "logo_V7HfPM"
+      ],
+      "disabled": true,
+      "name": "Logo list",
+      "settings": {
+        "layout": "default",
+        "grid_horizontal": 70,
+        "direction": "left",
+        "speed": 5,
+        "heading": "Logo list",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "brand_logos_wTJaFd": {
+      "type": "brand-logos",
+      "blocks": {
+        "logo_GpkKDY": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/fabcbd.png",
+            "image_link": ""
+          }
+        },
+        "logo_8DhTXz": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/dailyhighclub.png",
+            "image_link": ""
+          }
+        },
+        "logo_QU4JLE": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/cannacabana.png",
+            "image_link": ""
+          }
+        },
+        "logo_3FDqxT": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/grasscity.png",
+            "image_link": ""
+          }
+        },
+        "logo_JNDBCA": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/dankstop.png",
+            "image_link": ""
+          }
+        },
+        "logo_VREAVU": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/nuleaf.png",
+            "image_link": ""
+          }
+        },
+        "logo_QiUtiR": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/blessedcbd.png",
+            "image_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_GpkKDY",
+        "logo_8DhTXz",
+        "logo_QU4JLE",
+        "logo_3FDqxT",
+        "logo_JNDBCA",
+        "logo_VREAVU",
+        "logo_QiUtiR"
+      ],
+      "disabled": true,
+      "name": "t:sections.brand-logos.presets",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-inverse",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "description": "",
+        "text_size": "text-sm",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "image_padding": "none",
+        "image_width": "full",
+        "columns_desktop": 6,
+        "column_gap": "medium",
+        "row_gap": "inherit",
+        "grid_bordered": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 30,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
     },
     "scrolling_gallery_image_wJyLJr": {
       "type": "scrolling-gallery-image",
@@ -1382,22 +1696,20 @@
           "type": "gallery",
           "settings": {
             "color_scheme": "",
-            "image": "shopify://shop_images/gs_brand-qualities-1_ab_v01.webp",
-            "image_avatar": "shopify://shop_images/gs_avatar_ig_2.png",
+            "image": "shopify://shop_images/fabcbd.png",
             "image_link": "",
-            "social_media": "instagram",
-            "heading": "grasscityheadshop"
+            "social_media": "none",
+            "heading": ""
           }
         },
         "gallery_HjXBVX": {
           "type": "gallery",
           "settings": {
-            "color_scheme": "",
-            "image": "shopify://shop_images/hot-deals-banner-background-5.png",
-            "image_avatar": "shopify://shop_images/gs_avatar_ig_2.png",
+            "color_scheme": "scheme-2",
+            "image": "shopify://shop_images/dailyhighclub.png",
             "image_link": "",
-            "social_media": "instagram",
-            "heading": "grasscityheadshop"
+            "social_media": "none",
+            "heading": ""
           }
         },
         "gallery_Hdq7y7": {
@@ -1429,6 +1741,90 @@
         "gallery_Hdq7y7",
         "gallery_xaTeHP"
       ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "We’re on Instagram",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "show_button_on_top": false,
+        "button_label": "@grasscityheadshop",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "direction": "left",
+        "speed": 0.1,
+        "pause_on_hover": true,
+        "column_gap": "medium",
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 30,
+        "padding_bottom": 30
+      }
+    },
+    "scrolling_gallery_image_Q7eTgL": {
+      "type": "scrolling-gallery-image",
+      "blocks": {
+        "gallery_CBNmmd": {
+          "type": "gallery",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/gs_brand-qualities-1_ab_v01.webp",
+            "image_avatar": "shopify://shop_images/gs_avatar_ig_2.png",
+            "image_link": "",
+            "social_media": "instagram",
+            "heading": "grasscityheadshop"
+          }
+        },
+        "gallery_awPfbF": {
+          "type": "gallery",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/hot-deals-banner-background-5.png",
+            "image_avatar": "shopify://shop_images/gs_avatar_ig_2.png",
+            "image_link": "",
+            "social_media": "instagram",
+            "heading": "grasscityheadshop"
+          }
+        },
+        "gallery_8bzNrt": {
+          "type": "gallery",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "image": "shopify://shop_images/gs_about-brand_ab_v01.webp",
+            "image_avatar": "shopify://shop_images/gs_avatar_ig_2.png",
+            "image_link": "",
+            "social_media": "instagram",
+            "heading": "grasscityheadshop"
+          }
+        },
+        "gallery_3pbkJq": {
+          "type": "gallery",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "image": "shopify://shop_images/hot-deals-banner-background-2.png",
+            "image_avatar": "shopify://shop_images/gs_avatar_ig_2.png",
+            "image_link": "",
+            "social_media": "instagram",
+            "heading": "grasscityheadshop"
+          }
+        }
+      },
+      "block_order": [
+        "gallery_CBNmmd",
+        "gallery_awPfbF",
+        "gallery_8bzNrt",
+        "gallery_3pbkJq"
+      ],
       "custom_css": [],
       "settings": {
         "color_scheme": "scheme-2",
@@ -1454,8 +1850,8 @@
         "column_gap": "medium",
         "show_section_divider": false,
         "divider_width": "fixed",
-        "padding_top": 60,
-        "padding_bottom": 60
+        "padding_top": 30,
+        "padding_bottom": 30
       }
     }
   },
@@ -1463,19 +1859,23 @@
     "collection_list_slider_6qbNfj",
     "slideshow_q3U4Jn",
     "featured_collection_bdaamt",
-    "custom_content_HPgFTK",
     "collection_cards_KV7p8g",
+    "custom_content_HPgFTK",
     "collection_tabs_VexkkR",
     "favorite_products_6Tg9Pn",
+    "image_with_text_aXhRxw",
     "lookbook_slider_9zCdQJ",
     "custom_content_JxRy7x",
     "featured_collection_RWUfH9",
-    "image_with_text_aXhRxw",
     "testimonials_mLThk7",
     "slider_with_multicolumn_aJwbrc",
     "buttons_with_icon_c8CzHV",
     "multicolumn_Ff4Wbj",
     "home_join_banner_TmF4WQ",
-    "scrolling_gallery_image_wJyLJr"
+    "if_image_marquee_yqDwUL",
+    "logo_list_yLHxNy",
+    "brand_logos_wTJaFd",
+    "scrolling_gallery_image_wJyLJr",
+    "scrolling_gallery_image_Q7eTgL"
   ]
 }

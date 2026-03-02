@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "Overlay group",
   "type": "custom.overlay",
@@ -13,6 +22,7 @@
         "cart_recommendations_color_scheme": "",
         "cart_recommendations_heading": "Pair Well With",
         "cart_recommendations_limit": 3,
+        "cart_recommendations_products": [],
         "cart_recommendations_layout": "grid",
         "cart_mess_color_scheme": "scheme-2",
         "cart_message": "✌🏼 Free Express Shipping on orders $500!",
@@ -60,6 +70,7 @@
         "type_AzgBQT",
         "variants_RYYmjz"
       ],
+      "disabled": true,
       "settings": {}
     },
     "quick-view": {
@@ -199,6 +210,7 @@
         "form",
         "socials"
       ],
+      "disabled": true,
       "settings": {
         "enable": true,
         "show_for_homepage_only": true,
@@ -249,6 +261,7 @@
             "heading_size": "h5",
             "description": "<p>Valid for filter </p>",
             "button_label": "Shop",
+            "button_link": "",
             "button_style": "btn--primary",
             "button_icon": "none"
           }
@@ -267,6 +280,7 @@
             "heading_size": "h5",
             "description": "<p>Online exclusive</p>",
             "button_label": "Shop",
+            "button_link": "",
             "button_style": "btn--primary",
             "button_icon": "none"
           }
@@ -285,6 +299,7 @@
             "heading_size": "h5",
             "description": "<p>on all major appliances $500+</p>",
             "button_label": "Shop",
+            "button_link": "",
             "button_style": "btn--primary",
             "button_icon": "none"
           }
@@ -296,6 +311,7 @@
         "item_dQn9tr",
         "item_xfLhK8"
       ],
+      "disabled": true,
       "custom_css": [
         ".spotlight__item-content {max-width: 22rem;}"
       ],
@@ -314,6 +330,73 @@
         "teaser_button_text_color": "#ffffff",
         "show_close_teaser_button": true
       }
+    },
+    "age_verifier_Jg87jz": {
+      "type": "age-verifier",
+      "blocks": {
+        "heading_RHcxQk": {
+          "type": "heading",
+          "settings": {
+            "heading": "Confirm your age",
+            "heading_size": "text-lg-2xl",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_LzGCgV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Are you 18 years old or older?</p>",
+            "text_font": "body",
+            "text_size": "text-base",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "spacing_cUR4CQ": {
+          "type": "spacing",
+          "settings": {
+            "height": 16,
+            "height_mobile": 12
+          }
+        },
+        "buttons_yG8wCx": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Yes I am",
+            "button_label_2": "No I'm not",
+            "button_link_2": "",
+            "button_external_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_RHcxQk",
+        "text_LzGCgV",
+        "spacing_cUR4CQ",
+        "buttons_yG8wCx"
+      ],
+      "name": "Age Popup",
+      "settings": {
+        "mode": "enabled",
+        "expiry": 30,
+        "text_alignment": "left",
+        "content_position": "center-0",
+        "blur_background_image": false,
+        "color_drawer_text": "#171717",
+        "color_drawer_background": "#ffffff",
+        "color_drawer_highlight": "#ffddbf",
+        "color_drawer_button_text": "#ffffff",
+        "color_drawer_button_background": "#171717",
+        "color_drawer_button_gradient": "",
+        "color_drawer_overlay": "#171717"
+      }
     }
   },
   "order": [
@@ -321,6 +404,7 @@
     "product-compare",
     "quick-view",
     "popup",
-    "spotlight-picks"
+    "spotlight-picks",
+    "age_verifier_Jg87jz"
   ]
 }

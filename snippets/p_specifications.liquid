@@ -1,0 +1,61 @@
+<ul class="p_specifications_data">
+  {%- assign current_variant = product.selected_or_first_available_variant -%}
+  {%- if current_variant.sku != blank -%}
+    <li><span><strong>SKU :</strong>{{ current_variant.sku }}</span></li>
+  {%- endif -%}
+
+  {%- if product.metafields.product.brand != blank -%}
+  <li><span><strong>Brand : </strong>{{ product.metafields.product.brand }}</span></li>
+  {%- endif -%}
+
+  {%- if product.metafields.category.category_assignments != blank -%}
+  <li><span><strong>Category Asignments : </strong>{{ product.metafields.category.category_assignments }}</span></li>
+  {%- endif -%}
+
+  {%- if product.metafields.features.carb_hole != blank -%}
+  <li><span><strong>Carb Hole : </strong>{{ product.metafields.features.carb_hole | capitalize }}</span></li>
+  {%- endif -%}
+
+  {%- if product.metafields.specs.diffuser != blank -%}
+  <li><span><strong>Diffuser Type : </strong>{{ product.metafields.specs.diffuser }}</span></li>
+  {%- endif -%}
+
+  {%- if product.metafields.specs.glass_thickness != blank -%}
+  <li><span><strong>Glass Thickness : </strong>{{ product.metafields.specs.glass_thickness }}</span></li>
+  {%- endif -%}
+
+  {%- if product.metafields.specs.bong_height != blank -%}
+  <li><span><strong>Bong Height : </strong>{{ product.metafields.specs.bong_height }}</span></li>
+  {%- endif -%}
+
+  {%- if product.metafields.specs.height_cm != blank -%}
+  <li><span><strong>Height : </strong>{{ product.metafields.specs.height_cm }}</span></li>
+  {%- endif -%}
+
+  {%- if product.metafields.specs.materials != blank -%}
+  <li><span><strong>Material : </strong>{{ product.metafields.specs.materials }}</span></li>
+  {%- endif -%}
+
+  {%- if product.metafields.style.color != blank -%}
+  <li><span><strong>Color : </strong>{{ product.metafields.style.color }}</span></li>
+  {%- endif -%}
+
+  {%- if product.metafields.specs.percolator != blank -%}
+  <li><span><strong>Percolator Type : </strong>{{ product.metafields.specs.percolator }}</span></li>
+  {%- endif -%}
+
+  {%- if product.metafields.specs.base_form != blank -%}
+  <li><span><strong>Base : </strong>{{ product.metafields.specs.base_form }}</span></li>
+  {%- endif -%}
+</ul>
+
+<style>
+  @media screen and (min-width: 1024px) {
+    .p_specifications_data {
+      column-count: 2;
+    }
+    .p_specifications_data li * {
+      font-size: 14px !important;
+    }
+  }
+</style>
