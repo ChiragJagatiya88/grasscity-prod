@@ -1,92 +1,51 @@
 <ul class="p_specifications_data">
   {%- assign current_variant = product.selected_or_first_available_variant -%}
-  {%- if product.metafields.admin.sku_changes != blank -%}
-    <li>
-      <strong>SKU :</strong>
-      <span>{{ product.metafields.admin.sku_changes }}</span>
-    </li>
-  {%- elsif current_variant.sku != blank -%}
-    <li>
-      <strong>SKU :</strong>
-      <span>{{ current_variant.sku }}</span>
-    </li>
+  {%- if current_variant.sku != blank -%}
+    <li><span><strong>SKU :</strong>{{ current_variant.sku }}</span></li>
   {%- endif -%}
 
   {%- if product.metafields.product.brand != blank -%}
-  <li>
-    <strong>Brand : </strong>
-    <span>{{ product.metafields.product.brand }}</span>
-  </li>
+  <li><span><strong>Brand : </strong>{{ product.metafields.product.brand }}</span></li>
   {%- endif -%}
 
   {%- if product.metafields.category.category_assignments != blank -%}
-  <li>
-    <strong>Category Asignments : </strong>
-    <span>{{ product.metafields.category.category_assignments }}</span>
-  </li>
+  <li><span><strong>Category Asignments : </strong>{{ product.metafields.category.category_assignments }}</span></li>
   {%- endif -%}
 
   {%- if product.metafields.features.carb_hole != blank -%}
-  <li>
-    <strong>Carb Hole : </strong>
-    <span>{{ product.metafields.features.carb_hole | capitalize }}</span>
-  </li>
+  <li><span><strong>Carb Hole : </strong>{{ product.metafields.features.carb_hole | capitalize }}</span></li>
   {%- endif -%}
 
   {%- if product.metafields.specs.diffuser != blank -%}
-  <li>
-    <strong>Diffuser Type : </strong>
-    <span>{{ product.metafields.specs.diffuser }}</span>
-  </li>
+  <li><span><strong>Diffuser Type : </strong>{{ product.metafields.specs.diffuser }}</span></li>
   {%- endif -%}
 
   {%- if product.metafields.specs.glass_thickness != blank -%}
-  <li>
-    <strong>Glass Thickness : </strong>
-    <span>{{ product.metafields.specs.glass_thickness }}</span>
-  </li>
+  <li><span><strong>Glass Thickness : </strong>{{ product.metafields.specs.glass_thickness }}</span></li>
   {%- endif -%}
 
   {%- if product.metafields.specs.bong_height != blank -%}
-  <li>
-    <strong>Bong Height : </strong>
-    <span>{{ product.metafields.specs.bong_height }}</span>
-  </li>
+  <li><span><strong>Bong Height : </strong>{{ product.metafields.specs.bong_height }}</span></li>
   {%- endif -%}
 
   {%- if product.metafields.specs.height_cm != blank -%}
-  <li>
-    <strong>Height : </strong>
-    <span>{{ product.metafields.specs.height_cm }}</span>
-  </li>
+  <li><span><strong>Height : </strong>{{ product.metafields.specs.height_cm }}</span></li>
   {%- endif -%}
 
   {%- if product.metafields.specs.materials != blank -%}
-  <li>
-    <strong>Material : </strong>
-    <span>{{ product.metafields.specs.materials }}</span>
-  </li>
+  <li><span><strong>Material : </strong>{{ product.metafields.specs.materials }}</span></li>
   {%- endif -%}
 
   {%- if product.metafields.style.color != blank -%}
-  <li>
-    <strong>Color : </strong>
-    <span>{{ product.metafields.style.color }}</span>
-  </li>
+  <li><span><strong>Color : </strong>{{ product.metafields.style.color }}</span></li>
   {%- endif -%}
 
   {%- if product.metafields.specs.percolator != blank -%}
-  <li>
-    <strong>Percolator Type : </strong>
-    <span>{{ product.metafields.specs.percolator }}</span>
-  </li>
+  <li><span><strong>Percolator Type : </strong>{{ product.metafields.specs.percolator }}</span></li>
   {%- endif -%}
 
   {%- if product.metafields.specs.base_form != blank -%}
-  <li>
-    <strong>Base : </strong>
-    <span>{{ product.metafields.specs.base_form }}</span>
-  </li>
+  <li><span><strong>Base : </strong>{{ product.metafields.specs.base_form }}</span></li>
   {%- endif -%}
 </ul>
 
