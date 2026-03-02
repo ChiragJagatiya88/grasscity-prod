@@ -336,8 +336,8 @@
       "name": "Age Popup",
       "settings": {
         "delay": 1,
-        "mode": "testing",
-        "expiry": 30,
+        "mode": "enabled",
+        "expiry": 7,
         "heading": "Confirm your age",
         "question": "Are you 18 years old or older?",
         "button_yes": "Yes, I am",
