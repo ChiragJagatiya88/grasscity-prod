@@ -1,3 +1,6 @@
+{{ 'age-verifier.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'age-verifier.js' | asset_url }}" defer="defer"></script>
+
 <style>
   #shopify-section-{{ section.id }} {
     --age-text: {{ section.settings.color_drawer_text.rgb }};
@@ -31,9 +34,6 @@
     border: 1.5px solid rgb({{ section.settings.color_drawer_text.rgb }});
   }
 </style>
-
-{{ 'age-verifier.css' | asset_url | stylesheet_tag }}
-<script src="{{ 'age-verifier.js' | asset_url }}" defer="defer"></script>
 
 <age-verifier id="AgeVerifier" class="age-modal"
   data-delay="{{ section.settings.delay }}"
