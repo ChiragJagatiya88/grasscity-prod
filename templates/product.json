@@ -82,6 +82,7 @@
         "rich_text_UCB4ce": {
           "type": "rich-text",
           "settings": {
+            "text": "{{ product.metafields.description.short_description | metafield_tag }}"
           }
         },
         "inventory": {
@@ -167,6 +168,7 @@
             "icon": "none",
             "content": "{{ product.metafields.custom.specifications | metafield_tag }}",
             "page": "",
+            "liquid": "",
             "default_open": false,
             "show_below_product_media": true
           }
