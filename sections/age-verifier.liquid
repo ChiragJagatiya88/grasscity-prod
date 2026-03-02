@@ -6,6 +6,31 @@
     --age-btn-bg: {{ section.settings.color_drawer_button_background.rgb }};
     --age-btn-text: {{ section.settings.color_drawer_button_text.rgb }};
   }
+  .age-modal .overlay {
+    background: rgb(var(--age-overlay));
+  }
+  .age-modal .age-verifier__card {
+    background: rgb(var(--age-bg));
+  }
+  .age-verifier__heading {
+    color: rgb(var(--age-text));
+  }
+  .age-verifier__question {
+    color: rgb(var(--age-text));
+  }
+  .age-verifier__btn:focus-visible {
+    outline: 2px solid rgb(var(--age-text));
+  }
+  /* Yes – filled black */
+  .age-verifier__btn--yes {
+    background: rgb(var(--age-btn-bg));
+    color: rgb(var(--age-btn-text));
+  }
+  .age-verifier__btn--no {
+    background: transparent;
+    color: rgb(var(--age-text));
+    border: 1.5px solid rgb(var(--age-text));
+  }
 </style>
 
 {{ 'age-verifier.css' | asset_url | stylesheet_tag }}
