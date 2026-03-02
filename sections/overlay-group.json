@@ -333,69 +333,22 @@
     },
     "age_verifier_Jg87jz": {
       "type": "age-verifier",
-      "blocks": {
-        "heading_RHcxQk": {
-          "type": "heading",
-          "settings": {
-            "heading": "Confirm your age",
-            "heading_size": "text-lg-2xl",
-            "heading_tag": "h2",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
-          }
-        },
-        "text_LzGCgV": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Are you 18 years old or older?</p>",
-            "text_font": "body",
-            "text_size": "text-base",
-            "text_max_size": 32,
-            "text_line_height": 1.6,
-            "text_letter_spacing": 0,
-            "text_capitalize": false,
-            "secondary_color": false,
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
-          }
-        },
-        "spacing_cUR4CQ": {
-          "type": "spacing",
-          "settings": {
-            "height": 16,
-            "height_mobile": 12
-          }
-        },
-        "buttons_yG8wCx": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Yes I am",
-            "button_label_2": "No I'm not",
-            "button_link_2": "",
-            "button_external_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_RHcxQk",
-        "text_LzGCgV",
-        "spacing_cUR4CQ",
-        "buttons_yG8wCx"
-      ],
       "name": "Age Popup",
       "settings": {
-        "mode": "enabled",
+        "delay": 1,
+        "mode": "testing",
         "expiry": 30,
-        "text_alignment": "left",
-        "content_position": "center-0",
-        "blur_background_image": false,
+        "heading": "Confirm your age",
+        "question": "Are you 18 years old or older?",
+        "button_yes": "Yes, I am",
+        "button_no": "No, I'm not",
+        "button_no_link": "",
+        "button_no_external": false,
         "color_drawer_text": "#171717",
         "color_drawer_background": "#ffffff",
-        "color_drawer_highlight": "#ffddbf",
-        "color_drawer_button_text": "#ffffff",
+        "color_drawer_overlay": "#171717",
         "color_drawer_button_background": "#171717",
-        "color_drawer_button_gradient": "",
-        "color_drawer_overlay": "#171717"
+        "color_drawer_button_text": "#ffffff"
       }
     }
   },
