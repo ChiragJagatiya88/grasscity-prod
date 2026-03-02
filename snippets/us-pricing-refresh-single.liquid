@@ -1,3 +1,6 @@
+{% comment %} Get the JSON price metafield {% endcomment %}
+{%- assign price_json = item.metafields.membership.price -%}
+
 {% comment %} Determine market based on country code if not provided {% endcomment %}
 {% unless market %}
   {% assign country_code = localization.country.iso_code | downcase %}
@@ -31,60 +34,36 @@
   {% endif %}
 {% endunless %}
 
-{% comment %} Get market-specific metafields {% endcomment %}
-{% case market %}
-  {% when 'b2b' %}
-    {% assign elite_price_metafield = item.metafields.membership.elite_price_b2b %}
-    {% assign member_price_metafield = item.metafields.membership.member_price_b2b %}
-    {% assign market_price_metafield = item.metafields.markets.price_b2b %}
-  {% when 'nl' %}
-    {% assign elite_price_metafield = item.metafields.membership.elite_price_nl %}
-    {% assign member_price_metafield = item.metafields.membership.member_price_nl %}
-    {% assign market_price_metafield = item.metafields.markets.price_nl %}
-  {% when 'fr' %}
-    {% assign elite_price_metafield = item.metafields.membership.elite_price_fr %}
-    {% assign member_price_metafield = item.metafields.membership.member_price_fr %}
-    {% assign market_price_metafield = item.metafields.markets.price_fr %}
-  {% when 'de' %}
-    {% assign elite_price_metafield = item.metafields.membership.elite_price_de %}
-    {% assign member_price_metafield = item.metafields.membership.member_price_de %}
-    {% assign market_price_metafield = item.metafields.markets.price_de %}
-  {% when 'uk' %}
-    {% assign elite_price_metafield = item.metafields.membership.elite_price_uk %}
-    {% assign member_price_metafield = item.metafields.membership.member_price_uk %}
-    {% assign market_price_metafield = item.metafields.markets.price_uk %}
-  {% when 'eu' %}
-    {% assign elite_price_metafield = item.metafields.membership.elite_price_eu %}
-    {% assign member_price_metafield = item.metafields.membership.member_price_eu %}
-    {% assign market_price_metafield = item.metafields.markets.price_eu %}
-  {% when 'us' %}
-    {% assign elite_price_metafield = item.metafields.membership.elite_price_us %}
-    {% assign member_price_metafield = item.metafields.membership.member_price_us %}
-    {% assign market_price_metafield = item.metafields.markets.price_us %}
-  {% else %}
-    {% assign elite_price_metafield = item.metafields.membership.elite_price_us %}
-    {% assign member_price_metafield = item.metafields.membership.member_price_us %}
-    {% assign market_price_metafield = item.metafields.markets.price_us %}
-{% endcase %}
-
-{% comment %} Fallback to custom metafields if market-specific ones are blank {% endcomment %}
-{% if elite_price_metafield == blank %}
-  {% assign elite_price_metafield = item.metafields.custom.elite_price %}
-{% endif %}
-{% if member_price_metafield == blank %}
-  {% assign member_price_metafield = item.metafields.custom.member_price %}
+{% comment %} Extract prices from JSON metafield based on market {% endcomment %}
+{% if price_json != blank %}
+  {% assign member_price_key = 'member_price_' | append: market %}
+  {% assign elite_price_key = 'elite_price_' | append: market %}
+  
+  {% comment %} Try direct JSON property access first (if Shopify stores as JSON type) {% endcomment %}
+  {% assign member_price_metafield = price_json[member_price_key] %}
+  {% assign elite_price_metafield = price_json[elite_price_key] %}
+  
+  {% comment %} If direct access didn't work, parse from JSON string {% endcomment %}
+  {% if member_price_metafield == blank %}
+    {% assign member_price_search = member_price_key | append: '":"' %}
+    {% assign member_price_parts = price_json | split: member_price_search %}
+    {% if member_price_parts.size > 1 %}
+      {% assign member_price_value = member_price_parts[1] | split: '"' %}
+      {% assign member_price_metafield = member_price_value[0] %}
+    {% endif %}
+  {% endif %}
+  
+  {% if elite_price_metafield == blank %}
+    {% assign elite_price_search = elite_price_key | append: '":"' %}
+    {% assign elite_price_parts = price_json | split: elite_price_search %}
+    {% if elite_price_parts.size > 1 %}
+      {% assign elite_price_value = elite_price_parts[1] | split: '"' %}
+      {% assign elite_price_metafield = elite_price_value[0] %}
+    {% endif %}
+  {% endif %}
 {% endif %}
 
 {% assign elite = false %}
-{% comment %}
-  {% assign elite_product = settings.elite_product.selected_or_first_available_variant %}
-  {% for item in cart.items %}
-    {% if item.id == settings.elite_product.selected_or_first_available_variant.id %}
-      {% assign elite = true %}
-      {% break %}
-    {% endif %}
-  {% endfor %}
-{% endcomment %}
 
 {% assign elite_item = cart.items | where: 'id', settings.elite_product.selected_or_first_available_variant.id %}
 {% if elite_item[0].id != blank and elite_item.size > 0 %}
@@ -119,11 +98,7 @@
 {% if base_price_active == true %}
   <div class="us-refresh-pricing-base__price__main">
     <div class="base__price_container">
-      {% if market_price_metafield != blank %}
-        <span class="base__price">{{ market_price_metafield | default: 0 | times: 100 | money_with_currency }}</span>
-      {% else %}
-        <span class="base__price">{{ item.price | money_with_currency }}</span>
-      {% endif %}
+      <span class="base__price">{{ item.price | money_with_currency }}</span>
       <span class="base__price_label">Non-member price</span>
     </div>
 

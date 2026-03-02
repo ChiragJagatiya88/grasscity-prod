@@ -68,56 +68,40 @@
 {% assign club_cart_price = 0 %}
 {% assign elite_cart_price = 0 %}
 {% for item in cart.items %}
-  {% comment %} Get market-specific metafields for each item {% endcomment %}
-  {% case market %}
-    {% when 'b2b' %}
-      {% assign item_elite_price = item.variant.metafields.membership.elite_price_b2b %}
-      {% assign item_member_price = item.variant.metafields.membership.member_price_b2b %}
-      {% assign item_market_price = item.variant.metafields.markets.price_b2b %}
-    {% when 'nl' %}
-      {% assign item_elite_price = item.variant.metafields.membership.elite_price_nl %}
-      {% assign item_member_price = item.variant.metafields.membership.member_price_nl %}
-      {% assign item_market_price = item.variant.metafields.markets.price_nl %}
-    {% when 'fr' %}
-      {% assign item_elite_price = item.variant.metafields.membership.elite_price_fr %}
-      {% assign item_member_price = item.variant.metafields.membership.member_price_fr %}
-      {% assign item_market_price = item.variant.metafields.markets.price_fr %}
-    {% when 'de' %}
-      {% assign item_elite_price = item.variant.metafields.membership.elite_price_de %}
-      {% assign item_member_price = item.variant.metafields.membership.member_price_de %}
-      {% assign item_market_price = item.variant.metafields.markets.price_de %}
-    {% when 'uk' %}
-      {% assign item_elite_price = item.variant.metafields.membership.elite_price_uk %}
-      {% assign item_member_price = item.variant.metafields.membership.member_price_uk %}
-      {% assign item_market_price = item.variant.metafields.markets.price_uk %}
-    {% when 'eu' %}
-      {% assign item_elite_price = item.variant.metafields.membership.elite_price_eu %}
-      {% assign item_member_price = item.variant.metafields.membership.member_price_eu %}
-      {% assign item_market_price = item.variant.metafields.markets.price_eu %}
-    {% when 'us' %}
-      {% assign item_elite_price = item.variant.metafields.membership.elite_price_us %}
-      {% assign item_member_price = item.variant.metafields.membership.member_price_us %}
-      {% assign item_market_price = item.variant.metafields.markets.price_us %}
-    {% else %}
-      {% assign item_elite_price = item.variant.metafields.membership.elite_price_us %}
-      {% assign item_member_price = item.variant.metafields.membership.member_price_us %}
-      {% assign item_market_price = item.variant.metafields.markets.price_us %}
-  {% endcase %}
+  {% comment %} Get the JSON price metafield for this item {% endcomment %}
+  {%- assign item_price_json = item.variant.metafields.membership.price -%}
   
-  {% comment %} Fallback to custom metafields if market-specific ones are blank {% endcomment %}
-  {% if item_elite_price == blank %}
-    {% assign item_elite_price = item.variant.metafields.custom.elite_price %}
-  {% endif %}
-  {% if item_member_price == blank %}
-    {% assign item_member_price = item.variant.metafields.custom.member_price %}
+  {% comment %} Extract prices from JSON metafield based on market {% endcomment %}
+  {% if item_price_json != blank %}
+    {% assign item_member_price_key = 'member_price_' | append: market %}
+    {% assign item_elite_price_key = 'elite_price_' | append: market %}
+    
+    {% comment %} Try direct JSON property access first {% endcomment %}
+    {% assign item_member_price = item_price_json[item_member_price_key] %}
+    {% assign item_elite_price = item_price_json[item_elite_price_key] %}
+    
+    {% comment %} If direct access didn't work, parse from JSON string {% endcomment %}
+    {% if item_member_price == blank %}
+      {% assign item_member_search = item_member_price_key | append: '":"' %}
+      {% assign item_member_parts = item_price_json | split: item_member_search %}
+      {% if item_member_parts.size > 1 %}
+        {% assign item_member_value = item_member_parts[1] | split: '"' %}
+        {% assign item_member_price = item_member_value[0] %}
+      {% endif %}
+    {% endif %}
+    
+    {% if item_elite_price == blank %}
+      {% assign item_elite_search = item_elite_price_key | append: '":"' %}
+      {% assign item_elite_parts = item_price_json | split: item_elite_search %}
+      {% if item_elite_parts.size > 1 %}
+        {% assign item_elite_value = item_elite_parts[1] | split: '"' %}
+        {% assign item_elite_price = item_elite_value[0] %}
+      {% endif %}
+    {% endif %}
   {% endif %}
   
   {% comment %} Calculate prices {% endcomment %}
-  {% if item_market_price != blank %}
-    {% assign item_base = item_market_price | times: 100 | times: item.quantity %}
-  {% else %}
-    {% assign item_base = item.variant.price | times: item.quantity %}
-  {% endif %}
+  {% assign item_base = item.variant.price | times: item.quantity %}
   {% assign item_club = item_member_price | default: 0 | times: 100 | times: item.quantity %}
   {% assign item_elite = item_elite_price | default: 0 | times: 100 | times: item.quantity %}
   
@@ -415,56 +399,40 @@
                                   {%- endif -%}
                                   <div class="cart-item__prices">
                                     <div class="price text-right flex flex-wrap items-center gap-x-2 font-body-bolder{% if item.original_price != item.final_price %} price--on-sale{% endif %}">
-                                      {% comment %} Get market-specific metafields for this item {% endcomment %}
-                                      {% case market %}
-                                        {% when 'b2b' %}
-                                          {% assign item_elite_price = item.variant.metafields.membership.elite_price_b2b %}
-                                          {% assign item_member_price = item.variant.metafields.membership.member_price_b2b %}
-                                          {% assign item_market_price = item.variant.metafields.markets.price_b2b %}
-                                        {% when 'nl' %}
-                                          {% assign item_elite_price = item.variant.metafields.membership.elite_price_nl %}
-                                          {% assign item_member_price = item.variant.metafields.membership.member_price_nl %}
-                                          {% assign item_market_price = item.variant.metafields.markets.price_nl %}
-                                        {% when 'fr' %}
-                                          {% assign item_elite_price = item.variant.metafields.membership.elite_price_fr %}
-                                          {% assign item_member_price = item.variant.metafields.membership.member_price_fr %}
-                                          {% assign item_market_price = item.variant.metafields.markets.price_fr %}
-                                        {% when 'de' %}
-                                          {% assign item_elite_price = item.variant.metafields.membership.elite_price_de %}
-                                          {% assign item_member_price = item.variant.metafields.membership.member_price_de %}
-                                          {% assign item_market_price = item.variant.metafields.markets.price_de %}
-                                        {% when 'uk' %}
-                                          {% assign item_elite_price = item.variant.metafields.membership.elite_price_uk %}
-                                          {% assign item_member_price = item.variant.metafields.membership.member_price_uk %}
-                                          {% assign item_market_price = item.variant.metafields.markets.price_uk %}
-                                        {% when 'eu' %}
-                                          {% assign item_elite_price = item.variant.metafields.membership.elite_price_eu %}
-                                          {% assign item_member_price = item.variant.metafields.membership.member_price_eu %}
-                                          {% assign item_market_price = item.variant.metafields.markets.price_eu %}
-                                        {% when 'us' %}
-                                          {% assign item_elite_price = item.variant.metafields.membership.elite_price_us %}
-                                          {% assign item_member_price = item.variant.metafields.membership.member_price_us %}
-                                          {% assign item_market_price = item.variant.metafields.markets.price_us %}
-                                        {% else %}
-                                          {% assign item_elite_price = item.variant.metafields.membership.elite_price_us %}
-                                          {% assign item_member_price = item.variant.metafields.membership.member_price_us %}
-                                          {% assign item_market_price = item.variant.metafields.markets.price_us %}
-                                      {% endcase %}
+                                      {% comment %} Get the JSON price metafield for this item {% endcomment %}
+                                      {%- assign item_price_json = item.variant.metafields.membership.price -%}
                                       
-                                      {% comment %} Fallback to custom metafields if market-specific ones are blank {% endcomment %}
-                                      {% if item_elite_price == blank %}
-                                        {% assign item_elite_price = item.variant.metafields.custom.elite_price %}
-                                      {% endif %}
-                                      {% if item_member_price == blank %}
-                                        {% assign item_member_price = item.variant.metafields.custom.member_price %}
+                                      {% comment %} Extract prices from JSON metafield based on market {% endcomment %}
+                                      {% if item_price_json != blank %}
+                                        {% assign item_member_price_key = 'member_price_' | append: market %}
+                                        {% assign item_elite_price_key = 'elite_price_' | append: market %}
+                                        
+                                        {% comment %} Try direct JSON property access first {% endcomment %}
+                                        {% assign item_member_price = item_price_json[item_member_price_key] %}
+                                        {% assign item_elite_price = item_price_json[item_elite_price_key] %}
+                                        
+                                        {% comment %} If direct access didn't work, parse from JSON string {% endcomment %}
+                                        {% if item_member_price == blank %}
+                                          {% assign item_member_search = item_member_price_key | append: '":"' %}
+                                          {% assign item_member_parts = item_price_json | split: item_member_search %}
+                                          {% if item_member_parts.size > 1 %}
+                                            {% assign item_member_value = item_member_parts[1] | split: '"' %}
+                                            {% assign item_member_price = item_member_value[0] %}
+                                          {% endif %}
+                                        {% endif %}
+                                        
+                                        {% if item_elite_price == blank %}
+                                          {% assign item_elite_search = item_elite_price_key | append: '":"' %}
+                                          {% assign item_elite_parts = item_price_json | split: item_elite_search %}
+                                          {% if item_elite_parts.size > 1 %}
+                                            {% assign item_elite_value = item_elite_parts[1] | split: '"' %}
+                                            {% assign item_elite_price = item_elite_value[0] %}
+                                          {% endif %}
+                                        {% endif %}
                                       {% endif %}
 
                                       <div class="new-cart-base__price" {% if base_price_active == false %} style="display: none;" {% endif %}>
-                                        {% if item_market_price != blank %}
-                                          <span class="base__price">{{ item_market_price | times: 100 | money }}</span>
-                                        {% else %}
-                                          <span class="base__price">{{ item.price | money }}</span>
-                                        {% endif %}
+                                        <span class="base__price">{{ item.price | money }}</span>
                                         <span class="base__price_label">Non-member price</span>
                                       </div>
 
@@ -908,57 +876,41 @@
                         </td>
     
                         <td class="cart-item__total hidden lg:table-cell">
-                          {% comment %} Get market-specific metafields for this item {% endcomment %}
-                          {% case market %}
-                            {% when 'b2b' %}
-                              {% assign item_elite_price = item.variant.metafields.membership.elite_price_b2b %}
-                              {% assign item_member_price = item.variant.metafields.membership.member_price_b2b %}
-                              {% assign item_market_price = item.variant.metafields.markets.price_b2b %}
-                            {% when 'nl' %}
-                              {% assign item_elite_price = item.variant.metafields.membership.elite_price_nl %}
-                              {% assign item_member_price = item.variant.metafields.membership.member_price_nl %}
-                              {% assign item_market_price = item.variant.metafields.markets.price_nl %}
-                            {% when 'fr' %}
-                              {% assign item_elite_price = item.variant.metafields.membership.elite_price_fr %}
-                              {% assign item_member_price = item.variant.metafields.membership.member_price_fr %}
-                              {% assign item_market_price = item.variant.metafields.markets.price_fr %}
-                            {% when 'de' %}
-                              {% assign item_elite_price = item.variant.metafields.membership.elite_price_de %}
-                              {% assign item_member_price = item.variant.metafields.membership.member_price_de %}
-                              {% assign item_market_price = item.variant.metafields.markets.price_de %}
-                            {% when 'uk' %}
-                              {% assign item_elite_price = item.variant.metafields.membership.elite_price_uk %}
-                              {% assign item_member_price = item.variant.metafields.membership.member_price_uk %}
-                              {% assign item_market_price = item.variant.metafields.markets.price_uk %}
-                            {% when 'eu' %}
-                              {% assign item_elite_price = item.variant.metafields.membership.elite_price_eu %}
-                              {% assign item_member_price = item.variant.metafields.membership.member_price_eu %}
-                              {% assign item_market_price = item.variant.metafields.markets.price_eu %}
-                            {% when 'us' %}
-                              {% assign item_elite_price = item.variant.metafields.membership.elite_price_us %}
-                              {% assign item_member_price = item.variant.metafields.membership.member_price_us %}
-                              {% assign item_market_price = item.variant.metafields.markets.price_us %}
-                            {% else %}
-                              {% assign item_elite_price = item.variant.metafields.membership.elite_price_us %}
-                              {% assign item_member_price = item.variant.metafields.membership.member_price_us %}
-                              {% assign item_market_price = item.variant.metafields.markets.price_us %}
-                          {% endcase %}
+                          {% comment %} Get the JSON price metafield for this item {% endcomment %}
+                          {%- assign item_price_json = item.variant.metafields.membership.price -%}
                           
-                          {% comment %} Fallback to custom metafields if market-specific ones are blank {% endcomment %}
-                          {% if item_elite_price == blank %}
-                            {% assign item_elite_price = item.variant.metafields.custom.elite_price %}
-                          {% endif %}
-                          {% if item_member_price == blank %}
-                            {% assign item_member_price = item.variant.metafields.custom.member_price %}
+                          {% comment %} Extract prices from JSON metafield based on market {% endcomment %}
+                          {% if item_price_json != blank %}
+                            {% assign item_member_price_key = 'member_price_' | append: market %}
+                            {% assign item_elite_price_key = 'elite_price_' | append: market %}
+                            
+                            {% comment %} Try direct JSON property access first {% endcomment %}
+                            {% assign item_member_price = item_price_json[item_member_price_key] %}
+                            {% assign item_elite_price = item_price_json[item_elite_price_key] %}
+                            
+                            {% comment %} If direct access didn't work, parse from JSON string {% endcomment %}
+                            {% if item_member_price == blank %}
+                              {% assign item_member_search = item_member_price_key | append: '":"' %}
+                              {% assign item_member_parts = item_price_json | split: item_member_search %}
+                              {% if item_member_parts.size > 1 %}
+                                {% assign item_member_value = item_member_parts[1] | split: '"' %}
+                                {% assign item_member_price = item_member_value[0] %}
+                              {% endif %}
+                            {% endif %}
+                            
+                            {% if item_elite_price == blank %}
+                              {% assign item_elite_search = item_elite_price_key | append: '":"' %}
+                              {% assign item_elite_parts = item_price_json | split: item_elite_search %}
+                              {% if item_elite_parts.size > 1 %}
+                                {% assign item_elite_value = item_elite_parts[1] | split: '"' %}
+                                {% assign item_elite_price = item_elite_value[0] %}
+                              {% endif %}
+                            {% endif %}
                           {% endif %}
                           
                           <div class="new-item-total-base" {% if base_price_active == false %} style="display: none;" {% endif %}>
                             <span class="font-body-bolder">
-                              {% if item_market_price != blank %}
-                                {{ item_market_price | times: 100 | times: item.quantity | money }}
-                              {% else %}
-                                {{ item.price | times: item.quantity | money }}
-                              {% endif %}
+                              {{ item.price | times: item.quantity | money }}
                             </span>
                           </div>
                           <div class="new-item-total-club font-body-bolder" {% if club_price_active == false %} style="display: none;" {% endif %}>
