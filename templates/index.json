@@ -712,6 +712,7 @@
         },
         "subheading_8kBXjM": {
           "type": "subheading",
+          "disabled": true,
           "settings": {
             "subheading": "Meet Our Team"
           }
