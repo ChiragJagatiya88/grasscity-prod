@@ -147,6 +147,7 @@
       "blocks": {
         "slide_JhU8hg": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "color_scheme": "scheme-inverse",
             "background": "shopify://shop_images/gs_homepage-slider-categoryname_desktop_ab_v01_2f723b84-a1d0-4e97-b4c2-2c55cc3889e5.webp",
@@ -154,7 +155,31 @@
             "image_overlay_opacity": 30,
             "content_position": "middle-center",
             "text_alignment": "right",
-            "subheading": "",
+            "subheading": "World's Best Smoke Shop",
+            "title": "BRING HOME THE LA CHILL",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2",
+            "description": "",
+            "description_size": "text-base",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/bongs",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": true
+          }
+        },
+        "slide_Y7T4HB": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "background": "shopify://shop_images/SuperBongs-hero.jpg",
+            "image_overlay_opacity": 30,
+            "content_position": "middle-center",
+            "text_alignment": "right",
+            "subheading": "World's Best Smoke Shop",
             "title": "BRING HOME THE LA CHILL",
             "highlight_style": "none",
             "highlight_font_style": "italic",
@@ -174,12 +199,11 @@
           "type": "slide",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "background": "shopify://shop_images/gs_categories-bongs_ab_v01.webp",
-            "background_mobile": "shopify://shop_images/gs_homepage-slider-categoryname_mobile_ab_v01.webp",
+            "background": "shopify://shop_images/vape-under-100-AED.jpg",
             "image_overlay_opacity": 30,
             "content_position": "middle-center",
             "text_alignment": "left",
-            "subheading": "",
+            "subheading": "World's Best Smoke Shop",
             "title": "BRING HOME THE LA CHILL",
             "highlight_style": "none",
             "highlight_font_style": "italic",
@@ -198,6 +222,7 @@
       },
       "block_order": [
         "slide_JhU8hg",
+        "slide_Y7T4HB",
         "slide_7PwcbK"
       ],
       "settings": {
