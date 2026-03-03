@@ -154,7 +154,7 @@
             "image_overlay_opacity": 30,
             "content_position": "middle-center",
             "text_alignment": "center",
-            "subheading": "Lorem ipsum dolor sit amet consectetur.",
+            "subheading": "",
             "title": "BRING HOME THE LA CHILL",
             "highlight_style": "none",
             "highlight_font_style": "italic",
@@ -527,7 +527,7 @@
             "collection": "january-featured-picks",
             "image": "shopify://shop_images/gs_lifestyle_featured_picks_ab_v01_81db7e72-f06a-4580-9db8-9c7440f0af92.webp",
             "title": "Featured Picks",
-            "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
+            "text": "<p>We Don't Just Price Match, We <strong>Price BEAT </strong>by 5%</p>",
             "button_label": "Shop Collection",
             "button_style": "btn--primary",
             "button_icon": "none"
