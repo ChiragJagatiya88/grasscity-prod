@@ -671,3 +671,9 @@ elite-icon-nm {
   display: inline-block;
   background: #e1251c;
 }
+
+.product__block--description {
+  p {margin-block: 10px;}
+  br {display: none;}
+  h2 {font-size: 22px; margin-block: 20px 10px; font-weight: 600;}
+}
