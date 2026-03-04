@@ -237,8 +237,18 @@
         "divider_width": "fixed"
       }
     },
+    "collection_bottom_description_i6UPK6": {
+      "type": "collection-bottom-description",
+      "name": "Collection Bottom Desc",
+      "settings": {
+        "container": "fixed",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "custom_liquid_AVLwYH": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.name",
       "settings": {
         "custom_liquid": "{% if collection.metafields.custom.bottom_description != blank %}\n<div class=\"page-width page-width--fixed section__container\">\n<div class=\"collection_bottom_des\">{{ collection.metafields.custom.bottom_description |  metafield_tag }}</div>\n</div>\n{% endif %}",
@@ -535,6 +545,7 @@
     "custom_liquid_h8yHd3",
     "collection_list_slider_JiW9t4",
     "product-grid",
+    "collection_bottom_description_i6UPK6",
     "custom_liquid_AVLwYH",
     "collection_faqs_ydbz9c",
     "scrolling_promotion_Fy9Yhn",
