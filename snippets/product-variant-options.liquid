@@ -161,7 +161,7 @@
       {{ input_dataset }}
     >
     <label for="{{ input_id }}" {% if color_ref != blank %}style="background-color: {{ color_ref.hex }}; color: {{ color_ref.hex }};"{% endif %}>
-      {{ value -}}
+      <span style="display:none;"> {{ value -}}</span>
       {{ label_unavailable }}
     </label>
   {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}
