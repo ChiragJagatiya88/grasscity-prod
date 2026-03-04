@@ -720,7 +720,7 @@
         "heading_jnb9cP": {
           "type": "heading",
           "settings": {
-            "heading": "The creative minds behind our studio",
+            "heading": "World's Best Smoke Shop",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
@@ -731,17 +731,17 @@
         "text_4pYVYF": {
           "type": "text",
           "settings": {
-            "text": "<p>As designers we are constantly thinking about how people live and what problems we could solve for them. </p>",
+            "text": "<p>Founded in 2000, Grasscity was the first online smoke shop in the world, introducing a simple and revolutionary way of discreetly ordering your favorite products such as vaporizers, bongs, dab pens, dab rigs, hookahs, CBD, and glass pipes or the best prices.</p>",
             "subtext_color": true
           }
         },
         "icon_with_text_8qCJiV": {
           "type": "icon_with_text",
           "settings": {
-            "icon": "map-pin",
+            "icon": "arrow-up-left",
             "icon_width": 24,
             "color": "#000000",
-            "heading": "Product locally in New York",
+            "heading": "Easy Returns",
             "heading_size": "h5",
             "text": "",
             "vertical_alignment": "start"
@@ -761,6 +761,7 @@
         },
         "icon_with_text_pcaqTj": {
           "type": "icon_with_text",
+          "disabled": true,
           "settings": {
             "icon": "stool",
             "icon_width": 24,
