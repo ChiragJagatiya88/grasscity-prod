@@ -902,6 +902,7 @@
         "testimonial_33tAjm",
         "testimonial_dDRMwy"
       ],
+      "disabled": true,
       "settings": {
         "container": "fixed",
         "color_scheme": "scheme-2",
