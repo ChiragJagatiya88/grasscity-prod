@@ -601,9 +601,9 @@ elite-icon-nm {
 }
 
 .collection_bottom_des {
-  border-bottom: 1px solid #1717171a;
+  /* border-bottom: 1px solid #1717171a; */
   padding-block: 30px;
-  border-top: 1px solid #1717171a;
+  /* border-top: 1px solid #1717171a; */
   h2 {
     margin: 20px 0;
     font-size: 24px;
