@@ -1227,6 +1227,12 @@
         "default": true
       },
       {
+        "type": "checkbox",
+        "id": "pcard_enable_color_hex",
+        "label": "Enable color hex",
+        "default": true
+      },
+      {
         "type": "header",
         "content": "t:settings_schema.product_cards.settings.list_layout.content"
       },
