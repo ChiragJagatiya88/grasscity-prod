@@ -1,4 +1,3 @@
-{% if collection.metafields.custom.bottom_description != blank %}
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -13,14 +12,16 @@
   }
 {%- endstyle -%}
 
+{% assign bottom_desc = collection.metafields.custom.bottom_description | metafield_tag %}
+{% assign bottom_desc_check = bottom_desc | strip_html | strip %}
 
+{% if collection.metafields.custom.bottom_description != blank and bottom_desc_check != blank %}
   <div class="page-width page-width--{{ section.settings.container }} section__container section-{{ section.id }}-padding">
     <div class="collection_bottom_des rte">
-      {{ collection.metafields.custom.bottom_description | metafield_tag }}
+      {{ bottom_desc }}
     </div>
   </div>
-
-  {% endif %}
+{% endif %}
 
 {% schema %}
 {
