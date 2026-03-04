@@ -164,6 +164,7 @@ product-info.use-color-scheme-in-container > .product {
 .product__block--title .product__title {
   word-break: break-word;
   margin: 0;
+  font-size: 30px;
 }
 .product__block--title > a {
   display: none;
