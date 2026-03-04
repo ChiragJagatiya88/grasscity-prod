@@ -65,6 +65,7 @@
       "disabled": true,
       "name": "t:sections.custom-liquid.name",
       "settings": {
+        "container": "full",
         "custom_liquid": "{% if collection.description != blank %}\n<div class=\"page-width page-width--fixed section__container\">\n<div class=\"collection_top_des\">{{ collection.description }}</div>\n</div>\n{% endif %}",
         "color_scheme": "",
         "padding_top": 0,
@@ -241,8 +242,9 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.name",
       "settings": {
+        "container": "full",
         "custom_liquid": "{% if collection.metafields.custom.bottom_description != blank %}\n<div class=\"page-width page-width--fixed section__container\">\n<div class=\"collection_bottom_des\">{{ collection.metafields.custom.bottom_description |  metafield_tag }}</div>\n</div>\n{% endif %}",
-        "color_scheme": "",
+        "color_scheme": "scheme-info",
         "padding_top": 0,
         "padding_bottom": 0
       }
