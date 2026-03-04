@@ -34,6 +34,7 @@
         },
         "text_CeEqN9": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "{{ collection.description }}",
             "text_size": "text-base",
@@ -181,14 +182,24 @@
       "type": "main-collection-product-grid",
       "custom_css": [],
       "settings": {
-        "heading": "About [collection_name]",
-        "read_more": "View More",
-        "read_less": "View Less",
+        "container": "fixed",
         "color_scheme": "scheme-1",
-        "enable_read_more": true,
-        "content_max_height": 150,
+        "products_per_page": 20,
+        "columns_desktop": 4,
+        "column_gap": "medium",
+        "row_gap": "large",
+        "pagination": "number",
+        "enable_filtering": true,
+        "enable_color_swatch": true,
+        "filter_type": "vertical",
+        "expand_filter_groups": "",
+        "enable_sorting": true,
+        "enable_layout_switching": true,
+        "columns_mobile": "2",
         "padding_top": 28,
-        "padding_bottom": 60
+        "padding_bottom": 60,
+        "show_section_divider": false,
+        "divider_width": "fixed"
       }
     },
     "collection_bottom_description_i6UPK6": {
