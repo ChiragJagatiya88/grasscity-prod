@@ -466,7 +466,8 @@
           "type": "column",
           "settings": {
             "icon": "truck",
-            "max_width": 60,
+            "image": "shopify://shop_images/shipping.png",
+            "max_width": 70,
             "max_width_mb": 60,
             "title": "<strong>Free Shipping</strong>",
             "highlight_style": "none",
@@ -487,7 +488,8 @@
           "type": "column",
           "settings": {
             "icon": "arrow-up-left",
-            "max_width": 60,
+            "image": "shopify://shop_images/Returns_refunds.png",
+            "max_width": 70,
             "max_width_mb": 60,
             "title": "<strong>30-Days Free Returns</strong>",
             "highlight_style": "none",
@@ -508,7 +510,8 @@
           "type": "column",
           "settings": {
             "icon": "map-pin",
-            "max_width": 60,
+            "image": "shopify://shop_images/Secure_Payment.png",
+            "max_width": 70,
             "max_width_mb": 60,
             "title": "Secure Payment",
             "highlight_style": "none",
