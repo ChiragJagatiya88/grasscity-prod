@@ -18,8 +18,8 @@
                 {% for link in linklists[block.settings.menu].links %}
                   {%- if forloop.first -%}
                     <li class="topbar__menu-item">
-                      {% comment %} <a href="{{ link.url }}" class="block reversed-link">{{ link.title }}</a> {% endcomment %}
-                      <button class="SSO_popup_register">{{ link.title }}</button>
+                      <a href="javascript:void(0)" class="SSO_popup_register block reversed-link">{{ link.title }}</a>
+                      {% comment %} <button class="SSO_popup_register block reversed-link">{{ link.title }}</button> {% endcomment %}
                     </li>
                   {%- else -%}
                     <li class="topbar__menu-item">
