@@ -179,19 +179,19 @@
           "type": "column",
           "settings": {
             "icon": "truck",
-            "max_width": 28,
-            "max_width_mb": 28,
-            "title": "Free Shipping on US Orders Above $50 USD",
+            "max_width": 50,
+            "max_width_mb": 30,
+            "title": "Free Shipping",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
             "heading_size": "h6",
             "heading_font": "heading",
-            "text": "",
+            "text": "<p>All orders over $500 are delivered to your doorstep at no extra charge.</p>",
             "text_size": "text-base",
-            "button_label": "",
-            "button_link": "",
+            "button_label": "Shipping Details",
+            "button_link": "shopify://pages/free-shipping-worldwide",
             "button_style": "btn--underline",
             "button_icon": "none"
           }
@@ -200,25 +200,47 @@
           "type": "column",
           "settings": {
             "icon": "arrow-up-left",
-            "max_width": 28,
-            "max_width_mb": 28,
-            "title": "Easy Returns",
+            "max_width": 50,
+            "max_width_mb": 30,
+            "title": "30-Days Free Returns",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
             "heading_size": "h6",
             "heading_font": "heading",
-            "text": "",
+            "text": "<p>Enjoy the freedom of stress-free shopping with our hassle-free and return policy.</p>",
             "text_size": "text-base",
-            "button_label": "",
-            "button_link": "",
+            "button_label": "Return Policy",
+            "button_link": "shopify://pages/easy-returns",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_DdrPm3": {
+          "type": "column",
+          "settings": {
+            "icon": "currency-circle-dollar",
+            "max_width": 50,
+            "max_width_mb": 30,
+            "title": "Secure Payment",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h6",
+            "heading_font": "heading",
+            "text": "<p>Shop with confidence knowing your payments are secure and your information</p>",
+            "text_size": "text-base",
+            "button_label": "More About Payment",
+            "button_link": "shopify://pages/membership-terms-and-conditions",
             "button_style": "btn--underline",
             "button_icon": "none"
           }
         },
         "column_dykh4d": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "icon": "chat",
             "max_width": 28,
@@ -240,6 +262,7 @@
         },
         "column_x7UFVH": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "icon": "clock",
             "max_width": 28,
@@ -258,35 +281,14 @@
             "button_style": "btn--underline",
             "button_icon": "none"
           }
-        },
-        "column_DdrPm3": {
-          "type": "column",
-          "settings": {
-            "icon": "smiley",
-            "max_width": 28,
-            "max_width_mb": 28,
-            "title": "Over 61K+ positive reviews",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h6",
-            "heading_font": "heading",
-            "text": "",
-            "text_size": "text-base",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "btn--underline",
-            "button_icon": "none"
-          }
         }
       },
       "block_order": [
         "column_tzfiEU",
         "column_ztCHpe",
+        "column_DdrPm3",
         "column_dykh4d",
-        "column_x7UFVH",
-        "column_DdrPm3"
+        "column_x7UFVH"
       ],
       "name": "t:sections.multicolumn-with-icon.name",
       "settings": {
@@ -313,7 +315,7 @@
         "content_alignment": "center",
         "image_position": "top",
         "icon_color": "#1d349a",
-        "columns_desktop": 5,
+        "columns_desktop": 3,
         "column_gap": "extra-small",
         "row_gap": "inherit",
         "show_divider_col": false,
