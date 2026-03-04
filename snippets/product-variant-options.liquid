@@ -164,7 +164,7 @@
       {{ label_unavailable }}
     </label>
     <script>
-      console.log("::::::::::::: Value::::::: ", {{ value.variant.metafields.style.color_ref | json }})
+      console.log("::::::::::::: Value::::::: ", {{ value.variant.metafields.style.color_ref.hex | json }})
     </script>
   {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}
     <option
