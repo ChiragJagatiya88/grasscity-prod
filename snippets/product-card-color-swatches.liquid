@@ -12,11 +12,7 @@
     if option_name contains 'colour' or option_name contains 'color'
       assign is_color = true
     endif
-
-    unless is_color
-      continue
-    endunless
-
+ 
     assign option_index = forloop.index0
     assign values = ''
   -%}
