@@ -65,7 +65,11 @@
         "language_country_MyFf6D",
         "social_links_BcFqP9"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".topbar-section .topbar {background: #e1251c; color: #fff;}",
+        ".topbar__center {display: none;}",
+        "@media (min-width: 1024px) {.topbar__inner {grid-template-columns: 1fr 1fr; column-gap: 2rem; }}"
+      ],
       "settings": {
         "container": "fixed",
         "color_scheme": "scheme-1",
