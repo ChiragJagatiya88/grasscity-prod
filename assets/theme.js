@@ -3464,6 +3464,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         this.classList.add("is-active");
         const imageUrl = this.dataset.image;
+        console.log("::::::::::: imageUrl:::::::::: ", imageUrl);
+        console.log("::::::::::: mainImage:::::::::: ", mainImage);
         if (imageUrl && mainImage) {
           mainImage.src = imageUrl;
           mainImage.srcset = imageUrl;
