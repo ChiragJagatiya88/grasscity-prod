@@ -175,161 +175,91 @@
           >
             {%- liquid
               assign current_position = 1
-              assign display_position = 1
-              assign rendered_image_positions = ''
             -%}
-            {%- comment -%} Render image cards at position 1 at the very beginning {%- endcomment -%}
-            {%- for block in section.blocks -%}
-              {%- if block.type == 'image_card' and block.settings.image_position == 1 -%}
-                <div class="f-column image-column">
-                  {% render 'card-image',
-                    color_scheme: block.settings.color_scheme,
-                    link: block.settings.card_link,
-                    image: block.settings.image,
-                    image_mobile: block.settings.image_mobile,
-                    image_overlay_opacity: block.settings.image_overlay_opacity,
-                    heading: block.settings.heading,
-                    highlight_style: block.settings.highlight_style,
-                    highlight_font_style: block.settings.highlight_font_style,
-                    highlight_style_color: block.settings.highlight_style_color,
-                    highlight_text_color: block.settings.highlight_text_color,
-                    heading_size: block.settings.heading_size,
-                    subheading: block.settings.subheading,
-                    subheading_style: block.settings.subheading_style,
-                    description: block.settings.description,
-                    description_size: block.settings.text_size,
-                    button_label: block.settings.button_label,
-                    button_style: block.settings.button_style,
-                    button_icon: block.settings.button_icon,
-                    content_position: block.settings.content_position,
-                    content_alignment: block.settings.content_alignment,
-                    content_spacing: block.settings.content_spacing,
-                    rich_text_size: block.settings.content_gap,
-                    section_index: section.index,
-                    forloop_index: display_position,
-                    enable_preload_image: block.settings.enable_preload_image,
-                    heading_size_custom: block.settings.heading_size_custom,
-                    heading_size_mobile: block.settings.heading_size_mobile
-                  %}
-                </div>
-                {% assign display_position = display_position | plus: 1 %}
-                {% assign rendered_image_positions = rendered_image_positions | append: ',1,' %}
-              {%- endif -%}
-            {%- endfor -%}
-            {%- comment -%} First loop: Display available products {%- endcomment -%}
             {%- for product in collection.products -%}
-              {%- if product.available -%}
-                {%- for block in section.blocks -%}
-                  {%- assign position_key = ',' | append: current_position | append: ',' -%}
-                  {%- unless rendered_image_positions contains position_key -%}
-                    {%- if block.type == 'image_card' and block.settings.image_position == current_position -%}
-                      <div class="f-column image-column">
-                        {% render 'card-image',
-                          color_scheme: block.settings.color_scheme,
-                          link: block.settings.card_link,
-                          image: block.settings.image,
-                          image_mobile: block.settings.image_mobile,
-                          image_overlay_opacity: block.settings.image_overlay_opacity,
-                          heading: block.settings.heading,
-                          highlight_style: block.settings.highlight_style,
-                          highlight_font_style: block.settings.highlight_font_style,
-                          highlight_style_color: block.settings.highlight_style_color,
-                          highlight_text_color: block.settings.highlight_text_color,
-                          heading_size: block.settings.heading_size,
-                          subheading: block.settings.subheading,
-                          subheading_style: block.settings.subheading_style,
-                          description: block.settings.description,
-                          description_size: block.settings.text_size,
-                          button_label: block.settings.button_label,
-                          button_style: block.settings.button_style,
-                          button_icon: block.settings.button_icon,
-                          content_position: block.settings.content_position,
-                          content_alignment: block.settings.content_alignment,
-                          content_spacing: block.settings.content_spacing,
-                          rich_text_size: block.settings.content_gap,
-                          section_index: section.index,
-                          forloop_index: display_position,
-                          enable_preload_image: block.settings.enable_preload_image,
-                          heading_size_custom: block.settings.heading_size_custom,
-                          heading_size_mobile: block.settings.heading_size_mobile
-                        %}
-                      </div>
-                      {% assign display_position = display_position | plus: 1 %}
-                      {% assign rendered_image_positions = rendered_image_positions | append: position_key %}
-                    {%- endif -%}
-                  {%- endunless -%}
-                {%- endfor -%}
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'image_card' and block.settings.image_position == current_position -%}
+                  <div class="f-column image-column">
+                    {% render 'card-image',
+                      color_scheme: block.settings.color_scheme,
+                      link: block.settings.card_link,
+                      image: block.settings.image,
+                      image_mobile: block.settings.image_mobile,
+                      image_overlay_opacity: block.settings.image_overlay_opacity,
+                      heading: block.settings.heading,
+                      highlight_style: block.settings.highlight_style,
+                      highlight_font_style: block.settings.highlight_font_style,
+                      highlight_style_color: block.settings.highlight_style_color,
+                      highlight_text_color: block.settings.highlight_text_color,
+                      heading_size: block.settings.heading_size,
+                      subheading: block.settings.subheading,
+                      subheading_style: block.settings.subheading_style,
+                      description: block.settings.description,
+                      description_size: block.settings.text_size,
+                      button_label: block.settings.button_label,
+                      button_style: block.settings.button_style,
+                      button_icon: block.settings.button_icon,
+                      content_position: block.settings.content_position,
+                      content_alignment: block.settings.content_alignment,
+                      content_spacing: block.settings.content_spacing,
+                      rich_text_size: block.settings.content_gap,
+                      section_index: section.index,
+                      forloop_index: current_position,
+                      enable_preload_image: block.settings.enable_preload_image,
+                      heading_size_custom: block.settings.heading_size_custom,
+                      heading_size_mobile: block.settings.heading_size_mobile
+                    %}
+                  </div>
+                  {% assign current_position = current_position | plus: 1 %}
+                {%- endif -%}
+              {%- endfor -%}
 
-                <div class="f-column product-column">
-                  {%- render 'card-product',
-                    product: product,
-                    parent_color_scheme: section.settings.color_scheme,
-                    enable_compare_checkbox: true,
-                    image_sizes: image_sizes,
-                    section_id: section.id,
-                    section_index: 2,
-                    index: forloop.index
-                  -%}
-                  {% assign display_position = display_position | plus: 1 %}
-                </div>
+              <div class="f-column product-column">
+                {%- render 'card-product',
+                  product: product,
+                  parent_color_scheme: section.settings.color_scheme,
+                  enable_compare_checkbox: true,
+                  image_sizes: image_sizes,
+                  section_id: section.id,
+                  section_index: 2,
+                  index: forloop.index
+                -%}
+                {% assign current_position = current_position | plus: 1 %}
+              </div>
 
-                {%- for block in section.blocks -%}
-                  {%- assign position_key = ',' | append: current_position | append: ',' -%}
-                  {%- unless rendered_image_positions contains position_key -%}
-                    {%- if block.type == 'image_card' and block.settings.image_position == current_position -%}
-                      <div class="f-column image-column">
-                        {% render 'card-image',
-                          color_scheme: block.settings.color_scheme,
-                          link: block.settings.card_link,
-                          image: block.settings.image,
-                          image_overlay_opacity: block.settings.image_overlay_opacity,
-                          heading: block.settings.heading,
-                          highlight_style: block.settings.highlight_style,
-                          highlight_font_style: block.settings.highlight_font_style,
-                          highlight_style_color: block.settings.highlight_style_color,
-                          highlight_text_color: block.settings.highlight_text_color,
-                          heading_size: block.settings.heading_size,
-                          subheading: block.settings.subheading,
-                          subheading_style: block.settings.subheading_style,
-                          description: block.settings.description,
-                          description_size: block.settings.text_size,
-                          button_label: block.settings.button_label,
-                          button_style: block.settings.button_style,
-                          button_icon: block.settings.button_icon,
-                          content_position: block.settings.content_position,
-                          content_alignment: block.settings.content_alignment,
-                          content_spacing: block.settings.content_spacing,
-                          rich_text_size: block.settings.content_gap,
-                          section_index: section.index,
-                          forloop_index: display_position,
-                          enable_preload_image: block.settings.enable_preload_image
-                        %}
-                      </div>
-                      {% assign display_position = display_position | plus: 1 %}
-                      {% assign rendered_image_positions = rendered_image_positions | append: position_key %}
-                    {%- endif -%}
-                  {%- endunless -%}
-                {%- endfor -%}
-              {%- endif -%}
-              {%- comment -%} Always increment original position counter {%- endcomment -%}
-              {% assign current_position = current_position | plus: 1 %}
-            {%- endfor -%}
-            {%- comment -%} Second loop: Display sold out products (no image cards to avoid duplicates) {%- endcomment -%}
-            {%- for product in collection.products -%}
-              {%- unless product.available -%}
-                <div class="f-column product-column">
-                  {%- render 'card-product',
-                    product: product,
-                    parent_color_scheme: section.settings.color_scheme,
-                    enable_compare_checkbox: true,
-                    image_sizes: image_sizes,
-                    section_id: section.id,
-                    section_index: 2,
-                    index: forloop.index
-                  -%}
-                  {% assign display_position = display_position | plus: 1 %}
-                </div>
-              {%- endunless -%}
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'image_card' and block.settings.image_position == current_position -%}
+                  <div class="f-column image-column">
+                    {% render 'card-image',
+                      color_scheme: block.settings.color_scheme,
+                      link: block.settings.card_link,
+                      image: block.settings.image,
+                      image_overlay_opacity: block.settings.image_overlay_opacity,
+                      heading: block.settings.heading,
+                      highlight_style: block.settings.highlight_style,
+                      highlight_font_style: block.settings.highlight_font_style,
+                      highlight_style_color: block.settings.highlight_style_color,
+                      highlight_text_color: block.settings.highlight_text_color,
+                      heading_size: block.settings.heading_size,
+                      subheading: block.settings.subheading,
+                      subheading_style: block.settings.subheading_style,
+                      description: block.settings.description,
+                      description_size: block.settings.text_size,
+                      button_label: block.settings.button_label,
+                      button_style: block.settings.button_style,
+                      button_icon: block.settings.button_icon,
+                      content_position: block.settings.content_position,
+                      content_alignment: block.settings.content_alignment,
+                      content_spacing: block.settings.content_spacing,
+                      rich_text_size: block.settings.content_gap,
+                      section_index: section.index,
+                      forloop_index: current_position,
+                      enable_preload_image: block.settings.enable_preload_image
+                    %}
+                  </div>
+                  {% assign current_position = current_position | plus: 1 %}
+                {%- endif -%}
+              {%- endfor -%}
             {%- endfor -%}
           </div>
           {%- liquid
