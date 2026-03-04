@@ -160,7 +160,7 @@
       {% endif %}
       {{ input_dataset }}
     >
-    <label for="{{ input_id }}" {% if color_ref != blank %}style="background-color: {{ color_ref.hex }}"{% endif %}>
+    <label for="{{ input_id }}" {% if color_ref != blank %}style="background-color: {{ color_ref.hex }}; color: {{ color_ref.hex }};"{% endif %}>
       {{ value -}}
       {{ label_unavailable }}
     </label>
