@@ -1,3 +1,14 @@
+{%- liquid
+  assign section_radius_style = ''
+  case section.settings.section_radius
+    when 'slightly'
+      assign section_radius_style = 'border-radius: 1rem;'
+    when 'round'
+      assign section_radius_style = 'border-radius: 2rem;'
+    when 'large'
+      assign section_radius_style = 'border-radius: 2.5rem;'
+  endcase
+-%}
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -10,21 +21,112 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  {% if section_radius_style != '' %}
+  .section-{{ section.id }}-radius {
+    {{ section_radius_style }}
+    overflow: hidden;
+  }
+  {% endif %}
+
+  .collection-bottom-desc__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .collection-bottom-desc__heading {
+    margin: 0;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .collection-bottom-desc__content {
+    position: relative;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+  }
+
+  .collection-bottom-desc__content.is-collapsed {
+    max-height: 120px; /* Adjust visible height */
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  }
+
+  .collection-bottom-desc__toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+    cursor: pointer;
+    color: inherit;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .collection-bottom-desc__toggle:hover {
+    opacity: 0.8;
+  }
+  
+  .collection_bottom_des p {
+    margin-top: 0;
+  }
 {%- endstyle -%}
 
-{% assign bottom_desc = collection.metafields.custom.bottom_description | metafield_tag %}
-{% assign bottom_desc_check = bottom_desc | strip_html | strip %}
+{% if collection.metafields.custom.bottom_description != blank %}
+  <div class="color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding{% if section_radius_style != '' %} section-{{ section.id }}-radius{% endif %}">
+    <div class="page-width page-width--fixed section__container">
+      <div class="collection-bottom-desc__wrapper">
+        {%- if section.settings.heading != blank -%}
+          <h2 class="collection-bottom-desc__heading">
+            {{ section.settings.heading | escape }}
+          </h2>
+        {%- else -%}
+          <h2 class="collection-bottom-desc__heading">
+            About {{ collection.title }}
+          </h2>
+        {%- endif -%}
 
-{% if collection.metafields.custom.bottom_description != blank and bottom_desc_check != blank %}
-  <div class="page-width page-width--fixed section__container section-{{ section.id }}-padding">
-    <div class="color-{{ section.settings.color_scheme }} gradient">
-    <div class="page-width page-width--fixed section__container section-{{ section.id }}-padding">
-      <div class="collection_bottom_des rte">
-        {{ bottom_desc }}
+        <div class="collection-bottom-desc__content is-collapsed" id="DescContent-{{ section.id }}">
+          <div class="collection_bottom_des rte">
+            {{ collection.metafields.custom.bottom_description | metafield_tag }}
+          </div>
+        </div>
+
+        <button class="collection-bottom-desc__toggle" 
+                id="DescToggle-{{ section.id }}"
+                aria-expanded="false" 
+                aria-controls="DescContent-{{ section.id }}"
+                onclick="toggleDescription('{{ section.id }}')">
+          {{ section.settings.view_more_label | default: 'View More' }}
+        </button>
       </div>
     </div>
-    </div>
   </div>
+
+  <script>
+    function toggleDescription(sectionId) {
+      const content = document.getElementById(`DescContent-${sectionId}`);
+      const button = document.getElementById(`DescToggle-${sectionId}`);
+      const isCollapsed = content.classList.contains('is-collapsed');
+      
+      if (isCollapsed) {
+        content.classList.remove('is-collapsed');
+        button.setAttribute('aria-expanded', 'true');
+        button.textContent = '{{ section.settings.view_less_label | default: 'View Less' }}';
+      } else {
+        content.classList.add('is-collapsed');
+        button.setAttribute('aria-expanded', 'false');
+        button.textContent = '{{ section.settings.view_more_label | default: 'View More' }}';
+      }
+    }
+  </script>
 {% endif %}
 
 {% schema %}
@@ -34,10 +136,52 @@
   "class": "section",
   "settings": [
     {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "info": "Leave blank to use 'About [Collection Title]'"
+    },
+    {
+      "type": "text",
+      "id": "view_more_label",
+      "label": "View more label",
+      "default": "View More"
+    },
+    {
+      "type": "text",
+      "id": "view_less_label",
+      "label": "View less label",
+      "default": "View Less"
+    },
+    {
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "Color scheme",
       "default": "scheme-1"
+    },
+    {
+      "type": "select",
+      "id": "section_radius",
+      "label": "Section corner radius",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "slightly",
+          "label": "Slightly rounded"
+        },
+        {
+          "value": "round",
+          "label": "Rounded"
+        },
+        {
+          "value": "large",
+          "label": "Large rounded"
+        }
+      ]
     },
     {
       "type": "header",
