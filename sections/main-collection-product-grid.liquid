@@ -217,7 +217,15 @@
               {%- endif -%}
             {%- endfor -%}
             {%- comment -%} First loop: Display available products {%- endcomment -%}
-            {%- for product in collection.products -%}
+              {% assign available_products = paginate.items | where: "available", true %}
+              {% assign soldout_products = paginate.items | where: "available", false %}
+
+              {% comment %} {% for product in soldout_products %}
+                <!-- product card code -->
+              {% endfor %} {% endcomment %}
+
+    
+            {%- for product in available_products -%}
               {%- if product.available -%}
                 {%- for block in section.blocks -%}
                   {%- assign position_key = ',' | append: current_position | append: ',' -%}
