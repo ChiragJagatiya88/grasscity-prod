@@ -1,3 +1,4 @@
+{% if collection.metafields.custom.bottom_description != blank %}
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -12,13 +13,14 @@
   }
 {%- endstyle -%}
 
-{% if collection.metafields.custom.bottom_description != blank %}
+
   <div class="page-width page-width--{{ section.settings.container }} section__container section-{{ section.id }}-padding">
     <div class="collection_bottom_des rte">
       {{ collection.metafields.custom.bottom_description | metafield_tag }}
     </div>
   </div>
-{% endif %}
+
+  {% endif %}
 
 {% schema %}
 {
