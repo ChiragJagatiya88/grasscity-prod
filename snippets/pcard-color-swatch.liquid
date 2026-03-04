@@ -7,6 +7,7 @@
   assign image_widths = image_widths | default: '70, 140, 165, 355, 450, 535, 710, 900, 1070, 1420'
 -%}/==
 {%- for option in product.options_with_values -%}
+  ___===
   {%- liquid
     assign option_name = option.name | downcase
     assign is_color = false
