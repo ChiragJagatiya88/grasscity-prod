@@ -16,9 +16,11 @@
 {% assign bottom_desc_check = bottom_desc | strip_html | strip %}
 
 {% if collection.metafields.custom.bottom_description != blank and bottom_desc_check != blank %}
-  <div class="page-width page-width--{{ section.settings.container }} section__container section-{{ section.id }}-padding">
-    <div class="collection_bottom_des rte">
-      {{ bottom_desc }}
+  <div class="color-{{ section.settings.color_scheme }} gradient">
+    <div class="page-width page-width--{{ section.settings.container }} section__container section-{{ section.id }}-padding">
+      <div class="collection_bottom_des rte">
+        {{ bottom_desc }}
+      </div>
     </div>
   </div>
 {% endif %}
@@ -29,6 +31,12 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
     {
       "type": "select",
       "id": "container",
