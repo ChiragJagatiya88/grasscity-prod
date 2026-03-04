@@ -67,30 +67,3 @@ class CustomerAddresses {
     }
   };
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".product-card").forEach(card => {
-    const mainImage = card.querySelector(".product-card__image img");
-
-    card.querySelectorAll(".color-swatch-item").forEach(swatch => {
-      swatch.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        // Remove active from all
-        card.querySelectorAll(".color-swatch-item").forEach(el =>
-          el.classList.remove("is-active")
-        );
-
-        // Add active to clicked
-        this.classList.add("is-active");
-
-        // Change image if exists
-        const imageUrl = this.dataset.image;
-        if (imageUrl && mainImage) {
-          mainImage.src = imageUrl;
-          mainImage.srcset = imageUrl;
-        }
-      });
-    });
-  });
-});  
