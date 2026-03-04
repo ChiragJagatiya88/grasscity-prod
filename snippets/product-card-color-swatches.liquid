@@ -5,16 +5,15 @@
 -%}
 
 {%- for option in product.options_with_values -%}
-   {{ option.name | downcase }}
-    {% assign option_name = option.name | downcase %}
-    {% assign is_color = false %}
+  {% assign option_name = option.name | downcase %}
+  {% assign is_color = false %}
 
-    {% if option_name contains 'colour' or option_name contains 'color' %}
-      {% assign is_color = true %}
-    {% endif %}
- 
-    {% assign option_index = forloop.index0 %}
-    {% assign values = '' %}
+  {% if option_name contains 'colour' or option_name contains 'color' %}
+    {% assign is_color = true %}
+  {% endif %}
+
+  {% assign option_index = forloop.index0 %}
+  {% assign values = '' %}
 
   <ul class="product-card__swatches flex flex-wrap gap-2">
     {%- for variant in product.variants -%}
