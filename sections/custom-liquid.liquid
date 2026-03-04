@@ -1,5 +1,5 @@
 <div
-  class="section section--padding color-{{ section.settings.color_scheme }}"
+  class="section section--padding page-width page-width--{{ section.settings.container }} color-{{ section.settings.color_scheme }}"
   data-section-index="{{ section.index }}"
   style="--section-padding-top: {{ section.settings.padding_top }}px;--section-padding-bottom: {{ section.settings.padding_bottom }}px;"
 >
@@ -12,6 +12,22 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "select",
+      "id": "container",
+      "options": [
+        {
+          "value": "full",
+          "label": "t:general.container.options__full.label"
+        },
+        {
+          "value": "fixed",
+          "label": "t:general.container.options__fixed.label"
+        }
+      ],
+      "default": "fixed",
+      "label": "t:general.container.label"
+    },
     {
       "type": "liquid",
       "id": "custom_liquid",
