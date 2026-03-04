@@ -11,36 +11,38 @@
   {% if option_name contains 'colour' or option_name contains 'color' %}
     {% assign is_color = true %}
   {% endif %}
-
+  
   {% assign option_index = forloop.index0 %}
   {% assign values = '' %}
+  
+  {% if is_color %}
+    <ul class="product-card__swatches flex flex-wrap gap-2">
+      {%- for variant in product.variants -%}
+        {%- assign value = variant.options[option_index] -%}
 
-  <ul class="product-card__swatches flex flex-wrap gap-2">
-    {%- for variant in product.variants -%}
-      {%- assign value = variant.options[option_index] -%}
+        {%- unless values contains value -%}
+          {%- liquid
+            assign values = values | join: ',' | append: ',' | append: value | split: ','
+            assign swatch_count = swatch_count | plus: 1
 
-      {%- unless values contains value -%}
-        {%- liquid
-          assign values = values | join: ',' | append: ',' | append: value | split: ','
-          assign swatch_count = swatch_count | plus: 1
+            assign color_meta = variant.metafields.style.color_ref.value
+            assign hex_color = color_meta.hex
+          -%}
 
-          assign color_meta = variant.metafields.style.color_ref.value
-          assign hex_color = color_meta.hex
-        -%}
-
-        {%- if swatch_count <= max_swatch_count and hex_color != blank -%}
-          <li>
-            <a
-              href="{{ variant.url }}"
-              class="color-swatch-item {% if product.selected_or_first_available_variant.id == variant.id %}is-active{% endif %}"
-              title="{{ value }}"
-              data-variant-id="{{ variant.id }}"
-              data-variant-image="{% if variant.image %}{{ variant.image | image_url: width: 900 }}{% endif %}"
-              style="background-color: {{ hex_color }};"
-            ></a>
-          </li>
-        {%- endif -%}
-      {%- endunless -%}
-    {%- endfor -%}
-  </ul>
+          {%- if swatch_count <= max_swatch_count and hex_color != blank -%}
+            <li>
+              <a
+                href="{{ variant.url }}"
+                class="color-swatch-item {% if product.selected_or_first_available_variant.id == variant.id %}is-active{% endif %}"
+                title="{{ value }}"
+                data-variant-id="{{ variant.id }}"
+                data-variant-image="{% if variant.image %}{{ variant.image | image_url: width: 900 }}{% endif %}"
+                style="background-color: {{ hex_color }};"
+              ></a>
+            </li>
+          {%- endif -%}
+        {%- endunless -%}
+      {%- endfor -%}
+    </ul>
+  {% endif %}
 {%- endfor -%}
