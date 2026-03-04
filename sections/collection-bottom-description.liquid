@@ -17,7 +17,7 @@
 
 {% if collection.metafields.custom.bottom_description != blank and bottom_desc_check != blank %}
   <div class="color-{{ section.settings.color_scheme }} gradient">
-    <div class="page-width page-width--{{ section.settings.container }} section__container section-{{ section.id }}-padding">
+    <div class="page-width page-width--fixed section__container section-{{ section.id }}-padding">
       <div class="collection_bottom_des rte">
         {{ bottom_desc }}
       </div>
@@ -36,22 +36,6 @@
       "id": "color_scheme",
       "label": "Color scheme",
       "default": "scheme-1"
-    },
-    {
-      "type": "select",
-      "id": "container",
-      "options": [
-        {
-          "value": "full",
-          "label": "Full width"
-        },
-        {
-          "value": "fixed",
-          "label": "Fixed width"
-        }
-      ],
-      "default": "fixed",
-      "label": "Container width"
     },
     {
       "type": "header",
