@@ -163,6 +163,9 @@
       {{ value -}}
       {{ label_unavailable }}
     </label>
+    <script>
+      console.log("::::::::::::: Value::::::: ", {{ value.variant | json }})
+    </script>
   {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}
     <option
       id="{{ input_id }}"
