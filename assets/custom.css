@@ -1,4 +1,16 @@
 /* ---------------------------- product card */
+.color-swatch-item {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #cfcfcf;
+  cursor: pointer;
+}
+.color-swatch-item.is-active {
+  border: 2px solid #000;
+}
+
 .us-refresh-pricing-base__price__main {
   .elite-text-svg {
     top: -1px;
