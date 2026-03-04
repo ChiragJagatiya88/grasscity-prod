@@ -332,9 +332,12 @@
           quick_view_modal_id: quick_view_modal_id
         -%}
       {%- endif -%}
-      {%- render 'product-card-color-swatches.liquid',
-        product: product,
-      -%}
+      
+      {%- if settings.pcard_enable_color_hex -%}
+        {%- render 'product-card-color-swatches.liquid',
+          product: product,
+        -%}
+      {%- endif -%}
       
     </div>
     <div class="product-card__list-actions hidden gap-3 flex-col">
