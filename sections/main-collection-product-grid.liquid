@@ -15,16 +15,16 @@
 
   /* Read More Styles */
   {% if section.settings.enable_read_more %}
-    #CollectionDescText-{{ section.id }} {
+    #CollectionDesc-{{ section.id }} {
       transition: max-height 0.3s ease-in-out;
       overflow: hidden;
     }
-    #CollectionDescText-{{ section.id }}.is-collapsed {
+    #CollectionDesc-{{ section.id }}.is-collapsed {
       max-height: {{ section.settings.content_max_height }}px;
       position: relative;
     }
     /* Optional fade effect at the bottom when collapsed */
-    #CollectionDescText-{{ section.id }}.is-collapsed::after {
+    #CollectionDesc-{{ section.id }}.is-collapsed::after {
       content: "";
       position: absolute;
       bottom: 0;
@@ -57,24 +57,25 @@
     <div class="color-{{ section.settings.color_scheme }} gradient">
       <div class="page-width page-width--fixed section__container section-{{ section.id }}-padding">
         
-        <div class="collection_bottom_des rte" id="CollectionDescWrapper-{{ section.id }}">
-          
+        <div class="collection_bottom_des rte">
           {%- if section.settings.heading != blank -%}
             <h2 class="collection-bottom-title">
               {{ section.settings.heading | replace: '[collection_name]', collection.title }}
             </h2>
           {%- endif -%}
 
-          <div class="collection_bottom_text {% if section.settings.enable_read_more %}is-collapsed{% endif %}" id="CollectionDescText-{{ section.id }}">
+          <div 
+            class="{% if section.settings.enable_read_more %}is-collapsed{% endif %}" 
+            id="CollectionDesc-{{ section.id }}"
+          >
             {{ bottom_desc }}
           </div>
 
           {%- if section.settings.enable_read_more -%}
             <button type="button" class="read-more-btn" id="ReadMoreBtn-{{ section.id }}">
-              Read more
+              {{ section.settings.read_more }}
             </button>
           {%- endif -%}
-
         </div>
 
       </div>
@@ -83,35 +84,55 @@
 
   {%- if section.settings.enable_read_more -%}
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const descText = document.getElementById('CollectionDescText-{{ section.id }}');
-        const btn = document.getElementById('ReadMoreBtn-{{ section.id }}');
-        const maxHeight = {{ section.settings.content_max_height }};
+      (function() {
+        function initReadMore() {
+          const desc = document.getElementById('CollectionDesc-{{ section.id }}');
+          const btn = document.getElementById('ReadMoreBtn-{{ section.id }}');
+          
+          if (!desc || !btn) return;
 
-        if (descText && btn) {
-          // Check if content height is greater than the max-height limit
-          if (descText.scrollHeight > maxHeight) {
-            btn.style.display = 'inline-block'; // Show the button
+          const maxHeight = {{ section.settings.content_max_height }};
+          const readMoreText = {{ section.settings.read_more | json }};
+          const readLessText = {{ section.settings.read_less | json }};
+
+          // Check if the actual text height is taller than the max-height setting
+          if (desc.scrollHeight > maxHeight) {
+            btn.style.display = 'inline-block'; // Reveal the button
             
-            btn.addEventListener('click', function() {
-              if (descText.classList.contains('is-collapsed')) {
+            // Re-assign the click event
+            btn.onclick = function() {
+              if (desc.classList.contains('is-collapsed')) {
                 // Expand
-                descText.classList.remove('is-collapsed');
-                descText.style.maxHeight = descText.scrollHeight + 'px';
-                btn.textContent = 'Show less';
+                desc.classList.remove('is-collapsed');
+                desc.style.maxHeight = desc.scrollHeight + 'px';
+                btn.textContent = readLessText;
               } else {
                 // Collapse
-                descText.classList.add('is-collapsed');
-                descText.style.maxHeight = maxHeight + 'px';
-                btn.textContent = 'Read more';
+                desc.classList.add('is-collapsed');
+                desc.style.maxHeight = maxHeight + 'px';
+                btn.textContent = readMoreText;
               }
-            });
+            };
           } else {
-            // Remove collapse class if text is short enough
-            descText.classList.remove('is-collapsed');
+            // If the text is naturally short, remove the collapse constraints and hide the button
+            desc.classList.remove('is-collapsed');
+            btn.style.display = 'none';
           }
         }
-      });
+
+        // 1. Run immediately on parse
+        initReadMore();
+
+        // 2. Run again on full window load (catches custom fonts or images altering the height)
+        window.addEventListener('load', initReadMore);
+
+        // 3. Run safely inside the Shopify Theme Editor when settings change
+        document.addEventListener('shopify:section:load', function(event) {
+          if (event.detail.sectionId === '{{ section.id }}') {
+            initReadMore();
+          }
+        });
+      })();
     </script>
   {%- endif -%}
 {% endif %}
@@ -128,6 +149,20 @@
       "label": "Heading",
       "default": "About [collection_name]",
       "info": "Use '[collection_name]' to automatically display the current collection's title."
+    },
+    {
+      "type": "text",
+      "id": "read_more",
+      "label": "View More text",
+      "default": "View More",
+      "info": "View more"
+    },
+    {
+      "type": "text",
+      "id": "read_less",
+      "label": "View Less text",
+      "default": "View Less",
+      "info": "View Less"
     },
     {
       "type": "color_scheme",
