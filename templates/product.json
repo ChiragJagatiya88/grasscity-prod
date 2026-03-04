@@ -419,6 +419,7 @@
         "column_rDRKHz",
         "column_awXCNr"
       ],
+      "disabled": true,
       "custom_css": [
         ".multicolumn-card__text p {max-width: 33rem;}"
       ],
