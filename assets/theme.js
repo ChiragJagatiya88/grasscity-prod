@@ -3468,7 +3468,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("::::::::::: mainImage:::::::::: ", mainImage);
         if (imageUrl && mainImage) {
           mainImage.src = imageUrl;
-          mainImage.srcset = imageUrl;
+          // mainImage.srcset = imageUrl;
         }
       });
     });
