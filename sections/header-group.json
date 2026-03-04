@@ -14,26 +14,27 @@
     "topbar_3YD96h": {
       "type": "topbar",
       "blocks": {
-        "link_list_En8dpz": {
-          "type": "link_list",
-          "settings": {
-            "menu": "main-menu",
-            "position": "left"
-          }
-        },
         "text_Ahn3nP": {
           "type": "text",
           "settings": {
-            "text": "✌🏼 Free Express Shipping on orders $500!",
-            "position": "center",
+            "text": "Unlock UNBEATABLE Member Prices-Join Cabana Club for FREE!",
+            "position": "left",
             "highlight_text": "",
             "highlight_text_style": "button",
             "highlight_text_color": "",
             "highlight_text_background_color": ""
           }
         },
+        "link_list_En8dpz": {
+          "type": "link_list",
+          "settings": {
+            "menu": "main-menu",
+            "position": "right"
+          }
+        },
         "language_country_MyFf6D": {
           "type": "language_country",
+          "disabled": true,
           "settings": {
             "show_language_selector": false,
             "show_country_selector": false,
@@ -43,6 +44,7 @@
         },
         "social_links_BcFqP9": {
           "type": "social_links",
+          "disabled": true,
           "settings": {
             "show_facebook": true,
             "show_instagram": true,
@@ -58,15 +60,15 @@
         }
       },
       "block_order": [
-        "link_list_En8dpz",
         "text_Ahn3nP",
+        "link_list_En8dpz",
         "language_country_MyFf6D",
         "social_links_BcFqP9"
       ],
       "custom_css": [],
       "settings": {
         "container": "fixed",
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "show_separator_line": false,
         "padding_top": 12,
         "padding_bottom": 12
