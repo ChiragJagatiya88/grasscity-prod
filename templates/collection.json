@@ -241,6 +241,7 @@
       "type": "collection-bottom-description",
       "name": "Collection Bottom Desc",
       "settings": {
+        "color_scheme": "scheme-info",
         "container": "fixed",
         "padding_top": 0,
         "padding_bottom": 0
