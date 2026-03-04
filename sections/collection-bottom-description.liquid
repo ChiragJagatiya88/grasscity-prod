@@ -74,7 +74,7 @@
          </div>
           {%- if section.settings.enable_read_more -%}
           <button type="button" class="read-more-btn" id="ReadMoreBtn-{{ section.id }}">
-            View more
+            {{section.settings.read_more}}
           </button>
         {%- endif -%}
 
@@ -129,6 +129,20 @@
       "label": "Heading",
       "default": "About [collection_name]",
       "info": "Use '[collection_name]' to automatically display the current collection's title."
+    },
+     {
+      "type": "text",
+      "id": "read_more",
+      "label": "View More text",
+      "default": "View More",
+      "info": "View more"
+    },
+     {
+      "type": "text",
+      "id": "read_less",
+      "label": "View Less text",
+      "default": "View Less",
+      "info": "View Less"
     },
     {
       "type": "color_scheme",
