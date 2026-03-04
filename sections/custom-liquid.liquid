@@ -1,10 +1,10 @@
 
-<div class="custom-liquid page-width page-width--{{ section.settings.container }}">
-  <div
-    class="section section--padding color-{{ section.settings.color_scheme }}"
-    data-section-index="{{ section.index }}"
-    style="--section-padding-top: {{ section.settings.padding_top }}px;--section-padding-bottom: {{ section.settings.padding_bottom }}px;"
-  >
+<div
+  class="section section--padding color-{{ section.settings.color_scheme }}"
+  data-section-index="{{ section.index }}"
+  style="--section-padding-top: {{ section.settings.padding_top }}px;--section-padding-bottom: {{ section.settings.padding_bottom }}px;"
+> 
+  <div class="custom-liquid page-width page-width--{{ section.settings.container }}">
     {{ section.settings.custom_liquid }}
   </div>
 </div>
