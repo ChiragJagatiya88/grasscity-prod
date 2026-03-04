@@ -198,6 +198,9 @@ product-info.use-color-scheme-in-container > .product {
   .product__block--complementary-collapsible + .product__block--collapsible_tab, .product__block--collapsible_tab + .product__block--complementary-collapsible, .product__block--collapsible_tab + .product__block--collapsible_tab {
     margin-top: calc(var(--product-blocks-gap) * -1);
   }
+  .product__block--title .product__title {
+    font-size: 24px;
+  }
 }
 @media (max-width: 767.98px) {
   .product__block--complementary-collapsible .accordion-details__summary, .product__block--collapsible_tab .accordion-details__summary {
