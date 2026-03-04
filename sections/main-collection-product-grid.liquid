@@ -216,15 +216,10 @@
                 {% assign rendered_image_positions = rendered_image_positions | append: ',1,' %}
               {%- endif -%}
             {%- endfor -%}
+            {% assign available_products = collection.products | where: "available", true %}
+{% assign soldout_products = collection.products | where: "available", false %}
+
             {%- comment -%} First loop: Display available products {%- endcomment -%}
-              {% assign available_products = paginate.items | where: "available", true %}
-              {% assign soldout_products = paginate.items | where: "available", false %}
-
-              {% comment %} {% for product in soldout_products %}
-                <!-- product card code -->
-              {% endfor %} {% endcomment %}
-
-    
             {%- for product in available_products -%}
               {%- if product.available -%}
                 {%- for block in section.blocks -%}
@@ -323,7 +318,7 @@
               {% assign current_position = current_position | plus: 1 %}
             {%- endfor -%}
             {%- comment -%} Second loop: Display sold out products (no image cards to avoid duplicates) {%- endcomment -%}
-            {%- for product in collection.products -%}
+            {%- for product in soldout_products -%}
               {%- unless product.available -%}
                 <div class="f-column product-column">
                   {%- render 'card-product',
