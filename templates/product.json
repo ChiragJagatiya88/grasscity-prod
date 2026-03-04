@@ -138,6 +138,7 @@
         },
         "promotion_alert_L7ipQp": {
           "type": "promotion_alert",
+          "disabled": true,
           "settings": {
             "text_color": "#049b6e",
             "icon": "lightning",
