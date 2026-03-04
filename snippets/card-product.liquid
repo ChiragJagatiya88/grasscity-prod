@@ -332,6 +332,10 @@
           quick_view_modal_id: quick_view_modal_id
         -%}
       {%- endif -%}
+      {%- render 'product-card-color-swatches.liquid',
+        product: product,
+      -%}
+      
     </div>
     <div class="product-card__list-actions hidden gap-3 flex-col">
       {%- if enable_quick_add -%}
