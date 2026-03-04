@@ -458,6 +458,117 @@
         "padding_bottom": 60
       }
     },
+    "multicolumn_icon_KYByNJ": {
+      "type": "multicolumn-icon",
+      "blocks": {
+        "column_KKyVcC": {
+          "type": "column",
+          "settings": {
+            "icon": "truck",
+            "max_width": 60,
+            "max_width_mb": 60,
+            "title": "<strong>Free Shipping</strong>",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "heading_font": "heading",
+            "text": "<p>All orders over $500 are delivered to your doorstep at no extra charge.</p>",
+            "text_size": "text-base",
+            "button_label": "Shipping Details",
+            "button_link": "",
+            "button_style": "btn--plain",
+            "button_icon": "caret-right"
+          }
+        },
+        "column_aeychJ": {
+          "type": "column",
+          "settings": {
+            "icon": "arrow-up-left",
+            "max_width": 60,
+            "max_width_mb": 60,
+            "title": "<strong>30-Days Free Returns</strong>",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "heading_font": "heading",
+            "text": "<p>Enjoy the freedom of stress-free shopping with our hassle-free and return policy.</p>",
+            "text_size": "text-base",
+            "button_label": "Return Policy",
+            "button_link": "shopify://policies/refund-policy",
+            "button_style": "btn--plain",
+            "button_icon": "caret-right"
+          }
+        },
+        "column_KQVTYm": {
+          "type": "column",
+          "settings": {
+            "icon": "map-pin",
+            "max_width": 60,
+            "max_width_mb": 60,
+            "title": "Secure Payment",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "heading_font": "heading",
+            "text": "<p>Shop with confidence knowing your payments are secure and your information protected.</p>",
+            "text_size": "text-base",
+            "button_label": "More About Payments",
+            "button_link": "shopify://pages/terms-conditions",
+            "button_style": "btn--plain",
+            "button_icon": "caret-right"
+          }
+        }
+      },
+      "block_order": [
+        "column_KKyVcC",
+        "column_aeychJ",
+        "column_KQVTYm"
+      ],
+      "custom_css": [
+        ".multicolumn-card__text p {max-width: 33rem;}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "header_layout": "vertical",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "enable_sticky": false,
+        "card_color_scheme": "",
+        "content_alignment": "center",
+        "image_position": "top",
+        "icon_color": "#1d349a",
+        "columns_desktop": 3,
+        "column_gap": "large",
+        "row_gap": "inherit",
+        "show_divider_col": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "multicolumn_Mxt4d3": {
       "type": "multicolumn",
       "blocks": {
@@ -931,6 +1042,7 @@
     "main",
     "tabs_content_8rnbnj",
     "multicolumn_icon_3qbxHn",
+    "multicolumn_icon_KYByNJ",
     "multicolumn_Mxt4d3",
     "quick_comparison_table_p9rdxW",
     "image_with_text_kqXfRQ",
