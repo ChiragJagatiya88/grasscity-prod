@@ -516,7 +516,6 @@
         "testimonial_33tAjm",
         "testimonial_dDRMwy"
       ],
-      "disabled": true,
       "settings": {
         "container": "fixed",
         "color_scheme": "scheme-2",
@@ -932,11 +931,11 @@
     "main",
     "tabs_content_8rnbnj",
     "multicolumn_icon_3qbxHn",
-    "testimonials_8JHr3L",
     "multicolumn_Mxt4d3",
     "quick_comparison_table_p9rdxW",
     "image_with_text_kqXfRQ",
     "related-products",
+    "testimonials_8JHr3L",
     "1771840058d6f946be",
     "scrolling_gallery_image_eqULib"
   ]
