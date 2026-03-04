@@ -323,9 +323,7 @@
         {% comment %} {% render 'price', product: product, alignment: settings.pcard_content_alignment %} {% endcomment %}
         {% render 'us-product-pricing-refresh', product: product %}
       {%- endif -%}
-      //
       {%- if show_color_swatches -%}
-        //
         {%- render 'pcard-color-swatch',
           product: product,
           image_sizes: image_sizes,
@@ -333,7 +331,7 @@
           enable_quick_view: enable_quick_view,
           quick_view_modal_id: quick_view_modal_id
         -%}
-      {%- endif -%}\\
+      {%- endif -%}
     </div>
     <div class="product-card__list-actions hidden gap-3 flex-col">
       {%- if enable_quick_add -%}
