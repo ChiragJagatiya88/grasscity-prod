@@ -5,6 +5,7 @@
 -%}
 
 {%- for option in product.options_with_values -%}
+   {{ option.name | downcase }}
   {%- liquid
     assign option_name = option.name | downcase
     assign is_color = false
