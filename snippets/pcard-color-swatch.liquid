@@ -5,7 +5,7 @@
 
   assign image_sizes = image_sizes | default: '450px'
   assign image_widths = image_widths | default: '70, 140, 165, 355, 450, 535, 710, 900, 1070, 1420'
--%}
+-%}/==
 {%- for option in product.options_with_values -%}
   {%- liquid
     assign option_name = option.name | downcase
@@ -26,6 +26,7 @@
     assign value = ''
     assign max_swatch_count = settings.pcard_maximum_swatches_to_show
   -%}
+  //
   <ul
     is="color-swatch"
     class="product-card__swatches swatches swatches--{{ settings.pcard_swatch_shape }} swatches--product-card flex flex-wrap gap-2 items-center justify-{{ settings.pcard_content_alignment }}{% if settings.pcard_swatches_type == 'variant_image' %} swatches--variant-image{% endif %}"
