@@ -56,7 +56,7 @@
   <div class="page-width page-width--fixed section__container section-{{ section.id }}-padding">
     <div class="color-{{ section.settings.color_scheme }} gradient">
       <div class="page-width page-width--fixed section__container section-{{ section.id }}-padding">
-        
+        <div class="collection_bottom_des rte">
         {%- if section.settings.heading != blank -%}
           <h2 class="collection-bottom-title">
             {{ section.settings.heading | replace: '[collection_name]', collection.title }}
@@ -64,17 +64,18 @@
         {%- endif -%}
 
         <div 
-          class="collection_bottom_des rte {% if section.settings.enable_read_more %}is-collapsed{% endif %}" 
+          class=" {% if section.settings.enable_read_more %}is-collapsed{% endif %}" 
           id="CollectionDesc-{{ section.id }}"
         >
           {{ bottom_desc }}
-        </div>
+       
 
         {%- if section.settings.enable_read_more -%}
           <button type="button" class="read-more-btn" id="ReadMoreBtn-{{ section.id }}">
             Read more
           </button>
         {%- endif -%}
+         </div>
 
       </div>
     </div>
