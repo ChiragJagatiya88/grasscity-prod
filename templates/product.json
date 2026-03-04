@@ -458,101 +458,6 @@
         "padding_bottom": 60
       }
     },
-    "testimonials_8JHr3L": {
-      "type": "testimonials",
-      "blocks": {
-        "testimonial_dhi3Xf": {
-          "type": "testimonial",
-          "settings": {
-            "icon": "none",
-            "image": "shopify://shop_images/hot-deals-banner-background-4.png",
-            "heading": "Testimonials",
-            "text": "<p>“I am extremely happy about both design and comfort. I am a furniture designer myself, and your product makes me happy.”</p>",
-            "author": "Stephanie L.",
-            "bio": "Verified Buyer",
-            "product": ""
-          }
-        },
-        "testimonial_D7Mq7i": {
-          "type": "testimonial",
-          "settings": {
-            "icon": "none",
-            "image": "shopify://shop_images/gs_brand-qualities-1_ab_v01.webp",
-            "heading": "Testimonials",
-            "text": "<p>The story behind, sustainable production, and the risk-free feeling with the free return policy make this a great choice.</p>",
-            "author": "Rachel M.",
-            "bio": "Verified Buyer",
-            "product": ""
-          }
-        },
-        "testimonial_33tAjm": {
-          "type": "testimonial",
-          "settings": {
-            "icon": "none",
-            "image": "shopify://shop_images/hot-deals-banner-background-3.png",
-            "heading": "Testimonials",
-            "text": "<p>“High-quality furniture, crafted with passion and care, fantastic in appearance and use, reasonably priced, and excellent custome.”</p>",
-            "author": "Emily J.",
-            "bio": "Verified Buyer",
-            "product": ""
-          }
-        },
-        "testimonial_dDRMwy": {
-          "type": "testimonial",
-          "settings": {
-            "icon": "none",
-            "image": "shopify://shop_images/hot-deals-banner-background-2.png",
-            "heading": "Testimonials",
-            "text": "<p>The craftsmanship, eco-friendly materials, and excellent customer service truly make this product an outstanding standout.</p>",
-            "author": "Sarah T.",
-            "bio": "Verified Buyer",
-            "product": ""
-          }
-        }
-      },
-      "block_order": [
-        "testimonial_dhi3Xf",
-        "testimonial_D7Mq7i",
-        "testimonial_33tAjm",
-        "testimonial_dDRMwy"
-      ],
-      "settings": {
-        "container": "fixed",
-        "color_scheme": "scheme-2",
-        "section_header_alignment": "left",
-        "section_header_alignment_mobile": "inherit",
-        "subheading": "",
-        "heading": "Clients Love Us",
-        "highlight_style": "none",
-        "highlight_font_style": "italic",
-        "highlight_style_color": "",
-        "highlight_text_color": "",
-        "heading_size": "h2",
-        "description": "",
-        "text_size": "text-base",
-        "layout": "standard",
-        "card_color_scheme": "",
-        "card_content_color_scheme": "",
-        "card_image_ratio": "adapt",
-        "card_heading_size": "h4",
-        "card_text_size": "text-base",
-        "author_info_layout": "vertical",
-        "card_trigger_behavior": "click",
-        "show_image": true,
-        "show_author_image": true,
-        "columns_desktop": 3,
-        "column_gap": "2xs",
-        "row_gap": "inherit",
-        "enable_slider": true,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "show_progress_bar": true,
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "show_section_divider": false,
-        "divider_width": "fixed"
-      }
-    },
     "multicolumn_Mxt4d3": {
       "type": "multicolumn",
       "blocks": {
@@ -820,6 +725,101 @@
         "show_progress_bar": true,
         "padding_top": 30,
         "padding_bottom": 30,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "testimonials_8JHr3L": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_dhi3Xf": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "none",
+            "image": "shopify://shop_images/03-p009.jpg",
+            "heading": "Testimonials",
+            "text": "<p>I’ve bought this bowl twice man and have broke it twice now:(definitely my favorite!gonna buy again when it’s available</p>",
+            "author": "David",
+            "bio": "Verified Buyer",
+            "product": "g-spot-black-rasta-stripes-handpipe"
+          }
+        },
+        "testimonial_D7Mq7i": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "none",
+            "image": "shopify://shop_images/order-fat-bottom-mini-bong-online-usa_1.jpg",
+            "heading": "Testimonials",
+            "text": "<p>It came in a week. It took three days to be shipped and four days to come in the mail. I love it. It's the perfect size and everything. Thanks again for sending me a great piece.</p>",
+            "author": "JZ",
+            "bio": "Verified Buyer",
+            "product": "fat-bottom-mini-bong"
+          }
+        },
+        "testimonial_33tAjm": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "none",
+            "image": "shopify://shop_images/wp97-black-_03__2.jpg",
+            "heading": "Testimonials",
+            "text": "<p>very smooth, especially if you like a long easy type of hit. thick glass, didn't break when I dropped it in the sink,..</p>",
+            "author": "Wendell",
+            "bio": "Verified Buyer",
+            "product": "glasscity-double-chamber-bubbler-with-showerhead-and-tree-perc"
+          }
+        },
+        "testimonial_dDRMwy": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "none",
+            "image": "shopify://shop_images/gb-106-b_3_a78a4837-4f99-4b6d-bcba-fc2efc3ec71c.jpg",
+            "heading": "Testimonials",
+            "text": "<p>The craftsmanship, eco-friendly materials, and excellent customer service truly make this product an outstanding standout.</p>",
+            "author": "Buddah156",
+            "bio": "Verified Buyer",
+            "product": "gc-9mm-beaker-w-tree-perc-bong-18-in"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_dhi3Xf",
+        "testimonial_D7Mq7i",
+        "testimonial_33tAjm",
+        "testimonial_dDRMwy"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-2",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Clients Love Us",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "description": "",
+        "text_size": "text-base",
+        "layout": "standard",
+        "card_color_scheme": "",
+        "card_content_color_scheme": "",
+        "card_image_ratio": "adapt",
+        "card_heading_size": "h4",
+        "card_text_size": "text-base",
+        "author_info_layout": "vertical",
+        "card_trigger_behavior": "click",
+        "show_image": true,
+        "show_author_image": true,
+        "columns_desktop": 3,
+        "column_gap": "2xs",
+        "row_gap": "inherit",
+        "enable_slider": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "show_progress_bar": true,
+        "padding_top": 60,
+        "padding_bottom": 60,
         "show_section_divider": false,
         "divider_width": "fixed"
       }
