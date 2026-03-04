@@ -45,6 +45,12 @@
             "heading_size": "h1"
           }
         },
+        "f5d48049-8bc0-4495-b387-ccd2dfaca68b": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
         "meta": {
           "type": "meta",
           "settings": {
@@ -58,12 +64,6 @@
         "price": {
           "type": "price",
           "settings": {}
-        },
-        "f5d48049-8bc0-4495-b387-ccd2dfaca68b": {
-          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "{{product}}"
-          }
         },
         "icon_with_text": {
           "type": "icon-with-text",
@@ -102,10 +102,10 @@
           "type": "variant_picker",
           "settings": {
             "picker_type": "button",
-            "swatch_type": "shopify_swatch",
+            "swatch_type": "variant_image",
             "swatch_style": "square",
             "swatch_size": 32,
-            "button_style": "normal",
+            "button_style": "square",
             "size_title": "Size",
             "size_chart_from_page": ""
           }
@@ -215,9 +215,9 @@
         "badges",
         "yotpo_product_reviews_star_rating_i93beV",
         "title",
+        "f5d48049-8bc0-4495-b387-ccd2dfaca68b",
         "meta",
         "price",
-        "f5d48049-8bc0-4495-b387-ccd2dfaca68b",
         "icon_with_text",
         "rich_text_UCB4ce",
         "inventory",
@@ -324,6 +324,139 @@
         "divider_width": "fixed"
       }
     },
+    "multicolumn_icon_3qbxHn": {
+      "type": "multicolumn-icon",
+      "blocks": {
+        "column_9Xh69D": {
+          "type": "column",
+          "settings": {
+            "icon": "truck",
+            "max_width": 60,
+            "max_width_mb": 60,
+            "title": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "heading_font": "heading",
+            "text": "<p>Free Shipping on US Orders Above $50 USD</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--plain",
+            "button_icon": "caret-right"
+          }
+        },
+        "column_EapCmy": {
+          "type": "column",
+          "settings": {
+            "icon": "arrow-up-left",
+            "max_width": 60,
+            "max_width_mb": 60,
+            "title": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "heading_font": "heading",
+            "text": "<p>Easy Returns</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--plain",
+            "button_icon": "caret-right"
+          }
+        },
+        "column_rDRKHz": {
+          "type": "column",
+          "settings": {
+            "icon": "map-pin",
+            "max_width": 60,
+            "max_width_mb": 60,
+            "title": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "heading_font": "heading",
+            "text": "<p>Over 22 years on the market</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--plain",
+            "button_icon": "caret-right"
+          }
+        },
+        "column_awXCNr": {
+          "type": "column",
+          "settings": {
+            "icon": "chat",
+            "max_width": 60,
+            "max_width_mb": 60,
+            "title": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "heading_font": "heading",
+            "text": "<p>Over 61K+ positive reviews</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--plain",
+            "button_icon": "caret-right"
+          }
+        }
+      },
+      "block_order": [
+        "column_9Xh69D",
+        "column_EapCmy",
+        "column_rDRKHz",
+        "column_awXCNr"
+      ],
+      "custom_css": [
+        ".multicolumn-card__text p {max-width: 33rem;}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-info",
+        "header_layout": "vertical",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "enable_sticky": false,
+        "card_color_scheme": "",
+        "content_alignment": "center",
+        "image_position": "top",
+        "icon_color": "#1d349a",
+        "columns_desktop": 4,
+        "column_gap": "large",
+        "row_gap": "inherit",
+        "show_divider_col": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "testimonials_8JHr3L": {
       "type": "testimonials",
       "blocks": {
@@ -382,6 +515,7 @@
         "testimonial_33tAjm",
         "testimonial_dDRMwy"
       ],
+      "disabled": true,
       "settings": {
         "container": "fixed",
         "color_scheme": "scheme-2",
@@ -417,25 +551,6 @@
         "padding_bottom": 60,
         "show_section_divider": false,
         "divider_width": "fixed"
-      }
-    },
-    "1771840058d6f946be": {
-      "type": "apps",
-      "blocks": {
-        "yotpo_product_reviews_reviews_DLLepV": {
-          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "{{product}}"
-          }
-        }
-      },
-      "block_order": [
-        "yotpo_product_reviews_reviews_DLLepV"
-      ],
-      "settings": {
-        "include_margins": true,
-        "padding_top": 0,
-        "padding_bottom": 0
       }
     },
     "multicolumn_Mxt4d3": {
@@ -709,137 +824,23 @@
         "divider_width": "fixed"
       }
     },
-    "multicolumn_icon_3qbxHn": {
-      "type": "multicolumn-icon",
+    "1771840058d6f946be": {
+      "type": "apps",
       "blocks": {
-        "column_9Xh69D": {
-          "type": "column",
+        "yotpo_product_reviews_reviews_DLLepV": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
-            "icon": "truck",
-            "max_width": 60,
-            "max_width_mb": 60,
-            "title": "",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h4",
-            "heading_font": "heading",
-            "text": "<p>Free Shipping on US Orders Above $50 USD</p>",
-            "text_size": "text-base",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "btn--plain",
-            "button_icon": "caret-right"
-          }
-        },
-        "column_EapCmy": {
-          "type": "column",
-          "settings": {
-            "icon": "arrow-up-left",
-            "max_width": 60,
-            "max_width_mb": 60,
-            "title": "",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h4",
-            "heading_font": "heading",
-            "text": "<p>Easy Returns</p>",
-            "text_size": "text-base",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "btn--plain",
-            "button_icon": "caret-right"
-          }
-        },
-        "column_rDRKHz": {
-          "type": "column",
-          "settings": {
-            "icon": "map-pin",
-            "max_width": 60,
-            "max_width_mb": 60,
-            "title": "",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h4",
-            "heading_font": "heading",
-            "text": "<p>Over 22 years on the market</p>",
-            "text_size": "text-base",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "btn--plain",
-            "button_icon": "caret-right"
-          }
-        },
-        "column_awXCNr": {
-          "type": "column",
-          "settings": {
-            "icon": "chat",
-            "max_width": 60,
-            "max_width_mb": 60,
-            "title": "",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h4",
-            "heading_font": "heading",
-            "text": "<p>Over 61K+ positive reviews</p>",
-            "text_size": "text-base",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "btn--plain",
-            "button_icon": "caret-right"
+            "product": "{{product}}"
           }
         }
       },
       "block_order": [
-        "column_9Xh69D",
-        "column_EapCmy",
-        "column_rDRKHz",
-        "column_awXCNr"
-      ],
-      "custom_css": [
-        ".multicolumn-card__text p {max-width: 33rem;}"
+        "yotpo_product_reviews_reviews_DLLepV"
       ],
       "settings": {
-        "container": "fixed",
-        "color_scheme": "scheme-info",
-        "header_layout": "vertical",
-        "section_header_alignment": "center",
-        "section_header_alignment_mobile": "inherit",
-        "subheading": "",
-        "heading": "",
-        "highlight_style": "none",
-        "highlight_font_style": "italic",
-        "highlight_style_color": "",
-        "highlight_text_color": "",
-        "heading_size": "h2",
-        "description": "",
-        "text_size": "text-base",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "btn--underline",
-        "button_icon": "none",
-        "enable_sticky": false,
-        "card_color_scheme": "",
-        "content_alignment": "center",
-        "image_position": "top",
-        "icon_color": "#1d349a",
-        "columns_desktop": 4,
-        "column_gap": "large",
-        "row_gap": "inherit",
-        "show_divider_col": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "show_section_divider": false,
-        "divider_width": "fixed",
-        "padding_top": 60,
-        "padding_bottom": 60
+        "include_margins": true,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "scrolling_gallery_image_eqULib": {
@@ -929,13 +930,13 @@
     "breadcrumbs",
     "main",
     "tabs_content_8rnbnj",
+    "multicolumn_icon_3qbxHn",
     "testimonials_8JHr3L",
-    "1771840058d6f946be",
     "multicolumn_Mxt4d3",
     "quick_comparison_table_p9rdxW",
     "image_with_text_kqXfRQ",
     "related-products",
-    "multicolumn_icon_3qbxHn",
+    "1771840058d6f946be",
     "scrolling_gallery_image_eqULib"
   ]
 }
