@@ -479,7 +479,7 @@
             "text": "<p>All orders over $500 are delivered to your doorstep at no extra charge.</p>",
             "text_size": "text-base",
             "button_label": "Shipping Details",
-            "button_link": "",
+            "button_link": "#",
             "button_style": "btn--plain",
             "button_icon": "caret-right"
           }
