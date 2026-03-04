@@ -145,6 +145,7 @@
       <span class="swatch-color block" style="--swatch-background: {{ swatch_value }}"></span>
     </label>
   {%- elsif picker_type == 'button' -%}
+    {% assign color_ref = value.variant.metafields.style.color_ref.value %}
     <input
       type="radio"
       id="{{ input_id }}"
@@ -159,11 +160,10 @@
       {% endif %}
       {{ input_dataset }}
     >
-    <label for="{{ input_id }}">
+    <label for="{{ input_id }}" {% if color_ref != blank %}style="background-color: {{ color_ref.hex }}"{% endif %}>
       {{ value -}}
       {{ label_unavailable }}
     </label>
-    {% assign color_ref = value.variant.metafields.style.color_ref.value %}
     <script>
       console.log("::::::::::::: Value::::::: ", {{ color_ref.hex | json }})
     </script>
