@@ -187,9 +187,19 @@ calc(100vw / {{ columns_desktop }})
         {% for block in section.blocks %}
           {% liquid
             assign collection = collections[block.settings.collection]
+            
+            assign available_products_count = 0
+            if collection != blank
+              for product in collection.products
+                if product.available
+                  assign available_products_count = available_products_count | plus: 1
+                endif
+              endfor
+            endif
+            
             assign products_to_display = section.settings.limit
-            if collection != blank and collection.all_products_count < products_to_display
-              assign products_to_display = collection.all_products_count
+            if available_products_count < products_to_display
+              assign products_to_display = available_products_count
             endif
 
             assign total_items = products_to_display
@@ -210,6 +220,7 @@ calc(100vw / {{ columns_desktop }})
 
             assign pagination_type = 'progressbar'
           %}
+          {%- if available_products_count > 0 -%}
           {% unless forloop.first %}
             <template data-index="{{ forloop.index0 }}">
           {%- endunless -%}
@@ -263,17 +274,22 @@ calc(100vw / {{ columns_desktop }})
                     %}
                   </div>
                 {% endif %}
-                {%- for product in collection.products limit: products_to_display -%}
-                  <div class="f-column{% if enable_slider %} swiper-slide{% endif %}">
-                    {%- render 'card-product',
-                      product: product,
-                      parent_color_scheme: section.settings.color_scheme,
-                      image_sizes: image_sizes,
-                      image_ratio: section.settings.pcard_image_ratio,
-                      section_index: section.index,
-                      index: forloop.index
-                    -%}
-                  </div>
+                {%- for product in collection.products -%}
+                  {%- if product.available -%}
+                    <div class="f-column{% if enable_slider %} swiper-slide{% endif %}">
+                      {%- render 'card-product',
+                        product: product,
+                        parent_color_scheme: section.settings.color_scheme,
+                        image_sizes: image_sizes,
+                        image_ratio: section.settings.pcard_image_ratio,
+                        section_index: section.index,
+                        index: forloop.index
+                      -%}
+                    </div>
+                    {%- if forloop.index >= products_to_display -%}
+                      {%- break -%}
+                    {%- endif -%}
+                  {%- endif -%}
                 {%- else -%}
                   {%- for i in (1..products_to_display) -%}
                     <div class="f-column{% if enable_slider %} swiper-slide{% endif %}">
@@ -316,6 +332,7 @@ calc(100vw / {{ columns_desktop }})
           {% unless forloop.first %}
             </template>
           {%- endunless -%}
+          {%- endif -%}
         {% endfor %}
       </div>
     </div>
