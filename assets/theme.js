@@ -3463,7 +3463,7 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
         this.classList.add("is-active");
-        const imageUrl = this.dataset.image;
+        const imageUrl = this.dataset.variantImage;        
         console.log("::::::::::: imageUrl:::::::::: ", imageUrl);
         console.log("::::::::::: mainImage:::::::::: ", mainImage);
         if (imageUrl && mainImage) {
