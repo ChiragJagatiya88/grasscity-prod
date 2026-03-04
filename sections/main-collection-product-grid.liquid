@@ -220,8 +220,8 @@
 {% assign soldout_products = collection.products | where: "available", false %}
 
 <script>
-  console.log(":::::::::::::::: available_products:::: ", available_products);
-  console.log(":::::::::::::::: soldout_products:::: ", soldout_products);
+  console.log(":::::::::::::::: available_products:::: ", {{ available_products | json }});
+  console.log(":::::::::::::::: soldout_products:::: ", {{ soldout_products | json }});
 </script>
 
             {%- comment -%} First loop: Display available products {%- endcomment -%}
