@@ -17,8 +17,12 @@
 
 {% if collection.metafields.custom.bottom_description != blank and bottom_desc_check != blank %}
   <div class="page-width page-width--fixed section__container section-{{ section.id }}-padding">
-    <div class="collection_bottom_des rte color-{{ section.settings.color_scheme }} gradient">
-      {{ bottom_desc }}
+    <div class="color-{{ section.settings.color_scheme }} gradient">
+    <div class="page-width page-width--fixed section__container section-{{ section.id }}-padding">
+      <div class="collection_bottom_des rte">
+        {{ bottom_desc }}
+      </div>
+    </div>
     </div>
   </div>
 {% endif %}
