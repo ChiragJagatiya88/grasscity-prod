@@ -47,8 +47,8 @@ variant-selects input:is([type=checkbox], [type=radio]):is(:disabled, .disabled)
   padding: 0 2rem;
   min-height: var(--buttons-height);
   min-width: var(--buttons-height);
-  min-height: 46px;
-  min-width: 46px;
+  max-height: 46px;
+  max-width: 46px;
   transition: all var(--duration-default) ease;
   color: rgb(var(--color-foreground));
   background-color: rgb(var(--color-background));
