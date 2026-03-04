@@ -32,7 +32,7 @@
           <li>
             <a
               href="{{ variant.url }}"
-              class="color-swatch-item {% if product.selected_or_first_available_variant.id == variant.id %}is-active{% endif %}"
+              class="color-swatch-item {% if forloop.first == true %}is-active{% endif %}"
               title="{{ value }}"
               data-variant-id="{{ variant.id }}"
               data-variant-image="{% if variant.image %}{{ variant.image | image_url: width: 900 }}{% endif %}"
