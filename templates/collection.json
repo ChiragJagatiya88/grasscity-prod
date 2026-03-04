@@ -387,7 +387,7 @@
       "settings": {
         "container": "fixed",
         "color_scheme": "",
-        "header_layout": "vertical",
+        "header_layout": "standing-column",
         "section_header_alignment": "left",
         "section_header_alignment_mobile": "inherit",
         "subheading": "",
