@@ -163,8 +163,9 @@
       {{ value -}}
       {{ label_unavailable }}
     </label>
+    {% assign color_ref = value.variant.metafields.style.color_ref.value %}
     <script>
-      console.log("::::::::::::: Value::::::: ", {{ value.variant.metafields.style.color_ref.hex | json }})
+      console.log("::::::::::::: Value::::::: ", {{ color_ref.hex | json }})
     </script>
   {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}
     <option
