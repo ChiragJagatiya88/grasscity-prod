@@ -1,0 +1,54 @@
+{%- liquid
+  assign swatch_trigger = settings.color_swatch_trigger | downcase
+  assign swatch_count = 0
+  assign max_swatch_count = settings.pcard_maximum_swatches_to_show | default: 6
+-%}
+
+{%- for option in product.options_with_values -%}
+  {%- liquid
+    assign option_name = option.name | downcase
+    assign is_color = false
+
+    if swatch_trigger contains option_name
+      assign is_color = true
+    elsif swatch_trigger contains 'color' and option_name contains 'colour'
+      assign is_color = true
+    endif
+
+    unless is_color
+      continue
+    endunless
+
+    assign option_index = forloop.index0
+    assign values = ''
+  -%}
+
+  <ul class="product-card__swatches flex flex-wrap gap-2">
+    {%- for variant in product.variants -%}
+      {%- assign value = variant.options[option_index] -%}
+
+      {%- unless values contains value -%}
+        {%- liquid
+          assign values = values | join: ',' | append: ',' | append: value | split: ','
+          assign swatch_count = swatch_count | plus: 1
+
+          assign color_meta = variant.metafields.style.color_ref.value
+          assign hex_color = color_meta.hex
+        -%}
+
+        {%- if swatch_count <= max_swatch_count and hex_color != blank -%}
+          <li>
+            <a
+              href="{{ variant.url }}"
+              class="color-swatch-item"
+              title="{{ value }}"
+              data-variant-id="{{ variant.id }}"
+              data-variant-image="{% if variant.image %}{{ variant.image | image_url: width: 900 }}{% endif %}"
+              style="background-color: {{ hex_color }};"
+            ></a>
+          </li>
+        {%- endif -%}
+      {%- endunless -%}
+    {%- endfor -%}
+  </ul>
+{%- endfor -%}
