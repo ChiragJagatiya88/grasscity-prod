@@ -219,6 +219,11 @@
             {% assign available_products = collection.products | where: "available", true %}
 {% assign soldout_products = collection.products | where: "available", false %}
 
+<script>
+  console.log(":::::::::::::::: available_products:::: ", available_products);
+  console.log(":::::::::::::::: soldout_products:::: ", soldout_products);
+</script>
+
             {%- comment -%} First loop: Display available products {%- endcomment -%}
             {%- for product in available_products -%}
               {%- if product.available -%}
