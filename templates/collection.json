@@ -242,14 +242,12 @@
       "name": "Collection Bottom Desc",
       "settings": {
         "color_scheme": "scheme-info",
-        "container": "fixed",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
     "custom_liquid_AVLwYH": {
       "type": "custom-liquid",
-      "disabled": true,
       "name": "t:sections.custom-liquid.name",
       "settings": {
         "custom_liquid": "{% if collection.metafields.custom.bottom_description != blank %}\n<div class=\"page-width page-width--fixed section__container\">\n<div class=\"collection_bottom_des\">{{ collection.metafields.custom.bottom_description |  metafield_tag }}</div>\n</div>\n{% endif %}",
