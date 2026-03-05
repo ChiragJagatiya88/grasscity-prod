@@ -247,7 +247,7 @@
 </header>
 <div class="fixed-overlay fixed-overlay--header-section z-10"></div>
 
-<script type="application/ld+json">
+{% comment %} <script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "Organization",
@@ -268,9 +268,9 @@
     ],
     "url": {{ request.origin | append: page.url | json }}
   }
-</script>
+</script> {% endcomment %}
 
-{%- if request.page_type == 'index' -%}
+{% comment %} {%- if request.page_type == 'index' -%}
   {% assign potential_action_target = request.origin | append: routes.search_url | append: '?q={search_term_string}' %}
   <script type="application/ld+json">
     {
@@ -285,7 +285,7 @@
       "url": {{ request.origin | append: page.url | json }}
     }
   </script>
-{%- endif -%}
+{%- endif -%} {% endcomment %}
 
 {% schema %}
 {
