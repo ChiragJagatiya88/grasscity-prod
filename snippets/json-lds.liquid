@@ -123,120 +123,119 @@
 
 
 {%- if template == 'article' and article and blog -%}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+  <script type="application/ld+json">
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "{{ shop.url }}"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "{{ blog.title | escape }}",
-      "item": "{{ shop.url }}{{ blog.url }}"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "{{ article.title | escape }}",
-      "item": "{{ shop.url }}{{ article.url }}"
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{ shop.url }}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "{{ blog.title | escape }}",
+          "item": "{{ shop.url }}{{ blog.url }}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "{{ article.title | escape }}",
+          "item": "{{ shop.url }}{{ article.url }}"
+        }
+      ]
     }
-  ]
-}
-</script>
+  </script>
 {%- elsif template == 'blog' and blog -%}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+  <script type="application/ld+json">
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "{{ shop.url }}"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "{{ blog.title | escape }}",
-      "item": "{{ shop.url }}{{ blog.url }}"
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{ shop.url }}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "{{ blog.title | escape }}",
+          "item": "{{ shop.url }}{{ blog.url }}"
+        }
+      ]
     }
-  ]
-}
-</script>
+  </script>
 {%- elsif template contains 'page' and page -%}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+  <script type="application/ld+json">
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "{{ shop.url }}"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "{{ page.title | escape }}",
-      "item": "{{ shop.url }}{{ page.url }}"
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{ shop.url }}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "{{ page.title | escape }}",
+          "item": "{{ shop.url }}{{ page.url }}"
+        }
+      ]
     }
-  ]
-}
-</script>
+  </script>
 {%- elsif template contains 'collection' and collection -%}
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "{{ shop.url }}"
-      }
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{ shop.url }}"
+        }
 
-      {%- assign position = 1 -%}
-      {%- assign custom_breadcrumbs = collection.metafields.custom.breadcrumbs.value -%}
-      {%- if custom_breadcrumbs != blank -%}
-        {%- for bc_collection in custom_breadcrumbs -%}
+        {%- assign position = 1 -%}
+        {%- assign custom_breadcrumbs = collection.metafields.custom.breadcrumbs.value -%}
+        {%- if custom_breadcrumbs != blank -%}
+          {%- for bc_collection in custom_breadcrumbs -%}
+            {%- assign position = position | plus: 1 -%}
+            ,{
+              "@type": "ListItem",
+              "position": {{ position }},
+              "name": "{{ bc_collection.title | escape }}",
+              "item": "{{ shop.url }}{{ bc_collection.url }}"
+            }
+          {%- endfor -%}
+        {%- else -%}
           {%- assign position = position | plus: 1 -%}
           ,{
             "@type": "ListItem",
             "position": {{ position }},
-            "name": "{{ bc_collection.title | escape }}",
-            "item": "{{ shop.url }}{{ bc_collection.url }}"
+            "name": "Collections",
+            "item": "{{ shop.url }}/collections"
           }
-        {%- endfor -%}
-      {%- else -%}
+        {%- endif -%}
+
         {%- assign position = position | plus: 1 -%}
         ,{
           "@type": "ListItem",
           "position": {{ position }},
-          "name": "Collections",
-          "item": "{{ shop.url }}/collections"
+          "name": "{{ collection.title | escape }}",
+          "item": "{{ shop.url }}{{ collection.url }}"
         }
-      {%- endif -%}
-
-      {%- assign position = position | plus: 1 -%}
-      ,{
-        "@type": "ListItem",
-        "position": {{ position }},
-        "name": "{{ collection.title | escape }}",
-        "item": "{{ shop.url }}{{ collection.url }}"
-      }
-    ]
-  }
+      ]
+    }
   </script>
-
 {%- elsif template contains 'product' and product -%}
   {%- liquid
     assign position = 1
