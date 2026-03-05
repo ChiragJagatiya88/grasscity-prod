@@ -8,15 +8,10 @@
       "logo": {{ settings.logo | image_url: width: 500 | prepend: "https:" | json }},
     {% endif %}
     "sameAs": [
-      {% if settings.social_twitter_link != blank %}{{ settings.social_twitter_link | json }},{% endif %}
-      {% if settings.social_facebook_link != blank %}{{ settings.social_facebook_link | json }},{% endif %}
-      {% if settings.social_pinterest_link != blank %}{{ settings.social_pinterest_link | json }},{% endif %}
-      {% if settings.social_instagram_link != blank %}{{ settings.social_instagram_link | json }},{% endif %}
-      {% if settings.social_tiktok_link != blank %}{{ settings.social_tiktok_link | json }},{% endif %}
-      {% if settings.social_tumblr_link != blank %}{{ settings.social_tumblr_link | json }},{% endif %}
-      {% if settings.social_snapchat_link != blank %}{{ settings.social_snapchat_link | json }},{% endif %}
-      {% if settings.social_youtube_link != blank %}{{ settings.social_youtube_link | json }},{% endif %}
-      {% if settings.social_vimeo_link != blank %}{{ settings.social_vimeo_link | json }}{% endif %}
+      {{ settings.social_twitter_link | json }},
+      {{ settings.social_facebook_link | json }},
+      {{ settings.social_pinterest_link | json }},
+      {{ settings.social_instagram_link | json }}
     ],
     "url": {{ request.origin | append: page.url | json }}
   }
