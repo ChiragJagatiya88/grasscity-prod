@@ -1,14 +1,10 @@
-
-<p>Site Link : {{ shop.url }} </p>
-
-
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://www.grasscity.com//#org",
+    "@id": "{{ shop.url }}//#org",
     "name": "Smoke Cartel",
-    "url": "https://www.grasscity.com",
+    "url": "{{ shop.url }}",
     "description": "Grasscity is a leading online smoke shop that offers the largest range of bongs, dab rigs, water pipes, glass pipes, bubblers, vaporizers and accessories.",
     "telephone": "+1 (888) 334-6363",
     "logo": "https://grasscity-prod.myshopify.com/cdn/shop/files/gs_logo_86bc3029-4784-46a2-b5e5-862ce3afacdf.svg",
@@ -35,7 +31,7 @@
     },
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://www.grasscity.com/a/search/{search_term_string}",
+      "target": "{{ shop.url }}/a/search/{search_term_string}",
       "query-input": "required name=search_term_string"
     }
   }
