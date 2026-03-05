@@ -31,21 +31,13 @@
     "url": {{ request.origin | append: page.url | json }},
     "description": "Grasscity is a leading online smoke shop that offers the largest range of bongs, dab rigs, water pipes, glass pipes, bubblers, vaporizers and accessories.",
     "telephone": "+1 (888) 334-6363",
-    {% if settings.logo %}
-      "logo": {{ settings.logo | image_url: width: 500 | prepend: "https:" | json }},
-    {% endif %}
-    {% comment %} "logo": "https://grasscity-prod.myshopify.com/cdn/shop/files/gs_logo_86bc3029-4784-46a2-b5e5-862ce3afacdf.svg", {% endcomment %}
-    {% comment %} "image": "https://grasscity-prod.myshopify.com/cdn/shop/files/gs_logo_86bc3029-4784-46a2-b5e5-862ce3afacdf.svg", {% endcomment %}
+    "logo": "https://grasscity-prod.myshopify.com/cdn/shop/files/gs_logo_86bc3029-4784-46a2-b5e5-862ce3afacdf.svg",
+    "image": "https://grasscity-prod.myshopify.com/cdn/shop/files/gs_logo_86bc3029-4784-46a2-b5e5-862ce3afacdf.svg",
     "sameAs": [
-      {{ settings.social_twitter_link | json }},
-      {{ settings.social_facebook_link | json }},
-      {{ settings.social_pinterest_link | json }},
-      {{ settings.social_instagram_link | json }},
-      {{ settings.social_tiktok_link | json }},
-      {{ settings.social_tumblr_link | json }},
-      {{ settings.social_snapchat_link | json }},
-      {{ settings.social_youtube_link | json }},
-      {{ settings.social_vimeo_link | json }}
+      "https://www.facebook.com/wwwgrasscitycom",
+      "https://www.instagram.com/grasscityheadshop",
+      "https://twitter.com/grasscity",
+      "https://www.pinterest.com/grasscity"
     ],
     "contactPoint": [
       {
@@ -69,7 +61,7 @@
   }
 </script>
 
-{% comment %} {%- if request.page_type == 'index' -%}
+{%- if request.page_type == 'index' -%}
   {% assign potential_action_target = request.origin | append: routes.search_url | append: '?q={search_term_string}' %}
   <script type="application/ld+json">
     {
@@ -101,7 +93,7 @@
     }
   }
   </script>
-{% endif %} {% endcomment %}
+{% endif %}
 
 
 {% if template == 'product' %}
