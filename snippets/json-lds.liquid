@@ -69,14 +69,12 @@
 {% else %}
   {% assign selected_variant = product.selected_variant.id %}
   {% if selected_variant != blank %}
-
   {% endif %}
   {% for variant in product.variants %} 
-      {%- if variant.metafields.custom.member_price -%}   
-              {%  assign single_product = variant %}
-           
-          {% break %}
-      {% endif %} 
+    {%- if variant.metafields.custom.member_price -%}   
+      {%  assign single_product = variant %}
+      {% break %}
+    {% endif %} 
   {% endfor %}
 {% endif %}
   
