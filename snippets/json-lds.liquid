@@ -17,7 +17,7 @@
       {{ settings.social_tumblr_link | json }},
       {{ settings.social_snapchat_link | json }},
       {{ settings.social_youtube_link | json }},
-      {{ settings.social_vimeo_link | json }}
+      {% if settings.social_twitter_link != blank %}{{ settings.social_vimeo_link | json }}{% endif %}
     ],
     "url": {{ request.origin | append: page.url | json }}
   }
