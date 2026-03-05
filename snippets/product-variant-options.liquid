@@ -144,6 +144,23 @@
       <span class="swatch-color block" style="--swatch-background: {{ swatch_value }}"></span>
     </label>
   {%- elsif picker_type == 'button' -%}
+    {%- liquid
+      assign button_style = ''
+      assign option_name_downcase = option.name | downcase
+      if option_name_downcase contains 'color' or option_name_downcase contains 'colour'
+        assign color_ref = value.variant.metafields.style.color_ref.value
+        assign color_value = color_ref.gradient | default: color_ref.hex
+        if color_value != blank
+          if color_value contains 'gradient'
+            assign button_style = 'background: ' | append: color_value | append: ';'
+          elsif color_value contains '#'
+            assign button_style = 'background-color: ' | append: color_value | append: '; color: ' | append: color_value | append: ';'
+          else
+            assign button_style = 'background: ' | append: color_value | append: ';'
+          endif
+        endif
+      endif
+    -%}
     <input
       type="radio"
       id="{{ input_id }}"
@@ -158,9 +175,15 @@
       {% endif %}
       {{ input_dataset }}
     >
-    <label for="{{ input_id }}">
-      {{ value -}}
-      {{ label_unavailable }}
+    <label for="{{ input_id }}" {% if button_style != '' %}class="block relative" style="{{ button_style }}"{% endif %} data-tooltip>
+      {%- if button_style != '' -%}
+        <span class="tooltip pointer-events-none">{{ value | escape }}</span>
+        <span class="visually-hidden">{{ value | escape }}</span>
+        {{ label_unavailable }}
+      {%- else -%}
+        {{ value | escape }}
+        {{ label_unavailable }}
+      {%- endif -%}
     </label>
   {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}
     <option
