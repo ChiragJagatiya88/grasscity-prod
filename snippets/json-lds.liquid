@@ -37,10 +37,6 @@
     {% comment %} "logo": "https://grasscity-prod.myshopify.com/cdn/shop/files/gs_logo_86bc3029-4784-46a2-b5e5-862ce3afacdf.svg", {% endcomment %}
     {% comment %} "image": "https://grasscity-prod.myshopify.com/cdn/shop/files/gs_logo_86bc3029-4784-46a2-b5e5-862ce3afacdf.svg", {% endcomment %}
     "sameAs": [
-      {% comment %} "https://www.facebook.com/wwwgrasscitycom",
-      "https://www.instagram.com/grasscityheadshop",
-      "https://twitter.com/grasscity",
-      "https://www.pinterest.com/grasscity", {% endcomment %}
       {{ settings.social_twitter_link | json }},
       {{ settings.social_facebook_link | json }},
       {{ settings.social_pinterest_link | json }},
@@ -73,7 +69,7 @@
   }
 </script>
 
-{%- if request.page_type == 'index' -%}
+{% comment %} {%- if request.page_type == 'index' -%}
   {% assign potential_action_target = request.origin | append: routes.search_url | append: '?q={search_term_string}' %}
   <script type="application/ld+json">
     {
@@ -105,7 +101,7 @@
     }
   }
   </script>
-{% endif %}
+{% endif %} {% endcomment %}
 
 
 {% if template == 'product' %}
