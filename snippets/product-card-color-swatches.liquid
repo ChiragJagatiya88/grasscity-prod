@@ -1,21 +1,25 @@
 {%- liquid
   assign swatch_trigger = settings.color_swatch_trigger | downcase
-  assign swatch_count = 0
-  assign max_swatch_count = settings.pcard_maximum_swatches_to_show | default: 6
+  assign show_more_threshold = 4
 -%}
 
 {%- for option in product.options_with_values -%}
-  {% assign option_name = option.name | downcase %}
-  {% assign is_color = false %}
+  {%- liquid
+    assign option_name = option.name | downcase
+    assign is_color = false
+    if option_name contains 'colour' or option_name contains 'color'
+      assign is_color = true
+    endif
+  -%}
 
-  {% if option_name contains 'colour' or option_name contains 'color' %}
-    {% assign is_color = true %}
-  {% endif %}
+  {%- if is_color -%}
+  {%- liquid
+    assign option_index = forloop.index0
+    assign values = ''
+    assign swatch_count = 0
+  -%}
 
-  {% assign option_index = forloop.index0 %}
-  {% assign values = '' %}
-
-  <ul class="product-card__swatches flex flex-wrap gap-2">
+  <ul class="product-card__swatches flex flex-wrap gap-2{% if option.values.size > 3 %} product-card__swatches--many{% endif %}">
     {%- for variant in product.variants -%}
       {%- assign value = variant.options[option_index] -%}
 
@@ -25,22 +29,45 @@
           assign swatch_count = swatch_count | plus: 1
 
           assign color_meta = variant.metafields.style.color_ref.value
-          assign hex_color = color_meta.hex
+          assign swatch_style = ''
+          if color_meta != blank
+            if color_meta.gradient != blank
+              assign swatch_style = 'background: ' | append: color_meta.gradient | append: ';'
+            elsif color_meta.hex != blank
+              assign swatch_style = 'background-color: ' | append: color_meta.hex | append: ';'
+            endif
+          endif
         -%}
 
-        {%- if swatch_count <= max_swatch_count and hex_color != blank -%}
+        {%- if swatch_count <= show_more_threshold and swatch_style != '' -%}
           <li>
             <a
               href="{{ variant.url }}"
-              class="color-swatch-item {% if forloop.first == true %}is-active{% endif %}"
-              title="{{ value }}"
+              class="color-swatch-item {% if variant.available == false %}is-sold-out{% endif %} {% if swatch_count == 1 %}is-active{% endif %}"
+              title="{% if variant.available %}{{ value }}{% else %}{{ value }} - {{ 'products.product.variant_sold_out_or_unavailable' | t }}{% endif %}"
               data-variant-id="{{ variant.id }}"
               data-variant-image="{% if variant.image %}{{ variant.image | image_url: width: 900 }}{% endif %}"
-              style="background-color: {{ hex_color }};"
-            ></a>
+              {% if variant.available == false %}
+                aria-disabled="true"
+              {% endif %}
+              style="{{ swatch_style }}"
+            >
+              {%- if variant.available == false -%}
+                <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+              {%- endif -%}
+            </a>
           </li>
         {%- endif -%}
       {%- endunless -%}
     {%- endfor -%}
+
+    {%- if swatch_count > show_more_threshold -%}
+      <li class="swatch-more">
+        <a href="{{ product.url }}" class="block reversed-link text-sm-extra" aria-expanded="false">
+          <span class="reversed-link__text">+{{ swatch_count | minus: show_more_threshold }}</span>
+        </a>
+      </li>
+    {%- endif -%}
   </ul>
+  {%- endif -%}
 {%- endfor -%}

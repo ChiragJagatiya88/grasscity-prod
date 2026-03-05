@@ -5,9 +5,41 @@
   height: 25px;
   border: 1px solid #cfcfcf;
   cursor: pointer;
+  position: relative;
 }
 .color-swatch-item.is-active {
   border-color: #000;
+}
+/* Sold-out state: match variant options disabled style */
+.color-swatch-item.is-sold-out {
+  opacity: 0.6;
+  cursor: default;
+}
+.color-swatch-item.is-sold-out::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom right,
+    transparent calc(50% - 0.5px),
+    var(--color-foreground-lighten-19, rgba(0, 0, 0, 0.35)) calc(50% - 0.5px) calc(50% + 0.5px),
+    transparent calc(50% + 0.5px)
+  );
+  pointer-events: none;
+}
+/* Compact layout when many swatches (e.g. 4+) */
+.product-card__swatches--many .color-swatch-item {
+  width: 20px;
+  height: 20px;
+}
+.product-card__swatches--many .swatch-more a {
+  line-height: 20px;
+  width: 22px;
+  min-width: 22px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .us-refresh-pricing-base__price__main {

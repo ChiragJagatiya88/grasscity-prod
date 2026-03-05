@@ -112,15 +112,11 @@
                               </td>
                               <td class="member-cell">
                                 <strong>Member</strong>
-                                <span class="price">
-                                  {{- product.metafields.custom.member_price | times: 100 | money -}}
-                                </span>
+                                <span class="price">{% render 'cc-membership-price', product: product %}</span>
                               </td>
                               <td class="elite-cell active">
                                 <strong>Elite</strong>
-                                <span class="price">
-                                  {{- product.metafields.custom.elite_price | times: 100 | money -}}
-                                </span>
+                                <span class="price">{% render 'cc-membership-price', product: product, price_type: 'elite' %}</span>
                               </td>
                             </tr>
                           </tbody>

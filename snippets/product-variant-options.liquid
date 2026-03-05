@@ -145,7 +145,17 @@
       <span class="swatch-color block" style="--swatch-background: {{ swatch_value }}"></span>
     </label>
   {%- elsif picker_type == 'button' -%}
-    {% assign color_ref = value.variant.metafields.style.color_ref.value %}
+    {%- liquid
+      assign color_ref = value.variant.metafields.style.color_ref.value
+      assign button_style = ''
+      if color_ref != blank
+        if color_ref.gradient != blank
+          assign button_style = 'background: ' | append: color_ref.gradient | append: ';'
+        elsif color_ref.hex != blank
+          assign button_style = 'background-color: ' | append: color_ref.hex | append: '; color: ' | append: color_ref.hex | append: ';'
+        endif
+      endif
+    -%}
     <input
       type="radio"
       id="{{ input_id }}"
@@ -160,7 +170,7 @@
       {% endif %}
       {{ input_dataset }}
     >
-    <label for="{{ input_id }}" {% if color_ref != blank %}style="background-color: {{ color_ref.hex }}; color: {{ color_ref.hex }};"{% endif %}>
+    <label for="{{ input_id }}" {% if button_style != '' %}style="{{ button_style }}"{% endif %}>
       <span style="display:none;"> {{ value -}}</span>
       {{ label_unavailable }}
     </label>
