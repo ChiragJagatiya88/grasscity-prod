@@ -23,7 +23,6 @@
 
 {%- for value in option.values -%}
   {%- liquid
-    assign value_display = value | replace: '_', ' '
     assign option_disabled = true
     if value.available
       assign option_disabled = false
@@ -62,7 +61,7 @@
 
   {%- if picker_type == 'swatch' -%}
     {%- capture help_text -%}
-      <span class="visually-hidden">{{ value_display | escape }}</span>
+      <span class="visually-hidden">{{ value | escape }}</span>
       {{ label_unavailable }}
     {%- endcapture -%}
     {% render 'swatch-input',
@@ -141,7 +140,7 @@
       data-swatch-type="{{ block.settings.swatch_type }}"
       data-tooltip
     >
-      <span class="tooltip pointer-events-none">{{ value_display | escape }}</span>
+      <span class="tooltip pointer-events-none">{{ value | escape }}</span>
       <span class="swatch-color block" style="--swatch-background: {{ swatch_value }}"></span>
     </label>
   {%- elsif picker_type == 'button' -%}
@@ -178,11 +177,11 @@
     >
     <label for="{{ input_id }}" {% if button_style != '' %}class="block relative" style="{{ button_style }}"{% endif %} data-tooltip>
       {%- if button_style != '' -%}
-        <span class="tooltip pointer-events-none">{{ value_display | escape }}</span>
-        <span class="visually-hidden">{{ value_display | escape }}</span>
+        <span class="tooltip pointer-events-none">{{ value | escape }}</span>
+        <span class="visually-hidden">{{ value | escape }}</span>
         {{ label_unavailable }}
       {%- else -%}
-        {{ value_display | escape }}
+        {{ value | escape }}
         {{ label_unavailable }}
       {%- endif -%}
     </label>
@@ -202,9 +201,9 @@
       {{ input_dataset }}
     >
       {% if option_disabled -%}
-        {{- 'products.product.value_unavailable' | t: option_value: value_display -}}
+        {{- 'products.product.value_unavailable' | t: option_value: value -}}
       {%- else -%}
-        {{- value_display -}}
+        {{- value -}}
       {%- endif %}
     </option>
   {%- endif -%}
