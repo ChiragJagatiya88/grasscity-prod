@@ -65,6 +65,7 @@
         "language_country_MyFf6D",
         "social_links_BcFqP9"
       ],
+      "disabled": true,
       "custom_css": [
         ".topbar-section .topbar {background: #e1251c; color: #fff;}",
         ".topbar__center {display: none;}",
@@ -73,6 +74,67 @@
       "settings": {
         "container": "fixed",
         "color_scheme": "scheme-1",
+        "show_separator_line": false,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "topbar_wWXJWm": {
+      "type": "topbar",
+      "blocks": {
+        "link_list_BiLRBq": {
+          "type": "link_list",
+          "settings": {
+            "menu": "main-menu",
+            "position": "left"
+          }
+        },
+        "text_A7Wt4A": {
+          "type": "text",
+          "settings": {
+            "text": "✌🏼 Free Express Shipping on orders $500!",
+            "position": "center",
+            "highlight_text": "",
+            "highlight_text_style": "button",
+            "highlight_text_color": "",
+            "highlight_text_background_color": ""
+          }
+        },
+        "language_country_tzMjBj": {
+          "type": "language_country",
+          "settings": {
+            "show_language_selector": false,
+            "show_country_selector": false,
+            "show_market_links": false,
+            "position": "right"
+          }
+        },
+        "social_links_xNLXaQ": {
+          "type": "social_links",
+          "settings": {
+            "show_facebook": true,
+            "show_instagram": true,
+            "show_twitter": true,
+            "show_tiktok": true,
+            "show_pinterest": false,
+            "show_snapchat": false,
+            "show_tumblr": false,
+            "show_youtube": false,
+            "show_vimeo": false,
+            "position": "right"
+          }
+        }
+      },
+      "block_order": [
+        "link_list_BiLRBq",
+        "text_A7Wt4A",
+        "language_country_tzMjBj",
+        "social_links_xNLXaQ"
+      ],
+      "custom_css": [],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-2",
         "show_separator_line": false,
         "padding_top": 12,
         "padding_bottom": 12
@@ -230,6 +292,7 @@
   },
   "order": [
     "topbar_3YD96h",
+    "topbar_wWXJWm",
     "header"
   ]
 }
