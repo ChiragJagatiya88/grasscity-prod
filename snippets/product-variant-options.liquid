@@ -150,7 +150,9 @@
       assign button_style = ''
       assign color_value = color_ref.gradient | default: color_ref.hex
       if color_value != blank
-        if color_value contains '#'
+        if color_value contains 'gradient'
+          assign button_style = 'background: ' | append: color_value | append: ';'
+        elsif color_value contains '#'
           assign button_style = 'background-color: ' | append: color_value | append: '; color: ' | append: color_value | append: ';'
         else
           assign button_style = 'background: ' | append: color_value | append: ';'
