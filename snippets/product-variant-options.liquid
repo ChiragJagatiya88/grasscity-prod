@@ -175,7 +175,7 @@
       {% endif %}
       {{ input_dataset }}
     >
-    <label for="{{ input_id }}" {% if button_style != '' %}class="block relative button--color-swatch" style="{{ button_style }}"{% endif %} data-tooltip>
+    <label for="{{ input_id }}" {% if button_style != '' %}class="block relative variant-button--color-swatch" style="{{ button_style }}"{% endif %} data-tooltip>
       {%- if button_style != '' -%}
         <span class="tooltip pointer-events-none">{{ value | escape }}</span>
         <span class="visually-hidden">{{ value | escape }}</span>
