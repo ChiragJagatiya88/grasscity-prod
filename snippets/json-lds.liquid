@@ -1,4 +1,4 @@
-{% comment %} <script type="application/ld+json">
+<script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "Organization",
@@ -19,7 +19,7 @@
     ],
     "url": {{ request.origin | append: page.url | json }}
   }
-</script> {% endcomment %}
+</script>
 
 
 <script type="application/ld+json">
@@ -28,7 +28,7 @@
     "@type": "Organization",
     "@id": "{{ shop.url }}//#org",
     "name": "{{ shop.name | json }}",
-    "url": {{ request.origin | append: page.url | json }},
+    "url": "{{ shop.url }}",
     "description": "Grasscity is a leading online smoke shop that offers the largest range of bongs, dab rigs, water pipes, glass pipes, bubblers, vaporizers and accessories.",
     "telephone": "+1 (888) 334-6363",
     "logo": "https://grasscity-prod.myshopify.com/cdn/shop/files/gs_logo_86bc3029-4784-46a2-b5e5-862ce3afacdf.svg",
