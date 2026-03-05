@@ -32,7 +32,9 @@
           assign swatch_style = ''
           assign color_value = color_meta.gradient | default: color_meta.hex
           if color_value != blank
-            if color_value contains '#'
+            if color_value contains 'gradient'
+              assign swatch_style = 'background: ' | append: color_value | append: ';'
+            elsif color_value contains '#'
               assign swatch_style = 'background-color: ' | append: color_value | append: ';'
             else
               assign swatch_style = 'background: ' | append: color_value | append: ';'
