@@ -175,10 +175,12 @@
       {% endif %}
       {{ input_dataset }}
     >
-    <label for="{{ input_id }}" {% if button_style != '' %}class="block relative" style="{{ button_style }}"{% endif %} data-tooltip>
+    <label for="{{ input_id }}" {% if button_style != '' %}class="block relative"{% endif %} data-tooltip>
       {%- if button_style != '' -%}
-        <span class="tooltip pointer-events-none">{{ value | escape }}</span>
+          <div  style="{{ button_style }}"> 
+            <span class="tooltip pointer-events-none">{{ value | escape }}</span>
         <span class="visually-hidden">{{ value | escape }}</span>
+          </div>
         {{ label_unavailable }}
       {%- else -%}
         {{ value | escape }}
