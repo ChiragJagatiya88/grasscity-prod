@@ -103,9 +103,9 @@
           "settings": {
             "picker_type": "button",
             "swatch_type": "variant_image",
-            "swatch_style": "circle",
+            "swatch_style": "square",
             "swatch_size": 32,
-            "button_style": "square",
+            "button_style": "circle",
             "size_title": "Size",
             "size_chart_from_page": ""
           }
