@@ -79,7 +79,7 @@
     "predictive_search_type_enabled": false,
     "number_results_to_show": 10,
     "predictive_search_show_vendor": false,
-    "predictive_search_show_price": false,
+    "predictive_search_show_price": true,
     "currency_code_enabled": false,
     "section_header_alignment": "left",
     "collection_card_style": "style-1",
