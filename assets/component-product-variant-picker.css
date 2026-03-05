@@ -94,13 +94,10 @@ variant-selects input:is([type=checkbox], [type=radio]):is(:disabled, .disabled)
 
 /* color inside shadow */
 /* 3px inner white border on selected color swatch (button picker with color_ref) */
-.label.variant-button--color-swatch {
+.variant-button--color-swatch {
   box-shadow: inset 0 0 0 3px #fff;
 }
-label.variant-button--color-swatch,
-label.variant-button--color-swatch {
-  box-shadow: inset 0 0 0 3px #fff, 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0 0.5rem rgba(var(--color-foreground), 0.55);
-}
+
 /* end */
 
 .product-form__input--button-square {
