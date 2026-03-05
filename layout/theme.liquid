@@ -98,6 +98,8 @@
     {% comment %} Custom metafield for head tag like GTag tracking {% endcomment %}
     {{ shop.metafields.foxtheme.code_head.value }}
     {% comment %} End custom metafield for head tag like GTag tracking {% endcomment %}
+
+    {% render 'json-lds' %}
   </head>
 
   <body
@@ -147,8 +149,6 @@
     {%- if settings.enable_product_compare -%}
       <script src="{{ 'compare.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-
-    {% render 'json-lds' %}
 
     {% render 'product-info-popups' %}
 
