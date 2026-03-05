@@ -30,11 +30,12 @@
 
           assign color_meta = variant.metafields.style.color_ref.value
           assign swatch_style = ''
-          if color_meta != blank
-            if color_meta.gradient != blank
-              assign swatch_style = 'background: ' | append: color_meta.gradient | append: ';'
-            elsif color_meta.hex != blank
-              assign swatch_style = 'background-color: ' | append: color_meta.hex | append: ';'
+          assign color_value = color_meta.gradient | default: color_meta.hex
+          if color_value != blank
+            if color_value contains '#'
+              assign swatch_style = 'background-color: ' | append: color_value | append: ';'
+            else
+              assign swatch_style = 'background: ' | append: color_value | append: ';'
             endif
           endif
         -%}

@@ -148,11 +148,12 @@
     {%- liquid
       assign color_ref = value.variant.metafields.style.color_ref.value
       assign button_style = ''
-      if color_ref != blank
-        if color_ref.gradient != blank
-          assign button_style = 'background: ' | append: color_ref.gradient | append: ';'
-        elsif color_ref.hex != blank
-          assign button_style = 'background-color: ' | append: color_ref.hex | append: '; color: ' | append: color_ref.hex | append: ';'
+      assign color_value = color_ref.gradient | default: color_ref.hex
+      if color_value != blank
+        if color_value contains '#'
+          assign button_style = 'background-color: ' | append: color_value | append: '; color: ' | append: color_value | append: ';'
+        else
+          assign button_style = 'background: ' | append: color_value | append: ';'
         endif
       endif
     -%}
