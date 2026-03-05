@@ -925,7 +925,7 @@
             "content_alignment": "left",
             "content_spacing": "small",
             "content_gap": "fitted",
-            "card_link": "",
+            "card_link": "shopify://pages/membership",
             "subheading": "",
             "subheading_style": "",
             "heading": "Join Grasscity for free",
