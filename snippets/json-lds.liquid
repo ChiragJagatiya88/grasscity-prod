@@ -1,4 +1,4 @@
-<script type="application/ld+json">
+{% comment %} <script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "Organization",
@@ -19,7 +19,7 @@
     ],
     "url": {{ request.origin | append: page.url | json }}
   }
-</script>
+</script> {% endcomment %}
 
 
 <script type="application/ld+json">
