@@ -94,7 +94,7 @@ variant-selects input:is([type=checkbox], [type=radio]):is(:disabled, .disabled)
 
 /* color inside shadow */
 /* 3px inner white border on selected color swatch (button picker with color_ref) */
-.product-form__input--button  label.variant-button--color-swatch {
+.label.variant-button--color-swatch {
   box-shadow: inset 0 0 0 3px #fff;
 }
 label.variant-button--color-swatch,
