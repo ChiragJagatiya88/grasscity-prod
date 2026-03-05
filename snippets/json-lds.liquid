@@ -56,128 +56,70 @@
 {%- endif -%}
 
 {% if template == 'product' %}
-
-{% comment %} {% assign current_variant = product.selected_or_first_available_variant %}
-
-{%  assign single_product = product %}
-{% if product.variants.size == 1 %}
-  {% if product.variants.first.metafields.custom.member_price == blank %}
+  {% assign current_variant = product.selected_or_first_available_variant %}
+  {% assign single_product = product %}
+  {% if product.variants.size == 1 %}
+    {% if product.variants.first.metafields.custom.member_price == blank %}
       {% assign single_product = product %}
-  {% else %}
+    {% else %}
       {% assign single_product = product.variants.first %}
-  {% endif %} 
-{% else %}
-  {% assign selected_variant = product.selected_variant.id %}
-  {% if selected_variant != blank %}
-  {% endif %}
-  {% for variant in product.variants %} 
-    {%- if variant.metafields.custom.member_price -%}   
-      {%  assign single_product = variant %}
-      {% break %}
-    {% endif %} 
-  {% endfor %}
-{% endif %}
-  
-<script type="application/ld+json">
-  {
-    "@context": "http://schema.org/",
-    "@type": "Product",
-    "@id": "{{ shop.url | append: '/products/' | append: product.handle }}",
-    "url": "{{ shop.url | append: '/products/' | append: product.handle }}",
-    "name": {{ product.title | json }},
-    "image": [{% if product.metafields.c_f.instagram %}"https://smokecartelapi.imgix.net/widgets/instagram-fetch/images/{{ product.metafields.c_f.instagram | url_encode }}.jpg?w=600&auto=format&q=70",{% endif %}{% for image in product.images %}"https:{{ image.src | img_url: '1024x' }}",{% endfor %}
-      {%- for variant in product.variants -%}
-        {%- if variant.image and variant.image.id != product.featured_image.id -%}
-        "https://warely.io/smokecartel/banners/{{ product.handle }}_{{ variant.id }}.jpg",
-        {%- endif -%}
-      {%- endfor -%}"https://warely.io/smokecartel/banners/{{ product.handle }}.jpg"],
-    "description": {{ product.description | strip_html | json }},
-    "brand": {
-      "@type": "Thing",
-      "name": {{ product.vendor | json }}
-    },
-    "sku": {{ current_variant.sku | json }},
-    {% if current_variant.barcode and current_variant.barcode != blank %}"gtin12": {{ current_variant.barcode | json }},{% else %}"gtin13": "{{ product.id }}",{% endif %}
-    "itemCondition": "NewCondition",
-    {% if product.metafields.stamped.reviews_count and product.metafields.stamped.reviews_count != "0" %}{% assign reviewcount = product.metafields.stamped.reviews_count | plus: 0 %}{% assign average = product.metafields.stamped.reviews_average | plus: 0 %}
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "{{ average }}",
-      "reviewCount": "{{ reviewcount }}"
-    },
     {% endif %}
-    
-    {% if product.metafields.smokecartel.featured_review_value %}
-    {%- capture review_author_raw -%}{{ product.metafields.smokecartel.featured_review_author | strip_html | strip }}{%- endcapture -%}
-    {%- capture review_body_raw -%}{{ 
-      product.metafields.smokecartel.featured_review_body 
-      | default: product.metafields.smokecartel.featured_review_text
-      | default: product.metafields.smokecartel.featured_review
-      | strip_html | strip 
-    }}{%- endcapture -%}
-
-    {%- assign author_word_count = review_author_raw | split: ' ' | size -%}
-
-    {%- comment -%}
-      Heuristic: if the "author" field is empty, very long, or looks like a sentence,
-      treat it as mis-mapped review text. Put it in reviewBody and use "Anonymous" for name.
-    {%- endcomment -%}
-    {%- if review_author_raw == blank 
-          or author_word_count > 5 
-          or review_author_raw.size > 60 -%}
-      {%- assign review_author_final = 'Anonymous' -%}
-      {%- assign review_body_final = review_body_raw | default: review_author_raw -%}
-    {%- else -%}
-      {%- assign review_author_final = review_author_raw -%}
-      {%- assign review_body_final = review_body_raw -%}
-    {%- endif -%}
-
-    "review": {
-      "@type": "Review",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": {{ product.metafields.smokecartel.featured_review_value | json }},
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "author": {
-        "@type": "Person",
-        "name": {{ review_author_final | json }}
-      },
-      "reviewBody": {{ review_body_final | json }}
-    },
+  {% else %}
+    {% assign selected_variant = product.selected_variant.id %}
+    {% if selected_variant != blank %} {% endif %}
+    {% for variant in product.variants %}
+      {%- if variant.metafields.custom.member_price -%}
+        {% assign single_product = variant %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 
-  "offers": [
+  <script type="application/ld+json">
     {
-      "@type": "Offer",
-      "price": "{{ single_product.price | money_without_currency }}",
-      "priceCurrency": "{{ shop.currency }}",
-      {% if single_product.available %}
-      "availability": "https://schema.org/InStock",
-      {% else %}
-      "availability": "https://schema.org/OutOfStock",
+      "@context": "http://schema.org/",
+      "@type": "Product",
+
+
+      {% if product.metafields.yotpo.reviews_count and product.metafields.yotpo.reviews_average != "0" %}
+        {% assign reviewcount = product.metafields.yotpo.reviews_count | plus: 0 %}
+        {% assign average = product.metafields.yotpo.reviews_average | plus: 0 %}
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "{{ average }}",
+          "reviewCount": "{{ reviewcount }}"
+        },
       {% endif %}
-      "description": "Non-member price"
-    },
-    {
-      "@type": "Offer",
-      "price": "{{ single_product.metafields.custom.member_price | default: 0 | times: 100 | money_without_currency }}",
-      "priceCurrency": "{{ shop.currency }}",
-      {% if single_product.available %}
-      "availability": "https://schema.org/InStock",
-      {% else %}
-      "availability": "https://schema.org/OutOfStock",
-      {% endif %}
-      "description": "Member price"
+
+
+    "offers": [
+      {
+        "@type": "Offer",
+        "price": "{{ single_product.price | money_without_currency }}",
+        "priceCurrency": "{{ shop.currency }}",
+        {% if single_product.available %}
+        "availability": "https://schema.org/InStock",
+        {% else %}
+        "availability": "https://schema.org/OutOfStock",
+        {% endif %}
+        "description": "Non-member price"
+      },
+      {
+        "@type": "Offer",
+        "price": "{{ single_product.metafields.custom.member_price | default: 0 | times: 100 | money_without_currency }}",
+        "priceCurrency": "{{ shop.currency }}",
+        {% if single_product.available %}
+        "availability": "https://schema.org/InStock",
+        {% else %}
+        "availability": "https://schema.org/OutOfStock",
+        {% endif %}
+        "description": "Member price"
+      }
+    ]
+
     }
-  ]
-
-  }
-</script> {% endcomment %}
-
+  </script>
 {% endif %}
-
 
 
 {%- if template == 'article' and article and blog -%}
