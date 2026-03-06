@@ -57,7 +57,7 @@ if (!customElements.get('slideshow-component')) {
         this.sliderOptions = {
           slidesPerView: 1,
           spaceBetween: 10,
-          loop: true,
+          loop: false,
           grabCursor: true,
           allowTouchMove: true,
           threshold: 2,
@@ -107,7 +107,7 @@ if (!customElements.get('slideshow-component')) {
             if (!element.classList.contains('swiper-button') && !element.classList.contains('btn')) {
               element.addEventListener('focusin', () => {
                 const slide = element.closest('.swiper-slide');
-                this.sliderInstance.slider.slideToLoop(this.sliderInstance.slider.slides.indexOf(slide));
+                this.sliderInstance.slider.slideTo(this.sliderInstance.slider.slides.indexOf(slide));
               });
             }
           });

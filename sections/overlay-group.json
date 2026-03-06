@@ -75,6 +75,7 @@
     },
     "quick-view": {
       "type": "quick-view",
+      "disabled": true,
       "blocks": {
         "badges": {
           "type": "badges",

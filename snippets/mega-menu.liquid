@@ -154,7 +154,7 @@
                   open
                 >
                   <summary class="menu-sidebar__toggle blocks-radius-sm flex items-center justify-between{% if forloop.first %} is-visible{% endif %}">
-                    <h6>{{ childlink.title | escape }}</h6>
+                    <div class="h6">{{ childlink.title | escape }}</div>
                     {%- if childlink.links != blank -%}
                       {%- render 'icon-caret-right', size: 'small' -%}
                     {%- endif -%}

@@ -32,7 +32,7 @@
             </div>
           {%- endif -%}
           <div class="drawer__header-inner cart-drawer__header flex items-center justify-between gap-3">
-            <h2 class="drawer__heading h4">
+            <div class="drawer__heading h4">
               <span>{{ 'general.cart.title' | t }}</span>
               <cart-count
                 class="cart-count cart-count--blank"
@@ -50,7 +50,7 @@
                 {%- endif -%}
                 )
               </cart-count>
-            </h2>
+            </div>
             <button
               class="drawer__close-btn z-1 static"
               aria-controls="CartDrawer"

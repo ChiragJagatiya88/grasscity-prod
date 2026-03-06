@@ -89,9 +89,7 @@
             </div>
             <div class="flex flex-col gap-y-1">
               {%- if icon_heading != blank -%}
-                <h3 class="inline-richtext {{ icon_heading_size }}">
-                  {{- icon_heading -}}
-                </h3>
+                <h4 class="inline-richtext {{ icon_heading_size }}">{{- icon_heading -}}</h4>
               {%- endif -%}
               {%- if icon_text != blank -%}
                 <div class="rte m-0 text-subtext">{{- icon_text -}}</div>

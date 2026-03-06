@@ -48,9 +48,9 @@
 
   <div class="age-verifier__card">
     <div class="age-verifier__content drawer__content">
-      <h2 id="age-verifier-heading-{{ section.id }}" class="age-verifier__heading">
+      <div id="age-verifier-heading-{{ section.id }}" class="age-verifier__heading">
         {{ section.settings.heading | default: 'Confirm your age' }}
-      </h2>
+      </div>
       <p class="age-verifier__question">
         {{ section.settings.question | default: 'Are you 18 years old or older?' }}
       </p>

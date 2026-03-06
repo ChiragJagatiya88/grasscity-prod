@@ -53,9 +53,9 @@
     <div class="footer-image-box__content flex flex-col z-1 relative text-{{ block.settings.content_alignment }}">
       <div class="footer-image-box__details flex flex-col gap-3">
         {%- if block.settings.heading != blank -%}
-          <h3 class="footer-block__heading inline-richtext {{ block.settings.heading_size }}">
+          <div class="footer-block__heading inline-richtext {{ block.settings.heading_size }}">
             {{- block.settings.heading -}}
-          </h3>
+          </div>
         {%- endif -%}
         {%- if block.settings.text != blank -%}
           <div class="footer-image-box__text text-base rte">

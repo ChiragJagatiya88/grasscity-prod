@@ -24,7 +24,7 @@
           {%- endif -%}
         {%- when 'heading' -%}
           {%- if block.settings.heading != blank -%}
-            <h2
+            <{{ block.settings.heading_tag }}
               class="rich-text__heading {{ block.settings.heading_size }}"
               {{ block.shopify_attributes }}
             >
@@ -37,7 +37,7 @@
                   hl_text_color: block.settings.highlight_text_color
                 %}
               </motion-element>
-            </h2>
+            </{{ block.settings.heading_tag }}>
             {%- assign motion_delay = motion_delay | plus: 50 -%}
           {%- endif -%}
         {%- when 'text' -%}
@@ -348,6 +348,46 @@
               "label": "t:general.text_size.options__hd1.label"
             }
           ]
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "label": "Heading Tag",
+          "options": [
+            {
+              "value": "h1",
+              "label": "H1"
+            },
+            {
+              "value": "h2",
+              "label": "H2"
+            },
+            {
+              "value": "h3",
+              "label": "H3"
+            },
+            {
+              "value": "h4",
+              "label": "H4"
+            },
+            {
+              "value": "h5",
+              "label": "H5"
+            },
+            {
+              "value": "h6",
+              "label": "H6"
+            },
+            {
+              "value": "p",
+              "label": "p"
+            },
+            {
+              "value": "div",
+              "label": "Div"
+            }
+          ],
+          "default": "h2"
         }
       ]
     },

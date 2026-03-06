@@ -25,6 +25,7 @@
           "type": "heading",
           "settings": {
             "heading": "{{ collection.title }}",
+            "heading_tag": "h1",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
