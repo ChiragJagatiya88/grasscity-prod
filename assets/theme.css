@@ -8291,3 +8291,6 @@ body.search-template #MainContent,
 #predictive-search-results-products-list .product-card__image {
   aspect-ratio: 1;
 }
+.product-card__image-wrapper .product-card__image {
+  aspect-ratio: 1;
+}
