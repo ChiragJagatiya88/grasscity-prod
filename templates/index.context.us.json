@@ -12,5 +12,16 @@
     "market": "us"
   },
   "parent": "index.json",
-  "sections": {}
+  "sections": {
+    "custom_content_HPgFTK": {
+      "settings": {},
+      "blocks": {
+        "image_card_with_product_3khACH": {
+          "settings": {
+            "product": "pax-flow-vaporizer"
+          }
+        }
+      }
+    }
+  }
 }
