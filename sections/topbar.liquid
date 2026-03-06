@@ -17,9 +17,10 @@
               <ul class="topbar__menu flex flex-wrap items-center justify-center lg:justify-{{ pos | replace: 'left','start' | replace: 'right','end' }}">
                 {% for link in linklists[block.settings.menu].links %}
                   {%- if forloop.first -%}
-                    <li class="topbar__menu-item">
-                      <a href="javascript:void(0)" class="SSO_popup_register block reversed-link">{{ link.title }}</a>
-                      {% comment %} <button class="SSO_popup_register block reversed-link">{{ link.title }}</button> {% endcomment %}
+                    <li class="topbar__menu-item {% if customer.tags contains 'elite_member' or customer.tags contains 'elite' %}hidden{% endif %}">
+                      <a href="javascript:void(0)" class="{% if customer.tags contains "club_member" %}SSO_popup_elite_upgrade {% else %}SSO_popup_elite_join {% endif %} block reversed-link">
+                        {% if customer.tags contains "club_member" %}Upgrade{% else %}Join Now{% endif %}
+                      </a>
                     </li>
                   {%- else -%}
                     <li class="topbar__menu-item">

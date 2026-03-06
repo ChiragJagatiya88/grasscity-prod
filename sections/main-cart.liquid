@@ -249,6 +249,11 @@
                     if gift_wrap_id != null and item.id == gift_wrap_id
                       assign is_gift_wrap_item = true
                     endif
+                    
+                    assign is_elite_item = false
+                    if settings.elite_product != blank and item.variant.id == settings.elite_product.selected_or_first_available_variant.id
+                      assign is_elite_item = true
+                    endif
 
                     assign has_qty_rules = false
                     if item.variant.quantity_rule.increment > 1 or item.variant.quantity_rule.min > 1 or item.variant.quantity_rule.max != null
@@ -507,7 +512,7 @@
                               <template>
                                 <div class="cart-item__action flex items-end justify-between gap-3 lg:hidden w-full">
                                   <div class="flex items-center gap-2">
-                                    {%- unless is_gift_wrap_item -%}
+                                    {%- unless is_gift_wrap_item or is_elite_item -%}
                                       <quantity-input class="cart-quantity quantity">
                                         <label class="visually-hidden" for="Quantity-{{ section.id }}-{{ item.index | plus: 1 }}">{{ 'products.product.quantity.label' | t }}</label>
                                         <button type="button" name="minus" class="quantity__button" aria-label="{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}">
@@ -759,7 +764,7 @@
                           <div class="cart-item__action flex items-center justify-between cart-item__quantity-wrapper">
                             <template>
                               <div class="flex items-center gap-2">
-                                {%- unless is_gift_wrap_item -%}
+                                {%- unless is_gift_wrap_item or is_elite_item -%}
                                   <quantity-input class="cart-quantity quantity">
                                     <label class="visually-hidden" for="Quantity-{{ section.id }}-{{ item.index | plus: 1 }}">{{ 'products.product.quantity.label' | t }}</label>
                                     <button type="button" name="minus" class="quantity__button" aria-label="{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}">
