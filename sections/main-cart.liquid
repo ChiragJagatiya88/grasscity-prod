@@ -1015,7 +1015,7 @@
 
             {% comment %} only show if customer is not available or if customer is available than not an elite {% endcomment %}
             {% if customer == blank or elite__customer == false %}
-              <us-cart-membership data-for="elite" hhh>
+              <us-cart-membership data-for="elite">
                 <details class="membership_details new-refresh_price_cart_radio elite" {% if elite_price_active or customer != blank %} open {% endif %}>
                   <summary>
                     <label for="cart_elite_radio" class="new-refresh_price_cart_radio__header">
@@ -1844,6 +1844,94 @@
     </div>
   </div>
 </x-modal>
+
+<script>
+(function() {
+  'use strict';
+  
+  /**
+   * Initialize cart membership state on page load
+   */
+  function initializeCartMembership() {
+    const membershipRadios = document.querySelectorAll('input[name="membership"]');
+    const allDetails = document.querySelectorAll('.membership_details');
+    
+    if (membershipRadios.length === 0) return;
+    
+    // Find the checked radio button
+    let activeMembership = 'base';
+    membershipRadios.forEach(function(radio) {
+      if (radio.checked) {
+        activeMembership = radio.value;
+      }
+    });
+    
+    // Update body classes
+    document.body.classList.remove('active-elite', 'active-club', 'active-base');
+    document.body.classList.add('active-' + activeMembership);
+    
+    // Update details elements
+    allDetails.forEach(function(details) {
+      if (details.classList.contains(activeMembership)) {
+        if (details.tagName === 'DETAILS') {
+          details.setAttribute('open', '');
+        }
+      } else {
+        if (details.tagName === 'DETAILS') {
+          details.removeAttribute('open');
+        }
+      }
+    });
+  }
+  
+  /**
+   * Handle membership radio button changes
+   */
+  function setupMembershipListeners() {
+    const membershipRadios = document.querySelectorAll('input[name="membership"]');
+    const allDetails = document.querySelectorAll('.membership_details');
+    
+    membershipRadios.forEach(function(radio) {
+      radio.addEventListener('change', function() {
+        const membership = this.value;
+        
+        // Update body classes
+        document.body.classList.remove('active-elite', 'active-club', 'active-base');
+        document.body.classList.add('active-' + membership);
+        
+        // Update details elements
+        allDetails.forEach(function(details) {
+          if (details.classList.contains(membership)) {
+            if (details.tagName === 'DETAILS') {
+              details.setAttribute('open', '');
+            }
+          } else {
+            if (details.tagName === 'DETAILS') {
+              details.removeAttribute('open');
+            }
+          }
+        });
+      });
+    });
+  }
+  
+  // Initialize on DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      initializeCartMembership();
+      setupMembershipListeners();
+    });
+  } else {
+    initializeCartMembership();
+    setupMembershipListeners();
+  }
+  
+  // Also listen for cart:updated event (for AJAX cart updates)
+  document.addEventListener('cart:updated', function() {
+    initializeCartMembership();
+  });
+})();
+</script>
 
 {% schema %}
 {
