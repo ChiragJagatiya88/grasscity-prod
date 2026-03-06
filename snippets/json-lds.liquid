@@ -56,31 +56,82 @@
 {%- endif -%}
 
 {% if template == 'product' %}
-  {% assign current_variant = product.selected_or_first_available_variant %}
   {% assign single_product = product %}
   {% if product.variants.size == 1 %}
-    {% if product.variants.first.metafields.custom.member_price == blank %}
-      {% assign single_product = product %}
-    {% else %}
-      {% assign single_product = product.variants.first %}
-    {% endif %}
+    {% assign single_product = product.variants.first %}
   {% else %}
-    {% assign selected_variant = product.selected_variant.id %}
-    {% if selected_variant != blank %} {% endif %}
     {% for variant in product.variants %}
-      {%- if variant.metafields.custom.member_price -%}
+      {%- if variant.metafields.membership.price -%}
         {% assign single_product = variant %}
         {% break %}
       {% endif %}
     {% endfor %}
   {% endif %}
 
+  {% comment %} Determine market based on country code {% endcomment %}
+  {% assign country_code = localization.country.iso_code | downcase %}
+  {% assign market = 'us' %}
+
+  {% comment %} Map country codes to markets {% endcomment %}
+  {% case country_code %}
+    {% when 'nl' %}
+      {% assign market = 'nl' %}
+    {% when 'fr' %}
+      {% assign market = 'fr' %}
+    {% when 'de' %}
+      {% assign market = 'de' %}
+    {% when 'gb', 'uk' %}
+      {% assign market = 'uk' %}
+    {% when 'us' %}
+      {% assign market = 'us' %}
+    {% else %}
+      {% comment %} Check if it's an EU country (excluding NL, FR, DE, UK) {% endcomment %}
+      {% assign eu_countries = 'at,be,bg,hr,cy,cz,dk,ee,fi,gr,hu,ie,it,lv,lt,lu,mt,pl,pt,ro,sk,si,es,se' | split: ',' %}
+      {% if eu_countries contains country_code %}
+        {% assign market = 'eu' %}
+      {% else %}
+        {% assign market = 'us' %}
+      {% endif %}
+  {% endcase %}
+
+  {% comment %} Check if customer is B2B {% endcomment %}
+  {% if customer and customer.tags contains 'B2B Droppery' or customer.tags contains 'Roor B2B' %}
+    {% assign market = 'b2b' %}
+  {% endif %}
+
+  {% comment %} Get the JSON price metafield {% endcomment %}
+  {%- assign price_json = single_product.metafields.membership.price -%}
+  {% assign member_price_value = '' %}
+
+  {% comment %} Extract member price from JSON metafield based on market {% endcomment %}
+  {% if price_json != blank %}
+    {% assign member_price_key = 'member_price_' | append: market %}
+    
+    {% comment %} Try direct JSON property access first (if Shopify stores as JSON type) {% endcomment %}
+    {% assign member_price_value = price_json[member_price_key] %}
+    
+    {% comment %} If direct access didn't work, parse from JSON string {% endcomment %}
+    {% if member_price_value == blank %}
+      {% assign member_price_search = member_price_key | append: '":"' %}
+      {% assign member_price_parts = price_json | split: member_price_search %}
+      {% if member_price_parts.size > 1 %}
+        {% assign member_price_split = member_price_parts[1] | split: '"' %}
+        {% assign member_price_value = member_price_split[0] %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+
+  {% comment %} Calculate member price for JSON-LD (convert to cents, then format) {% endcomment %}
+  {% if member_price_value != blank %}
+    {% assign member_price_cents = member_price_value | times: 100 %}
+  {% else %}
+    {% assign member_price_cents = 0 %}
+  {% endif %}
+
   <script type="application/ld+json">
     {
       "@context": "http://schema.org/",
       "@type": "Product",
-
-
       {% if product.metafields.yotpo.reviews_count and product.metafields.yotpo.reviews_average != "0" %}
         {% assign reviewcount = product.metafields.yotpo.reviews_count | plus: 0 %}
         {% assign average = product.metafields.yotpo.reviews_average | plus: 0 %}
@@ -90,33 +141,30 @@
           "reviewCount": "{{ reviewcount }}"
         },
       {% endif %}
-
-
-    "offers": [
-      {
-        "@type": "Offer",
-        "price": "{{ single_product.price | money_without_currency }}",
-        "priceCurrency": "{{ shop.currency }}",
-        {% if single_product.available %}
-        "availability": "https://schema.org/InStock",
-        {% else %}
-        "availability": "https://schema.org/OutOfStock",
-        {% endif %}
-        "description": "Non-member price"
-      },
-      {
-        "@type": "Offer",
-        "price": "{{ single_product.metafields.custom.member_price | default: 0 | times: 100 | money_without_currency }}",
-        "priceCurrency": "{{ shop.currency }}",
-        {% if single_product.available %}
-        "availability": "https://schema.org/InStock",
-        {% else %}
-        "availability": "https://schema.org/OutOfStock",
-        {% endif %}
-        "description": "Member price"
-      }
-    ]
-
+      "offers": [
+        {
+          "@type": "Offer",
+          "price": "{{ single_product.price | money_without_currency }}",
+          "priceCurrency": "{{ shop.currency }}",
+          {% if single_product.available %}
+          "availability": "https://schema.org/InStock",
+          {% else %}
+          "availability": "https://schema.org/OutOfStock",
+          {% endif %}
+          "description": "Non-member price"
+        }{% if member_price_cents > 0 %},
+        {
+          "@type": "Offer",
+          "price": "{{ member_price_cents | money_without_currency }}",
+          "priceCurrency": "{{ shop.currency }}",
+          {% if single_product.available %}
+          "availability": "https://schema.org/InStock",
+          {% else %}
+          "availability": "https://schema.org/OutOfStock",
+          {% endif %}
+          "description": "Member price"
+        }{% endif %}
+      ]
     }
   </script>
 {% endif %}
