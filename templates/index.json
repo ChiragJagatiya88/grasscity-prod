@@ -1001,6 +1001,7 @@
         "image_card_mL7WWJ",
         "image_card_Vj69GM"
       ],
+      "disabled": true,
       "settings": {
         "container": "fixed",
         "color_scheme": "",
