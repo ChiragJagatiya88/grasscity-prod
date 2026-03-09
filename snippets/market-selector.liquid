@@ -47,7 +47,7 @@
     {% if eu_codes contains c.iso_code %}{% assign current_market_country = c %}{% break %}{% endif %}
   {% endfor %}
 {% endif %}
-<p>localization.available_countries : {{ localization.available_countries }}</p>
+{% comment %} <p>localization.available_countries : {{ localization.available_countries }}</p> {% endcomment %}
 <style>
   .market-disclosure .f-country-flags {
     --flag-size: 2rem;
