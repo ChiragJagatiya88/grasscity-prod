@@ -65,7 +65,7 @@
             <span>{{ section.settings.button_no | default: "No, I'm not" }}</span>
           </a>
         {%- else -%}
-          <div type="button" class="age-verifier__btn age-verifier__btn--no" aria-controls="AgeVerifier" aria-expanded="false">
+          <div class="age-verifier__btn age-verifier__btn--no" aria-controls="AgeVerifier" aria-expanded="false">
             {% render 'icon', icon: 'decline', size: 'sm' %}
             <span>{{ section.settings.button_no | default: "No, I'm not" }}</span>
           </div>
