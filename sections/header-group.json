@@ -105,7 +105,7 @@
           "settings": {
             "show_language_selector": false,
             "show_country_selector": false,
-            "show_market_links": false,
+            "show_market_links": true,
             "position": "right"
           }
         },
