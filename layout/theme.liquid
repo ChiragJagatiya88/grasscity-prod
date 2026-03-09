@@ -24,32 +24,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="theme-color" content="{{ settings.color_schemes | first | default: '#ffffff' }}">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="language" content="{{ request.locale.iso_code }}">
-    <meta name="author" content="{{ shop.name }}">
-    
-    {% comment %} Robots meta tag {% endcomment %}
-    {%- if template contains 'password' -%}
-      <meta name="robots" content="noindex,nofollow">
-    {%- else -%}
-      <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-    {%- endif -%}
-    
+    <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
-      <link rel="apple-touch-icon" href="{{ settings.favicon | image_url: width: 180, height: 180 }}">
-    {%- endif -%}
-    
-    {% comment %} Alternate language links {% endcomment %}
-    {%- if shop.published_locales.size > 1 -%}
-      {%- for locale in shop.published_locales -%}
-        <link rel="alternate" hreflang="{{ locale.iso_code }}" href="{{ canonical_url | replace: request.locale.root_url, locale.root_url }}">
-      {%- endfor -%}
-      <link rel="alternate" hreflang="x-default" href="{{ canonical_url }}">
     {%- endif -%}
 
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
@@ -69,19 +49,9 @@
       {%- endif -%}
     </title>
 
-    {%- liquid
-      assign meta_description = page_description
-      if meta_description == blank and request.page_type == 'product'
-        assign meta_description = product.description | strip_html | truncate: 100
-      elsif meta_description == blank and request.page_type == 'article'
-        assign meta_description = article.excerpt | default: article.content | strip_html | truncate: 100
-      elsif meta_description == blank
-        assign meta_description = shop.description | default: shop.name
-      endif
-    -%}
-    {%- if meta_description != blank -%}
-      <meta name="description" content="{{ meta_description | escape }}">
-    {%- endif -%}
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
 
     {%- liquid
       render 'meta-tags'
