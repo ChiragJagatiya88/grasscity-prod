@@ -293,7 +293,8 @@
         <div class="footer__copyright">
           <p class="footer__copyright-content">
             &copy; {{ 'now' | date: '%Y' }}
-            <a class="link-underline" href="{{ routes.root_url }}">{{ shop.name }}</a>.
+            {% comment %} <a class="link-underline" href="{{ routes.root_url }}">{{ shop.name }}</a>. {% endcomment %}
+            <span>Grasscity.com is a part of <a href="https://www.hightideinc.com" class="link-underline" rel="nofollow">High Tide Inc. Company</a>. All Rights Reserved.</span>
             {% comment %} {{ powered_by_link }} {% endcomment %}
           </p>
 
