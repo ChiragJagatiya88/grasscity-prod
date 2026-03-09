@@ -178,7 +178,7 @@
             "background": "shopify://shop_images/vape-under-100-AED.jpg",
             "image_overlay_opacity": 30,
             "content_position": "middle-center",
-            "text_alignment": "left",
+            "text_alignment": "center",
             "subheading": "World's Best Smoke Shop",
             "subheading_tag": "h2",
             "title": "BRING HOME THE LA CHILL",
