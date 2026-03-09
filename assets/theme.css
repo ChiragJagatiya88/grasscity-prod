@@ -8298,3 +8298,6 @@ body.search-template #MainContent,
 .product-card__image-wrapper .product-card__image {
   aspect-ratio: 1;
 }
+.pr-img-card__contents .product-card__title {
+  min-height: auto;
+}
