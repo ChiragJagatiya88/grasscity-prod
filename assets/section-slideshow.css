@@ -24,6 +24,7 @@
 .slideshow-wrapper .slideshow__content {
   background: none;
   width: 100%;
+  padding: max(13.5rem, 50vw - var(--scrollbar-width, 0px) / 2 - var(--page-width) / 2);
 }
 .slideshow-wrapper:not(.slideshow-height--adapt) .slideshow__item-wrap {
   height: var(--slide-height, 0);
