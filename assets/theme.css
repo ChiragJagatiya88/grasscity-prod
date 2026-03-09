@@ -8301,3 +8301,6 @@ body.search-template #MainContent,
 .pr-img-card__contents .product-card__title {
   min-height: auto;
 }
+body.search-template .header__top .header__search {
+  display: none;
+}
