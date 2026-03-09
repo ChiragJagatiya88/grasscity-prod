@@ -65,10 +65,14 @@
             <span>{{ section.settings.button_no | default: "No, I'm not" }}</span>
           </a>
         {%- else -%}
-          <div class="age-verifier__btn age-verifier__btn--no" aria-controls="AgeVerifier" aria-expanded="false">
+          {% comment %} <div class="age-verifier__btn age-verifier__btn--no" aria-controls="AgeVerifier" aria-expanded="false">
             {% render 'icon', icon: 'decline', size: 'sm' %}
             <span>{{ section.settings.button_no | default: "No, I'm not" }}</span>
-          </div>
+          </div> {% endcomment %}
+          <button type="button" class="age-verifier__btn age-verifier__btn--no">
+            {% render 'icon', icon: 'decline', size: 'sm' %}
+            <span>{{ section.settings.button_no | default: "No, I'm not" }}</span>
+          </button>
         {%- endif -%}
       </div>
     </div>
@@ -76,7 +80,7 @@
 </age-verifier>
 
 <script>
-  
+
 </script>
 
 {% schema %}
