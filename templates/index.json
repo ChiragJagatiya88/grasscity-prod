@@ -736,19 +736,6 @@
             "vertical_alignment": "start"
           }
         },
-        "icon_with_text_pcaqTj": {
-          "type": "icon_with_text",
-          "disabled": true,
-          "settings": {
-            "icon": "stool",
-            "icon_width": 24,
-            "color": "#000000",
-            "heading": "Over 50 Products",
-            "heading_size": "h5",
-            "text": "",
-            "vertical_alignment": "start"
-          }
-        },
         "button_aegkDr": {
           "type": "button",
           "settings": {
@@ -766,7 +753,6 @@
         "text_4pYVYF",
         "icon_with_text_8qCJiV",
         "icon_with_text_w4D3R6",
-        "icon_with_text_pcaqTj",
         "button_aegkDr"
       ],
       "custom_css": [
