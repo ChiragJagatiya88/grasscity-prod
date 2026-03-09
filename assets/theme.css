@@ -7675,6 +7675,10 @@ body:not(.header-pinned) .header-scrolled .header {
 }
 .footer__copyright-content {
   margin: 0;
+  color: #838682;
+  a {
+    text-decoration: underline;
+  }
 }
 .footer__copyright-content a:hover {
   color: rgba(var(--color-foreground), 1);
