@@ -127,3 +127,7 @@
     height: var(--slide-height, 0);
   }
 }
+
+.slideshow-wrapper .slideshow__content {
+  padding: max(13.5rem, 50vw - var(--scrollbar-width, 0px) / 2 - var(--page-width) / 2);
+}
