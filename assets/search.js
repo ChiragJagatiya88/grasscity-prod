@@ -93,6 +93,7 @@ class PredictiveSearch extends HTMLElement {
     }
     return (
       url.searchParams.set('q', search_term),
+      url.searchParams.set('resources[type]', 'product'),
       url.searchParams.set('resources[limit]', this.dataset.resultsLimit || 3),
       url.searchParams.set('resources[limit_scope]', 'each'),
       url.searchParams.set('section_id', FoxTheme.utils.getSectionId(this)),
