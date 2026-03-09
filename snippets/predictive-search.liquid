@@ -20,6 +20,7 @@
       id="PredictiveSearch-{{ section.id }}"
     >
       <input type="hidden" name="options[prefix]" value="last">
+      <input type="hidden" name="type" value="product">
       <div class="search__field relative flex items-center">
         {%- if settings.predictive_search_type_enabled
           and settings.predictive_search_enabled
