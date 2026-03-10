@@ -215,6 +215,7 @@
     },
     "custom_liquid_WyckDw": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.name",
       "settings": {
         "custom_liquid": "<div class=\"yotpo yotpo-bottomline\"\n  data-appkey=\"U82xY4pLpmoVHozaVvBcwstxfshyPPmsCp5sKdai\"\n  data-domain=\"{{ shop.permanent_domain }}\">\n</div>\n\n</hr>\n\n<div class=\"yotpo yotpo-reviews-summary\" data-appkey=\"U82xY4pLpmoVHozaVvBcwstxfshyPPmsCp5sKdai\"></div>",
