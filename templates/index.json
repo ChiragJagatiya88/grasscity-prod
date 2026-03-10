@@ -213,6 +213,16 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "custom_liquid_WyckDw": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": {
+        "custom_liquid": "<div class=\"yotpo yotpo-bottomline\"\n  data-appkey=\"U82xY4pLpmoVHozaVvBcwstxfshyPPmsCp5sKdai\"\n  data-domain=\"{{ shop.permanent_domain }}\">\n</div>\n\n</hr>\n\n<div class=\"yotpo yotpo-reviews-summary\" data-appkey=\"U82xY4pLpmoVHozaVvBcwstxfshyPPmsCp5sKdai\"></div>",
+        "color_scheme": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
     "featured_collection_bdaamt": {
       "type": "featured-collection",
       "blocks": {
@@ -1885,6 +1895,7 @@
   "order": [
     "collection_list_slider_6qbNfj",
     "slideshow_q3U4Jn",
+    "custom_liquid_WyckDw",
     "featured_collection_bdaamt",
     "collection_cards_KV7p8g",
     "custom_content_HPgFTK",
