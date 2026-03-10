@@ -213,17 +213,6 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "custom_liquid_WyckDw": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "name": "t:sections.custom-liquid.name",
-      "settings": {
-        "custom_liquid": "<div class=\"yotpo yotpo-bottomline\"\n  data-appkey=\"U82xY4pLpmoVHozaVvBcwstxfshyPPmsCp5sKdai\"\n  data-domain=\"{{ shop.permanent_domain }}\">\n</div>\n\n</hr>\n\n<div class=\"yotpo yotpo-reviews-summary\" data-appkey=\"U82xY4pLpmoVHozaVvBcwstxfshyPPmsCp5sKdai\"></div>",
-        "color_scheme": "",
-        "padding_top": 50,
-        "padding_bottom": 50
-      }
-    },
     "featured_collection_bdaamt": {
       "type": "featured-collection",
       "blocks": {
@@ -353,79 +342,6 @@
         "show_progress_bar": true,
         "padding_top": 40,
         "padding_bottom": 0,
-        "show_section_divider": false,
-        "divider_width": "fixed"
-      }
-    },
-    "collection_cards_KV7p8g": {
-      "type": "collection-cards",
-      "blocks": {
-        "collection_C7DEmd": {
-          "type": "collection",
-          "settings": {
-            "collection": "smoking-pipes",
-            "image": "shopify://shop_images/gs_pipes-popular_ab_v01.webp",
-            "title": "Pipes"
-          }
-        },
-        "collection_Ndj8fm": {
-          "type": "collection",
-          "settings": {
-            "collection": "dry-herb-vaporizers",
-            "image": "shopify://shop_images/gs_vaporizers-popular_ab_v01.webp",
-            "title": "Vaporizers"
-          }
-        },
-        "collection_VBaAEj": {
-          "type": "collection",
-          "settings": {
-            "collection": "dab-rigs",
-            "image": "shopify://shop_images/gs_dab-rigs-popular_ab_v01.webp",
-            "title": "Dab Rigs"
-          }
-        },
-        "collection_QHbmRp": {
-          "type": "collection",
-          "settings": {
-            "collection": "glass-bongs",
-            "image": "shopify://shop_images/gs_bongs-popular_ab_v01.webp",
-            "title": "Glass Bongs"
-          }
-        }
-      },
-      "block_order": [
-        "collection_C7DEmd",
-        "collection_Ndj8fm",
-        "collection_VBaAEj",
-        "collection_QHbmRp"
-      ],
-      "disabled": true,
-      "name": "t:sections.collection-cards.presets",
-      "settings": {
-        "container": "fixed",
-        "color_scheme": "",
-        "section_header_alignment": "left",
-        "section_header_alignment_mobile": "inherit",
-        "subheading": "",
-        "heading": "Hot Collections",
-        "highlight_style": "none",
-        "highlight_font_style": "italic",
-        "highlight_style_color": "",
-        "highlight_text_color": "",
-        "heading_size": "h2",
-        "description": "",
-        "text_size": "text-sm",
-        "columns_desktop": 4,
-        "column_gap": "small",
-        "row_gap": "inherit",
-        "enable_slider": true,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "card_color_scheme": "",
-        "image_ratio": "3/4",
-        "show_product_count": true,
-        "padding_top": 50,
-        "padding_bottom": 50,
         "show_section_divider": false,
         "divider_width": "fixed"
       }
@@ -1896,9 +1812,7 @@
   "order": [
     "collection_list_slider_6qbNfj",
     "slideshow_q3U4Jn",
-    "custom_liquid_WyckDw",
     "featured_collection_bdaamt",
-    "collection_cards_KV7p8g",
     "custom_content_HPgFTK",
     "collection_tabs_VexkkR",
     "favorite_products_6Tg9Pn",
