@@ -5,8 +5,14 @@
 -%}
 {% comment %}
   Static market links – grasscity.eu, grasscity.co.uk, grasscity.de, grasscity.fr, grasscity.nl.
+  US is default/selected on this site (grasscity.com).
   Original path-based selector backed up in: snippets/market-selector-backup.liquid
 {% endcomment %}
+{% assign host = request.host | downcase %}
+{% assign is_us_site = false %}
+{% if host == 'www.grasscity.com' or host == 'grasscity.com' or host contains 'myshopify.com' %}
+  {% assign is_us_site = true %}
+{% endif %}
 <div id="market-disclosure-{{ selector_id }}" class="market-disclosure disclosure no-js-hidden disclosure--{{ position }} disclosure--plain country-switcher {{ wrapper_class }}" style="--f-max-width: 220px" data-market-disclosure-id="{{ selector_id }}">
   <div class="visually-hidden" id="MarketLabel-{{ selector_id }}">{{ 'localization.country_label' | t }}</div>
   <button
@@ -21,35 +27,23 @@
     {% render 'icon-caret-up' %}
   </button>
   <ul class="disclosure-list select-country__list v-scrollable text-left" id="market-list-{{ selector_id }}" role="list">
+    <li class="country US{% if is_us_site %} disclosure-list__item--current{% endif %}">
+      <a class="disclosure-list__option flag US" href="https://www.grasscity.com/geo_ip_suggestion/redirect/website/?___store=us_en"{% if is_us_site %} aria-current="true"{% endif %}>USA</a>
+    </li>
     <li class="country BE">
-      <a
-        class="disclosure-list__option flag BE"
-        href="https://www.grasscity.eu/geo_ip_suggestion/redirect/website/?___store=eu_en"
-      >Europe</a>
+      <a class="disclosure-list__option flag BE" href="https://www.grasscity.eu/geo_ip_suggestion/redirect/website/?___store=eu_en">Europe</a>
     </li>
     <li class="country GB">
-      <a
-        class="disclosure-list__option flag GB"
-        href="https://www.grasscity.co.uk/geo_ip_suggestion/redirect/website/?___store=uk_en"
-      >UK</a>
+      <a class="disclosure-list__option flag GB" href="https://www.grasscity.co.uk/geo_ip_suggestion/redirect/website/?___store=uk_en">UK</a>
     </li>
     <li class="country DE">
-      <a
-        class="disclosure-list__option flag DE"
-        href="https://www.grasscity.de/geo_ip_suggestion/redirect/website/?___store=eu_de"
-      >Deutschland</a>
+      <a class="disclosure-list__option flag DE" href="https://www.grasscity.de/geo_ip_suggestion/redirect/website/?___store=eu_de">Deutschland</a>
     </li>
     <li class="country FR">
-      <a
-        class="disclosure-list__option flag FR"
-        href="https://www.grasscity.fr/geo_ip_suggestion/redirect/website/?___store=eu_fr"
-      >France</a>
+      <a class="disclosure-list__option flag FR" href="https://www.grasscity.fr/geo_ip_suggestion/redirect/website/?___store=eu_fr">France</a>
     </li>
     <li class="country NL">
-      <a
-        class="disclosure-list__option flag NL"
-        href="https://www.grasscity.nl/geo_ip_suggestion/redirect/website/?___store=nl_nl"
-      >Nederlands</a>
+      <a class="disclosure-list__option flag NL" href="https://www.grasscity.nl/geo_ip_suggestion/redirect/website/?___store=nl_nl">Nederlands</a>
     </li>
   </ul>
 </div>
