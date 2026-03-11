@@ -184,10 +184,10 @@
           "type": "newsletter",
           "settings": {
             "block_width": 50,
-            "heading": "Join Our Newsletter",
+            "heading": "Join the Grasscity Community",
             "heading_size": "h3",
-            "newsletter_description": "<p>Sign up to our newsletter & receive 10% off your first order.</p>",
-            "newsletter_term": "<p>By subscribing you agree to the <a href=\"/policies/terms-of-service\" title=\"Terms of Service\">Terms of Services</a>  and  <a href=\"/policies/privacy-policy\" title=\"Privacy Policy\">Privacy Policy.</a></p>",
+            "newsletter_description": "<p>Get the latest drops, exclusive deals, and sesh-worthy gear straight to your inbox.</p>",
+            "newsletter_term": "",
             "newsletter_text_alignment": "left",
             "form_width": 465,
             "button_style": "btn--primary",
