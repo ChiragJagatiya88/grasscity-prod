@@ -3026,6 +3026,9 @@
           "settings": {
             "show_description": {
               "label": "Show collection description"
+            },
+            "show_onliner":{
+              "label":"Show collection one liner"
             }
           }
         }
