@@ -418,7 +418,7 @@
           "type": "text",
           "settings": {
             "text_link": "",
-            "text": "30 Days Free Returns",
+            "text": "Easy Returns",
             "text_size": "h4",
             "text_opacity": 100,
             "use_custom_color": false,
@@ -429,7 +429,7 @@
           "type": "text",
           "settings": {
             "text_link": "",
-            "text": "Secure Payment",
+            "text": "Lowest Price Guaranteed",
             "text_size": "h4",
             "text_opacity": 100,
             "use_custom_color": false,
@@ -440,7 +440,7 @@
           "type": "text",
           "settings": {
             "text_link": "",
-            "text": "24/7 Customer Support",
+            "text": "Secure Checkout",
             "text_size": "h4",
             "text_opacity": 100,
             "use_custom_color": false,
@@ -449,6 +449,7 @@
         },
         "text_dGmg9m": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text_link": "",
             "text": "Sustainable Materials",
