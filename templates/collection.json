@@ -103,7 +103,7 @@
         "featured_collection_tTXGhG": {
           "type": "featured_collection",
           "settings": {
-            "collection": "ceramic-bongs",
+            "collection": "leguacy-ceramic-bongs",
             "title": "Ceramic"
           }
         },
@@ -117,7 +117,7 @@
         "featured_collection_NqmiBp": {
           "type": "featured_collection",
           "settings": {
-            "collection": "beaker-base-bongs",
+            "collection": "leguacy-beaker-base-bongs",
             "title": "Beaker Base"
           }
         },
