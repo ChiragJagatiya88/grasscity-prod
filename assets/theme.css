@@ -8313,4 +8313,6 @@ body.search-template .header__top .header__search {
     font-weight: var(--font-body-weight) !important;
     font-size: var(--font-body-size)!important;
     line-height: var(--font-body-line-height)!important;
+        margin: 0;
+    border-left: 0;
 }
