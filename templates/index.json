@@ -47,7 +47,7 @@
         "featured_collection_jMA9xm": {
           "type": "featured_collection",
           "settings": {
-            "collection": "herb-grinders",
+            "collection": "leguacy-herb-grinders",
             "image": "shopify://shop_images/gs_grinders_ab_v01.webp",
             "title": "Herb Grinders"
           }
@@ -55,7 +55,7 @@
         "featured_collection_J6hxH9": {
           "type": "featured_collection",
           "settings": {
-            "collection": "glass-bubblers",
+            "collection": "leguacy-glass-bubblers",
             "image": "shopify://shop_images/gs_glass-bubblers-circle_ab_v01.webp",
             "title": "Glass Bubblers"
           }
@@ -79,7 +79,7 @@
         "featured_collection_J6V8fx": {
           "type": "featured_collection",
           "settings": {
-            "collection": "420-accessories",
+            "collection": "leguacy-420-accessories",
             "image": "shopify://shop_images/gs_420-circle_ab_v01.webp",
             "title": "420 Accessories"
           }
@@ -1119,7 +1119,7 @@
             "heading_size_mobile": "inherit",
             "heading_size_custom": 18,
             "text": "",
-            "card_link": "shopify://collections/herb-grinders"
+            "card_link": "shopify://collections/leguacy-herb-grinders"
           }
         },
         "image_card_yb3htw": {
