@@ -748,8 +748,8 @@ layout-switcher {
   }
 }
 }
-.page__content {
-  .rte ul p, .rte ol p {
+.page__content.rte {
+  ul p, ol p {
     display: inline-block;
   }
 }
