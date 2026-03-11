@@ -48,6 +48,7 @@
             "text": "<p>We offer fast and reliable shipping options to ensure your order.</p>",
             "text_size": "text-base",
             "button_label": "Learn More",
+            "button_link": "",
             "button_style": "btn--primary",
             "button_icon": "none"
           }
@@ -68,6 +69,7 @@
             "text": "<p>Shop confidently with our clear, simple, and hassle-free returns policy.</p>",
             "text_size": "text-base",
             "button_label": "Learn More",
+            "button_link": "",
             "button_style": "btn--primary",
             "button_icon": "none"
           }
@@ -88,6 +90,7 @@
             "text": "<p>Safe, secure, and trusted payment methods for your peace of mind.</p>",
             "text_size": "text-base",
             "button_label": "Learn More",
+            "button_link": "",
             "button_style": "btn--primary",
             "button_icon": "none"
           }
@@ -108,6 +111,7 @@
             "text": "<p>Quality assured with our reliable limited warranty on select products.</p>",
             "text_size": "text-base",
             "button_label": "Learn More",
+            "button_link": "",
             "button_style": "btn--primary",
             "button_icon": "none"
           }
@@ -128,6 +132,7 @@
             "text": "<p>Stay updated on your order's journey from our warehouse to your door.</p>",
             "text_size": "text-base",
             "button_label": "Learn More",
+            "button_link": "",
             "button_style": "btn--primary",
             "button_icon": "none"
           }
@@ -140,6 +145,7 @@
         "column_4tf8jd",
         "column_nRPVaa"
       ],
+      "disabled": true,
       "settings": {
         "container": "fixed",
         "color_scheme": "scheme-1",
