@@ -211,7 +211,7 @@
         "social_button_style": "btn--icon",
         "enable_country_selector": false,
         "enable_language_selector": false,
-        "enable_market_links": true,
+        "enable_market_links": false,
         "payment_enable": true,
         "footer_layout": "standard",
         "footer_bottom_menu": "footer",

@@ -92,7 +92,7 @@
         "text_A7Wt4A": {
           "type": "text",
           "settings": {
-            "text": "✌🏼 Free Express Shipping on orders $50!",
+            "text": "Free Shipping on Qualifying Orders Over $50",
             "position": "center",
             "highlight_text": "",
             "highlight_text_style": "button",
@@ -102,6 +102,7 @@
         },
         "language_country_tzMjBj": {
           "type": "language_country",
+          "disabled": true,
           "settings": {
             "show_language_selector": false,
             "show_country_selector": false,
