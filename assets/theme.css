@@ -2066,6 +2066,7 @@ summary::-webkit-details-marker {
   .main-content .shopify-policy__container {
     --page-padding: 1.6rem;
     max-width: 77rem;
+    max-width: 1600px;
     padding-block: 6rem;
   }
   .shopify-challenge__message {
