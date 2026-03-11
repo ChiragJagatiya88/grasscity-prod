@@ -727,6 +727,7 @@ elite-icon-nm {
 
 @media only screen and (max-width: 767px) {
 .facet-drawer-button {
+  height: auto;
   .icon-grid-four {
     width: 15px;
     height: 15px;
