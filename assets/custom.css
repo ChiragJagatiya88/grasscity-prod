@@ -719,3 +719,10 @@ elite-icon-nm {
   br {display: none;}
   h2 {font-size: 22px; margin-block: 20px 10px; font-weight: 600;}
 }
+
+
+.collection_top_title {
+  .section-rich-text.color-scheme-info {
+    background: #ededed;
+  }
+}
