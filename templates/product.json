@@ -69,7 +69,7 @@
           "type": "icon-with-text",
           "settings": {
             "layout": "horizontal",
-            "title_font": "body-bolder",
+            "title_font": "body",
             "title_size": "text-base",
             "icon_1": "check",
             "heading_1": "Authentic Products",
