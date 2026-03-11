@@ -523,7 +523,7 @@
             "text": "<p>Encrypted checkout to keep your payment information secure.</p>",
             "text_size": "text-base",
             "button_label": "",
-            "button_link": "shopify://pages/terms-conditions",
+            "button_link": "shopify://pages/terms-conditions-4",
             "button_style": "btn--plain",
             "button_icon": "caret-right"
           }
