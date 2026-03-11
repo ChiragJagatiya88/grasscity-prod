@@ -178,7 +178,7 @@
         "text_7h6LaE"
       ],
       "custom_css": [
-        ".rich-text {max-width: 1600px; margin: 0 auto;}",
+        ".rich-text {max-width: 1600px; margin: 0 auto; padding-inline: var(--page-padding);}",
         "@media (max-width: 1023px) {.rich-text__heading {max-width: 50rem; margin: 0 auto; }}"
       ],
       "settings": {
