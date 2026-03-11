@@ -38,7 +38,7 @@
       "custom_css": [],
       "settings": {
         "container": "fixed",
-        "color_scheme": "scheme-info",
+        "color_scheme": "scheme-10",
         "text_alignment": "center",
         "show_collection_image": false,
         "image_overlay_opacity": 0,
