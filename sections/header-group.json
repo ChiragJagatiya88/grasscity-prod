@@ -186,6 +186,20 @@
             "image_ratio": "adapt"
           }
         },
+        "sidebar_fiVQ4j": {
+          "type": "sidebar",
+          "name": "Vaporizers",
+          "settings": {
+            "menu_title": "Delta 9 THC",
+            "enable_hl_link": false,
+            "hl_link_style": "text_color",
+            "hl_link_color": "",
+            "menu_columns": 3,
+            "show_collection_image": false,
+            "show_image_of_first_product": false,
+            "image_ratio": "adapt"
+          }
+        },
         "sidebar_BKE9HW": {
           "type": "sidebar",
           "name": "Herb Grinders",
@@ -261,6 +275,7 @@
         "sidebar_aNyMLV",
         "sidebar_tjfBAn",
         "sidebar_U3yyww",
+        "sidebar_fiVQ4j",
         "sidebar_BKE9HW",
         "sidebar_6miiGN",
         "sidebar_zBNGHX",
