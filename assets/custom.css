@@ -737,6 +737,10 @@ elite-icon-nm {
   }
 }
 layout-switcher {
+  .btn--icon-circle {
+    width: 35px;
+    height: 35px;
+  }
   .icon-grid-four {
     width: 15px;
     height: 15px;
