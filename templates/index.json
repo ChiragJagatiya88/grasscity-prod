@@ -248,7 +248,7 @@
           "type": "collection",
           "disabled": true,
           "settings": {
-            "collection": "new-items",
+            "collection": "leguacy-new-items",
             "title": "Best Sellers",
             "show_banner": true,
             "color_scheme": "scheme-inverse",
@@ -503,7 +503,7 @@
         "collection_j3wCpz": {
           "type": "collection",
           "settings": {
-            "collection": "new-items",
+            "collection": "leguacy-new-items",
             "image": "shopify://shop_images/gs_lifestyle_new_releases_ab_v01_b27f78c8-84b6-4252-92fc-bbc753a6be77.webp",
             "title": "New Releases",
             "text": "<p>We Don't Just Price Match, We <strong>Price BEAT </strong>by 5%</p>",
