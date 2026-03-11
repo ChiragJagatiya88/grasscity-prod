@@ -60,9 +60,9 @@
 {% assign bottom_desc_check = bottom_desc | strip_html | strip %}
 
 {% if collection.metafields.custom.bottom_description != blank and bottom_desc_check != blank %}
-  <div class="page-width collect-bottom-section-pedding page-width--fixed section__container section-{{ section.id }}-padding">
+  <div class="page-width  page-width--fixed section__container section-{{ section.id }}-padding">
     <div class="color-{{ section.settings.color_scheme }} gradient">
-      <div class="page-width page-width--fixed section__container section-{{ section.id }}-padding">
+      <div class="page-width collect-bottom-section-pedding page-width--fixed section__container section-{{ section.id }}-padding">
         <div class="collection_bottom_des rte">
         {%- if section.settings.heading != blank -%}
           <h2 class="collection-bottom-title">
