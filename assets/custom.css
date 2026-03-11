@@ -741,7 +741,8 @@ layout-switcher {
     width: 35px;
     height: 35px;
   }
-  .icon-grid-four {
+  .icon-grid-four,
+  .icon-list-dashes {
     width: 15px;
     height: 15px;
   }
