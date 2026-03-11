@@ -18,6 +18,39 @@
         "padding_bottom": 20
       }
     },
+    "banner": {
+      "type": "main-collection-banner",
+      "blocks": {
+        "collection_info_zUNyKV": {
+          "type": "collection_info",
+          "settings": {
+            "heading_size": "hd1",
+            "heading_tag": "h1",
+            "show_description": true,
+            "padding_top": 40,
+            "padding_bottom": 40
+          }
+        }
+      },
+      "block_order": [
+        "collection_info_zUNyKV"
+      ],
+      "custom_css": [],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-info",
+        "text_alignment": "center",
+        "show_collection_image": false,
+        "image_overlay_opacity": 0,
+        "image_position": "as-bg",
+        "image_height": "extra-small",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "image_height_mobile": "auto",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "rich_text_XnyDGf": {
       "type": "rich-text",
       "blocks": {
@@ -49,6 +82,7 @@
         "heading_RE7BAg",
         "text_CeEqN9"
       ],
+      "disabled": true,
       "custom_css": [],
       "name": "t:sections.rich-text.name",
       "settings": {
@@ -478,44 +512,11 @@
         "padding_top": 22,
         "padding_bottom": 22
       }
-    },
-    "banner": {
-      "type": "main-collection-banner",
-      "blocks": {
-        "collection_info_zUNyKV": {
-          "type": "collection_info",
-          "settings": {
-            "heading_size": "h1",
-            "heading_tag": "h1",
-            "show_description": true,
-            "padding_top": 40,
-            "padding_bottom": 40
-          }
-        }
-      },
-      "block_order": [
-        "collection_info_zUNyKV"
-      ],
-      "disabled": true,
-      "custom_css": [],
-      "settings": {
-        "container": "fixed",
-        "color_scheme": "scheme-6",
-        "text_alignment": "left",
-        "show_collection_image": true,
-        "image_overlay_opacity": 0,
-        "image_position": "right",
-        "image_height": "extra-small",
-        "enable_parallax": false,
-        "parallax_direction": "vertical",
-        "image_height_mobile": "auto",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
     }
   },
   "order": [
     "breadcrumbs_Gxg9wp",
+    "banner",
     "rich_text_XnyDGf",
     "custom_liquid_h8yHd3",
     "collection_list_slider_JiW9t4",
@@ -523,7 +524,6 @@
     "collection_bottom_description_i6UPK6",
     "custom_liquid_AVLwYH",
     "collection_faqs_ydbz9c",
-    "scrolling_promotion_Fy9Yhn",
-    "banner"
+    "scrolling_promotion_Fy9Yhn"
   ]
 }
