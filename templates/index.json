@@ -15,7 +15,7 @@
         "featured_collection_L9N3Tg": {
           "type": "featured_collection",
           "settings": {
-            "collection": "bongs",
+            "collection": "leguacy-bongs",
             "image": "shopify://shop_images/gs_bongs-circle_ab_v01_35d6788e-fd8e-48ab-8aa8-875cd5dcc575.webp",
             "title": "Bongs"
           }
@@ -164,7 +164,7 @@
             "description": "",
             "description_size": "text-base",
             "button_label": "Shop Bongs",
-            "button_link": "shopify://collections/bongs",
+            "button_link": "shopify://collections/leguacy-bongs",
             "button_style": "btn--primary",
             "button_icon": "none",
             "enable_preload_image": true
@@ -640,7 +640,7 @@
         "collection_qxfNFe": {
           "type": "collection",
           "settings": {
-            "collection": "bongs",
+            "collection": "leguacy-bongs",
             "image": "shopify://shop_images/gs_lifestyle_best_selling_ab_v01_ea5ad814-a880-4ef4-9a0b-1a3dac350c6e.webp",
             "title": "Best Sellers",
             "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
@@ -1249,7 +1249,7 @@
             "heading_size": "h1",
             "text": "<p>Introducing the latest styles in women's shoes tailored for every occasion taste.</p>",
             "button_label": "Shop Now",
-            "button_link": "shopify://collections/bongs",
+            "button_link": "shopify://collections/leguacy-bongs",
             "button_style": "btn--primary",
             "button_icon": "none"
           }
