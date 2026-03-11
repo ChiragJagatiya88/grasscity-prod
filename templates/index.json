@@ -149,13 +149,14 @@
           "type": "slide",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "background": "shopify://shop_images/gs_membership-elite_desktop_ab_v01.webp",
+            "background": "shopify://shop_images/gc_hp_hero_desktop_usa_01_c083d131-19ee-4b8b-96f0-afd28a85c5a3.webp",
+            "background_mobile": "shopify://shop_images/gc_hp_hero_mobile_usa_01.webp",
             "image_overlay_opacity": 30,
-            "content_position": "middle-left",
-            "text_alignment": "left",
-            "subheading": "World's Best Smoke Shop",
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "subheading": "Classic to Modern Glass",
             "subheading_tag": "div",
-            "title": "BRING HOME THE LA CHILL",
+            "title": "Bongs That Hit Different",
             "heading_size": "h2",
             "heading_tag": "h1",
             "highlight_style": "none",
@@ -164,8 +165,8 @@
             "highlight_text_color": "",
             "description": "",
             "description_size": "text-base",
-            "button_label": "Shop Now",
-            "button_link": "shopify://collections/leguacy-bongs",
+            "button_label": "Shop Bongs",
+            "button_link": "shopify://collections/bongs",
             "button_style": "btn--primary",
             "button_icon": "none",
             "enable_preload_image": true
@@ -202,6 +203,79 @@
         "slide_Y7T4HB",
         "slide_7PwcbK"
       ],
+      "settings": {
+        "container": "full",
+        "slide_height": "medium",
+        "show_controls": true,
+        "autoplay": true,
+        "autoplay_delay": 6,
+        "show_text_below": false,
+        "text_alignment_mobile": "center",
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "slideshow_g9XxFa": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_WwF87t": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "background": "shopify://shop_images/gs_membership-elite_desktop_ab_v01.webp",
+            "image_overlay_opacity": 30,
+            "content_position": "middle-left",
+            "text_alignment": "left",
+            "subheading": "World's Best Smoke Shop",
+            "subheading_tag": "div",
+            "title": "BRING HOME THE LA CHILL",
+            "heading_size": "h2",
+            "heading_tag": "h1",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "description": "",
+            "description_size": "text-base",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/leguacy-bongs",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": true
+          }
+        },
+        "slide_8ETifM": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "background": "shopify://shop_images/vape-under-100-AED.jpg",
+            "image_overlay_opacity": 30,
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "subheading": "World's Best Smoke Shop",
+            "subheading_tag": "h2",
+            "title": "BRING HOME THE LA CHILL",
+            "heading_size": "h2",
+            "heading_tag": "div",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "description": "",
+            "description_size": "text-base",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/leguacy-bongs",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": true
+          }
+        }
+      },
+      "block_order": [
+        "slide_WwF87t",
+        "slide_8ETifM"
+      ],
+      "disabled": true,
+      "name": "Slideshow - Backup",
       "settings": {
         "container": "full",
         "slide_height": "medium",
@@ -1812,6 +1886,7 @@
   "order": [
     "collection_list_slider_6qbNfj",
     "slideshow_q3U4Jn",
+    "slideshow_g9XxFa",
     "featured_collection_bdaamt",
     "custom_content_HPgFTK",
     "collection_tabs_VexkkR",
