@@ -638,7 +638,7 @@
         "collection_kXyTe3": {
           "type": "collection",
           "settings": {
-            "collection": "leguacy-january-featured-picks",
+            "collection": "january-featured-picks",
             "image": "shopify://shop_images/gs_lifestyle_featured_picks_ab_v01_0fe7bbd8-6729-4977-a411-388d384a02ac.webp",
             "title": "Featured Picks",
             "text": "<p>We Don't Just Price Match, We <strong>Price BEAT </strong>by 5%</p>",
@@ -650,7 +650,7 @@
         "collection_qxfNFe": {
           "type": "collection",
           "settings": {
-            "collection": "leguacy-bongs",
+            "collection": "bongs",
             "image": "shopify://shop_images/gs_lifestyle_best_selling_ab_v01_aa19b6b3-904f-422a-a3eb-47669631ca2a.webp",
             "title": "Best Sellers",
             "text": "<p>We Don't Just Price Match, We <strong>Price BEAT </strong>by 5%</p>",
@@ -662,7 +662,7 @@
         "collection_j3wCpz": {
           "type": "collection",
           "settings": {
-            "collection": "leguacy-new-items",
+            "collection": "new-items",
             "image": "shopify://shop_images/gs_lifestyle_new_releases_ab_v01_f2d249b7-f7f1-44f9-b684-c1914ebc6863.webp",
             "title": "New Releases",
             "text": "<p>We Don't Just Price Match, We <strong>Price BEAT </strong>by 5%</p>",
@@ -674,7 +674,7 @@
         "collection_W8AwMF": {
           "type": "collection",
           "settings": {
-            "collection": "leguacy-munchies",
+            "collection": "munchies",
             "image": "shopify://shop_images/gs_lifestyle_sunny_staff_picks_ab_v01_9da40083-91a7-488a-89f4-5b7b29e86adf.webp",
             "title": "Sunny Staff Picks",
             "text": "<p>We Don't Just Price Match, We <strong>Price BEAT </strong>by 5%</p>",
