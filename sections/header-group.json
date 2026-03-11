@@ -102,6 +102,7 @@
         },
         "language_country_tzMjBj": {
           "type": "language_country",
+          "disabled": true,
           "settings": {
             "show_language_selector": false,
             "show_country_selector": false,
