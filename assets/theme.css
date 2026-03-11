@@ -8305,3 +8305,8 @@ body.search-template #MainContent,
 body.search-template .header__top .header__search {
   display: none;
 }
+
+.collection-main-description blockquote{
+  display:block;
+  
+}
