@@ -163,6 +163,7 @@
         },
         "collapsible-row-3": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Specifications",
             "heading_size": "h4",
