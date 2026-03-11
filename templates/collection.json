@@ -430,7 +430,7 @@
         "item_heading_size": "h4",
         "item_icon_size": "extra-large",
         "padding_top": 50,
-        "padding_bottom": 50,
+        "padding_bottom": 0,
         "show_section_divider": false,
         "divider_width": "fixed"
       }
@@ -442,9 +442,9 @@
         "color_scheme": "",
         "show_section_divider": false,
         "divider_width": "fixed",
-        "padding_top": 10,
-        "padding_bottom": 10,
-        "padding_top_mobile": 10,
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "padding_top_mobile": 24,
         "padding_bottom_mobile": 24
       }
     },
