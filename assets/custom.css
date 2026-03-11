@@ -721,8 +721,6 @@ elite-icon-nm {
 }
 
 
-.collection_top_title {
-  .section-rich-text.color-scheme-info {
-    background: #ededed;
-  }
+.collection_top_title.color-scheme-info {
+  background: #ededed;
 }
