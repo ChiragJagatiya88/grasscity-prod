@@ -91,7 +91,7 @@
         "featured_collection_7myDMy": {
           "type": "featured_collection",
           "settings": {
-            "collection": "glass-bongs",
+            "collection": "leguacy-glass-bongs",
             "title": "Glass"
           }
         },
@@ -178,62 +178,11 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
-      "blocks": {
-        "image_card_mwkyJy": {
-          "type": "image_card",
-          "settings": {
-            "color_scheme": "scheme-inverse",
-            "image_position": 1,
-            "image": "shopify://shop_images/gs_collection-highlight_desktop_ab_v01.webp",
-            "image_ratio": "adapt",
-            "image_overlay_opacity": 10,
-            "content_position": "split-bottom-button",
-            "content_alignment": "center",
-            "content_spacing": "small",
-            "content_gap": "fitted",
-            "card_link": "",
-            "subheading": "Home & Decor",
-            "subheading_style": "",
-            "heading": "Saving $30 for Lighting",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h3",
-            "heading_size_mobile": "inherit",
-            "heading_size_custom": 18,
-            "description": "",
-            "text_size": "text-base",
-            "button_label": "Shop Now",
-            "button_style": "btn--primary",
-            "button_icon": "none",
-            "enable_preload_image": false
-          }
-        }
-      },
-      "block_order": [
-        "image_card_mwkyJy"
-      ],
       "custom_css": [],
       "settings": {
-        "container": "fixed",
         "color_scheme": "scheme-1",
-        "products_per_page": 20,
-        "columns_desktop": 4,
-        "column_gap": "medium",
-        "row_gap": "large",
-        "pagination": "number",
-        "enable_filtering": true,
-        "enable_color_swatch": true,
-        "filter_type": "vertical",
-        "expand_filter_groups": "Availability, Price, Color, Size, Category",
-        "enable_sorting": true,
-        "enable_layout_switching": true,
-        "columns_mobile": "2",
         "padding_top": 28,
-        "padding_bottom": 60,
-        "show_section_divider": true,
-        "divider_width": "fixed"
+        "padding_bottom": 60
       }
     },
     "custom_liquid_AVLwYH": {
