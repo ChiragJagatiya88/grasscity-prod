@@ -399,7 +399,7 @@ table.order-history {
     content: attr(data-label);
     font-size: 12px;
     text-transform: uppercase;
-    color: rgb(var(--color-foreground)/ 0.5);
+    color: #17171780;
   }
 
   .order-history td:first-of-type::before {
