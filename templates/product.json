@@ -236,7 +236,7 @@
         "sticky_atc_bar_7HgNgP"
       ],
       "custom_css": [
-        "@media (min-width: 1280px) {.product {padding-inline: 5rem; } .section-main-product.page-width {max-width: 1500px; }}"
+        "@media (min-width: 1280px) {.product {padding-inline: 5rem; } .section-main-product.page-width {max-width: 1500px; } .icon-with-text__item {gap: 0.4rem; } .text-base {font-size: 14px; } .icon-with-text .icon {height: 1.4rem; width: 1.4rem; } .icon-with-text {gap: 1rem; }}"
       ],
       "settings": {
         "color_scheme": "scheme-1",
