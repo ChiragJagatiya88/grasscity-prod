@@ -27,6 +27,7 @@
             "heading_size": "hd1",
             "heading_tag": "h1",
             "show_description": false,
+            "show_onliner": true,
             "padding_top": 40,
             "padding_bottom": 40
           }
@@ -434,6 +435,19 @@
         "divider_width": "fixed"
       }
     },
+    "spacer_aTTDNr": {
+      "type": "spacer",
+      "name": "t:sections.spacer.name",
+      "settings": {
+        "color_scheme": "",
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 10,
+        "padding_bottom": 10,
+        "padding_top_mobile": 10,
+        "padding_bottom_mobile": 24
+      }
+    },
     "scrolling_promotion_Fy9Yhn": {
       "type": "scrolling-promotion",
       "blocks": {
@@ -524,6 +538,7 @@
     "collection_bottom_description_i6UPK6",
     "custom_liquid_AVLwYH",
     "collection_faqs_ydbz9c",
+    "spacer_aTTDNr",
     "scrolling_promotion_Fy9Yhn"
   ]
 }
