@@ -724,3 +724,15 @@ elite-icon-nm {
 .collection_top_title.color-scheme-info {
   background: #ededed;
 }
+
+@media only screen and (max-width: 767px) {
+.facet-drawer-button {
+  .icon-grid-four {
+    width: 15px;
+    height: 15px;
+  }
+  .btn__text {
+    font-size: 12px;
+  }
+}
+}
