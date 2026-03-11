@@ -397,7 +397,7 @@ table.order-history {
 
   .customer__content td::before {
     content: attr(data-label);
-    font-size: var(--text-xs);
+    font-size: 12px;
     text-transform: uppercase;
     color: rgb(var(--color-foreground)/ 0.5);
   }
