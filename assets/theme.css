@@ -8308,5 +8308,9 @@ body.search-template .header__top .header__search {
 
 .collection-main-description blockquote{
   display:block;
-  
+      font-family: var(--font-body-family);
+    font-style: var(--font-body-style);
+    font-weight: var(--font-body-weight);
+    font-size: var(--font-body-size);
+    line-height: var(--font-body-line-height);
 }
