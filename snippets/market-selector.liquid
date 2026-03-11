@@ -9,9 +9,31 @@
   Original path-based selector backed up in: snippets/market-selector-backup.liquid
 {% endcomment %}
 {% assign host = request.host | downcase %}
+{% assign current_market_label = 'USA' %}
 {% assign is_us_site = false %}
+{% assign is_eu_site = false %}
+{% assign is_uk_site = false %}
+{% assign is_de_site = false %}
+{% assign is_fr_site = false %}
+{% assign is_nl_site = false %}
 {% if host == 'www.grasscity.com' or host == 'grasscity.com' or host contains 'myshopify.com' %}
+  {% assign current_market_label = 'USA' %}
   {% assign is_us_site = true %}
+{% elsif host contains 'grasscity.co.uk' %}
+  {% assign current_market_label = 'UK' %}
+  {% assign is_uk_site = true %}
+{% elsif host contains 'grasscity.de' %}
+  {% assign current_market_label = 'Deutschland' %}
+  {% assign is_de_site = true %}
+{% elsif host contains 'grasscity.fr' %}
+  {% assign current_market_label = 'France' %}
+  {% assign is_fr_site = true %}
+{% elsif host contains 'grasscity.nl' %}
+  {% assign current_market_label = 'Nederlands' %}
+  {% assign is_nl_site = true %}
+{% elsif host contains 'grasscity.eu' %}
+  {% assign current_market_label = 'Europe' %}
+  {% assign is_eu_site = true %}
 {% endif %}
 <div id="market-disclosure-{{ selector_id }}" class="market-disclosure disclosure no-js-hidden disclosure--{{ position }} disclosure--plain country-switcher {{ wrapper_class }}" style="--f-max-width: 220px" data-market-disclosure-id="{{ selector_id }}">
   <div class="visually-hidden" id="MarketLabel-{{ selector_id }}">{{ 'localization.country_label' | t }}</div>
@@ -23,27 +45,27 @@
     aria-describedby="MarketLabel-{{ selector_id }}"
     data-market-toggle
   >
-    {{ 'localization.country_label' | t }}
+    {{ current_market_label }}
     {% render 'icon-caret-up' %}
   </button>
   <ul class="disclosure-list select-country__list v-scrollable text-left" id="market-list-{{ selector_id }}" role="list">
     <li class="country US{% if is_us_site %} disclosure-list__item--current{% endif %}">
       <a class="disclosure-list__option flag US" href="https://www.grasscity.com/geo_ip_suggestion/redirect/website/?___store=us_en"{% if is_us_site %} aria-current="true"{% endif %}>USA</a>
     </li>
-    <li class="country BE">
-      <a class="disclosure-list__option flag BE" href="https://www.grasscity.eu/geo_ip_suggestion/redirect/website/?___store=eu_en">Europe</a>
+    <li class="country BE{% if is_eu_site %} disclosure-list__item--current{% endif %}">
+      <a class="disclosure-list__option flag BE" href="https://www.grasscity.eu/geo_ip_suggestion/redirect/website/?___store=eu_en"{% if is_eu_site %} aria-current="true"{% endif %}>Europe</a>
     </li>
-    <li class="country GB">
-      <a class="disclosure-list__option flag GB" href="https://www.grasscity.co.uk/geo_ip_suggestion/redirect/website/?___store=uk_en">UK</a>
+    <li class="country GB{% if is_uk_site %} disclosure-list__item--current{% endif %}">
+      <a class="disclosure-list__option flag GB" href="https://www.grasscity.co.uk/geo_ip_suggestion/redirect/website/?___store=uk_en"{% if is_uk_site %} aria-current="true"{% endif %}>UK</a>
     </li>
-    <li class="country DE">
-      <a class="disclosure-list__option flag DE" href="https://www.grasscity.de/geo_ip_suggestion/redirect/website/?___store=eu_de">Deutschland</a>
+    <li class="country DE{% if is_de_site %} disclosure-list__item--current{% endif %}">
+      <a class="disclosure-list__option flag DE" href="https://www.grasscity.de/geo_ip_suggestion/redirect/website/?___store=eu_de"{% if is_de_site %} aria-current="true"{% endif %}>Deutschland</a>
     </li>
-    <li class="country FR">
-      <a class="disclosure-list__option flag FR" href="https://www.grasscity.fr/geo_ip_suggestion/redirect/website/?___store=eu_fr">France</a>
+    <li class="country FR{% if is_fr_site %} disclosure-list__item--current{% endif %}">
+      <a class="disclosure-list__option flag FR" href="https://www.grasscity.fr/geo_ip_suggestion/redirect/website/?___store=eu_fr"{% if is_fr_site %} aria-current="true"{% endif %}>France</a>
     </li>
-    <li class="country NL">
-      <a class="disclosure-list__option flag NL" href="https://www.grasscity.nl/geo_ip_suggestion/redirect/website/?___store=nl_nl">Nederlands</a>
+    <li class="country NL{% if is_nl_site %} disclosure-list__item--current{% endif %}">
+      <a class="disclosure-list__option flag NL" href="https://www.grasscity.nl/geo_ip_suggestion/redirect/website/?___store=nl_nl"{% if is_nl_site %} aria-current="true"{% endif %}>Nederlands</a>
     </li>
   </ul>
 </div>
