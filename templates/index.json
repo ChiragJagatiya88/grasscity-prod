@@ -175,6 +175,7 @@
         },
         "slide_7PwcbK": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "color_scheme": "scheme-inverse",
             "background": "shopify://shop_images/gc_hp_hero_desktop_usa_02.webp",
@@ -199,11 +200,39 @@
             "button_icon": "none",
             "enable_preload_image": true
           }
+        },
+        "slide_3JbWXG": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "background": "shopify://shop_images/region_slideshow_about_our_brand_slideshow_component.webp",
+            "background_mobile": "shopify://shop_images/gc_hp_hero_mobile_usa_03.webp",
+            "image_overlay_opacity": 30,
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "subheading": "For Serious Dabbers",
+            "subheading_tag": "h2",
+            "title": "Power Through Every Pull",
+            "heading_size": "h2",
+            "heading_tag": "div",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "description": "",
+            "description_size": "text-base",
+            "button_label": "Shop Rigs",
+            "button_link": "shopify://collections/dab-rigs",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": true
+          }
         }
       },
       "block_order": [
         "slide_Y7T4HB",
-        "slide_7PwcbK"
+        "slide_7PwcbK",
+        "slide_3JbWXG"
       ],
       "settings": {
         "container": "full",
