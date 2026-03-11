@@ -31,7 +31,7 @@
         "featured_collection_jQXtir": {
           "type": "featured_collection",
           "settings": {
-            "collection": "vaporizer",
+            "collection": "leguacy-vaporizer",
             "image": "shopify://shop_images/gs_vaporizers-circle_ab_v01.webp",
             "title": "Vaporizers"
           }
@@ -87,7 +87,7 @@
         "featured_collection_NkFYeg": {
           "type": "featured_collection",
           "settings": {
-            "collection": "january-featured-picks",
+            "collection": "leguacy-january-featured-picks",
             "image": "shopify://shop_images/gs_featured-picks-circle_ab_v01.webp",
             "title": "Featured Picks"
           }
@@ -479,7 +479,7 @@
         "collection_kXyTe3": {
           "type": "collection",
           "settings": {
-            "collection": "january-featured-picks",
+            "collection": "leguacy-january-featured-picks",
             "image": "shopify://shop_images/gs_lifestyle_featured_picks_ab_v01_81db7e72-f06a-4580-9db8-9c7440f0af92.webp",
             "title": "Featured Picks",
             "text": "<p>We Don't Just Price Match, We <strong>Price BEAT </strong>by 5%</p>",
@@ -933,7 +933,7 @@
         "collection_tqdqYc": {
           "type": "collection",
           "settings": {
-            "collection": "ashtrays",
+            "collection": "leguacy-ashtrays",
             "title": "",
             "show_banner": false,
             "color_scheme": "",
@@ -1155,7 +1155,7 @@
             "heading_size_mobile": "inherit",
             "heading_size_custom": 18,
             "text": "",
-            "card_link": "shopify://collections/vaporizer"
+            "card_link": "shopify://collections/leguacy-vaporizer"
           }
         },
         "image_card_ag7Eb3": {
