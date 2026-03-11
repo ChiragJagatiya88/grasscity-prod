@@ -1392,10 +1392,7 @@
         "heading_npp3aM",
         "text_z8htM6"
       ],
-      "custom_css": [
-        ".section__header {--header-padding-bottom: 2.4rem;}",
-        ".section__heading {max-width: 45rem;}"
-      ],
+      "custom_css": [],
       "name": "t:sections.rich-text.name",
       "settings": {
         "enable_custom_class": false,
@@ -1474,7 +1471,7 @@
         "item_button_font": "button",
         "enable_slider": true,
         "swipe_on_mobile": true,
-        "show_section_divider": true,
+        "show_section_divider": false,
         "divider_width": "full",
         "padding_top": 30,
         "padding_bottom": 0
