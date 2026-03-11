@@ -145,6 +145,17 @@
                   </motion-element>
                 </div>
               {%- endif -%}
+              {%- if block.settings.show_onliner and collection.metafields.custom.sort_description != blank -%}
+                <div class="collection-hero__description rte text-subtext">
+                  <motion-element
+                    data-motion="fade-up"
+                    data-motion-delay="50"
+                    class="block"
+                  >
+                   {{ collection.metafields.custom.sort_description | metafield_tag }}
+                  </motion-element>
+                </div>
+              {%- endif -%}
             </div>
         {%- endcase -%}
       {% endfor %}
