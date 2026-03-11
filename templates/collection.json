@@ -50,7 +50,7 @@
         "text_CeEqN9"
       ],
       "custom_css": [
-        ".section-rich-text {background: #ededed;}"
+        ".section-rich-text.color-scheme-info {background: #ededed;}"
       ],
       "name": "t:sections.rich-text.name",
       "settings": {
@@ -110,7 +110,7 @@
         "featured_collection_eTmenR": {
           "type": "featured_collection",
           "settings": {
-            "collection": "percolator-bongs",
+            "collection": "leguacy-percolator-bongs",
             "title": "Percolator"
           }
         },
