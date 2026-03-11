@@ -36,6 +36,7 @@
           "type": "column",
           "settings": {
             "icon": "none",
+            "image": "shopify://shop_images/shipping_c8a6b279-d6aa-47ec-baaf-c20c30ee3225.png",
             "max_width": 50,
             "max_width_mb": 50,
             "title": "Shipping",
@@ -57,6 +58,7 @@
           "type": "column",
           "settings": {
             "icon": "none",
+            "image": "shopify://shop_images/Returns_refunds_8d6ad8bd-5d3f-4a11-a5c8-50a3bae5f3f6.png",
             "max_width": 50,
             "max_width_mb": 50,
             "title": "Returns & Refunds",
@@ -78,6 +80,7 @@
           "type": "column",
           "settings": {
             "icon": "none",
+            "image": "shopify://shop_images/Secure_Payment_92c44957-52c9-4105-8bea-45ebc07e8ca4.png",
             "max_width": 50,
             "max_width_mb": 50,
             "title": "Secure Payment",
@@ -99,6 +102,7 @@
           "type": "column",
           "settings": {
             "icon": "none",
+            "image": "shopify://shop_images/Warranty.png",
             "max_width": 50,
             "max_width_mb": 50,
             "title": "Warranty",
@@ -120,6 +124,7 @@
           "type": "column",
           "settings": {
             "icon": "none",
+            "image": "shopify://shop_images/Track_Order.png",
             "max_width": 50,
             "max_width_mb": 50,
             "title": "Track Order",
