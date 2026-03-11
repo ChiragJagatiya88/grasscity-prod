@@ -147,7 +147,6 @@
       "blocks": {
         "slide_Y7T4HB": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "color_scheme": "scheme-inverse",
             "background": "shopify://shop_images/gc_hp_hero_desktop_usa_01_c083d131-19ee-4b8b-96f0-afd28a85c5a3.webp",
@@ -175,7 +174,6 @@
         },
         "slide_7PwcbK": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "color_scheme": "scheme-inverse",
             "background": "shopify://shop_images/gc_hp_hero_desktop_usa_02.webp",
@@ -203,7 +201,6 @@
         },
         "slide_3JbWXG": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "color_scheme": "scheme-inverse",
             "background": "shopify://shop_images/region_slideshow_about_our_brand_slideshow_component.webp",
@@ -255,13 +252,41 @@
             "button_icon": "none",
             "enable_preload_image": true
           }
+        },
+        "slide_HB83ce": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "background": "shopify://shop_images/gc_hp_hero_desktop_usa_05.webp",
+            "background_mobile": "shopify://shop_images/gc_hp_hero_mobile_usa_05.webp",
+            "image_overlay_opacity": 30,
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "subheading": "Shop the Legends",
+            "subheading_tag": "h2",
+            "title": "Cheech & Chong Glass",
+            "heading_size": "h2",
+            "heading_tag": "div",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "description": "",
+            "description_size": "text-base",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/cheech-and-chong",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": true
+          }
         }
       },
       "block_order": [
         "slide_Y7T4HB",
         "slide_7PwcbK",
         "slide_3JbWXG",
-        "slide_PPehg3"
+        "slide_PPehg3",
+        "slide_HB83ce"
       ],
       "settings": {
         "container": "full",
