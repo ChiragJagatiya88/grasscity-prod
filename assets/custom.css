@@ -736,4 +736,10 @@ elite-icon-nm {
     font-size: 12px;
   }
 }
+layout-switcher {
+  .icon-grid-four {
+    width: 15px;
+    height: 15px;
+  }
+}
 }
