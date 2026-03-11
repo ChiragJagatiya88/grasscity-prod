@@ -1245,7 +1245,7 @@
           "type": "slide",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_categories-bongs_ab_v01.webp",
+            "image": "shopify://shop_images/gs_categories-bongs_ab_v01_383b1d5c-edb8-4266-841a-2fb1a7cdd912.webp",
             "image_overlay_opacity": 20,
             "content_position": "top-left",
             "content_alignment": "left",
@@ -1267,7 +1267,7 @@
           "type": "image-card",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_categories-grinders_ab_v01.webp",
+            "image": "shopify://shop_images/gs_categories-grinders_ab_v01_bbd0ab39-cd11-4a17-b609-80270c844e13.webp",
             "content_alignment": "center",
             "heading": "Herb Grinders",
             "highlight_style": "none",
@@ -1285,7 +1285,7 @@
           "type": "image-card",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_categories-dabrigs_ab_v01.webp",
+            "image": "shopify://shop_images/gs_categories-dabrigs_ab_v01_cfdc0d32-5f59-4e29-80fc-8eb46ebeb4d8.webp",
             "content_alignment": "center",
             "heading": "Dab Rigs",
             "highlight_style": "none",
@@ -1303,7 +1303,7 @@
           "type": "image-card",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_categories-vaporizers_ab_v01.webp",
+            "image": "shopify://shop_images/gs_categories-vaporizers_ab_v01_48bfee59-5485-4a12-833b-e94152bd3655.webp",
             "content_alignment": "center",
             "heading": "Vapes",
             "highlight_style": "none",
@@ -1321,7 +1321,7 @@
           "type": "image-card",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_categories-papers_ab_v01.webp",
+            "image": "shopify://shop_images/gs_categories-papers_ab_v01_69fd4ac6-7b37-4783-abda-4a655365f283.webp",
             "content_alignment": "center",
             "heading": "Rolling Papers",
             "highlight_style": "none",
