@@ -39,7 +39,7 @@
         "featured_collection_4H9LzM": {
           "type": "featured_collection",
           "settings": {
-            "collection": "delta-9-thc",
+            "collection": "leguacy-delta-9-thc",
             "image": "shopify://shop_images/gs_d9_ab_v01.webp",
             "title": "Delta 9 THC"
           }
@@ -63,7 +63,7 @@
         "featured_collection_HwzPfD": {
           "type": "featured_collection",
           "settings": {
-            "collection": "smoking-pipes",
+            "collection": "leguacy-smoking-pipes",
             "image": "shopify://shop_images/gs_pipes-circle_ab_v01.webp",
             "title": "Smoking Pipes"
           }

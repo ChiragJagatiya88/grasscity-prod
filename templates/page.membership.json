@@ -43,7 +43,7 @@
       "type": "cc-free-membership-offers",
       "name": "<> Free Membership Offer",
       "settings": {
-        "collection_id": "club-membership",
+        "collection_id": "leguacy-club-membership",
         "btn_text": "Join Cabana Club",
         "btn_url": ""
       }
@@ -63,7 +63,7 @@
       "type": "cc-elite-membership-offers",
       "name": "<> Elite Membership Offer",
       "settings": {
-        "collection_id": "elite-membership",
+        "collection_id": "leguacy-elite-membership",
         "btn_text": "Join Elite",
         "btn_url": ""
       }
