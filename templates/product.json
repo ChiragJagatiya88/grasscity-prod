@@ -244,7 +244,7 @@
         "use_color_scheme_in_container": false,
         "enable_sticky_info": true,
         "media_size": "medium",
-        "gallery_layout": "vertical-carousel",
+        "gallery_layout": "carousel",
         "mobile_thumbnails": "show",
         "show_image_border": false,
         "enable_image_zoom": true,
