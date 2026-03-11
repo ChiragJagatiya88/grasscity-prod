@@ -1362,13 +1362,62 @@
         "padding_bottom": 0
       }
     },
+    "rich_text_BrG4LN": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_npp3aM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why Millions of Smokers Choose Grasscity",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3",
+            "heading_tag": "h1"
+          }
+        },
+        "text_z8htM6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Shop at one of the most trusted online headshops, serving customers worldwide since 2000.</p>",
+            "text_size": "text-lg",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_npp3aM",
+        "text_z8htM6"
+      ],
+      "custom_css": [
+        ".section__header {--header-padding-bottom: 2.4rem;}",
+        ".section__heading {max-width: 45rem;}"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "enable_custom_class": false,
+        "section_class": "",
+        "container": "fixed",
+        "color_scheme": "",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "center",
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
     "buttons_with_icon_c8CzHV": {
       "type": "buttons-with-icon",
       "blocks": {
         "button_item_TXLwjF": {
           "type": "button_item",
           "settings": {
-            "button_label": "All eco-certified",
+            "button_label": "Since 2000",
             "button_link": "",
             "icon": "check"
           }
@@ -1376,7 +1425,7 @@
         "button_item_tpCdia": {
           "type": "button_item",
           "settings": {
-            "button_label": "Product protection",
+            "button_label": "Huge Selection",
             "button_link": "",
             "icon": "check"
           }
@@ -1384,7 +1433,7 @@
         "button_item_wKgxpM": {
           "type": "button_item",
           "settings": {
-            "button_label": "Make it yours",
+            "button_label": "Competitive Prices",
             "button_link": "",
             "icon": "check"
           }
@@ -1392,7 +1441,7 @@
         "button_item_Ngk44m": {
           "type": "button_item",
           "settings": {
-            "button_label": "Unique tailored",
+            "button_label": "Trusted Worldwide",
             "button_link": "",
             "icon": "check"
           }
@@ -1414,12 +1463,12 @@
         "section_header_alignment": "center",
         "section_header_alignment_mobile": "inherit",
         "subheading": "",
-        "heading": "This approach resulted in the beautiful structure",
+        "heading": "",
         "highlight_style": "none",
         "highlight_font_style": "italic",
         "highlight_style_color": "",
         "highlight_text_color": "",
-        "heading_size": "h2",
+        "heading_size": "h3",
         "item_alignment": "center",
         "item_button_style": "btn--primary",
         "item_button_font": "button",
@@ -1427,7 +1476,7 @@
         "swipe_on_mobile": true,
         "show_section_divider": true,
         "divider_width": "full",
-        "padding_top": 60,
+        "padding_top": 30,
         "padding_bottom": 0
       }
     },
@@ -1983,6 +2032,7 @@
     "featured_collection_RWUfH9",
     "testimonials_mLThk7",
     "slider_with_multicolumn_aJwbrc",
+    "rich_text_BrG4LN",
     "buttons_with_icon_c8CzHV",
     "multicolumn_Ff4Wbj",
     "home_join_banner_TmF4WQ",
