@@ -4,7 +4,7 @@
 %}
 {%- assign motion_delay = 0 -%}
 <div
-  class="section section-rich-text section--padding page-width page-width--{{ section.settings.container }}{% unless section.settings.use_color_scheme_in_container %} color-{{ section.settings.color_scheme }}{% endunless %}"
+  class="section section-rich-text section--padding page-width page-width--{{ section.settings.container }}{% unless section.settings.use_color_scheme_in_container %} color-{{ section.settings.color_scheme }}{% endunless %} {{ section.settings.section_class }}"
   style="--section-padding-top: {{ section.settings.padding_top }}px;--section-padding-bottom: {{ section.settings.padding_bottom }}px;"
 >
   <div class="rich-text rich-text--{{ section.settings.content_spacing }} text-{{ section.settings.content_alignment }}{% if section.settings.use_color_scheme_in_container %} rich-text__box blocks-radius color-{{ section.settings.color_scheme }}{% endif %}">
@@ -112,7 +112,7 @@
   "settings": [
     { "type": "checkbox", "id": "enable_custom_class", "label": "Enable Custom Class" },
     { "type": "text", "id": "section_class", "label": "Custom Class For Section", "visible_if": "{{ section.settings.enable_custom_class == true }}" },
-    
+
     {
       "type": "header",
       "content": "t:general.general.name"
