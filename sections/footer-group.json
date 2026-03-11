@@ -17,7 +17,7 @@
         "text_8PhDAd": {
           "type": "text",
           "settings": {
-            "text": "<p>* Our Lowest price guaranteed is backed by our price match policy. See<a href=\"https://bit.ly/GC-PriceMatchPolicy\">https://bit.ly/GC-PriceMatchPolicy</a>for details.<br/><br/>**Available where permitted by law. Our hemp-derived products contain less than 0.3% Δ9-THC on a dry weight basis in compliance with the 2018 Farm Bill. State and local laws may vary. Please verify the laws for your region before purchase.<br/><br/>Statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.<br/><br/></p>",
+            "text": "<p>* Our Lowest price guaranteed is backed by our price match policy. See<a href=\"https://bit.ly/GC-PriceMatchPolicy\">https://bit.ly/GC-PriceMatchPolicy</a>for details.<br/><br/>**Available where permitted by law. Our hemp-derived products contain less than 0.3% Δ9-THC on a dry weight basis in compliance with the 2018 Farm Bill. State and local laws may vary. Please verify the laws for your region before purchase.<br/><br/>Statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>",
             "text_size": "text-base",
             "text_line_limit": "none",
             "button_style": "btn--underline",
@@ -33,7 +33,7 @@
         "enable_custom_class": false,
         "section_class": "",
         "container": "fixed",
-        "color_scheme": "",
+        "color_scheme": "scheme-info",
         "use_color_scheme_in_container": false,
         "content_spacing": "standard",
         "content_alignment": "left",
@@ -173,7 +173,7 @@
         "swipe_on_mobile": false,
         "show_section_divider": false,
         "divider_width": "fixed",
-        "padding_top": 0,
+        "padding_top": 20,
         "padding_bottom": 32
       }
     },
