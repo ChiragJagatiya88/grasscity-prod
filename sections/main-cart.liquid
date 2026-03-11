@@ -255,6 +255,20 @@
                       assign is_elite_item = true
                     endif
 
+                    assign item_max_quantity = blank
+                    if item.variant.inventory_management != blank and item.variant.inventory_policy == 'deny'
+                      assign item_max_quantity = item.variant.inventory_quantity
+                    endif
+
+                    assign item_effective_max = item.variant.quantity_rule.max
+                    if item_max_quantity != blank
+                      if item_effective_max != null
+                        assign item_effective_max = item_max_quantity | at_most: item_effective_max
+                      else
+                        assign item_effective_max = item_max_quantity
+                      endif
+                    endif
+
                     assign has_qty_rules = false
                     if item.variant.quantity_rule.increment > 1 or item.variant.quantity_rule.min > 1 or item.variant.quantity_rule.max != null
                       assign has_qty_rules = true
@@ -534,8 +548,8 @@
                                           data-cart-quantity="{{ cart | item_count_for_variant: item.variant.id }}"
                                           min="0"
                                           data-min="{{ item.variant.quantity_rule.min }}"
-                                          {% if item.variant.quantity_rule.max != null %}
-                                            max="{{ item.variant.quantity_rule.max }}"
+                                          {% if item_effective_max != null %}
+                                            max="{{ item_effective_max }}"
                                           {% endif %}
                                           step="{{ item.variant.quantity_rule.increment }}"
                                         />
@@ -570,8 +584,8 @@
                                           data-cart-quantity="{{ cart | item_count_for_variant: item.variant.id }}"
                                           min="0"
                                           data-min="{{ item.variant.quantity_rule.min }}"
-                                          {% if item.variant.quantity_rule.max != null %}
-                                            max="{{ item.variant.quantity_rule.max }}"
+                                          {% if item_effective_max != null %}
+                                            max="{{ item_effective_max }}"
                                           {% endif %}
                                           step="{{ item.variant.quantity_rule.increment }}"
                                         />
@@ -786,8 +800,8 @@
                                       data-cart-quantity="{{ cart | item_count_for_variant: item.variant.id }}"
                                       min="0"
                                       data-min="{{ item.variant.quantity_rule.min }}"
-                                      {% if item.variant.quantity_rule.max != null %}
-                                        max="{{ item.variant.quantity_rule.max }}"
+                                      {% if item_effective_max != null %}
+                                        max="{{ item_effective_max }}"
                                       {% endif %}
                                       step="{{ item.variant.quantity_rule.increment }}"
                                     />
@@ -822,8 +836,8 @@
                                       data-cart-quantity="{{ cart | item_count_for_variant: item.variant.id }}"
                                       min="0"
                                       data-min="{{ item.variant.quantity_rule.min }}"
-                                      {% if item.variant.quantity_rule.max != null %}
-                                        max="{{ item.variant.quantity_rule.max }}"
+                                      {% if item_effective_max != null %}
+                                        max="{{ item_effective_max }}"
                                       {% endif %}
                                       step="{{ item.variant.quantity_rule.increment }}"
                                     />

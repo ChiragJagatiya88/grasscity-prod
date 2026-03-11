@@ -77,6 +77,18 @@
         >
           {%- assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id -%}
 
+          {%- liquid
+            assign quantity_max_effective = product.selected_or_first_available_variant.quantity_rule.max
+            if check_against_inventory
+              assign available_to_add = product.selected_or_first_available_variant.inventory_quantity | minus: cart_qty
+              if quantity_max_effective != null
+                assign quantity_max_effective = quantity_max_effective | at_most: available_to_add
+              else
+                assign quantity_max_effective = available_to_add
+              endif
+            endif
+          -%}
+
           <div class="grid gap-2">
             <div class="grid gap-3">
               <label class="quantity__label form__label" for="Quantity-{{ section.id }}">
@@ -111,9 +123,9 @@
                     data-quantity-variant-id="{{ product.selected_or_first_available_variant.id }}"
                     data-min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
                     min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
-                    {% if product.selected_or_first_available_variant.quantity_rule.max != null %}
-                      data-max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
-                      max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
+                    {% if quantity_max_effective != null %}
+                      data-max="{{ quantity_max_effective }}"
+                      max="{{ quantity_max_effective }}"
                     {% endif %}
                     inputmode="numeric"
                     autocomplete="off"
@@ -293,6 +305,17 @@
       <div class="product-form__buttons flex flex-wrap items-end gap-x-2 gap-y-4" id="QuantityForm-{{ section_id }}">
         {%- if product.quantity_price_breaks_configured? != true -%}
           {%- assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id -%}
+          {%- liquid
+            assign quantity_max_effective = product.selected_or_first_available_variant.quantity_rule.max
+            if check_against_inventory
+              assign available_to_add = product.selected_or_first_available_variant.inventory_quantity | minus: cart_qty
+              if quantity_max_effective != null
+                assign quantity_max_effective = quantity_max_effective | at_most: available_to_add
+              else
+                assign quantity_max_effective = available_to_add
+              endif
+            endif
+          -%}
           <div class="product-form__quantity{% unless block.settings.show_quantity_selector %} hidden{% endunless %}">
             <label class="quantity__label form__label visually-hidden" for="Quantity-{{ section.id }}">
               <span class="font-body-bolder">{{ 'products.product.quantity.label' | t }}</span>
@@ -319,9 +342,9 @@
                 data-quantity-variant-id="{{ product.selected_or_first_available_variant.id }}"
                 data-min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
                 min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
-                {% if product.selected_or_first_available_variant.quantity_rule.max != null %}
-                  data-max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
-                  max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
+                {% if quantity_max_effective != null %}
+                  data-max="{{ quantity_max_effective }}"
+                  max="{{ quantity_max_effective }}"
                 {% endif %}
                 inputmode="numeric"
                 autocomplete="off"
