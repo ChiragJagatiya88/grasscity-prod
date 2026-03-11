@@ -189,7 +189,7 @@
             "description": "",
             "description_size": "text-base",
             "button_label": "Shop Vapes",
-            "button_link": "shopify://collections/vaporizers",
+            "button_link": "shopify://collections/leguacy-vaporizers",
             "button_style": "btn--primary",
             "button_icon": "none",
             "enable_preload_image": true
@@ -264,7 +264,7 @@
             "description": "",
             "description_size": "text-base",
             "button_label": "Shop Now",
-            "button_link": "shopify://collections/cheech-and-chong",
+            "button_link": "shopify://collections/leguacy-cheech-and-chong",
             "button_style": "btn--primary",
             "button_icon": "none",
             "enable_preload_image": true
