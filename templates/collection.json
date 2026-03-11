@@ -82,7 +82,7 @@
         "featured_collection_MPgFAQ": {
           "type": "featured_collection",
           "settings": {
-            "collection": "acrylic-bongs",
+            "collection": "leguacy-acrylic-bongs",
             "title": "Acrylic"
           }
         },
@@ -131,7 +131,7 @@
         "featured_collection_tnVfbN": {
           "type": "featured_collection",
           "settings": {
-            "collection": "cool-bongs",
+            "collection": "leguacy-cool-bongs",
             "title": "Cool"
           }
         }

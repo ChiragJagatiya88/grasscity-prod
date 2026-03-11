@@ -23,7 +23,7 @@
         "featured_collection_gxdACj": {
           "type": "featured_collection",
           "settings": {
-            "collection": "dab-rigs",
+            "collection": "leguacy-dab-rigs",
             "image": "shopify://shop_images/gs_dab-rigs-circle_ab_v01.webp",
             "title": "Dab Rigs"
           }
@@ -1137,7 +1137,7 @@
             "heading_size_mobile": "inherit",
             "heading_size_custom": 18,
             "text": "",
-            "card_link": "shopify://collections/dab-rigs"
+            "card_link": "shopify://collections/leguacy-dab-rigs"
           }
         },
         "image_card_7KqpyL": {
