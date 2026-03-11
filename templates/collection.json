@@ -52,6 +52,8 @@
       "custom_css": [],
       "name": "t:sections.rich-text.name",
       "settings": {
+        "enable_custom_class": true,
+        "section_class": "collection_top_title",
         "container": "fixed",
         "color_scheme": "scheme-info",
         "use_color_scheme_in_container": false,
