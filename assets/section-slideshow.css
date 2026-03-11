@@ -74,6 +74,7 @@
   padding: 3.2rem 0;
 }
 
+
 @media (min-width: 1024px) {
   .slideshow-wrapper {
     --swiper-controls-bottom-offset: 2.7rem;
@@ -85,6 +86,9 @@
   }
   .slideshow__text {
     max-width: 70%;
+  }
+  .slideshow-wrapper .slideshow__content {
+    padding-inline: max(13.5rem, 50vw - var(--scrollbar-width, 0px) / 2 - var(--page-width) / 2) !important;
   }
 }
 @media (max-width: 767.98px) {
@@ -127,6 +131,3 @@
   }
 }
 
-.slideshow-wrapper .slideshow__content {
-  padding-inline: max(13.5rem, 50vw - var(--scrollbar-width, 0px) / 2 - var(--page-width) / 2) !important;
-}
