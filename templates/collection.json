@@ -49,9 +49,7 @@
         "heading_RE7BAg",
         "text_CeEqN9"
       ],
-      "custom_css": [
-        "section .section-rich-text.color-scheme-info {background: #ededed;}"
-      ],
+      "custom_css": [],
       "name": "t:sections.rich-text.name",
       "settings": {
         "container": "fixed",
