@@ -23,7 +23,7 @@
         "featured_collection_gxdACj": {
           "type": "featured_collection",
           "settings": {
-            "collection": "dab-rigs",
+            "collection": "leguacy-dab-rigs",
             "image": "shopify://shop_images/gs_dab-rigs-circle_ab_v01.webp",
             "title": "Dab Rigs"
           }
@@ -214,7 +214,7 @@
             "description": "",
             "description_size": "text-base",
             "button_label": "Shop Rigs",
-            "button_link": "shopify://collections/dab-rigs",
+            "button_link": "shopify://collections/leguacy-dab-rigs",
             "button_style": "btn--primary",
             "button_icon": "none",
             "enable_preload_image": true
@@ -295,7 +295,7 @@
         "collection_NFJ3Rg": {
           "type": "collection",
           "settings": {
-            "collection": "dab-rigs",
+            "collection": "leguacy-dab-rigs",
             "title": "",
             "show_banner": false,
             "color_scheme": "scheme-1",
@@ -444,7 +444,7 @@
         "collection_VBaAEj": {
           "type": "collection",
           "settings": {
-            "collection": "dab-rigs",
+            "collection": "leguacy-dab-rigs",
             "image": "shopify://shop_images/gs_dab-rigs-popular_ab_v01.webp",
             "title": "Dab Rigs"
           }
