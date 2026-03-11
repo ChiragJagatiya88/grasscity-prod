@@ -242,7 +242,7 @@
         "color_scheme": "scheme-1",
         "use_color_scheme_in_container": false,
         "enable_sticky_info": true,
-        "media_size": "large",
+        "media_size": "medium",
         "gallery_layout": "vertical-carousel",
         "mobile_thumbnails": "show",
         "show_image_border": false,
