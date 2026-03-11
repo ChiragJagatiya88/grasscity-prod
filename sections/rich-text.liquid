@@ -110,6 +110,9 @@
     "groups": ["footer", "header", "custom.overlay"]
   },
   "settings": [
+    { "type": "checkbox", "id": "enable_custom_class", "label": "Enable Custom Class" },
+    { "type": "text", "id": "section_class", "label": "Custom Class For Section", "visible_if": "{{ section.settings.enable_custom_class == true }}" },
+    
     {
       "type": "header",
       "content": "t:general.general.name"
