@@ -48,7 +48,7 @@
             "highlight_text_color": "",
             "heading_size": "text-base",
             "heading_font": "heading",
-            "text": "<p><a href=\"tel:+1 (888) 334-6363\">+1 (888) 334-6363</a> (tool-free)</p>",
+            "text": "<p><a href=\"tel:+1 (888) 334-6363\">+1 (888) 334-6363</a></p>",
             "text_size": "text-base",
             "button_label": "",
             "button_link": "",
@@ -79,6 +79,7 @@
         },
         "column_ngN6XL": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "icon": "map-pin",
             "max_width": 32,
@@ -132,7 +133,7 @@
         "content_alignment": "left",
         "image_position": "left",
         "icon_color": "#1d349a",
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "column_gap": "large",
         "row_gap": "inherit",
         "show_divider_col": true,
