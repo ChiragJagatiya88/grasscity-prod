@@ -161,6 +161,11 @@
                     if gift_wrap_id != null and item.id == gift_wrap_id
                       assign is_gift_wrap_item = true
                     endif
+
+                    assign is_elite_item = false
+                    if settings.elite_product != blank and item.variant.id == settings.elite_product.selected_or_first_available_variant.id
+                      assign is_elite_item = true
+                    endif
                   -%}
                   {%- capture cart_item -%}
                   <li id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item flex flex-col" data-variant-id="{{ item.variant_id }}" data-handle="{{ item.product.handle }}" data-quantity="{{ item.quantity }}" data-price="{{ item.original_price }}">
@@ -305,7 +310,7 @@
                             {%- endcapture -%}
                           {%- endif -%}
                           <div class="flex items-center gap-2">
-                            {%- unless is_gift_wrap_item -%}
+                            {%- unless is_gift_wrap_item or is_elite_item -%}
                               <quantity-input class="cart-quantity quantity self-end">
                                 <label class="visually-hidden" for="Quantity-{{ section.id }}-{{ item.index | plus: 1 }}">{{ 'products.product.quantity.label' | t }}</label>
                                 <button type="button" name="minus" class="quantity__button" aria-label="{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}">
@@ -352,7 +357,7 @@
                                   disabled
                                   type="text"
                                   name="updates[]"
-                                  value="{{ item.quantity }}"
+                                  value="{% if is_elite_item %}1{% else %}{{ item.quantity }}{% endif %}"
                                   id="Quantity-{{ section.id }}-{{ item.index | plus: 1 }}"
                                   inputmode="numeric"
                                   autocomplete="off"
