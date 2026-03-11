@@ -278,7 +278,7 @@
           "type": "collection",
           "disabled": true,
           "settings": {
-            "collection": "lighters",
+            "collection": "leguacy-lighters",
             "title": "Hot Items",
             "show_banner": true,
             "color_scheme": "scheme-inverse",
@@ -515,7 +515,7 @@
         "collection_W8AwMF": {
           "type": "collection",
           "settings": {
-            "collection": "munchies",
+            "collection": "leguacy-munchies",
             "image": "shopify://shop_images/gs_lifestyle_sunny_staff_picks_ab_v01_9bd8c7ea-55d3-4eb8-ac9c-355bc452a453.webp",
             "title": "Sunny Staff Picks",
             "text": "<p>We Don't Just Price Match, We <strong>Price BEAT </strong>by 5%</p>",
