@@ -178,11 +178,13 @@
         "text_7h6LaE"
       ],
       "custom_css": [
-        ".rich-text {max-width: 78rem; margin: 0 auto;}",
+        ".rich-text {max-width: 1600px; margin: 0 auto;}",
         "@media (max-width: 1023px) {.rich-text__heading {max-width: 50rem; margin: 0 auto; }}"
       ],
       "settings": {
-        "container": "fixed",
+        "enable_custom_class": false,
+        "section_class": "",
+        "container": "full",
         "color_scheme": "scheme-6",
         "use_color_scheme_in_container": false,
         "content_spacing": "standard",
@@ -574,7 +576,8 @@
             "highlight_font_style": "normal",
             "highlight_style_color": "",
             "highlight_text_color": "",
-            "heading_size": "h3"
+            "heading_size": "h3",
+            "heading_tag": "h2"
           }
         },
         "text_WwnDXa": {
@@ -597,6 +600,8 @@
         "@media (max-width: 1023px) {.rich-text__heading {max-width: 50rem; margin: 0 auto; }}"
       ],
       "settings": {
+        "enable_custom_class": false,
+        "section_class": "",
         "container": "fixed",
         "color_scheme": "scheme-4",
         "use_color_scheme_in_container": false,
@@ -663,7 +668,8 @@
             "highlight_font_style": "normal",
             "highlight_style_color": "",
             "highlight_text_color": "",
-            "heading_size": "h3"
+            "heading_size": "h3",
+            "heading_tag": "h2"
           }
         },
         "text_nPWTeg": {
@@ -686,6 +692,8 @@
         "@media (max-width: 1023px) {.rich-text__heading {max-width: 50rem; margin: 0 auto; }}"
       ],
       "settings": {
+        "enable_custom_class": false,
+        "section_class": "",
         "container": "fixed",
         "color_scheme": "scheme-7",
         "use_color_scheme_in_container": false,
@@ -863,6 +871,8 @@
       ],
       "name": "t:sections.rich-text.name",
       "settings": {
+        "enable_custom_class": false,
+        "section_class": "",
         "container": "fixed",
         "color_scheme": "scheme-2",
         "use_color_scheme_in_container": false,
