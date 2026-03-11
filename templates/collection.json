@@ -25,12 +25,12 @@
           "type": "heading",
           "settings": {
             "heading": "{{ collection.title }}",
-            "heading_tag": "h1",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
-            "heading_size": "hd1"
+            "heading_size": "hd1",
+            "heading_tag": "h1"
           }
         },
         "text_CeEqN9": {
@@ -48,6 +48,9 @@
       "block_order": [
         "heading_RE7BAg",
         "text_CeEqN9"
+      ],
+      "custom_css": [
+        ".section-rich-text {background: #ededed;}"
       ],
       "name": "t:sections.rich-text.name",
       "settings": {
