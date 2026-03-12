@@ -15,10 +15,12 @@
     {% assign offset = 0 %}
     <div class="demo-blocks">
       <div class="main-blog__block main-blog__items f-grid f-grid--gap-medium f-grid--row-gap-large">
+        {% assign forloop_index = 0 %}
         {% for block in section.blocks %}
+
           {% assign blog_list = block.settings.blog %}
           {%- for article in blog_list.articles offset: offset -%}
-            <div class="f-column" data-cetegory="{{ block.settings.blog.title }}">
+            <div class="f-column {% if forloop_index > 5 %}hidden{% endif %}" data-cetegory="{{ block.settings.blog.title }}">
               {%- render 'card-article',
                 article: article,
                 show_tags: true,
@@ -32,6 +34,7 @@
               -%}
             </div>
           {%- endfor -%}
+          {% assign forloop_index = forloop_index | plus: 1 %}
         {% endfor %}
       </div>
     </div>
