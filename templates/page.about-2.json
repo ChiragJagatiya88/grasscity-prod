@@ -119,7 +119,6 @@
         "column_YWTLnF": {
           "type": "column",
           "settings": {
-            "show_image": false,
             "title": "1998",
             "highlight_style": "none",
             "highlight_font_style": "italic",
@@ -138,14 +137,13 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/gs_brand-qualities-2_ab_v02_020722e6-cfbc-474f-a808-d07465cfe13d.webp",
-            "show_image": false,
-            "title": "Huge Selection. Competitive Prices.",
+            "title": "2000",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
             "heading_size": "h4",
-            "text": "<p>Explore thousands of smoking accessories from trusted brands; backed by our Lowest Price Guarantee.*</p>",
+            "text": "<p><strong>Grasscity Is Born</strong><br/> Grasscity officially launches as an online headshop and forum, bringing smoking accessories to the internet during the early days of e-commerce.</p>",
             "text_size": "text-base",
             "button_label": "",
             "button_link": "",
@@ -157,14 +155,103 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/gs_brand-qualities-3_ab_v03_66130542-6b86-45bb-ae9d-1e4c42a1895d.webp",
-            "show_image": false,
-            "title": "49K+ Five-Star Reviews",
+            "title": "2001",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
             "heading_size": "h4",
-            "text": "<p>Trusted and loved by smokers around the world, with thousands of verified customer reviews.</p>",
+            "text": "<p><strong>The Grasscity Forum</strong><br/> The Grasscity forum grows into one of the largest online communities for smokers, connecting enthusiasts worldwide.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_PyKHm9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/gs_brand-qualities-3_ab_v03_66130542-6b86-45bb-ae9d-1e4c42a1895d.webp",
+            "title": "Early 2000s",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p><strong>Pioneering Online Headshops</strong><br/> In the early days of e-commerce, Grasscity processes orders by fax while building one of the internet’s first online smoke shops.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_PGYY4b": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/gs_brand-qualities-3_ab_v03_66130542-6b86-45bb-ae9d-1e4c42a1895d.webp",
+            "title": "Mid 2000s",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p><strong>Expanding the Catalog</strong><br/> Grasscity expands its selection of bongs, vaporizers, grinders, and smoking accessories from trusted brands.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_GpfBYR": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/gs_brand-qualities-3_ab_v03_66130542-6b86-45bb-ae9d-1e4c42a1895d.webp",
+            "title": "Global Growth",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p><strong>Serving Smokers Worldwide</strong><br/> Grasscity grows into a trusted online retailer serving customers across multiple countries.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_LJp3KL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/gs_brand-qualities-3_ab_v03_66130542-6b86-45bb-ae9d-1e4c42a1895d.webp",
+            "title": "2018",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p><strong>Joining High Tide</strong><br/> Grasscity becomes part of High Tide, strengthening its digital retail capabilities and global presence.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_mCy7M8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/gs_brand-qualities-3_ab_v03_66130542-6b86-45bb-ae9d-1e4c42a1895d.webp",
+            "title": "Today",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p><strong>Continuing the Legacy</strong><br/> Grasscity remains one of the most recognized online headshops, serving enthusiasts with premium gear and decades of experience.</p>",
             "text_size": "text-base",
             "button_label": "",
             "button_link": "",
@@ -176,7 +263,12 @@
       "block_order": [
         "column_YWTLnF",
         "column_AwmLJY",
-        "column_MikwAx"
+        "column_MikwAx",
+        "column_PyKHm9",
+        "column_PGYY4b",
+        "column_GpfBYR",
+        "column_LJp3KL",
+        "column_mCy7M8"
       ],
       "settings": {
         "container": "fixed",
@@ -403,7 +495,6 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/gs_timeline-1_ab_v01_f6112c8b-0d19-4ecf-a8a3-05e085dc9758.webp",
-            "show_image": false,
             "title": "Founded in Amsterdam",
             "highlight_style": "none",
             "highlight_font_style": "italic",
@@ -422,7 +513,6 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/gs_timeline-1_ab_v01_84ee82fb-e703-47f3-b307-f1028e3c5928.webp",
-            "show_image": false,
             "title": "Grasscity is Born",
             "highlight_style": "none",
             "highlight_font_style": "italic",
@@ -441,7 +531,6 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/gs_timeline-3_ab_v01_e7b9858d-4861-4186-8738-fb3a636287e8.webp",
-            "show_image": false,
             "title": "Pioneering Growth",
             "highlight_style": "none",
             "highlight_font_style": "italic",
@@ -460,7 +549,6 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/gs_timeline-4_ab_v01_94501291-d9a5-4fac-8397-f86f872338e7.webp",
-            "show_image": false,
             "title": "Joined High Tide Inc.",
             "highlight_style": "none",
             "highlight_font_style": "italic",
