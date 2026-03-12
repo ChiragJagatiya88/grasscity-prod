@@ -462,6 +462,56 @@
         "padding_bottom": 60
       }
     },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "You May Also Like",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "description": "",
+        "limit": 6,
+        "columns": 5,
+        "column_gap": "medium",
+        "row_gap": "inherit",
+        "enable_slider": true,
+        "navigation_position": "bottom",
+        "pcard_image_ratio": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "show_progress_bar": true,
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "1771840058d6f946be": {
+      "type": "apps",
+      "blocks": {
+        "yotpo_product_reviews_reviews_DLLepV": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "yotpo_product_reviews_reviews_DLLepV"
+      ],
+      "settings": {
+        "include_margins": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "multicolumn_icon_KYByNJ": {
       "type": "multicolumn-icon",
       "blocks": {
@@ -816,37 +866,6 @@
         "padding_bottom": 0
       }
     },
-    "related-products": {
-      "type": "related-products",
-      "settings": {
-        "container": "fixed",
-        "color_scheme": "scheme-1",
-        "section_header_alignment": "left",
-        "section_header_alignment_mobile": "inherit",
-        "subheading": "",
-        "heading": "You May Also Like",
-        "highlight_style": "none",
-        "highlight_font_style": "italic",
-        "highlight_style_color": "",
-        "highlight_text_color": "",
-        "heading_size": "h2",
-        "description": "",
-        "limit": 6,
-        "columns": 5,
-        "column_gap": "medium",
-        "row_gap": "inherit",
-        "enable_slider": true,
-        "navigation_position": "bottom",
-        "pcard_image_ratio": "",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "show_progress_bar": true,
-        "padding_top": 30,
-        "padding_bottom": 30,
-        "show_section_divider": false,
-        "divider_width": "fixed"
-      }
-    },
     "testimonials_8JHr3L": {
       "type": "testimonials",
       "blocks": {
@@ -943,25 +962,6 @@
         "divider_width": "fixed"
       }
     },
-    "1771840058d6f946be": {
-      "type": "apps",
-      "blocks": {
-        "yotpo_product_reviews_reviews_DLLepV": {
-          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "{{product}}"
-          }
-        }
-      },
-      "block_order": [
-        "yotpo_product_reviews_reviews_DLLepV"
-      ],
-      "settings": {
-        "include_margins": true,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "scrolling_gallery_image_eqULib": {
       "type": "scrolling-gallery-image",
       "blocks": {
@@ -1016,6 +1016,7 @@
         "gallery_FwhcHj",
         "gallery_EM4VKr"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-2",
         "section_header_alignment": "center",
@@ -1050,13 +1051,13 @@
     "main",
     "tabs_content_8rnbnj",
     "multicolumn_icon_3qbxHn",
+    "related-products",
+    "1771840058d6f946be",
     "multicolumn_icon_KYByNJ",
     "multicolumn_Mxt4d3",
     "quick_comparison_table_p9rdxW",
     "image_with_text_kqXfRQ",
-    "related-products",
     "testimonials_8JHr3L",
-    "1771840058d6f946be",
     "scrolling_gallery_image_eqULib"
   ]
 }
