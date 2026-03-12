@@ -8325,9 +8325,10 @@ body.search-template .header__top .header__search {
 #shopify-section-template--26019768664384__if_image_marquee_yqDwUL{
   margin: 0 auto;
   padding-inline: var(--page-padding);
+  margin-bottom: 3rem;
 }
-#shopify-section-template--26019768664384__if_image_marquee_yqDwUL .marquee-section{
+#shopify-section-template--26019768664384__if_image_marquee_yqDwUL .marquee_section{
   border-bottom-left-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 3rem;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
 }
