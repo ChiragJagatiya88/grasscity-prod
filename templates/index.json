@@ -247,7 +247,7 @@
             "description": "",
             "description_size": "text-base",
             "button_label": "Shop Now",
-            "button_link": "shopify://collections/bongs",
+            "button_link": "shopify://collections/featured-picks",
             "button_style": "btn--primary",
             "button_icon": "none",
             "enable_preload_image": true
