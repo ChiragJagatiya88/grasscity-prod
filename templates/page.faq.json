@@ -226,18 +226,6 @@
             "use_subtext_color": true
           }
         },
-        "item_ship_team_speed": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "Our Shipping Team and Shipping Speeds",
-            "content": "<p>Please note that shipping speed does not include order processing time. Orders typically require 2-3 business days for processing, including pulling and packaging your items. Our shipping team works hard to dispatch orders as quickly as possible, but during peak seasons and promotional events, processing times may increase.</p><p>Shipping times do not guarantee the exact package arrival date and may be affected by unforeseen circumstances, such as weather conditions or carrier delays.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false,
-            "use_subtext_color": true
-          }
-        },
         "item_ship_address_change": {
           "type": "collapsible_item",
           "settings": {
@@ -255,7 +243,6 @@
         "heading_shipping",
         "item_ship_packages",
         "item_ship_cost",
-        "item_ship_team_speed",
         "item_ship_address_change"
       ],
       "custom_css": [],
@@ -491,7 +478,7 @@
           "settings": {
             "icon": "none",
             "heading": "What payment methods do you accept?",
-            "content": "<p>We accept all major credit cards: Mastercard, Visa, American Express, and Discover.</p><p>We do not accept PayPal. There are no exceptions.</p>",
+            "content": "<p>We <strong>accept</strong> all major credit cards: </p><p><strong>Mastercard, Visa, American Express, and Discover.</strong></p><p>We <strong>do not accept PayPal. </strong>There are no exceptions.</p>",
             "custom_liquid": "",
             "page": "",
             "open": false,
