@@ -3575,7 +3575,7 @@
 {% endschema %}
 
 {%- assign yotpo_rating = product.metafields.yotpo.reviews_average | plus: 0 -%}
-{%- if yotpo_rating < 3 -%}
+{%- if yotpo_rating >= 3 -%}
   <style>
     #MainProduct-{{ section.id }} .shopify-app-block .yotpo-widget-instance { display: none; }
   </style>
