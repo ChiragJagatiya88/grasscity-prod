@@ -788,7 +788,7 @@
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         },
         "text_4pYVYF": {
@@ -824,8 +824,9 @@
         },
         "button_aegkDr": {
           "type": "button",
+          "disabled": true,
           "settings": {
-            "button_label": "Learn more",
+            "button_label": "Explore",
             "button_link": "shopify://pages/about-grasscity",
             "button_style": "btn--primary",
             "button_icon": "none"
