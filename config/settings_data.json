@@ -113,6 +113,11 @@
         "type": "shopify://apps/userway-website-accessibility/blocks/uw-widget-extension/bc2d8a34-1a37-451b-ab1a-271bc4e9daa7",
         "disabled": false,
         "settings": {}
+      },
+      "13309252322759772734": {
+        "type": "shopify://apps/sortd-merchandiser/blocks/app-embed/5176d6ef-993f-4869-ba24-87a0a6bedcf9",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
