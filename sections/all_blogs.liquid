@@ -1,0 +1,65 @@
+<div class="section_{{ section.id }} {{ section.settings.section_class }}">
+  <div class="{% if section.settings.enable_container %}container{% else %}container-fluid{% endif %}">
+    <h2>{{ section.settings.sec_title }}</h2>
+
+    <div class="demo-blocks">
+      {% for block in section.blocks %}
+        <div class="demo-block" {{ block.shopify_attributes }}>
+          <h3>{{ block.settings.block_title }}</h3>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% style %}
+  .section_{{ section.id }} {
+    {% if section.settings.section_bg %} background: {{ section.settings.section_bg }};{% endif %}
+    {% if section.settings.section_gradient_bg %} background: {{ section.settings.section_gradient_bg }};{% endif %}
+    {% if section.settings.enable_custom_padding == true %}padding-block: {{ section.settings.padding_desk }};{% endif %}
+  }
+  @media screen and  (max-width: 767px) {
+    .section_{{ section.id }} {
+      {% if section.settings.enable_custom_padding == true %}padding-block: {{ section.settings.padding_mob }};{% endif %}
+    }
+  }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "All Blogs",
+  "class": "all_blogs",
+  "settings": [
+    { "type": "checkbox", "id": "enable_custom_class", "label": "Enable Custom Class" },
+    { "type": "text", "id": "section_class", "label": "Custom Class For Section", "visible_if": "{{ section.settings.enable_custom_class == true }}" },
+    
+    { "type": "checkbox", "id": "enable_container", "label": "Enable Container" },
+
+    { "type": "header", "content": "Section Content"},
+    { "type": "text", "id": "sec_title", "label": "Section Title", "default": "Section Title" },
+
+    { "type": "header", "content": "Color"},
+    { "type": "color", "id": "section_bg", "label": "Section Background"},
+    { "type": "color_background", "id": "section_gradient_bg", "label": "Section Gradient Background"},
+
+    { "type": "header", "content": "Spacing"},
+    { "type": "checkbox", "id": "enable_custom_padding", "label": "Enable Section Custom Padding"},
+    { "type": "text", "id": "padding_desk", "label": "Padding Desktop", "default": "20px 20px", "visible_if": "{{ section.settings.enable_custom_padding == true }}"},
+    { "type": "text", "id": "padding_mob", "label": "Padding Mobile", "default": "20px 20px", "visible_if": "{{ section.settings.enable_custom_padding == true }}"},
+  ],
+  "blocks": [
+    {
+      "name": "Item",
+      "type": "item",
+      "settings": [
+        { "type": "text", "id": "block_title", "label": "Block Title", "default": "Block Title"}
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "All Blogs",
+    }
+  ]
+}
+{% endschema %}
