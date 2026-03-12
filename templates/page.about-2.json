@@ -192,20 +192,19 @@
       "blocks": {
         "heading_riVhPA": {
           "type": "heading",
-          "disabled": true,
           "settings": {
-            "heading": "A Brief History",
+            "heading": "A Brand Built on Trust",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
-            "heading_size": "h3"
+            "heading_size": "h4"
           }
         },
         "text_3XFia7": {
           "type": "text",
           "settings": {
-            "text": "<p>Grasscity has been part of smoking culture online since 2000. What began in Amsterdam during the early days of ecommerce grew into one of the most recognized online head shops in the world.</p><p>Today, Grasscity serves customers across the United States with a wide selection of smoking accessories, trusted brands, and decades of category experience. Built on culture, shaped by community, and refined through years of expertise, Grasscity remains a trusted destination for smokers who know what they want.</p>",
+            "text": "<p>Grasscity has been part of smoking culture online since 2000. What began in Amsterdam during the early days of ecommerce grew into one of the most recognized online head shops in the world.</p><p>Today, Grasscity serves customers across the United States with a wide selection of smoking accessories, trusted brands, and decades of category experience. Built on culture, shaped by community, and refined through years of expertise, Grasscity remains a trusted destination for smokers who know what they want.</p><p>A Brand Built on Trust</p><p>Over the years, Grasscity has earned its place through consistency, product knowledge, and a genuine connection to the culture it serves. Customers return to Grasscity because they know they will find:</p><ul><li>authentic products</li><li>trusted brands</li><li>a wide selection of accessories</li><li>an online shopping experience designed for reliability<br/><br/>While the technology has changed and the industry has grown, the purpose has remained steady: to offer enthusiasts the gear, insight, and confidence that make every session better</li></ul>",
             "subtext_color": true
           }
         }
@@ -215,7 +214,7 @@
         "text_3XFia7"
       ],
       "custom_css": [
-        ".image-with-text__content {max-width: 52rem; font-size: 18px;}"
+        ".image-with-text__content {font-size: 18px;}"
       ],
       "settings": {
         "container": "fixed",
