@@ -25,13 +25,13 @@
         "item_VaXhJU": {
           "type": "item",
           "settings": {
-            "blog": "bongs"
+            "blog": "product-reviews"
           }
         },
         "item_kDGaKx": {
           "type": "item",
           "settings": {
-            "blog": "bubblers"
+            "blog": "lifestyle"
           }
         }
       },
