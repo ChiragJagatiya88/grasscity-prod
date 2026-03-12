@@ -601,7 +601,7 @@
         "text_WnDtpj"
       ],
       "custom_css": [
-        ".image-with-text__content {max-width: 52rem;}"
+        ".image-with-text__content {max-width: 52rem; font-size: 18px;}"
       ],
       "settings": {
         "container": "fixed",
