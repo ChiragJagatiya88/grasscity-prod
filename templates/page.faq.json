@@ -902,7 +902,7 @@
           "settings": {
             "icon": "none",
             "heading": "How do I update my account password?",
-            "content": "<p>If you are locked out of your account, click \"Forgot your password?\" on the login page and enter your email address. We will send a link so you can reset your password.</p><p>You can also contact our Customer Service team and ask them to send you a password reset email.</p>",
+            "content": "<p>Found yourself locked out of your account? We can help you regain access!</p><p>When you attempt to login, you should see a clickable link that states \"Forgot your password?\".  Enter in your email address, and we can send you a link to reset your password.</p><p>You can also get in touch with our Customer Service team, and they can have a password reset email sent your way!</p>",
             "custom_liquid": "",
             "page": "",
             "open": false,
