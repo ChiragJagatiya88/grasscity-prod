@@ -37,49 +37,31 @@
         "item_Rkqdnz": {
           "type": "item",
           "settings": {
-            "blog": "lifestyle"
+            "blog": "vape"
           }
         },
         "item_TwYNFJ": {
           "type": "item",
           "settings": {
-            "blog": "lifestyle"
+            "blog": "dab-rigs"
           }
         },
         "item_Qbxich": {
           "type": "item",
           "settings": {
-            "blog": "lifestyle"
+            "blog": "cleaning"
           }
         },
         "item_HVFibX": {
           "type": "item",
           "settings": {
-            "blog": "lifestyle"
+            "blog": "smoking"
           }
         },
         "item_z9JP7b": {
           "type": "item",
           "settings": {
-            "blog": "lifestyle"
-          }
-        },
-        "item_RefEVe": {
-          "type": "item",
-          "settings": {
-            "blog": "lifestyle"
-          }
-        },
-        "item_TqwUrD": {
-          "type": "item",
-          "settings": {
-            "blog": "lifestyle"
-          }
-        },
-        "item_zACY4c": {
-          "type": "item",
-          "settings": {
-            "blog": "lifestyle"
+            "blog": "bongs"
           }
         }
       },
@@ -90,10 +72,7 @@
         "item_TwYNFJ",
         "item_Qbxich",
         "item_HVFibX",
-        "item_z9JP7b",
-        "item_RefEVe",
-        "item_TqwUrD",
-        "item_zACY4c"
+        "item_z9JP7b"
       ],
       "name": "All Blogs",
       "settings": {
