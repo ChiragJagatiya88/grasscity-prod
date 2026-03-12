@@ -55,108 +55,126 @@
         "featured_collection_KdFqFq": {
           "type": "featured_collection",
           "settings": {
+            "collection": "",
             "title": "Sale Items"
           }
         },
         "featured_collection_d8XGnb": {
           "type": "featured_collection",
           "settings": {
+            "collection": "",
             "title": "Press Tables"
           }
         },
         "featured_collection_FzRWDn": {
           "type": "featured_collection",
           "settings": {
+            "collection": "",
             "title": "Lighting"
           }
         },
         "featured_collection_at4gCr": {
           "type": "featured_collection",
           "settings": {
+            "collection": "",
             "title": "Spoke Sofa"
           }
         },
         "featured_collection_F69pQy": {
           "type": "featured_collection",
           "settings": {
+            "collection": "",
             "title": "Storages"
           }
         },
         "featured_collection_JV9tDT": {
           "type": "featured_collection",
           "settings": {
+            "collection": "",
             "title": "Turn Chairs"
           }
         },
         "featured_collection_WLrpbE": {
           "type": "featured_collection",
           "settings": {
+            "collection": "",
             "title": "Longe Chairs"
           }
         },
         "featured_collection_qdrbEr": {
           "type": "featured_collection",
           "settings": {
+            "collection": "",
             "title": "Curve Coat"
           }
         },
         "featured_collection_Pa8kFP": {
           "type": "featured_collection",
           "settings": {
+            "collection": "",
             "title": "Cross Tables"
           }
         },
         "featured_collection_UTWiiY": {
           "type": "featured_collection",
           "settings": {
+            "collection": "",
             "title": "Bend Chairs"
           }
         },
         "featured_collection_rkynNN": {
           "type": "featured_collection",
           "settings": {
+            "collection": "",
             "title": "Bar Chairs"
           }
         },
         "featured_collection_8t9tJr": {
           "type": "featured_collection",
           "settings": {
+            "collection": "",
             "title": "Accessories"
           }
         },
         "featured_collection_cQ9zAr": {
           "type": "featured_collection",
           "settings": {
+            "collection": "",
             "title": "Chairs"
           }
         },
         "featured_collection_tCirzw": {
           "type": "featured_collection",
           "settings": {
+            "collection": "",
             "title": "Table Lamps"
           }
         },
         "featured_collection_faaU7a": {
           "type": "featured_collection",
           "settings": {
+            "collection": "",
             "title": "Dining & Kitchen"
           }
         },
         "featured_collection_Hmp4Br": {
           "type": "featured_collection",
           "settings": {
+            "collection": "",
             "title": "Rugs"
           }
         },
         "featured_collection_8YdgYJ": {
           "type": "featured_collection",
           "settings": {
+            "collection": "",
             "title": "Mirrors"
           }
         },
         "featured_collection_Gx9Qyp": {
           "type": "featured_collection",
           "settings": {
+            "collection": "",
             "title": "Ottomans"
           }
         }
@@ -181,6 +199,7 @@
         "featured_collection_8YdgYJ",
         "featured_collection_Gx9Qyp"
       ],
+      "disabled": true,
       "settings": {
         "container": "fixed",
         "color_scheme": "",
@@ -202,10 +221,13 @@
         "card_color_scheme": "",
         "card_style": "standard",
         "card_heading_size": "text-base",
+        "card_text_line_limit": "none",
         "card_image_ratio": "adapt",
         "card_image_width": "large",
+        "card_image_padding": "none",
         "rounded_card_image": true,
         "card_show_border": false,
+        "mobile_layout": "vertical",
         "columns_desktop": 6,
         "column_gap": "medium",
         "row_gap": "medium",
@@ -224,49 +246,57 @@
         "featured_collection_7kxTVB": {
           "type": "featured_collection",
           "settings": {
-            "title": "Living Room Sets"
+            "collection": "bongs",
+            "title": "Bongs"
           }
         },
         "featured_collection_icDUnk": {
           "type": "featured_collection",
           "settings": {
-            "title": "Free-Standing Bathroom"
+            "collection": "dab-rigs",
+            "title": "Dab Rigs"
           }
         },
         "featured_collection_gXRwbb": {
           "type": "featured_collection",
           "settings": {
-            "title": "5-7 Seat Round Dining Tablest"
+            "collection": "vaporizers",
+            "title": "Vaporizers"
           }
         },
         "featured_collection_8M9RmV": {
           "type": "featured_collection",
           "settings": {
-            "title": "Wood TV Stands"
+            "collection": "herb-grinders",
+            "title": "Herb Grinders"
           }
         },
         "featured_collection_MjK88X": {
           "type": "featured_collection",
           "settings": {
-            "title": "Free-Standing Bathroom"
+            "collection": "glass-bubblers",
+            "title": "Bubblers"
           }
         },
         "featured_collection_KeXpyT": {
           "type": "featured_collection",
           "settings": {
-            "title": "Ray Table Lamp"
+            "collection": "smoking-pipes",
+            "title": "Smoking Pipes"
           }
         },
         "featured_collection_zgWR6H": {
           "type": "featured_collection",
           "settings": {
-            "title": "Spoke Cotton Sofas"
+            "collection": "rolling-papers",
+            "title": "Rolling Papers"
           }
         },
         "featured_collection_TEecyW": {
           "type": "featured_collection",
           "settings": {
-            "title": "Passage Lounge Table"
+            "collection": "420-accessories",
+            "title": "420 Accessories"
           }
         }
       },
@@ -301,10 +331,13 @@
         "card_color_scheme": "",
         "card_style": "card",
         "card_heading_size": "h5",
+        "card_text_line_limit": "none",
         "card_image_ratio": "1/1",
         "card_image_width": "full",
+        "card_image_padding": "none",
         "rounded_card_image": false,
         "card_show_border": false,
+        "mobile_layout": "vertical",
         "columns_desktop": 4,
         "column_gap": "medium",
         "row_gap": "medium",
@@ -330,6 +363,7 @@
             "content_alignment": "left",
             "content_spacing": "small",
             "content_gap": "fitted",
+            "card_link": "",
             "subheading": "",
             "subheading_style": "",
             "heading": "Turn Chairs",
@@ -369,6 +403,7 @@
             "content_alignment": "left",
             "content_spacing": "small",
             "content_gap": "fitted",
+            "card_link": "",
             "subheading": "",
             "subheading_style": "",
             "heading": "Cross Chairs",
@@ -403,6 +438,7 @@
         "image_card_mL7WWJ",
         "image_card_Vj69GM"
       ],
+      "disabled": true,
       "settings": {
         "container": "fixed",
         "color_scheme": "",
@@ -434,6 +470,7 @@
         "collection_r8U9QF": {
           "type": "collection",
           "settings": {
+            "collection": "",
             "title": "New Arrivals",
             "show_banner": false,
             "color_scheme": "",
@@ -461,6 +498,7 @@
         "collection_E83rKg": {
           "type": "collection",
           "settings": {
+            "collection": "",
             "title": "Hot Items",
             "show_banner": false,
             "color_scheme": "",
@@ -488,6 +526,7 @@
         "collection_7cUH3n": {
           "type": "collection",
           "settings": {
+            "collection": "",
             "title": "Best Sellers",
             "show_banner": false,
             "color_scheme": "",
@@ -518,6 +557,7 @@
         "collection_E83rKg",
         "collection_7cUH3n"
       ],
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "container": "fixed",
@@ -565,7 +605,8 @@
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
-            "heading_size": "h3"
+            "heading_size": "h3",
+            "heading_tag": "h2"
           }
         },
         "text_xtLQE8": {
@@ -583,8 +624,11 @@
         "heading_kVf6qj",
         "text_xtLQE8"
       ],
+      "disabled": true,
       "custom_css": [],
       "settings": {
+        "enable_custom_class": false,
+        "section_class": "",
         "container": "fixed",
         "color_scheme": "scheme-10",
         "use_color_scheme_in_container": true,
@@ -603,6 +647,7 @@
           "type": "button_item",
           "settings": {
             "button_label": "Living Room",
+            "button_link": "",
             "icon": "check"
           }
         },
@@ -610,6 +655,7 @@
           "type": "button_item",
           "settings": {
             "button_label": "Planters",
+            "button_link": "",
             "icon": "check"
           }
         },
@@ -617,6 +663,7 @@
           "type": "button_item",
           "settings": {
             "button_label": "Gravel Rug",
+            "button_link": "",
             "icon": "check"
           }
         },
@@ -624,6 +671,7 @@
           "type": "button_item",
           "settings": {
             "button_label": "Table Mirror",
+            "button_link": "",
             "icon": "check"
           }
         },
@@ -631,6 +679,7 @@
           "type": "button_item",
           "settings": {
             "button_label": "Table Wears",
+            "button_link": "",
             "icon": "check"
           }
         },
@@ -638,6 +687,7 @@
           "type": "button_item",
           "settings": {
             "button_label": "Dining Decor",
+            "button_link": "",
             "icon": "check"
           }
         },
@@ -645,6 +695,7 @@
           "type": "button_item",
           "settings": {
             "button_label": "Ray Table Lamp",
+            "button_link": "",
             "icon": "check"
           }
         },
@@ -652,6 +703,7 @@
           "type": "button_item",
           "settings": {
             "button_label": "Chairs",
+            "button_link": "",
             "icon": "check"
           }
         },
@@ -659,6 +711,7 @@
           "type": "button_item",
           "settings": {
             "button_label": "Living Room",
+            "button_link": "",
             "icon": "check"
           }
         },
@@ -666,6 +719,7 @@
           "type": "button_item",
           "settings": {
             "button_label": "Planters",
+            "button_link": "",
             "icon": "check"
           }
         }
@@ -682,6 +736,7 @@
         "button_item_T9zq6D",
         "button_item_PW89cL"
       ],
+      "disabled": true,
       "settings": {
         "container": "fixed",
         "color_scheme": "",
@@ -729,6 +784,7 @@
           "type": "button",
           "settings": {
             "button_label": "shop Collection",
+            "button_link": "",
             "button_style": "btn--primary",
             "button_icon": "none"
           }
@@ -739,6 +795,7 @@
         "heading_nhnGkW",
         "button_p8d9jr"
       ],
+      "disabled": true,
       "settings": {
         "container": "full",
         "desktop_height": "small",
@@ -749,9 +806,24 @@
         "content_position": "middle-center",
         "content_alignment": "center",
         "mobile_height": "adapt",
+        "content_position_mobile": "middle-center-mobile",
+        "content_alignment_mobile": "left",
         "padding_top": 60,
         "padding_bottom": 0,
         "enable_preload_image": false
+      }
+    },
+    "spacer_wy7TAT": {
+      "type": "spacer",
+      "name": "t:sections.spacer.name",
+      "settings": {
+        "color_scheme": "",
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 24
       }
     }
   },
@@ -764,6 +836,7 @@
     "featured_collection_bdaamt",
     "rich_text_dgPtDV",
     "buttons_with_icon_DdLrHW",
-    "image_with_text_overlay_pzn8nK"
+    "image_with_text_overlay_pzn8nK",
+    "spacer_wy7TAT"
   ]
 }
