@@ -154,7 +154,7 @@
                   open
                 >
                   <summary data-link="{%- if childlink.url == "#" -%}javascript:void(0){%- else -%}{{ childlink.url }}{%- endif -%}" class="menu-sidebar__toggle blocks-radius-sm flex items-center justify-between{% if forloop.first %} is-visible{% endif %}">
-                    <div class="h6">{{ childlink.title | escape }} -- {{ childlink.url }}</div>
+                    <div class="h6">{{ childlink.title | escape }}</div>
                     {%- if childlink.links != blank -%}
                       {%- render 'icon-caret-right', size: 'small' -%}
                     {%- endif -%}
