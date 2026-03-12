@@ -753,3 +753,9 @@ layout-switcher {
     display: inline-block;
   }
 }
+
+.product-card__wrapper .yotpo-sr-bottom-line-text{
+  display:none;
+
+}
+
