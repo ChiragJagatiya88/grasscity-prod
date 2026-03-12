@@ -321,6 +321,7 @@
       </h3>
 
       {%- assign yotpo_rating = product.metafields.yotpo.reviews_average | plus: 0 -%}
+      <p>yotpo_rating == {{ yotpo_rating }}</p>
       {%- if yotpo_rating < 3 -%}
         <div class="yotpo-widget-instance" data-yotpo-instance-id="1279532" data-yotpo-product-id="{{product.id}}" data-yotpo-cart-product-id="{{item.product.id}}" data-yotpo-section-id="{{template.name}}"></div>
       {%- endif -%}
