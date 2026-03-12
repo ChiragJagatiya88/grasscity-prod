@@ -4263,6 +4263,7 @@ input:is([type=radio])::after {
   display: block;
   overflow: hidden;
   border-radius: var(--pcard-radius);
+  border: 1px solid #dddddd;
 }
 .product-card__image-wrapper video {
   object-fit: cover;
