@@ -636,7 +636,7 @@
         "text_nPWTeg": {
           "type": "text",
           "settings": {
-            "text": "<p>What began in the early days of the internet has grown into one of the most recognized online destinations for smoking accessories. Grasscity continues to bring together trusted brands, carefully selected gear, and decades of experience in the category.<br/><br/>Whether you’re searching for your next daily piece or exploring new additions to your setup, Grasscity remains a place where enthusiasts can discover quality gear and shop with confidence.</p>",
+            "text": "<p>What began in the early days of the internet has grown into one of the most recognized online destinations for smoking accessories. Grasscity continues to bring together trusted brands, carefully selected gear, and decades of experience in the category.<br/>Whether you’re searching for your next daily piece or exploring new additions to your setup, Grasscity remains a place where enthusiasts can discover quality gear and shop with confidence.</p>",
             "text_size": "text-lg",
             "text_line_limit": "none",
             "button_style": "btn--underline",
@@ -668,7 +668,7 @@
         "container": "fixed",
         "color_scheme": "scheme-1",
         "use_color_scheme_in_container": false,
-        "content_spacing": "standard",
+        "content_spacing": "fitted",
         "content_alignment": "left",
         "padding_top": 30,
         "padding_bottom": 30,
