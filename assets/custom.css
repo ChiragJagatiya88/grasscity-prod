@@ -755,7 +755,13 @@ layout-switcher {
 }
 
 .product-card__wrapper .yotpo-sr-bottom-line-text{
-  display:none;
+  display:none !important;
 
 }
 
+
+
+.product-card__wrapper .yotpo-sr-bottom-line-right-panel{
+  display:none !important;
+
+}
