@@ -851,38 +851,6 @@
         "padding_bottom": 0,
         "enable_preload_image": false
       }
-    },
-    "rich_text_xaR67U": {
-      "type": "rich-text",
-      "blocks": {
-        "text_eFNCrX": {
-          "type": "text",
-          "settings": {
-            "text": "<p>This website is intended for adults 21 years of age or older. By entering this site, you agree to our terms and conditions. We do not sell products to minors. Please consume responsibly.</p>",
-            "text_size": "text-base",
-            "text_line_limit": "none",
-            "button_style": "btn--underline",
-            "button_icon": "none"
-          }
-        }
-      },
-      "block_order": [
-        "text_eFNCrX"
-      ],
-      "name": "t:sections.rich-text.name",
-      "settings": {
-        "enable_custom_class": false,
-        "section_class": "",
-        "container": "fixed",
-        "color_scheme": "scheme-2",
-        "use_color_scheme_in_container": false,
-        "content_spacing": "standard",
-        "content_alignment": "center",
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "show_section_divider": false,
-        "divider_width": "fixed"
-      }
     }
   },
   "order": [
@@ -899,7 +867,6 @@
     "image_with_text_GFmkfA",
     "rich_text_jgViLm",
     "testimonials_T939Dc",
-    "image_with_text_overlay_dDk78w",
-    "rich_text_xaR67U"
+    "image_with_text_overlay_dDk78w"
   ]
 }
