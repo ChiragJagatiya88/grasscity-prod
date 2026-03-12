@@ -15,7 +15,7 @@
         "heading_npp3aM": {
           "type": "heading",
           "settings": {
-            "heading": "Why Millions of Smokers Choose Grasscity",
+            "heading": "A Legacy Built Over Two Decades",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
@@ -23,21 +23,10 @@
             "heading_size": "h3",
             "heading_tag": "h1"
           }
-        },
-        "text_z8htM6": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Shop at one of the most trusted online headshops, serving customers worldwide since 2000.</p>",
-            "text_size": "text-lg",
-            "text_line_limit": "none",
-            "button_style": "btn--underline",
-            "button_icon": "none"
-          }
         }
       },
       "block_order": [
-        "heading_npp3aM",
-        "text_z8htM6"
+        "heading_npp3aM"
       ],
       "custom_css": [],
       "name": "t:sections.rich-text.name",
@@ -61,7 +50,7 @@
         "button_item_TXLwjF": {
           "type": "button_item",
           "settings": {
-            "button_label": "Since 2000",
+            "button_label": "Industry Pioneer",
             "button_link": "",
             "icon": "check"
           }
@@ -69,7 +58,7 @@
         "button_item_tpCdia": {
           "type": "button_item",
           "settings": {
-            "button_label": "Huge Selection",
+            "button_label": "20+ Years of Culture",
             "button_link": "",
             "icon": "check"
           }
@@ -77,7 +66,7 @@
         "button_item_wKgxpM": {
           "type": "button_item",
           "settings": {
-            "button_label": "Competitive Prices",
+            "button_label": "Global Community",
             "button_link": "",
             "icon": "check"
           }
