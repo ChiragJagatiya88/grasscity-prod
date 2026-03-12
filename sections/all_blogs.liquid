@@ -2,6 +2,7 @@
   <div class="{% if section.settings.enable_container %}container{% else %}container-fluid{% endif %}">
     <h2>{{ section.settings.sec_title }}</h2>
 
+    {% assign offset = 0 %}
     <div class="demo-blocks">
       {% for block in section.blocks %}
         <div class="demo-block" {{ block.shopify_attributes }}>
