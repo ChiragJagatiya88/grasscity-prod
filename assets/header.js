@@ -264,27 +264,29 @@ class DetailsDropdown extends HTMLDetailsElement {
       handleAfterShow: 'menu:handleAfterShow',
     };
 
-    // Reference to first and last child elements
-    this.summaryElement = this.firstElementChild;
+    // Reference to first and last child elements (use actual <summary> so all summary elements are clickable)
+    this.summaryElement = this.querySelector('summary') || this.firstElementChild;    
     this.contentElement = this.lastElementChild;
 
     // Initial state based on attributes
     this._open = this.hasAttribute('open');
 
-    // Event listeners for summary element
-    this.summaryElement.addEventListener('click', this.handleSummaryClick.bind(this));
+    // Event listeners for summary element – ensure summary (and clicks on its children) toggle the dropdown
+    if (this.summaryElement) {
+      this.summaryElement.addEventListener('click', this.handleSummaryClick.bind(this));
 
-    if (this.trigger === 'hover') {
-      this.summaryElement.addEventListener('focusin', (event) => {
-        if (event.target === this.summaryElement) {
-          this.open = true;
-        }
-      });
-      this.summaryElement.addEventListener('focusout', (event) => {
-        if (!this.contentElement.contains(event.relatedTarget)) {
-          this.open = false;
-        }
-      });
+      if (this.trigger === 'hover') {
+        this.summaryElement.addEventListener('focusin', (event) => {
+          if (event.target === this.summaryElement) {
+            this.open = true;
+          }
+        });
+        this.summaryElement.addEventListener('focusout', (event) => {
+          if (!this.contentElement.contains(event.relatedTarget)) {
+            this.open = false;
+          }
+        });
+      }
     }
 
     // Binding methods to ensure 'this' context is correct when they are called
@@ -753,6 +755,7 @@ class MenuSidebar extends HTMLElement {
   constructor() {
     super();
     this.handleSidenavMenuToggle = this.handleSidenavMenuToggle.bind(this);
+    this.handleSummaryClick = this.handleSummaryClick.bind(this);
     this.updateHeight = this.updateHeight.bind(this);
   }
 
@@ -770,10 +773,25 @@ class MenuSidebar extends HTMLElement {
 
     this.summarys.forEach((summary) => {
       summary.addEventListener('mouseenter', this.handleSidenavMenuToggle);
-      summary.addEventListener('click', (e) => e.preventDefault());
+      summary.addEventListener('click', this.handleSummaryClick);
     });
 
     this.setupIntersectionObserver();
+  }
+
+  handleSummaryClick(evt) {
+    const summary = evt.target.closest('summary');
+    if (!summary || !summary.classList.contains('menu-sidebar__toggle')) return;
+
+    const dataLink = summary.getAttribute('data-link');
+    const isValidLink = dataLink && dataLink !== '#' && dataLink !== 'javascript:void(0)' && !dataLink.startsWith('javascript:');
+
+    if (isValidLink) {
+      window.location.href = dataLink;
+      return;
+    }
+
+    evt.preventDefault();
   }
 
   setInitialMinHeight() {
@@ -828,7 +846,7 @@ class MenuSidebar extends HTMLElement {
   disconnectedCallback() {
     this.summarys.forEach((summary) => {
       summary.removeEventListener('mouseenter', this.handleSidenavMenuToggle);
-      summary.removeEventListener('click', this.handleClick);
+      summary.removeEventListener('click', this.handleSummaryClick);
     });
   }
 }
