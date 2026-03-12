@@ -7,8 +7,9 @@
       {% for block in section.blocks %}
         <div class="demo-block" {{ block.shopify_attributes }}>
           <h3>{{ block.settings.blog.title }}</h3>
+          {% assign blog_list = block.settings.blog %}
           <div class="main-blog__block main-blog__items f-grid f-grid--gap-medium f-grid--row-gap-large">
-            {%- for article in blog.articles offset: offset -%}
+            {%- for article in blog_list.articles offset: offset -%}
               <div class="f-column">
                 {%- render 'card-article',
                   article: article,
