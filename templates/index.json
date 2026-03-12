@@ -1190,6 +1190,7 @@
         "testimonial_QPUyLy",
         "testimonial_iTzQDb"
       ],
+      "disabled": true,
       "custom_css": [
         ".testimonial__inner {max-width: 64rem; margin-left: auto; margin-right: auto;}"
       ],
