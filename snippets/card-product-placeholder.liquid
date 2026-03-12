@@ -36,7 +36,7 @@
       {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
     </div>
     <div class="product-card__info{% if horizontal_layout %} flex-1 text-left{% endif %}">
-      <h3 class="product-card__title text-pcard-title">{{- 'onboarding.product_title' | t -}}</h3>
+      <p class="product-card__title text-pcard-title m-0">{{- 'onboarding.product_title' | t -}}</p>
       {% render 'price' %}
     </div>
   </div>

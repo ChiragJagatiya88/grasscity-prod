@@ -296,14 +296,14 @@
           </a>
         </p>
       {%- endif -%}
-      <h3 class="product-card__title text-pcard-title">
+      <p class="product-card__title text-pcard-title m-0">
         <a
           class="reversed-link block {% if settings.pcard_title_line_limit != 'none' %} text-limit-{{ settings.pcard_title_line_limit }}{% endif %}"
           href="{{ product.url }}"
         >
           <span class="reversed-link__text">{{- product.title -}}</span>
         </a>
-      </h3>
+      </p>
       {%- if show_price -%}
         {% comment %} {% render 'price', product: product, alignment: settings.pcard_content_alignment %} {% endcomment %}
         {% render 'us-product-pricing-refresh', product: product %}

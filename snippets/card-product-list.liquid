@@ -200,9 +200,9 @@
           </a>
         </p>
       {%- endif -%}
-      <h3 class="product-card__title text-pcard-title">
+      <p class="product-card__title m-0 text-pcard-title">
         <a class="reversed-link" href="{{ product.url }}">{{- product.title -}}</a>
-      </h3>
+      </p>
       {% render 'price', product: product %}
       {%- if enable_quick_add -%}
         {%- liquid
