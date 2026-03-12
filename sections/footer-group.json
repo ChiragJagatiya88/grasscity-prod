@@ -222,9 +222,9 @@
           "type": "menu",
           "settings": {
             "block_width": 15,
-            "heading": "Get to Know Us",
+            "heading": "Popular",
             "heading_size": "h6",
-            "menu": "footer-3",
+            "menu": "footer-menu-1",
             "open_default": false,
             "show_divider": false
           }
