@@ -68,7 +68,7 @@
   }
 </style>
 {% unless customer %}
-  <section class="cc-join-banner-section" id="cc-join-banner-section">
+  <section class="cc-join-banner-section page-width page-width--fixed" id="cc-join-banner-section">
     <div class="container mx-auto items-center py-2 lg:py-0 px-2 md:px-3">
       <div class="cc-join-banner-wrap">
         <div class="cc-join-banner">
@@ -174,8 +174,11 @@
 
 <style>
 /* Join CC Banner */
-.cc-join-banner-section { 
+.cc-join-banner-section > .container { 
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
+
 #cc-elite-join-banner-section .cc-join-banner-row1 {
   background: var(--Color-Elite-Blue-900, #031546);
 }
