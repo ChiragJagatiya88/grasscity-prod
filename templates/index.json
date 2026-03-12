@@ -856,16 +856,6 @@
         "mobile_content_alignment": "inherit",
         "show_section_divider": false,
         "divider_width": "fixed",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "custom_liquid_GGLVLz": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.name",
-      "settings": {
-        "custom_liquid": "<div class=\"yotpo-widget-instance\"\n     data-yotpo-instance-id=\"add instance id here\"\n     data-yotpo-product-id=\"10030052213056\"\n     data-yotpo-cart-product-id=\"10030052213056\">\n</div>",
-        "color_scheme": "",
         "padding_top": 50,
         "padding_bottom": 50
       }
@@ -1150,7 +1140,7 @@
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "show_progress_bar": true,
-        "padding_top": 50,
+        "padding_top": 0,
         "padding_bottom": 50,
         "show_section_divider": false,
         "divider_width": "fixed"
@@ -2023,7 +2013,6 @@
     "collection_tabs_VexkkR",
     "favorite_products_6Tg9Pn",
     "image_with_text_aXhRxw",
-    "custom_liquid_GGLVLz",
     "lookbook_slider_9zCdQJ",
     "custom_content_JxRy7x",
     "featured_collection_RWUfH9",
