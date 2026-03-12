@@ -104,7 +104,7 @@
             "placeholder": "",
             "required": false,
             "full_width": true,
-            "select_options": "Austria,Viet Nam,Japan",
+            "select_options": "United States, United Kingdom, Albania, Andorra, Austria, Belarus, Belgium, Bosnia and Herzegovina, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Gibraltar, Greece, Hungary, Iceland, Ireland, Italy, Kosovo, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta, Moldova, Monaco, Montenegro, Netherlands, North Macedonia, Norway, Poland, Portugal, Romania, San Marino, Serbia, Slovakia, Slovenia, Spain, Sweden, Switzerland, Ukraine, Vatican City",
             "checkbox_checked_value": "Yes",
             "checkbox_uncheck_value": "No",
             "radio_options": ""
