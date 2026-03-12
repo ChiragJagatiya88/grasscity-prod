@@ -138,6 +138,7 @@
         "column_69fN8n",
         "column_ngN6XL"
       ],
+      "disabled": true,
       "custom_css": [
         ".rich-text__text {--text-margin-top: 0.4rem;}"
       ],
