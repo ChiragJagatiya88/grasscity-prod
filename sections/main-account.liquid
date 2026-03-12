@@ -35,7 +35,7 @@
       </a>
       <div class="page-width">
         <h2 class="heading title-lg tracking-heading">Hello, {{ customer_name }}</h2>
-        <p>Grasscity Member</p>
+        <p>Cabana Club Member</p>
         {% if customer.orders_count > 1 %}
         <div class="cc-mm-account-header-inner">
           <p>
@@ -167,7 +167,7 @@
 
         {% if customer and customer.tags contains 'elite_member' %}
           <p>Details about your membership.</p>
-          {% comment %} {% render 'account-elite-details' %} {% endcomment %}
+          {% render 'account-elite-details' %}
         {% endif %}
       </div>
 
