@@ -1,0 +1,42 @@
+{%- liquid
+  assign faq_items_count = 0
+
+  for block in section.blocks
+    if block.type == 'collapsible_item' and block.settings.heading != blank and block.settings.content != blank
+      assign faq_items_count = faq_items_count | plus: 1
+    endif
+  endfor
+-%}
+
+{%- if faq_items_count > 0 -%}
+  {%- assign emitted_count = 0 -%}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQ",
+      "@id": {{ canonical_url | append: '#faq-section-' | append: section.id | json }},
+      "mainEntity": [
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'collapsible_item' and block.settings.heading != blank and block.settings.content != blank -%}
+            {%- if emitted_count > 0 -%},{%- endif -%}
+            {%- capture answer_content -%}
+              {{ block.settings.content }}
+              {{ block.settings.custom_liquid }}
+              {{ block.settings.page.content }}
+            {%- endcapture -%}
+            {
+              "@type": "Question",
+              "@id": {{ canonical_url | append: '#faq-' | append: section.id | append: '-' | append: block.id | json }},
+              "name": {{ block.settings.heading | strip_html | strip | json }},
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": {{ answer_content | strip_html | strip_newlines | strip | json }}
+              }
+            }
+            {%- assign emitted_count = emitted_count | plus: 1 -%}
+          {%- endif -%}
+        {%- endfor -%}
+      ]
+    }
+  </script>
+{%- endif -%}
