@@ -138,7 +138,7 @@
                                 {% if block.settings.icon != 'none' %}
                                   {% render 'icons', icon: block.settings.icon, size: item_icon_size %}
                                 {%- endif -%}
-                                <h2 class="{{ item_trigger_class }} inline-richtext">{{ block.settings.heading }}</h2>
+                                <h3 class="{{ item_trigger_class }} inline-richtext">{{ block.settings.heading }}</h3>
                               </div>
                               {%- render 'icon-plus-toggle' -%}
                             </summary>
