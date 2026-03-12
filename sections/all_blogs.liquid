@@ -20,7 +20,7 @@
 
           {% assign blog_list = block.settings.blog %}
           {%- for article in blog_list.articles offset: offset -%}
-            <div class="f-column {% if forloop_index > 5 %}hidden{% endif %}" data-cetegory="{{ block.settings.blog.title }}">
+            <div class="f-column {% if forloop_index > 12 %}hidden{% endif %}" data-cetegory="{{ block.settings.blog.title }}">
               {%- render 'card-article',
                 article: article,
                 show_tags: true,
