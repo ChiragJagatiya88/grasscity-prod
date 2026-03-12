@@ -1,3 +1,13 @@
+<style>
+  .section_{{ section.id }} {
+    --section-padding-top: 0px;
+    --section-padding-bottom: 80px;
+    --f-columns-mobile: 1;
+    --f-columns-md: 3;
+    --f-columns-xl: 3;
+  }
+</style>
+
 <div class="section_{{ section.id }} {{ section.settings.section_class }}">
   <div class="{% if section.settings.enable_container %}container{% else %}container-fluid{% endif %}">
     <h2>{{ section.settings.sec_title }}</h2>
