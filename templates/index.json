@@ -497,7 +497,7 @@
         "navigation_position": "bottom",
         "pcard_image_ratio": "",
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "show_progress_bar": true,
         "padding_top": 40,
         "padding_bottom": 0,
