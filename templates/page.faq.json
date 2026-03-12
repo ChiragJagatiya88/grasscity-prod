@@ -1002,7 +1002,7 @@
           "settings": {
             "icon": "none",
             "heading": "Does Grasscity sell to minors?",
-            "content": "<p>Absolutely not. We enforce strict 21+ age verification at checkout, reserve the right to require signature on any order for security, and immediately cancel suspected underage orders.</p><p>Fraud prevention measures are in place throughout our system. For legal guardians ordering for personal use, packages require adult signature to ensure compliance with regulations. No exceptions.</p>",
+            "content": "<p>Absolutely not. We enforce strict 21+ age verification at checkout, reserve the right to require signature on any order for security, and immediately cancel suspected underage orders. Fraud prevention measures are in place throughout our system. For legal guardians ordering for personal use, packages require adult signature to ensure compliance with regulations. No exceptions.</p>",
             "custom_liquid": "",
             "page": "",
             "open": false,
