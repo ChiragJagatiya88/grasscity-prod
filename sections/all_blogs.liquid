@@ -37,11 +37,31 @@
           {%- endfor -%}
         {% endfor %}
       </div>
-      <button>Load More</button>
+      <button type="button" class="all-blogs-load-more">Load More</button>
     </div>
   </div>
 </div>
 
+<script>
+  (function() {
+    const section = document.querySelector('.section_{{ section.id }}');
+    if (!section) return;
+    const container = section.querySelector('.main-blog__items');
+    const btn = section.querySelector('.all-blogs-load-more');
+    if (!container || !btn) return;
+
+    btn.addEventListener('click', function() {
+      const hiddenItems = container.querySelectorAll('.f-column.hidden');
+      const toShow = Math.min(8, hiddenItems.length);
+      for (let i = 0; i < toShow; i++) {
+        hiddenItems[i].classList.remove('hidden');
+      }
+      if (hiddenItems.length <= 8) {
+        btn.style.display = 'none';
+      }
+    });
+  })();
+</script>
 
 {% style %}
   .section_{{ section.id }} {
