@@ -697,7 +697,7 @@
           "settings": {
             "icon": "none",
             "heading": "What if my order breaks during shipping?",
-            "content": "<p>If your item arrives broken, defective, or damaged, please inspect it immediately and take photos along with your order invoice. Email these to support@grasscity.com within 48 hours of delivery or start a live chat with our support agent on the website.</p><p>After verification, we will replace the item or issue a refund/exchange of equal value.</p><p>Important: We cannot accept returns for used items. If you purchased Route Protection at checkout, coverage applies only during shipping from our warehouse to your home. Damage that occurs after delivery is not covered.</p>",
+            "content": "<p>If your item arrives broken, defective, or damaged, please inspect it immediately and take photos along with your order invoice. Email these to support@grasscity.com within 48 hours of delivery or start a live chat with our support agent on the website.After verification, we will replace the item or issue a refund/exchange of equal value.</p><p>Important: We cannot accept returns for used items. If you purchased Route Protection at checkout, coverage applies only during shipping from our warehouse to your home. Damage that occurs after delivery is not covered.</p>",
             "custom_liquid": "",
             "page": "",
             "open": false,
