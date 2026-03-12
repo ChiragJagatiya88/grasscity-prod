@@ -21,11 +21,11 @@
             <div class="f-column" data-cetegory="{{ block.settings.blog.title }}">
               {%- render 'card-article',
                 article: article,
-                show_tags: show_tags,
-                show_author: show_author,
-                show_date: show_date,
-                show_excerpt: show_excerpt,
-                show_button: show_button,
+                show_tags: true,
+                show_author: true,
+                show_date: true,
+                show_excerpt: true,
+                show_button: false,
                 index: forloop.index,
                 title_size: section.settings.card_title_size,
                 button_style: 'btn--icon'
