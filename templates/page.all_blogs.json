@@ -33,11 +33,67 @@
           "settings": {
             "blog": "lifestyle"
           }
+        },
+        "item_Rkqdnz": {
+          "type": "item",
+          "settings": {
+            "blog": "lifestyle"
+          }
+        },
+        "item_TwYNFJ": {
+          "type": "item",
+          "settings": {
+            "blog": "lifestyle"
+          }
+        },
+        "item_Qbxich": {
+          "type": "item",
+          "settings": {
+            "blog": "lifestyle"
+          }
+        },
+        "item_HVFibX": {
+          "type": "item",
+          "settings": {
+            "blog": "lifestyle"
+          }
+        },
+        "item_z9JP7b": {
+          "type": "item",
+          "settings": {
+            "blog": "lifestyle"
+          }
+        },
+        "item_RefEVe": {
+          "type": "item",
+          "settings": {
+            "blog": "lifestyle"
+          }
+        },
+        "item_TqwUrD": {
+          "type": "item",
+          "settings": {
+            "blog": "lifestyle"
+          }
+        },
+        "item_zACY4c": {
+          "type": "item",
+          "settings": {
+            "blog": "lifestyle"
+          }
         }
       },
       "block_order": [
         "item_VaXhJU",
-        "item_kDGaKx"
+        "item_kDGaKx",
+        "item_Rkqdnz",
+        "item_TwYNFJ",
+        "item_Qbxich",
+        "item_HVFibX",
+        "item_z9JP7b",
+        "item_RefEVe",
+        "item_TqwUrD",
+        "item_zACY4c"
       ],
       "name": "All Blogs",
       "settings": {
