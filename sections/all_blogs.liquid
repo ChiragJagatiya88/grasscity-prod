@@ -34,7 +34,8 @@
   .main-blog__tag {
     --buttons-padding: 2rem;
   }
-  .all-blogs-load-more {
+  .load_btn_dom {
+    text-align: center;
     {% comment %} &:hover {
       color: white;
     } {% endcomment %}
@@ -70,7 +71,9 @@
         {%- endfor -%}
       {% endfor %}
     </div>
-    <button type="button" class="all-blogs-load-more btn btn--primary"><span>Load More</span></button>
+    <div class="load_btn_dom">
+      <button type="button" class="all-blogs-load-more btn btn--primary"><span>Load More</span></button>
+    </div>
   </div>
 </div>
 
