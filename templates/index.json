@@ -233,7 +233,7 @@
             "background": "shopify://shop_images/gc_hp_hero_desktop_usa_04.webp",
             "background_mobile": "shopify://shop_images/gc_hp_hero_mobile_usa_04.webp",
             "image_overlay_opacity": 30,
-            "content_position": "bottom-left",
+            "content_position": "middle-left",
             "text_alignment": "left",
             "subheading": "Fresh Picks for the Season",
             "subheading_tag": "h2",
