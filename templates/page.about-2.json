@@ -192,6 +192,7 @@
       "blocks": {
         "heading_riVhPA": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "A Brief History",
             "highlight_style": "none",
@@ -204,7 +205,7 @@
         "text_3XFia7": {
           "type": "text",
           "settings": {
-            "text": "<p>A long, long time ago (in internet time, at least), before Grasscity’s launch in 2000, was a little website called Coffeshop-Amsterdam. Its purpose was simple: to sell smoking accessories and provide tourist information about its beloved hometown of Amsterdam. But the site’s limited reach just wasn’t enough for us. To take its place, we founded Grasscity, a site that would become so much more than just an online headshop.</p>",
+            "text": "<p>Grasscity has been part of smoking culture online since 2000. What began in Amsterdam during the early days of ecommerce grew into one of the most recognized online head shops in the world.</p><p>Today, Grasscity serves customers across the United States with a wide selection of smoking accessories, trusted brands, and decades of category experience. Built on culture, shaped by community, and refined through years of expertise, Grasscity remains a trusted destination for smokers who know what they want.</p>",
             "subtext_color": true
           }
         }
