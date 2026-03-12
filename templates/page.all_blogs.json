@@ -9,6 +9,120 @@
  */
 {
   "sections": {
+    "breadcrumbs_F4iNAA": {
+      "type": "breadcrumbs",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "buttons_with_icon_Aayywi": {
+      "type": "buttons-with-icon",
+      "blocks": {
+        "button_item_i9XVJg": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Product Reviews",
+            "button_link": "shopify://blogs/product-reviews",
+            "icon": "none"
+          }
+        },
+        "button_item_RTed8M": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Lifestyle",
+            "button_link": "shopify://blogs/lifestyle",
+            "icon": "none"
+          }
+        },
+        "button_item_9hAjka": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Vape",
+            "button_link": "shopify://blogs/vape",
+            "icon": "none"
+          }
+        },
+        "button_item_Unt3XW": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Dab Rigs",
+            "button_link": "shopify://blogs/dab-rigs",
+            "icon": "none"
+          }
+        },
+        "button_item_8PWCy6": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Cleaning",
+            "button_link": "shopify://blogs/cleaning",
+            "icon": "none"
+          }
+        },
+        "button_item_ypcYxL": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Smoking",
+            "button_link": "shopify://blogs/smoking",
+            "icon": "none"
+          }
+        },
+        "button_item_PB7p4g": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Guides",
+            "button_link": "shopify://blogs/guides",
+            "icon": "none"
+          }
+        },
+        "button_item_Qbxm94": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Bongs",
+            "button_link": "shopify://blogs/bongs",
+            "icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "button_item_i9XVJg",
+        "button_item_RTed8M",
+        "button_item_9hAjka",
+        "button_item_Unt3XW",
+        "button_item_8PWCy6",
+        "button_item_ypcYxL",
+        "button_item_PB7p4g",
+        "button_item_Qbxm94"
+      ],
+      "custom_css": [
+        ".button-item__inner.link_active {background: #7bc710;}"
+      ],
+      "name": "t:sections.buttons-with-icon.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "item_alignment": "left",
+        "item_button_style": "btn--icon",
+        "item_button_font": "button",
+        "enable_slider": true,
+        "swipe_on_mobile": true,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -89,6 +203,8 @@
     }
   },
   "order": [
+    "breadcrumbs_F4iNAA",
+    "buttons_with_icon_Aayywi",
     "main",
     "all_blogs_c3fWXx"
   ]
