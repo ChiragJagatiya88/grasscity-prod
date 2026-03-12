@@ -12,12 +12,50 @@
     "main": {
       "type": "main-page",
       "settings": {
+        "container": "fixed",
+        "text_alignment": "center",
         "padding_top": 28,
         "padding_bottom": 28
+      }
+    },
+    "all_blogs_c3fWXx": {
+      "type": "all_blogs",
+      "blocks": {
+        "item_VaXhJU": {
+          "type": "item",
+          "settings": {
+            "blog_title": "",
+            "blog": "bongs"
+          }
+        },
+        "item_kDGaKx": {
+          "type": "item",
+          "settings": {
+            "blog_title": "",
+            "blog": "bubblers"
+          }
+        }
+      },
+      "block_order": [
+        "item_VaXhJU",
+        "item_kDGaKx"
+      ],
+      "name": "All Blogs",
+      "settings": {
+        "enable_custom_class": false,
+        "section_class": "",
+        "enable_container": false,
+        "sec_title": "Section Title",
+        "section_bg": "",
+        "section_gradient_bg": "",
+        "enable_custom_padding": false,
+        "padding_desk": "20px 20px",
+        "padding_mob": "20px 20px"
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "all_blogs_c3fWXx"
   ]
 }
