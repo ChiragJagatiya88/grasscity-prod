@@ -269,6 +269,14 @@
             "show_image_of_first_product": false,
             "image_ratio": "adapt"
           }
+        },
+        "hightlight_link_KBe7iR": {
+          "type": "hightlight_link",
+          "settings": {
+            "hl_link_title": "Delta 9 THC",
+            "hl_link_style": "star_twinkle",
+            "hl_link_color": "#C4301C"
+          }
         }
       },
       "block_order": [
@@ -280,7 +288,8 @@
         "sidebar_6miiGN",
         "sidebar_zBNGHX",
         "sidebar_7wn3PU",
-        "sidebar_3xAEYB"
+        "sidebar_3xAEYB",
+        "hightlight_link_KBe7iR"
       ],
       "settings": {
         "container": "fixed",
