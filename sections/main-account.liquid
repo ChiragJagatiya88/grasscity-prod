@@ -36,7 +36,7 @@
       <div class="page-width">
         <h2 class="heading title-lg tracking-heading">Hello, {{ customer_name }}</h2>
         <p>Cabana Club Member</p>
-        {% if customer.orders_count > 1 %}
+        {% if customer.orders_count >= 1 %}
         <div class="cc-mm-account-header-inner">
           <p>
             Congratulations! You have already saved
@@ -63,7 +63,7 @@
         <h2 class="heading title-lg tracking-heading">Hello, {{ customer_name }}</h2>
         <p>ELITE Member</p>
         <div class="cc-mm-account-header-inner">
-          <p>Congratulations! You have already saved <b>$00.00</b> with your membership.</p>
+          <p>Congratulations! You have already saved <b>${{ total_price | minus: total_base_price | divided_by: 100 }}</b> with your membership.</p>
         </div>
       </div>
     </div>
