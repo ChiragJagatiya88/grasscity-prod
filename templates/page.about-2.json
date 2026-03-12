@@ -9,6 +9,227 @@
  */
 {
   "sections": {
+    "breadcrumbs_DgnWDV": {
+      "type": "breadcrumbs",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "image_with_text_overlay_3FrkpM": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_MEEHjQ": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "About Grasscity.com"
+          }
+        },
+        "heading_W8mPfG": {
+          "type": "heading",
+          "settings": {
+            "heading": "The World's Best Online Smoke shop",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd1"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_MEEHjQ",
+        "heading_W8mPfG"
+      ],
+      "custom_css": [
+        ".rich-text {max-width: 52rem;}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "image": "shopify://shop_images/gs_aboutus-slider_desktop_ab_v01.webp",
+        "desktop_height": "medium",
+        "overlay_opacity": 30,
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "color_scheme": "",
+        "content_position": "top-left",
+        "content_alignment": "left",
+        "mobile_height": "adapt",
+        "content_position_mobile": "middle-center-mobile",
+        "content_alignment_mobile": "left",
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "enable_preload_image": true
+      }
+    },
+    "scrolling_promotion_6aUqmj": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "text_EWeYdP": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "25+ Years Experience",
+            "text_size": "h2",
+            "text_opacity": 100,
+            "use_custom_color": true,
+            "custom_color": "#1d349a"
+          }
+        },
+        "image_WzBbmD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gs_icon_satisfaction-18.png",
+            "image_height": 40,
+            "image_rounded": false,
+            "image_link": "",
+            "image_height_mobile": 40
+          }
+        },
+        "text_baGGeL": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "49K+ 5-Star Reviews",
+            "text_size": "h2",
+            "text_opacity": 100,
+            "use_custom_color": true,
+            "custom_color": "#1d349a"
+          }
+        },
+        "image_Ta48hW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gs_icon_certified-18_825532aa-5634-42ce-9a78-4e4aaabb6e98.png",
+            "image_height": 40,
+            "image_rounded": false,
+            "image_link": "",
+            "image_height_mobile": 40
+          }
+        },
+        "text_y3QPgp": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "PCI & SOC 2 Certified",
+            "text_size": "h2",
+            "text_opacity": 100,
+            "use_custom_color": true,
+            "custom_color": "#1d349a"
+          }
+        },
+        "image_TFNFGJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gs_icon_experience-18.png",
+            "image_height": 40,
+            "image_rounded": false,
+            "image_link": "",
+            "image_height_mobile": 38
+          }
+        }
+      },
+      "block_order": [
+        "text_EWeYdP",
+        "image_WzBbmD",
+        "text_baGGeL",
+        "image_Ta48hW",
+        "text_y3QPgp",
+        "image_TFNFGJ"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-inverse",
+        "direction": "left",
+        "pause_on_hover": true,
+        "speed": 0.3,
+        "h_spacing": 16,
+        "show_section_divider": false,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "rich_text_kyFd96": {
+      "type": "rich-text",
+      "blocks": {
+        "text_7h6LaE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Grasscity has been part of smoking culture online since 2000. What began in Amsterdam during the early days of ecommerce grew into one of the most recognized online head shops in the world.<br/><br/>Today, Grasscity serves customers across the United States with a wide selection of smoking accessories, trusted brands, and decades of category experience. Built on culture, shaped by community, and refined through years of expertise, Grasscity remains a trusted destination for smokers who know what they want.</p>",
+            "text_size": "text-lg",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "text_7h6LaE"
+      ],
+      "custom_css": [
+        ".rich-text {max-width: 1600px; margin: 0 auto; padding-inline: 50px;}",
+        "@media (max-width: 1023px) {.rich-text {padding-inline: 0; } .rich-text__heading {max-width: 50rem; margin: 0 auto; }}"
+      ],
+      "settings": {
+        "enable_custom_class": false,
+        "section_class": "",
+        "container": "full",
+        "color_scheme": "scheme-6",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "left",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "image_with_text_APMJiD": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_riVhPA": {
+          "type": "heading",
+          "settings": {
+            "heading": "A Brief History",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3"
+          }
+        },
+        "text_3XFia7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A long, long time ago (in internet time, at least), before Grasscity’s launch in 2000, was a little website called Coffeshop-Amsterdam. Its purpose was simple: to sell smoking accessories and provide tourist information about its beloved hometown of Amsterdam. But the site’s limited reach just wasn’t enough for us. To take its place, we founded Grasscity, a site that would become so much more than just an online headshop.</p>",
+            "subtext_color": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_riVhPA",
+        "text_3XFia7"
+      ],
+      "custom_css": [
+        ".image-with-text__content {max-width: 52rem;}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "image": "shopify://shop_images/gs_timeline-3_ab_v01_e7b9858d-4861-4186-8738-fb3a636287e8.webp",
+        "image_position": "right",
+        "image_width": 50,
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "inherit",
+        "show_section_divider": true,
+        "divider_width": "full",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
     "rich_text_BrG4LN": {
       "type": "rich-text",
       "blocks": {
@@ -58,7 +279,7 @@
         "button_item_tpCdia": {
           "type": "button_item",
           "settings": {
-            "button_label": "20+ Years of Culture",
+            "button_label": "25+ Years of Culture",
             "button_link": "",
             "icon": "check"
           }
@@ -302,13 +523,155 @@
         "padding_bottom": 40
       }
     },
-    "breadcrumbs_DgnWDV": {
-      "type": "breadcrumbs",
+    "rich_text_VQdpin": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_tCjPWg": {
+          "type": "heading",
+          "settings": {
+            "heading": "A Brand Built on Trust",
+            "highlight_style": "none",
+            "highlight_font_style": "normal",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3",
+            "heading_tag": "h2"
+          }
+        },
+        "text_WwnDXa": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Over the years, Grasscity has earned its place through consistency, product knowledge, and a genuine connection to the culture it serves. Customers return to Grasscity because they know they will find:</p><ul><li>authentic products</li><li>trusted brands</li><li>a wide selection of accessories</li><li>an online shopping experience designed for reliability</li></ul><p>While the technology has changed and the industry has grown, the purpose has remained steady: to offer enthusiasts the gear, insight, and confidence that make every session better.</p>",
+            "text_size": "text-lg",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_tCjPWg",
+        "text_WwnDXa"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".rich-text {max-width: 1600px; margin: 0 auto; padding-inline: 50px;}",
+        "@media (max-width: 1023px) {.rich-text {padding-inline: 0; } .rich-text__heading {max-width: 50rem; margin: 0 auto; }}"
+      ],
+      "settings": {
+        "enable_custom_class": false,
+        "section_class": "",
+        "container": "fixed",
+        "color_scheme": "scheme-4",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "left",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "image_with_text_GFmkfA": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_8hcLM7": {
+          "type": "heading",
+          "settings": {
+            "heading": "What Grasscity Offers Today",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3"
+          }
+        },
+        "text_WnDtpj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Grasscity brings together a broad range of smoking accessories for enthusiasts who care about quality, performance, and craftsmanship. From bongs and vaporizers to grinders, rolling papers, and everyday essentials, the selection is built to serve both longtime smokers and newcomers finding their ritual.<br/><br/>Every category is shaped by experience in the space and a strong understanding of what customers actually look for: gear that works well, feels intentional, and earns its place in the session.</p>",
+            "subtext_color": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_8hcLM7",
+        "text_WnDtpj"
+      ],
+      "custom_css": [
+        ".image-with-text__content {max-width: 52rem;}"
+      ],
       "settings": {
         "container": "fixed",
-        "text_alignment": "start",
-        "padding_top": 16,
-        "padding_bottom": 20
+        "color_scheme": "scheme-1",
+        "image": "shopify://shop_images/gs_lifestyle-03_ab_v01_5114c52e-ee2a-4c3f-99c6-0793214d5d0c.webp",
+        "image_position": "left",
+        "image_width": 50,
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "inherit",
+        "show_section_divider": true,
+        "divider_width": "full",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "rich_text_jgViLm": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_b8WmfK": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Story Continues",
+            "highlight_style": "none",
+            "highlight_font_style": "normal",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3",
+            "heading_tag": "h2"
+          }
+        },
+        "text_nPWTeg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>What began in the early days of the internet has grown into one of the most recognized online destinations for smoking accessories. Grasscity continues to bring together trusted brands, carefully selected gear, and decades of experience in the category.<br/><br/>Whether you’re searching for your next daily piece or exploring new additions to your setup, Grasscity remains a place where enthusiasts can discover quality gear and shop with confidence.</p>",
+            "text_size": "text-lg",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "button_JDYcjw": {
+          "type": "button",
+          "settings": {
+            "button_label": "Explore our collections",
+            "button_link": "shopify://collections",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_b8WmfK",
+        "text_nPWTeg",
+        "button_JDYcjw"
+      ],
+      "custom_css": [
+        ".rich-text {max-width: 1600px; margin: 0 auto; padding-inline: 50px;}",
+        "@media (max-width: 1023px) {.rich-text {padding-inline: 0; } .rich-text__heading {max-width: 50rem; margin: 0 auto; }}"
+      ],
+      "settings": {
+        "enable_custom_class": false,
+        "section_class": "",
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "left",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "show_section_divider": false,
+        "divider_width": "fixed"
       }
     },
     "main": {
@@ -319,173 +682,6 @@
         "text_alignment": "center",
         "padding_top": 28,
         "padding_bottom": 28
-      }
-    },
-    "image_with_text_overlay_3FrkpM": {
-      "type": "image-with-text-overlay",
-      "blocks": {
-        "subheading_MEEHjQ": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "About Grasscity.com"
-          }
-        },
-        "heading_W8mPfG": {
-          "type": "heading",
-          "settings": {
-            "heading": "The World's Best Online Smoke shop",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "hd1"
-          }
-        }
-      },
-      "block_order": [
-        "subheading_MEEHjQ",
-        "heading_W8mPfG"
-      ],
-      "custom_css": [
-        ".rich-text {max-width: 52rem;}"
-      ],
-      "settings": {
-        "container": "fixed",
-        "image": "shopify://shop_images/gs_aboutus-slider_desktop_ab_v01.webp",
-        "desktop_height": "medium",
-        "overlay_opacity": 30,
-        "enable_parallax": false,
-        "parallax_direction": "vertical",
-        "color_scheme": "",
-        "content_position": "top-left",
-        "content_alignment": "left",
-        "mobile_height": "adapt",
-        "content_position_mobile": "middle-center-mobile",
-        "content_alignment_mobile": "left",
-        "padding_top": 0,
-        "padding_bottom": 20,
-        "enable_preload_image": true
-      }
-    },
-    "scrolling_promotion_6aUqmj": {
-      "type": "scrolling-promotion",
-      "blocks": {
-        "text_EWeYdP": {
-          "type": "text",
-          "settings": {
-            "text_link": "",
-            "text": "25+ Years Experience",
-            "text_size": "h2",
-            "text_opacity": 100,
-            "use_custom_color": true,
-            "custom_color": "#1d349a"
-          }
-        },
-        "image_WzBbmD": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/gs_icon_satisfaction-18.png",
-            "image_height": 40,
-            "image_rounded": false,
-            "image_link": "",
-            "image_height_mobile": 40
-          }
-        },
-        "text_baGGeL": {
-          "type": "text",
-          "settings": {
-            "text_link": "",
-            "text": "49K+ 5-Star Reviews",
-            "text_size": "h2",
-            "text_opacity": 100,
-            "use_custom_color": true,
-            "custom_color": "#1d349a"
-          }
-        },
-        "image_Ta48hW": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/gs_icon_certified-18_825532aa-5634-42ce-9a78-4e4aaabb6e98.png",
-            "image_height": 40,
-            "image_rounded": false,
-            "image_link": "",
-            "image_height_mobile": 40
-          }
-        },
-        "text_y3QPgp": {
-          "type": "text",
-          "settings": {
-            "text_link": "",
-            "text": "PCI & SOC 2 Certified",
-            "text_size": "h2",
-            "text_opacity": 100,
-            "use_custom_color": true,
-            "custom_color": "#1d349a"
-          }
-        },
-        "image_TFNFGJ": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/gs_icon_experience-18.png",
-            "image_height": 40,
-            "image_rounded": false,
-            "image_link": "",
-            "image_height_mobile": 38
-          }
-        }
-      },
-      "block_order": [
-        "text_EWeYdP",
-        "image_WzBbmD",
-        "text_baGGeL",
-        "image_Ta48hW",
-        "text_y3QPgp",
-        "image_TFNFGJ"
-      ],
-      "settings": {
-        "color_scheme": "scheme-inverse",
-        "direction": "left",
-        "pause_on_hover": true,
-        "speed": 0.3,
-        "h_spacing": 16,
-        "show_section_divider": false,
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "rich_text_kyFd96": {
-      "type": "rich-text",
-      "blocks": {
-        "text_7h6LaE": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Grasscity has been part of smoking culture online since 2000. What began in Amsterdam during the early days of ecommerce grew into one of the most recognized online head shops in the world.<br/><br/>Today, Grasscity serves customers across the United States with a wide selection of smoking accessories, trusted brands, and decades of category experience. Built on culture, shaped by community, and refined through years of expertise, Grasscity remains a trusted destination for smokers who know what they want.</p>",
-            "text_size": "text-lg",
-            "text_line_limit": "none",
-            "button_style": "btn--underline",
-            "button_icon": "none"
-          }
-        }
-      },
-      "block_order": [
-        "text_7h6LaE"
-      ],
-      "custom_css": [
-        ".rich-text {max-width: 1600px; margin: 0 auto; padding-inline: 50px;}",
-        "@media (max-width: 1023px) {.rich-text {padding-inline: 0; } .rich-text__heading {max-width: 50rem; margin: 0 auto; }}"
-      ],
-      "settings": {
-        "enable_custom_class": false,
-        "section_class": "",
-        "container": "full",
-        "color_scheme": "scheme-6",
-        "use_color_scheme_in_container": false,
-        "content_spacing": "standard",
-        "content_alignment": "left",
-        "padding_top": 30,
-        "padding_bottom": 30,
-        "show_section_divider": false,
-        "divider_width": "fixed"
       }
     },
     "multicolumn_36XTkC": {
@@ -711,200 +907,6 @@
         "divider_width": "fixed",
         "padding_top": 50,
         "padding_bottom": 50
-      }
-    },
-    "image_with_text_APMJiD": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_riVhPA": {
-          "type": "heading",
-          "settings": {
-            "heading": "A Brief History",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h3"
-          }
-        },
-        "text_3XFia7": {
-          "type": "text",
-          "settings": {
-            "text": "<p>A long, long time ago (in internet time, at least), before Grasscity’s launch in 2000, was a little website called Coffeshop-Amsterdam. Its purpose was simple: to sell smoking accessories and provide tourist information about its beloved hometown of Amsterdam. But the site’s limited reach just wasn’t enough for us. To take its place, we founded Grasscity, a site that would become so much more than just an online headshop.</p>",
-            "subtext_color": true
-          }
-        }
-      },
-      "block_order": [
-        "heading_riVhPA",
-        "text_3XFia7"
-      ],
-      "custom_css": [
-        ".image-with-text__content {max-width: 52rem;}"
-      ],
-      "settings": {
-        "container": "fixed",
-        "color_scheme": "scheme-1",
-        "image": "shopify://shop_images/gs_timeline-3_ab_v01_e7b9858d-4861-4186-8738-fb3a636287e8.webp",
-        "image_position": "right",
-        "image_width": 50,
-        "desktop_content_position": "center",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "inherit",
-        "show_section_divider": true,
-        "divider_width": "full",
-        "padding_top": 24,
-        "padding_bottom": 24
-      }
-    },
-    "rich_text_VQdpin": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_tCjPWg": {
-          "type": "heading",
-          "settings": {
-            "heading": "A Brand Built on Trust",
-            "highlight_style": "none",
-            "highlight_font_style": "normal",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h3",
-            "heading_tag": "h2"
-          }
-        },
-        "text_WwnDXa": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Over the years, Grasscity has earned its place through consistency, product knowledge, and a genuine connection to the culture it serves. Customers return to Grasscity because they know they will find:</p><ul><li>authentic products</li><li>trusted brands</li><li>a wide selection of accessories</li><li>an online shopping experience designed for reliability</li></ul><p>While the technology has changed and the industry has grown, the purpose has remained steady: to offer enthusiasts the gear, insight, and confidence that make every session better.</p>",
-            "text_size": "text-lg",
-            "text_line_limit": "none",
-            "button_style": "btn--underline",
-            "button_icon": "none"
-          }
-        }
-      },
-      "block_order": [
-        "heading_tCjPWg",
-        "text_WwnDXa"
-      ],
-      "custom_css": [
-        ".rich-text {max-width: 1600px; margin: 0 auto; padding-inline: 50px;}",
-        "@media (max-width: 1023px) {.rich-text {padding-inline: 0; } .rich-text__heading {max-width: 50rem; margin: 0 auto; }}"
-      ],
-      "settings": {
-        "enable_custom_class": false,
-        "section_class": "",
-        "container": "fixed",
-        "color_scheme": "scheme-4",
-        "use_color_scheme_in_container": false,
-        "content_spacing": "standard",
-        "content_alignment": "left",
-        "padding_top": 30,
-        "padding_bottom": 30,
-        "show_section_divider": false,
-        "divider_width": "fixed"
-      }
-    },
-    "image_with_text_GFmkfA": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_8hcLM7": {
-          "type": "heading",
-          "settings": {
-            "heading": "What Grasscity Offers Today",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h3"
-          }
-        },
-        "text_WnDtpj": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Grasscity brings together a broad range of smoking accessories for enthusiasts who care about quality, performance, and craftsmanship. From bongs and vaporizers to grinders, rolling papers, and everyday essentials, the selection is built to serve both longtime smokers and newcomers finding their ritual.<br/><br/>Every category is shaped by experience in the space and a strong understanding of what customers actually look for: gear that works well, feels intentional, and earns its place in the session.</p>",
-            "subtext_color": true
-          }
-        }
-      },
-      "block_order": [
-        "heading_8hcLM7",
-        "text_WnDtpj"
-      ],
-      "custom_css": [
-        ".image-with-text__content {max-width: 52rem;}"
-      ],
-      "settings": {
-        "container": "fixed",
-        "color_scheme": "scheme-1",
-        "image": "shopify://shop_images/gs_lifestyle-03_ab_v01_5114c52e-ee2a-4c3f-99c6-0793214d5d0c.webp",
-        "image_position": "left",
-        "image_width": 50,
-        "desktop_content_position": "center",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "inherit",
-        "show_section_divider": true,
-        "divider_width": "full",
-        "padding_top": 24,
-        "padding_bottom": 24
-      }
-    },
-    "rich_text_jgViLm": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_b8WmfK": {
-          "type": "heading",
-          "settings": {
-            "heading": "The Story Continues",
-            "highlight_style": "none",
-            "highlight_font_style": "normal",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h3",
-            "heading_tag": "h2"
-          }
-        },
-        "text_nPWTeg": {
-          "type": "text",
-          "settings": {
-            "text": "<p>What began in the early days of the internet has grown into one of the most recognized online destinations for smoking accessories. Grasscity continues to bring together trusted brands, carefully selected gear, and decades of experience in the category.<br/><br/>Whether you’re searching for your next daily piece or exploring new additions to your setup, Grasscity remains a place where enthusiasts can discover quality gear and shop with confidence.</p>",
-            "text_size": "text-lg",
-            "text_line_limit": "none",
-            "button_style": "btn--underline",
-            "button_icon": "none"
-          }
-        },
-        "button_JDYcjw": {
-          "type": "button",
-          "settings": {
-            "button_label": "Explore our collections",
-            "button_link": "shopify://collections",
-            "button_style": "btn--primary",
-            "button_icon": "none"
-          }
-        }
-      },
-      "block_order": [
-        "heading_b8WmfK",
-        "text_nPWTeg",
-        "button_JDYcjw"
-      ],
-      "custom_css": [
-        ".rich-text {max-width: 1600px; margin: 0 auto; padding-inline: 50px;}",
-        "@media (max-width: 1023px) {.rich-text {padding-inline: 0; } .rich-text__heading {max-width: 50rem; margin: 0 auto; }}"
-      ],
-      "settings": {
-        "enable_custom_class": false,
-        "section_class": "",
-        "container": "fixed",
-        "color_scheme": "scheme-1",
-        "use_color_scheme_in_container": false,
-        "content_spacing": "standard",
-        "content_alignment": "left",
-        "padding_top": 30,
-        "padding_bottom": 30,
-        "show_section_divider": false,
-        "divider_width": "fixed"
       }
     },
     "image_with_text_DCXDtE": {
