@@ -457,7 +457,7 @@
             "highlight_text_color": "",
             "heading_size": "h4",
             "text": "<p><strong>Joining High Tide</strong><br/> Grasscity becomes part of High Tide, strengthening its digital retail capabilities and global presence.</p>",
-            "text_size": "text-inherit",
+            "text_size": "text-lg",
             "button_label": "",
             "button_link": "",
             "button_style": "btn--underline",
