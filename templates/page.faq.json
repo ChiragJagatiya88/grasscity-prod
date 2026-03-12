@@ -219,7 +219,7 @@
           "settings": {
             "icon": "none",
             "heading": "How much does shipping cost?",
-            "content": "<p>We offer free domestic shipping within the United States on orders over $50. For international orders, we currently only ship to Canada, with a flat shipping rate of $14.95 for all orders.</p>",
+            "content": "<p>We offer free domestic shipping within the United States on orders over $50. For international orders, we currently only ship to Canada, with a flat shipping rate of $14.95 for all orders.</p><p><strong>Our Shipping Team and Shipping Speeds</strong></p><p>Please note that shipping speed does not include order processing time. Orders typically require 2-3 business days for processing, including pulling and packaging your items. Our shipping team works hard to dispatch orders as quickly as possible, but during peak seasons and promotional events, processing times may increase.</p><p>Shipping times do not guarantee the exact package arrival date and may be affected by unforeseen circumstances, such as weather conditions or carrier delays.</p>",
             "custom_liquid": "",
             "page": "",
             "open": false,
