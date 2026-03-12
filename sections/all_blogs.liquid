@@ -7,11 +7,31 @@
         <div class="demo-block" {{ block.shopify_attributes }}>
           <h3>{{ block.settings.blog_title }}</h3>
           <h3>{{ block.settings.blog.title }}</h3>
+          <>
         </div>
       {% endfor %}
     </div>
   </div>
 </div>
+
+{% comment %} templates/page.blogs-list.liquid {% endcomment %}
+<div class="page-width">
+  <h1>{{ page.title }}</h1>
+  {% paginate blogs by 5 %}
+    <ul>
+      {% for blog in blogs %}
+        <li>
+          <a href="{{ blog.url }}">{{ blog.title }}</a>
+          <p>{{ blog.articles_count }} articles</p>
+        </li>
+      {% endfor %}
+    </ul>
+    {% if paginate.pages > 1 %}
+      <div class="pagination">{{ paginate | default_pagination }}</div>
+    {% endif %}
+  {% endpaginate %}
+</div>
+
 
 {% style %}
   .section_{{ section.id }} {
