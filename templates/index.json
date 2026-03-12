@@ -1112,6 +1112,7 @@
       "block_order": [
         "collection_tqdqYc"
       ],
+      "disabled": true,
       "settings": {
         "container": "fixed",
         "color_scheme": "",
