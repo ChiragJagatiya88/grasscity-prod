@@ -1625,9 +1625,7 @@
         "image_aMDwHQ",
         "image_PWFmtj"
       ],
-      "custom_css": [
-        ".marquee_section {margin: 0 auto; padding-inline: var(--page-padding);}"
-      ],
+      "custom_css": [],
       "name": "IF - Image Marquee",
       "settings": {
         "sec_title": "",
