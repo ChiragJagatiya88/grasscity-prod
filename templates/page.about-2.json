@@ -663,7 +663,7 @@
         "heading_b8WmfK": {
           "type": "heading",
           "settings": {
-            "heading": "Grasscity Forums",
+            "heading": "The Story Continues",
             "highlight_style": "none",
             "highlight_font_style": "normal",
             "highlight_style_color": "",
@@ -675,6 +675,64 @@
         "text_nPWTeg": {
           "type": "text",
           "settings": {
+            "text": "<p>What began in the early days of the internet has grown into one of the most recognized online destinations for smoking accessories. Grasscity continues to bring together trusted brands, carefully selected gear, and decades of experience in the category.<br/><br/>Whether you’re searching for your next daily piece or exploring new additions to your setup, Grasscity remains a place where enthusiasts can discover quality gear and shop with confidence.</p>",
+            "text_size": "text-lg",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "button_JDYcjw": {
+          "type": "button",
+          "settings": {
+            "button_label": "Explore our collections",
+            "button_link": "shopify://collections",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_b8WmfK",
+        "text_nPWTeg",
+        "button_JDYcjw"
+      ],
+      "custom_css": [
+        ".rich-text {max-width: 1600px; margin: 0 auto; padding-inline: 50px;}",
+        "@media (max-width: 1023px) {.rich-text {padding-inline: 0; } .rich-text__heading {max-width: 50rem; margin: 0 auto; }}"
+      ],
+      "settings": {
+        "enable_custom_class": false,
+        "section_class": "",
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "left",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "rich_text_UNURCw": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ba7rkq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Grasscity Forums",
+            "highlight_style": "none",
+            "highlight_font_style": "normal",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3",
+            "heading_tag": "h2"
+          }
+        },
+        "text_taGcRL": {
+          "type": "text",
+          "settings": {
             "text": "<p>With over 650,000 members, over 20 million posts, and more than 2 million impressions per month, the Grasscity forum is a place like no other. It’s a space where like-minded people come together not only to talk about smoking herbs, but about everything under the sun: movies, games, recipes, growing tips, funny smoking stories, and even their own art. We’re proud of our welcoming and vibrant community, and we moderate our forums to keep it a place of positivity and tolerance. Our community is always growing, and there’s always something new to share—what will your first post be?</p><h2>CBDcity.com</h2><p>We’re always looking to expand to new horizons. Enter <a href=\"https://cbdcity.com/\">CBDcity</a>, the newest member of the High Tide family. Launched in May 2020, CBDcity carries on the Grasscity spirit in the form of CBD exclusive products. It’s the newest (and definitely our favorite) online store for everything CBD, including <a href=\"https://cbdcity.com/collections/cbd-oil\" target=\"_blank\">CBD oils</a>, edibles, skincare products, vape oils, relief creams, and even pet products.</p><h2>Let’s get Social</h2><p>Like what we do? So do we—and so do our over 300,000 combined followers on Instagram, Facebook, Twitter, and YouTube. Looking for giveaways, contests, and notices on sweet deals? Head on over to our socials, give us a follow, and leave a few nice comments. Smoking isn’t the only way to make us feel all warm and fuzzy inside.</p>",
             "text_size": "text-lg",
             "text_line_limit": "none",
@@ -684,9 +742,10 @@
         }
       },
       "block_order": [
-        "heading_b8WmfK",
-        "text_nPWTeg"
+        "heading_ba7rkq",
+        "text_taGcRL"
       ],
+      "disabled": true,
       "custom_css": [
         ".rich-text {max-width: 1600px; margin: 0 auto; padding-inline: 50px;}",
         "@media (max-width: 1023px) {.rich-text {padding-inline: 0; } .rich-text__heading {max-width: 50rem; margin: 0 auto; }}"
@@ -833,6 +892,7 @@
         "heading_NaCR43",
         "text_6UcCEJ"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text-overlay.name",
       "settings": {
         "container": "full",
@@ -866,6 +926,7 @@
     "rich_text_VQdpin",
     "image_with_text_GFmkfA",
     "rich_text_jgViLm",
+    "rich_text_UNURCw",
     "testimonials_T939Dc",
     "image_with_text_overlay_dDk78w"
   ]
