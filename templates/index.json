@@ -801,10 +801,10 @@
         "icon_with_text_8qCJiV": {
           "type": "icon_with_text",
           "settings": {
-            "icon": "arrow-up-left",
+            "icon": "check",
             "icon_width": 24,
             "color": "#000000",
-            "heading": "Easy Returns",
+            "heading": "Gear chosen by experts",
             "heading_size": "h5",
             "text": "",
             "vertical_alignment": "start"
@@ -816,7 +816,7 @@
             "icon": "smiley",
             "icon_width": 24,
             "color": "#000000",
-            "heading": "4.7 Review Score",
+            "heading": "47k+ 5-Star Reviews",
             "heading_size": "h5",
             "text": "",
             "vertical_alignment": "start"
