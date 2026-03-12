@@ -1,3 +1,12 @@
+body.age_modal_open {
+  overflow: visible;
+  padding: 0;
+  .new_popup-overlay,
+  .new_custom_popup_main2 {
+    display: none !important;
+  }
+}
+
 /* Age Verifier – simple centered popup (no Tailwind required) */
 .age-modal {
   position: fixed;
@@ -16,6 +25,10 @@
 .age-modal[open],
 .age-modal[active] {
   pointer-events: auto;
+}
+
+.age-modal .hidden {
+  display: none !important;
 }
 
 /* Overlay */
@@ -70,6 +83,10 @@
   text-align: center;
 }
 
+.site_logo {
+  margin-bottom: 20px;
+}
+
 .age-verifier__heading {
   margin: 0 0 20px;
   font-size: 22px;
@@ -83,6 +100,9 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
+  strong {
+    color: red;
+  }
   /* color: rgb(var(--age-text)); */
 }
 
@@ -110,6 +130,11 @@
   text-decoration: none;
   transition: opacity 0.2s ease, transform 0.15s ease;
   box-sizing: border-box;
+
+  width: 100%;
+  max-width: 40%;
+  font-size: 16px;
+  border-radius: 5px;
 }
 
 .age-verifier__btn:focus-visible {
@@ -178,7 +203,6 @@
   }
 
   .age-verifier__buttons {
-    flex-direction: column;
     width: 100%;
   }
 

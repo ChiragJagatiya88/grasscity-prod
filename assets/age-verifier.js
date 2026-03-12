@@ -49,6 +49,17 @@ if (!customElements.get('age-verifier')) {
         if (yesBtn) {
           yesBtn.addEventListener('click', () => this.onConfirm());
         }
+        const noBtn = this.querySelector('.age-verifier__btn--no');
+        if (noBtn && noBtn.tagName === 'BUTTON') {
+          noBtn.addEventListener('click', () => this.onDecline());
+        }
+      }
+
+      onDecline() {
+        const formContent = this.querySelector('.age-verifier__form-content');
+        const restrictedContent = this.querySelector('.restricted-popup__content');
+        if (formContent) formContent.classList.add('hidden');
+        if (restrictedContent) restrictedContent.classList.remove('hidden');
       }
 
       onConfirm() {
@@ -73,6 +84,16 @@ if (!customElements.get('age-verifier')) {
         if (this.testMode) {
           this.removeCookie(this.cookieName);
         }
+      }
+
+      prepareToShow() {
+        if (super.prepareToShow) super.prepareToShow();
+        document.body.classList.add('age_modal_open');
+      }
+
+      prepareToHide() {
+        if (super.prepareToHide) super.prepareToHide();
+        document.body.classList.remove('age_modal_open');
       }
 
       getCookie(name) {
