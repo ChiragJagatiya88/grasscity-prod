@@ -1125,6 +1125,11 @@
         "padding_top": 22,
         "padding_bottom": 22
       }
+    },
+    "faq_json_ld_rGh8Cc": {
+      "type": "faq-json-ld",
+      "name": "FAQ JSON-LD",
+      "settings": {}
     }
   },
   "order": [
@@ -1141,6 +1146,7 @@
     "collapsible_tabs_promotions",
     "collapsible_tabs_account",
     "collapsible_tabs_support",
-    "scrolling_promotion_Fy9Yhn"
+    "scrolling_promotion_Fy9Yhn",
+    "faq_json_ld_rGh8Cc"
   ]
 }
