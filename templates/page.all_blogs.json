@@ -24,6 +24,14 @@
         "button_item_i9XVJg": {
           "type": "button_item",
           "settings": {
+            "button_label": "All Blogs",
+            "button_link": "shopify://pages/all-blogs",
+            "icon": "none"
+          }
+        },
+        "button_item_p4XLCt": {
+          "type": "button_item",
+          "settings": {
             "button_label": "Product Reviews",
             "button_link": "shopify://blogs/product-reviews",
             "icon": "none"
@@ -88,6 +96,7 @@
       },
       "block_order": [
         "button_item_i9XVJg",
+        "button_item_p4XLCt",
         "button_item_RTed8M",
         "button_item_9hAjka",
         "button_item_Unt3XW",
