@@ -14,29 +14,26 @@
 
     {% assign offset = 0 %}
     <div class="demo-blocks">
-      {% for block in section.blocks %}
-        <div class="demo-block" {{ block.shopify_attributes }}>
-          <h3>{{ block.settings.blog.title }}</h3>
+      <div class="main-blog__block main-blog__items f-grid f-grid--gap-medium f-grid--row-gap-large">
+        {% for block in section.blocks %}
           {% assign blog_list = block.settings.blog %}
-          <div class="main-blog__block main-blog__items f-grid f-grid--gap-medium f-grid--row-gap-large">
-            {%- for article in blog_list.articles offset: offset -%}
-              <div class="f-column">
-                {%- render 'card-article',
-                  article: article,
-                  show_tags: show_tags,
-                  show_author: show_author,
-                  show_date: show_date,
-                  show_excerpt: show_excerpt,
-                  show_button: show_button,
-                  index: forloop.index,
-                  title_size: section.settings.card_title_size,
-                  button_style: 'btn--icon'
-                -%}
-              </div>
-            {%- endfor -%}
-          </div>
-        </div>
-      {% endfor %}
+          {%- for article in blog_list.articles offset: offset -%}
+            <div class="f-column" data-cetegory="{{ block.settings.blog.title }}">
+              {%- render 'card-article',
+                article: article,
+                show_tags: show_tags,
+                show_author: show_author,
+                show_date: show_date,
+                show_excerpt: show_excerpt,
+                show_button: show_button,
+                index: forloop.index,
+                title_size: section.settings.card_title_size,
+                button_style: 'btn--icon'
+              -%}
+            </div>
+          {%- endfor -%}
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>
