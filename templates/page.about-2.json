@@ -119,6 +119,7 @@
         "column_YWTLnF": {
           "type": "column",
           "settings": {
+            "show_image": false,
             "title": "1998",
             "highlight_style": "none",
             "highlight_font_style": "italic",
@@ -137,6 +138,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/gs_brand-qualities-2_ab_v02_020722e6-cfbc-474f-a808-d07465cfe13d.webp",
+            "show_image": false,
             "title": "Huge Selection. Competitive Prices.",
             "highlight_style": "none",
             "highlight_font_style": "italic",
@@ -155,6 +157,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/gs_brand-qualities-3_ab_v03_66130542-6b86-45bb-ae9d-1e4c42a1895d.webp",
+            "show_image": false,
             "title": "49K+ Five-Star Reviews",
             "highlight_style": "none",
             "highlight_font_style": "italic",
@@ -195,7 +198,7 @@
         "button_icon": "none",
         "content_alignment": "center",
         "show_col_count": false,
-        "show_image": true,
+        "show_image": false,
         "columns_desktop": 4,
         "column_gap": "medium",
         "row_gap": "inherit",
@@ -400,6 +403,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/gs_timeline-1_ab_v01_f6112c8b-0d19-4ecf-a8a3-05e085dc9758.webp",
+            "show_image": false,
             "title": "Founded in Amsterdam",
             "highlight_style": "none",
             "highlight_font_style": "italic",
@@ -418,6 +422,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/gs_timeline-1_ab_v01_84ee82fb-e703-47f3-b307-f1028e3c5928.webp",
+            "show_image": false,
             "title": "Grasscity is Born",
             "highlight_style": "none",
             "highlight_font_style": "italic",
@@ -436,6 +441,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/gs_timeline-3_ab_v01_e7b9858d-4861-4186-8738-fb3a636287e8.webp",
+            "show_image": false,
             "title": "Pioneering Growth",
             "highlight_style": "none",
             "highlight_font_style": "italic",
@@ -454,6 +460,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/gs_timeline-4_ab_v01_94501291-d9a5-4fac-8397-f86f872338e7.webp",
+            "show_image": false,
             "title": "Joined High Tide Inc.",
             "highlight_style": "none",
             "highlight_font_style": "italic",
