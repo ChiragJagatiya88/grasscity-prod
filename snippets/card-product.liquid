@@ -319,6 +319,8 @@
           <span class="reversed-link__text">{{- product.title -}}</span>
         </a>
       </h3>
+      <div class="yotpo-widget-instance" data-yotpo-instance-id="1279532" data-yotpo-product-id="{{product.id}}" data-yotpo-cart-product-id="{{item.product.id}}" data-yotpo-section-id="{{template.name}}"></div>
+      
       {%- if show_price -%}
         {% comment %} {% render 'price', product: product, alignment: settings.pcard_content_alignment %} {% endcomment %}
         {% render 'us-product-pricing-refresh', product: product %}
