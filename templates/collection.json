@@ -447,85 +447,6 @@
         "padding_top_mobile": 24,
         "padding_bottom_mobile": 24
       }
-    },
-    "scrolling_promotion_Fy9Yhn": {
-      "type": "scrolling-promotion",
-      "blocks": {
-        "text_gijz7Q": {
-          "type": "text",
-          "settings": {
-            "text_link": "",
-            "text": "Fast Delivery",
-            "text_size": "h4",
-            "text_opacity": 100,
-            "use_custom_color": false,
-            "custom_color": "#000000"
-          }
-        },
-        "text_3TVCPg": {
-          "type": "text",
-          "settings": {
-            "text_link": "",
-            "text": "Easy Returns",
-            "text_size": "h4",
-            "text_opacity": 100,
-            "use_custom_color": false,
-            "custom_color": "#000000"
-          }
-        },
-        "text_iD6689": {
-          "type": "text",
-          "settings": {
-            "text_link": "",
-            "text": "Lowest Price Guaranteed",
-            "text_size": "h4",
-            "text_opacity": 100,
-            "use_custom_color": false,
-            "custom_color": "#000000"
-          }
-        },
-        "text_CtJBtL": {
-          "type": "text",
-          "settings": {
-            "text_link": "",
-            "text": "Secure Checkout",
-            "text_size": "h4",
-            "text_opacity": 100,
-            "use_custom_color": false,
-            "custom_color": "#000000"
-          }
-        },
-        "text_dGmg9m": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text_link": "",
-            "text": "Sustainable Materials",
-            "text_size": "h4",
-            "text_opacity": 100,
-            "use_custom_color": false,
-            "custom_color": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "text_gijz7Q",
-        "text_3TVCPg",
-        "text_iD6689",
-        "text_CtJBtL",
-        "text_dGmg9m"
-      ],
-      "custom_css": [],
-      "settings": {
-        "color_scheme": "scheme-3",
-        "direction": "left",
-        "pause_on_hover": true,
-        "speed": 0.2,
-        "h_spacing": 80,
-        "show_section_divider": false,
-        "padding_top": 22,
-        "padding_bottom": 22
-      }
     }
   },
   "order": [
@@ -538,7 +459,6 @@
     "collection_bottom_description_i6UPK6",
     "custom_liquid_AVLwYH",
     "collection_faqs_ydbz9c",
-    "spacer_aTTDNr",
-    "scrolling_promotion_Fy9Yhn"
+    "spacer_aTTDNr"
   ]
 }
