@@ -305,7 +305,7 @@
         "show_social_media_icons": true,
         "enable_language_selector": false,
         "enable_country_selector": false,
-        "enable_market_links": true,
+        "enable_market_links": false,
         "header_top_padding_top": 20,
         "header_top_padding_bottom": 20,
         "navigation_color_scheme": "",
