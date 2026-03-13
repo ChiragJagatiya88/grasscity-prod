@@ -4236,7 +4236,7 @@ input:is([type=radio])::after {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  min-height: 40px;
+  /* min-height: 40px; */
 }
 .product-card__title a {
   color: currentColor;
