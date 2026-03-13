@@ -192,7 +192,6 @@
       "blocks": {
         "heading_riVhPA": {
           "type": "heading",
-          "disabled": true,
           "settings": {
             "heading": "Our Story",
             "highlight_style": "none",
