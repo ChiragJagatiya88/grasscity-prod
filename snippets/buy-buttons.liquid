@@ -398,7 +398,9 @@
               or quantity_rule_soldout
             -%}
               {{ 'products.product.sold_out' | t }}
-            {%- elsif is_elite_product and elite_cart_qty >= 1 or is_elite_renew_product and elite_renew_cart_qty >= 1 -%}
+            {%- elsif is_elite_product and elite_cart_qty >= 1 -%}
+              {{ 'products.product.already_in_cart' | t }}
+            {%- elsif is_elite_renew_product and elite_renew_cart_qty >= 1 -%}
               {{ 'products.product.already_in_cart' | t }}
             {%- else -%}
               {{ 'products.product.add_to_cart' | t }}
