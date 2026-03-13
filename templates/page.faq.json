@@ -749,7 +749,7 @@
           "type": "heading",
           "settings": {
             "sub_heading": "",
-            "heading": "Products& Availability",
+            "heading": "Products & Availability",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
@@ -916,7 +916,7 @@
           "type": "heading",
           "settings": {
             "sub_heading": "",
-            "heading": "Account & Login Support",
+            "heading": "Account & Support",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
@@ -1139,9 +1139,9 @@
     "multicolumn_icon_Xp8nB6",
     "collapsible_tabs_shipping",
     "collapsible_tabs_returns",
+    "collapsible_tabs_payments",
     "collapsible_tabs_order_tracking",
     "collapsible_tabs_delivery",
-    "collapsible_tabs_payments",
     "collapsible_tabs_damaged",
     "collapsible_tabs_inventory",
     "collapsible_tabs_promotions",
