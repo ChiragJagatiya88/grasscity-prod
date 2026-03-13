@@ -21,12 +21,6 @@
     "main": {
       "type": "main-article",
       "blocks": {
-        "image_N9HR9w": {
-          "type": "image",
-          "settings": {
-            "article_ratio": "adapt"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -34,6 +28,12 @@
             "show_date": true,
             "show_author": true,
             "heading_size": "h3"
+          }
+        },
+        "image_N9HR9w": {
+          "type": "image",
+          "settings": {
+            "article_ratio": "adapt"
           }
         },
         "content": {
@@ -53,8 +53,8 @@
         }
       },
       "block_order": [
-        "image_N9HR9w",
         "title",
+        "image_N9HR9w",
         "content",
         "share",
         "navigation_dyfBRC"
