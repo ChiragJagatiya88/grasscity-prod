@@ -1,6 +1,7 @@
 {% assign logo_url = settings.logo | image_url %}
 {% assign client = 'Nw3uyTHXfdCnsjsF8FRG4A==:+kvnG2QrQozmO4zvVAXM4kAT+1sOO2I32Zc3g7GGzZAPF2E5c4Dv8gATWYa14vw0' %}
 {% assign elite_id = settings.elite_product.selected_or_first_available_variant.id %}
+{% assign elite_renew_id = settings.elite_product_renew.variants.first.id %}
 
 {% comment %} <p>elite_id: {{ elite_id }}</p> {% endcomment %}
 
@@ -718,7 +719,7 @@
       event.preventDefault();
 
       try {
-        const elite_added = await addEliteProductToCart();
+        const elite_added = await addEliteProductToCart(true);
         const errorElement = document.querySelector('.renew_membership .c_error');
         const messageElement = document.querySelector('.renew_membership_message');
 
@@ -921,8 +922,12 @@
     }
   }
 
-  async function addEliteProductToCart() {
-    const id = "{{ elite_id }}";
+  async function addEliteProductToCart(renew=false) {
+    let id = "{{ elite_id }}";
+    console.log("renew", renew);
+    if(renew){
+      id = "{{ elite_renew_id }}"
+    }
     const get_cart = await getCart();
     const matched_item = get_cart.items.find((item) => item.variant_id == id);
 
