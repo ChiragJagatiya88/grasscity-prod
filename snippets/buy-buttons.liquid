@@ -387,9 +387,7 @@
           type="submit"
           name="add"
           class="product-form__submit btn{% if show_dynamic_checkout %} btn--secondary{% else %} btn--primary{% endif %}"
-          {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout or product.selected_or_first_available_variant == nil %}
-            disabled
-          {% endif %}
+          {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout or product.selected_or_first_available_variant == nil %}disabled{% endif %}
           {% if is_elite_product and elite_cart_qty >= 1 %}disabled{% endif %}
           {% if is_elite_renew_product and elite_renew_cart_qty >= 1 %}disabled{% endif %}
         >
