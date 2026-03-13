@@ -1047,10 +1047,10 @@
         "padding_bottom": 60
       }
     },
-    "scrolling_promotion_gnPFXR": {
+    "scrolling_promotion_dBeLzT": {
       "type": "scrolling-promotion",
       "blocks": {
-        "text_aAk6xN": {
+        "text_Mz8Gwz": {
           "type": "text",
           "settings": {
             "text_link": "",
@@ -1061,41 +1061,42 @@
             "custom_color": "#000000"
           }
         },
-        "text_zYmeXn": {
+        "text_n4JXDR": {
           "type": "text",
           "settings": {
             "text_link": "",
-            "text": "30 Days Free Returns",
+            "text": "Easy Returns",
             "text_size": "h4",
             "text_opacity": 100,
             "use_custom_color": false,
             "custom_color": "#000000"
           }
         },
-        "text_xKppQq": {
+        "text_bpfUb4": {
           "type": "text",
           "settings": {
             "text_link": "",
-            "text": "Secure Payment",
+            "text": "Lowest Price Guaranteed",
             "text_size": "h4",
             "text_opacity": 100,
             "use_custom_color": false,
             "custom_color": "#000000"
           }
         },
-        "text_6RWYUM": {
+        "text_L7Ct9G": {
           "type": "text",
           "settings": {
             "text_link": "",
-            "text": "24/7 Customer Support",
+            "text": "Secure Checkout",
             "text_size": "h4",
             "text_opacity": 100,
             "use_custom_color": false,
             "custom_color": "#000000"
           }
         },
-        "text_rA8jcx": {
+        "text_dkdYDx": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text_link": "",
             "text": "Sustainable Materials",
@@ -1107,12 +1108,13 @@
         }
       },
       "block_order": [
-        "text_aAk6xN",
-        "text_zYmeXn",
-        "text_xKppQq",
-        "text_6RWYUM",
-        "text_rA8jcx"
+        "text_Mz8Gwz",
+        "text_n4JXDR",
+        "text_bpfUb4",
+        "text_L7Ct9G",
+        "text_dkdYDx"
       ],
+      "custom_css": [],
       "settings": {
         "color_scheme": "scheme-3",
         "direction": "left",
@@ -1138,6 +1140,6 @@
     "image_with_text_kqXfRQ",
     "testimonials_8JHr3L",
     "scrolling_gallery_image_eqULib",
-    "scrolling_promotion_gnPFXR"
+    "scrolling_promotion_dBeLzT"
   ]
 }
