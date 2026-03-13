@@ -677,6 +677,83 @@
         "divider_width": "fixed"
       }
     },
+    "collapsible_tabs_account": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "heading_account": {
+          "type": "heading",
+          "settings": {
+            "sub_heading": "",
+            "heading": "Account & Support",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2"
+          }
+        },
+        "item_update_password": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "How do I update my account password?",
+            "content": "<p>Found yourself locked out of your account? We can help you regain access!</p><p>When you attempt to login, you should see a clickable link that states \"Forgot your password?\".  Enter in your email address, and we can send you a link to reset your password.</p><p>You can also get in touch with our Customer Service team, and they can have a password reset email sent your way!</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": true
+          }
+        },
+        "collapsible_item_dHLqHc": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "What should I do if I did not receive my order confirmation email?",
+            "content": "<p>If you have not received your order confirmation, first check your spam or junk folder. If it is not there, please ensure you entered the correct email address at checkout.</p><p>You can also contact our customer support team on live chat or email us at support@grasscity.com with your order details, and we will confirm your order and provide any necessary updates.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_account",
+        "item_update_password",
+        "collapsible_item_dHLqHc"
+      ],
+      "settings": {
+        "container": "narrow",
+        "color_scheme": "",
+        "header_layout": "vertical",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--primary",
+        "button_icon": "none",
+        "column_gap": "large",
+        "row_gap": "inherit",
+        "item_style": "standard",
+        "item_color_scheme": "",
+        "item_heading_font": "heading",
+        "item_heading_size": "h5",
+        "item_icon_size": "extra-large",
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
     "collapsible_tabs_order_tracking": {
       "type": "collapsible-tabs",
       "blocks": {
@@ -691,23 +768,10 @@
             "highlight_text_color": "",
             "heading_size": "h2"
           }
-        },
-        "item_order_confirmation_email": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "What should I do if I did not receive my order confirmation email?",
-            "content": "<p>If you have not received your order confirmation, first check your spam or junk folder. If it is not there, please ensure you entered the correct email address at checkout.</p><p>You can also contact our customer support team on live chat or email us at support@grasscity.com with your order details, and we will confirm your order and provide any necessary updates.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false,
-            "use_subtext_color": true
-          }
         }
       },
       "block_order": [
-        "heading_order_tracking",
-        "item_order_confirmation_email"
+        "heading_order_tracking"
       ],
       "settings": {
         "container": "narrow",
@@ -909,70 +973,6 @@
         "divider_width": "fixed"
       }
     },
-    "collapsible_tabs_account": {
-      "type": "collapsible-tabs",
-      "blocks": {
-        "heading_account": {
-          "type": "heading",
-          "settings": {
-            "sub_heading": "",
-            "heading": "Account & Support",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h2"
-          }
-        },
-        "item_update_password": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "How do I update my account password?",
-            "content": "<p>Found yourself locked out of your account? We can help you regain access!</p><p>When you attempt to login, you should see a clickable link that states \"Forgot your password?\".  Enter in your email address, and we can send you a link to reset your password.</p><p>You can also get in touch with our Customer Service team, and they can have a password reset email sent your way!</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false,
-            "use_subtext_color": true
-          }
-        }
-      },
-      "block_order": [
-        "heading_account",
-        "item_update_password"
-      ],
-      "settings": {
-        "container": "narrow",
-        "color_scheme": "",
-        "header_layout": "vertical",
-        "section_header_alignment": "left",
-        "section_header_alignment_mobile": "inherit",
-        "subheading": "",
-        "heading": "",
-        "highlight_style": "none",
-        "highlight_font_style": "italic",
-        "highlight_style_color": "",
-        "highlight_text_color": "",
-        "heading_size": "h2",
-        "description": "",
-        "text_size": "text-base",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "btn--primary",
-        "button_icon": "none",
-        "column_gap": "large",
-        "row_gap": "inherit",
-        "item_style": "standard",
-        "item_color_scheme": "",
-        "item_heading_font": "heading",
-        "item_heading_size": "h5",
-        "item_icon_size": "extra-large",
-        "padding_top": 60,
-        "padding_bottom": 0,
-        "show_section_divider": false,
-        "divider_width": "fixed"
-      }
-    },
     "collapsible_tabs_support": {
       "type": "collapsible-tabs",
       "blocks": {
@@ -1141,11 +1141,11 @@
     "collapsible_tabs_returns",
     "collapsible_tabs_payments",
     "collapsible_tabs_inventory",
+    "collapsible_tabs_account",
     "collapsible_tabs_order_tracking",
     "collapsible_tabs_delivery",
     "collapsible_tabs_damaged",
     "collapsible_tabs_promotions",
-    "collapsible_tabs_account",
     "collapsible_tabs_support",
     "scrolling_promotion_Fy9Yhn",
     "faq_json_ld_rGh8Cc"
