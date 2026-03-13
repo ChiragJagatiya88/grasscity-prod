@@ -749,7 +749,7 @@
           "type": "heading",
           "settings": {
             "sub_heading": "",
-            "heading": "Inventory, Stock & Availability",
+            "heading": "Products& Availability",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
@@ -780,12 +780,38 @@
             "open": false,
             "use_subtext_color": true
           }
+        },
+        "collapsible_item_wxqmyx": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Is Grasscity's glass safe to use?",
+            "content": "<p>Yes, all our curated glass pieces are made from body-safe, heat-resistant borosilicate glass (the same material used in lab equipment and kitchenware). It is non-toxic, contains no lead or harmful chemicals, and does not leach or off-gas. Our silicone products use food-grade, BPA-free, phthalate-free platinum-cured silicone. Always inspect glass before use and never use cracked or damaged pieces.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": true
+          }
+        },
+        "collapsible_item_KRUgUp": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Are Grasscity products legal?",
+            "content": "<p>Yes, all smoking accessories we sell are legal for tobacco use and intended for adult customers ages 21+. Customers are responsible for knowing local laws. We verify age at checkout and may require signature delivery. We reserve the right to cancel orders suspected of violating laws or company policy. We take preventing illicit and underage orders extremely seriously.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": true
+          }
         }
       },
       "block_order": [
         "heading_inventory",
         "item_out_of_stock",
-        "item_restock"
+        "item_restock",
+        "collapsible_item_wxqmyx",
+        "collapsible_item_KRUgUp"
       ],
       "settings": {
         "container": "narrow",
@@ -974,30 +1000,6 @@
             "use_subtext_color": true
           }
         },
-        "item_glass_safe": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "Is Grasscity's glass safe to use?",
-            "content": "<p>Yes, all our curated glass pieces are made from body-safe, heat-resistant borosilicate glass (the same material used in lab equipment and kitchenware). It is non-toxic, contains no lead or harmful chemicals, and does not leach or off-gas. Our silicone products use food-grade, BPA-free, phthalate-free platinum-cured silicone. Always inspect glass before use and never use cracked or damaged pieces.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false,
-            "use_subtext_color": true
-          }
-        },
-        "item_products_legal": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "Are Grasscity products legal?",
-            "content": "<p>Yes, all smoking accessories we sell are legal for tobacco use and intended for adult customers ages 21+. Customers are responsible for knowing local laws. We verify age at checkout and may require signature delivery. We reserve the right to cancel orders suspected of violating laws or company policy. We take preventing illicit and underage orders extremely seriously.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false,
-            "use_subtext_color": true
-          }
-        },
         "item_sell_to_minors": {
           "type": "collapsible_item",
           "settings": {
@@ -1014,8 +1016,6 @@
       "block_order": [
         "heading_support",
         "item_help_not_here",
-        "item_glass_safe",
-        "item_products_legal",
         "item_sell_to_minors"
       ],
       "settings": {
