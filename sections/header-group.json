@@ -232,7 +232,7 @@
           "type": "sidebar",
           "name": "Smoking Pipes",
           "settings": {
-            "menu_title": "Smoking Pipes",
+            "menu_title": "Pipes",
             "enable_hl_link": false,
             "hl_link_style": "text_color",
             "hl_link_color": "",
@@ -275,7 +275,7 @@
           "settings": {
             "hl_link_title": "Delta 9 THC",
             "hl_link_style": "star_twinkle",
-            "hl_link_color": "#C4301C"
+            "hl_link_color": "#c4301c"
           }
         }
       },
