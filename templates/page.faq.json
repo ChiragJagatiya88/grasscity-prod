@@ -299,6 +299,7 @@
       ],
       "custom_css": [],
       "settings": {
+        "faq_disable": true,
         "container": "narrow",
         "color_scheme": "",
         "header_layout": "vertical",
@@ -454,6 +455,7 @@
         "collapsible_item_TNr6WH"
       ],
       "settings": {
+        "faq_disable": true,
         "container": "narrow",
         "color_scheme": "",
         "header_layout": "vertical",
@@ -544,6 +546,7 @@
         "collapsible_item_EJe69Y"
       ],
       "settings": {
+        "faq_disable": true,
         "container": "narrow",
         "color_scheme": "",
         "header_layout": "vertical",
@@ -647,6 +650,7 @@
         "collapsible_item_KRUgUp"
       ],
       "settings": {
+        "faq_disable": true,
         "container": "narrow",
         "color_scheme": "",
         "header_layout": "vertical",
@@ -763,6 +767,7 @@
         "collapsible_item_xXLyQP"
       ],
       "settings": {
+        "faq_disable": true,
         "container": "narrow",
         "color_scheme": "",
         "header_layout": "vertical",
@@ -815,6 +820,7 @@
       ],
       "disabled": true,
       "settings": {
+        "faq_disable": false,
         "container": "narrow",
         "color_scheme": "",
         "header_layout": "vertical",
@@ -867,6 +873,7 @@
       ],
       "disabled": true,
       "settings": {
+        "faq_disable": false,
         "container": "narrow",
         "color_scheme": "",
         "header_layout": "vertical",
@@ -919,6 +926,7 @@
       ],
       "disabled": true,
       "settings": {
+        "faq_disable": false,
         "container": "narrow",
         "color_scheme": "",
         "header_layout": "vertical",
@@ -971,6 +979,7 @@
       ],
       "disabled": true,
       "settings": {
+        "faq_disable": false,
         "container": "narrow",
         "color_scheme": "",
         "header_layout": "vertical",
@@ -1023,6 +1032,7 @@
       ],
       "disabled": true,
       "settings": {
+        "faq_disable": false,
         "container": "narrow",
         "color_scheme": "",
         "header_layout": "vertical",
