@@ -50,7 +50,12 @@
         "type": "product",
         "id": "elite_product",
         "label": "Select Product"
-      }
+      },
+      {
+        "type": "product",
+        "id": "elite_product_renew",
+        "label": "Elite Renew Product"
+      },
     ]
   },
   {
