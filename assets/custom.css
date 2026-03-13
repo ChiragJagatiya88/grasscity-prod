@@ -763,3 +763,13 @@ layout-switcher {
 .product-card__wrapper .yotpo-sr-bottom-line-right-panel {
   display:none !important;
 }
+.modal--newsletter-alert {
+  .drawer__close-btn {
+    outline: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  .modal .drawer__body {
+    padding: 0;
+  }
+}
