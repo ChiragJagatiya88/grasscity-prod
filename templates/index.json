@@ -718,11 +718,11 @@
           "type": "product",
           "settings": {
             "color_scheme": "scheme-2",
-            "product": "fat-bottom-mini-bong",
+            "product": "grateful-dead-x-pulsar-510-dl-2-0-pro-auto-draw-vv-vape-bar",
             "image": "shopify://shop_images/gs_best-sellers-bg-pandora_desktop_ab_v01_2ca39e29-e507-4727-a447-e78c1bbc9e54.webp",
-            "text": "<p>\"I have spoken with Rain M several times and they have helped me in every way they can and every problem I have had! Give Rain a raise! Immediately!\"</p>",
+            "text": "<p>“The Grateful Dead x Pulsar 510 DL 2. 0 Pro Auto-Draw VV Vape Bar is a wonderful battery! Simple and easy to use, thanks!”</p>",
             "text_size": "h3",
-            "author": "Liam G.",
+            "author": "",
             "bio": ""
           }
         },
@@ -730,18 +730,31 @@
           "type": "product",
           "settings": {
             "color_scheme": "scheme-8",
-            "product": "cipher-nautilus-v3-dry-herb-vaporizer",
+            "product": "glasscity-beaker-ice-bong-with-double-tree-percolator",
             "image": "shopify://shop_images/gs_best-sellers-bg-pulsar_desktop_ab_v01_7a8ac0aa-165d-49f7-9f62-dce10fae63a4.webp",
-            "text": "<p>\"It came in a week. It took three days to be shipped and four days to come in the mail. I love it. It's the perfect size and everything. Thanks again for sending me a great piece.\"</p>",
+            "text": "<p>“Love this bong! Hits nice and smooth and is skinny but tall. Overall it’s so cute and hits nice we love it!”</p>",
             "text_size": "h3",
-            "author": "JZ",
+            "author": "",
+            "bio": ""
+          }
+        },
+        "product_bcdyAe": {
+          "type": "product",
+          "settings": {
+            "color_scheme": "scheme-2",
+            "product": "jay-and-silent-bob-aluminum-grinder",
+            "image": "shopify://shop_images/gs_best-sellers-bg-pandora_desktop_ab_v01_2ca39e29-e507-4727-a447-e78c1bbc9e54.webp",
+            "text": "<p>“The quality of this grinder in a whopping 10/10 it feels amazing in the hand. I loved the Design of the removable flower holder with the mesh. The black color is deep but the pictures are nice as well for it to have been machined.”</p>",
+            "text_size": "h3",
+            "author": "",
             "bio": ""
           }
         }
       },
       "block_order": [
         "product_XrLWzM",
-        "product_wByADN"
+        "product_wByADN",
+        "product_bcdyAe"
       ],
       "custom_css": [
         ".testimonial__content {max-width: 46rem;}"
