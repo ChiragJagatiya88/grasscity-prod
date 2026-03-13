@@ -48,28 +48,31 @@
   <div class="section__container page-width page-width--fixed">
     <h1 class="section__heading text-left h2">{{ section.settings.sec_title }}</h1>
 
-    {% assign offset = 0 %}
+    {% assign all_articles = '' | split: '' %}
+    {% for block in section.blocks %}
+      {% if block.settings.blog != blank %}
+        {% assign all_articles = all_articles | concat: block.settings.blog.articles %}
+      {% endif %}
+    {% endfor %}
+    {% assign sorted_articles = all_articles | sort: 'published_at' | reverse %}
+
     <div class="main-blog__block main-blog__items f-grid f-grid--gap-medium f-grid--row-gap-large">
       {% assign forloop_index = 0 %}
-      {% for block in section.blocks %}
-
-        {% assign blog_list = block.settings.blog %}
-        {%- for article in blog_list.articles offset: offset -%}
-          <div class="f-column {% if forloop_index > 11 %}hidden{% endif %}" data-cetegory="{{ block.settings.blog.title }}">
-            {%- render 'card-article',
-              article: article,
-              show_tags: true,
-              show_author: true,
-              show_date: true,
-              show_excerpt: true,
-              show_button: false,
-              index: forloop.index,
-              title_size: 'h4',
-              button_style: 'btn--icon'
-            -%}
-          </div>
-          {% assign forloop_index = forloop_index | plus: 1 %}
-        {%- endfor -%}
+      {% for article in sorted_articles %}
+        <div class="f-column {% if forloop_index > 11 %}hidden{% endif %}" data-cetegory="{{ article.blog.title }}">
+          {%- render 'card-article',
+            article: article,
+            show_tags: true,
+            show_author: true,
+            show_date: true,
+            show_excerpt: true,
+            show_button: false,
+            index: forloop.index,
+            title_size: 'h4',
+            button_style: 'btn--icon'
+          -%}
+        </div>
+        {% assign forloop_index = forloop_index | plus: 1 %}
       {% endfor %}
     </div>
     <div class="load_btn_dom">
