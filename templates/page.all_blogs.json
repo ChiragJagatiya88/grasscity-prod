@@ -147,16 +147,16 @@
     "all_blogs_c3fWXx": {
       "type": "all_blogs",
       "blocks": {
-        "item_U4GeBm": {
-          "type": "item",
-          "settings": {
-            "blog": "highlights"
-          }
-        },
         "item_aKrRrA": {
           "type": "item",
           "settings": {
             "blog": "guides"
+          }
+        },
+        "item_U4GeBm": {
+          "type": "item",
+          "settings": {
+            "blog": "highlights"
           }
         },
         "item_h8P7HD": {
@@ -221,8 +221,8 @@
         }
       },
       "block_order": [
-        "item_U4GeBm",
         "item_aKrRrA",
+        "item_U4GeBm",
         "item_h8P7HD",
         "item_wm7NWt",
         "item_RU7xEH",
