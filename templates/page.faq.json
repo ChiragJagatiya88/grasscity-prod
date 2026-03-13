@@ -1068,6 +1068,31 @@
       "type": "faq-json-ld",
       "name": "FAQ JSON-LD",
       "settings": {}
+    },
+    "faq_schema_BgwKWU": {
+      "type": "faq-schema",
+      "blocks": {
+        "question_RCAN3M": {
+          "type": "question",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "question_EirCfz": {
+          "type": "question",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "question_RCAN3M",
+        "question_EirCfz"
+      ],
+      "name": "FAQ Schema (SEO Only)",
+      "settings": {}
     }
   },
   "order": [
@@ -1084,6 +1109,7 @@
     "collapsible_tabs_damaged",
     "collapsible_tabs_promotions",
     "collapsible_tabs_support",
-    "faq_json_ld_rGh8Cc"
+    "faq_json_ld_rGh8Cc",
+    "faq_schema_BgwKWU"
   ]
 }
