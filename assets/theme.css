@@ -8335,3 +8335,6 @@ body.search-template .header__top .header__search {
 #live-chat {
   cursor: pointer;
 }
+#zs-fl-tip {
+  display: none !important;
+}
