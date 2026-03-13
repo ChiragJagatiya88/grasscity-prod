@@ -78,13 +78,13 @@
     </div>
     <div class="article-card__content{% if layout == 'horizontal' %} md:flex{% if card_image != blank %} justify-center{% endif %}{% endif %}">
       <div class="article-card__content-inner">
-        {%- if article.tags.size > 0 and show_tags -%}
+       
           <span class="article-card__tags text-upper font-body-bolder text-subtext block">
-            {%- for tag in article.tags limit: 1 -%}
-              {{ tag }}
-            {%- endfor -%}
+            {% assign blog_handle = article.handle %}
+            {% assign blog_category = blog_handle | split: '/' | first %}
+            {% assign sanitized = blog_category | replace: '-', ' ' %}
+            <span class="blog-card__category">{{ sanitized }}</span>
           </span>
-        {%- endif -%}
 
         <h3 class="article-card__title{% if title_size %} {{ title_size }}{% endif %}">
           <a class="reversed-link" href="{{ article.url }}">{{ article.title }}</a>
