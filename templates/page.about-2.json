@@ -236,21 +236,8 @@
       "blocks": {
         "heading_npp3aM": {
           "type": "heading",
-          "disabled": true,
           "settings": {
             "heading": "A Legacy Built Over Two Decades",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h3",
-            "heading_tag": "h1"
-          }
-        },
-        "heading_Pw48U6": {
-          "type": "heading",
-          "settings": {
-            "heading": "Our Story",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
@@ -261,8 +248,7 @@
         }
       },
       "block_order": [
-        "heading_npp3aM",
-        "heading_Pw48U6"
+        "heading_npp3aM"
       ],
       "custom_css": [],
       "name": "t:sections.rich-text.name",
