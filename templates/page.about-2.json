@@ -154,10 +154,22 @@
     "rich_text_kyFd96": {
       "type": "rich-text",
       "blocks": {
+        "heading_A3PgDz": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Story",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3",
+            "heading_tag": "h2"
+          }
+        },
         "text_7h6LaE": {
           "type": "text",
           "settings": {
-            "text": "<p>Grasscity has been part of smoking culture online since 2000. What began in Amsterdam during the early days of ecommerce grew into one of the most recognized online head shops in the world.<br/><br/>Today, Grasscity serves customers across the United States with a wide selection of smoking accessories, trusted brands, and decades of category experience. Built on culture, shaped by community, and refined through years of expertise, Grasscity remains a trusted destination for smokers who know what they want.</p>",
+            "text": "<p>Grasscity has been part of smoking culture online since 2000. What began in Amsterdam during the early days of ecommerce grew into one of the most recognized online head shops in the world.</p><p>Today, Grasscity serves customers across the United States with a wide selection of smoking accessories, trusted brands, and decades of category experience. Built on culture, shaped by community, and refined through years of expertise, Grasscity remains a trusted destination for smokers who know what they want.</p>",
             "text_size": "text-lg",
             "text_line_limit": "none",
             "button_style": "btn--underline",
@@ -166,9 +178,9 @@
         }
       },
       "block_order": [
+        "heading_A3PgDz",
         "text_7h6LaE"
       ],
-      "disabled": true,
       "custom_css": [
         ".rich-text {max-width: 1600px; margin: 0 auto; padding-inline: 50px;}",
         "@media (max-width: 1023px) {.rich-text {padding-inline: 0; } .rich-text__heading {max-width: 50rem; margin: 0 auto; }}"
@@ -177,7 +189,7 @@
         "enable_custom_class": false,
         "section_class": "",
         "container": "full",
-        "color_scheme": "scheme-6",
+        "color_scheme": "scheme-1",
         "use_color_scheme_in_container": false,
         "content_spacing": "standard",
         "content_alignment": "left",
@@ -193,18 +205,18 @@
         "heading_riVhPA": {
           "type": "heading",
           "settings": {
-            "heading": "Our Story",
+            "heading": "A Brand Built on Trust",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
-            "heading_size": "h3"
+            "heading_size": "h4"
           }
         },
         "text_3XFia7": {
           "type": "text",
           "settings": {
-            "text": "<p>Grasscity has been part of smoking culture online since 2000. What began in Amsterdam during the early days of ecommerce grew into one of the most recognized online head shops in the world.</p><p>Today, Grasscity serves customers across the United States with a wide selection of smoking accessories, trusted brands, and decades of category experience. Built on culture, shaped by community, and refined through years of expertise, Grasscity remains a trusted destination for smokers who know what they want.</p><p><strong>A Brand Built on Trust</strong></p><p>Over the years, Grasscity has earned its place through consistency, product knowledge, and a genuine connection to the culture it serves. Customers return to Grasscity because they know they will find:</p><ul><li>authentic products</li><li>trusted brands</li><li>a wide selection of accessories</li><li>an online shopping experience designed for reliability<br/><br/>While the technology has changed and the industry has grown, the purpose has remained steady: to offer enthusiasts the gear, insight, and confidence that make every session better</li></ul>",
+            "text": "<p>Over the years, Grasscity has earned its place through consistency, product knowledge, and a genuine connection to the culture it serves. Customers return to Grasscity because they know they will find:</p><ul><li>authentic products</li><li>trusted brands</li><li>a wide selection of accessories</li><li>an online shopping experience designed for reliability<br/><br/>While the technology has changed and the industry has grown, the purpose has remained steady: to offer enthusiasts the gear, insight, and confidence that make every session better</li></ul>",
             "subtext_color": true
           }
         }
