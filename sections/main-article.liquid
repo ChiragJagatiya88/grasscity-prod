@@ -28,6 +28,10 @@
     --section-padding-top: {{ section.settings.padding_top }}px;
     --section-padding-bottom: {{ section.settings.padding_bottom }}px;
     }
+  .article__hero {
+    margin: 4rem auto 0;
+    max-width: 900px;
+  }  
 {% endstyle %}
 <article
   class="article{% if article.image %} article--has-media{% endif %} section section--padding section-{{ section.id }} color-{{ section.settings.color_scheme }}"
