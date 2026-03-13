@@ -148,6 +148,7 @@
         "column_ztCHpe",
         "column_DdrPm3"
       ],
+      "disabled": true,
       "name": "t:sections.multicolumn-with-icon.name",
       "settings": {
         "container": "fixed",
@@ -190,9 +191,21 @@
       "blocks": {
         "text_gFJd64": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text_link": "",
             "text": "Welcome to our store",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "text_khxLpV": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Free Shipping",
             "text_size": "h4",
             "text_opacity": 100,
             "use_custom_color": false,
@@ -203,7 +216,7 @@
           "type": "text",
           "settings": {
             "text_link": "",
-            "text": "Welcome to our store",
+            "text": "30-Days Free Returns",
             "text_size": "h4",
             "text_opacity": 100,
             "use_custom_color": false,
@@ -214,7 +227,7 @@
           "type": "text",
           "settings": {
             "text_link": "",
-            "text": "Welcome to our store",
+            "text": "Secure Payment",
             "text_size": "h4",
             "text_opacity": 100,
             "use_custom_color": false,
@@ -224,6 +237,7 @@
       },
       "block_order": [
         "text_gFJd64",
+        "text_khxLpV",
         "text_Y9tbNV",
         "text_haEh33"
       ],
