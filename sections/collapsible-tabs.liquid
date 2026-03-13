@@ -178,10 +178,10 @@
         {%- for block in question_blocks -%}
           {
             "@type": "Question",
-            "name": "{{ block.settings.title | strip_html | escape }}",
+            "name": "{{ block.settings.heading | strip_html | escape }}",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "{{ block.settings.text | strip_html | escape }}"
+              "text": "{{ block.settings.content | strip_html | escape }}"
             }
           }{% unless forloop.last %},{% endunless %}
         {% endfor -%}
