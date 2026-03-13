@@ -361,7 +361,8 @@
       </div>
       <div class="renew_membership">
         <p class="h2"> Your Membership is about to Expires in <div class="expires_days">0</div> Days</p>
-        <p class="text_sub_renew">RENEW NOW FOR $30/yr</p>
+        {% comment %} <p class="text_sub_renew">RENEW NOW FOR $30/yr</p> {% endcomment %}
+        <p class="text_sub_renew">RENEW NOW FOR <s>$30</s> <b>$15/yr</b></p>
         <p class="text_sub_renew-small">Limited time offer. Enjoy FREE shipping, exclusive savings, and VIP perks.</p>
         <span class="c_error"></span>
         <button type="button" class="elite_btn renew_membership__btn">Renew Now</button>
