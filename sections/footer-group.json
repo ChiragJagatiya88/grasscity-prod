@@ -11,6 +11,85 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "scrolling_promotion_nLr4dc": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "text_fwhNM6": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Fast Delivery",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "text_kzrFcw": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Easy Returns",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "text_eVLGgE": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Lowest Price Guaranteed",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "text_Ra4p7B": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Secure Checkout",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "text_6xdq9F": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text_link": "",
+            "text": "Sustainable Materials",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "text_fwhNM6",
+        "text_kzrFcw",
+        "text_eVLGgE",
+        "text_Ra4p7B",
+        "text_6xdq9F"
+      ],
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "scheme-3",
+        "direction": "left",
+        "pause_on_hover": true,
+        "speed": 0.2,
+        "h_spacing": 40,
+        "show_section_divider": false,
+        "padding_top": 22,
+        "padding_bottom": 22
+      }
+    },
     "rich_text_Mt8TLh": {
       "type": "rich-text",
       "blocks": {
@@ -311,6 +390,7 @@
     }
   },
   "order": [
+    "scrolling_promotion_nLr4dc",
     "rich_text_Mt8TLh",
     "multicolumn_icon_rTKNUF",
     "footer",
