@@ -31,12 +31,14 @@
 {% endif %}
 
 {% assign elite = false %}  
+{% assign elite_renew = false %}  
 {% assign elite_item = cart.items | where: 'id',settings.elite_product.selected_or_first_available_variant.id %}
 {% assign elite_renew_item = cart.items | where: 'id',settings.elite_product_renew.selected_or_first_available_variant.id %}
 {% if elite_item[0].id != blank and elite_item.size > 0 %}
   {% assign elite = true %}
-{% elsif elite_renew_item[0].id != blank and elite_renew_item.size > 0 %}
-  {% assign elite = true %}
+{% endif %}
+{% if elite_renew_item[0].id != blank and elite_renew_item.size > 0 %}
+  {% assign elite_renew = true %}
 {% endif %}
 
 {% assign base_price_active = true %}
