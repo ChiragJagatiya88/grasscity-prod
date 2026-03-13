@@ -32,36 +32,12 @@
         "button_item_p4XLCt": {
           "type": "button_item",
           "settings": {
-            "button_label": "Product Reviews",
-            "button_link": "shopify://blogs/product-reviews",
+            "button_label": "How To",
+            "button_link": "shopify://blogs/how-to",
             "icon": "none"
           }
         },
         "button_item_RTed8M": {
-          "type": "button_item",
-          "settings": {
-            "button_label": "Lifestyle",
-            "button_link": "shopify://blogs/lifestyle",
-            "icon": "none"
-          }
-        },
-        "button_item_9hAjka": {
-          "type": "button_item",
-          "settings": {
-            "button_label": "Vape",
-            "button_link": "shopify://blogs/vape",
-            "icon": "none"
-          }
-        },
-        "button_item_Unt3XW": {
-          "type": "button_item",
-          "settings": {
-            "button_label": "Dab Rigs",
-            "button_link": "shopify://blogs/dab-rigs",
-            "icon": "none"
-          }
-        },
-        "button_item_8PWCy6": {
           "type": "button_item",
           "settings": {
             "button_label": "Cleaning",
@@ -69,16 +45,41 @@
             "icon": "none"
           }
         },
+        "button_item_9hAjka": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Cannabis Lifestyle",
+            "button_link": "shopify://blogs/cannabis-lifestyle",
+            "icon": "none"
+          }
+        },
+        "button_item_Unt3XW": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "News",
+            "button_link": "shopify://blogs/news",
+            "icon": "none"
+          }
+        },
+        "button_item_8PWCy6": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Guides",
+            "button_link": "shopify://blogs/guides",
+            "icon": "none"
+          }
+        },
         "button_item_ypcYxL": {
           "type": "button_item",
           "settings": {
-            "button_label": "Smoking",
-            "button_link": "shopify://blogs/smoking",
+            "button_label": "Highlights",
+            "button_link": "shopify://blogs/highlights",
             "icon": "none"
           }
         },
         "button_item_PB7p4g": {
           "type": "button_item",
+          "disabled": true,
           "settings": {
             "button_label": "Guides",
             "button_link": "shopify://blogs/guides",
@@ -87,6 +88,7 @@
         },
         "button_item_Qbxm94": {
           "type": "button_item",
+          "disabled": true,
           "settings": {
             "button_label": "Bongs",
             "button_link": "shopify://blogs/bongs",
