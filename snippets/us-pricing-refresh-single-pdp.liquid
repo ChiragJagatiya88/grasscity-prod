@@ -95,6 +95,13 @@
   {% assign base_price_active = false %}
 {% endif %}
 
+
+{% if elite == true %}
+  {% assign elite_price_active = true %}
+  {% assign base_price_active = false %}
+  {% assign club_price_active = false %}
+  {% endif %}
+
 {% if base_price_active == true %}
   <div class="us-refresh-pricing-base__price__main-pdp">
     <div class="base__price_container">
