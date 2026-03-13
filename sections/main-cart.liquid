@@ -464,6 +464,13 @@
                                         {% endif %}
                                       {% endif %}
 
+                                       {% if elite == true %}
+                                        {% assign elite_price_active = true %}
+                                        {% assign base_price_active = false %}
+                                        {% assign club_price_active = false %}
+                                      {% endif %}
+
+                                    
                                       <div class="new-cart-base__price" {% if base_price_active == false %} style="display: none;" {% endif %}>
                                         <span class="base__price">{{ item.price | money }}</span>
                                         <span class="base__price_label">Non-member price</span>
@@ -709,6 +716,8 @@
                                         {% if item_member_price == blank %}
                                           {% assign item_member_price = item.variant.metafields.custom.member_price %}
                                         {% endif %}
+
+
 
                                         <div class="new-cart-base__price" {% if base_price_active == false %} style="display: none;" {% endif %}>
                                           {% if item_market_price != blank %}
