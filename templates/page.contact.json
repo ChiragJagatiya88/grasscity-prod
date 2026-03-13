@@ -39,7 +39,7 @@
             "position": "right",
             "heading": "Need Help?",
             "heading_size": "h3",
-            "text": "<p>To us, design has a broader purpose and as you can read about on this website, we are on a mission. </p>",
+            "text": "",
             "text_size": "text-base",
             "icon_1": "none",
             "icon_width_1": 32,
@@ -62,7 +62,7 @@
             "icon_heading_size_3": "h5",
             "icon_text_3": "<p>Mon – Fri, 7:30 AM – 4:00 PM PT<br/>Sat, 8:00 AM – 1:00 PM PT<br/>Sun, Closed</p>",
             "icon_vertical_alignment_3": "start",
-            "button_label": "Find a Store",
+            "button_label": "",
             "button_link": "",
             "button_style": "btn--primary",
             "button_icon": "none"
