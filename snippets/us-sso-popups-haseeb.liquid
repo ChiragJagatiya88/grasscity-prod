@@ -744,7 +744,7 @@
     btn.addEventListener('click', async function (event) {
       event.preventDefault();
       try {
-        const elite_added = await addEliteProductToCart();
+        const elite_added = await addEliteProductToCart(true);
         const errorElement = document.querySelector('.renew_membership_error');
         //const messageElement = document.querySelector('.renew_membership__link_complete');
 
