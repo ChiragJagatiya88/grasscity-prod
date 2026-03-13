@@ -1066,6 +1066,7 @@
     },
     "faq_json_ld_rGh8Cc": {
       "type": "faq-json-ld",
+      "disabled": true,
       "name": "FAQ JSON-LD",
       "settings": {}
     }
