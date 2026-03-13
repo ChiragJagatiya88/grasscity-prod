@@ -3472,3 +3472,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });  
+
+document.addEventListener('DOMContentLoaded', function () {
+  const liveChatBtn = document.getElementById('live-chat');
+  if (liveChatBtn) {
+    liveChatBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const zohoChat = document.getElementById('zsiq_float');
+      if (zohoChat) {
+        zohoChat.click();
+      }
+    });
+  }
+});
