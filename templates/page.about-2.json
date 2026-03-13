@@ -226,7 +226,7 @@
         "desktop_content_position": "center",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "inherit",
-        "show_section_divider": true,
+        "show_section_divider": false,
         "divider_width": "full",
         "padding_top": 24,
         "padding_bottom": 24
@@ -612,7 +612,7 @@
         "desktop_content_position": "center",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "inherit",
-        "show_section_divider": true,
+        "show_section_divider": false,
         "divider_width": "full",
         "padding_top": 24,
         "padding_bottom": 24
