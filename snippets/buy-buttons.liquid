@@ -26,9 +26,19 @@
       assign is_elite_product = true
     endif
 
+    assign is_elite_renew_product = false
+    if settings.elite_product_renew != blank and product.id == settings.elite_product_renew.id
+      assign is_elite_renew_product = true
+    endif
+
     assign elite_cart_qty = 0
     if is_elite_product
       assign elite_cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id
+    endif
+    
+    assign elite_renew_cart_qty = 0
+    if is_elite_renew_product
+      assign elite_renew_cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id
     endif
   -%}
   <div
@@ -67,7 +77,7 @@
         {% endif %}
         class="product-variant-id"
       >
-      {%- if is_elite_product -%}
+      {%- if is_elite_product or is_elite_renew_product -%}
         <input type="hidden" name="quantity" value="1">
       {%- endif -%}
       {%- liquid
@@ -86,7 +96,7 @@
       {%- if product.quantity_price_breaks_configured? -%}
         <div
           id="QuantityForm-{{ section_id }}"
-          class="{% if block.settings.show_quantity_selector and is_elite_product == false %} grid gap-4{% else %} hidden{% endif %}"
+          class="{% if block.settings.show_quantity_selector and is_elite_product == false and is_elite_renew_product == false %} grid gap-4{% else %} hidden{% endif %}"
         >
           {%- assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id -%}
 
@@ -329,7 +339,7 @@
               endif
             endif
           -%}
-          <div class="product-form__quantity{% unless block.settings.show_quantity_selector and is_elite_product == false %} hidden{% endunless %}">
+          <div class="product-form__quantity{% unless block.settings.show_quantity_selector and is_elite_product == false and is_elite_renew_product == false %} hidden{% endunless %}">
             <label class="quantity__label form__label visually-hidden" for="Quantity-{{ section.id }}">
               <span class="font-body-bolder">{{ 'products.product.quantity.label' | t }}</span>
             </label>
@@ -377,7 +387,7 @@
           type="submit"
           name="add"
           class="product-form__submit btn{% if show_dynamic_checkout %} btn--secondary{% else %} btn--primary{% endif %}"
-          {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout or product.selected_or_first_available_variant == nil or is_elite_product and elite_cart_qty >= 1 %}
+          {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout or product.selected_or_first_available_variant == nil or is_elite_product and elite_cart_qty >= 1 or is_elite_renew_product and elite_renew_cart_qty >= 1  %}
             disabled
           {% endif %}
         >
@@ -388,7 +398,7 @@
               or quantity_rule_soldout
             -%}
               {{ 'products.product.sold_out' | t }}
-            {%- elsif is_elite_product and elite_cart_qty >= 1 -%}
+            {%- elsif is_elite_product and elite_cart_qty >= 1 or is_elite_renew_product and elite_renew_cart_qty >= 1 -%}
               {{ 'products.product.already_in_cart' | t }}
             {%- else -%}
               {{ 'products.product.add_to_cart' | t }}
