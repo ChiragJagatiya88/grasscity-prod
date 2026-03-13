@@ -1,0 +1,55 @@
+{% assign question_blocks = section.blocks | where: 'type', 'question' %}
+
+{% if question_blocks.size > 0 %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {% for block in question_blocks %}
+        {
+          "@type": "Question",
+          "name": {{ block.settings.title | strip_html | json }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ block.settings.text | strip_html | json }}
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+  </script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "FAQ Schema (SEO Only)",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "question",
+      "name": "Question",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ Schema (SEO Only)",
+      "blocks": [
+        { "type": "question" }
+      ]
+    }
+  ]
+}
+{% endschema %}
