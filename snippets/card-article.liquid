@@ -30,12 +30,17 @@
     assign meta_size = 'text-sm'
   endif
 
+  assign card_image = article.metafields.custom.list_image.value
+  if card_image == blank
+    assign card_image = article.image
+  endif
+
   if image_ratio == null
     assign image_ratio = settings.blog_cards_image_ratio
   endif
   if image_ratio == 'adapt'
-    if article.image != blank
-      assign image_ratio = article.image.aspect_ratio
+    if card_image != blank
+      assign image_ratio = card_image.aspect_ratio
     else
       assign image_ratio = '1'
     endif
@@ -46,17 +51,17 @@
     <div class="article-card__media blocks-radius">
       <a href="{{ article.url }}" class="block media-wrapper hover-wrapper">
         <motion-element class="block" data-motion="zoom-out-sm" style="--aspect-ratio: {{ image_ratio }};">
-          {% if article.image != blank %}
+          {% if card_image != blank %}
             {%- liquid
-              assign alt = article.image.alt | default: article.title | escape
+              assign alt = card_image.alt | default: article.title | escape
             -%}
             {%- capture sizes -%}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{%- endcapture -%}
             {{
-              article.image
+              card_image
               | image_url: width: 1500
               | image_tag:
-                width: article.image.width,
-                height: article.image.height,
+                width: card_image.width,
+                height: card_image.height,
                 loading: 'lazy',
                 fetchpriority: 'auto',
                 class: 'motion-reduce hover-scale-up',
@@ -71,7 +76,7 @@
         </motion-element>
       </a>
     </div>
-    <div class="article-card__content{% if layout == 'horizontal' %} md:flex{% if article.image != blank %} justify-center{% endif %}{% endif %}">
+    <div class="article-card__content{% if layout == 'horizontal' %} md:flex{% if card_image != blank %} justify-center{% endif %}{% endif %}">
       <div class="article-card__content-inner">
         {%- if article.tags.size > 0 and show_tags -%}
           <span class="article-card__tags text-upper font-body-bolder text-subtext block">
