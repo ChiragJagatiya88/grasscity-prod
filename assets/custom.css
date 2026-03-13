@@ -754,6 +754,9 @@ layout-switcher {
     display: inline-block;
   }
 }
+.yotpo-bottom-line-scroll-panel .yotpo-sr-bottom-line-button {
+  height: auto;
+}
 .product-card__wrapper .yotpo-sr-bottom-line-text {
   display:none !important;
 }
