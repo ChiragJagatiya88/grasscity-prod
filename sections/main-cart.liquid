@@ -257,10 +257,12 @@
                     endif
                     
                     assign is_elite_item = false
+                    assign is_elite_renew_item = false
                     if settings.elite_product != blank and item.variant.id == settings.elite_product.selected_or_first_available_variant.id
                       assign is_elite_item = true
-                    elsif settings.elite_renew_item != blank and item.variant.id == settings.elite_renew_item.selected_or_first_available_variant.id
-                      assign is_elite_item = true
+                    endif
+                    if settings.elite_renew_item != blank and item.variant.id == settings.elite_renew_item.selected_or_first_available_variant.id
+                      assign is_elite_renew_item = true
                     endif
 
                     assign item_max_quantity = blank
@@ -534,7 +536,7 @@
                               <template>
                                 <div class="cart-item__action flex items-end justify-between gap-3 lg:hidden w-full">
                                   <div class="flex items-center gap-2">
-                                    {%- unless is_gift_wrap_item or is_elite_item -%}
+                                    {%- unless is_gift_wrap_item or is_elite_item or is_elite_renew_item -%}
                                       <quantity-input class="cart-quantity quantity">
                                         <label class="visually-hidden" for="Quantity-{{ section.id }}-{{ item.index | plus: 1 }}">{{ 'products.product.quantity.label' | t }}</label>
                                         <button type="button" name="minus" class="quantity__button" aria-label="{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}">
@@ -581,7 +583,7 @@
                                           disabled
                                           type="number"
                                           name="updates[]"
-                                          value="{% if is_elite_item %}1{% else %}{{ item.quantity }}{% endif %}"
+                                          value="{% if is_elite_item or is_elite_renew_item %}1{% else %}{{ item.quantity }}{% endif %}"
                                           aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
                                           id="Quantity-{{ section.id }}-{{ item.index | plus: 1 }}"
                                           data-index="{{ item.index | plus: 1 }}"
@@ -786,7 +788,7 @@
                           <div class="cart-item__action flex items-center justify-between cart-item__quantity-wrapper">
                             <template>
                               <div class="flex items-center gap-2">
-                                {%- unless is_gift_wrap_item or is_elite_item -%}
+                                {%- unless is_gift_wrap_item or is_elite_item or is_elite_renew_item -%}
                                   <quantity-input class="cart-quantity quantity">
                                     <label class="visually-hidden" for="Quantity-{{ section.id }}-{{ item.index | plus: 1 }}">{{ 'products.product.quantity.label' | t }}</label>
                                     <button type="button" name="minus" class="quantity__button" aria-label="{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}">
@@ -833,7 +835,7 @@
                                       disabled
                                       type="number"
                                       name="updates[]"
-                                      value="{% if is_elite_item %}1{% else %}{{ item.quantity }}{% endif %}"
+                                      value="{% if is_elite_item or is_elite_renew_item %}1{% else %}{{ item.quantity }}{% endif %}"
                                       aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
                                       id="Quantity-{{ section.id }}-{{ item.index | plus: 1 }}"
                                       data-index="{{ item.index | plus: 1 }}"
