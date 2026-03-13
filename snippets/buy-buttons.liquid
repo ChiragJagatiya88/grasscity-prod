@@ -339,7 +339,7 @@
               endif
             endif
           -%}
-          <div class="product-form__quantity{% unless block.settings.show_quantity_selector and is_elite_product == false and is_elite_renew_product == false %} hidden{% endunless %}">
+          <div class="product-form__quantity{% unless block.settings.show_quantity_selector and is_elite_product == false or is_elite_renew_product == false %} hidden{% endunless %}">
             <label class="quantity__label form__label visually-hidden" for="Quantity-{{ section.id }}">
               <span class="font-body-bolder">{{ 'products.product.quantity.label' | t }}</span>
             </label>
@@ -387,9 +387,11 @@
           type="submit"
           name="add"
           class="product-form__submit btn{% if show_dynamic_checkout %} btn--secondary{% else %} btn--primary{% endif %}"
-          {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout or product.selected_or_first_available_variant == nil or is_elite_product and elite_cart_qty >= 1 or is_elite_renew_product and elite_renew_cart_qty >= 1  %}
+          {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout or product.selected_or_first_available_variant == nil %}
             disabled
           {% endif %}
+          {% if is_elite_product and elite_cart_qty >= 1 %}disabled{% endif %}
+          {% if is_elite_renew_product and elite_renew_cart_qty >= 1 %}disabled{% endif %}
         >
           <span class="btn__text">
             {%- if product.selected_or_first_available_variant == nil -%}
