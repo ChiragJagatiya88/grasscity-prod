@@ -33,7 +33,9 @@
 {% assign elite = false %}  
 {% assign elite_item = cart.items | where: 'id',settings.elite_product.selected_or_first_available_variant.id %}
 {% assign elite_renew_item = cart.items | where: 'id',settings.elite_product_renew.selected_or_first_available_variant.id %}
-{% if elite_item[0].id != blank and elite_item.size > 0 or elite_renew_item[0].id != blank and elite_renew_item.size > 0 %}
+{% if elite_item[0].id != blank and elite_item.size > 0 %}
+  {% assign elite = true %}
+{% elsif elite_renew_item[0].id != blank and elite_renew_item.size > 0 %}
   {% assign elite = true %}
 {% endif %}
 
@@ -253,7 +255,9 @@
                     
                     assign is_elite_item = false
                     if settings.elite_product != blank and item.variant.id == settings.elite_product.selected_or_first_available_variant.id
-                      assign is_elite_item = true
+                    assign is_elite_item = true
+                    elsif settings.elite_renew_item != blank and item.variant.id == settings.elite_renew_item.selected_or_first_available_variant.id
+                    assign is_elite_item = true
                     endif
 
                     assign item_max_quantity = blank
