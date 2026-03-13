@@ -339,7 +339,10 @@
               endif
             endif
           -%}
-          <div class="product-form__quantity{% unless block.settings.show_quantity_selector and is_elite_product == false or is_elite_renew_product == false %} hidden{% endunless %}">
+          <div class="product-form__quantity
+            {% unless block.settings.show_quantity_selector and is_elite_product == false %} hidden{% endunless %}
+            {% unless block.settings.show_quantity_selector and is_elite_renew_product == false %} hidden{% endunless %}
+          ">
             <label class="quantity__label form__label visually-hidden" for="Quantity-{{ section.id }}">
               <span class="font-body-bolder">{{ 'products.product.quantity.label' | t }}</span>
             </label>
