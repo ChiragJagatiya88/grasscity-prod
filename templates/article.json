@@ -246,7 +246,7 @@
         "direction": "left",
         "pause_on_hover": true,
         "speed": 0.3,
-        "h_spacing": 80,
+        "h_spacing": 40,
         "show_section_divider": false,
         "padding_top": 22,
         "padding_bottom": 22
