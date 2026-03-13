@@ -1,37 +1,4 @@
 {%- liquid
-  assign is_elite_member = false
-  assign diffDays = 999
-  if customer
-    if customer.tags contains 'elite_member' or customer.tags contains 'elite'
-      assign is_elite_member = true
-    endif
-    assign member_year = customer.metafields.custom.elite_member_date.value | date: '%Y'
-    assign expire_year = member_year | plus: 1
-    assign expire_date = customer.metafields.custom.elite_member_date.value | date: '%B %d'
-    assign membership_ends = expire_date | append: ' ' | append: expire_year
-    assign membership_expires_at = membership_ends | date: '%B %d %Y'
-    assign dateStart = membership_expires_at | date: '%s'
-    assign nowTimestamp = 'now' | date: '%s'
-    assign diffSeconds = dateStart | minus: nowTimestamp
-    assign diffDays = diffSeconds | divided_by: 3600 | divided_by: 24
-  endif
--%}
-
-{%- liquid
-  assign is_elite_product = false
-  if settings.elite_product != blank and product.id == settings.elite_product.id
-    assign is_elite_product = true
-  endif
-  comment
-    Hide elite product for elite members unless expiry is within 30 days (renewal only).
-  endcomment
-  assign hide_elite_product = false
-  if is_elite_member and is_elite_product and diffDays > 30
-    assign hide_elite_product = true
-  endif
--%}
-
-{%- liquid
   assign media_layout = section.settings.gallery_layout | default: 'carousel'
   assign mobile_thumbnails = section.settings.mobile_thumbnails | default: 'hide'
   assign enable_image_zoom = section.settings.enable_image_zoom | default: false
@@ -68,113 +35,101 @@
     --section-padding-bottom: {{ section.settings.padding_bottom }}px;
   }
 {%- endstyle -%}
+<product-info
+  id="MainProduct-{{ section.id }}"
+  data-section="{{ section.id }}"
+  data-product-id="{{ product.id }}"
+  data-update-url="true"
+  data-url="{{ product.url }}"
+  class="section block section-{{ section.id }} section-main-product page-width section--padding{% unless section.settings.use_color_scheme_in_container %} color-{{ section.settings.color_scheme }}{% else %} use-color-scheme-in-container{% endunless %}"
+>
+  {{ 'section-main-product.css' | asset_url | stylesheet_tag: preload: true }}
+  {{ 'component-deferred-media.css' | asset_url | stylesheet_tag: preload: true }}
+  {% unless product.has_only_default_variant %}
+    {{ 'component-product-variant-picker.css' | asset_url | stylesheet_tag: preload: true }}
+  {% endunless %}
+  {%- assign has_models = product.media | where: 'media_type', 'model' | first -%}
+  {%- if has_models -%}
+    <link
+      id="ModelViewerStyle"
+      rel="stylesheet"
+      href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css"
+      media="print"
+      onload="this.media='all'"
+    >
+    <link
+      id="ModelViewerOverride"
+      rel="stylesheet"
+      href="{{ 'component-model-viewer-ui.css' | asset_url }}"
+      media="print"
+      onload="this.media='all'"
+    >
+  {%- endif -%}
+  {%- if enable_image_zoom -%}
+    <link
+      id="Photoswipe"
+      rel="stylesheet"
+      href="{{ 'photoswipe-component.css' | asset_url }}"
+      media="print"
+      onload="this.media='all'"
+    >
+  {%- endif -%}
 
-{%- if hide_elite_product -%}
-  <div class="section block section-{{ section.id }} section-main-product page-width section--padding">
-    <div class="product elite-member-no-renewal-message text-center" style="padding: 2rem 1rem;">
-      <p class="h2">You're already an Elite member.</p>
-      <p class="text-subtext">You can renew your membership when it's within 30 days of expiry.</p>
+  {%- if product.quantity_price_breaks_configured? -%}
+    {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
+  {%- endif -%}
+
+  <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
+
+  {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
+  <div class="product flex flex-wrap {{ product_class }}">
+    {%- if product.media.size > 0 -%}
+      <div class="product__media-wrapper block w-full relative">
+        <div class="product__media-container{% if enable_sticky_info %} sticky-element{% endif %}">
+          {% render 'product-media-gallery',
+            media_layout: media_layout,
+            mobile_thumbnails: mobile_thumbnails,
+            variant_images: variant_images,
+            enable_image_zoom: enable_image_zoom
+          %}
+          {% render 'product-information-below-media' %}
+        </div>
+      </div>
+    {%- endif -%}
+    <div class="product__info-wrapper block w-full">
+      {% render 'product-information-blocks',
+        enable_sticky_info: enable_sticky_info,
+        update_browser_history: true,
+        product_form_id: product_form_id
+      %}
     </div>
   </div>
-{%- else -%}
-  <product-info
-    id="MainProduct-{{ section.id }}"
-    data-section="{{ section.id }}"
-    data-product-id="{{ product.id }}"
-    data-update-url="true"
-    data-url="{{ product.url }}"
-    class="section block section-{{ section.id }} section-main-product page-width section--padding{% unless section.settings.use_color_scheme_in_container %} color-{{ section.settings.color_scheme }}{% else %} use-color-scheme-in-container{% endunless %}"
-  >
-    {{ 'section-main-product.css' | asset_url | stylesheet_tag: preload: true }}
-    {{ 'component-deferred-media.css' | asset_url | stylesheet_tag: preload: true }}
-    {% unless product.has_only_default_variant %}
-      {{ 'component-product-variant-picker.css' | asset_url | stylesheet_tag: preload: true }}
-    {% endunless %}
-    {%- assign has_models = product.media | where: 'media_type', 'model' | first -%}
-    {%- if has_models -%}
-      <link
-        id="ModelViewerStyle"
-        rel="stylesheet"
-        href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css"
-        media="print"
-        onload="this.media='all'"
-      >
-      <link
-        id="ModelViewerOverride"
-        rel="stylesheet"
-        href="{{ 'component-model-viewer-ui.css' | asset_url }}"
-        media="print"
-        onload="this.media='all'"
-      >
-    {%- endif -%}
-    {%- if enable_image_zoom -%}
-      <link
-        id="Photoswipe"
-        rel="stylesheet"
-        href="{{ 'photoswipe-component.css' | asset_url }}"
-        media="print"
-        onload="this.media='all'"
-      >
-    {%- endif -%}
-
-    {%- if product.quantity_price_breaks_configured? -%}
-      {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
-      <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
-      <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
-    {%- endif -%}
-
-    <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
-
-    {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
-    <div class="product flex flex-wrap {{ product_class }}">
-      {%- if product.media.size > 0 -%}
-        <div class="product__media-wrapper block w-full relative">
-          <div class="product__media-container{% if enable_sticky_info %} sticky-element{% endif %}">
-            {% render 'product-media-gallery',
-              media_layout: media_layout,
-              mobile_thumbnails: mobile_thumbnails,
-              variant_images: variant_images,
-              enable_image_zoom: enable_image_zoom
-            %}
-            {% render 'product-information-below-media' %}
-          </div>
-        </div>
-      {%- endif -%}
-      <div class="product__info-wrapper block w-full">
-        {% render 'product-information-blocks',
-          enable_sticky_info: enable_sticky_info,
-          update_browser_history: true,
-          product_form_id: product_form_id
-        %}
-      </div>
-    </div>
-    <product-recently-viewed data-product-id="{{ product.id }}" class="hidden"></product-recently-viewed>
-    {%- if enable_image_zoom -%}
-      <script src="{{ 'photoswipe.js' | asset_url }}" defer="defer"></script>
-    {%- endif -%}
-
-    {%- if product.media.size > 0 -%}
-      <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
-    {%- endif -%}
-
-    {%- if has_models -%}
-      <script type="application/json" id="ProductJSON-{{ product.id }}">
-        {{ product.media | where: 'media_type', 'model' | json }}
-      </script>
-      <script src="{{ 'product-model.js' | asset_url }}" defer></script>
-    {%- endif -%}
-
-    <script type="application/ld+json">
-      {{ product | structured_data }}
-    </script>
-  </product-info>
-
-  {%- assign block_atc_bar = section.blocks | where: 'type', 'sticky-atc-bar' | first -%}
-  {%- if block_atc_bar != blank -%}
-    {%- render 'sticky-atc-bar', block: block_atc_bar, product_form_id: product_form_id -%}
+  <product-recently-viewed data-product-id="{{ product.id }}" class="hidden"></product-recently-viewed>
+  {%- if enable_image_zoom -%}
+    <script src="{{ 'photoswipe.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
-{%- endif -%}
 
+  {%- if product.media.size > 0 -%}
+    <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
+  {%- endif -%}
+
+  {%- if has_models -%}
+    <script type="application/json" id="ProductJSON-{{ product.id }}">
+      {{ product.media | where: 'media_type', 'model' | json }}
+    </script>
+    <script src="{{ 'product-model.js' | asset_url }}" defer></script>
+  {%- endif -%}
+
+  <script type="application/ld+json">
+    {{ product | structured_data }}
+  </script>
+</product-info>
+{%- assign block_atc_bar = section.blocks | where: 'type', 'sticky-atc-bar' | first -%}
+{%- if block_atc_bar != blank -%}
+  {%- render 'sticky-atc-bar', block: block_atc_bar, product_form_id: product_form_id -%}
+{%- endif -%}
 {% schema %}
   {
     "name": "t:sections.main-product.name",
