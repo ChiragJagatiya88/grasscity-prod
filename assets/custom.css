@@ -753,15 +753,9 @@ layout-switcher {
     display: inline-block;
   }
 }
-
-.product-card__wrapper .yotpo-sr-bottom-line-text{
+.product-card__wrapper .yotpo-sr-bottom-line-text {
   display:none !important;
-
 }
-
-
-
-.product-card__wrapper .yotpo-sr-bottom-line-right-panel{
+.product-card__wrapper .yotpo-sr-bottom-line-right-panel {
   display:none !important;
-
 }
