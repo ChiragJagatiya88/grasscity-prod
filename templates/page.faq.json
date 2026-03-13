@@ -1071,26 +1071,235 @@
     },
     "faq_schema_BgwKWU": {
       "type": "faq-schema",
-      "blocks": {
-        "question_RCAN3M": {
-          "type": "question",
-          "settings": {
-            "title": "",
-            "text": ""
-          }
-        },
-        "question_EirCfz": {
-          "type": "question",
-          "settings": {
-            "title": "",
-            "text": ""
-          }
-        }
-      },
-      "block_order": [
-        "question_RCAN3M",
-        "question_EirCfz"
-      ],
+"blocks": {
+  "question_1": {
+    "type": "question",
+    "settings": {
+      "title": "<p>How do you ship your packages?</p>",
+      "text": "<p>Here at Grasscity, we understand our customers' concerns about privacy and discretion. Every product we ship is sent in plain cardboard boxes, with nothing to mark glass pipes or smokeware. Our shipping labels do not say Grasscity, and we do everything we can to ensure our packages are discreet.</p><p>Our packages are shipped to you in standard shipping boxes (either a plain brown box or a USPS Priority Mail box). Nowhere on the outside of your package will you see the word \"Grasscity\".</p><p>However, \"Grasscity\" will appear on your credit card statement. We cannot change this, and we apologize in advance for any inconvenience this may cause.</p>"
+    }
+  },
+  "question_2": {
+    "type": "question",
+    "settings": {
+      "title": "<p>How much does shipping cost?</p>",
+      "text": "<p>We offer free domestic shipping within the United States on orders over $50. For international orders, we currently only ship to Canada, with a flat shipping rate of $14.95 for all orders.</p><p><strong>Our Shipping Team and Shipping Speeds</strong></p><p>Please note that shipping speed does not include order processing time. Orders typically require 2-3 business days for processing, including pulling and packaging your items. Our shipping team works hard to dispatch orders as quickly as possible, but during peak seasons and promotional events, processing times may increase.</p><p>Shipping times do not guarantee the exact package arrival date and may be affected by unforeseen circumstances, such as weather conditions or carrier delays.</p>"
+    }
+  },
+  "question_3": {
+    "type": "question",
+    "settings": {
+      "title": "<p>Can I change my shipping address after placing an order?</p>",
+      "text": "<p>Once an order has been placed, we process it quickly to ensure fast delivery. This means we cannot guarantee changes to the shipping address after the order is submitted. If you notice an error immediately after ordering, please contact our customer support team on live chat or email us at support@grasscity.com. We will do our best to help before the order ships.</p>"
+    }
+  },
+  "question_4": {
+    "type": "question",
+    "settings": {
+      "title": "<p>How do I track my package?</p>",
+      "text": "<p>Tracking information will be sent to you once your order has been scanned and packed up. Tracking emails are typically sent out 1-2 days after your order has been placed.</p><p>Once it ships, you will continue to receive periodic shipping updates until arrival. If you entered a phone number at checkout, our system will send text message alerts when your package is out for delivery.</p>"
+    }
+  },
+  "question_5": {
+    "type": "question",
+    "settings": {
+      "title": "<p>Where is my order?</p>",
+      "text": "<p>Trying to find your package? You can use the tracking link from your shipping email to track your order.</p><p>If you are still having difficulty tracking your order, or if you have additional questions, please contact our customer service for further details.</p>"
+    }
+  },
+  "question_6": {
+    "type": "question",
+    "settings": {
+      "title": "<p>Is a signature required for my order?</p>",
+      "text": "<p>Grasscity may require a signature for certain orders at our discretion to ensure security. This helps prevent fraud, underage purchases, and other unauthorized activity.</p>"
+    }
+  },
+  "question_7": {
+    "type": "question",
+    "settings": {
+      "title": "<p>How long does it take to receive my order?</p>",
+      "text": "<p>Standard shipping takes 3-7 business days.</p><p>Priority shipping takes 2-3 business days.</p><p>Express shipping takes 1-2 business days.</p>"
+    }
+  },
+
+
+  "question_8": {
+    "type": "question",
+    "settings": {
+      "title": "<p>Do you accept returns?</p>",
+      "text": "<p>We accept returns on all unused products. If the product has been used, even once, we cannot accept a return - no exceptions. Items must be reported for return within 48 hours of delivery. All returns are subject to a restocking fee.</p><p>If you want to return an item, first email us with pictures of the item so we can verify it is not broken and has not been used. Please note that return shipping cost will be deducted from your refund.</p><p>Returns are accepted only if processed through our customer service team. Packages sent without our return label will not be accepted or refunded.</p>"
+    }
+  },
+  "question_9": {
+    "type": "question",
+    "settings": {
+      "title": "<p>What if I choose to cancel my order?</p>",
+      "text": "<p>If the package has already shipped, the order cannot be canceled. If you are unsure about your purchase, please contact us beforehand so we can help you select the best piece for your needs.</p>"
+    }
+  },
+  "question_10": {
+    "type": "question",
+    "settings": {
+      "title": "<p>What should I do if an item is missing from my package?</p>",
+      "text": "<p>If something is missing from your package, we are really sorry about that. Email us with what is missing from the order, and we will review our order photos and videos for a discrepancy.</p><p>If the photos or video show we made a mistake, we will make it right immediately and send a replacement shipment. Always check your packaging and bubble wrap for missing items, as smaller items can get misplaced during unwrapping.</p>"
+    }
+  },
+  "question_11": {
+    "type": "question",
+    "settings": {
+      "title": "<p>Can I exchange an item for a different product?</p>",
+      "text": "<p>Yes, exchanges are available for unused items. Contact customer service within 48 hours of delivery at support@grasscity.com or through live chat. We will coordinate an exchange of equal value and provide a prepaid return label.</p><p>The item must be completely unused, not even one session.</p>"
+    }
+  },
+  "question_12": {
+    "type": "question",
+    "settings": {
+      "title": "<p>How do I initiate a return or exchange?</p>",
+      "text": "<p>To start a return or exchange, contact our customer support team via live chat or email with your order details. They will guide you through the process and provide a return authorization if applicable.</p><p>Only orders reported within 48 hours of delivery are eligible for return.</p>"
+    }
+  },
+  "question_13": {
+    "type": "question",
+    "settings": {
+      "title": "<p>Do I have to pay for return shipping?</p>",
+      "text": "<p>For standard returns of not-needed items, you will receive a shipping label, but return shipping cost will be deducted from your refund or store credit.</p><p>If the return is due to a damaged, defective, or incorrect product, we will provide a prepaid shipping label at no cost to you.</p>"
+    }
+  },
+  "question_14": {
+    "type": "question",
+    "settings": {
+      "title": "<p>Can I return a product I bought with a discount?</p>",
+      "text": "<p>Yes, discounted items may be returnable if eligible, depending on our terms and conditions and any specific details mentioned in the product description.</p>"
+    }
+  },
+  "question_15": {
+    "type": "question",
+    "settings": {
+      "title": "<p>What if my order breaks during shipping?</p>",
+      "text": "<p>If your item arrives broken, defective, or damaged, please inspect it immediately and take photos along with your order invoice. Email these to support@grasscity.com within 48 hours of delivery or start a live chat with our support agent on the website.After verification, we will replace the item or issue a refund/exchange of equal value.</p><p>Important: We cannot accept returns for used items. If you purchased Route Protection at checkout, coverage applies only during shipping from our warehouse to your home. Damage that occurs after delivery is not covered.</p>"
+    }
+  },
+
+
+  "question_16": {
+    "type": "question",
+    "settings": {
+      "title": "<p>What payment methods do you accept?</p>",
+      "text": "<p>We <strong>accept</strong> all major credit cards: </p><p><strong>Mastercard, Visa, American Express, and Discover.</strong></p><p>We <strong>do not accept PayPal. </strong>There are no exceptions.</p>"
+    }
+  },
+  "question_17": {
+    "type": "question",
+    "settings": {
+      "title": "<p>Do you accept Paypal?</p>",
+      "text": "<p>We do not accept PayPal due to their restrictions on tobacco, glass pipes, and functional glass art. There are no exceptions, as PayPal has restrictions on all smoking products and accessories. Sorry about the inconvenience.</p>"
+    }
+  },
+  "question_18": {
+    "type": "question",
+    "settings": {
+      "title": "<p>Does Grasscity offer price matching?</p>",
+      "text": "<p>Yes. We offer a Price Match Guarantee with a 5% price beat on eligible items. If you find an identical product from the same brand at a lower price from our online competitors, we are happy to match or beat the listed price. This policy excludes wholesalers and auction sites. Please contact us to request a price match.</p><p>*Terms and conditions apply.</p>"
+    }
+  },
+
+
+
+  "question_19": {
+    "type": "question",
+    "settings": {
+      "title": "<p>Why are items in your store out of stock?</p>",
+      "text": "<p>Yes, we sometimes run out of stock. Every glass piece we offer is carefully hand-blown using high-quality materials, which can lead to longer production times for certain items. Popular items are restocked regularly, so check back often.</p>"
+    }
+  },
+  "question_20": {
+    "type": "question",
+    "settings": {
+      "title": "<p>When will you restock an item?</p>",
+      "text": "<p>Restock timelines vary by product and brand. In most cases, restocks take about 2-3 weeks, though some items may return sooner. If you have a question about a specific product, email us for details.</p>"
+    }
+  },
+  "question_21": {
+    "type": "question",
+    "settings": {
+      "title": "<p>Is Grasscity's glass safe to use?</p>",
+      "text": "<p>Yes, all our curated glass pieces are made from body-safe, heat-resistant borosilicate glass (the same material used in lab equipment and kitchenware). It is non-toxic, contains no lead or harmful chemicals, and does not leach or off-gas. Our silicone products use food-grade, BPA-free, phthalate-free platinum-cured silicone. Always inspect glass before use and never use cracked or damaged pieces.</p>"
+    }
+  },
+  "question_22": {
+    "type": "question",
+    "settings": {
+      "title": "<p>Are Grasscity products legal?</p>",
+      "text": "<p>Yes, all smoking accessories we sell are legal for tobacco use and intended for adult customers ages 21+. Customers are responsible for knowing local laws. We verify age at checkout and may require signature delivery. We reserve the right to cancel orders suspected of violating laws or company policy. We take preventing illicit and underage orders extremely seriously.</p>"
+    }
+  },
+
+
+  "question_23": {
+    "type": "question",
+    "settings": {
+      "title": "<p>How do I update my account password?</p>",
+      "text": "<p>Found yourself locked out of your account? We can help you regain access!</p><p>When you attempt to login, you should see a clickable link that states \"Forgot your password?\".  Enter in your email address, and we can send you a link to reset your password.</p><p>You can also get in touch with our Customer Service team, and they can have a password reset email sent your way!</p>"
+    }
+  },
+  "question_24": {
+    "type": "question",
+    "settings": {
+      "title": "<p>What should I do if I did not receive my order confirmation email?</p>",
+      "text": "<p>If you have not received your order confirmation, first check your spam or junk folder. If it is not there, please ensure you entered the correct email address at checkout.</p><p>You can also contact our customer support team on live chat or email us at support@grasscity.com with your order details, and we will confirm your order and provide any necessary updates.</p>"
+    }
+  },
+  "question_25": {
+    "type": "question",
+    "settings": {
+      "title": "<p>How can I receive Grasscity promotions and updates?</p>",
+      "text": "<p>Sign up by entering your email in the footer of our website to join our mailing list. Follow us on Instagram, Facebook, and other social channels for exclusive drops, behind-the-scenes content, and early access. Subscribers receive discount codes, product announcements, educational tips, and first access to limited releases.</p>"
+    }
+  },
+  "question_26": {
+    "type": "question",
+    "settings": {
+      "title": "<p>Does Grasscity sell to minors?</p>",
+      "text": "<p>Absolutely not. We enforce strict 21+ age verification at checkout, reserve the right to require signature on any order for security, and immediately cancel suspected underage orders. Fraud prevention measures are in place throughout our system. For legal guardians ordering for personal use, packages require adult signature to ensure compliance with regulations. No exceptions.</p>"
+    }
+  },
+  "question_27": {
+    "type": "question",
+    "settings": {
+      "title": "<p>The answer to my question is not here, what do I do?</p>",
+      "text": "<p>If you cannot find the answer to your question, contact us directly. Email us with your name, order number (if applicable), and your question at support@grasscity.com. You can also reach us through the chat widget on our website to connect with a live support agent, available 7 days a week from 9 AM to 9 PM EST.</p>"
+    }
+  }
+},
+"block_order": [
+  "question_1",
+  "question_2",
+  "question_3",
+  "question_4",
+  "question_5",
+  "question_6",
+  "question_7",
+  "question_8",
+  "question_9",
+  "question_10",
+  "question_11",
+  "question_12",
+  "question_13",
+  "question_14",
+  "question_15",
+  "question_16",
+  "question_17",
+  "question_18",
+  "question_19",
+  "question_20",
+  "question_21",
+  "question_22",
+  "question_23",
+  "question_24",
+  "question_25",
+  "question_26",
+  "question_27"
+],
       "name": "FAQ Schema (SEO Only)",
       "settings": {}
     }
