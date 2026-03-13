@@ -484,6 +484,199 @@
         "divider_width": "fixed"
       }
     },
+    "collapsible_tabs_payments": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "heading_payments": {
+          "type": "heading",
+          "settings": {
+            "sub_heading": "",
+            "heading": "Payments & Discounts",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2"
+          }
+        },
+        "item_payment_methods": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "What payment methods do you accept?",
+            "content": "<p>We <strong>accept</strong> all major credit cards: </p><p><strong>Mastercard, Visa, American Express, and Discover.</strong></p><p>We <strong>do not accept PayPal. </strong>There are no exceptions.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": true
+          }
+        },
+        "item_accept_paypal": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Do you accept Paypal?",
+            "content": "<p>We do not accept PayPal due to their restrictions on tobacco, glass pipes, and functional glass art. There are no exceptions, as PayPal has restrictions on all smoking products and accessories. Sorry about the inconvenience.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": true
+          }
+        },
+        "collapsible_item_EJe69Y": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Does Grasscity offer price matching?",
+            "content": "<p>Yes. We offer a Price Match Guarantee with a 5% price beat on eligible items. If you find an identical product from the same brand at a lower price from our online competitors, we are happy to match or beat the listed price. This policy excludes wholesalers and auction sites. Please contact us to request a price match.</p><p>*Terms and conditions apply.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_payments",
+        "item_payment_methods",
+        "item_accept_paypal",
+        "collapsible_item_EJe69Y"
+      ],
+      "settings": {
+        "container": "narrow",
+        "color_scheme": "",
+        "header_layout": "vertical",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--primary",
+        "button_icon": "none",
+        "column_gap": "large",
+        "row_gap": "inherit",
+        "item_style": "standard",
+        "item_color_scheme": "",
+        "item_heading_font": "heading",
+        "item_heading_size": "h5",
+        "item_icon_size": "extra-large",
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "collapsible_tabs_inventory": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "heading_inventory": {
+          "type": "heading",
+          "settings": {
+            "sub_heading": "",
+            "heading": "Products & Availability",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2"
+          }
+        },
+        "item_out_of_stock": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Why are items in your store out of stock?",
+            "content": "<p>Yes, we sometimes run out of stock. Every glass piece we offer is carefully hand-blown using high-quality materials, which can lead to longer production times for certain items. Popular items are restocked regularly, so check back often.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": true
+          }
+        },
+        "item_restock": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "When will you restock an item?",
+            "content": "<p>Restock timelines vary by product and brand. In most cases, restocks take about 2-3 weeks, though some items may return sooner. If you have a question about a specific product, email us for details.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": true
+          }
+        },
+        "collapsible_item_wxqmyx": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Is Grasscity's glass safe to use?",
+            "content": "<p>Yes, all our curated glass pieces are made from body-safe, heat-resistant borosilicate glass (the same material used in lab equipment and kitchenware). It is non-toxic, contains no lead or harmful chemicals, and does not leach or off-gas. Our silicone products use food-grade, BPA-free, phthalate-free platinum-cured silicone. Always inspect glass before use and never use cracked or damaged pieces.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": true
+          }
+        },
+        "collapsible_item_KRUgUp": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Are Grasscity products legal?",
+            "content": "<p>Yes, all smoking accessories we sell are legal for tobacco use and intended for adult customers ages 21+. Customers are responsible for knowing local laws. We verify age at checkout and may require signature delivery. We reserve the right to cancel orders suspected of violating laws or company policy. We take preventing illicit and underage orders extremely seriously.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_inventory",
+        "item_out_of_stock",
+        "item_restock",
+        "collapsible_item_wxqmyx",
+        "collapsible_item_KRUgUp"
+      ],
+      "settings": {
+        "container": "narrow",
+        "color_scheme": "",
+        "header_layout": "vertical",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--primary",
+        "button_icon": "none",
+        "column_gap": "large",
+        "row_gap": "inherit",
+        "item_style": "standard",
+        "item_color_scheme": "",
+        "item_heading_font": "heading",
+        "item_heading_size": "h5",
+        "item_icon_size": "extra-large",
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
     "collapsible_tabs_order_tracking": {
       "type": "collapsible-tabs",
       "blocks": {
@@ -600,96 +793,6 @@
         "divider_width": "fixed"
       }
     },
-    "collapsible_tabs_payments": {
-      "type": "collapsible-tabs",
-      "blocks": {
-        "heading_payments": {
-          "type": "heading",
-          "settings": {
-            "sub_heading": "",
-            "heading": "Payments & Discounts",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h2"
-          }
-        },
-        "item_payment_methods": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "What payment methods do you accept?",
-            "content": "<p>We <strong>accept</strong> all major credit cards: </p><p><strong>Mastercard, Visa, American Express, and Discover.</strong></p><p>We <strong>do not accept PayPal. </strong>There are no exceptions.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false,
-            "use_subtext_color": true
-          }
-        },
-        "item_accept_paypal": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "Do you accept Paypal?",
-            "content": "<p>We do not accept PayPal due to their restrictions on tobacco, glass pipes, and functional glass art. There are no exceptions, as PayPal has restrictions on all smoking products and accessories. Sorry about the inconvenience.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false,
-            "use_subtext_color": true
-          }
-        },
-        "collapsible_item_EJe69Y": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "Does Grasscity offer price matching?",
-            "content": "<p>Yes. We offer a Price Match Guarantee with a 5% price beat on eligible items. If you find an identical product from the same brand at a lower price from our online competitors, we are happy to match or beat the listed price. This policy excludes wholesalers and auction sites. Please contact us to request a price match.</p><p>*Terms and conditions apply.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false,
-            "use_subtext_color": true
-          }
-        }
-      },
-      "block_order": [
-        "heading_payments",
-        "item_payment_methods",
-        "item_accept_paypal",
-        "collapsible_item_EJe69Y"
-      ],
-      "settings": {
-        "container": "narrow",
-        "color_scheme": "",
-        "header_layout": "vertical",
-        "section_header_alignment": "left",
-        "section_header_alignment_mobile": "inherit",
-        "subheading": "",
-        "heading": "",
-        "highlight_style": "none",
-        "highlight_font_style": "italic",
-        "highlight_style_color": "",
-        "highlight_text_color": "",
-        "heading_size": "h2",
-        "description": "",
-        "text_size": "text-base",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "btn--primary",
-        "button_icon": "none",
-        "column_gap": "large",
-        "row_gap": "inherit",
-        "item_style": "standard",
-        "item_color_scheme": "",
-        "item_heading_font": "heading",
-        "item_heading_size": "h5",
-        "item_icon_size": "extra-large",
-        "padding_top": 60,
-        "padding_bottom": 0,
-        "show_section_divider": false,
-        "divider_width": "fixed"
-      }
-    },
     "collapsible_tabs_damaged": {
       "type": "collapsible-tabs",
       "blocks": {
@@ -710,109 +813,6 @@
         "heading_damaged"
       ],
       "disabled": true,
-      "settings": {
-        "container": "narrow",
-        "color_scheme": "",
-        "header_layout": "vertical",
-        "section_header_alignment": "left",
-        "section_header_alignment_mobile": "inherit",
-        "subheading": "",
-        "heading": "",
-        "highlight_style": "none",
-        "highlight_font_style": "italic",
-        "highlight_style_color": "",
-        "highlight_text_color": "",
-        "heading_size": "h2",
-        "description": "",
-        "text_size": "text-base",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "btn--primary",
-        "button_icon": "none",
-        "column_gap": "large",
-        "row_gap": "inherit",
-        "item_style": "standard",
-        "item_color_scheme": "",
-        "item_heading_font": "heading",
-        "item_heading_size": "h5",
-        "item_icon_size": "extra-large",
-        "padding_top": 60,
-        "padding_bottom": 0,
-        "show_section_divider": false,
-        "divider_width": "fixed"
-      }
-    },
-    "collapsible_tabs_inventory": {
-      "type": "collapsible-tabs",
-      "blocks": {
-        "heading_inventory": {
-          "type": "heading",
-          "settings": {
-            "sub_heading": "",
-            "heading": "Products & Availability",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h2"
-          }
-        },
-        "item_out_of_stock": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "Why are items in your store out of stock?",
-            "content": "<p>Yes, we sometimes run out of stock. Every glass piece we offer is carefully hand-blown using high-quality materials, which can lead to longer production times for certain items. Popular items are restocked regularly, so check back often.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false,
-            "use_subtext_color": true
-          }
-        },
-        "item_restock": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "When will you restock an item?",
-            "content": "<p>Restock timelines vary by product and brand. In most cases, restocks take about 2-3 weeks, though some items may return sooner. If you have a question about a specific product, email us for details.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false,
-            "use_subtext_color": true
-          }
-        },
-        "collapsible_item_wxqmyx": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "Is Grasscity's glass safe to use?",
-            "content": "<p>Yes, all our curated glass pieces are made from body-safe, heat-resistant borosilicate glass (the same material used in lab equipment and kitchenware). It is non-toxic, contains no lead or harmful chemicals, and does not leach or off-gas. Our silicone products use food-grade, BPA-free, phthalate-free platinum-cured silicone. Always inspect glass before use and never use cracked or damaged pieces.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false,
-            "use_subtext_color": true
-          }
-        },
-        "collapsible_item_KRUgUp": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "Are Grasscity products legal?",
-            "content": "<p>Yes, all smoking accessories we sell are legal for tobacco use and intended for adult customers ages 21+. Customers are responsible for knowing local laws. We verify age at checkout and may require signature delivery. We reserve the right to cancel orders suspected of violating laws or company policy. We take preventing illicit and underage orders extremely seriously.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false,
-            "use_subtext_color": true
-          }
-        }
-      },
-      "block_order": [
-        "heading_inventory",
-        "item_out_of_stock",
-        "item_restock",
-        "collapsible_item_wxqmyx",
-        "collapsible_item_KRUgUp"
-      ],
       "settings": {
         "container": "narrow",
         "color_scheme": "",
@@ -1140,10 +1140,10 @@
     "collapsible_tabs_shipping",
     "collapsible_tabs_returns",
     "collapsible_tabs_payments",
+    "collapsible_tabs_inventory",
     "collapsible_tabs_order_tracking",
     "collapsible_tabs_delivery",
     "collapsible_tabs_damaged",
-    "collapsible_tabs_inventory",
     "collapsible_tabs_promotions",
     "collapsible_tabs_account",
     "collapsible_tabs_support",
