@@ -4425,6 +4425,9 @@ input:is([type=radio])::after {
   .product-card__image-wrapper--main-only .product-card__image {
     transition: transform var(--animation-default);
   }
+  .product-card__image-wrapper--main-only .product-card__image img {
+    object-fit: contain;
+  }
   .product-card .product-card__image-wrapper--main-only:hover .product-card__image {
     transform: scale(1.08, 1.08);
   }
