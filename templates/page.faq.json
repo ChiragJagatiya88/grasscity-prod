@@ -336,7 +336,7 @@
           "type": "heading",
           "settings": {
             "sub_heading": "",
-            "heading": "Order Tracking",
+            "heading": "Returns & Exchanges",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
@@ -425,6 +425,7 @@
       "block_order": [
         "heading_delivery"
       ],
+      "disabled": true,
       "settings": {
         "container": "narrow",
         "color_scheme": "",
@@ -541,7 +542,7 @@
           "type": "heading",
           "settings": {
             "sub_heading": "",
-            "heading": "Returns, Cancellations & Order Issues",
+            "heading": "Returns & Exchanges",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
@@ -632,6 +633,18 @@
             "open": false,
             "use_subtext_color": true
           }
+        },
+        "collapsible_item_TNr6WH": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "What if my order breaks during shipping?",
+            "content": "<p>If your item arrives broken, defective, or damaged, please inspect it immediately and take photos along with your order invoice. Email these to support@grasscity.com within 48 hours of delivery or start a live chat with our support agent on the website.After verification, we will replace the item or issue a refund/exchange of equal value.</p><p>Important: We cannot accept returns for used items. If you purchased Route Protection at checkout, coverage applies only during shipping from our warehouse to your home. Damage that occurs after delivery is not covered.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": true
+          }
         }
       },
       "block_order": [
@@ -642,7 +655,8 @@
         "item_exchange_product",
         "item_initiate_return_exchange",
         "item_return_shipping_cost",
-        "item_discounted_return"
+        "item_discounted_return",
+        "collapsible_item_TNr6WH"
       ],
       "settings": {
         "container": "narrow",
@@ -690,24 +704,12 @@
             "highlight_text_color": "",
             "heading_size": "h2"
           }
-        },
-        "item_broken_shipping": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "What if my order breaks during shipping?",
-            "content": "<p>If your item arrives broken, defective, or damaged, please inspect it immediately and take photos along with your order invoice. Email these to support@grasscity.com within 48 hours of delivery or start a live chat with our support agent on the website.After verification, we will replace the item or issue a refund/exchange of equal value.</p><p>Important: We cannot accept returns for used items. If you purchased Route Protection at checkout, coverage applies only during shipping from our warehouse to your home. Damage that occurs after delivery is not covered.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false,
-            "use_subtext_color": true
-          }
         }
       },
       "block_order": [
-        "heading_damaged",
-        "item_broken_shipping"
+        "heading_damaged"
       ],
+      "disabled": true,
       "settings": {
         "container": "narrow",
         "color_scheme": "",
@@ -1136,10 +1138,10 @@
     "main",
     "multicolumn_icon_Xp8nB6",
     "collapsible_tabs_shipping",
+    "collapsible_tabs_returns",
     "collapsible_tabs_order_tracking",
     "collapsible_tabs_delivery",
     "collapsible_tabs_payments",
-    "collapsible_tabs_returns",
     "collapsible_tabs_damaged",
     "collapsible_tabs_inventory",
     "collapsible_tabs_promotions",
