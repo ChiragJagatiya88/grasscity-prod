@@ -96,7 +96,7 @@
       {%- if product.quantity_price_breaks_configured? -%}
         <div
           id="QuantityForm-{{ section_id }}"
-          class="{% if block.settings.show_quantity_selector and is_elite_product == false and is_elite_renew_product == false %} grid gap-4{% else %} hidden{% endif %}"
+          class="{% if block.settings.show_quantity_selector and is_elite_product == false or is_elite_renew_product == false %} grid gap-4{% else %} hidden{% endif %}"
         >
           {%- assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id -%}
 
