@@ -147,6 +147,36 @@
     "all_blogs_c3fWXx": {
       "type": "all_blogs",
       "blocks": {
+        "item_U4GeBm": {
+          "type": "item",
+          "settings": {
+            "blog": "highlights"
+          }
+        },
+        "item_aKrRrA": {
+          "type": "item",
+          "settings": {
+            "blog": "guides"
+          }
+        },
+        "item_h8P7HD": {
+          "type": "item",
+          "settings": {
+            "blog": "news"
+          }
+        },
+        "item_wm7NWt": {
+          "type": "item",
+          "settings": {
+            "blog": "cannabis-lifestyle"
+          }
+        },
+        "item_RU7xEH": {
+          "type": "item",
+          "settings": {
+            "blog": "cleaning"
+          }
+        },
         "item_VaXhJU": {
           "type": "item",
           "settings": {
@@ -191,6 +221,11 @@
         }
       },
       "block_order": [
+        "item_U4GeBm",
+        "item_aKrRrA",
+        "item_h8P7HD",
+        "item_wm7NWt",
+        "item_RU7xEH",
         "item_VaXhJU",
         "item_kDGaKx",
         "item_Rkqdnz",
