@@ -588,6 +588,7 @@
         "column_aeychJ",
         "column_KQVTYm"
       ],
+      "disabled": true,
       "custom_css": [
         ".multicolumn-card__text p {max-width: 33rem;}"
       ],
@@ -1045,6 +1046,83 @@
         "padding_top": 60,
         "padding_bottom": 60
       }
+    },
+    "scrolling_promotion_gnPFXR": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "text_aAk6xN": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Fast Delivery",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "text_zYmeXn": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "30 Days Free Returns",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "text_xKppQq": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Secure Payment",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "text_6RWYUM": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "24/7 Customer Support",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "text_rA8jcx": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Sustainable Materials",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "text_aAk6xN",
+        "text_zYmeXn",
+        "text_xKppQq",
+        "text_6RWYUM",
+        "text_rA8jcx"
+      ],
+      "settings": {
+        "color_scheme": "scheme-3",
+        "direction": "left",
+        "pause_on_hover": true,
+        "speed": 0.2,
+        "h_spacing": 40,
+        "show_section_divider": false,
+        "padding_top": 22,
+        "padding_bottom": 22
+      }
     }
   },
   "order": [
@@ -1059,6 +1137,7 @@
     "quick_comparison_table_p9rdxW",
     "image_with_text_kqXfRQ",
     "testimonials_8JHr3L",
-    "scrolling_gallery_image_eqULib"
+    "scrolling_gallery_image_eqULib",
+    "scrolling_promotion_gnPFXR"
   ]
 }
