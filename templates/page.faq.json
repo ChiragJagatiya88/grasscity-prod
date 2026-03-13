@@ -715,12 +715,51 @@
             "open": false,
             "use_subtext_color": true
           }
+        },
+        "collapsible_item_C4eGPd": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "How can I receive Grasscity promotions and updates?",
+            "content": "<p>Sign up by entering your email in the footer of our website to join our mailing list. Follow us on Instagram, Facebook, and other social channels for exclusive drops, behind-the-scenes content, and early access. Subscribers receive discount codes, product announcements, educational tips, and first access to limited releases.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": true
+          }
+        },
+        "collapsible_item_ADrCfX": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Does Grasscity sell to minors?",
+            "content": "<p>Absolutely not. We enforce strict 21+ age verification at checkout, reserve the right to require signature on any order for security, and immediately cancel suspected underage orders. Fraud prevention measures are in place throughout our system. For legal guardians ordering for personal use, packages require adult signature to ensure compliance with regulations. No exceptions.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": true
+          }
+        },
+        "collapsible_item_xXLyQP": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "The answer to my question is not here, what do I do?",
+            "content": "<p>If you cannot find the answer to your question, contact us directly. Email us with your name, order number (if applicable), and your question at support@grasscity.com. You can also reach us through the chat widget on our website to connect with a live support agent, available 7 days a week from 9 AM to 9 PM EST.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": true
+          }
         }
       },
       "block_order": [
         "heading_account",
         "item_update_password",
-        "collapsible_item_dHLqHc"
+        "collapsible_item_dHLqHc",
+        "collapsible_item_C4eGPd",
+        "collapsible_item_ADrCfX",
+        "collapsible_item_xXLyQP"
       ],
       "settings": {
         "container": "narrow",
@@ -773,6 +812,7 @@
       "block_order": [
         "heading_order_tracking"
       ],
+      "disabled": true,
       "settings": {
         "container": "narrow",
         "color_scheme": "",
@@ -923,24 +963,12 @@
             "highlight_text_color": "",
             "heading_size": "h2"
           }
-        },
-        "item_promotions_updates": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "How can I receive Grasscity promotions and updates?",
-            "content": "<p>Sign up by entering your email in the footer of our website to join our mailing list. Follow us on Instagram, Facebook, and other social channels for exclusive drops, behind-the-scenes content, and early access. Subscribers receive discount codes, product announcements, educational tips, and first access to limited releases.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false,
-            "use_subtext_color": true
-          }
         }
       },
       "block_order": [
-        "heading_promotions",
-        "item_promotions_updates"
+        "heading_promotions"
       ],
+      "disabled": true,
       "settings": {
         "container": "narrow",
         "color_scheme": "",
@@ -987,37 +1015,12 @@
             "highlight_text_color": "",
             "heading_size": "h2"
           }
-        },
-        "item_help_not_here": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "The answer to my question is not here, what do I do?",
-            "content": "<p>If you cannot find the answer to your question, contact us directly. Email us with your name, order number (if applicable), and your question at support@grasscity.com. You can also reach us through the chat widget on our website to connect with a live support agent, available 7 days a week from 9 AM to 9 PM EST.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false,
-            "use_subtext_color": true
-          }
-        },
-        "item_sell_to_minors": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "Does Grasscity sell to minors?",
-            "content": "<p>Absolutely not. We enforce strict 21+ age verification at checkout, reserve the right to require signature on any order for security, and immediately cancel suspected underage orders. Fraud prevention measures are in place throughout our system. For legal guardians ordering for personal use, packages require adult signature to ensure compliance with regulations. No exceptions.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false,
-            "use_subtext_color": true
-          }
         }
       },
       "block_order": [
-        "heading_support",
-        "item_help_not_here",
-        "item_sell_to_minors"
+        "heading_support"
       ],
+      "disabled": true,
       "settings": {
         "container": "narrow",
         "color_scheme": "",
