@@ -18,6 +18,122 @@
         "padding_bottom": 20
       }
     },
+    "buttons_with_icon_dynTr9": {
+      "type": "buttons-with-icon",
+      "blocks": {
+        "button_item_UWr3n9": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "All Blogs",
+            "button_link": "shopify://pages/all-blogs",
+            "icon": "none"
+          }
+        },
+        "button_item_bVcmxE": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "How To",
+            "button_link": "shopify://blogs/how-to",
+            "icon": "none"
+          }
+        },
+        "button_item_mQydbA": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Cleaning",
+            "button_link": "shopify://blogs/cleaning",
+            "icon": "none"
+          }
+        },
+        "button_item_btLnpz": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Cannabis Lifestyle",
+            "button_link": "shopify://blogs/cannabis-lifestyle",
+            "icon": "none"
+          }
+        },
+        "button_item_7wDLEJ": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "News",
+            "button_link": "shopify://blogs/news",
+            "icon": "none"
+          }
+        },
+        "button_item_8wtQti": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Guides",
+            "button_link": "shopify://blogs/guides",
+            "icon": "none"
+          }
+        },
+        "button_item_8FGWhn": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Highlights",
+            "button_link": "shopify://blogs/highlights",
+            "icon": "none"
+          }
+        },
+        "button_item_VVgEBA": {
+          "type": "button_item",
+          "disabled": true,
+          "settings": {
+            "button_label": "Guides",
+            "button_link": "shopify://blogs/guides",
+            "icon": "none"
+          }
+        },
+        "button_item_wUV4Aw": {
+          "type": "button_item",
+          "disabled": true,
+          "settings": {
+            "button_label": "Bongs",
+            "button_link": "shopify://blogs/bongs",
+            "icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "button_item_UWr3n9",
+        "button_item_bVcmxE",
+        "button_item_mQydbA",
+        "button_item_btLnpz",
+        "button_item_7wDLEJ",
+        "button_item_8wtQti",
+        "button_item_8FGWhn",
+        "button_item_VVgEBA",
+        "button_item_wUV4Aw"
+      ],
+      "custom_css": [
+        ".button-item__inner.link_active {background: #7bc710;}"
+      ],
+      "name": "t:sections.buttons-with-icon.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "item_alignment": "left",
+        "item_button_style": "btn--icon",
+        "item_button_font": "button",
+        "enable_slider": true,
+        "swipe_on_mobile": true,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
     "buttons_with_icon_Aayywi": {
       "type": "buttons-with-icon",
       "blocks": {
@@ -105,6 +221,7 @@
         "button_item_PB7p4g",
         "button_item_Qbxm94"
       ],
+      "disabled": true,
       "custom_css": [
         ".button-item__inner.link_active {background: #7bc710;}"
       ],
@@ -290,92 +407,13 @@
         "padding_top": 50,
         "padding_bottom": 50
       }
-    },
-    "scrolling_promotion_CwRM8T": {
-      "type": "scrolling-promotion",
-      "blocks": {
-        "text_VgxdCk": {
-          "type": "text",
-          "settings": {
-            "text_link": "",
-            "text": "Fast Delivery",
-            "text_size": "h4",
-            "text_opacity": 100,
-            "use_custom_color": false,
-            "custom_color": "#000000"
-          }
-        },
-        "text_zttXcE": {
-          "type": "text",
-          "settings": {
-            "text_link": "",
-            "text": "Easy Returns",
-            "text_size": "h4",
-            "text_opacity": 100,
-            "use_custom_color": false,
-            "custom_color": "#000000"
-          }
-        },
-        "text_UfXEBV": {
-          "type": "text",
-          "settings": {
-            "text_link": "",
-            "text": "Lowest Price Guaranteed",
-            "text_size": "h4",
-            "text_opacity": 100,
-            "use_custom_color": false,
-            "custom_color": "#000000"
-          }
-        },
-        "text_ELfnYJ": {
-          "type": "text",
-          "settings": {
-            "text_link": "",
-            "text": "Secure Checkout",
-            "text_size": "h4",
-            "text_opacity": 100,
-            "use_custom_color": false,
-            "custom_color": "#000000"
-          }
-        },
-        "text_drEgKM": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text_link": "",
-            "text": "Sustainable Materials",
-            "text_size": "h4",
-            "text_opacity": 100,
-            "use_custom_color": false,
-            "custom_color": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "text_VgxdCk",
-        "text_zttXcE",
-        "text_UfXEBV",
-        "text_ELfnYJ",
-        "text_drEgKM"
-      ],
-      "custom_css": [],
-      "settings": {
-        "color_scheme": "scheme-3",
-        "direction": "left",
-        "pause_on_hover": true,
-        "speed": 0.2,
-        "h_spacing": 40,
-        "show_section_divider": false,
-        "padding_top": 22,
-        "padding_bottom": 22
-      }
     }
   },
   "order": [
     "breadcrumbs_F4iNAA",
+    "buttons_with_icon_dynTr9",
     "buttons_with_icon_Aayywi",
     "main",
-    "multicolumn_icon_ycUW8j",
-    "scrolling_promotion_CwRM8T"
+    "multicolumn_icon_ycUW8j"
   ]
 }
