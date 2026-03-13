@@ -255,9 +255,9 @@
                     
                     assign is_elite_item = false
                     if settings.elite_product != blank and item.variant.id == settings.elite_product.selected_or_first_available_variant.id
-                    assign is_elite_item = true
+                      assign is_elite_item = true
                     elsif settings.elite_renew_item != blank and item.variant.id == settings.elite_renew_item.selected_or_first_available_variant.id
-                    assign is_elite_item = true
+                      assign is_elite_item = true
                     endif
 
                     assign item_max_quantity = blank
