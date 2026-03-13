@@ -236,13 +236,65 @@
             "open": false,
             "use_subtext_color": true
           }
+        },
+        "collapsible_item_y9dD9f": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "How do I track my package?",
+            "content": "<p>Tracking information will be sent to you once your order has been scanned and packed up. Tracking emails are typically sent out 1-2 days after your order has been placed.</p><p>Once it ships, you will continue to receive periodic shipping updates until arrival. If you entered a phone number at checkout, our system will send text message alerts when your package is out for delivery.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": true
+          }
+        },
+        "collapsible_item_8Axnkb": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Where is my order?",
+            "content": "<p>Trying to find your package? You can use the tracking link from your shipping email to track your order.</p><p>If you are still having difficulty tracking your order, or if you have additional questions, please contact our customer service for further details.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": true
+          }
+        },
+        "collapsible_item_mQE9Uh": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Is a signature required for my order?",
+            "content": "<p>Grasscity may require a signature for certain orders at our discretion to ensure security. This helps prevent fraud, underage purchases, and other unauthorized activity.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": true
+          }
+        },
+        "collapsible_item_ichkpB": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "How long does it take to receive my order?",
+            "content": "<p>Standard shipping takes 3-7 business days.</p><p>Priority shipping takes 2-3 business days.</p><p>Express shipping takes 1-2 business days.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": true
+          }
         }
       },
       "block_order": [
         "heading_shipping",
         "item_ship_packages",
         "item_ship_cost",
-        "item_ship_address_change"
+        "item_ship_address_change",
+        "collapsible_item_y9dD9f",
+        "collapsible_item_8Axnkb",
+        "collapsible_item_mQE9Uh",
+        "collapsible_item_ichkpB"
       ],
       "custom_css": [],
       "settings": {
@@ -292,42 +344,6 @@
             "heading_size": "h2"
           }
         },
-        "item_track_package": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "How do I track my package?",
-            "content": "<p>Tracking information will be sent to you once your order has been scanned and packed up. Tracking emails are typically sent out 1-2 days after your order has been placed.</p><p>Once it ships, you will continue to receive periodic shipping updates until arrival. If you entered a phone number at checkout, our system will send text message alerts when your package is out for delivery.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false,
-            "use_subtext_color": true
-          }
-        },
-        "item_where_order": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "Where is my order?",
-            "content": "<p>Trying to find your package? You can use the tracking link from your shipping email to track your order.</p><p>If you are still having difficulty tracking your order, or if you have additional questions, please contact our customer service for further details.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false,
-            "use_subtext_color": true
-          }
-        },
-        "item_signature_required": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "Is a signature required for my order?",
-            "content": "<p>Grasscity may require a signature for certain orders at our discretion to ensure security. This helps prevent fraud, underage purchases, and other unauthorized activity.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false,
-            "use_subtext_color": true
-          }
-        },
         "item_price_matching": {
           "type": "collapsible_item",
           "settings": {
@@ -355,9 +371,6 @@
       },
       "block_order": [
         "heading_order_tracking",
-        "item_track_package",
-        "item_where_order",
-        "item_signature_required",
         "item_price_matching",
         "item_order_confirmation_email"
       ],
@@ -407,23 +420,10 @@
             "highlight_text_color": "",
             "heading_size": "h2"
           }
-        },
-        "item_delivery_time": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "How long does it take to receive my order?",
-            "content": "<p>Standard shipping takes 3-7 business days.</p><p>Priority shipping takes 2-3 business days.</p><p>Express shipping takes 1-2 business days.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false,
-            "use_subtext_color": true
-          }
         }
       },
       "block_order": [
-        "heading_delivery",
-        "item_delivery_time"
+        "heading_delivery"
       ],
       "settings": {
         "container": "narrow",
