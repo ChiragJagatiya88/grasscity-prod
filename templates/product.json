@@ -81,6 +81,7 @@
         },
         "rich_text_UCB4ce": {
           "type": "rich-text",
+          "disabled": true,
           "settings": {
             "text": "{{ product.metafields.description.short_description | metafield_tag }}"
           }
@@ -262,7 +263,17 @@
           "name": "Description",
           "settings": {
             "navigation_title": "Description",
-            "content": "<p>{{ product.description }}</p>",
+            "content": "{{ product.description }}",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "tab_VjmtHi": {
+          "type": "tab",
+          "name": "Overview",
+          "settings": {
+            "navigation_title": "Overview",
+            "content": "{{ product.metafields.description.short_description | metafield_tag }}",
             "custom_liquid": "",
             "page": ""
           }
@@ -309,6 +320,7 @@
       },
       "block_order": [
         "tab_cHq7bL",
+        "tab_VjmtHi",
         "image_with_text_LQUEir",
         "tab_xGBJeM"
       ],
