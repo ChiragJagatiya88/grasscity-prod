@@ -71,6 +71,21 @@
       endif
     -%}
 
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WWG49NHZ');
+    </script>
+    <!-- End Google Tag Manager -->
+
     {% if template.suffix == 'membership' %}
       {{ 'cc-styles.css' | asset_url | stylesheet_tag }}
       {{ 'cc-media-queries.css' | asset_url | stylesheet_tag }}
@@ -90,8 +105,6 @@
       }
     </script>
 
-    
-
     {%- if request.design_mode -%}
       <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
@@ -103,14 +116,7 @@
     {% comment %} End custom metafield for head tag like GTag tracking {% endcomment %}
 
     {% render 'json-lds' %}
-
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WWG49NHZ');</script>
-<!-- End Google Tag Manager -->
+    {%  render 'us-gtms' %}
   </head>
 
   <body
@@ -118,9 +124,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     data-initializing
   >
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WWG49NHZ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WWG49NHZ"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     {% comment %} Custom metafield for body tag like GTag tracking {% endcomment %}
     {{ shop.metafields.foxtheme.code_body.value }}
     {% comment %} End custom metafield for body tab like GTag tracking {% endcomment %}

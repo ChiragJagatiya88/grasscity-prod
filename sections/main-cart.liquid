@@ -278,7 +278,12 @@
                         assign item_effective_max = item_max_quantity
                       endif
                     endif
-
+                  -%}
+                  {%- comment -%} GA4 ecommerce line item data for us-gtms (uscart:add / uscart:remove) {%- endcomment -%}
+                  <script type="application/json" id="new_cart_event_line_{{ item.index | plus: 1 }}">
+                    {"items":[{"item_name":{{ item.product.title | json }},"item_id":"{{ item.product.id }}","price":{{ item.price | money_without_currency | replace: ',', '.' }},"item_brand":{{ item.vendor | json }},"item_category":{{ item.product.type | json }},"item_variant":{{ item.variant.title | json }},"quantity":{{ item.quantity }}}]}
+                  </script>
+                  {%- liquid
                     assign has_qty_rules = false
                     if item.variant.quantity_rule.increment > 1 or item.variant.quantity_rule.min > 1 or item.variant.quantity_rule.max != null
                       assign has_qty_rules = true
@@ -365,7 +370,7 @@
                   {%- endif -%}
 
                   {%- capture cart_item -%}
-                      <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
+                      <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}" data-product-id="{{ item.product.id }}">
                         <td class="cart-item__product">
                           <div class="flex items-start md:items-center gap-3 md:gap-6">
                             <a id="Loader-{{ section.id }}-{{ item.index | plus: 1 }}"{% unless is_gift_wrap_item %} is="cart-remove-item"{% else %} is="gift-wrap-remove-item"{% endunless %} class="items-center justify-center relative hidden md:flex btn-remove" href="{{ item.url_to_remove }}" data-index="{{ item.index | plus: 1 }}">

@@ -158,6 +158,13 @@
     >
   {%- endif -%}
 
+  {%- comment -%} GA4 ecommerce variant data for us-gtms (view_item / add_to_cart) {%- endcomment -%}
+  {%- for variant in product.variants -%}
+    <script type="application/json" id="new_event_pdp_{{ variant.id }}">
+      {"item_name":{{ product.title | escape | json }},"item_id":"{{ product.id }}","price":{{ variant.price | money_without_currency | replace: ',', '.' }},"item_brand":{{ product.vendor | escape | json }},"item_category":{{ product.type | escape | json }},"item_variant":{{ variant.title | replace: 'Default Title', 'Single Variant' | escape | json }},"quantity":1}
+    </script>
+  {%- endfor -%}
+
   {%- if product.quantity_price_breaks_configured? -%}
     {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>

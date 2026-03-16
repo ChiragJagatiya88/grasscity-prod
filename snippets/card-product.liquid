@@ -111,6 +111,7 @@
 -%}
 <div
   class="product-card product-card-style-{{ pcard_style }}{% if pcard_style == 'card' %} color-{{ settings.pcard_color_scheme }}{% endif %}{{ card_wrapper_class }}{% if list_on_mobile %} product-card-list-on-mobile{% endif %}{% if color_inherit %} color-inherit{% endif %}"
+  data-pid="{{ product.id }}"
 >
   <div class="product-card__wrapper h-full">
     <div class="product-card__image-wrapper{% if second_image == blank %} product-card__image-wrapper--main-only{% endif %} {% if list_on_mobile %}desktop-{% endif %}color-{{ settings.pcard_overlay_color_scheme }} bg-none">
@@ -427,5 +428,10 @@
   </div>
   {%- if settings.pcard_choose_options_actions == 'open_popup' or enable_quick_view -%}
     {% render 'quick-view-modal', modal_id: quick_view_modal_id, product: product %}
+  {%- endif -%}
+  {%- if template == 'collection' -%}
+    <script type="application/json" id="new_event_{{ product.id }}">
+      {"item_id":"{{ product.id }}","item_name":{{ product.title | escape | json }},"price":{{ product.price | money_without_currency | replace: ',', '.' }},"currency":"{{ shop.currency }}","item_brand":{{ product.vendor | escape | json }},"item_category":{{ product.type | escape | json }},"item_variant":{{ product.selected_or_first_available_variant.title | replace: 'Default Title', product.title | escape | json }},"quantity":1}
+    </script>
   {%- endif -%}
 </div>
