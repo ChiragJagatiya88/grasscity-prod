@@ -132,6 +132,7 @@
     {
       "@context": "http://schema.org/",
       "@type": "Product",
+      "name": {{ product.title | strip_html | strip | json }},
       {% if product.metafields.yotpo.reviews_count and product.metafields.yotpo.reviews_average != "0" %}
         {% assign reviewcount = product.metafields.yotpo.reviews_count | plus: 0 %}
         {% assign average = product.metafields.yotpo.reviews_average | plus: 0 %}
