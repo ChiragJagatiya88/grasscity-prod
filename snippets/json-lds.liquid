@@ -127,7 +127,7 @@
   {% else %}
     {% assign member_price_cents = 0 %}
   {% endif %}
-
+{% comment %} 
   <script type="application/ld+json">
     {
       "@context": "http://schema.org/",
@@ -195,7 +195,7 @@
         }{% endif %}
       ]
     }
-  </script>
+  </script> {% endcomment %}
 {% endif %}
 
 {% comment %} Bread Crumb List {% endcomment %}
