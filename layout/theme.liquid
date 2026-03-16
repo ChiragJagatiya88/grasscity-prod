@@ -190,5 +190,44 @@
     {% render 'us-sso-popups-haseeb' %}
 
     <script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.ca/widget?wc=60250954f00306a9508b8857878763e4a67d5110abe04f22c8edf40ca10132c9" defer></script>
+
+    <script src="https://a.klaviyo.com/media/js/onsite/onsite.js"></script>
+    <script>
+      var klaviyo = klaviyo || [];
+      klaviyo.init({
+        account: 'wC7vgp',
+        list: 'Ucr5rK',
+        platform: 'shopify',
+      });
+      klaviyo.enable('backinstock', {
+        trigger: {
+          product_page_text: 'Notify me when back in stock',
+          product_page_class: 'btn btn--primary',
+          product_page_text_align: 'center',
+          product_page_margin: '0px',
+          replace_anchor: false,
+        },
+        modal: {
+          headline: 'NOTIFY WHEN BACK IN STOCK',
+          body_content: "We'll send you an email when this product is back in stock",
+          email_field_label: 'Enter your email',
+          button_label: 'Notify Me!',
+          subscription_success_label: "Keep an eye out for a back-in-stock message.",
+          footer_content: '',
+          additional_styles: "@import url('https://fonts.googleapis.com/css?family=Helvetica+Neue');",
+          drop_background_color: '#000',
+          background_color: '#fff',
+          text_color: '#222',
+          button_text_color: '#fff',
+          button_background_color: '#439fdb',
+          close_button_color: '#ccc',
+          error_background_color: '#fcd6d7',
+          error_text_color: '#C72E2F',
+          success_background_color: '',
+          success_text_color: '#000000',
+        },
+      });
+    </script>
+
   </body>
 </html>
