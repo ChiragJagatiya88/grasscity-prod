@@ -124,6 +124,16 @@
         "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {}
+      },
+      "9305562503569750861": {
+        "type": "shopify://apps/route-protection-tracking/blocks/settings/fb8ca446-3fcd-450e-b3b6-e8e3615553e2",
+        "disabled": false,
+        "settings": {
+          "variant": "preferred-checkout",
+          "container_placement": "",
+          "entrypoints": "button[name=checkout]",
+          "custom_css": ""
+        }
       }
     },
     "color_schemes": {
