@@ -1,4 +1,71 @@
 {%- liquid
+  
+  assign is_member = false
+  assign is_elite_member = false
+
+  assign is_elite_product = false
+  assign is_elite_renew_product = false
+
+  assign elite_product = settings.elite_product
+  assign elite_renew_product = settings.elite_product_renew
+
+  if customer
+    if customer.tags contains 'club_member' or customer.tags contains 'member'
+      assign is_member = true
+    endif
+    if customer.tags contains 'elite_member' or customer.tags contains 'elite'
+      assign is_elite_member = true
+    endif
+  endif
+-%}
+
+{%- liquid  
+  if elite_product != blank and product.id == elite_product.id
+    assign is_elite_product = true
+  endif
+-%}
+{%- liquid  
+  if elite_renew_product != blank and product.id == elite_renew_product.id
+    assign is_elite_renew_product = true
+  endif
+-%}
+
+{%- liquid
+  assign should_redirect = false
+  assign redirect_path = '/'
+  if is_elite_product or is_elite_renew_product
+    comment
+    if is_member == false and is_elite_member == false
+      assign should_redirect = true
+      assign redirect_path = '/'
+    endcomment
+    if is_member and is_elite_member == false and is_elite_renew_product
+      assign should_redirect = true
+      if elite_product != blank
+        assign redirect_path = elite_product.url
+      else
+        assign redirect_path = '/'
+      endif
+    elsif is_elite_member and is_elite_product
+      assign should_redirect = true
+      if elite_renew_product != blank
+        assign redirect_path = elite_renew_product.url
+      else
+        assign redirect_path = '/'
+      endif
+    endif
+  endif
+-%}
+
+
+{%- if should_redirect -%}
+  <script>window.location.replace("{{ redirect_path | prepend: shop.url }}");</script>
+  <div class="page-width section--padding" style="padding: 2rem; text-align: center;">
+    <p>Redirecting...</p>
+  </div>
+{%- else -%}
+
+{%- liquid
   assign media_layout = section.settings.gallery_layout | default: 'carousel'
   assign mobile_thumbnails = section.settings.mobile_thumbnails | default: 'hide'
   assign enable_image_zoom = section.settings.enable_image_zoom | default: false
@@ -34,14 +101,30 @@
     --section-padding-top: {{ section.settings.padding_top }}px;
     --section-padding-bottom: {{ section.settings.padding_bottom }}px;
   }
+  .elite-visibility-hidden { display: none !important; }
 {%- endstyle -%}
+
+{%- if is_elite_member and is_elite_product or is_elite_member and is_elite_renew_product -%}
+  <div id="elite-renew-message-{{ section.id }}" class="section block section-{{ section.id }} section-main-product page-width section--padding">
+    <div class="product elite-member-no-renewal-message text-center" style="padding: 2rem 1rem;">
+      <p class="h2">You're already an Elite member.</p>
+      <p class="text-subtext">You can renew your membership when it's within 30 days of expiry.</p>
+    </div>
+  </div>
+{%- endif -%}
+
 <product-info
   id="MainProduct-{{ section.id }}"
   data-section="{{ section.id }}"
   data-product-id="{{ product.id }}"
   data-update-url="true"
   data-url="{{ product.url }}"
-  class="section block section-{{ section.id }} section-main-product page-width section--padding{% unless section.settings.use_color_scheme_in_container %} color-{{ section.settings.color_scheme }}{% else %} use-color-scheme-in-container{% endunless %}"
+  class="
+    section block section-{{ section.id }} section-main-product page-width section--padding
+    {% unless section.settings.use_color_scheme_in_container %} color-{{ section.settings.color_scheme }}{% else %} use-color-scheme-in-container{% endunless %}
+    {% if is_elite_member and is_elite_product %} hidden{% endif %}
+    {% if is_elite_member and is_elite_renew_product %} elite-renew-by-js hidden{% endif %}
+  "
 >
   {{ 'section-main-product.css' | asset_url | stylesheet_tag: preload: true }}
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag: preload: true }}
@@ -126,10 +209,33 @@
     {{ product | structured_data }}
   </script>
 </product-info>
+
+{%- if settings.elite_renewal and is_elite_member and is_elite_renew_product -%}
+  <script>
+    (function() {
+      var daysRaw = localStorage.getItem("membership_expiring_in_days");
+      var days = (daysRaw !== null && daysRaw !== "") ? parseInt(daysRaw, 10) : NaN;
+      var msg = document.getElementById("elite-renew-message-{{ section.id }}");
+      var product = document.getElementById("MainProduct-{{ section.id }}");
+      if (!msg || !product) return;
+      if (!isNaN(days) && days >= 30) {
+        product.classList.add("hidden");
+        msg.classList.remove("elite-visibility-hidden");
+      } else {
+        product.classList.remove("hidden");
+        msg.classList.add("elite-visibility-hidden");
+      }
+    })();
+  </script>
+{%- endif -%}
+
 {%- assign block_atc_bar = section.blocks | where: 'type', 'sticky-atc-bar' | first -%}
 {%- if block_atc_bar != blank -%}
   {%- render 'sticky-atc-bar', block: block_atc_bar, product_form_id: product_form_id -%}
 {%- endif -%}
+
+{%- endif -%}
+
 {% schema %}
   {
     "name": "t:sections.main-product.name",
