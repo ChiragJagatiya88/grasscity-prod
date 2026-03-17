@@ -54,6 +54,11 @@
       <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
 
+
+     {%- if template.name == 'collection' and collection.handle == 'all' -%}
+      <meta name="robots" content="noindex, follow">
+    {%- endif -%}
+    
     {%- liquid
       render 'meta-tags'
       render 'css-variables'
