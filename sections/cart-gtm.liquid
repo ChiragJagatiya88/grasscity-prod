@@ -1,0 +1,16 @@
+<script type="application/json" data-cart-total="{{ cart.total_price |  money_without_currency | replace: ',', '.' }}">
+  [
+    {% for item in cart.items %}
+      {
+        "item_name": {{ item.product.title | json }},
+        "item_id": {{ item.product.id | json }},
+        "price": {{ item.price | money_without_currency | replace: ',', '.' }},
+        "item_brand":{{ item.vendor | json }},
+        "item_category": {{ item.product.type | json }},
+        "item_variant": {{ item.variant.title | json }},
+        "index": {{ forloop.index }},
+        "quantity": {{ item.quantity }}
+      }{% unless forloop.last %}, {% endunless %}
+    {% endfor %}
+  ]
+</script>

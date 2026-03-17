@@ -1,0 +1,17 @@
+<script type="application/json">
+  {
+    "currency": "{{ shop.currency }}",
+    "value":{{ product.selected_variant.price | money_without_currency | replace: ',', '.' }},
+    "items": [
+      {
+        "item_name": "{{ product.title | escape }}",
+        "item_id": "{{ product.id }}",
+        "price": {{ product.selected_variant.price | money_without_currency | replace: ',', '.' }},
+        "item_brand": "{{ product.vendor | escape }}",
+        "item_category":"{{ product.type | escape }}",
+        "item_variant": {% if product.has_only_default_variant %} "Single Variant" {% else %} "{{ product.selected_variant.title |  escape }}" {% endif %},
+        "quantity":1
+      }
+    ]
+  }
+</script>
