@@ -55,7 +55,16 @@
     {% endif %}
 
 
-     {%- if template.name == 'collection' and collection.handle == 'all' -%}
+     {%- liquid
+      assign noindex_follow = false
+      if template.name == 'collection' and collection.handle == 'all'
+        assign noindex_follow = true
+      endif
+      if template.name == 'collection' and collection.handle == 'new-items' and current_page > 1
+        assign noindex_follow = true
+      endif
+    -%}
+    {%- if noindex_follow -%}
       <meta name="robots" content="noindex, follow">
     {%- endif -%}
     
