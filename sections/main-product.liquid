@@ -34,12 +34,12 @@
   assign should_redirect = false
   assign redirect_path = '/'
   if is_elite_product or is_elite_renew_product
-    comment
     if is_member == false and is_elite_member == false
-      assign should_redirect = true
-      assign redirect_path = '/'
-    endcomment
-    if is_member and is_elite_member == false and is_elite_renew_product
+      if is_elite_renew_product
+        assign should_redirect = true
+        assign redirect_path = '/'
+      endif
+    elsif is_member and is_elite_member == false and is_elite_renew_product
       assign should_redirect = true
       if elite_product != blank
         assign redirect_path = elite_product.url
