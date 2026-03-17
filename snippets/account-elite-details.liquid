@@ -1,0 +1,265 @@
+<style>
+  .cc-mm-account-box-inner {
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    .membership-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 20px;
+    }
+    .membership-logo img {
+      border-radius: 5px 0 0;
+      padding: 12px;
+      background: #1c355e;
+      object-fit: contain;
+      width: 70px;
+      height: 70px;
+    }
+    .membership-details h2 {
+      color: var(--Color-Neutral-Neutral-900, #2d2e34);
+      font-size: var(--Type-text-m, 18px);
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin: 0;
+    }
+    .membership-details p {
+      margin: 5px 0;
+      color: var(--Color-Neutral-Neutral-900, #2d2e34);
+      font-size: var(--Type-text-s, 16px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .cc-mm-tab-inner-membership-inner {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      border-top: 1px solid #c1c7d0;
+      padding: 16px 0 0;
+    }
+    .membership-date p {
+      color: var(--Color-Neutral-Neutral-900, #2d2e34);
+      font-size: var(--Type-text-s, 16px);
+      font-style: normal;
+      font-weight: 500;
+      line-height: 19px;
+      margin: 0 0 15px;
+    }
+    .auto-renewal p {
+      margin: 5px 0;
+      color: var(--Color-Neutral-Neutral-900, #2d2e34);
+      font-size: var(--Type-text-s, 16px);
+      font-style: normal;
+      font-weight: 500;
+      line-height: 19px;
+    }
+    .payment-method {
+      border-left: 1px solid #c1c7d0;
+      padding-left: 40px;
+    }
+    .payment-method p {
+      color: var(--Color-Neutral-Neutral-900, #2d2e34);
+      font-size: var(--Type-text-s, 16px);
+      font-style: normal;
+      font-weight: 700;
+      line-height: 19px;
+      margin: 5px 0;
+    }
+    .auto-renewal span {
+      font-weight: 700;
+      color: #28a745;
+    }
+  }
+</style>
+
+{% if customer and customer.tags contains 'elite_member' %}
+  <div class="cc-mm-membership-box">
+    <div class="cc-mm-account-box-inner">
+      <div class="membership-info">
+        <div class="membership-header">
+          <div class="membership-logo">
+            <img src="{{ 'cc-elite-logo.png' | file_url }}" class="img-responsive" alt="Elite Membership Logo">
+          </div>
+          <div class="membership-details membership-active">
+            <h2>ELITE Membership</h2>
+            <p>UNBELIEVABLE Savings + Free Shipping & VIP Perks. <a href="/pages/membership">Learn more</a></p>
+          </div>
+          {% liquid
+            assign member_year = customer.metafields.custom.elite_member_date.value | date: '%Y'
+            assign expire_year = member_year | plus: 1
+            assign expire_date = customer.metafields.custom.elite_member_date.value | date: '%B %d'
+
+            assign membership_ends = expire_date | append: ' ' | append: expire_year
+            assign membership_expires_at = membership_ends | date: '%B %d %Y'
+          %}
+          {% assign dateStart = membership_expires_at | date: '%s' %}
+          {% assign nowTimestamp = 'now' | date: '%s' %}
+
+          {% assign diffSeconds = dateStart | minus: nowTimestamp %}
+          {% assign diffDays = diffSeconds | divided_by: 3600 | divided_by: 24 %}
+          <div class="membership-details membership-expiring hidden">
+            <h2>Your Memebership is expiring in <span class="membership_days"></span> Days</h2>
+            <p>Limited Time Offer: Renew for <b>$30/yr</b> <a href="javascript:" class="renew_membership__btn elite_btn">Renew Now</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cc-mm-tab-inner-membership-inner">
+        <div class="cc-mm-tab-inner-membership-left">
+          <div class="membership-date">
+            <p>Member since <span class="membership_date">{{ customer.metafields.custom.elite_member_date.value | date: '%B %d %Y' }}</span></p>
+          </div>
+          {% comment %} <div class="auto-renewal">
+            <p>You can renew membership in <strong>$30.00</strong></p>
+          </div> {% endcomment %}
+        </div>
+        <div class="payment-method">
+          <p>Membership Expiry</p>
+          <div class="auto-renewal">
+            <p>
+              <span class="membership_expires">{{ membership_expires_at }}</span> (in <span class="membership_days">{{ diffDays }}</span> days)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% assign elite_product = settings.elite_product.id | times: 1 %}
+{% assign cart_has_no_elite_item = true %}
+{% for item in cart.items %}
+  {% if item.product_id == elite_product %}
+    {% assign cart_has_no_elite_item = false %}
+  {% endif %}
+{% endfor %}
+
+<style>
+  .elite_btn {
+    display: block;
+    margin-top: 15px;
+    background: #1c355e;
+    max-width: 136px;
+    color: #fff !important;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center
+  }
+
+  .new_popup-overlay,
+  .new_custom_popup_main2,
+  .cc-topbar-elite-renew,
+  .subscribe_elite_membershop {
+    display: none !important;
+  }
+</style>
+
+{% if customer and customer.tags contains "elite_member" %}
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      console.log("DOM Loaded");
+
+      const url = 'https://sso.cabanaclubusa.com/api/users/email';
+      const data = { email: '{{ customer.email }}' };
+
+      // Fetch data from the API
+      fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+        .then(response => {
+          if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+          return response.json();
+        })
+        .then(data => {
+          if (data.user) {
+            // Update all elements efficiently
+            updateElements(".membership_date", data.user.elite_member_start_date);
+            updateElements(".membership_expires", data.user.elite_member_expire_date);
+            updateElements(".membership_days", data.user.daysLeft);
+          }
+        })
+        .catch(error => console.error('Error:', error));
+
+      // Function to update elements based on selector and value
+      function updateElements(selector, value) {
+        if (!value) return; // Exit if value is falsy
+        const elements = document.querySelectorAll(selector);
+        const formattedValue = typeof value === 'string' ? formatDate(value) : value;
+        elements.forEach(element => element.textContent = formattedValue);
+      }
+
+      // Function to format date strings
+      function formatDate(timestamp) {
+        const date = new Date(timestamp);
+        return new Intl.DateTimeFormat('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        }).format(date);
+      }
+    });
+    {% if settings.elite_renewal %}
+
+    window.addEventListener("load", () => {
+      const expiringSoon = localStorage.getItem("membership_expiring_soon");
+      const membership_active = document.querySelectorAll(".membership-active");
+      const membership_expiring = document.querySelectorAll(".membership-expiring");
+
+
+      if (expiringSoon) {
+        membership_active.forEach(el => el.classList.add("hidden"));
+        membership_expiring.forEach(el => el.classList.remove("hidden"));
+      }
+
+      {% comment %} function activateAccountTab(defaultTab = "membership") {
+        const tabs = document.querySelectorAll('.cc-mm-account-nav-item');
+        const tabContents = document.querySelectorAll('.cc-mm-account-tab-content');
+
+        // Function to activate a given tab element
+        const setActiveTab = (tabElement) => {
+          const targetId = tabElement.getAttribute('data-tab');
+
+          // Remove active from all tabs and hide all contents
+          tabs.forEach(t => t.classList.remove('active'));
+          tabContents.forEach(c => c.style.display = 'none');
+
+          // Activate selected tab
+          tabElement.classList.add('active');
+          const mainContent = document.getElementById(targetId);
+          if (mainContent) mainContent.style.display = 'block';
+
+          // Activate mobile content if screen is small
+          if (window.innerWidth < 801) {
+            const mobileContent = document.getElementById(`${targetId}-mobile`);
+            if (mobileContent) mobileContent.style.display = 'block';
+          }
+        };
+
+        // Add click listener to each tab
+        //tabs.forEach(tab => tab.addEventListener('click', () => setActiveTab(tab)));
+
+        // Activate default tab on page load
+        {% comment %} const defaultTabElement = document.querySelector(`.cc-mm-account-nav-item[data-tab="${defaultTab}"]`);
+        if (defaultTabElement) setActiveTab(defaultTabElement); {% endcomment %}
+      } {% endcomment %}
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const isMembershipRenew = urlParams.get('membership_renew') === 'true';
+      // Call the function on page load
+      if (isMembershipRenew) {
+        sideBarToggle('membership_details')
+      }
+
+    });
+    {% endif %}
+
+  </script>
+{% endif %}

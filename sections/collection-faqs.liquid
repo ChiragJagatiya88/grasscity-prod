@@ -138,7 +138,7 @@
                                 {% if block.settings.icon != 'none' %}
                                   {% render 'icons', icon: block.settings.icon, size: item_icon_size %}
                                 {%- endif -%}
-                                <h2 class="{{ item_trigger_class }} inline-richtext">{{ block.settings.heading }}</h2>
+                                <h3 class="{{ item_trigger_class }} inline-richtext">{{ block.settings.heading }}</h3>
                               </div>
                               {%- render 'icon-plus-toggle' -%}
                             </summary>
@@ -157,7 +157,7 @@
                             <div class="rich-text__subheading text-subheading">{{ block.settings.sub_heading }}</div>
                           {%- endif -%}
                           {%- if block.settings.heading != blank -%}
-                            <h2 class="rich-text__heading {{ block.settings.heading_size }}">
+                            <h3 class="rich-text__heading {{ block.settings.heading_size }}">
                               {% render 'highlight-text',
                                 hl_text: block.settings.heading,
                                 hl_style: block.settings.highlight_style,
@@ -165,7 +165,7 @@
                                 hl_style_color: block.settings.highlight_style_color,
                                 hl_text_color: block.settings.highlight_text_color
                               %}
-                            </h2>
+                            </h3>
                           {%- endif -%}
                         </div>
                       {%- endif -%}
@@ -178,7 +178,9 @@
       </div>
     </div>
   </div>
+  {% render 'faq-richtext-schema', section: section %}
 {%- endif -%}
+
 
 {% schema %}
 {

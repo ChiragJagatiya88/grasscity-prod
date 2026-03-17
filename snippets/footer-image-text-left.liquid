@@ -51,9 +51,9 @@
     <div class="footer-image-box__content flex flex-col gap-3 md:gap-6 flex-1 justify-center">
       <div class="footer-image-box__details flex flex-col gap-1">
         {%- if block.settings.heading != blank -%}
-          <h3 class="footer-block__heading inline-richtext {{ block.settings.heading_size }}">
+          <div class="footer-block__heading inline-richtext {{ block.settings.heading_size }}">
             {{- block.settings.heading -}}
-          </h3>
+          </div>
         {%- endif -%}
         {%- if block.settings.text != blank -%}
           <div class="footer-image-box__text text-subtext rte">

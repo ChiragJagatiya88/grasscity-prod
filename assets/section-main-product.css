@@ -164,6 +164,7 @@ product-info.use-color-scheme-in-container > .product {
 .product__block--title .product__title {
   word-break: break-word;
   margin: 0;
+  font-size: 30px;
 }
 .product__block--title > a {
   display: none;
@@ -196,6 +197,9 @@ product-info.use-color-scheme-in-container > .product {
 @media (max-width: 767.98px) {
   .product__block--complementary-collapsible + .product__block--collapsible_tab, .product__block--collapsible_tab + .product__block--complementary-collapsible, .product__block--collapsible_tab + .product__block--collapsible_tab {
     margin-top: calc(var(--product-blocks-gap) * -1);
+  }
+  .product__block--title .product__title {
+    font-size: 24px;
   }
 }
 @media (max-width: 767.98px) {

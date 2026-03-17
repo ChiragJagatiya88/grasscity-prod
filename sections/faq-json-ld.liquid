@@ -1,0 +1,85 @@
+{%- comment -%}
+  Builds one consolidated FAQPage JSON-LD from all accordion items
+  rendered on the current page (including multiple collapsible-tabs sections).
+{%- endcomment -%}
+<script>
+  (function () {
+    if (window.__gcFaqJsonLdRendered) return;
+    window.__gcFaqJsonLdRendered = true;
+
+    function normalizeText(value) {
+      return (value || '').replace(/\s+/g, ' ').trim();
+    }
+
+    function toSlug(value) {
+      return normalizeText(value)
+        .toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '');
+    }
+
+    var questionNodes = document.querySelectorAll('.section--collapsible-tabs .accordion-item');
+    if (!questionNodes.length) return;
+
+    var baseId = '{{ canonical_url | append: "#faq-page" | escape }}';
+    var entities = [];
+    var usedIds = {};
+
+    questionNodes.forEach(function (item, index) {
+      var questionNode = item.querySelector('.accordion-details__summary .inline-richtext');
+      var answerNode = item.querySelector('.accordion-details__content');
+      if (!questionNode || !answerNode) return;
+
+      var questionText = normalizeText(questionNode.textContent);
+      var answerText = normalizeText(answerNode.textContent);
+      if (!questionText || !answerText) return;
+
+      var slug = toSlug(questionText) || ('question-' + (index + 1));
+      if (usedIds[slug]) {
+        usedIds[slug] += 1;
+        slug = slug + '-' + usedIds[slug];
+      } else {
+        usedIds[slug] = 1;
+      }
+
+      entities.push({
+        '@type': 'Question',
+        '@id': '{{ canonical_url | escape }}#faq-' + slug,
+        'name': questionText,
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': answerText
+        }
+      });
+    });
+
+    if (!entities.length) return;
+
+    var schemaNode = document.createElement('script');
+    schemaNode.type = 'application/ld+json';
+    schemaNode.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'FAQs',
+      '@id': baseId,
+      'mainEntity': entities
+    });
+
+    document.head.appendChild(schemaNode);
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "FAQ JSON-LD",
+  "tag": "section",
+  "class": "faq-json-ld-section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "FAQ JSON-LD"
+    }
+  ]
+}
+{% endschema %}

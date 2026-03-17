@@ -36,9 +36,7 @@
       data-disclosure-country
     >
       {%- form 'localization', class: 'selectors-form', id: form_id, data-disclosure-form: '' -%}
-        <h2 class="visually-hidden" id="CountryLabel-{{ form_id }}">
-          {{- 'localization.country_label' | t -}}
-        </h2>
+        <div class="visually-hidden" id="CountryLabel-{{ form_id }}">{{- 'localization.country_label' | t -}}</div>
         <button
           type="button"
           class="disclosure__toggle{% if plain == true %} btn--plain{% endif %} text-normal font-body"

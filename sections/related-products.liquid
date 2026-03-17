@@ -46,45 +46,56 @@
   >
     {%- if recommendations.performed and recommendations.products_count > 0 -%}
       {%- liquid
-        assign products_to_display = recommendations.products_count
-        if products_to_display > limit
-          assign products_to_display = limit
-        endif
-
-        if section.settings.swipe_on_mobile and products_to_display > columns_mobile
-          assign enable_swipe_mobile = true
-        endif
+        assign available_products_count = 0
+        for recommendation in recommendations.products
+          if recommendation.available
+            assign available_products_count = available_products_count | plus: 1
+          endif
+        endfor
       -%}
-      {% render 'section-heading', section_settings: section.settings %}
-      <product-slider
-        class="block{% if navigation_position == 'middle' or navigation_position == 'center_image' %} swiper-show-nav-on-hover relative{% endif %}"
-        data-section-id="{{ section.id }}"
-        data-enable-slider="{{ enable_slider }}"
-        data-items="{{ columns_desktop }}"
-        data-tablet-items="{{ columns_tablet }}"
-        data-total-items="{{ products_to_display }}"
-        data-pagination-type="{{ pagination_type }}"
-        data-navigation-position="{{ navigation_position }}"
-      >
-        <div
-          class="products-grid-wrap{% if enable_slider %} swiper swiper-equal-height overflow-visible{% endif %}{% if enable_swipe_mobile %} swipe-mobile swipe-mobile--{{ columns_mobile }}-cols{% endif %}"
-          id="product-list-{{ section.id }}"
+      {%- if available_products_count > 0 -%}
+        {%- liquid
+          assign products_to_display = available_products_count
+          if products_to_display > limit
+            assign products_to_display = limit
+          endif
+
+          if section.settings.swipe_on_mobile and products_to_display > columns_mobile
+            assign enable_swipe_mobile = true
+          endif
+        -%}
+        {% render 'section-heading', section_settings: section.settings %}
+        <product-slider
+          class="block{% if navigation_position == 'middle' or navigation_position == 'center_image' %} swiper-show-nav-on-hover relative{% endif %}"
+          data-section-id="{{ section.id }}"
+          data-enable-slider="{{ enable_slider }}"
+          data-items="{{ columns_desktop }}"
+          data-tablet-items="{{ columns_tablet }}"
+          data-total-items="{{ products_to_display }}"
+          data-pagination-type="{{ pagination_type }}"
+          data-navigation-position="{{ navigation_position }}"
         >
-          <div class="products-grid f-grid f-grid--gap-{{ section.settings.column_gap }} f-grid--row-gap-{{ section.settings.row_gap }}{% if enable_slider %} swiper-wrapper{% endif %}{% if enable_swipe_mobile %} swipe-mobile__inner{% endif %}">
-            {%- for recommendation in recommendations.products -%}
-              <div class="f-column swiper-slide">
-                {% render 'card-product',
-                  product: recommendation,
-                  parent_color_scheme: section.settings.color_scheme,
-                  image_sizes: image_sizes,
-                  image_ratio: section.settings.pcard_image_ratio,
-                  section_index: section.index,
-                  index: forloop.index
-                %}
-              </div>
-            {%- endfor -%}
+          <div
+            class="products-grid-wrap{% if enable_slider %} swiper swiper-equal-height overflow-visible{% endif %}{% if enable_swipe_mobile %} swipe-mobile swipe-mobile--{{ columns_mobile }}-cols{% endif %}"
+            id="product-list-{{ section.id }}"
+          >
+            <div class="products-grid f-grid f-grid--gap-{{ section.settings.column_gap }} f-grid--row-gap-{{ section.settings.row_gap }}{% if enable_slider %} swiper-wrapper{% endif %}{% if enable_swipe_mobile %} swipe-mobile__inner{% endif %}">
+              {%- for recommendation in recommendations.products -%}
+                {%- if recommendation.available -%}
+                  <div class="f-column swiper-slide">
+                    {% render 'card-product',
+                      product: recommendation,
+                      parent_color_scheme: section.settings.color_scheme,
+                      image_sizes: image_sizes,
+                      image_ratio: section.settings.pcard_image_ratio,
+                      section_index: section.index,
+                      index: forloop.index
+                    %}
+                  </div>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
           </div>
-        </div>
         {%- if enable_slider -%}
           <div class="swiper-controls{% if navigation_position == 'bottom' %} swiper-controls--grouped{% elsif navigation_position == 'middle' or navigation_position == 'center_image' %} swiper-controls--nav-floating{% endif %} swiper-controls--pagination-{{ pagination_type }} hidden {% if products_to_display > columns_tablet %} md:flex{% endif %}{% if products_to_display > columns_desktop %} lg:flex{% else %} lg:hidden{% endif %}">
             <button
@@ -112,6 +123,7 @@
           </scroll-progress-bar>
         {%- endif -%}
       </product-slider>
+      {%- endif -%}
     {%- endif -%}
   </product-recommendations>
 </div>

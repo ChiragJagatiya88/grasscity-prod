@@ -290,6 +290,15 @@ class CartItems extends HTMLElement {
   updateQuantity(line, quantity, name, target) {
     this.showLoader(line);
 
+    const lineItem =
+      document.getElementById(`CartItem-${line}`) || document.getElementById(`CartDrawer-Item-${line}`);
+    const scriptEl = document.querySelector(`#new_cart_event_line_${line}`);
+    const oldQuantity = scriptEl && scriptEl.innerHTML
+      ? (() => { try { return parseInt(JSON.parse(scriptEl.innerHTML).items[0].quantity, 10) || 0; } catch (e) { return 0; } })()
+      : 0;
+    const newQuantity = parseInt(quantity, 10) || 0;
+    const productId = lineItem ? lineItem.getAttribute('data-product-id') : null;
+
     let sectionsToBundle = [];
     document.documentElement.dispatchEvent(
       new CustomEvent('cart:grouped-sections', { bubbles: true, detail: { sections: sectionsToBundle } })
@@ -305,6 +314,19 @@ class CartItems extends HTMLElement {
       .then((response) => response.json())
       .then((parsedState) => {
         FoxTheme.pubsub.publish(FoxTheme.pubsub.PUB_SUB_EVENTS.cartUpdate, { cart: parsedState, target, line, name });
+        if (productId != null) {
+          if (newQuantity > oldQuantity) {
+            document.dispatchEvent(
+              new CustomEvent('uscart:add', { detail: { line, product_id: productId, quantity: newQuantity - oldQuantity } })
+            );
+          } else if (newQuantity < oldQuantity) {
+            document.dispatchEvent(
+              new CustomEvent('uscart:remove', {
+                detail: { line, product_id: productId, quantity: newQuantity === 0 ? oldQuantity : oldQuantity - newQuantity },
+              })
+            );
+          }
+        }
       })
       .catch((error) => {
         console.log(error);

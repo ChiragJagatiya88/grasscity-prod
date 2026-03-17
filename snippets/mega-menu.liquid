@@ -52,7 +52,7 @@
   class="{% if link.links == blank %}no-links{% endif %}"
   {{ block.shopify_attributes }}
 >
-  <summary data-link="{{ link.url }}" class="z-2 font-navigation">
+  <summary data-link="{%- if link.url == "#" -%}javascript:void(0){%- else -%}{{ link.url }}{%- endif -%}" class="z-2 font-navigation">
     <span class="menu__item flex items-center relative{% if is_hl_item %} hightlight-link hightlight-link--{{ hl_link_style }}{% endif %}">
       {%- liquid
         assign link_class = 'menu__item-text reversed-link'
@@ -153,8 +153,8 @@
                   class="menu-sidebar__item"
                   open
                 >
-                  <summary class="menu-sidebar__toggle blocks-radius-sm flex items-center justify-between{% if forloop.first %} is-visible{% endif %}">
-                    <h6>{{ childlink.title | escape }}</h6>
+                  <summary data-link="{%- if childlink.url == "#" -%}javascript:void(0){%- else -%}{{ childlink.url }}{%- endif -%}" class="menu-sidebar__toggle blocks-radius-sm flex items-center justify-between{% if forloop.first %} is-visible{% endif %}">
+                    <div class="h6">{{ childlink.title | escape }}</div>
                     {%- if childlink.links != blank -%}
                       {%- render 'icon-caret-right', size: 'small' -%}
                     {%- endif -%}

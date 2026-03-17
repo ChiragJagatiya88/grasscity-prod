@@ -1,0 +1,18 @@
+{% comment %} theme-check-disable AssetUrlFilters {% endcomment %}
+{%- liquid
+  assign canonical_path = canonical_url | remove_first: request.origin
+  if canonical_path == blank
+    assign canonical_path = '/'
+  endif
+
+  assign hreflang_map = 'x-default|https://www.grasscity.com,en-US|https://www.grasscity.com,en-CA|https://www.grasscity.com,en-AU|https://www.grasscity.com,en-BE|https://www.grasscity.eu,en-BG|https://www.grasscity.eu,en-CY|https://www.grasscity.eu,en-DK|https://www.grasscity.eu,en-EE|https://www.grasscity.eu,en-FI|https://www.grasscity.eu,en-GR|https://www.grasscity.eu,en-HU|https://www.grasscity.eu,en-HR|https://www.grasscity.eu,en-LV|https://www.grasscity.eu,en-LT|https://www.grasscity.eu,en-LU|https://www.grasscity.eu,en-MT|https://www.grasscity.eu,en-AT|https://www.grasscity.eu,en-PL|https://www.grasscity.eu,en-PT|https://www.grasscity.eu,en-RO|https://www.grasscity.eu,en-SI|https://www.grasscity.eu,en-SK|https://www.grasscity.eu,en-CZ|https://www.grasscity.eu,en-SE|https://www.grasscity.eu,en-IE|https://www.grasscity.eu,en-GB|https://www.grasscity.co.uk,de|https://www.grasscity.de,fr|https://www.grasscity.fr'
+  assign hreflang_items = hreflang_map | split: ','
+-%}
+
+{%- for hreflang_item in hreflang_items -%}
+  {%- assign hreflang_parts = hreflang_item | split: '|' -%}
+  {%- assign hreflang_code = hreflang_parts[0] -%}
+  {%- assign hreflang_base_url = hreflang_parts[1] -%}
+  <link rel="alternate" hreflang="{{ hreflang_code }}" href="{{ hreflang_base_url }}{{ canonical_path }}">
+{%- endfor -%}
+{% comment %} theme-check-enable AssetUrlFilters {% endcomment %}

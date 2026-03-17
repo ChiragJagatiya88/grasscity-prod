@@ -16,6 +16,14 @@
             {% when 'link_list' %}
               <ul class="topbar__menu flex flex-wrap items-center justify-center lg:justify-{{ pos | replace: 'left','start' | replace: 'right','end' }}">
                 {% for link in linklists[block.settings.menu].links %}
+                  {% comment %} {%- if forloop.first -%}
+                    <li class="topbar__menu-item {% if customer.tags contains 'elite_member' or customer.tags contains 'elite' %}hidden{% endif %}">
+                      <a href="javascript:void(0)" class="{% if customer.tags contains "club_member" %}SSO_popup_elite_upgrade {% else %}SSO_popup_elite_join {% endif %} block reversed-link">
+                        {% if customer.tags contains "club_member" %}Upgrade{% else %}Join Now{% endif %}
+                      </a>
+                    </li>
+                  {%- else -%}
+                  {%- endif -%} {% endcomment %}
                   <li class="topbar__menu-item">
                     <a href="{{ link.url }}" class="block reversed-link">{{ link.title }}</a>
                   </li>

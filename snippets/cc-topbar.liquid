@@ -1,0 +1,355 @@
+<div class="cc_topbar_section">
+  {% liquid
+    assign cart_has_elite = false
+    assign elite_item_id = settings.elite_product.id | times: 1
+    if cart.item_count > 0
+      for item in cart.items
+         if item.product.id == elite_item_id
+           assign cart_has_elite = true
+         endif
+      endfor   
+    endif
+  %}
+  
+  {% if settings.elite_renewal %}
+    {% if customer.tags contains 'elite_member' %}
+      {% unless cart_has_elite %}
+        <section class="cc-topbar-elite-section cc-topbar-elite-renew cc-topbar-default-hidden" id="cc-topbar-elite-section">
+          <div class="cc-topbar-row">
+            <div class="lg:container mx-auto items-center py-2 lg:py-0 px-2 md:px-3">
+              <div class="cc-topbar-wrap">
+                <img src="https://cdn.shopify.com/s/files/1/0969/6768/8512/files/cc-elite-logo.png?v=1772087509" />
+                {% comment %} <p>Membership Expires Soon</p> {% endcomment %}
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Overlay -->
+        <div id="eliteRenewOverlay" class="elite-renew-overlay" aria-hidden="true"></div>
+  
+        <!-- Drawer -->
+        <aside id="eliteRenewDrawer" class="elite-renew-drawer" role="dialog" aria-modal="true" aria-label="Elite Renew" aria-hidden="true">
+          <div class="elite-renew-header">
+            {% comment %} <h2 class="elite-renew-title">Your Membership is about to Expires in <div class="expires_days">0</div> Days</h2>
+            <button id="eliteRenewCloseBtn" class="elite-renew-close" aria-label="Close Elite Renew">&times;</button> {% endcomment %}
+
+            <button id="eliteRenewCloseBtn" class="elite-renew-close" aria-label="Close Elite Renew">&times;</button>
+            <h2 class="elite-renew-title">Your Elite Membership</h2>
+          </div>
+  
+          <div class="elite-renew-body">
+            {% comment %} <p class="text_sub_renew">RENEW NOW FOR <b>$30/yr</b></p>
+            <p class="text_sub_renew-small">Limited time offer. Enjoy FREE shipping, exclusive savings, and VIP perks.</p>
+            <div class="cc-topbar-logins">
+              <a href="javascript:" class="renew_membership__link">RENEW NOW</a>
+              <p class="renew_membership_error"></p>
+              <a href="/checkout" style="display: none" class="renew_membership__link_complete">Complete Purchase</a>
+            </div> {% endcomment %}
+
+            <p class="elite-sticky-bar-header-bottom">Premium rewards, VIP access, and exclusive member perks — designed only for Elite customers like you.</p>
+            <p class="text_list">
+              ✔ Free Priority Shipping<br>
+              ✔ Exclusive Member–Only Discounts<br>
+              ✔ Early Access to Special Drops<br>
+              ✔ VIP Customer Support
+            </p>
+            <div class="cc-topbar-logins">
+              <a href="javascript:" class="renew_membership__link">RENEW NOW</a>
+              <p class="renew_membership_error"></p>
+              <a href="/checkout" style="display: none" class="renew_membership__link_complete">Complete Purchase</a>
+            </div>
+
+          </div>
+        </aside>
+  
+        <style>
+          :root {
+            --elite-renew-width: 360px;
+            --elite-renew-overlay-bg: rgba(0, 0, 0, 0.45);
+            --elite-renew-transition: 300ms;
+            --elite-renew-ease: cubic-bezier(0.2, 0.9, 0.3, 1);
+          }
+  
+          /* Overlay */
+          .elite-renew-overlay {
+            position: fixed;
+            inset: 0;
+            background: transparent;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity var(--elite-renew-transition) var(--elite-renew-ease);
+            z-index: 99999;
+          }
+          .elite-renew-overlay.open {
+            background: var(--elite-renew-overlay-bg);
+            opacity: 1;
+            pointer-events: auto;
+          }
+  
+          /* Drawer wrapper */
+          .elite-renew-drawer {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: var(--elite-renew-width);
+            background: rgb(28, 53, 94);
+            box-shadow: -12px 0 30px rgba(0, 0, 0, 0.15);
+            transform: translateX(100%);
+            transition: transform var(--elite-renew-transition) var(--elite-renew-ease);
+            z-index: 100000;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+          }
+  
+          .elite-renew-drawer.open {
+            transform: translateX(0);
+          }
+  
+          .elite-renew-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+          }
+  
+          .elite-renew-title {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.2;
+            color: rgb(255, 223, 110);
+            padding-right: 40px;
+            margin-top: 30px;
+          }
+  
+          .elite-renew-close {
+            font-size: 28px;
+            line-height: 1;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+            position: absolute;
+            top: 5px;
+            right: 20px;
+            font-weight: 400;
+            padding: 10px;
+          }
+          .elite-renew-close:focus-visible {
+            outline: none;
+          }
+  
+          .elite-renew-body {
+            padding: 16px;
+          }
+          .elite-renew-body p {
+            color: #ffffff;
+            margin-top: 0;
+          }
+          .elite-renew-body p.text_sub_renew {
+            margin-top: 0;
+            margin-bottom: 10px;
+          }
+          .elite-renew-body p.text_sub_renew-small {
+            font-size: 14px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+          }
+          .renew_membership_error {
+            color: red;
+          }
+          .elite-renew-body p.text_list {
+            color: #ffffff;
+            margin: 16px 0;
+            font-size: 14px;
+            line-height: 28px;
+          }
+          .renew_title {
+            color: #ffffff;
+          }
+          @media (max-width: 480px) {
+            :root {
+              --elite-renew-width: 100vw;
+            }
+          }
+          @media (max-width: 768px) {
+            .elite-renew-title {
+              padding-right: 14px;
+            }
+          }
+        </style>
+  
+        <script>
+          (function () {
+            const openBtn = document.getElementById("cc-topbar-elite-section");
+            const closeBtn = document.getElementById("eliteRenewCloseBtn");
+            const drawer = document.getElementById("eliteRenewDrawer");
+            const overlay = document.getElementById("eliteRenewOverlay");
+  
+            const days_expires = localStorage.getItem("membership_expiring_in_days");
+            const expiresEl = drawer && drawer.querySelector(".expires_days");
+            if (days_expires != null && expiresEl) {
+              expiresEl.textContent = days_expires;
+            }
+  
+            let lastFocus = null;
+  
+            function openDrawer() {
+              lastFocus = document.activeElement;
+  
+              drawer.classList.add("open");
+              overlay.classList.add("open");
+  
+              drawer.setAttribute("aria-hidden", "false");
+              overlay.setAttribute("aria-hidden", "false");
+  
+              const focusable = drawer.querySelector(
+                'button, a, input, select, textarea, [tabindex]:not([tabindex="-1"])',
+              );
+              if (focusable) focusable.focus();
+  
+              document.body.style.overflow = "hidden";
+  
+              document.addEventListener("keydown", handleKey);
+            }
+  
+            function closeDrawer() {
+              drawer.classList.remove("open");
+              overlay.classList.remove("open");
+  
+              drawer.setAttribute("aria-hidden", "true");
+              overlay.setAttribute("aria-hidden", "true");
+  
+              document.body.style.overflow = "";
+  
+              if (lastFocus) lastFocus.focus();
+  
+              document.removeEventListener("keydown", handleKey);
+            }
+  
+            function handleKey(e) {
+              if (e.key === "Escape") closeDrawer();
+            }
+  
+            openBtn.addEventListener("click", openDrawer);
+            closeBtn.addEventListener("click", closeDrawer);
+            overlay.addEventListener("click", closeDrawer);
+  
+            window.eliteRenewOpen = openDrawer;
+            window.eliteRenewClose = closeDrawer;
+          })();
+        </script>
+      {% endunless %}
+    {% endif %}
+  {% endif %}
+  
+  <style>
+    .template-customers-account .cc-topbar-elite-renew {
+      display: none !important;
+    }
+    .cc-topbar-elite-renew {
+      position: fixed;
+      /* top: 36%; */
+      z-index: 999;
+      right: 0;
+      max-width: 50px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      overflow: hidden;
+      height: 120px;
+      cursor: pointer;
+      top: calc(50% - 60px);
+    }
+    .cc-topbar-default-hidden {
+      display: none !important;
+    }
+    @media (max-width: 768px) {
+      .cc-topbar-elite-renew {
+        max-width: 32px;
+        height: 85px;
+      }
+    }
+    .cc-topbar-elite-renew .cc-topbar-row {
+      height: 120px;
+      background: #1c355e;
+    }
+    .cc-topbar-elite-renew .cc-topbar-wrap {
+      display: flex;
+      flex-direction: row;
+      /* transform: rotate(-90deg) translate(-254px, 0px); */
+      transform: rotate(-90deg) translate(-60px, 0px);
+      gap: 0;
+      padding: 0;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .cc-topbar-elite-renew .cc-topbar-wrap img {
+      max-width: 80px;
+    }
+    .cc-topbar-elite-renew .cc-topbar-wrap p {
+      font-size: 15px;
+      text-align: center;
+      height: 15px;
+      min-width: 210px;
+      color: #fff;
+    }
+    .cc-topbar-elite-renew .cc-topbar-wrap .cc-topbar-logins {
+      gap: 0;
+      width: 100%;
+      justify-content: center;
+    }
+    .cc-topbar-logins a.renew_membership__link,
+    .cc-topbar-logins a.renew_membership__link_complete {
+      width: 100%;
+      color: rgb(28, 53, 94);
+      background: linear-gradient(
+        117.84deg,
+        rgb(171, 121, 23) 8.15%,
+        rgb(255, 223, 110) 50%,
+        rgb(171, 121, 23) 91.85%
+      );
+      border-radius: 25px;
+      padding: 8px 6px;
+      font-size: 12px;
+      cursor: pointer;
+      margin-bottom: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      width: 100%;
+      display: inline-block;
+      text-align: center;
+      font-size: 16px;
+    }
+    @media (max-width: 768px) {
+      .cc-topbar-elite-renew .cc-topbar-wrap img {
+        max-width: 48px;
+      }
+      .cc-topbar-elite-renew .cc-topbar-wrap {
+        {% comment %} transform: rotate(-90deg) translate(-224px, 0px); {% endcomment %}
+        transform: rotate(-90deg) translate(-40px, 0px);
+      }
+      .cc-topbar-elite-renew .cc-topbar-row {
+        height: 85px;
+      }
+    }
+  </style>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const expiringDays = parseInt(
+        localStorage.getItem("membership_expiring_in_days"),
+        10,
+      );
+  
+      // Check if greater than 30 and hide the topbar
+      if (expiringDays < 30) {
+        const topbar = document.querySelector(".cc-topbar-elite-renew");
+        if (topbar) {
+          topbar.classList.remove("cc-topbar-default-hidden");
+        }
+      }
+    });
+  </script>
+</div>

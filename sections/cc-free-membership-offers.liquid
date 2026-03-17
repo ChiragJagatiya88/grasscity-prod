@@ -32,7 +32,7 @@
                           </td>
                           <td class="member-cell active">
                             <strong>Member</strong>
-                            <span class="price">{{ product.metafields.custom.member_price | times: 100 | money }}</span>
+                            <span class="price">{% render 'cc-membership-price', product: product %}</span>
                           </td>
                         </tr>
                       </table>

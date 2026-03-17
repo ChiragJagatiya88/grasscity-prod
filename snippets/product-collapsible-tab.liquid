@@ -15,9 +15,9 @@
   <summary class="accordion-details__summary flex items-center justify-between">
     <div class="flex items-center gap-2">
       {% render 'icons', icon: block.settings.icon %}
-      <h2 class="{{ heading_size }} inline-richtext">
+      <div class="{{ heading_size }} inline-richtext">
         {{ block.settings.heading | default: block.settings.page.title | escape }}
-      </h2>
+      </div>
     </div>
     {%- render 'icon-plus-toggle' -%}
   </summary>

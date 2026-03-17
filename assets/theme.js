@@ -3449,3 +3449,40 @@ document.addEventListener('click', function (e) {
     popup.setAttribute('active', true)
   }
 })
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".product-card").forEach(card => {
+    const mainImage = card.querySelector(".product-card__image img");
+
+    card.querySelectorAll(".color-swatch-item").forEach(swatch => {
+      swatch.addEventListener("click", function (e) {
+        e.preventDefault();
+       card.querySelectorAll(".color-swatch-item").forEach(el =>
+          el.classList.remove("is-active")
+        );
+
+        this.classList.add("is-active");
+        const imageUrl = this.dataset.variantImage;        
+        if (imageUrl && mainImage) {
+          mainImage.src = imageUrl;
+          mainImage.srcset = imageUrl;
+        }
+      });
+    });
+  });
+});  
+
+document.addEventListener('DOMContentLoaded', function () {
+  const liveChatBtn = document.getElementById('live-chat');
+  if (liveChatBtn) {
+    liveChatBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const zohoChat = document.getElementById('zsiq_float');
+      if (zohoChat) {
+        zohoChat.click();
+      }
+    });
+  }
+});

@@ -1,0 +1,120 @@
+{% comment %}
+  Renders Member or Elite price for a product using the same logic as PDP pricing:
+  - Uses the product's first/selected variant (membership prices live on variants, not product)
+  - Resolves market from country (and B2B)
+  - Reads variant.metafields.membership.price JSON (member_price_{market} or elite_price_{market})
+  - Falls back to variant or product custom.member_price / custom.elite_price if no JSON
+
+  Accepts:
+  - product: {Product} Product object (required unless variant passed)
+  - price_type: {String} Optional. 'member' (default) or 'elite'
+  - market: {String} Optional. If provided, skips market detection.
+  - variant: {Variant} Optional. If provided, use this variant instead of product.selected_or_first_available_variant.
+
+  Usage:
+  {% render 'cc-membership-price', product: product %}
+  {% render 'cc-membership-price', product: product, price_type: 'elite' %}
+  {% render 'cc-membership-price', product: product, market: 'us' %}
+  {% render 'cc-membership-price', variant: product.selected_or_first_available_variant %}
+{% endcomment %}
+
+{%- liquid
+  if variant != blank
+    assign item = variant
+  else
+    assign item = product.selected_or_first_available_variant
+    if item == blank
+      assign item = product.variants.first
+    endif
+  endif
+
+  unless market
+    assign country_code = localization.country.iso_code | downcase
+    assign market = 'us'
+
+    case country_code
+      when 'nl'
+        assign market = 'nl'
+      when 'fr'
+        assign market = 'fr'
+      when 'de'
+        assign market = 'de'
+      when 'gb', 'uk'
+        assign market = 'uk'
+      when 'us'
+        assign market = 'us'
+      else
+        assign eu_countries = 'at,be,bg,hr,cy,cz,dk,ee,fi,gr,hu,ie,it,lv,lt,lu,mt,pl,pt,ro,sk,si,es,se' | split: ','
+        if eu_countries contains country_code
+          assign market = 'eu'
+        else
+          assign market = 'us'
+        endif
+    endcase
+
+    if customer and customer.tags contains 'B2B Droppery' or customer.tags contains 'Roor B2B'
+      assign market = 'b2b'
+    endif
+  endunless
+
+  assign price_json = item.metafields.membership.price
+
+  if price_json != blank
+    assign member_price_key = 'member_price_' | append: market
+    assign elite_price_key = 'elite_price_' | append: market
+
+    assign member_price_metafield = price_json[member_price_key]
+    assign elite_price_metafield = price_json[elite_price_key]
+
+    if member_price_metafield == blank
+      assign member_price_search = member_price_key | append: '":"'
+      assign member_price_parts = price_json | split: member_price_search
+      if member_price_parts.size > 1
+        assign member_price_value = member_price_parts[1] | split: '"'
+        assign member_price_metafield = member_price_value[0]
+      endif
+    endif
+
+    if elite_price_metafield == blank
+      assign elite_price_search = elite_price_key | append: '":"'
+      assign elite_price_parts = price_json | split: elite_price_search
+      if elite_price_parts.size > 1
+        assign elite_price_value = elite_price_parts[1] | split: '"'
+        assign elite_price_metafield = elite_price_value[0]
+      endif
+    endif
+  endif
+
+  assign is_elite = false
+  if price_type == 'elite'
+    assign is_elite = true
+  endif
+
+  if is_elite
+    if elite_price_metafield != blank
+      assign display_price = elite_price_metafield | times: 100 | money
+    elsif item != blank
+      assign legacy_price = item.metafields.custom.elite_price
+      if legacy_price == blank and item != product
+        assign legacy_price = product.metafields.custom.elite_price
+      endif
+      assign display_price = legacy_price | default: 0 | times: 100 | money
+    else
+      assign display_price = product.metafields.custom.elite_price | default: 0 | times: 100 | money
+    endif
+  else
+    if member_price_metafield != blank
+      assign display_price = member_price_metafield | times: 100 | money
+    elsif item != blank
+      assign legacy_price = item.metafields.custom.member_price
+      if legacy_price == blank and item != product
+        assign legacy_price = product.metafields.custom.member_price
+      endif
+      assign display_price = legacy_price | default: 0 | times: 100 | money
+    else
+      assign display_price = product.metafields.custom.member_price | default: 0 | times: 100 | money
+    endif
+  endif
+-%}
+
+{{- display_price -}}

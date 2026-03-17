@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "collection_list_slider_6qbNfj": {
       "type": "collection-list-slider",
@@ -145,7 +145,7 @@
     "slideshow_q3U4Jn": {
       "type": "slideshow",
       "blocks": {
-        "slide_JhU8hg": {
+        "slide_Y7T4HB": {
           "type": "slide",
           "settings": {
             "color_scheme": "scheme-inverse",
@@ -155,22 +155,24 @@
             "content_position": "middle-center",
             "text_alignment": "center",
             "subheading": "Classic to Modern Glass",
+            "subheading_tag": "div",
             "title": "Bongs That Hit Different",
+            "heading_size": "h2",
+            "heading_tag": "h1",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
-            "heading_size": "h2",
             "description": "",
             "description_size": "text-base",
             "button_label": "Shop Bongs",
-            "button_link": "shopify://collections/leguacy-bongs",
+            "button_link": "shopify://collections/bongs",
             "button_style": "btn--primary",
             "button_icon": "none",
             "enable_preload_image": true
           }
         },
-        "slide_Qdza8G": {
+        "slide_7PwcbK": {
           "type": "slide",
           "settings": {
             "color_scheme": "scheme-inverse",
@@ -180,22 +182,24 @@
             "content_position": "middle-center",
             "text_alignment": "center",
             "subheading": "Portable. Powerful. Reliable.",
+            "subheading_tag": "h2",
             "title": "Precision in Every Draw",
+            "heading_size": "h2",
+            "heading_tag": "div",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
-            "heading_size": "h2",
             "description": "",
             "description_size": "text-base",
             "button_label": "Shop Vapes",
-            "button_link": "shopify://collections/leguacy-vaporizers",
+            "button_link": "shopify://collections/vaporizers",
             "button_style": "btn--primary",
             "button_icon": "none",
             "enable_preload_image": true
           }
         },
-        "slide_tpUH3L": {
+        "slide_3JbWXG": {
           "type": "slide",
           "settings": {
             "color_scheme": "scheme-inverse",
@@ -205,47 +209,51 @@
             "content_position": "middle-center",
             "text_alignment": "center",
             "subheading": "For Serious Dabbers",
+            "subheading_tag": "h2",
             "title": "Power Through Every Pull",
+            "heading_size": "h2",
+            "heading_tag": "div",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
-            "heading_size": "h2",
             "description": "",
             "description_size": "text-base",
             "button_label": "Shop Rigs",
-            "button_link": "shopify://collections/leguacy-dab-rigs",
+            "button_link": "shopify://collections/dab-rigs",
             "button_style": "btn--primary",
             "button_icon": "none",
             "enable_preload_image": true
           }
         },
-        "slide_ipQMyL": {
+        "slide_PPehg3": {
           "type": "slide",
           "settings": {
             "color_scheme": "scheme-inverse",
             "background": "shopify://shop_images/gc_hp_hero_desktop_usa_04.webp",
             "background_mobile": "shopify://shop_images/gc_hp_hero_mobile_usa_04.webp",
             "image_overlay_opacity": 30,
-            "content_position": "middle-center",
-            "text_alignment": "center",
+            "content_position": "middle-left",
+            "text_alignment": "left",
             "subheading": "Fresh Picks for the Season",
+            "subheading_tag": "h2",
             "title": "Spring-Ready Savings",
+            "heading_size": "h2",
+            "heading_tag": "div",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
-            "heading_size": "h2",
             "description": "",
             "description_size": "text-base",
             "button_label": "Shop Now",
-            "button_link": "shopify://collections/leguacy-featured-picks",
+            "button_link": "shopify://collections/featured-picks",
             "button_style": "btn--primary",
             "button_icon": "none",
             "enable_preload_image": true
           }
         },
-        "slide_DiMGVe": {
+        "slide_HB83ce": {
           "type": "slide",
           "settings": {
             "color_scheme": "scheme-inverse",
@@ -255,16 +263,18 @@
             "content_position": "middle-center",
             "text_alignment": "center",
             "subheading": "Shop the Legends",
+            "subheading_tag": "h2",
             "title": "Cheech & Chong Glass",
+            "heading_size": "h2",
+            "heading_tag": "div",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
-            "heading_size": "h2",
             "description": "",
             "description_size": "text-base",
             "button_label": "Shop Now",
-            "button_link": "shopify://collections/leguacy-cheech-and-chong",
+            "button_link": "shopify://collections/cheech-and-chong",
             "button_style": "btn--primary",
             "button_icon": "none",
             "enable_preload_image": true
@@ -272,12 +282,85 @@
         }
       },
       "block_order": [
-        "slide_JhU8hg",
-        "slide_Qdza8G",
-        "slide_tpUH3L",
-        "slide_ipQMyL",
-        "slide_DiMGVe"
+        "slide_Y7T4HB",
+        "slide_7PwcbK",
+        "slide_3JbWXG",
+        "slide_PPehg3",
+        "slide_HB83ce"
       ],
+      "settings": {
+        "container": "full",
+        "slide_height": "medium",
+        "show_controls": true,
+        "autoplay": true,
+        "autoplay_delay": 6,
+        "show_text_below": false,
+        "text_alignment_mobile": "center",
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "slideshow_g9XxFa": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_WwF87t": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "background": "shopify://shop_images/gs_membership-elite_desktop_ab_v01.webp",
+            "image_overlay_opacity": 30,
+            "content_position": "middle-left",
+            "text_alignment": "left",
+            "subheading": "World's Best Smoke Shop",
+            "subheading_tag": "div",
+            "title": "BRING HOME THE LA CHILL",
+            "heading_size": "h2",
+            "heading_tag": "h1",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "description": "",
+            "description_size": "text-base",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/leguacy-bongs",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": true
+          }
+        },
+        "slide_8ETifM": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "background": "shopify://shop_images/vape-under-100-AED.jpg",
+            "image_overlay_opacity": 30,
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "subheading": "World's Best Smoke Shop",
+            "subheading_tag": "h2",
+            "title": "BRING HOME THE LA CHILL",
+            "heading_size": "h2",
+            "heading_tag": "div",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "description": "",
+            "description_size": "text-base",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/leguacy-bongs",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": true
+          }
+        }
+      },
+      "block_order": [
+        "slide_WwF87t",
+        "slide_8ETifM"
+      ],
+      "disabled": true,
+      "name": "Slideshow - Backup",
       "settings": {
         "container": "full",
         "slide_height": "medium",
@@ -295,7 +378,7 @@
         "collection_NFJ3Rg": {
           "type": "collection",
           "settings": {
-            "collection": "leguacy-dab-rigs",
+            "collection": "all-products",
             "title": "",
             "show_banner": false,
             "color_scheme": "scheme-1",
@@ -414,83 +497,10 @@
         "navigation_position": "bottom",
         "pcard_image_ratio": "",
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "show_progress_bar": true,
         "padding_top": 40,
         "padding_bottom": 0,
-        "show_section_divider": false,
-        "divider_width": "fixed"
-      }
-    },
-    "collection_cards_KV7p8g": {
-      "type": "collection-cards",
-      "blocks": {
-        "collection_C7DEmd": {
-          "type": "collection",
-          "settings": {
-            "collection": "leguacy-smoking-pipes",
-            "image": "shopify://shop_images/gs_pipes-popular_ab_v01.webp",
-            "title": "Pipes"
-          }
-        },
-        "collection_Ndj8fm": {
-          "type": "collection",
-          "settings": {
-            "collection": "leguacy-dry-herb-vaporizers",
-            "image": "shopify://shop_images/gs_vaporizers-popular_ab_v01.webp",
-            "title": "Vaporizers"
-          }
-        },
-        "collection_VBaAEj": {
-          "type": "collection",
-          "settings": {
-            "collection": "leguacy-dab-rigs",
-            "image": "shopify://shop_images/gs_dab-rigs-popular_ab_v01.webp",
-            "title": "Dab Rigs"
-          }
-        },
-        "collection_QHbmRp": {
-          "type": "collection",
-          "settings": {
-            "collection": "glass-bongs",
-            "image": "shopify://shop_images/gs_bongs-popular_ab_v01.webp",
-            "title": "Glass Bongs"
-          }
-        }
-      },
-      "block_order": [
-        "collection_C7DEmd",
-        "collection_Ndj8fm",
-        "collection_VBaAEj",
-        "collection_QHbmRp"
-      ],
-      "disabled": true,
-      "name": "t:sections.collection-cards.presets",
-      "settings": {
-        "container": "fixed",
-        "color_scheme": "",
-        "section_header_alignment": "left",
-        "section_header_alignment_mobile": "inherit",
-        "subheading": "",
-        "heading": "Hot Collections",
-        "highlight_style": "none",
-        "highlight_font_style": "italic",
-        "highlight_style_color": "",
-        "highlight_text_color": "",
-        "heading_size": "h2",
-        "description": "",
-        "text_size": "text-sm",
-        "columns_desktop": 4,
-        "column_gap": "small",
-        "row_gap": "inherit",
-        "enable_slider": true,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "card_color_scheme": "",
-        "image_ratio": "3/4",
-        "show_product_count": true,
-        "padding_top": 50,
-        "padding_bottom": 50,
         "show_section_divider": false,
         "divider_width": "fixed"
       }
@@ -548,7 +558,7 @@
           "type": "image_card_with_product",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_pax_vaporizer_ab_v01_7cf6b0d0-7334-4002-8811-a209f2838439.webp",
+            "image": "shopify://shop_images/gs_pax_vaporizer_ab_v01_23031088-c677-42b0-8a73-e293336f47c5.webp",
             "image_ratio": "adapt",
             "subheading": "",
             "heading": "",
@@ -571,7 +581,7 @@
           "type": "image_card_with_product",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_recycler-vapor-bubbler_ab_v01_79e3953d-cc97-480d-9f87-f61424983418.webp",
+            "image": "shopify://shop_images/gs_recycler-vapor-bubbler_ab_v01_3dc09fb9-7590-4b94-abf7-c844c5417b85.webp",
             "image_ratio": "adapt",
             "subheading": "",
             "heading": "",
@@ -628,10 +638,10 @@
         "collection_kXyTe3": {
           "type": "collection",
           "settings": {
-            "collection": "leguacy-january-featured-picks",
-            "image": "shopify://shop_images/gs_lifestyle_featured_picks_ab_v01_81db7e72-f06a-4580-9db8-9c7440f0af92.webp",
+            "collection": "featured-picks",
+            "image": "shopify://shop_images/gs_lifestyle_featured_picks_ab_v01_0fe7bbd8-6729-4977-a411-388d384a02ac.webp",
             "title": "Featured Picks",
-            "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
+            "text": "<p>We Don't Just Price Match, We <strong>Price BEAT </strong>by 5%</p>",
             "button_label": "Shop Collection",
             "button_style": "btn--primary",
             "button_icon": "none"
@@ -640,10 +650,10 @@
         "collection_qxfNFe": {
           "type": "collection",
           "settings": {
-            "collection": "leguacy-bongs",
-            "image": "shopify://shop_images/gs_lifestyle_best_selling_ab_v01_ea5ad814-a880-4ef4-9a0b-1a3dac350c6e.webp",
+            "collection": "bongs",
+            "image": "shopify://shop_images/gs_lifestyle_best_selling_ab_v01_aa19b6b3-904f-422a-a3eb-47669631ca2a.webp",
             "title": "Best Sellers",
-            "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
+            "text": "<p>We Don't Just Price Match, We <strong>Price BEAT </strong>by 5%</p>",
             "button_label": "Shop Collection",
             "button_style": "btn--primary",
             "button_icon": "none"
@@ -652,10 +662,10 @@
         "collection_j3wCpz": {
           "type": "collection",
           "settings": {
-            "collection": "leguacy-new-items",
-            "image": "shopify://shop_images/gs_lifestyle_new_releases_ab_v01_b27f78c8-84b6-4252-92fc-bbc753a6be77.webp",
+            "collection": "new-items",
+            "image": "shopify://shop_images/gs_lifestyle_new_releases_ab_v01_f2d249b7-f7f1-44f9-b684-c1914ebc6863.webp",
             "title": "New Releases",
-            "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
+            "text": "<p>We Don't Just Price Match, We <strong>Price BEAT </strong>by 5%</p>",
             "button_label": "Shop Collection",
             "button_style": "btn--primary",
             "button_icon": "none"
@@ -663,12 +673,13 @@
         },
         "collection_W8AwMF": {
           "type": "collection",
+          "disabled": true,
           "settings": {
-            "collection": "leguacy-munchies",
-            "image": "shopify://shop_images/gs_lifestyle_sunny_staff_picks_ab_v01_9bd8c7ea-55d3-4eb8-ac9c-355bc452a453.webp",
+            "collection": "munchies",
+            "image": "shopify://shop_images/gs_lifestyle_sunny_staff_picks_ab_v01_9da40083-91a7-488a-89f4-5b7b29e86adf.webp",
             "title": "Sunny Staff Picks",
-            "text": "<p>Lorem ipsum dolor sit amet consectetur.</p>",
-            "button_label": "Button label",
+            "text": "<p>We Don't Just Price Match, We <strong>Price BEAT </strong>by 5%</p>",
+            "button_label": "Shop Collection",
             "button_style": "btn--primary",
             "button_icon": "none"
           }
@@ -708,11 +719,11 @@
           "type": "product",
           "settings": {
             "color_scheme": "scheme-2",
-            "product": "fat-bottom-mini-bong",
-            "image": "shopify://shop_images/gs_best-sellers-bg-pandora_desktop_ab_v01.webp",
-            "text": "<p>\"It came in a week. It took three days to be shipped and four days to come in the mail. I love it. It's the perfect size and everything. Thanks again for sending me a great piece.\"</p>",
-            "text_size": "h2",
-            "author": "John Doe",
+            "product": "grateful-dead-x-pulsar-510-dl-2-0-pro-auto-draw-vv-vape-bar",
+            "image": "shopify://shop_images/gs_best-sellers-bg-pandora_desktop_ab_v01_2ca39e29-e507-4727-a447-e78c1bbc9e54.webp",
+            "text": "<p>“The Grateful Dead x Pulsar 510 DL 2. 0 Pro Auto-Draw VV Vape Bar is a wonderful battery! Simple and easy to use, thanks!”</p>",
+            "text_size": "h3",
+            "author": "",
             "bio": ""
           }
         },
@@ -720,18 +731,31 @@
           "type": "product",
           "settings": {
             "color_scheme": "scheme-8",
-            "product": "twisted-frit-4-inch-glass-pipe",
-            "image": "shopify://shop_images/gs_best-sellers-bg-pulsar_desktop_ab_v01.webp",
-            "text": "<p>“Was a great pipe for all of 3 days. It came packaged well but had fractures all around the bowl . I put lil pressure on it and it caved right in . Gave myself a good cut. Will try again”</p>",
-            "text_size": "h2",
-            "author": "Julie Mathers",
+            "product": "glasscity-beaker-ice-bong-with-double-tree-percolator",
+            "image": "shopify://shop_images/gs_best-sellers-bg-pulsar_desktop_ab_v01_7a8ac0aa-165d-49f7-9f62-dce10fae63a4.webp",
+            "text": "<p>“Love this bong! Hits nice and smooth and is skinny but tall. Overall it’s so cute and hits nice we love it!”</p>",
+            "text_size": "h3",
+            "author": "",
+            "bio": ""
+          }
+        },
+        "product_bcdyAe": {
+          "type": "product",
+          "settings": {
+            "color_scheme": "scheme-2",
+            "product": "jay-and-silent-bob-aluminum-grinder",
+            "image": "shopify://shop_images/gs_best-sellers-bg-pandora_desktop_ab_v01_2ca39e29-e507-4727-a447-e78c1bbc9e54.webp",
+            "text": "<p>“The quality of this grinder in a whopping 10/10 it feels amazing in the hand. I loved the Design of the removable flower holder with the mesh. The black color is deep but the pictures are nice as well for it to have been machined.”</p>",
+            "text_size": "h3",
+            "author": "",
             "bio": ""
           }
         }
       },
       "block_order": [
         "product_XrLWzM",
-        "product_wByADN"
+        "product_wByADN",
+        "product_bcdyAe"
       ],
       "custom_css": [
         ".testimonial__content {max-width: 46rem;}"
@@ -758,13 +782,14 @@
           "type": "badge",
           "settings": {
             "color_scheme": "scheme-8",
-            "text": "Lorem ipsum - consectetur - Lorem ipsum",
+            "text": "Lowest Price Guaranteed* -- Lowest Price Guaranteed*",
             "image": "shopify://shop_images/gs_icon_bong-18_111fabb8-2200-413d-8e35-5afe2b85017d.svg",
             "position_mobile": "right"
           }
         },
         "subheading_8kBXjM": {
           "type": "subheading",
+          "disabled": true,
           "settings": {
             "subheading": "Meet Our Team"
           }
@@ -772,28 +797,28 @@
         "heading_jnb9cP": {
           "type": "heading",
           "settings": {
-            "heading": "The creative minds behind our studio",
+            "heading": "A Pioneer in Online Headshops",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         },
         "text_4pYVYF": {
           "type": "text",
           "settings": {
-            "text": "<p>As designers we are constantly thinking about how people live and what problems we could solve for them. </p>",
+            "text": "<p>Founded in 2000, Grasscity helped pioneer the online headshop industry, giving enthusiasts a new way to discover and order smoking accessories discreetly online. Today, Grasscity offers one of the largest selections of smoking gear, including bongs, vaporizers, dab rigs, glass pipes, and smoking accessories from trusted brands around the world.</p><p>Our catalog features respected European glass brands such as Pulsar, EHLE, Black Leaf, and Blaze Glass, alongside well-known American makers including GRAV, Jerome Baker Designs, and Cheech & Chong. From compact mini bongs and classic beaker bongs to advanced percolator bongs and durable silicone pieces, Grasscity brings together quality craftsmanship, functional design, and reliable value in one destination.</p><p>Whether you're upgrading your setup or discovering your first piece, Grasscity remains a trusted place to explore smoking accessories chosen with experience and care.</p>",
             "subtext_color": true
           }
         },
         "icon_with_text_8qCJiV": {
           "type": "icon_with_text",
           "settings": {
-            "icon": "map-pin",
+            "icon": "check",
             "icon_width": 24,
             "color": "#000000",
-            "heading": "Product locally in New York",
+            "heading": "Gear chosen by experts",
             "heading_size": "h5",
             "text": "",
             "vertical_alignment": "start"
@@ -805,19 +830,7 @@
             "icon": "smiley",
             "icon_width": 24,
             "color": "#000000",
-            "heading": "4,8 Review Score",
-            "heading_size": "h5",
-            "text": "",
-            "vertical_alignment": "start"
-          }
-        },
-        "icon_with_text_pcaqTj": {
-          "type": "icon_with_text",
-          "settings": {
-            "icon": "stool",
-            "icon_width": 24,
-            "color": "#000000",
-            "heading": "Over 50 Products",
+            "heading": "49k+ 5-Star Reviews",
             "heading_size": "h5",
             "text": "",
             "vertical_alignment": "start"
@@ -825,8 +838,9 @@
         },
         "button_aegkDr": {
           "type": "button",
+          "disabled": true,
           "settings": {
-            "button_label": "Learn more",
+            "button_label": "Explore",
             "button_link": "shopify://pages/about-grasscity",
             "button_style": "btn--primary",
             "button_icon": "none"
@@ -840,7 +854,6 @@
         "text_4pYVYF",
         "icon_with_text_8qCJiV",
         "icon_with_text_w4D3R6",
-        "icon_with_text_pcaqTj",
         "button_aegkDr"
       ],
       "custom_css": [
@@ -858,8 +871,8 @@
         "mobile_content_alignment": "inherit",
         "show_section_divider": false,
         "divider_width": "fixed",
-        "padding_top": 60,
-        "padding_bottom": 60
+        "padding_top": 50,
+        "padding_bottom": 50
       }
     },
     "lookbook_slider_9zCdQJ": {
@@ -1017,7 +1030,7 @@
             "content_alignment": "left",
             "content_spacing": "small",
             "content_gap": "fitted",
-            "card_link": "",
+            "card_link": "shopify://pages/membership",
             "subheading": "",
             "subheading_style": "",
             "heading": "Upgrade to ELITE",
@@ -1052,6 +1065,7 @@
         "image_card_mL7WWJ",
         "image_card_Vj69GM"
       ],
+      "disabled": true,
       "settings": {
         "container": "fixed",
         "color_scheme": "",
@@ -1083,7 +1097,7 @@
         "collection_tqdqYc": {
           "type": "collection",
           "settings": {
-            "collection": "leguacy-ashtrays",
+            "collection": "ashtrays",
             "title": "",
             "show_banner": false,
             "color_scheme": "",
@@ -1112,6 +1126,7 @@
       "block_order": [
         "collection_tqdqYc"
       ],
+      "disabled": true,
       "settings": {
         "container": "fixed",
         "color_scheme": "",
@@ -1141,8 +1156,8 @@
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "show_progress_bar": true,
-        "padding_top": 60,
-        "padding_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 50,
         "show_section_divider": false,
         "divider_width": "fixed"
       }
@@ -1189,6 +1204,7 @@
         "testimonial_QPUyLy",
         "testimonial_iTzQDb"
       ],
+      "disabled": true,
       "custom_css": [
         ".testimonial__inner {max-width: 64rem; margin-left: auto; margin-right: auto;}"
       ],
@@ -1236,20 +1252,20 @@
           "type": "slide",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_categories-bongs_ab_v01.webp",
+            "image": "shopify://shop_images/gs_categories-bongs_ab_v01_383b1d5c-edb8-4266-841a-2fb1a7cdd912.webp",
             "image_overlay_opacity": 20,
             "content_position": "top-left",
             "content_alignment": "left",
-            "subheading": "Lorem Ipsum Here",
+            "subheading": "Lowest Price Guaranteed*",
             "heading": "Bongs",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
             "heading_size": "h1",
-            "text": "<p>Introducing the latest styles in women's shoes tailored for every occasion taste.</p>",
+            "text": "<p>Find your next piece with our wide range of beaker bongs, percolator bongs, mini bongs, ice catcher bongs, and many more, crafted for smoother sessions.</p>",
             "button_label": "Shop Now",
-            "button_link": "shopify://collections/leguacy-bongs",
+            "button_link": "shopify://collections/bongs",
             "button_style": "btn--primary",
             "button_icon": "none"
           }
@@ -1258,7 +1274,7 @@
           "type": "image-card",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_categories-grinders_ab_v01.webp",
+            "image": "shopify://shop_images/gs_categories-grinders_ab_v01_bbd0ab39-cd11-4a17-b609-80270c844e13.webp",
             "content_alignment": "center",
             "heading": "Herb Grinders",
             "highlight_style": "none",
@@ -1269,14 +1285,14 @@
             "heading_size_mobile": "inherit",
             "heading_size_custom": 18,
             "text": "",
-            "card_link": "shopify://collections/leguacy-herb-grinders"
+            "card_link": "shopify://collections/herb-grinders"
           }
         },
         "image_card_yb3htw": {
           "type": "image-card",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_categories-dabrigs_ab_v01.webp",
+            "image": "shopify://shop_images/gs_categories-dabrigs_ab_v01_cfdc0d32-5f59-4e29-80fc-8eb46ebeb4d8.webp",
             "content_alignment": "center",
             "heading": "Dab Rigs",
             "highlight_style": "none",
@@ -1287,14 +1303,14 @@
             "heading_size_mobile": "inherit",
             "heading_size_custom": 18,
             "text": "",
-            "card_link": ""
+            "card_link": "shopify://collections/dab-rigs"
           }
         },
         "image_card_7KqpyL": {
           "type": "image-card",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_categories-vaporizers_ab_v01.webp",
+            "image": "shopify://shop_images/gs_categories-vaporizers_ab_v01_48bfee59-5485-4a12-833b-e94152bd3655.webp",
             "content_alignment": "center",
             "heading": "Vapes",
             "highlight_style": "none",
@@ -1305,14 +1321,14 @@
             "heading_size_mobile": "inherit",
             "heading_size_custom": 18,
             "text": "",
-            "card_link": "shopify://collections/leguacy-vaporizer"
+            "card_link": "shopify://collections/vaporizers"
           }
         },
         "image_card_ag7Eb3": {
           "type": "image-card",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "image": "shopify://shop_images/gs_categories-papers_ab_v01.webp",
+            "image": "shopify://shop_images/gs_categories-papers_ab_v01_69fd4ac6-7b37-4783-abda-4a655365f283.webp",
             "content_alignment": "center",
             "heading": "Rolling Papers",
             "highlight_style": "none",
@@ -1353,13 +1369,59 @@
         "padding_bottom": 0
       }
     },
+    "rich_text_BrG4LN": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_npp3aM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why Millions of Smokers Choose Grasscity",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3",
+            "heading_tag": "h1"
+          }
+        },
+        "text_z8htM6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Shop at one of the most trusted online headshops, serving customers worldwide since 2000.</p>",
+            "text_size": "text-lg",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_npp3aM",
+        "text_z8htM6"
+      ],
+      "custom_css": [],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "enable_custom_class": false,
+        "section_class": "",
+        "container": "fixed",
+        "color_scheme": "",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "center",
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
     "buttons_with_icon_c8CzHV": {
       "type": "buttons-with-icon",
       "blocks": {
         "button_item_TXLwjF": {
           "type": "button_item",
           "settings": {
-            "button_label": "All eco-certified",
+            "button_label": "Since 2000",
             "button_link": "",
             "icon": "check"
           }
@@ -1367,7 +1429,7 @@
         "button_item_tpCdia": {
           "type": "button_item",
           "settings": {
-            "button_label": "Product protection",
+            "button_label": "Huge Selection",
             "button_link": "",
             "icon": "check"
           }
@@ -1375,7 +1437,7 @@
         "button_item_wKgxpM": {
           "type": "button_item",
           "settings": {
-            "button_label": "Make it yours",
+            "button_label": "Competitive Prices",
             "button_link": "",
             "icon": "check"
           }
@@ -1383,7 +1445,7 @@
         "button_item_Ngk44m": {
           "type": "button_item",
           "settings": {
-            "button_label": "Unique tailored",
+            "button_label": "Trusted Worldwide",
             "button_link": "",
             "icon": "check"
           }
@@ -1405,20 +1467,20 @@
         "section_header_alignment": "center",
         "section_header_alignment_mobile": "inherit",
         "subheading": "",
-        "heading": "This approach resulted in the beautiful structure",
+        "heading": "",
         "highlight_style": "none",
         "highlight_font_style": "italic",
         "highlight_style_color": "",
         "highlight_text_color": "",
-        "heading_size": "h2",
+        "heading_size": "h3",
         "item_alignment": "center",
         "item_button_style": "btn--primary",
         "item_button_font": "button",
         "enable_slider": true,
         "swipe_on_mobile": true,
-        "show_section_divider": true,
+        "show_section_divider": false,
         "divider_width": "full",
-        "padding_top": 60,
+        "padding_top": 30,
         "padding_bottom": 0
       }
     },
@@ -1428,14 +1490,14 @@
         "column_YWTLnF": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/gs_brand-qualities-1_ab_v01_1d77e665-e862-444e-b9bb-ab4c35aa5cbd.webp",
-            "title": "The first online smoke shop",
+            "image": "shopify://shop_images/gs_brand_qualities_3_ab_v03.webp",
+            "title": "The Original Online Headshop",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
             "heading_size": "h4",
-            "text": "<p>Founded in 2000, Grasscity was the first online smoke shop in the world</p>",
+            "text": "<p>Founded in Amsterdam in 2000, Grasscity helped pioneer the online headshop industry and remains a trusted destination today.</p><p></p>",
             "text_size": "text-base",
             "button_label": "",
             "button_link": "",
@@ -1446,14 +1508,14 @@
         "column_AwmLJY": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/gs_brand-qualities-2_ab_v02_020722e6-cfbc-474f-a808-d07465cfe13d.webp",
-            "title": "Over 20 years on the market",
+            "image": "shopify://shop_images/gs_brand-qualities-2_ab_v02_ff2a3462-feea-4fb6-8826-59c071e8248e.webp",
+            "title": "Huge Selection. Best Prices.",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
             "heading_size": "h4",
-            "text": "<p>World's Most Trusted, reliable and secure head shop 4 20 years</p>",
+            "text": "<p>Explore thousands of smoking accessories from trusted brands; backed by our Lowest Price Guarantee.*</p>",
             "text_size": "text-base",
             "button_label": "",
             "button_link": "",
@@ -1464,14 +1526,14 @@
         "column_MikwAx": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/gs_brand-qualities-3_ab_v03_66130542-6b86-45bb-ae9d-1e4c42a1895d.webp",
-            "title": "Over 49K+ positive reviews",
+            "image": "shopify://shop_images/gs_brand-qualities-1_ab_v01_3024bfe0-0add-4c38-99d8-fd33993e18bb.webp",
+            "title": "49K+ Five-Star Reviews",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
             "heading_size": "h4",
-            "text": "<p>We do our best to ensure Customer Satisfaction</p>",
+            "text": "<p>Trusted and loved by smokers around the world, with thousands of verified customer reviews.</p>",
             "text_size": "text-base",
             "button_label": "",
             "button_link": "",
@@ -1577,11 +1639,12 @@
         "image_aMDwHQ",
         "image_PWFmtj"
       ],
+      "custom_css": [],
       "name": "IF - Image Marquee",
       "settings": {
         "sec_title": "",
         "sec_sub_title": "",
-        "color": "#1f1f1f",
+        "color": "#b52e27",
         "speed": 30,
         "width": 100,
         "height": 100,
@@ -1589,7 +1652,7 @@
         "width_mob": 100,
         "height_mob": 100,
         "section_top_spacing": 10,
-        "section_bottom_spacing": 30,
+        "section_bottom_spacing": 10,
         "section_top_spacing_mob": 10,
         "section_bottom_spacing_mob": 30
       }
@@ -1884,7 +1947,7 @@
             "color_scheme": "",
             "image": "shopify://shop_images/gs_brand-qualities-1_ab_v01.webp",
             "image_avatar": "shopify://shop_images/gs_avatar_ig_2.png",
-            "image_link": "",
+            "image_link": "https://www.instagram.com/grasscityheadshop/",
             "social_media": "instagram",
             "heading": "grasscityheadshop"
           }
@@ -1895,7 +1958,7 @@
             "color_scheme": "",
             "image": "shopify://shop_images/hot-deals-banner-background-5.png",
             "image_avatar": "shopify://shop_images/gs_avatar_ig_2.png",
-            "image_link": "",
+            "image_link": "https://www.instagram.com/grasscityheadshop/",
             "social_media": "instagram",
             "heading": "grasscityheadshop"
           }
@@ -1906,7 +1969,7 @@
             "color_scheme": "scheme-1",
             "image": "shopify://shop_images/gs_about-brand_ab_v01.webp",
             "image_avatar": "shopify://shop_images/gs_avatar_ig_2.png",
-            "image_link": "",
+            "image_link": "https://www.instagram.com/grasscityheadshop/",
             "social_media": "instagram",
             "heading": "grasscityheadshop"
           }
@@ -1917,7 +1980,7 @@
             "color_scheme": "scheme-1",
             "image": "shopify://shop_images/hot-deals-banner-background-2.png",
             "image_avatar": "shopify://shop_images/gs_avatar_ig_2.png",
-            "image_link": "",
+            "image_link": "https://www.instagram.com/grasscityheadshop/",
             "social_media": "instagram",
             "heading": "grasscityheadshop"
           }
@@ -1929,6 +1992,7 @@
         "gallery_8bzNrt",
         "gallery_3pbkJq"
       ],
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "color_scheme": "scheme-2",
@@ -1957,13 +2021,210 @@
         "padding_top": 30,
         "padding_bottom": 30
       }
+    },
+    "collection_faqs_LnCH7P": {
+      "type": "collection-faqs",
+      "blocks": {
+        "collapsible_item_tmeR6h": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "What types of smoking accessories does Grasscity sell?",
+            "content": "<p>Grasscity offers a curated selection of premium smoking accessories, including glass bongs, pipes, dab rigs, vaporizers, grinders, rolling papers, and cleaning tools, everything you need for a complete smoking experience.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_fFzCRk": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Are the products on Grasscity authentic and high quality?",
+            "content": "<p> Yes. Every product at Grasscity is carefully sourced to ensure authenticity, durability, and premium performance, giving you confidence in every purchase.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_6kWn8X": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Does Grasscity offer products for both beginners and experienced smokers?",
+            "content": "<p>Yes. From entry-level bongs and pipes to advanced dab rigs and vaporizers, Grasscity caters to all experience levels, helping every smoker find the perfect setup.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_EUTxWT": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "How do I choose the right bong or pipe for my needs?",
+            "content": "<p>Grasscity offers detailed product descriptions, size guides, and tips to help you choose the right piece for your smoking style, experience, and preferences. Explore our collections to find the perfect bongs and more.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_VF9J6m": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Are vaporizers available on Grasscity?",
+            "content": "<p> Yes. Grasscity carries a wide selection of premium vaporizers for dry herb, concentrates, and dual-use, designed to deliver smooth, flavorful sessions.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_yQKimk": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "How does Grasscity help customers find the right smoking products?",
+            "content": "<p>Our customer service team is here to help you find the right smoking products. Reach out via email or use our live chat option for guidance, along with detailed product guides and tips to match your smoking style and preferences</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_item_tmeR6h",
+        "collapsible_item_fFzCRk",
+        "collapsible_item_6kWn8X",
+        "collapsible_item_EUTxWT",
+        "collapsible_item_VF9J6m",
+        "collapsible_item_yQKimk"
+      ],
+      "name": "Collection Faqs",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "header_layout": "standing-column",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Frequently Asked Questions",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--primary",
+        "button_icon": "none",
+        "column_gap": "large",
+        "row_gap": "inherit",
+        "item_style": "standard",
+        "item_color_scheme": "",
+        "item_heading_font": "heading",
+        "item_heading_size": "h4",
+        "item_icon_size": "extra-large",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "scrolling_promotion_thHtkT": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "text_yK7UHp": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Fast Delivery",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "text_ErdHmU": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Easy Returns",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "text_RRgAUA": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Lowest Price Guaranteed",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "text_kaHkCh": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Secure Checkout",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "text_G4bVgM": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text_link": "",
+            "text": "Sustainable Materials",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "text_yK7UHp",
+        "text_ErdHmU",
+        "text_RRgAUA",
+        "text_kaHkCh",
+        "text_G4bVgM"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "scheme-3",
+        "direction": "left",
+        "pause_on_hover": true,
+        "speed": 0.2,
+        "h_spacing": 40,
+        "show_section_divider": false,
+        "padding_top": 22,
+        "padding_bottom": 22
+      }
     }
   },
   "order": [
     "collection_list_slider_6qbNfj",
     "slideshow_q3U4Jn",
+    "slideshow_g9XxFa",
     "featured_collection_bdaamt",
-    "collection_cards_KV7p8g",
     "custom_content_HPgFTK",
     "collection_tabs_VexkkR",
     "favorite_products_6Tg9Pn",
@@ -1973,6 +2234,7 @@
     "featured_collection_RWUfH9",
     "testimonials_mLThk7",
     "slider_with_multicolumn_aJwbrc",
+    "rich_text_BrG4LN",
     "buttons_with_icon_c8CzHV",
     "multicolumn_Ff4Wbj",
     "home_join_banner_TmF4WQ",
@@ -1980,6 +2242,8 @@
     "logo_list_yLHxNy",
     "brand_logos_wTJaFd",
     "scrolling_gallery_image_wJyLJr",
-    "scrolling_gallery_image_Q7eTgL"
+    "scrolling_gallery_image_Q7eTgL",
+    "collection_faqs_LnCH7P",
+    "scrolling_promotion_thHtkT"
   ]
 }

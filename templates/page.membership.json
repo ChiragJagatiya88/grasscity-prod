@@ -196,7 +196,7 @@
       "settings": {
         "image": "shopify://shop_images/buy-membership_Altogether_Unbeatable.png",
         "heading": "Membership Terms & Conditions",
-        "description": "*For complete Cabana Club USA and ELITE program details see <a href=\"https://www.smokecartel.com/pages/membership-terms-and-conditions\">terms and conditions.</a>"
+        "description": "*For complete Cabana Club USA and ELITE program details see <a href=\"/pages/terms-conditions\">terms and conditions.</a>"
       }
     }
   },

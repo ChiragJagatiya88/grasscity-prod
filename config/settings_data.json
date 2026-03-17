@@ -7,13 +7,15 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "current": {
     "enable_sale": false,
     "sso_bfcm_logo": "shopify://shop_images/gs_logo_86bc3029-4784-46a2-b5e5-862ce3afacdf.svg",
     "promo_img_1": "shopify://shop_images/popup-sc-cw-1.png",
     "promo_img_2": "shopify://shop_images/popup-sc-cw-2.png",
     "elite_product": "elite-yearly-membership",
+    "elite_product_renew": "elite-yearly-membership-renew",
+    "elite_renewal": true,
     "logo": "shopify://shop_images/gs_logo_86bc3029-4784-46a2-b5e5-862ce3afacdf.svg",
     "logo_width": 150,
     "logo_mobile": "shopify://shop_images/gs_logo_86bc3029-4784-46a2-b5e5-862ce3afacdf.svg",
@@ -49,13 +51,18 @@
     "badges_corner_radius": "round",
     "pcard_style": "standard",
     "pcard_color_scheme": "scheme-1",
+    "pcard_show_second_img": false,
     "pcard_show_vendor": true,
     "pcard_show_type": false,
+    "pcard_list_style": "standard",
+    "pcard_show_cart_button": false,
     "pcard_show_quickview_button": false,
     "pcard_show_sale_badge": true,
     "pcard_sale_badge_type": "show_text",
     "pcard_enable_color_swatches": true,
     "pcard_maximum_swatches_to_show": 4,
+    "pcard_swatches_type": "color_swatch",
+    "enable_product_compare": false,
     "quick_view_type": "modal",
     "cart_type": "page",
     "cart_icon": "shopping-bag",
@@ -74,7 +81,7 @@
     "predictive_search_type_enabled": false,
     "number_results_to_show": 10,
     "predictive_search_show_vendor": false,
-    "predictive_search_show_price": false,
+    "predictive_search_show_price": true,
     "currency_code_enabled": false,
     "section_header_alignment": "left",
     "collection_card_style": "style-1",
@@ -102,6 +109,31 @@
         "type": "shopify://apps/yotpo-product-photo-reviews/blocks/settings/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
         "disabled": false,
         "settings": {}
+      },
+      "15614416626742018354": {
+        "type": "shopify://apps/userway-website-accessibility/blocks/uw-widget-extension/bc2d8a34-1a37-451b-ab1a-271bc4e9daa7",
+        "disabled": false,
+        "settings": {}
+      },
+      "13309252322759772734": {
+        "type": "shopify://apps/sortd-merchandiser/blocks/app-embed/5176d6ef-993f-4869-ba24-87a0a6bedcf9",
+        "disabled": false,
+        "settings": {}
+      },
+      "855628211100114053": {
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
+      },
+      "9305562503569750861": {
+        "type": "shopify://apps/route-protection-tracking/blocks/settings/fb8ca446-3fcd-450e-b3b6-e8e3615553e2",
+        "disabled": true,
+        "settings": {
+          "variant": "preferred-checkout",
+          "container_placement": "",
+          "entrypoints": "button[name=checkout]",
+          "custom_css": ""
+        }
       }
     },
     "color_schemes": {

@@ -45,6 +45,12 @@
             "heading_size": "h1"
           }
         },
+        "f5d48049-8bc0-4495-b387-ccd2dfaca68b": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
         "meta": {
           "type": "meta",
           "settings": {
@@ -59,28 +65,23 @@
           "type": "price",
           "settings": {}
         },
-        "f5d48049-8bc0-4495-b387-ccd2dfaca68b": {
-          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "{{product}}"
-          }
-        },
         "icon_with_text": {
           "type": "icon-with-text",
           "settings": {
             "layout": "horizontal",
-            "title_font": "body-bolder",
+            "title_font": "body",
             "title_size": "text-base",
             "icon_1": "check",
-            "heading_1": "Modern",
+            "heading_1": "Authentic Products",
             "icon_2": "check",
-            "heading_2": "Eco-certified",
+            "heading_2": "Premium Quality",
             "icon_3": "check",
-            "heading_3": "Warranty"
+            "heading_3": "Trusted Head Shop"
           }
         },
         "rich_text_UCB4ce": {
           "type": "rich-text",
+          "disabled": true,
           "settings": {
             "text": "{{ product.metafields.description.short_description | metafield_tag }}"
           }
@@ -90,7 +91,7 @@
           "settings": {
             "text_style": "body",
             "inventory_threshold": 10,
-            "show_inventory_quantity": true
+            "show_inventory_quantity": false
           }
         },
         "description": {
@@ -102,10 +103,10 @@
           "type": "variant_picker",
           "settings": {
             "picker_type": "button",
-            "swatch_type": "shopify_swatch",
+            "swatch_type": "variant_image",
             "swatch_style": "square",
             "swatch_size": 32,
-            "button_style": "normal",
+            "button_style": "circle",
             "size_title": "Size",
             "size_chart_from_page": ""
           }
@@ -114,12 +115,13 @@
           "type": "buy_buttons",
           "settings": {
             "show_quantity_selector": true,
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
           }
         },
         "icon_with_text_UAYgQU": {
           "type": "icon-with-text",
+          "disabled": true,
           "settings": {
             "layout": "vertical",
             "title_font": "body",
@@ -138,6 +140,7 @@
         },
         "promotion_alert_L7ipQp": {
           "type": "promotion_alert",
+          "disabled": true,
           "settings": {
             "text_color": "#049b6e",
             "icon": "lightning",
@@ -162,6 +165,7 @@
         },
         "collapsible-row-3": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Specifications",
             "heading_size": "h4",
@@ -215,9 +219,9 @@
         "badges",
         "yotpo_product_reviews_star_rating_i93beV",
         "title",
+        "f5d48049-8bc0-4495-b387-ccd2dfaca68b",
         "meta",
         "price",
-        "f5d48049-8bc0-4495-b387-ccd2dfaca68b",
         "icon_with_text",
         "rich_text_UCB4ce",
         "inventory",
@@ -235,14 +239,14 @@
         "sticky_atc_bar_7HgNgP"
       ],
       "custom_css": [
-        "@media (min-width: 1280px) {.product {padding-inline: 5rem; }}"
+        "@media (min-width: 1280px) {.product {padding-inline: 5rem; } .section-main-product.page-width {max-width: 1500px; } .icon-with-text__item {gap: 0.4rem; } .text-base {font-size: 14px; } .icon-with-text .icon {height: 1.4rem; width: 1.4rem; } .icon-with-text {gap: 1rem; }}"
       ],
       "settings": {
         "color_scheme": "scheme-1",
         "use_color_scheme_in_container": false,
         "enable_sticky_info": true,
-        "media_size": "large",
-        "gallery_layout": "vertical-carousel",
+        "media_size": "medium",
+        "gallery_layout": "carousel",
         "mobile_thumbnails": "show",
         "show_image_border": false,
         "enable_image_zoom": true,
@@ -259,13 +263,24 @@
           "name": "Description",
           "settings": {
             "navigation_title": "Description",
-            "content": "<p>{{ product.description }}</p>",
+            "content": "{{ product.description }}",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "tab_VjmtHi": {
+          "type": "tab",
+          "name": "Overview",
+          "settings": {
+            "navigation_title": "Overview",
+            "content": "{{ product.metafields.description.short_description | metafield_tag }}",
             "custom_liquid": "",
             "page": ""
           }
         },
         "image_with_text_LQUEir": {
           "type": "image_with_text",
+          "disabled": true,
           "settings": {
             "navigation_title": "About Brand",
             "image": "shopify://shop_images/gs_timeline-3_ab_v01_e7b9858d-4861-4186-8738-fb3a636287e8.webp",
@@ -294,6 +309,7 @@
         },
         "tab_xGBJeM": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "navigation_title": "Shipping & Return",
             "content": "",
@@ -304,6 +320,7 @@
       },
       "block_order": [
         "tab_cHq7bL",
+        "tab_VjmtHi",
         "image_with_text_LQUEir",
         "tab_xGBJeM"
       ],
@@ -324,71 +341,112 @@
         "divider_width": "fixed"
       }
     },
-    "testimonials_8JHr3L": {
-      "type": "testimonials",
+    "multicolumn_icon_3qbxHn": {
+      "type": "multicolumn-icon",
       "blocks": {
-        "testimonial_dhi3Xf": {
-          "type": "testimonial",
+        "column_9Xh69D": {
+          "type": "column",
           "settings": {
-            "icon": "none",
-            "image": "shopify://shop_images/hot-deals-banner-background-4.png",
-            "heading": "Testimonials",
-            "text": "<p>“I am extremely happy about both design and comfort. I am a furniture designer myself, and your product makes me happy.”</p>",
-            "author": "Stephanie L.",
-            "bio": "Verified Buyer",
-            "product": ""
+            "icon": "truck",
+            "max_width": 60,
+            "max_width_mb": 60,
+            "title": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "heading_font": "heading",
+            "text": "<p>Free Shipping on US Orders Above $50 USD</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--plain",
+            "button_icon": "caret-right"
           }
         },
-        "testimonial_D7Mq7i": {
-          "type": "testimonial",
+        "column_EapCmy": {
+          "type": "column",
           "settings": {
-            "icon": "none",
-            "image": "shopify://shop_images/gs_brand-qualities-1_ab_v01.webp",
-            "heading": "Testimonials",
-            "text": "<p>The story behind, sustainable production, and the risk-free feeling with the free return policy make this a great choice.</p>",
-            "author": "Rachel M.",
-            "bio": "Verified Buyer",
-            "product": ""
+            "icon": "arrow-up-left",
+            "max_width": 60,
+            "max_width_mb": 60,
+            "title": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "heading_font": "heading",
+            "text": "<p>Easy Returns</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--plain",
+            "button_icon": "caret-right"
           }
         },
-        "testimonial_33tAjm": {
-          "type": "testimonial",
+        "column_rDRKHz": {
+          "type": "column",
           "settings": {
-            "icon": "none",
-            "image": "shopify://shop_images/hot-deals-banner-background-3.png",
-            "heading": "Testimonials",
-            "text": "<p>“High-quality furniture, crafted with passion and care, fantastic in appearance and use, reasonably priced, and excellent custome.”</p>",
-            "author": "Emily J.",
-            "bio": "Verified Buyer",
-            "product": ""
+            "icon": "map-pin",
+            "max_width": 60,
+            "max_width_mb": 60,
+            "title": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "heading_font": "heading",
+            "text": "<p>Over 22 years on the market</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--plain",
+            "button_icon": "caret-right"
           }
         },
-        "testimonial_dDRMwy": {
-          "type": "testimonial",
+        "column_awXCNr": {
+          "type": "column",
           "settings": {
-            "icon": "none",
-            "image": "shopify://shop_images/hot-deals-banner-background-2.png",
-            "heading": "Testimonials",
-            "text": "<p>The craftsmanship, eco-friendly materials, and excellent customer service truly make this product an outstanding standout.</p>",
-            "author": "Sarah T.",
-            "bio": "Verified Buyer",
-            "product": ""
+            "icon": "chat",
+            "max_width": 60,
+            "max_width_mb": 60,
+            "title": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "heading_font": "heading",
+            "text": "<p>Over 61K+ positive reviews</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--plain",
+            "button_icon": "caret-right"
           }
         }
       },
       "block_order": [
-        "testimonial_dhi3Xf",
-        "testimonial_D7Mq7i",
-        "testimonial_33tAjm",
-        "testimonial_dDRMwy"
+        "column_9Xh69D",
+        "column_EapCmy",
+        "column_rDRKHz",
+        "column_awXCNr"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".multicolumn-card__text p {max-width: 33rem;}"
       ],
       "settings": {
         "container": "fixed",
-        "color_scheme": "scheme-2",
-        "section_header_alignment": "left",
+        "color_scheme": "scheme-info",
+        "header_layout": "vertical",
+        "section_header_alignment": "center",
         "section_header_alignment_mobile": "inherit",
         "subheading": "",
-        "heading": "Clients Love Us",
+        "heading": "",
         "highlight_style": "none",
         "highlight_font_style": "italic",
         "highlight_style_color": "",
@@ -396,25 +454,54 @@
         "heading_size": "h2",
         "description": "",
         "text_size": "text-base",
-        "layout": "standard",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "enable_sticky": false,
         "card_color_scheme": "",
-        "card_content_color_scheme": "",
-        "card_image_ratio": "adapt",
-        "card_heading_size": "h4",
-        "card_text_size": "text-base",
-        "author_info_layout": "vertical",
-        "card_trigger_behavior": "click",
-        "show_image": true,
-        "show_author_image": true,
-        "columns_desktop": 3,
-        "column_gap": "2xs",
+        "content_alignment": "center",
+        "image_position": "top",
+        "icon_color": "#1d349a",
+        "columns_desktop": 4,
+        "column_gap": "large",
         "row_gap": "inherit",
-        "enable_slider": true,
+        "show_divider_col": false,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "show_progress_bar": true,
+        "show_section_divider": false,
+        "divider_width": "fixed",
         "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_bottom": 60
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "You May Also Like",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "description": "",
+        "limit": 6,
+        "columns": 5,
+        "column_gap": "medium",
+        "row_gap": "inherit",
+        "enable_slider": true,
+        "navigation_position": "bottom",
+        "pcard_image_ratio": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "show_progress_bar": true,
+        "padding_top": 30,
+        "padding_bottom": 30,
         "show_section_divider": false,
         "divider_width": "fixed"
       }
@@ -436,6 +523,121 @@
         "include_margins": true,
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "multicolumn_icon_KYByNJ": {
+      "type": "multicolumn-icon",
+      "blocks": {
+        "column_KKyVcC": {
+          "type": "column",
+          "settings": {
+            "icon": "truck",
+            "image": "shopify://shop_images/shipping.png",
+            "max_width": 70,
+            "max_width_mb": 60,
+            "title": "Free Shipping",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "heading_font": "heading",
+            "text": "<p>On qualifying orders. Quick and reliable delivery across the United States.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "#",
+            "button_style": "btn--plain",
+            "button_icon": "caret-right"
+          }
+        },
+        "column_aeychJ": {
+          "type": "column",
+          "settings": {
+            "icon": "arrow-up-left",
+            "image": "shopify://shop_images/Returns_refunds.png",
+            "max_width": 70,
+            "max_width_mb": 60,
+            "title": "Hassle-free Returns",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "heading_font": "heading",
+            "text": "<p>We make returns simple, so you can shop with confidence.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "shopify://policies/refund-policy",
+            "button_style": "btn--plain",
+            "button_icon": "caret-right"
+          }
+        },
+        "column_KQVTYm": {
+          "type": "column",
+          "settings": {
+            "icon": "map-pin",
+            "image": "shopify://shop_images/Secure_Payment.png",
+            "max_width": 70,
+            "max_width_mb": 60,
+            "title": "Secure Payment",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "heading_font": "heading",
+            "text": "<p>Encrypted checkout to keep your payment information secure.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "shopify://pages/terms-conditions-4",
+            "button_style": "btn--plain",
+            "button_icon": "caret-right"
+          }
+        }
+      },
+      "block_order": [
+        "column_KKyVcC",
+        "column_aeychJ",
+        "column_KQVTYm"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".multicolumn-card__text p {max-width: 33rem;}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "header_layout": "vertical",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "enable_sticky": false,
+        "card_color_scheme": "",
+        "content_alignment": "center",
+        "image_position": "top",
+        "icon_color": "#1d349a",
+        "columns_desktop": 3,
+        "column_gap": "large",
+        "row_gap": "inherit",
+        "show_divider_col": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "multicolumn_Mxt4d3": {
@@ -678,142 +880,72 @@
         "padding_bottom": 0
       }
     },
-    "related-products": {
-      "type": "related-products",
-      "settings": {
-        "container": "fixed",
-        "color_scheme": "scheme-1",
-        "section_header_alignment": "left",
-        "section_header_alignment_mobile": "inherit",
-        "subheading": "",
-        "heading": "You May Also Like",
-        "highlight_style": "none",
-        "highlight_font_style": "italic",
-        "highlight_style_color": "",
-        "highlight_text_color": "",
-        "heading_size": "h2",
-        "description": "",
-        "limit": 6,
-        "columns": 5,
-        "column_gap": "medium",
-        "row_gap": "inherit",
-        "enable_slider": true,
-        "navigation_position": "bottom",
-        "pcard_image_ratio": "",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "show_progress_bar": true,
-        "padding_top": 30,
-        "padding_bottom": 30,
-        "show_section_divider": false,
-        "divider_width": "fixed"
-      }
-    },
-    "multicolumn_icon_3qbxHn": {
-      "type": "multicolumn-icon",
+    "testimonials_8JHr3L": {
+      "type": "testimonials",
       "blocks": {
-        "column_9Xh69D": {
-          "type": "column",
+        "testimonial_dhi3Xf": {
+          "type": "testimonial",
           "settings": {
-            "icon": "truck",
-            "max_width": 60,
-            "max_width_mb": 60,
-            "title": "",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h4",
-            "heading_font": "heading",
-            "text": "<p>Free Shipping on US Orders Above $50 USD</p>",
-            "text_size": "text-base",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "btn--plain",
-            "button_icon": "caret-right"
+            "icon": "none",
+            "image": "shopify://shop_images/03-p009.jpg",
+            "heading": "Testimonials",
+            "text": "<p>I’ve bought this bowl twice man and have broke it twice now:(definitely my favorite!gonna buy again when it’s available</p>",
+            "author": "David",
+            "bio": "Verified Buyer",
+            "product": "g-spot-black-rasta-stripes-handpipe"
           }
         },
-        "column_EapCmy": {
-          "type": "column",
+        "testimonial_D7Mq7i": {
+          "type": "testimonial",
           "settings": {
-            "icon": "arrow-up-left",
-            "max_width": 60,
-            "max_width_mb": 60,
-            "title": "",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h4",
-            "heading_font": "heading",
-            "text": "<p>Easy Returns</p>",
-            "text_size": "text-base",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "btn--plain",
-            "button_icon": "caret-right"
+            "icon": "none",
+            "image": "shopify://shop_images/order-fat-bottom-mini-bong-online-usa_1.jpg",
+            "heading": "Testimonials",
+            "text": "<p>It came in a week. It took three days to be shipped and four days to come in the mail. I love it. It's the perfect size and everything...</p>",
+            "author": "JZ",
+            "bio": "Verified Buyer",
+            "product": "fat-bottom-mini-bong"
           }
         },
-        "column_rDRKHz": {
-          "type": "column",
+        "testimonial_33tAjm": {
+          "type": "testimonial",
           "settings": {
-            "icon": "map-pin",
-            "max_width": 60,
-            "max_width_mb": 60,
-            "title": "",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h4",
-            "heading_font": "heading",
-            "text": "<p>Over 22 years on the market</p>",
-            "text_size": "text-base",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "btn--plain",
-            "button_icon": "caret-right"
+            "icon": "none",
+            "image": "shopify://shop_images/wp97-black-_03__2.jpg",
+            "heading": "Testimonials",
+            "text": "<p>very smooth, especially if you like a long easy type of hit. thick glass, didn't break when I dropped it in the sink,..</p>",
+            "author": "Wendell",
+            "bio": "Verified Buyer",
+            "product": "glasscity-double-chamber-bubbler-with-showerhead-and-tree-perc"
           }
         },
-        "column_awXCNr": {
-          "type": "column",
+        "testimonial_dDRMwy": {
+          "type": "testimonial",
           "settings": {
-            "icon": "chat",
-            "max_width": 60,
-            "max_width_mb": 60,
-            "title": "",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h4",
-            "heading_font": "heading",
-            "text": "<p>Over 61K+ positive reviews</p>",
-            "text_size": "text-base",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "btn--plain",
-            "button_icon": "caret-right"
+            "icon": "none",
+            "image": "shopify://shop_images/gb-106-b_3_a78a4837-4f99-4b6d-bcba-fc2efc3ec71c.jpg",
+            "heading": "Testimonials",
+            "text": "<p>The craftsmanship, eco-friendly materials, and excellent customer service truly make this product an outstanding standout.</p>",
+            "author": "Buddah156",
+            "bio": "Verified Buyer",
+            "product": "gc-9mm-beaker-w-tree-perc-bong-18-in"
           }
         }
       },
       "block_order": [
-        "column_9Xh69D",
-        "column_EapCmy",
-        "column_rDRKHz",
-        "column_awXCNr"
+        "testimonial_dhi3Xf",
+        "testimonial_D7Mq7i",
+        "testimonial_33tAjm",
+        "testimonial_dDRMwy"
       ],
-      "custom_css": [
-        ".multicolumn-card__text p {max-width: 33rem;}"
-      ],
+      "disabled": true,
       "settings": {
         "container": "fixed",
-        "color_scheme": "scheme-info",
-        "header_layout": "vertical",
-        "section_header_alignment": "center",
+        "color_scheme": "scheme-2",
+        "section_header_alignment": "left",
         "section_header_alignment_mobile": "inherit",
         "subheading": "",
-        "heading": "",
+        "heading": "Clients Love Us",
         "highlight_style": "none",
         "highlight_font_style": "italic",
         "highlight_style_color": "",
@@ -821,25 +953,27 @@
         "heading_size": "h2",
         "description": "",
         "text_size": "text-base",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "btn--underline",
-        "button_icon": "none",
-        "enable_sticky": false,
+        "layout": "standard",
         "card_color_scheme": "",
-        "content_alignment": "center",
-        "image_position": "top",
-        "icon_color": "#1d349a",
-        "columns_desktop": 4,
-        "column_gap": "large",
+        "card_content_color_scheme": "",
+        "card_image_ratio": "adapt",
+        "card_heading_size": "h4",
+        "card_text_size": "text-base",
+        "author_info_layout": "vertical",
+        "card_trigger_behavior": "click",
+        "show_image": true,
+        "show_author_image": true,
+        "columns_desktop": 3,
+        "column_gap": "2xs",
         "row_gap": "inherit",
-        "show_divider_col": false,
+        "enable_slider": true,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "show_section_divider": false,
-        "divider_width": "fixed",
+        "show_progress_bar": true,
         "padding_top": 60,
-        "padding_bottom": 60
+        "padding_bottom": 60,
+        "show_section_divider": false,
+        "divider_width": "fixed"
       }
     },
     "scrolling_gallery_image_eqULib": {
@@ -851,7 +985,7 @@
             "color_scheme": "",
             "image": "shopify://shop_images/gs_brand-qualities-1_ab_v01_1d77e665-e862-444e-b9bb-ab4c35aa5cbd.webp",
             "image_avatar": "shopify://shop_images/gs_avatar_ig_2.png",
-            "image_link": "",
+            "image_link": "https://www.instagram.com/grasscityheadshop/",
             "social_media": "instagram",
             "heading": "grasscityheadshop"
           }
@@ -862,7 +996,7 @@
             "color_scheme": "",
             "image": "shopify://shop_images/gs_brand-qualities-1_ab_v01.webp",
             "image_avatar": "shopify://shop_images/gs_avatar_ig_2.png",
-            "image_link": "",
+            "image_link": "https://www.instagram.com/grasscityheadshop/",
             "social_media": "instagram",
             "heading": "grasscityheadshop"
           }
@@ -873,7 +1007,7 @@
             "color_scheme": "",
             "image": "shopify://shop_images/hot-deals-banner-background-4.png",
             "image_avatar": "shopify://shop_images/gs_avatar_ig_2.png",
-            "image_link": "",
+            "image_link": "https://www.instagram.com/grasscityheadshop/",
             "social_media": "instagram",
             "heading": "grasscityheadshop"
           }
@@ -884,7 +1018,7 @@
             "color_scheme": "",
             "image": "shopify://shop_images/hot-deals-banner-background-2.png",
             "image_avatar": "shopify://shop_images/gs_avatar_ig_2.png",
-            "image_link": "",
+            "image_link": "https://www.instagram.com/grasscityheadshop/",
             "social_media": "instagram",
             "heading": "grasscityheadshop"
           }
@@ -896,6 +1030,7 @@
         "gallery_FwhcHj",
         "gallery_EM4VKr"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-2",
         "section_header_alignment": "center",
@@ -911,7 +1046,7 @@
         "text_size": "text-base",
         "show_button_on_top": false,
         "button_label": "@grasscityheadshop",
-        "button_link": "",
+        "button_link": "https://www.instagram.com/grasscityheadshop/",
         "button_style": "btn--underline",
         "button_icon": "none",
         "direction": "left",
@@ -929,13 +1064,14 @@
     "breadcrumbs",
     "main",
     "tabs_content_8rnbnj",
-    "testimonials_8JHr3L",
+    "multicolumn_icon_3qbxHn",
+    "related-products",
     "1771840058d6f946be",
+    "multicolumn_icon_KYByNJ",
     "multicolumn_Mxt4d3",
     "quick_comparison_table_p9rdxW",
     "image_with_text_kqXfRQ",
-    "related-products",
-    "multicolumn_icon_3qbxHn",
+    "testimonials_8JHr3L",
     "scrolling_gallery_image_eqULib"
   ]
 }

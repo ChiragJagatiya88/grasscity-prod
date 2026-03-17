@@ -109,10 +109,12 @@
         modal.setAttribute('hidden', '');
         modal.classList.remove('closing');
         
-        // Update button aria-expanded
-        document.querySelectorAll(buttonClass).forEach(function(btn) {
-          btn.setAttribute('aria-expanded', 'false');
-        });
+        // Update button aria-expanded only if buttonClass is available
+        if (buttonClass && buttonClass.trim() !== '') {
+          document.querySelectorAll(buttonClass).forEach(function(btn) {
+            btn.setAttribute('aria-expanded', 'false');
+          });
+        }
       }, 300);
     }
 

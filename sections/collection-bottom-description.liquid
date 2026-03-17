@@ -1,0 +1,223 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  .section-{{ section.id }}-padding div {
+    border-radius: 8px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+   @media screen and (min-width: 750px) {
+   .collect-bottom-section-pedding{
+    padding-left:50px;
+    padding-right:50px;
+  }
+  }
+  
+
+  /* Read More Styles */
+  {% if section.settings.enable_read_more %}
+    #CollectionDesc-{{ section.id }} {
+      transition: max-height 0.3s ease-in-out;
+      overflow: hidden;
+    }
+    #CollectionDesc-{{ section.id }}.is-collapsed {
+      max-height: {{ section.settings.content_max_height }}px;
+      position: relative;
+    }
+    /* Optional fade effect at the bottom when collapsed */
+    #CollectionDesc-{{ section.id }}.is-collapsed::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      background: linear-gradient(to bottom, transparent, rgb(var(--color-background, 255, 255, 255)));
+      pointer-events: none;
+    }
+    .read-more-btn {
+      background: transparent;
+      border: none;
+      color: inherit;
+      text-decoration: underline;
+      cursor: pointer;
+      padding: 10px 0;
+      font-size: 1.6rem;
+      font-weight: 600;
+      display: none; /* Hidden by default, JS reveals it if needed */
+      margin-top: 10px;
+    }
+  {% endif %}
+{%- endstyle -%}
+
+{% assign bottom_desc = collection.metafields.custom.bottom_description | metafield_tag %}
+{% assign bottom_desc_check = bottom_desc | strip_html | strip %}
+{% assign collection_desc = collection.description %}
+{% assign collection_desc_check = collection_desc | strip_html | strip %}
+
+
+{% if bottom_desc_check != blank or collection_desc_check != blank %}
+  <div class="page-width  page-width--fixed section__container section-{{ section.id }}-padding">
+    <div class="color-{{ section.settings.color_scheme }} gradient">
+      <div class="page-width collect-bottom-section-pedding page-width--fixed section__container section-{{ section.id }}-padding">
+        <div class="collection_bottom_des rte">
+        {%- if section.settings.heading != blank -%}
+          <h2 class="collection-bottom-title">
+            {{ section.settings.heading | replace: '[collection_name]', collection.title }}
+          </h2>
+        {%- endif -%}
+
+        <div 
+          class=" {% if section.settings.enable_read_more %}is-collapsed{% endif %}" 
+          id="CollectionDesc-{{ section.id }}"
+        >
+          {% if bottom_desc_check != blank %}
+              {{ bottom_desc }}
+            {% endif %}
+
+            {% if collection_desc_check != blank %}
+              <div class="collection-main-description" style="margin-top: 20px;">
+                {{ collection.description }}
+              </div>
+            {% endif %}
+       
+
+       
+         </div>
+          {%- if section.settings.enable_read_more -%}
+          <button type="button" class="read-more-btn" id="ReadMoreBtn-{{ section.id }}">
+            {{section.settings.read_more}}
+          </button>
+        {%- endif -%}
+
+      </div>
+    </div>
+  </div>
+
+  {%- if section.settings.enable_read_more -%}
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const desc = document.getElementById('CollectionDesc-{{ section.id }}');
+        const btn = document.getElementById('ReadMoreBtn-{{ section.id }}');
+        const maxHeight = {{ section.settings.content_max_height }};
+
+        if (desc && btn) {
+          // Check if content height is greater than the max-height limit
+          if (desc.scrollHeight > maxHeight) {
+            btn.style.display = 'inline-block'; // Show the button
+            
+            btn.addEventListener('click', function() {
+              if (desc.classList.contains('is-collapsed')) {
+                // Expand
+                desc.classList.remove('is-collapsed');
+                desc.style.maxHeight = desc.scrollHeight + 'px';
+                btn.textContent ="{{section.settings.read_less}}"
+              } else {
+                // Collapse
+                desc.classList.add('is-collapsed');
+                desc.style.maxHeight = maxHeight + 'px';
+                btn.textContent =  "{{section.settings.read_more}}"
+              }
+            });
+          } else {
+            // Remove collapse class if text is short enough
+            desc.classList.remove('is-collapsed');
+          }
+        }
+      });
+    </script>
+  {%- endif -%}
+{% endif %}
+
+{% schema %}
+{
+  "name": "Collection Bottom Desc",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "About [collection_name]",
+      "info": "Use '[collection_name]' to automatically display the current collection's title."
+    },
+     {
+      "type": "text",
+      "id": "read_more",
+      "label": "View More text",
+      "default": "View More",
+      "info": "View more"
+    },
+     {
+      "type": "text",
+      "id": "read_less",
+      "label": "View Less text",
+      "default": "View Less",
+      "info": "View Less"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Read More Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_read_more",
+      "label": "Enable 'Read more' for long text",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "content_max_height",
+      "min": 50,
+      "max": 500,
+      "step": 10,
+      "unit": "px",
+      "label": "Visible content height",
+      "info": "How much of the text to show before adding the Read More button.",
+      "default": 150
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Bottom Desc"
+    }
+  ]
+}
+{% endschema %}

@@ -42,13 +42,13 @@
             <summary class="accordion-details__summary flex items-center justify-between">
               <div class="flex items-center gap-2">
                 {% render 'icons', icon: block.settings.icon %}
-                <h2 class="{{ heading_size }}">{{ block.settings.block_heading }}</h2>
+                <div class="{{ heading_size }}">{{ block.settings.block_heading }}</div>
               </div>
               {%- render 'icon-plus-toggle' -%}
             </summary>
             <div class="accordion-details__content">
         {%- else -%}
-          <h2 class="{{ heading_size }} complementary-products__heading">{{ block.settings.block_heading }}</h2>
+          <div class="{{ heading_size }} complementary-products__heading">{{ block.settings.block_heading }}</div>
         {%- endif -%}
         <complementary-product-slider
           class="block{% unless is_list_layout %} relative swiper-show-nav-on-hover{% endunless %}"

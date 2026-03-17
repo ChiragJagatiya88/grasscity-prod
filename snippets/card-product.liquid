@@ -111,6 +111,7 @@
 -%}
 <div
   class="product-card product-card-style-{{ pcard_style }}{% if pcard_style == 'card' %} color-{{ settings.pcard_color_scheme }}{% endif %}{{ card_wrapper_class }}{% if list_on_mobile %} product-card-list-on-mobile{% endif %}{% if color_inherit %} color-inherit{% endif %}"
+  data-pid="{{ product.id }}"
 >
   <div class="product-card__wrapper h-full">
     <div class="product-card__image-wrapper{% if second_image == blank %} product-card__image-wrapper--main-only{% endif %} {% if list_on_mobile %}desktop-{% endif %}color-{{ settings.pcard_overlay_color_scheme }} bg-none">
@@ -311,14 +312,20 @@
           </a>
         </p>
       {%- endif -%}
-      <h3 class="product-card__title text-pcard-title">
+      <p class="product-card__title text-pcard-title m-0">
         <a
           class="reversed-link block {% if settings.pcard_title_line_limit != 'none' %} text-limit-{{ settings.pcard_title_line_limit }}{% endif %}"
           href="{{ product.url }}"
         >
           <span class="reversed-link__text">{{- product.title -}}</span>
         </a>
-      </h3>
+      </p>
+
+      {%- assign yotpo_rating = product.metafields.yotpo.reviews_average | plus: 0 -%}
+      {%- if yotpo_rating >= 3 -%}
+        <div class="yotpo-widget-instance" data-yotpo-instance-id="1279532" data-yotpo-product-id="{{product.id}}" data-yotpo-cart-product-id="{{item.product.id}}" data-yotpo-section-id="{{template.name}}"></div>
+      {%- endif -%}
+
       {%- if show_price -%}
         {% comment %} {% render 'price', product: product, alignment: settings.pcard_content_alignment %} {% endcomment %}
         {% render 'us-product-pricing-refresh', product: product %}
@@ -332,6 +339,13 @@
           quick_view_modal_id: quick_view_modal_id
         -%}
       {%- endif -%}
+      
+      {%- if settings.pcard_enable_color_hex -%}
+        {%- render 'product-card-color-swatches.liquid',
+          product: product,
+        -%}
+      {%- endif -%}
+      
     </div>
     <div class="product-card__list-actions hidden gap-3 flex-col">
       {%- if enable_quick_add -%}
@@ -414,5 +428,10 @@
   </div>
   {%- if settings.pcard_choose_options_actions == 'open_popup' or enable_quick_view -%}
     {% render 'quick-view-modal', modal_id: quick_view_modal_id, product: product %}
+  {%- endif -%}
+  {%- if template == 'collection' -%}
+    <script type="application/json" id="new_event_{{ product.id }}">
+      {"item_id":"{{ product.id }}","item_name":{{ product.title | escape | json }},"price":{{ product.price | money_without_currency | replace: ',', '.' }},"currency":"{{ shop.currency }}","item_brand":{{ product.vendor | escape | json }},"item_category":{{ product.type | escape | json }},"item_variant":{{ product.selected_or_first_available_variant.title | replace: 'Default Title', product.title | escape | json }},"quantity":1}
+    </script>
   {%- endif -%}
 </div>

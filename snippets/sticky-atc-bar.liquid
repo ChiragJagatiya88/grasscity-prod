@@ -43,9 +43,9 @@
           {%- endif -%}
         </div>
         <div class="sticky-atc-bar__product-info flex flex-col gap-0d5">
-          <h3 class="sticky-atc-bar__product-title text-pcard-title text-limit-2-lines">
+          <div class="sticky-atc-bar__product-title text-pcard-title text-limit-2-lines">
             {{ product.title }}
-          </h3>
+          </div>
           {%- render 'price', product: product, use_variant: true -%}
         </div>
       </div>
@@ -106,9 +106,9 @@
             {%- endif -%}
           </div>
           <div class="sticky-atc-bar__product-info flex flex-col gap-1">
-            <h3 class="sticky-atc-bar__product-title text-pcard-title text-limit-2-lines">
+            <div class="sticky-atc-bar__product-title text-pcard-title text-limit-2-lines">
               {{ product.title }}
-            </h3>
+            </div>
             {%- render 'price', product: product, use_variant: true -%}
           </div>
         </div>

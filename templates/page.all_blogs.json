@@ -1,0 +1,257 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs_F4iNAA": {
+      "type": "breadcrumbs",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "buttons_with_icon_Aayywi": {
+      "type": "buttons-with-icon",
+      "blocks": {
+        "button_item_i9XVJg": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "All Blogs",
+            "button_link": "shopify://pages/all-blogs",
+            "icon": "none"
+          }
+        },
+        "button_item_p4XLCt": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "How To",
+            "button_link": "shopify://blogs/how-to",
+            "icon": "none"
+          }
+        },
+        "button_item_RTed8M": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Cleaning",
+            "button_link": "shopify://blogs/cleaning",
+            "icon": "none"
+          }
+        },
+        "button_item_9hAjka": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Cannabis Lifestyle",
+            "button_link": "shopify://blogs/cannabis-lifestyle",
+            "icon": "none"
+          }
+        },
+        "button_item_Unt3XW": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "News",
+            "button_link": "shopify://blogs/news",
+            "icon": "none"
+          }
+        },
+        "button_item_8PWCy6": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Guides",
+            "button_link": "shopify://blogs/guides",
+            "icon": "none"
+          }
+        },
+        "button_item_ypcYxL": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Highlights",
+            "button_link": "shopify://blogs/highlights",
+            "icon": "none"
+          }
+        },
+        "button_item_PB7p4g": {
+          "type": "button_item",
+          "disabled": true,
+          "settings": {
+            "button_label": "Guides",
+            "button_link": "shopify://blogs/guides",
+            "icon": "none"
+          }
+        },
+        "button_item_Qbxm94": {
+          "type": "button_item",
+          "disabled": true,
+          "settings": {
+            "button_label": "Bongs",
+            "button_link": "shopify://blogs/bongs",
+            "icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "button_item_i9XVJg",
+        "button_item_p4XLCt",
+        "button_item_RTed8M",
+        "button_item_9hAjka",
+        "button_item_Unt3XW",
+        "button_item_8PWCy6",
+        "button_item_ypcYxL",
+        "button_item_PB7p4g",
+        "button_item_Qbxm94"
+      ],
+      "custom_css": [
+        ".button-item__inner.link_active {background: #7bc710;}"
+      ],
+      "name": "t:sections.buttons-with-icon.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "item_alignment": "left",
+        "item_button_style": "btn--icon",
+        "item_button_font": "button",
+        "enable_slider": true,
+        "swipe_on_mobile": true,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "all_blogs_c3fWXx": {
+      "type": "all_blogs",
+      "blocks": {
+        "item_aKrRrA": {
+          "type": "item",
+          "settings": {
+            "blog": "guides"
+          }
+        },
+        "item_U4GeBm": {
+          "type": "item",
+          "settings": {
+            "blog": "highlights"
+          }
+        },
+        "item_h8P7HD": {
+          "type": "item",
+          "settings": {
+            "blog": "news"
+          }
+        },
+        "item_wm7NWt": {
+          "type": "item",
+          "settings": {
+            "blog": "cannabis-lifestyle"
+          }
+        },
+        "item_RU7xEH": {
+          "type": "item",
+          "settings": {
+            "blog": "cleaning"
+          }
+        },
+        "item_VaXhJU": {
+          "type": "item",
+          "settings": {
+            "blog": "product-reviews"
+          }
+        },
+        "item_kDGaKx": {
+          "type": "item",
+          "settings": {
+            "blog": "lifestyle"
+          }
+        },
+        "item_Rkqdnz": {
+          "type": "item",
+          "settings": {
+            "blog": "vape"
+          }
+        },
+        "item_TwYNFJ": {
+          "type": "item",
+          "settings": {
+            "blog": "dab-rigs"
+          }
+        },
+        "item_Qbxich": {
+          "type": "item",
+          "settings": {
+            "blog": "cleaning"
+          }
+        },
+        "item_HVFibX": {
+          "type": "item",
+          "settings": {
+            "blog": "smoking"
+          }
+        },
+        "item_z9JP7b": {
+          "type": "item",
+          "settings": {
+            "blog": "bongs"
+          }
+        }
+      },
+      "block_order": [
+        "item_aKrRrA",
+        "item_U4GeBm",
+        "item_h8P7HD",
+        "item_wm7NWt",
+        "item_RU7xEH",
+        "item_VaXhJU",
+        "item_kDGaKx",
+        "item_Rkqdnz",
+        "item_TwYNFJ",
+        "item_Qbxich",
+        "item_HVFibX",
+        "item_z9JP7b"
+      ],
+      "name": "All Blogs",
+      "settings": {
+        "enable_custom_class": false,
+        "section_class": "",
+        "enable_container": false,
+        "sec_title": "All Blogs",
+        "section_bg": "",
+        "section_gradient_bg": "",
+        "enable_custom_padding": false,
+        "padding_desk": "20px 20px",
+        "padding_mob": "20px 20px"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_F4iNAA",
+    "buttons_with_icon_Aayywi",
+    "main",
+    "all_blogs_c3fWXx"
+  ]
+}

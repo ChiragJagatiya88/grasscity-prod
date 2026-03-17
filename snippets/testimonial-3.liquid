@@ -130,7 +130,7 @@
               {% endif %}
               <div class="testimonial__info text-left flex gap-x-2 gap-y-1{% if author_info_vertical %} flex-col{% else %} flex-wrap items-center{% endif %}">
                 {% if author != blank %}
-                  <h3 class="testimonial__name h6">{{ author }}</h3>
+                  <div class="testimonial__name h6">{{ author }}</div>
                 {% endif %}
                 {% if bio != blank %}
                   <div class="testimonial__bio text-subtext text-sm">{{ bio }}</div>

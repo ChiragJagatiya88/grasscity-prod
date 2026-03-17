@@ -11,8 +11,7 @@
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
-    background: #1f1f1f;
-    /* Background color */
+    background: #b52e27;
   }
 
   /* Lines on both sides */
@@ -68,7 +67,7 @@
   }
 </style>
 {% unless customer %}
-  <section class="cc-join-banner-section" id="cc-join-banner-section">
+  <section class="cc-join-banner-section page-width page-width--fixed" id="cc-join-banner-section">
     <div class="container mx-auto items-center py-2 lg:py-0 px-2 md:px-3">
       <div class="cc-join-banner-wrap">
         <div class="cc-join-banner">
@@ -129,7 +128,7 @@
             <div class="cc-join-banner-row1_inner">
               <div class="cc-join-banner-logo">
                 <img
-                  src="{{ 'cc-elite-logo.webp' | file_url }}"
+                  src="{{ 'cc-elite-logo.png' | file_url }}"
                   class="img-responsive"
                   alt="Elite Logo"
                 >
@@ -174,8 +173,12 @@
 
 <style>
 /* Join CC Banner */
-.cc-join-banner-section { 
+.cc-join-banner-section > .container { 
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
 }
+
 #cc-elite-join-banner-section .cc-join-banner-row1 {
   background: var(--Color-Elite-Blue-900, #031546);
 }
@@ -183,8 +186,8 @@
 
 .cc-join-banner-row1 {
   background: var(--Color-Canna-Cabana-Red-500, #e1251c);
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 .cc-join-banner-row1_inner{
   display: grid;
@@ -229,13 +232,13 @@
 }
 
 #cc-elite-join-banner-section .cc-join-banner-row2 {
-  background: #1F1F1F;
+  background: #b52e27;
 }
 .cc-join-membership-info *{
   color:#fff;
 }
 .cc-join-banner-row2 {
-  background: var(--Color-Canna-Cabana-Red-900, #1F1F1F); 
+  background: var(--Color-Canna-Cabana-Red-900, #b52e27); 
   padding-bottom: 20px;
   margin-top: -2px;
   padding-top: 10px;

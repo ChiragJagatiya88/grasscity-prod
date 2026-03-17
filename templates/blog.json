@@ -18,10 +18,134 @@
         "padding_bottom": 20
       }
     },
+    "buttons_with_icon_dynTr9": {
+      "type": "buttons-with-icon",
+      "blocks": {
+        "button_item_UWr3n9": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "All Blogs",
+            "button_link": "shopify://pages/all-blogs",
+            "icon": "none"
+          }
+        },
+        "button_item_bVcmxE": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "How To",
+            "button_link": "shopify://blogs/how-to",
+            "icon": "none"
+          }
+        },
+        "button_item_mQydbA": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Cleaning",
+            "button_link": "shopify://blogs/cleaning",
+            "icon": "none"
+          }
+        },
+        "button_item_btLnpz": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Cannabis Lifestyle",
+            "button_link": "shopify://blogs/cannabis-lifestyle",
+            "icon": "none"
+          }
+        },
+        "button_item_7wDLEJ": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "News",
+            "button_link": "shopify://blogs/news",
+            "icon": "none"
+          }
+        },
+        "button_item_8wtQti": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Guides",
+            "button_link": "shopify://blogs/guides",
+            "icon": "none"
+          }
+        },
+        "button_item_8FGWhn": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Highlights",
+            "button_link": "shopify://blogs/highlights",
+            "icon": "none"
+          }
+        },
+        "button_item_VVgEBA": {
+          "type": "button_item",
+          "disabled": true,
+          "settings": {
+            "button_label": "Guides",
+            "button_link": "shopify://blogs/guides",
+            "icon": "none"
+          }
+        },
+        "button_item_wUV4Aw": {
+          "type": "button_item",
+          "disabled": true,
+          "settings": {
+            "button_label": "Bongs",
+            "button_link": "shopify://blogs/bongs",
+            "icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "button_item_UWr3n9",
+        "button_item_bVcmxE",
+        "button_item_mQydbA",
+        "button_item_btLnpz",
+        "button_item_7wDLEJ",
+        "button_item_8wtQti",
+        "button_item_8FGWhn",
+        "button_item_VVgEBA",
+        "button_item_wUV4Aw"
+      ],
+      "custom_css": [
+        ".button-item__inner.link_active {background: #7bc710;}"
+      ],
+      "name": "t:sections.buttons-with-icon.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "item_alignment": "left",
+        "item_button_style": "btn--icon",
+        "item_button_font": "button",
+        "enable_slider": true,
+        "swipe_on_mobile": true,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
     "buttons_with_icon_Aayywi": {
       "type": "buttons-with-icon",
       "blocks": {
         "button_item_i9XVJg": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "All Blogs",
+            "button_link": "shopify://pages/all-blogs",
+            "icon": "none"
+          }
+        },
+        "button_item_p4XLCt": {
           "type": "button_item",
           "settings": {
             "button_label": "Product Reviews",
@@ -88,6 +212,7 @@
       },
       "block_order": [
         "button_item_i9XVJg",
+        "button_item_p4XLCt",
         "button_item_RTed8M",
         "button_item_9hAjka",
         "button_item_Unt3XW",
@@ -96,6 +221,7 @@
         "button_item_PB7p4g",
         "button_item_Qbxm94"
       ],
+      "disabled": true,
       "custom_css": [
         ".button-item__inner.link_active {background: #7bc710;}"
       ],
@@ -179,19 +305,19 @@
           "type": "column",
           "settings": {
             "icon": "truck",
-            "max_width": 28,
-            "max_width_mb": 28,
-            "title": "Free Shipping on US Orders Above $50 USD",
+            "max_width": 50,
+            "max_width_mb": 30,
+            "title": "Free Shipping",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
-            "heading_size": "h6",
+            "heading_size": "h4",
             "heading_font": "heading",
-            "text": "",
-            "text_size": "text-base",
-            "button_label": "",
-            "button_link": "",
+            "text": "<p>All orders over $500 are delivered to your doorstep at no extra charge.</p>",
+            "text_size": "text-lg",
+            "button_label": "Shipping Details",
+            "button_link": "shopify://pages/free-shipping-worldwide",
             "button_style": "btn--underline",
             "button_icon": "none"
           }
@@ -200,61 +326,19 @@
           "type": "column",
           "settings": {
             "icon": "arrow-up-left",
-            "max_width": 28,
-            "max_width_mb": 28,
-            "title": "Easy Returns",
+            "max_width": 50,
+            "max_width_mb": 30,
+            "title": "30-Days Free Returns",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
-            "heading_size": "h6",
+            "heading_size": "h4",
             "heading_font": "heading",
-            "text": "",
-            "text_size": "text-base",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "btn--underline",
-            "button_icon": "none"
-          }
-        },
-        "column_dykh4d": {
-          "type": "column",
-          "settings": {
-            "icon": "chat",
-            "max_width": 28,
-            "max_width_mb": 28,
-            "title": "Oldest Online Smoke Shop",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h6",
-            "heading_font": "heading",
-            "text": "",
-            "text_size": "text-base",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "btn--underline",
-            "button_icon": "none"
-          }
-        },
-        "column_x7UFVH": {
-          "type": "column",
-          "settings": {
-            "icon": "clock",
-            "max_width": 28,
-            "max_width_mb": 28,
-            "title": "Over 22 years on the market",
-            "highlight_style": "none",
-            "highlight_font_style": "italic",
-            "highlight_style_color": "",
-            "highlight_text_color": "",
-            "heading_size": "h6",
-            "heading_font": "heading",
-            "text": "",
-            "text_size": "text-base",
-            "button_label": "",
-            "button_link": "",
+            "text": "<p>Enjoy the freedom of stress-free shopping with our hassle-free and return policy.</p>",
+            "text_size": "text-lg",
+            "button_label": "Return Policy",
+            "button_link": "shopify://pages/easy-returns",
             "button_style": "btn--underline",
             "button_icon": "none"
           }
@@ -262,20 +346,20 @@
         "column_DdrPm3": {
           "type": "column",
           "settings": {
-            "icon": "smiley",
-            "max_width": 28,
-            "max_width_mb": 28,
-            "title": "Over 61K+ positive reviews",
+            "icon": "currency-circle-dollar",
+            "max_width": 50,
+            "max_width_mb": 30,
+            "title": "Secure Payment",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
-            "heading_size": "h6",
+            "heading_size": "h4",
             "heading_font": "heading",
-            "text": "",
-            "text_size": "text-base",
-            "button_label": "",
-            "button_link": "",
+            "text": "<p>Shop with confidence knowing your payments are secure and your information</p>",
+            "text_size": "text-lg",
+            "button_label": "More About Payment",
+            "button_link": "shopify://pages/membership-terms-and-conditions",
             "button_style": "btn--underline",
             "button_icon": "none"
           }
@@ -284,14 +368,13 @@
       "block_order": [
         "column_tzfiEU",
         "column_ztCHpe",
-        "column_dykh4d",
-        "column_x7UFVH",
         "column_DdrPm3"
       ],
+      "disabled": true,
       "name": "t:sections.multicolumn-with-icon.name",
       "settings": {
         "container": "fixed",
-        "color_scheme": "",
+        "color_scheme": "scheme-info",
         "header_layout": "vertical",
         "section_header_alignment": "center",
         "section_header_alignment_mobile": "inherit",
@@ -309,11 +392,11 @@
         "button_style": "btn--underline",
         "button_icon": "none",
         "enable_sticky": false,
-        "card_color_scheme": "scheme-info",
+        "card_color_scheme": "scheme-1",
         "content_alignment": "center",
         "image_position": "top",
         "icon_color": "#1d349a",
-        "columns_desktop": 5,
+        "columns_desktop": 3,
         "column_gap": "extra-small",
         "row_gap": "inherit",
         "show_divider_col": false,
@@ -321,46 +404,16 @@
         "swipe_on_mobile": false,
         "show_section_divider": false,
         "divider_width": "fixed",
-        "padding_top": 0,
+        "padding_top": 50,
         "padding_bottom": 50
-      }
-    },
-    "scrolling_promotion_CAFdy7": {
-      "type": "scrolling-promotion",
-      "blocks": {
-        "text_DC8BrN": {
-          "type": "text",
-          "settings": {
-            "text_link": "",
-            "text": "Welcome to our store",
-            "text_size": "h2",
-            "text_opacity": 100,
-            "use_custom_color": false,
-            "custom_color": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "text_DC8BrN"
-      ],
-      "name": "t:sections.scrolling-promotion.name",
-      "settings": {
-        "color_scheme": "scheme-inverse",
-        "direction": "left",
-        "pause_on_hover": false,
-        "speed": 0.3,
-        "h_spacing": 50,
-        "show_section_divider": false,
-        "padding_top": 20,
-        "padding_bottom": 20
       }
     }
   },
   "order": [
     "breadcrumbs_F4iNAA",
+    "buttons_with_icon_dynTr9",
     "buttons_with_icon_Aayywi",
     "main",
-    "multicolumn_icon_ycUW8j",
-    "scrolling_promotion_CAFdy7"
+    "multicolumn_icon_ycUW8j"
   ]
 }

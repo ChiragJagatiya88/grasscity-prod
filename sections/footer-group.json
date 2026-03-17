@@ -11,6 +11,117 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "scrolling_promotion_nLr4dc": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "text_fwhNM6": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Fast Delivery",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "text_kzrFcw": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Easy Returns",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "text_eVLGgE": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Lowest Price Guaranteed",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "text_Ra4p7B": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Secure Checkout",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "text_6xdq9F": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text_link": "",
+            "text": "Sustainable Materials",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "text_fwhNM6",
+        "text_kzrFcw",
+        "text_eVLGgE",
+        "text_Ra4p7B",
+        "text_6xdq9F"
+      ],
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "scheme-3",
+        "direction": "left",
+        "pause_on_hover": true,
+        "speed": 0.2,
+        "h_spacing": 40,
+        "show_section_divider": false,
+        "padding_top": 22,
+        "padding_bottom": 22
+      }
+    },
+    "rich_text_Mt8TLh": {
+      "type": "rich-text",
+      "blocks": {
+        "text_8PhDAd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>* Our Lowest price guaranteed is backed by our price match policy. See <a href=\"/pages/price-match-policy\" title=\"Price Match Policy\">Price MatchPolicy</a> for details.<br/>**Available where permitted by law. Our hemp-derived products contain less than 0.3% Δ9-THC on a dry weight basis in compliance with the 2018 Farm Bill. State and local laws may vary. Please verify the laws for your region before purchase.<br/>Statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.<br/>This website is intended for adults 21 years of age or older. By entering this site, you agree to our terms and conditions. We do not sell products to minors. Please consume responsibly.</p>",
+            "text_size": "text-base",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "text_8PhDAd"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "enable_custom_class": false,
+        "section_class": "",
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "left",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
     "multicolumn_icon_rTKNUF": {
       "type": "multicolumn-icon",
       "blocks": {
@@ -48,7 +159,7 @@
             "highlight_text_color": "",
             "heading_size": "text-base",
             "heading_font": "heading",
-            "text": "<p><a href=\"tel:+1 (888) 334-6363\">+1 (888) 334-6363</a> (tool-free)</p>",
+            "text": "<p><a href=\"tel:+1 (888) 334-6363\">+1 (888) 334-6363</a></p>",
             "text_size": "text-base",
             "button_label": "",
             "button_link": "",
@@ -69,7 +180,7 @@
             "highlight_text_color": "",
             "heading_size": "text-base",
             "heading_font": "heading",
-            "text": "<p><a href=\"mailto:touch@garacestore.com\" title=\"mailto:touch@garacestore.com\">touch@garacestore.com</a></p>",
+            "text": "<p><a href=\"mailto:support@grasscity.com\" title=\"mailto:support@grasscity.com\">support@grasscity.com</a></p>",
             "text_size": "text-base",
             "button_label": "",
             "button_link": "",
@@ -79,6 +190,7 @@
         },
         "column_ngN6XL": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "icon": "map-pin",
             "max_width": 32,
@@ -105,6 +217,7 @@
         "column_69fN8n",
         "column_ngN6XL"
       ],
+      "disabled": true,
       "custom_css": [
         ".rich-text__text {--text-margin-top: 0.4rem;}"
       ],
@@ -132,7 +245,7 @@
         "content_alignment": "left",
         "image_position": "left",
         "icon_color": "#1d349a",
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "column_gap": "large",
         "row_gap": "inherit",
         "show_divider_col": true,
@@ -140,7 +253,7 @@
         "swipe_on_mobile": false,
         "show_section_divider": false,
         "divider_width": "fixed",
-        "padding_top": 32,
+        "padding_top": 20,
         "padding_bottom": 32
       }
     },
@@ -151,10 +264,10 @@
           "type": "newsletter",
           "settings": {
             "block_width": 50,
-            "heading": "Join Our Newsletter",
+            "heading": "Join the Grasscity Community",
             "heading_size": "h3",
-            "newsletter_description": "<p>Sign up to our newsletter & receive 10% off your first order.</p>",
-            "newsletter_term": "<p>By subscribing you agree to the <a href=\"/policies/terms-of-service\" title=\"Terms of Service\">Terms of Services</a>  and  <a href=\"/policies/privacy-policy\" title=\"Privacy Policy\">Privacy Policy.</a></p>",
+            "newsletter_description": "<p>Get the latest drops, exclusive deals, and sesh-worthy gear straight to your inbox.</p>",
+            "newsletter_term": "",
             "newsletter_text_alignment": "left",
             "form_width": 465,
             "button_style": "btn--primary",
@@ -166,9 +279,9 @@
           "type": "menu",
           "settings": {
             "block_width": 15,
-            "heading": "Categories",
+            "heading": "Explore",
             "heading_size": "h6",
-            "menu": "footer-menu-1",
+            "menu": "explore",
             "open_default": false,
             "show_divider": false
           }
@@ -188,9 +301,9 @@
           "type": "menu",
           "settings": {
             "block_width": 15,
-            "heading": "Get to Know Us",
+            "heading": "Popular",
             "heading_size": "h6",
-            "menu": "footer-3",
+            "menu": "footer-menu-1",
             "open_default": false,
             "show_divider": false
           }
@@ -211,7 +324,7 @@
         "social_button_style": "btn--icon",
         "enable_country_selector": false,
         "enable_language_selector": false,
-        "enable_market_links": true,
+        "enable_market_links": false,
         "payment_enable": true,
         "footer_layout": "standard",
         "footer_bottom_menu": "footer",
@@ -226,7 +339,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.name",
       "settings": {
-        "custom_liquid": "<div class=\"page-width page-width--fixed\">\n<p style=\"margin-bottom: 16px;font-size: 10px;line-height: 1.8;color: rgba(83, 83, 83, 1);\">All products are intended for legal dry herb or tobacco usage.&nbsp; The statements and vaporizers &amp; products shown on this website have not been evaluated by the US Food and Drug Administration (FDA). These devices are not designed to diagnose, cure, prevent, or treat any disease. Before using a vaporizer, please consult with a licensed health care provider. If you use a vaporizer, you do so at your own risk. Inhalation is inadvisable and may potentially be harmful. Any comments from user-submitted reviews found on this website are related to the users own personal experiences, and are not endorsed, reviewed, or necessarily shared by&nbsp;grasscity.com&nbsp;or its affiliates. Vaporizing does not necessarily eliminate any and all toxins found in vaporized substances, so much care should be taken prior to use. By using&nbsp;grasscity.com, you acknowledge and agree to abide by our Terms of Use page before making any purchase on this website</p>\n</div>",
+        "custom_liquid": "<div class=\"footer-text\">\n<p style=\"margin-bottom: 16px;font-size: 10px;line-height: 1.8;color: rgba(83, 83, 83, 1);\">All products are intended for legal dry herb or tobacco usage.&nbsp; The statements and vaporizers &amp; products shown on this website have not been evaluated by the US Food and Drug Administration (FDA). These devices are not designed to diagnose, cure, prevent, or treat any disease. Before using a vaporizer, please consult with a licensed health care provider. If you use a vaporizer, you do so at your own risk. Inhalation is inadvisable and may potentially be harmful. Any comments from user-submitted reviews found on this website are related to the users own personal experiences, and are not endorsed, reviewed, or necessarily shared by&nbsp;grasscity.com&nbsp;or its affiliates. Vaporizing does not necessarily eliminate any and all toxins found in vaporized substances, so much care should be taken prior to use. By using&nbsp;grasscity.com, you acknowledge and agree to abide by our Terms of Use page before making any purchase on this website</p>\n</div>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -277,6 +390,8 @@
     }
   },
   "order": [
+    "scrolling_promotion_nLr4dc",
+    "rich_text_Mt8TLh",
     "multicolumn_icon_rTKNUF",
     "footer",
     "custom_liquid_fgVUKt",

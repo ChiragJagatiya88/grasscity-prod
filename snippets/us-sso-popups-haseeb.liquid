@@ -1,6 +1,7 @@
 {% assign logo_url = settings.logo | image_url %}
 {% assign client = 'Nw3uyTHXfdCnsjsF8FRG4A==:+kvnG2QrQozmO4zvVAXM4kAT+1sOO2I32Zc3g7GGzZAPF2E5c4Dv8gATWYa14vw0' %}
 {% assign elite_id = settings.elite_product.selected_or_first_available_variant.id %}
+{% assign elite_renew_id = settings.elite_product_renew.variants.first.id %}
 
 {% comment %} <p>elite_id: {{ elite_id }}</p> {% endcomment %}
 
@@ -356,11 +357,12 @@
 
     <div class="subscribe_elite_membershop new_forms elite new_hidden">
       <div class="img_logo_popup">
-        <img src="https://cdn.shopify.com/s/files/1/0350/8253/files/elite-logo.png?v=1740644974" alt="Logo" >
+        <img src="https://cdn.shopify.com/s/files/1/0969/6768/8512/files/cc-elite-logo.png?v=1772087509" alt="Logo" >
       </div>
       <div class="renew_membership">
         <p class="h2"> Your Membership is about to Expires in <div class="expires_days">0</div> Days</p>
-        <p class="text_sub_renew">RENEW NOW FOR $30/yr</p>
+        {% comment %} <p class="text_sub_renew">RENEW NOW FOR $30/yr</p> {% endcomment %}
+        <p class="text_sub_renew">RENEW NOW FOR <s>$30</s> <b>$15/yr</b></p>
         <p class="text_sub_renew-small">Limited time offer. Enjoy FREE shipping, exclusive savings, and VIP perks.</p>
         <span class="c_error"></span>
         <button type="button" class="elite_btn renew_membership__btn">Renew Now</button>
@@ -369,11 +371,11 @@
     </div>
     <div class="campaign_elite_membership new_forms elite new_hidden">
       <div class="img_logo_popup">
-        <img src="https://cdn.shopify.com/s/files/1/0350/8253/files/elite-logo.png?v=1740644974" alt="Logo" >
+        <img src="https://cdn.shopify.com/s/files/1/0969/6768/8512/files/cc-elite-logo.png?v=1772087509" alt="Logo" >
       </div>
       <div class="renew_membership">
         <p class="h2">Your Elite Membership is expiring soon</p>
-        <p class="details">Renew now for $30/Year</p>
+        <p class="details">Renew now for <s>$30</s> <b>$15/yr</b></p>
         <p class="details">Limited Time Offer</p>
       </div>
       <div class="renew_action">
@@ -384,7 +386,7 @@
     <div class="main_elite_upgrade_form new_forms elite new_hidden">
       <form id="eliteUpgradeForm">
         <div class="img_logo_popup">
-          <img src="https://cdn.shopify.com/s/files/1/0350/8253/files/elite-logo.png?v=1740644974" alt="Logo">
+          <img src="https://cdn.shopify.com/s/files/1/0969/6768/8512/files/cc-elite-logo.png?v=1772087509" alt="Logo">
         </div>
 
         <div class="upgrade_first_step_elite">
@@ -718,7 +720,7 @@
       event.preventDefault();
 
       try {
-        const elite_added = await addEliteProductToCart();
+        const elite_added = await addEliteProductToCart(true);
         const errorElement = document.querySelector('.renew_membership .c_error');
         const messageElement = document.querySelector('.renew_membership_message');
 
@@ -743,7 +745,7 @@
     btn.addEventListener('click', async function (event) {
       event.preventDefault();
       try {
-        const elite_added = await addEliteProductToCart();
+        const elite_added = await addEliteProductToCart(true);
         const errorElement = document.querySelector('.renew_membership_error');
         //const messageElement = document.querySelector('.renew_membership__link_complete');
 
@@ -810,7 +812,7 @@
       popup.style.display = 'block';
       overlay.style.display = 'block';
       localStorage.setItem("renew_popup_open_once", true)
-      lockPageScroll();
+      // lockPageScroll();
     }
   }
   checkIfMembershipExpiring = function (date) {
@@ -921,8 +923,12 @@
     }
   }
 
-  async function addEliteProductToCart() {
-    const id = "{{ elite_id }}";
+  async function addEliteProductToCart(renew=false) {
+    let id = "{{ elite_id }}";
+    console.log("renew", renew);
+    if(renew){
+      id = "{{ elite_renew_id }}"
+    }
     const get_cart = await getCart();
     const matched_item = get_cart.items.find((item) => item.variant_id == id);
 

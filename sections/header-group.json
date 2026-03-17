@@ -7,33 +7,34 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
     "topbar_3YD96h": {
       "type": "topbar",
       "blocks": {
-        "link_list_En8dpz": {
-          "type": "link_list",
-          "settings": {
-            "menu": "main-menu",
-            "position": "left"
-          }
-        },
         "text_Ahn3nP": {
           "type": "text",
           "settings": {
-            "text": "✌🏼 Free Express Shipping on orders $50!",
-            "position": "center",
+            "text": "Unlock UNBEATABLE Member Prices-Join Cabana Club for FREE!",
+            "position": "left",
             "highlight_text": "",
             "highlight_text_style": "button",
             "highlight_text_color": "",
             "highlight_text_background_color": ""
           }
         },
+        "link_list_En8dpz": {
+          "type": "link_list",
+          "settings": {
+            "menu": "main-menu",
+            "position": "right"
+          }
+        },
         "language_country_MyFf6D": {
           "type": "language_country",
+          "disabled": true,
           "settings": {
             "show_language_selector": false,
             "show_country_selector": false,
@@ -42,6 +43,74 @@
           }
         },
         "social_links_BcFqP9": {
+          "type": "social_links",
+          "disabled": true,
+          "settings": {
+            "show_facebook": true,
+            "show_instagram": true,
+            "show_twitter": true,
+            "show_tiktok": true,
+            "show_pinterest": false,
+            "show_snapchat": false,
+            "show_tumblr": false,
+            "show_youtube": false,
+            "show_vimeo": false,
+            "position": "right"
+          }
+        }
+      },
+      "block_order": [
+        "text_Ahn3nP",
+        "link_list_En8dpz",
+        "language_country_MyFf6D",
+        "social_links_BcFqP9"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".topbar-section .topbar {background: #e1251c; color: #fff;}",
+        ".topbar__center {display: none;}",
+        "@media (min-width: 1024px) {.topbar__inner {grid-template-columns: 1fr 1fr; column-gap: 2rem; }}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "show_separator_line": false,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "topbar_wWXJWm": {
+      "type": "topbar",
+      "blocks": {
+        "link_list_BiLRBq": {
+          "type": "link_list",
+          "settings": {
+            "menu": "main-menu",
+            "position": "left"
+          }
+        },
+        "text_A7Wt4A": {
+          "type": "text",
+          "settings": {
+            "text": "Free Shipping on Qualifying Orders Over $50",
+            "position": "center",
+            "highlight_text": "",
+            "highlight_text_style": "button",
+            "highlight_text_color": "",
+            "highlight_text_background_color": ""
+          }
+        },
+        "language_country_tzMjBj": {
+          "type": "language_country",
+          "disabled": true,
+          "settings": {
+            "show_language_selector": false,
+            "show_country_selector": false,
+            "show_market_links": true,
+            "position": "right"
+          }
+        },
+        "social_links_xNLXaQ": {
           "type": "social_links",
           "settings": {
             "show_facebook": true,
@@ -58,10 +127,10 @@
         }
       },
       "block_order": [
-        "link_list_En8dpz",
-        "text_Ahn3nP",
-        "language_country_MyFf6D",
-        "social_links_BcFqP9"
+        "link_list_BiLRBq",
+        "text_A7Wt4A",
+        "language_country_tzMjBj",
+        "social_links_xNLXaQ"
       ],
       "custom_css": [],
       "settings": {
@@ -117,6 +186,20 @@
             "image_ratio": "adapt"
           }
         },
+        "sidebar_fiVQ4j": {
+          "type": "sidebar",
+          "name": "Bubblers",
+          "settings": {
+            "menu_title": "Bubblers",
+            "enable_hl_link": false,
+            "hl_link_style": "text_color",
+            "hl_link_color": "",
+            "menu_columns": 3,
+            "show_collection_image": false,
+            "show_image_of_first_product": false,
+            "image_ratio": "adapt"
+          }
+        },
         "sidebar_BKE9HW": {
           "type": "sidebar",
           "name": "Herb Grinders",
@@ -149,7 +232,7 @@
           "type": "sidebar",
           "name": "Smoking Pipes",
           "settings": {
-            "menu_title": "Smoking Pipes",
+            "menu_title": "Pipes",
             "enable_hl_link": false,
             "hl_link_style": "text_color",
             "hl_link_color": "",
@@ -186,17 +269,27 @@
             "show_image_of_first_product": false,
             "image_ratio": "adapt"
           }
+        },
+        "hightlight_link_KBe7iR": {
+          "type": "hightlight_link",
+          "settings": {
+            "hl_link_title": "Delta 9 THC",
+            "hl_link_style": "star_twinkle",
+            "hl_link_color": "#c4301c"
+          }
         }
       },
       "block_order": [
         "sidebar_aNyMLV",
         "sidebar_tjfBAn",
         "sidebar_U3yyww",
+        "sidebar_fiVQ4j",
         "sidebar_BKE9HW",
         "sidebar_6miiGN",
         "sidebar_zBNGHX",
         "sidebar_7wn3PU",
-        "sidebar_3xAEYB"
+        "sidebar_3xAEYB",
+        "hightlight_link_KBe7iR"
       ],
       "settings": {
         "container": "fixed",
@@ -212,7 +305,7 @@
         "show_social_media_icons": true,
         "enable_language_selector": false,
         "enable_country_selector": false,
-        "enable_market_links": true,
+        "enable_market_links": false,
         "header_top_padding_top": 20,
         "header_top_padding_bottom": 20,
         "navigation_color_scheme": "",
@@ -224,6 +317,7 @@
   },
   "order": [
     "topbar_3YD96h",
+    "topbar_wWXJWm",
     "header"
   ]
 }

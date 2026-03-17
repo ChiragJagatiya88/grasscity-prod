@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "breadcrumbs_DgnWDV": {
       "type": "breadcrumbs",
@@ -102,7 +102,7 @@
           "type": "text",
           "settings": {
             "text_link": "",
-            "text": "550K+ Customers",
+            "text": "49K+ 5-Star Reviews",
             "text_size": "h2",
             "text_opacity": 100,
             "use_custom_color": true,
@@ -325,18 +325,17 @@
         "column_Wg3M3M": {
           "type": "column",
           "settings": {
-            "icon": "truck",
-            "image": "shopify://shop_images/shipping_c8a6b279-d6aa-47ec-baaf-c20c30ee3225.png",
+            "icon": "package",
             "max_width": 28,
             "max_width_mb": 28,
-            "title": "Fast Free Shipping",
+            "title": "Expertly Curated Selection",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
             "heading_size": "h6",
             "heading_font": "heading",
-            "text": "<p>Available on qualifying orders.</p>",
+            "text": "<p>We offer hand-picked, quality-tested products from trusted brands, featuring exclusive collaborations and limited editions.</p>",
             "text_size": "text-base",
             "button_label": "",
             "button_link": "",
@@ -347,18 +346,17 @@
         "column_UmtTiC": {
           "type": "column",
           "settings": {
-            "icon": "currency-circle-dollar",
-            "image": "shopify://shop_images/gs_icon_price_469b9e3c-641b-4ab7-9a16-4d31679c67e3.png",
+            "icon": "lightning",
             "max_width": 28,
             "max_width_mb": 28,
-            "title": "Lowest Price Guarantee",
+            "title": "Fast & Secure",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
             "heading_size": "h6",
             "heading_font": "heading",
-            "text": "<p>5% <a href=\"https://www.grasscity.com/price-match-policy\" target=\"_blank\" title=\"https://www.grasscity.com/price-match-policy\">price beat</a> on eligible items.</p>",
+            "text": "<p>Enjoy discreet packaging for privacy, free shipping on orders over $50, and secure PCI-compliant payment processing.</p>",
             "text_size": "text-base",
             "button_label": "",
             "button_link": "",
@@ -369,18 +367,17 @@
         "column_TU4gke": {
           "type": "column",
           "settings": {
-            "icon": "package",
-            "image": "shopify://shop_images/Warranty.png",
+            "icon": "phone",
             "max_width": 28,
             "max_width_mb": 28,
-            "title": "Secure Checkout",
+            "title": "24/7 Expert Support",
             "highlight_style": "none",
             "highlight_font_style": "italic",
             "highlight_style_color": "",
             "highlight_text_color": "",
             "heading_size": "h6",
             "heading_font": "heading",
-            "text": "<p>Shop with confidence using safe & secure payment methods.</p>",
+            "text": "<p>Our knowledgeable team is ready to assist via live chat, email, or phone, with comprehensive product guides and resources available.</p>",
             "text_size": "text-base",
             "button_label": "",
             "button_link": "",
@@ -418,7 +415,7 @@
         "card_color_scheme": "",
         "content_alignment": "left",
         "image_position": "left",
-        "icon_color": "#1d349a",
+        "icon_color": "#1D349A",
         "columns_desktop": 3,
         "column_gap": "large",
         "row_gap": "inherit",

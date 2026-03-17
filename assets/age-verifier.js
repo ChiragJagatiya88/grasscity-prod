@@ -33,7 +33,7 @@ if (!customElements.get('age-verifier')) {
       }
 
       get cookieName() {
-        return 'concept:age-verifier';
+        return 'age_verified';
       }
 
       init() {
@@ -41,6 +41,30 @@ if (!customElements.get('age-verifier')) {
         if (this.testMode || !this.getCookie(this.cookieName)) {
           this.load(this.delay);
         }
+      }
+
+      connectedCallback() {
+        if (super.connectedCallback) super.connectedCallback();
+        const yesBtn = this.querySelector('.age-verifier__btn--yes');
+        if (yesBtn) {
+          yesBtn.addEventListener('click', () => this.onConfirm());
+        }
+        const noBtn = this.querySelector('.age-verifier__btn--no');
+        if (noBtn && noBtn.tagName === 'BUTTON') {
+          noBtn.addEventListener('click', () => this.onDecline());
+        }
+      }
+
+      onDecline() {
+        const formContent = this.querySelector('.age-verifier__form-content');
+        const restrictedContent = this.querySelector('.restricted-popup__content');
+        if (formContent) formContent.classList.add('hidden');
+        if (restrictedContent) restrictedContent.classList.remove('hidden');
+      }
+
+      onConfirm() {
+        if (this.testMode) return;
+        this.setCookie(this.cookieName, this.expiry);
       }
 
       load(delay) {
@@ -57,13 +81,19 @@ if (!customElements.get('age-verifier')) {
       afterHide() {
         if (super.afterHide) super.afterHide();
         this.classList.remove('show-image');
-
         if (this.testMode) {
           this.removeCookie(this.cookieName);
-          return;
         }
+      }
 
-        this.setCookie(this.cookieName, this.expiry);
+      prepareToShow() {
+        if (super.prepareToShow) super.prepareToShow();
+        document.body.classList.add('age_modal_open');
+      }
+
+      prepareToHide() {
+        if (super.prepareToHide) super.prepareToHide();
+        document.body.classList.remove('age_modal_open');
       }
 
       getCookie(name) {
@@ -76,7 +106,7 @@ if (!customElements.get('age-verifier')) {
       }
 
       removeCookie(name) {
-        document.cookie = `${name}=; max-age=0`;
+        document.cookie = `${name}=; max-age=0; path=/`;
       }
     }
   );

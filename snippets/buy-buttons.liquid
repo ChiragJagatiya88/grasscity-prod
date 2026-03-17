@@ -20,6 +20,26 @@
     if block.settings.show_dynamic_checkout and gift_card_recipient_feature_active == false
       assign show_dynamic_checkout = true
     endif
+
+    assign is_elite_product = false
+    if settings.elite_product != blank and product.id == settings.elite_product.id
+      assign is_elite_product = true
+    endif
+
+    assign is_elite_renew_product = false
+    if settings.elite_product_renew != blank and product.id == settings.elite_product_renew.id
+      assign is_elite_renew_product = true
+    endif
+
+    assign elite_cart_qty = 0
+    if is_elite_product
+      assign elite_cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id
+    endif
+    
+    assign elite_renew_cart_qty = 0
+    if is_elite_renew_product
+      assign elite_renew_cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id
+    endif
   -%}
   <div
     class="product-form"
@@ -57,6 +77,9 @@
         {% endif %}
         class="product-variant-id"
       >
+      {%- if is_elite_product or is_elite_renew_product -%}
+        <input type="hidden" name="quantity" value="1">
+      {%- endif -%}
       {%- liquid
         assign check_against_inventory = true
         if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
@@ -73,9 +96,21 @@
       {%- if product.quantity_price_breaks_configured? -%}
         <div
           id="QuantityForm-{{ section_id }}"
-          class="{% if block.settings.show_quantity_selector %} grid gap-4{% else %} hidden{% endif %}"
+          class="{% if block.settings.show_quantity_selector and is_elite_product == false or is_elite_renew_product == false %} grid gap-4{% else %} hidden{% endif %}"
         >
           {%- assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id -%}
+
+          {%- liquid
+            assign quantity_max_effective = product.selected_or_first_available_variant.quantity_rule.max
+            if check_against_inventory
+              assign available_to_add = product.selected_or_first_available_variant.inventory_quantity | minus: cart_qty
+              if quantity_max_effective != null
+                assign quantity_max_effective = quantity_max_effective | at_most: available_to_add
+              else
+                assign quantity_max_effective = available_to_add
+              endif
+            endif
+          -%}
 
           <div class="grid gap-2">
             <div class="grid gap-3">
@@ -111,9 +146,9 @@
                     data-quantity-variant-id="{{ product.selected_or_first_available_variant.id }}"
                     data-min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
                     min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
-                    {% if product.selected_or_first_available_variant.quantity_rule.max != null %}
-                      data-max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
-                      max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
+                    {% if quantity_max_effective != null %}
+                      data-max="{{ quantity_max_effective }}"
+                      max="{{ quantity_max_effective }}"
                     {% endif %}
                     inputmode="numeric"
                     autocomplete="off"
@@ -293,7 +328,21 @@
       <div class="product-form__buttons flex flex-wrap items-end gap-x-2 gap-y-4" id="QuantityForm-{{ section_id }}">
         {%- if product.quantity_price_breaks_configured? != true -%}
           {%- assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id -%}
-          <div class="product-form__quantity{% unless block.settings.show_quantity_selector %} hidden{% endunless %}">
+          {%- liquid
+            assign quantity_max_effective = product.selected_or_first_available_variant.quantity_rule.max
+            if check_against_inventory
+              assign available_to_add = product.selected_or_first_available_variant.inventory_quantity | minus: cart_qty
+              if quantity_max_effective != null
+                assign quantity_max_effective = quantity_max_effective | at_most: available_to_add
+              else
+                assign quantity_max_effective = available_to_add
+              endif
+            endif
+          -%}
+          <div class="product-form__quantity
+            {% unless block.settings.show_quantity_selector and is_elite_product == false %} hidden{% endunless %}
+            {% unless block.settings.show_quantity_selector and is_elite_renew_product == false %} hidden{% endunless %}
+          ">
             <label class="quantity__label form__label visually-hidden" for="Quantity-{{ section.id }}">
               <span class="font-body-bolder">{{ 'products.product.quantity.label' | t }}</span>
             </label>
@@ -319,9 +368,9 @@
                 data-quantity-variant-id="{{ product.selected_or_first_available_variant.id }}"
                 data-min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
                 min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
-                {% if product.selected_or_first_available_variant.quantity_rule.max != null %}
-                  data-max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
-                  max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
+                {% if quantity_max_effective != null %}
+                  data-max="{{ quantity_max_effective }}"
+                  max="{{ quantity_max_effective }}"
                 {% endif %}
                 inputmode="numeric"
                 autocomplete="off"
@@ -341,9 +390,9 @@
           type="submit"
           name="add"
           class="product-form__submit btn{% if show_dynamic_checkout %} btn--secondary{% else %} btn--primary{% endif %}"
-          {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout or product.selected_or_first_available_variant == nil %}
-            disabled
-          {% endif %}
+          {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout or product.selected_or_first_available_variant == nil %}disabled{% endif %}
+          {% if is_elite_product and elite_cart_qty >= 1 %}disabled{% endif %}
+          {% if is_elite_renew_product and elite_renew_cart_qty >= 1 %}disabled{% endif %}
         >
           <span class="btn__text">
             {%- if product.selected_or_first_available_variant == nil -%}
@@ -352,6 +401,10 @@
               or quantity_rule_soldout
             -%}
               {{ 'products.product.sold_out' | t }}
+            {%- elsif is_elite_product and elite_cart_qty >= 1 -%}
+              {{ 'products.product.already_in_cart' | t }}
+            {%- elsif is_elite_renew_product and elite_renew_cart_qty >= 1 -%}
+              {{ 'products.product.already_in_cart' | t }}
             {%- else -%}
               {{ 'products.product.add_to_cart' | t }}
             {%- endif -%}

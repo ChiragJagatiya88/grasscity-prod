@@ -75,6 +75,7 @@
     },
     "quick-view": {
       "type": "quick-view",
+      "disabled": true,
       "blocks": {
         "badges": {
           "type": "badges",
@@ -339,9 +340,9 @@
         "mode": "enabled",
         "expiry": 7,
         "heading": "Confirm your age",
-        "question": "Are you 18 years old or older?",
-        "button_yes": "Yes, I am",
-        "button_no": "No, I'm not",
+        "question": "<p>You must be <strong>21 </strong>years or older to enter this site. By clicking ‘Enter,’ you confirm that you are at least 21 years of age.</p>",
+        "button_yes": "Enter",
+        "button_no": "Exit",
         "button_no_link": "",
         "button_no_external": false,
         "color_drawer_text": "#171717",

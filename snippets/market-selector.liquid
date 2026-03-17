@@ -3,73 +3,40 @@
   assign position = position | default: 'down'
   assign wrapper_class = wrapper_class | default: ''
 -%}
-{% comment %} Current market from URL path + country code for flag (EU uses AT) {% endcomment %}
-{% assign path_lower = request.path | downcase %}
-{% assign current_market_path = '/en-us' %}
-{% assign current_market_label = 'United States' %}
-{% assign current_market_iso = 'US' %}
-{% if path_lower contains '/en-eu' %}
-  {% assign current_market_path = '/en-eu' %}
-  {% assign current_market_label = 'Europe' %}
-  {% assign current_market_iso = 'AT' %}
-{% elsif path_lower contains '/en-fr' %}
-  {% assign current_market_path = '/en-fr' %}
+{% comment %}
+  Static market links – grasscity.eu, grasscity.co.uk, grasscity.de, grasscity.fr, grasscity.nl.
+  US is default/selected on this site (grasscity.com).
+  Original path-based selector backed up in: snippets/market-selector-backup.liquid
+{% endcomment %}
+{% assign host = request.host | downcase %}
+{% assign current_market_label = 'USA' %}
+{% assign is_us_site = false %}
+{% assign is_eu_site = false %}
+{% assign is_uk_site = false %}
+{% assign is_de_site = false %}
+{% assign is_fr_site = false %}
+{% assign is_nl_site = false %}
+{% if host == 'www.grasscity.com' or host == 'grasscity.com' or host contains 'myshopify.com' %}
+  {% assign current_market_label = 'USA' %}
+  {% assign is_us_site = true %}
+{% elsif host contains 'grasscity.co.uk' %}
+  {% assign current_market_label = 'UK' %}
+  {% assign is_uk_site = true %}
+{% elsif host contains 'grasscity.de' %}
+  {% assign current_market_label = 'Deutschland' %}
+  {% assign is_de_site = true %}
+{% elsif host contains 'grasscity.fr' %}
   {% assign current_market_label = 'France' %}
-  {% assign current_market_iso = 'FR' %}
-{% elsif path_lower contains '/en-de' %}
-  {% assign current_market_path = '/en-de' %}
-  {% assign current_market_label = 'Germany' %}
-  {% assign current_market_iso = 'DE' %}
-{% elsif path_lower contains '/en-nl' %}
-  {% assign current_market_path = '/en-nl' %}
-  {% assign current_market_label = 'Netherlands' %}
-  {% assign current_market_iso = 'NL' %}
-{% elsif path_lower contains '/en-gb' %}
-  {% assign current_market_path = '/en-gb' %}
-  {% assign current_market_label = 'United Kingdom' %}
-  {% assign current_market_iso = 'GB' %}
-{% elsif path_lower contains '/en-us' %}
-  {% assign current_market_path = '/en-us' %}
-  {% assign current_market_label = 'United States' %}
-  {% assign current_market_iso = 'US' %}
+  {% assign is_fr_site = true %}
+{% elsif host contains 'grasscity.nl' %}
+  {% assign current_market_label = 'Nederlands' %}
+  {% assign is_nl_site = true %}
+{% elsif host contains 'grasscity.eu' %}
+  {% assign current_market_label = 'Europe' %}
+  {% assign is_eu_site = true %}
 {% endif %}
-{% comment %} Resolve country object for current market flag {% endcomment %}
-{% assign current_market_country = false %}
-{% for c in localization.available_countries %}
-  {% if c.iso_code == current_market_iso %}
-    {% assign current_market_country = c %}
-    {% break %}
-  {% endif %}
-{% endfor %}
-{% if current_market_country == false and current_market_iso == 'AT' %}
-  {% for c in localization.available_countries %}
-    {% assign eu_codes = 'AT,BE,BG,HR,CY,CZ,DK,EE,FI,GR,HU,IE,IT,LV,LT,LU,MT,PL,PT,RO,SK,SI,ES,SE' | split: ',' %}
-    {% if eu_codes contains c.iso_code %}{% assign current_market_country = c %}{% break %}{% endif %}
-  {% endfor %}
-{% endif %}
-<style>
-  .market-disclosure .f-country-flags {
-    --flag-size: 2rem;
-    background-image: var(--background-image);
-    width: var(--flag-size);
-    height: var(--flag-size);
-    flex-shrink: 0;
-    display: inline-block;
-    border-radius: 50%;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-  }
-  .market-disclosure .f-country-flags::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    box-shadow: inset 0 0 0 0.2rem rgba(var(--color-foreground), 0.3);
-    border-radius: 50%;
-  }
-</style>
 <div id="market-disclosure-{{ selector_id }}" class="market-disclosure disclosure no-js-hidden disclosure--{{ position }} disclosure--plain country-switcher {{ wrapper_class }}" style="--f-max-width: 220px" data-market-disclosure-id="{{ selector_id }}">
-  <h2 class="visually-hidden" id="MarketLabel-{{ selector_id }}">{{ 'localization.country_label' | t }}</h2>
+  <div class="visually-hidden" id="MarketLabel-{{ selector_id }}">{{ 'localization.country_label' | t }}</div>
   <button
     type="button"
     class="disclosure__toggle btn--plain text-normal font-body"
@@ -78,38 +45,28 @@
     aria-describedby="MarketLabel-{{ selector_id }}"
     data-market-toggle
   >
-    {% if current_market_country %}
-      <span class="f-country-flags f-country-flags--{{ current_market_country.iso_code }}" style="--background-image: url({{ current_market_country | image_url: width: 20 }})"></span>
-    {% endif %}
     {{ current_market_label }}
     {% render 'icon-caret-up' %}
   </button>
-  <ul class="disclosure-list v-scrollable text-left" id="market-list-{{ selector_id }}" role="list">
-    {% assign market_items = 'Europe,/en-eu,AT|France,/en-fr,FR|Germany,/en-de,DE|Netherlands,/en-nl,NL|United Kingdom,/en-gb,GB|United States,/en-us,US' | split: '|' %}
-    {% for item in market_items %}
-      {% assign parts = item | split: ',' %}
-      {% assign label = parts[0] %}
-      {% assign path = parts[1] %}
-      {% assign iso = parts[2] %}
-      {% assign item_country = false %}
-      {% for c in localization.available_countries %}
-        {% if c.iso_code == iso %}{% assign item_country = c %}{% break %}{% endif %}
-      {% endfor %}
-      {% if item_country == false and iso == 'AT' %}
-        {% for c in localization.available_countries %}
-          {% assign eu_codes = 'AT,BE,BG,HR,CY,CZ,DK,EE,FI,GR,HU,IE,IT,LV,LT,LU,MT,PL,PT,RO,SK,SI,ES,SE' | split: ',' %}
-          {% if eu_codes contains c.iso_code %}{% assign item_country = c %}{% break %}{% endif %}
-        {% endfor %}
-      {% endif %}
-      <li class="disclosure-list__item{% if current_market_path == path %} disclosure-list__item--current{% endif %}">
-        <a href="{{ path }}" class="disclosure-list__option"{% if current_market_path == path %} aria-current="true"{% endif %}>
-          {% if item_country %}
-            <span class="f-country-flags f-country-flags--{{ item_country.iso_code }}" style="--background-image: url({{ item_country | image_url: width: 20 }})"></span>
-          {% endif %}
-          {{ label }}
-        </a>
-      </li>
-    {% endfor %}
+  <ul class="disclosure-list select-country__list v-scrollable text-left" id="market-list-{{ selector_id }}" role="list">
+    <li class="country US{% if is_us_site %} disclosure-list__item--current{% endif %}">
+      <a class="disclosure-list__option flag US" href="https://www.grasscity.com/geo_ip_suggestion/redirect/website/?___store=us_en"{% if is_us_site %} aria-current="true"{% endif %}>USA</a>
+    </li>
+    <li class="country BE{% if is_eu_site %} disclosure-list__item--current{% endif %}">
+      <a class="disclosure-list__option flag BE" href="https://www.grasscity.eu/geo_ip_suggestion/redirect/website/?___store=eu_en"{% if is_eu_site %} aria-current="true"{% endif %}>Europe</a>
+    </li>
+    <li class="country GB{% if is_uk_site %} disclosure-list__item--current{% endif %}">
+      <a class="disclosure-list__option flag GB" href="https://www.grasscity.co.uk/geo_ip_suggestion/redirect/website/?___store=uk_en"{% if is_uk_site %} aria-current="true"{% endif %}>UK</a>
+    </li>
+    <li class="country DE{% if is_de_site %} disclosure-list__item--current{% endif %}">
+      <a class="disclosure-list__option flag DE" href="https://www.grasscity.de/geo_ip_suggestion/redirect/website/?___store=eu_de"{% if is_de_site %} aria-current="true"{% endif %}>Deutschland</a>
+    </li>
+    <li class="country FR{% if is_fr_site %} disclosure-list__item--current{% endif %}">
+      <a class="disclosure-list__option flag FR" href="https://www.grasscity.fr/geo_ip_suggestion/redirect/website/?___store=eu_fr"{% if is_fr_site %} aria-current="true"{% endif %}>France</a>
+    </li>
+    <li class="country NL{% if is_nl_site %} disclosure-list__item--current{% endif %}">
+      <a class="disclosure-list__option flag NL" href="https://www.grasscity.nl/geo_ip_suggestion/redirect/website/?___store=nl_nl"{% if is_nl_site %} aria-current="true"{% endif %}>Nederlands</a>
+    </li>
   </ul>
 </div>
 <script>
@@ -134,3 +91,10 @@
     });
   })();
 </script>
+<style>
+.select-country__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+</style>

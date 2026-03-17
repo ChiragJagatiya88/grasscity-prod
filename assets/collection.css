@@ -11,7 +11,7 @@
   margin-bottom: 1.2rem;
 }
 .collection__toolbar-left {
-  gap: 1.6rem;
+  gap: 1rem;
 }
 @media (min-width: 1024px) {
   .collection__toolbar-left {

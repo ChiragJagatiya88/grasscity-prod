@@ -31,10 +31,16 @@
 {% endif %}
 
 {% assign elite = false %}  
+{% assign elite_renew = false %}  
 {% assign elite_item = cart.items | where: 'id',settings.elite_product.selected_or_first_available_variant.id %}
+{% assign elite_renew_item = cart.items | where: 'id',settings.elite_product_renew.selected_or_first_available_variant.id %}
 {% if elite_item[0].id != blank and elite_item.size > 0 %}
   {% assign elite = true %}
 {% endif %}
+{% if elite_renew_item[0].id != blank and elite_renew_item.size > 0 %}
+  {% assign elite_renew = true %}
+{% endif %}
+{% comment %} <p>elite_renew = {{elite_renew }}</p> {% endcomment %}
 
 {% assign base_price_active = true %}
 {% assign club_price_active = false %}
@@ -249,7 +255,35 @@
                     if gift_wrap_id != null and item.id == gift_wrap_id
                       assign is_gift_wrap_item = true
                     endif
+                    
+                    assign is_elite_item = false
+                    assign is_elite_renew_item = false
+                    if settings.elite_product != blank and item.variant.id == settings.elite_product.selected_or_first_available_variant.id
+                      assign is_elite_item = true
+                    endif
+                    if settings.elite_product_renew != blank and item.variant.id == settings.elite_product_renew.selected_or_first_available_variant.id
+                      assign is_elite_renew_item = true
+                    endif
 
+                    assign item_max_quantity = blank
+                    if item.variant.inventory_management != blank and item.variant.inventory_policy == 'deny'
+                      assign item_max_quantity = item.variant.inventory_quantity
+                    endif
+
+                    assign item_effective_max = item.variant.quantity_rule.max
+                    if item_max_quantity != blank
+                      if item_effective_max != null
+                        assign item_effective_max = item_max_quantity | at_most: item_effective_max
+                      else
+                        assign item_effective_max = item_max_quantity
+                      endif
+                    endif
+                  -%}
+                  {%- comment -%} GA4 ecommerce line item data for us-gtms (uscart:add / uscart:remove) {%- endcomment -%}
+                  <script type="application/json" id="new_cart_event_line_{{ item.index | plus: 1 }}">
+                    {"items":[{"item_name":{{ item.product.title | json }},"item_id":"{{ item.product.id }}","price":{{ item.price | money_without_currency | replace: ',', '.' }},"item_brand":{{ item.vendor | json }},"item_category":{{ item.product.type | json }},"item_variant":{{ item.variant.title | json }},"quantity":{{ item.quantity }}}]}
+                  </script>
+                  {%- liquid
                     assign has_qty_rules = false
                     if item.variant.quantity_rule.increment > 1 or item.variant.quantity_rule.min > 1 or item.variant.quantity_rule.max != null
                       assign has_qty_rules = true
@@ -260,6 +294,10 @@
                       assign has_vol_pricing = true
                     endif
                   -%}
+
+                  <p class="hidden">is_elite_renew_item == {{ is_elite_renew_item }}</p>
+                  <p class="hidden">item.variant.id == {{ item.variant.id }}</p>
+                  <p class="hidden">settings.elite_renew_item.selected_or_first_available_variant.id == {{ settings.elite_renew_item.selected_or_first_available_variant.id }}</p>
 
                   {%- if has_qty_rules or has_vol_pricing -%}
                     {%- capture qty_rules_vol_pricing -%}
@@ -332,7 +370,7 @@
                   {%- endif -%}
 
                   {%- capture cart_item -%}
-                      <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
+                      <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}" data-product-id="{{ item.product.id }}">
                         <td class="cart-item__product">
                           <div class="flex items-start md:items-center gap-3 md:gap-6">
                             <a id="Loader-{{ section.id }}-{{ item.index | plus: 1 }}"{% unless is_gift_wrap_item %} is="cart-remove-item"{% else %} is="gift-wrap-remove-item"{% endunless %} class="items-center justify-center relative hidden md:flex btn-remove" href="{{ item.url_to_remove }}" data-index="{{ item.index | plus: 1 }}">
@@ -431,6 +469,13 @@
                                         {% endif %}
                                       {% endif %}
 
+                                       {% if elite == true %}
+                                        {% assign elite_price_active = true %}
+                                        {% assign base_price_active = false %}
+                                        {% assign club_price_active = false %}
+                                      {% endif %}
+
+                                    
                                       <div class="new-cart-base__price" {% if base_price_active == false %} style="display: none;" {% endif %}>
                                         <span class="base__price">{{ item.price | money }}</span>
                                         <span class="base__price_label">Non-member price</span>
@@ -507,7 +552,7 @@
                               <template>
                                 <div class="cart-item__action flex items-end justify-between gap-3 lg:hidden w-full">
                                   <div class="flex items-center gap-2">
-                                    {%- unless is_gift_wrap_item -%}
+                                    {%- unless is_gift_wrap_item or is_elite_item or is_elite_renew_item -%}
                                       <quantity-input class="cart-quantity quantity">
                                         <label class="visually-hidden" for="Quantity-{{ section.id }}-{{ item.index | plus: 1 }}">{{ 'products.product.quantity.label' | t }}</label>
                                         <button type="button" name="minus" class="quantity__button" aria-label="{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}">
@@ -529,8 +574,8 @@
                                           data-cart-quantity="{{ cart | item_count_for_variant: item.variant.id }}"
                                           min="0"
                                           data-min="{{ item.variant.quantity_rule.min }}"
-                                          {% if item.variant.quantity_rule.max != null %}
-                                            max="{{ item.variant.quantity_rule.max }}"
+                                          {% if item_effective_max != null %}
+                                            max="{{ item_effective_max }}"
                                           {% endif %}
                                           step="{{ item.variant.quantity_rule.increment }}"
                                         />
@@ -554,7 +599,7 @@
                                           disabled
                                           type="number"
                                           name="updates[]"
-                                          value="{{ item.quantity }}"
+                                          value="{% if is_elite_item or is_elite_renew_item %}1{% else %}{{ item.quantity }}{% endif %}"
                                           aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
                                           id="Quantity-{{ section.id }}-{{ item.index | plus: 1 }}"
                                           data-index="{{ item.index | plus: 1 }}"
@@ -565,8 +610,8 @@
                                           data-cart-quantity="{{ cart | item_count_for_variant: item.variant.id }}"
                                           min="0"
                                           data-min="{{ item.variant.quantity_rule.min }}"
-                                          {% if item.variant.quantity_rule.max != null %}
-                                            max="{{ item.variant.quantity_rule.max }}"
+                                          {% if item_effective_max != null %}
+                                            max="{{ item_effective_max }}"
                                           {% endif %}
                                           step="{{ item.variant.quantity_rule.increment }}"
                                         />
@@ -677,6 +722,8 @@
                                           {% assign item_member_price = item.variant.metafields.custom.member_price %}
                                         {% endif %}
 
+
+
                                         <div class="new-cart-base__price" {% if base_price_active == false %} style="display: none;" {% endif %}>
                                           {% if item_market_price != blank %}
                                             <span class="base__price">{{ item_market_price | times: 100 | money }}</span>
@@ -759,7 +806,7 @@
                           <div class="cart-item__action flex items-center justify-between cart-item__quantity-wrapper">
                             <template>
                               <div class="flex items-center gap-2">
-                                {%- unless is_gift_wrap_item -%}
+                                {%- unless is_gift_wrap_item or is_elite_item or is_elite_renew_item -%}
                                   <quantity-input class="cart-quantity quantity">
                                     <label class="visually-hidden" for="Quantity-{{ section.id }}-{{ item.index | plus: 1 }}">{{ 'products.product.quantity.label' | t }}</label>
                                     <button type="button" name="minus" class="quantity__button" aria-label="{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}">
@@ -781,8 +828,8 @@
                                       data-cart-quantity="{{ cart | item_count_for_variant: item.variant.id }}"
                                       min="0"
                                       data-min="{{ item.variant.quantity_rule.min }}"
-                                      {% if item.variant.quantity_rule.max != null %}
-                                        max="{{ item.variant.quantity_rule.max }}"
+                                      {% if item_effective_max != null %}
+                                        max="{{ item_effective_max }}"
                                       {% endif %}
                                       step="{{ item.variant.quantity_rule.increment }}"
                                     />
@@ -806,7 +853,7 @@
                                       disabled
                                       type="number"
                                       name="updates[]"
-                                      value="{{ item.quantity }}"
+                                      value="{% if is_elite_item or is_elite_renew_item %}1{% else %}{{ item.quantity }}{% endif %}"
                                       aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
                                       id="Quantity-{{ section.id }}-{{ item.index | plus: 1 }}"
                                       data-index="{{ item.index | plus: 1 }}"
@@ -817,8 +864,8 @@
                                       data-cart-quantity="{{ cart | item_count_for_variant: item.variant.id }}"
                                       min="0"
                                       data-min="{{ item.variant.quantity_rule.min }}"
-                                      {% if item.variant.quantity_rule.max != null %}
-                                        max="{{ item.variant.quantity_rule.max }}"
+                                      {% if item_effective_max != null %}
+                                        max="{{ item_effective_max }}"
                                       {% endif %}
                                       step="{{ item.variant.quantity_rule.increment }}"
                                     />
@@ -1015,7 +1062,7 @@
 
             {% comment %} only show if customer is not available or if customer is available than not an elite {% endcomment %}
             {% if customer == blank or elite__customer == false %}
-              <us-cart-membership data-for="elite" hhh>
+              <us-cart-membership data-for="elite">
                 <details class="membership_details new-refresh_price_cart_radio elite" {% if elite_price_active or customer != blank %} open {% endif %}>
                   <summary>
                     <label for="cart_elite_radio" class="new-refresh_price_cart_radio__header">
@@ -1025,7 +1072,7 @@
                         <span>Save even more with</span>
                         {% render 'elite-txt' %}
                       </div>
-                      <div class="radio__badge">{% render 'radio-bag' %}<span>$30</span></div>
+                      <div class="radio__badge">{% render 'radio-bag' %}<span>$30/yr</span></div>
                     </label>
                   </summary>
                   <div class="new-refresh_price_cart_radio_content">
@@ -1681,10 +1728,14 @@
   }
   /* ---------- classes active show to hide show prices on base of membership, dont touch */
   .active-base {
-    .new-cart-club__price, .new-cart-elite__price,
-    .new-item-total-club, .new-item-total-elite,
-    .club-cart-total, .elite-cart-total,
-    .club-checkout-button, .elite-checkout-button {
+    .new-cart-club__price, 
+    .new-cart-elite__price,
+    .new-item-total-club, 
+    .new-item-total-elite,
+    .club-cart-total, 
+    .elite-cart-total,
+    .club-checkout-button, 
+    .elite-checkout-button {
       display: none !important;
     }
     .new-cart-base__price,
@@ -1695,10 +1746,14 @@
     }
   }
   .active-club {
-    .new-cart-base__price, .new-cart-elite__price,
-    .new-item-total-base, .new-item-total-elite,
-    .base-cart-total, .elite-cart-total,
-    .elite-checkout-button, .base-checkout-button {
+    .new-cart-base__price, 
+    .new-cart-elite__price,
+    .new-item-total-base, 
+    .new-item-total-elite,
+    .base-cart-total, 
+    .elite-cart-total,
+    .elite-checkout-button, 
+    .base-checkout-button {
       display: none !important;
     }
     .new-cart-club__price,
@@ -1709,10 +1764,14 @@
     }
   }
   .active-elite {
-    .new-cart-base__price, .new-cart-club__price,
-    .new-item-total-base, .new-item-total-club,
-    .base-cart-total, .club-cart-total,
-    .club-checkout-button, .base-checkout-button {
+    .new-cart-base__price, 
+    .new-cart-club__price,
+    .new-item-total-base, 
+    .new-item-total-club,
+    .base-cart-total, 
+    .club-cart-total,
+    .club-checkout-button, 
+    .base-checkout-button {
       display: none !important;
     }
     .new-cart-elite__price,
@@ -1832,6 +1891,94 @@
     </div>
   </div>
 </x-modal>
+
+<script>
+(function() {
+  'use strict';
+  
+  /**
+   * Initialize cart membership state on page load
+   */
+  function initializeCartMembership() {
+    const membershipRadios = document.querySelectorAll('input[name="membership"]');
+    const allDetails = document.querySelectorAll('.membership_details');
+    
+    if (membershipRadios.length === 0) return;
+    
+    // Find the checked radio button
+    let activeMembership = 'base';
+    membershipRadios.forEach(function(radio) {
+      if (radio.checked) {
+        activeMembership = radio.value;
+      }
+    });
+    
+    // Update body classes
+    document.body.classList.remove('active-elite', 'active-club', 'active-base');
+    document.body.classList.add('active-' + activeMembership);
+    
+    // Update details elements
+    allDetails.forEach(function(details) {
+      if (details.classList.contains(activeMembership)) {
+        if (details.tagName === 'DETAILS') {
+          details.setAttribute('open', '');
+        }
+      } else {
+        if (details.tagName === 'DETAILS') {
+          details.removeAttribute('open');
+        }
+      }
+    });
+  }
+  
+  /**
+   * Handle membership radio button changes
+   */
+  function setupMembershipListeners() {
+    const membershipRadios = document.querySelectorAll('input[name="membership"]');
+    const allDetails = document.querySelectorAll('.membership_details');
+    
+    membershipRadios.forEach(function(radio) {
+      radio.addEventListener('change', function() {
+        const membership = this.value;
+        
+        // Update body classes
+        document.body.classList.remove('active-elite', 'active-club', 'active-base');
+        document.body.classList.add('active-' + membership);
+        
+        // Update details elements
+        allDetails.forEach(function(details) {
+          if (details.classList.contains(membership)) {
+            if (details.tagName === 'DETAILS') {
+              details.setAttribute('open', '');
+            }
+          } else {
+            if (details.tagName === 'DETAILS') {
+              details.removeAttribute('open');
+            }
+          }
+        });
+      });
+    });
+  }
+  
+  // Initialize on DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      initializeCartMembership();
+      setupMembershipListeners();
+    });
+  } else {
+    initializeCartMembership();
+    setupMembershipListeners();
+  }
+  
+  // Also listen for cart:updated event (for AJAX cart updates)
+  document.addEventListener('cart:updated', function() {
+    initializeCartMembership();
+  });
+})();
+</script>
 
 {% schema %}
 {

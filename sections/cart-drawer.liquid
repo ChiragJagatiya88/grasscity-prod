@@ -32,7 +32,7 @@
             </div>
           {%- endif -%}
           <div class="drawer__header-inner cart-drawer__header flex items-center justify-between gap-3">
-            <h2 class="drawer__heading h4">
+            <div class="drawer__heading h4">
               <span>{{ 'general.cart.title' | t }}</span>
               <cart-count
                 class="cart-count cart-count--blank"
@@ -50,7 +50,7 @@
                 {%- endif -%}
                 )
               </cart-count>
-            </h2>
+            </div>
             <button
               class="drawer__close-btn z-1 static"
               aria-controls="CartDrawer"
@@ -143,13 +143,30 @@
               <ul role="list" class="flex flex-col gap-6">
                 {%- for item in cart.items -%}
                   {%- liquid
+                    assign item_max_quantity = blank
                     if item.variant.inventory_management != blank and item.variant.inventory_policy == 'deny'
                       assign item_max_quantity = item.variant.inventory_quantity
+                    endif
+
+                    assign item_effective_max = item.variant.quantity_rule.max
+                    if item_max_quantity != blank
+                      if item_effective_max != null
+                        assign item_effective_max = item_max_quantity | at_most: item_effective_max
+                      else
+                        assign item_effective_max = item_max_quantity
+                      endif
                     endif
 
                     assign is_gift_wrap_item = false
                     if gift_wrap_id != null and item.id == gift_wrap_id
                       assign is_gift_wrap_item = true
+                    endif
+
+                    assign is_elite_item = false
+                    if settings.elite_product != blank and item.variant.id == settings.elite_product.selected_or_first_available_variant.id
+                      assign is_elite_item = true
+                    elsif settings.elite_product_renew != blank and item.variant.id == settings.elite_product_renew.selected_or_first_available_variant.id
+                      assign is_elite_item = true
                     endif
                   -%}
                   {%- capture cart_item -%}
@@ -295,7 +312,7 @@
                             {%- endcapture -%}
                           {%- endif -%}
                           <div class="flex items-center gap-2">
-                            {%- unless is_gift_wrap_item -%}
+                            {%- unless is_gift_wrap_item or is_elite_item -%}
                               <quantity-input class="cart-quantity quantity self-end">
                                 <label class="visually-hidden" for="Quantity-{{ section.id }}-{{ item.index | plus: 1 }}">{{ 'products.product.quantity.label' | t }}</label>
                                 <button type="button" name="minus" class="quantity__button" aria-label="{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}">
@@ -318,8 +335,8 @@
                                   data-cart-quantity="{{ cart | item_count_for_variant: item.variant.id }}"
                                   min="0"
                                   data-min="{{ item.variant.quantity_rule.min }}"
-                                  {% if item.variant.quantity_rule.max != null %}
-                                    max="{{ item.variant.quantity_rule.max }}"
+                                  {% if item_effective_max != null %}
+                                    max="{{ item_effective_max }}"
                                   {% endif %}
                                 />
                                 <button type="button" name="plus" class="quantity__button" aria-label="{{ 'products.product.quantity.increase' | t: product: item.product.title | escape }}">
@@ -342,7 +359,7 @@
                                   disabled
                                   type="text"
                                   name="updates[]"
-                                  value="{{ item.quantity }}"
+                                  value="{% if is_elite_item %}1{% else %}{{ item.quantity }}{% endif %}"
                                   id="Quantity-{{ section.id }}-{{ item.index | plus: 1 }}"
                                   inputmode="numeric"
                                   autocomplete="off"
@@ -352,10 +369,10 @@
                                   data-cart-quantity="{{ cart | item_count_for_variant: item.variant.id }}"
                                   size="2"
                                   min="0"
-                                  data-min="{{ item.variant.quantity_rule.min }}"
-                                  {% if item.variant.quantity_rule.max != null %}
-                                    max="{{ item.variant.quantity_rule.max }}"
-                                  {% endif %}
+                                          data-min="{{ item.variant.quantity_rule.min }}"
+                                          {% if item_effective_max != null %}
+                                            max="{{ item_effective_max }}"
+                                          {% endif %}
                                   step="{{ item.variant.quantity_rule.increment }}"
                                 />
                                 <button type="button" name="plus" disabled class="quantity__button hidden" aria-label="{{ 'products.product.quantity.increase' | t: product: item.product.title | escape }}">

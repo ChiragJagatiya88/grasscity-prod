@@ -1,9 +1,21 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "breadcrumbs_xYaBHj": {
       "type": "breadcrumbs",
       "settings": {
-        "text_alignment": "start"
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
       }
     },
     "main": {
@@ -12,6 +24,7 @@
         ".rich-text {max-width: 67rem;}"
       ],
       "settings": {
+        "container": "fixed",
         "text_alignment": "left",
         "padding_top": 0,
         "padding_bottom": 40
@@ -26,30 +39,31 @@
             "position": "right",
             "heading": "Need Help?",
             "heading_size": "h3",
-            "text": "<p>To us, design has a broader purpose and as you can read about on this website, we are on a mission. </p>",
+            "text": "",
             "text_size": "text-base",
-            "icon_1": "map-pin",
+            "icon_1": "clock",
             "icon_width_1": 32,
             "icon_color_1": "#1d349a",
-            "icon_heading_1": "General Office",
+            "icon_heading_1": "Working Hours",
             "icon_heading_size_1": "h5",
-            "icon_text_1": "<p>382 NE 191st St # 87394 Miami</p>",
+            "icon_text_1": "<p>9:00 AM to 9:00 PM EST</p>",
             "icon_vertical_alignment_1": "start",
-            "icon_2": "phone",
+            "icon_2": "chat",
             "icon_width_2": 28,
             "icon_color_2": "#1d349a",
-            "icon_heading_2": "Call Us",
+            "icon_heading_2": "Live Chat",
             "icon_heading_size_2": "h5",
-            "icon_text_2": "<p>+1 888-234-1234 (tool-free)</p>",
+            "icon_text_2": "<p>Start the conversation</p>",
             "icon_vertical_alignment_2": "start",
             "icon_3": "clock",
             "icon_width_3": 28,
             "icon_color_3": "#1d349a",
-            "icon_heading_3": "Working Hour",
+            "icon_heading_3": "",
             "icon_heading_size_3": "h5",
-            "icon_text_3": "<p>Mon – Fri, 7:30 AM – 4:00 PM PT<br/>Sat, 8:00 AM – 1:00 PM PT<br/>Sun, Closed</p>",
+            "icon_text_3": "",
             "icon_vertical_alignment_3": "start",
-            "button_label": "Find a Store",
+            "button_label": "",
+            "button_link": "",
             "button_style": "btn--primary",
             "button_icon": "none"
           }
@@ -90,7 +104,7 @@
             "placeholder": "",
             "required": false,
             "full_width": true,
-            "select_options": "Austria,Viet Nam,Japan",
+            "select_options": "United States, United Kingdom, Albania, Andorra, Austria, Belarus, Belgium, Bosnia and Herzegovina, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Gibraltar, Greece, Hungary, Iceland, Ireland, Italy, Kosovo, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta, Moldova, Monaco, Montenegro, Netherlands, North Macedonia, Norway, Poland, Portugal, Romania, San Marino, Serbia, Slovakia, Slovenia, Spain, Sweden, Switzerland, Ukraine, Vatican City",
             "checkbox_checked_value": "Yes",
             "checkbox_uncheck_value": "No",
             "radio_options": ""
@@ -105,6 +119,7 @@
       ],
       "custom_css": [],
       "settings": {
+        "container": "fixed",
         "section_color_scheme": "",
         "heading": "",
         "highlight_style": "none",
@@ -117,89 +132,11 @@
         "show_section_divider": false,
         "divider_width": "fixed"
       }
-    },
-    "scrolling_promotion_Fy9Yhn": {
-      "type": "scrolling-promotion",
-      "blocks": {
-        "text_gijz7Q": {
-          "type": "text",
-          "settings": {
-            "text_link": "",
-            "text": "Fast Delivery",
-            "text_size": "h4",
-            "text_opacity": 100,
-            "use_custom_color": false,
-            "custom_color": "#000000"
-          }
-        },
-        "text_3TVCPg": {
-          "type": "text",
-          "settings": {
-            "text_link": "",
-            "text": "30 Days Free Returns",
-            "text_size": "h4",
-            "text_opacity": 100,
-            "use_custom_color": false,
-            "custom_color": "#000000"
-          }
-        },
-        "text_iD6689": {
-          "type": "text",
-          "settings": {
-            "text_link": "",
-            "text": "Secure Payment",
-            "text_size": "h4",
-            "text_opacity": 100,
-            "use_custom_color": false,
-            "custom_color": "#000000"
-          }
-        },
-        "text_CtJBtL": {
-          "type": "text",
-          "settings": {
-            "text_link": "",
-            "text": "24/7 Customer Support",
-            "text_size": "h4",
-            "text_opacity": 100,
-            "use_custom_color": false,
-            "custom_color": "#000000"
-          }
-        },
-        "text_dGmg9m": {
-          "type": "text",
-          "settings": {
-            "text_link": "",
-            "text": "Sustainable Materials",
-            "text_size": "h4",
-            "text_opacity": 100,
-            "use_custom_color": false,
-            "custom_color": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "text_gijz7Q",
-        "text_3TVCPg",
-        "text_iD6689",
-        "text_CtJBtL",
-        "text_dGmg9m"
-      ],
-      "settings": {
-        "color_scheme": "scheme-3",
-        "direction": "left",
-        "pause_on_hover": true,
-        "speed": 0.2,
-        "h_spacing": 80,
-        "show_section_divider": false,
-        "padding_top": 22,
-        "padding_bottom": 22
-      }
     }
   },
   "order": [
     "breadcrumbs_xYaBHj",
     "main",
-    "form",
-    "scrolling_promotion_Fy9Yhn"
+    "form"
   ]
 }

@@ -50,7 +50,12 @@
         "type": "product",
         "id": "elite_product",
         "label": "Select Product"
-      }
+      },
+      {
+        "type": "product",
+        "id": "elite_product_renew",
+        "label": "Elite Renew Product"
+      },
     ]
   },
   {
@@ -1224,6 +1229,12 @@
         "type": "checkbox",
         "id": "pcard_show_badge_soldout",
         "label": "t:settings_schema.product_cards.settings.show_sold_out_badge.label",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "pcard_enable_color_hex",
+        "label": "Enable color hex",
         "default": true
       },
       {

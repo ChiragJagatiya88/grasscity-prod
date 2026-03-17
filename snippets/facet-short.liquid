@@ -18,7 +18,7 @@
           selected="selected"
         {% endif %}
       >
-        {{ option.name | escape }}
+        {{ option.name | escape | replace: "selling", "Seller" }}
       </option>
     {%- endfor -%}
   </select>

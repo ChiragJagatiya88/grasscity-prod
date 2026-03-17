@@ -4,7 +4,7 @@
 %}
 {%- assign motion_delay = 0 -%}
 <div
-  class="section section-rich-text section--padding page-width page-width--{{ section.settings.container }}{% unless section.settings.use_color_scheme_in_container %} color-{{ section.settings.color_scheme }}{% endunless %}"
+  class="section section-rich-text section--padding page-width page-width--{{ section.settings.container }}{% unless section.settings.use_color_scheme_in_container %} color-{{ section.settings.color_scheme }}{% endunless %} {{ section.settings.section_class }}"
   style="--section-padding-top: {{ section.settings.padding_top }}px;--section-padding-bottom: {{ section.settings.padding_bottom }}px;"
 >
   <div class="rich-text rich-text--{{ section.settings.content_spacing }} text-{{ section.settings.content_alignment }}{% if section.settings.use_color_scheme_in_container %} rich-text__box blocks-radius color-{{ section.settings.color_scheme }}{% endif %}">
@@ -24,7 +24,7 @@
           {%- endif -%}
         {%- when 'heading' -%}
           {%- if block.settings.heading != blank -%}
-            <h2
+            <{{ block.settings.heading_tag }}
               class="rich-text__heading {{ block.settings.heading_size }}"
               {{ block.shopify_attributes }}
             >
@@ -37,7 +37,7 @@
                   hl_text_color: block.settings.highlight_text_color
                 %}
               </motion-element>
-            </h2>
+            </{{ block.settings.heading_tag }}>
             {%- assign motion_delay = motion_delay | plus: 50 -%}
           {%- endif -%}
         {%- when 'text' -%}
@@ -107,9 +107,12 @@
   "tag": "section",
   "class": "section",
   "disabled_on": {
-    "groups": ["footer", "header", "custom.overlay"]
+    "groups": ["header", "custom.overlay"]
   },
   "settings": [
+    { "type": "checkbox", "id": "enable_custom_class", "label": "Enable Custom Class" },
+    { "type": "text", "id": "section_class", "label": "Custom Class For Section", "visible_if": "{{ section.settings.enable_custom_class == true }}" },
+
     {
       "type": "header",
       "content": "t:general.general.name"
@@ -348,6 +351,46 @@
               "label": "t:general.text_size.options__hd1.label"
             }
           ]
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "label": "Heading Tag",
+          "options": [
+            {
+              "value": "h1",
+              "label": "H1"
+            },
+            {
+              "value": "h2",
+              "label": "H2"
+            },
+            {
+              "value": "h3",
+              "label": "H3"
+            },
+            {
+              "value": "h4",
+              "label": "H4"
+            },
+            {
+              "value": "h5",
+              "label": "H5"
+            },
+            {
+              "value": "h6",
+              "label": "H6"
+            },
+            {
+              "value": "p",
+              "label": "p"
+            },
+            {
+              "value": "div",
+              "label": "Div"
+            }
+          ],
+          "default": "h2"
         }
       ]
     },

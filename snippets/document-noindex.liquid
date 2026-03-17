@@ -1,0 +1,38 @@
+{% if template == 'collection' %}
+  {% assign has_available_products = false %}
+  {% for product in collection.products %}
+    {% if product.available %}
+      {% assign has_available_products = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {% if canonical_url contains '/collections/vendors' or canonical_url contains '/collections/types?q' %}
+    <meta name="robots" content="noindex">
+  {% else %}
+    <meta name="robots" content="index">
+  {% endif %}
+{% endif %}
+{% if template == 'product' and product.type == 'Other' %}
+  <meta name="robots" content="noindex">
+{% elsif template == 'product'
+  and product.type == 'Insurance'
+  or product.type == 'Extend Service Contract'
+  or product.type == 'Protection Plan'
+%}
+  <meta name="robots" content="noindex">
+{% elsif template == 'blog' and current_tags %}
+  <meta name="robots" content="noindex">
+{% elsif template == 'blog' %}
+  {% if blog.handle == 'encyclopedia' -%}
+    {%- assign paginateamount = 100 -%}
+  {%- else -%}
+    {%- assign paginateamount = 12 -%}
+  {%- endif %}
+  {% paginate blog.articles by paginateamount %}
+    {% if paginate.current_page > paginate.pages %}
+      <meta name="robots" content="noindex">
+    {% endif %}
+  {% endpaginate %}
+{% elsif template == '404' %}
+  <meta name="robots" content="noindex">
+{% endif %}
