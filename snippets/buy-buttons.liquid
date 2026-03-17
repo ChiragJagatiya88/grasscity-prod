@@ -405,6 +405,8 @@
               {{ 'products.product.already_in_cart' | t }}
             {%- elsif is_elite_renew_product and elite_renew_cart_qty >= 1 -%}
               {{ 'products.product.already_in_cart' | t }}
+            {%- elsif is_elite_renew_product -%}
+              {{ 'products.product.renew_now' | t }}
             {%- else -%}
               {{ 'products.product.add_to_cart' | t }}
             {%- endif -%}

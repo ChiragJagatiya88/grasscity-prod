@@ -1,0 +1,105 @@
+{%- liquid
+  
+  assign is_member = false
+  assign is_elite_member = false
+
+  assign is_elite_product = false
+  assign is_elite_renew_product = false
+
+  assign elite_product_in_cart = false
+  assign elite_renew_product_in_cart = false
+
+  assign elite_product = settings.elite_product
+  assign elite_renew_product = settings.elite_product_renew
+
+  if elite_product != blank
+    assign elite_items = cart.items | where: 'product_id', elite_product.id
+    if elite_items.size > 0
+      assign elite_product_in_cart = true
+    endif
+  endif
+  if elite_renew_product != blank
+    assign elite_renew_items = cart.items | where: 'product_id', elite_renew_product.id
+    if elite_renew_items.size > 0
+      assign elite_renew_product_in_cart = true
+    endif
+  endif
+
+  if customer
+    if customer.tags contains 'club_member' or customer.tags contains 'member'
+      assign is_member = true
+    endif
+    if customer.tags contains 'elite_member' or customer.tags contains 'elite'
+      assign is_elite_member = true
+    endif
+  endif
+-%}
+
+{%- liquid
+  assign should_remove = false
+  assign remove_elite_product = false
+  assign remove_elite_renew_product = false
+
+  if elite_product_in_cart or elite_renew_product_in_cart
+    if is_member == false and is_elite_member == false
+      assign should_remove = true
+      assign remove_elite_product = true
+      assign remove_elite_renew_product = true
+      comment
+        Both products should be removed (elite_product and elite_renew_product)
+      endcomment
+    elsif is_member and is_elite_member == false and elite_renew_product_in_cart
+      assign should_remove = true
+      assign remove_elite_renew_product = true
+      comment
+        One product should be removed (elite_renew_product)
+      endcomment
+    elsif is_elite_member and elite_product_in_cart
+      assign should_remove = true
+      assign remove_elite_product = true
+      comment
+        One product should be removed (elite_product)
+      endcomment
+    endif
+  endif
+-%}
+
+{%- if should_remove -%}
+  {%- liquid
+    assign keys_to_remove_array = ''
+    for item in cart.items
+      assign should_remove_item = false
+      if remove_elite_product and elite_product != blank and item.product_id == elite_product.id
+        assign should_remove_item = true
+      elsif remove_elite_renew_product and elite_renew_product != blank and item.product_id == elite_renew_product.id
+        assign should_remove_item = true
+      endif
+      if should_remove_item
+        if keys_to_remove_array != ''
+          assign keys_to_remove_array = keys_to_remove_array | append: '||'
+        endif
+        assign keys_to_remove_array = keys_to_remove_array | append: item.key
+      endif
+    endfor
+  -%}
+  <script>
+    (function() {
+      var keysStr = {{ keys_to_remove_array | json }};
+      var keys = (keysStr && keysStr.length) ? keysStr.split('||').filter(Boolean) : [];
+      if (keys.length === 0) return;
+      var updates = {};
+      keys.forEach(function(k) { updates[k] = 0; });
+      var root = (window.Shopify && window.Shopify.routes && window.Shopify.routes.root) ? window.Shopify.routes.root : '/';
+      fetch(root + 'cart/update.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ updates: updates })
+      })
+      .then(function(r) { return r.json(); })
+      .then(function() {  })
+      .catch(function() {  });
+      // .then(function() { window.location.reload(); })
+      // .catch(function() { window.location.reload(); });
+    })();
+  </script>
+{%- endif -%}
