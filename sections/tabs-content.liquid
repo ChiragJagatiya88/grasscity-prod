@@ -33,35 +33,42 @@
   {%- if section.blocks.size > 0 -%}
     <div class="flex flex-col md:flex-row{% if sidebar != blank %} help-sidebar__wrapper help-sidebar--{{ sidebar.settings.position }}{% endif %}">
       <tabs-component class="flex-1 tabs tabs-nav--{{ nav_style }}">
-        {%- liquid
-          assign visible_blocks = ''
-          assign visible_count = 0
+        {%- assign visible_blocks = '' -%}
+        {%- assign visible_count = 0 -%}
+        {%- assign newline_char = '\n' -%}
 
-          for block in section.blocks
-            if block.type == 'sidebar'
-              continue
-            endif
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'sidebar' -%}
+            {%- continue -%}
+          {%- endif -%}
 
-            assign has_content = false
+          {%- assign has_content = false -%}
 
-            if block.type == 'tab'
-              if block.settings.content != blank or block.settings.custom_liquid != blank or block.settings.page.content != blank
-                assign has_content = true
-              endif
-            elsif block.type == 'image_with_text'
-              if block.settings.heading != blank or block.settings.description != blank or block.settings.image != blank
-                assign has_content = true
-              endif
-            endif
+          {%- if block.type == 'tab' -%}
+            {%- comment -%} Capture full rendered output so dynamic Liquid (e.g. product.metafields | metafield_tag) is evaluated {% endcomment -%}
+            {%- capture tab_rendered -%}
+              {{ block.settings.content }}
+              {{ block.settings.custom_liquid }}
+              {%- if block.settings.page != blank -%}{{ block.settings.page.content }}{%- endif -%}
+            {%- endcapture -%}
+            {%- assign tab_clean = tab_rendered | strip_html | strip -%}
+            {%- assign tab_clean = tab_clean | replace: ' ', '' | replace: newline_char, '' | replace: '	', '' -%}
+            {%- if tab_clean != blank -%}
+              {%- assign has_content = true -%}
+            {%- endif -%}
+          {%- elsif block.type == 'image_with_text' -%}
+            {%- if block.settings.heading != blank or block.settings.description != blank or block.settings.image != blank -%}
+              {%- assign has_content = true -%}
+            {%- endif -%}
+          {%- endif -%}
 
-            if has_content
-              assign visible_blocks = visible_blocks | append: block.id | append: ','
-              assign visible_count = visible_count | plus: 1
-            endif
-          endfor
+          {%- if has_content -%}
+            {%- assign visible_blocks = visible_blocks | append: block.id | append: ',' -%}
+            {%- assign visible_count = visible_count | plus: 1 -%}
+          {%- endif -%}
+        {%- endfor -%}
 
-          assign visible_blocks = visible_blocks | split: ','
-        -%}
+        {%- assign visible_blocks = visible_blocks | split: ',' -%}
 
         <!-- TAB HEADER -->
         <div class="tabs__header flex justify-{{ section.settings.navigation_alignment }}" role="tablist">
