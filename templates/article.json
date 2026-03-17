@@ -185,11 +185,129 @@
         "padding_top": 50,
         "padding_bottom": 50
       }
-    }
+    },
+    "collection_faqs_LnCH7P": {
+      "type": "collection-faqs",
+      "blocks": {
+        "collapsible_item_tmeR6h": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "What types of smoking accessories does Grasscity sell?",
+            "content": "<p>Grasscity offers a curated selection of premium smoking accessories, including glass bongs, pipes, dab rigs, vaporizers, grinders, rolling papers, and cleaning tools, everything you need for a complete smoking experience.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_fFzCRk": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Are the products on Grasscity authentic and high quality?",
+            "content": "<p> Yes. Every product at Grasscity is carefully sourced to ensure authenticity, durability, and premium performance, giving you confidence in every purchase.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_6kWn8X": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Does Grasscity offer products for both beginners and experienced smokers?",
+            "content": "<p>Yes. From entry-level bongs and pipes to advanced dab rigs and vaporizers, Grasscity caters to all experience levels, helping every smoker find the perfect setup.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_EUTxWT": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "How do I choose the right bong or pipe for my needs?",
+            "content": "<p>Grasscity offers detailed product descriptions, size guides, and tips to help you choose the right piece for your smoking style, experience, and preferences. Explore our collections to find the perfect bongs and more.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_VF9J6m": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Are vaporizers available on Grasscity?",
+            "content": "<p> Yes. Grasscity carries a wide selection of premium vaporizers for dry herb, concentrates, and dual-use, designed to deliver smooth, flavorful sessions.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_yQKimk": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "How does Grasscity help customers find the right smoking products?",
+            "content": "<p>Our customer service team is here to help you find the right smoking products. Reach out via email or use our live chat option for guidance, along with detailed product guides and tips to match your smoking style and preferences</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_item_tmeR6h",
+        "collapsible_item_fFzCRk",
+        "collapsible_item_6kWn8X",
+        "collapsible_item_EUTxWT",
+        "collapsible_item_VF9J6m",
+        "collapsible_item_yQKimk"
+      ],
+      "name": "Collection Faqs",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "header_layout": "standing-column",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Frequently Asked Questions",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--primary",
+        "button_icon": "none",
+        "column_gap": "large",
+        "row_gap": "inherit",
+        "item_style": "standard",
+        "item_color_scheme": "",
+        "item_heading_font": "heading",
+        "item_heading_size": "h4",
+        "item_icon_size": "extra-large",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
   },
   "order": [
     "breadcrumbs_JgqcwU",
     "main",
-    "multicolumn_icon_cBEqQy"
+    "multicolumn_icon_cBEqQy",
+    "collection_faqs_LnCH7P"
   ]
 }
