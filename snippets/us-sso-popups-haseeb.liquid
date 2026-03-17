@@ -765,14 +765,36 @@
       }
     });
   });
+  async function fetchEliteMembershipDays(email) {
+    if (!email) return;
+    try {
+      const response = await fetch('https://sso.cabanaclubusa.com/api/users/email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email }),
+      });
+      if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+      const data = await response.json();
+      if (data.user != null && data.user.daysLeft != null) {
+        const daysLeft = parseInt(data.user.daysLeft, 10);
+        localStorage.setItem("membership_expiring_in_days", daysLeft);
+        localStorage.setItem("membership_expiring_soon", daysLeft <= 30);
+      }
+    } catch (error) {
+      console.error('[Elite membership] Error fetching days:', error);
+    }
+  }
+
   {% if settings.elite_renewal %}
-  window.addEventListener("load", () => {
+  window.addEventListener("load", async function () {
+    {% if customer and customer.tags contains "elite_member" or customer.tags contains "elite" %}
+    await fetchEliteMembershipDays({{ customer.email | json }});
+    {% endif %}
     const expiringSoon = localStorage.getItem("membership_expiring_soon");
     const expiringDays = parseInt(localStorage.getItem("membership_expiring_in_days"), 10);
-    // console.log(expiringSoon, expiringDays, "Membership");
     const url = window.location.href;
     const containsAccount = new URL(url).pathname.includes("account");
-    if (expiringSoon && !containsAccount && expiringDays < 30) {
+    if (expiringSoon === "true" && !containsAccount && !isNaN(expiringDays) && expiringDays < 30) {
       openResubscribeMembership();
     }
   });
@@ -827,10 +849,6 @@
       const membershipExpiringSoon = diffDays <= 30;
 
       localStorage.setItem("membership_expiring_soon", membershipExpiringSoon);
-      localStorage.setItem("membership_expiring_in_days", diffDays);
-
-      console.log(`Membership expires in ${diffDays} days`);
-      console.log("Expiring soon:", membershipExpiringSoon);
     }
   }
 
