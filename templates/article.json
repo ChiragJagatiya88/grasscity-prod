@@ -301,8 +301,8 @@
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
-            "heading": "Collapsible tab heading",
-            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
+            "heading": "{{ article.metafields.custom.faq_question_10.value }}",
+            "content": "{{ article.metafields.custom.faq_answer_10 | metafield_tag }}",
             "custom_liquid": "",
             "page": "",
             "open": false,
