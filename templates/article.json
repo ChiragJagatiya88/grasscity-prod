@@ -285,60 +285,12 @@
             "use_subtext_color": false
           }
         },
-        "collapsible_item_PLPJeP": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "Collapsible tab heading",
-            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false,
-            "use_subtext_color": false
-          }
-        },
-        "collapsible_item_4gBL83": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "Collapsible tab heading",
-            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false,
-            "use_subtext_color": false
-          }
-        },
-        "collapsible_item_Bap3Qk": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "Collapsible tab heading",
-            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false,
-            "use_subtext_color": false
-          }
-        },
-        "collapsible_item_VFipCV": {
-          "type": "collapsible_item",
-          "settings": {
-            "icon": "none",
-            "heading": "Collapsible tab heading",
-            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
-            "custom_liquid": "",
-            "page": "",
-            "open": false,
-            "use_subtext_color": false
-          }
-        },
         "collapsible_item_hfkyeF": {
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
-            "heading": "Collapsible tab heading",
-            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
+            "heading": "{{ article.metafields.custom.faq_question_9.value }}",
+            "content": "{{ article.metafields.custom.faq_answer_9 | metafield_tag }}",
             "custom_liquid": "",
             "page": "",
             "open": false,
@@ -367,10 +319,6 @@
         "collapsible_item_TBPEyi",
         "collapsible_item_wpxT3f",
         "collapsible_item_TD86W4",
-        "collapsible_item_PLPJeP",
-        "collapsible_item_4gBL83",
-        "collapsible_item_Bap3Qk",
-        "collapsible_item_VFipCV",
         "collapsible_item_hfkyeF",
         "collapsible_item_XAWWWw"
       ],
