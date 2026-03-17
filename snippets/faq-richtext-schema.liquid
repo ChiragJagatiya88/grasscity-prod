@@ -13,7 +13,7 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "FAQs",
+      "@type": "FAQPage",
       "@id": {{ canonical_url | append: '#faq-section-' | append: section.id | json }},
       "mainEntity": [
         {%- for block in section.blocks -%}
