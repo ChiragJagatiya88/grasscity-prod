@@ -186,11 +186,233 @@
         "padding_bottom": 50
       }
     },
+    "collection_faqs_baynAw": {
+      "type": "collection-faqs",
+      "blocks": {
+        "collapsible_item_dQ8At9": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "{{ article.metafields.custom.faq_question_1.value }}",
+            "content": "{{ article.metafields.custom.faq_answer_1 | metafield_tag }}",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_3UbzPT": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "{{ article.metafields.custom.faq_question_2.value }}",
+            "content": "{{ article.metafields.custom.faq_answer_2 | metafield_tag }}",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_zBTYUK": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Collapsible tab heading",
+            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_hPMyRB": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Collapsible tab heading",
+            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_FEaWwi": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Collapsible tab heading",
+            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_TBPEyi": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Collapsible tab heading",
+            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_wpxT3f": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Collapsible tab heading",
+            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_TD86W4": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Collapsible tab heading",
+            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_PLPJeP": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Collapsible tab heading",
+            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_4gBL83": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Collapsible tab heading",
+            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_Bap3Qk": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Collapsible tab heading",
+            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_VFipCV": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Collapsible tab heading",
+            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_hfkyeF": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Collapsible tab heading",
+            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_XAWWWw": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Collapsible tab heading",
+            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_item_dQ8At9",
+        "collapsible_item_3UbzPT",
+        "collapsible_item_zBTYUK",
+        "collapsible_item_hPMyRB",
+        "collapsible_item_FEaWwi",
+        "collapsible_item_TBPEyi",
+        "collapsible_item_wpxT3f",
+        "collapsible_item_TD86W4",
+        "collapsible_item_PLPJeP",
+        "collapsible_item_4gBL83",
+        "collapsible_item_Bap3Qk",
+        "collapsible_item_VFipCV",
+        "collapsible_item_hfkyeF",
+        "collapsible_item_XAWWWw"
+      ],
+      "name": "Collection Faqs",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "header_layout": "standing-column",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Frequently Asked Questions",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--primary",
+        "button_icon": "none",
+        "column_gap": "large",
+        "row_gap": "inherit",
+        "item_style": "standard",
+        "item_color_scheme": "",
+        "item_heading_font": "heading",
+        "item_heading_size": "h4",
+        "item_icon_size": "extra-large",
+        "padding_top": 50,
+        "padding_bottom": 0,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
     "collection_faqs_LnCH7P": {
       "type": "collection-faqs",
       "blocks": {
         "collapsible_item_tmeR6h": {
           "type": "collapsible_item",
+          "disabled": true,
           "settings": {
             "icon": "none",
             "heading": "What types of smoking accessories does Grasscity sell?",
@@ -203,6 +425,7 @@
         },
         "collapsible_item_fFzCRk": {
           "type": "collapsible_item",
+          "disabled": true,
           "settings": {
             "icon": "none",
             "heading": "Are the products on Grasscity authentic and high quality?",
@@ -215,6 +438,7 @@
         },
         "collapsible_item_6kWn8X": {
           "type": "collapsible_item",
+          "disabled": true,
           "settings": {
             "icon": "none",
             "heading": "Does Grasscity offer products for both beginners and experienced smokers?",
@@ -227,6 +451,7 @@
         },
         "collapsible_item_EUTxWT": {
           "type": "collapsible_item",
+          "disabled": true,
           "settings": {
             "icon": "none",
             "heading": "How do I choose the right bong or pipe for my needs?",
@@ -239,6 +464,7 @@
         },
         "collapsible_item_VF9J6m": {
           "type": "collapsible_item",
+          "disabled": true,
           "settings": {
             "icon": "none",
             "heading": "Are vaporizers available on Grasscity?",
@@ -251,6 +477,7 @@
         },
         "collapsible_item_yQKimk": {
           "type": "collapsible_item",
+          "disabled": true,
           "settings": {
             "icon": "none",
             "heading": "How does Grasscity help customers find the right smoking products?",
@@ -270,6 +497,7 @@
         "collapsible_item_VF9J6m",
         "collapsible_item_yQKimk"
       ],
+      "disabled": true,
       "name": "Collection Faqs",
       "settings": {
         "container": "fixed",
@@ -302,12 +530,13 @@
         "show_section_divider": false,
         "divider_width": "fixed"
       }
-    },
+    }
   },
   "order": [
     "breadcrumbs_JgqcwU",
     "main",
     "multicolumn_icon_cBEqQy",
+    "collection_faqs_baynAw",
     "collection_faqs_LnCH7P"
   ]
 }
