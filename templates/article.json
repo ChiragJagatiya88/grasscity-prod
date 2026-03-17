@@ -217,8 +217,8 @@
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
-            "heading": "Collapsible tab heading",
-            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
+            "heading": "{{ article.metafields.custom.faq_question_3.value }}",
+            "content": "{{ article.metafields.custom.faq_answer_3 | metafield_tag }}",
             "custom_liquid": "",
             "page": "",
             "open": false,
@@ -229,8 +229,8 @@
           "type": "collapsible_item",
           "settings": {
             "icon": "none",
-            "heading": "Collapsible tab heading",
-            "content": "<p>Fill in the text content of the collapsible item here. You can provide details and explanation for the question here.</p>",
+            "heading": "{{ article.metafields.custom.faq_question_4.value }}",
+            "content": "{{ article.metafields.custom.faq_answer_4 | metafield_tag }}",
             "custom_liquid": "",
             "page": "",
             "open": false,
