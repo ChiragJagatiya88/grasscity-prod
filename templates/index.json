@@ -285,8 +285,8 @@
           "type": "slide",
           "settings": {
             "color_scheme": "scheme-inverse",
-            "background": "shopify://shop_images/gc_hp_hero_desktop_usa_05.webp",
-            "background_mobile": "shopify://shop_images/gc_hp_hero_mobile_usa_05.webp",
+            "background": "shopify://shop_images/gc_hp_hero_desktop_usa_05_360eb636-cb8f-498d-89b6-28a64132fe6a.webp",
+            "background_mobile": "shopify://shop_images/gc_hp_hero_mobile_usa_05_bea646be-e375-4a98-9add-2e7bb10a82f3.webp",
             "image_overlay_opacity": 30,
             "content_position": "middle-center",
             "text_alignment": "center",
@@ -302,7 +302,7 @@
             "description": "",
             "description_size": "text-base",
             "button_label": "Shop Now",
-            "button_link": "shopify://collections/cheech-and-chong",
+            "button_link": "shopify://pages/membership-terms-and-conditions",
             "button_style": "btn--primary",
             "button_icon": "none",
             "enable_preload_image": true
