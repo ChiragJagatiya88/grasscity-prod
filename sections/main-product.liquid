@@ -212,9 +212,11 @@
     <script src="{{ 'product-model.js' | asset_url }}" defer></script>
   {%- endif -%}
 
+    {% render 'product-json-ld' %}
+{% comment %} 
   <script type="application/ld+json">
     {{ product | structured_data }}
-  </script>
+  </script> {% endcomment %}
 </product-info>
 
 {%- if settings.elite_renewal and is_elite_member and is_elite_renew_product -%}
