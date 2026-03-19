@@ -261,7 +261,7 @@
             "background_mobile": "shopify://shop_images/gc_hp_hero_mobile_usa_05_bea646be-e375-4a98-9add-2e7bb10a82f3.webp",
             "image_overlay_opacity": 30,
             "content_position": "middle-center",
-            "text_alignment": "left",
+            "text_alignment": "center",
             "subheading": "Shop the Legends",
             "subheading_tag": "h2",
             "title": "Buy Elite Membership",
