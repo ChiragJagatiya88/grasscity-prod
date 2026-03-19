@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "collection_list_slider_6qbNfj": {
       "type": "collection-list-slider",
@@ -290,7 +290,7 @@
       ],
       "settings": {
         "container": "full",
-        "slide_height": "medium",
+        "slide_height": "large",
         "show_controls": true,
         "autoplay": true,
         "autoplay_delay": 6,
