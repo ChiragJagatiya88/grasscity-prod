@@ -159,9 +159,11 @@
     <script src="{{ 'product-model.js' | asset_url }}" defer></script>
   {%- endif -%}
 
-  <script type="application/ld+json">
+    {% render 'product-json-ld' %}
+
+  {% comment %} <script type="application/ld+json">
     {{ featured_product | structured_data }}
-  </script>
+  </script> {% endcomment %}
 </div>
 
 {% schema %}
